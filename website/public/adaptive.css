@@ -1,0 +1,173 @@
+/* adaptive.css — the adaptive/responsive layer of PlayMusicPrompts (owner order 2026-09-15 14:59, approved 16:20:
+ * "sayfalar mobil cihaz, tablet ve web için adaptive responsive değil hala olması gereken 100% seviyesinde").
+ *
+ * WHY A LAYER. styles.css grew nine unrelated breakpoints (600, 700, 760, 767, 900, 1000, 1100, 1200, 1600) and
+ * sizes many controls below the touch minimum. This file is loaded LAST on every shell page and states the device
+ * contract in one place, from measured baselines (deploy-20260915/responsive-audit.mjs, 2026-09-15):
+ *   - tap targets under 44 x 44 CSS px: index@375 40, explore@375 96, radio 16-22, library 12-18, account 9-15
+ *   - text under 12 px: eyebrows 10.72 px, rail labels 11.04 px, kickers 9.12 px, switch labels 10.9 px
+ *   - 768 / 1024 rendered the desktop composition (side rail + wide hero) merely shrunk
+ * The theme (dark, D-PMP-08) is untouched; only geometry, hit areas and type floors change.
+ *
+ * DEVICE CONTRACT (the only breakpoints this layer uses; every other file is expected to converge on them):
+ *   phone            width <= 767px   one column, bottom navigation, fixed player above it
+ *   tablet portrait  768px .. 1023px  two columns where the desktop has three or more, side rail, reframed hero
+ *   tablet landscape 1024px .. 1279px three columns, side rail
+ *   desktop          width >= 1280px  as designed
+ *
+ * TOKENS (CSS custom properties; media queries cannot read them, so the pixel values above are repeated verbatim
+ * in the queries and nowhere else):
+ *   --tap-min      44px   WCAG 2.5.8 (AAA 2.5.5 is 44); Apple HIG 44pt; Material 48dp - 44 is the floor we enforce
+ *   --text-min     12px   the smallest size any visible text may render
+ *   --rail-phone   64px   bottom navigation height on phones
+ *   --player-phone 72px   fixed player height on phones (unchanged)
+ *
+ * Proof: the same audit tool must report smallTap=0, tinyText=0, overflowX=0 on every page x viewport.
+ */
+
+:root {
+  --tap-min: 44px;
+  --text-min: 12px;
+  --rail-phone: 64px;
+  --player-phone: 72px;
+  /* Fluid type scale: each step is clamp(min, preferred vw, max) so nothing jumps at a breakpoint. */
+  --fs-hero: clamp(2rem, 1.2rem + 3.6vw, 4.1rem);
+  --fs-h2: clamp(1.25rem, 1rem + 1.2vw, 1.65rem);
+  --fs-body: clamp(1rem, .95rem + .2vw, 1.0625rem);
+  --fs-meta: clamp(.75rem, .7rem + .25vw, .86rem);
+}
+
+/* ---------- TYPE FLOORS: nothing visible renders under 12 px ---------- */
+.eyebrow, .station-kicker, .brand-signature, .switch, .keep-going-label, .rail a, kbd, small, .meta, .track-meta,
+.controls-hint, .form-status, .account-hint, .recovery-note, figcaption, .queue-status, #queue-status, .player small {
+  font-size: max(var(--text-min), 1em) !important; /* !important: this floor must beat every breakpoint rule in styles.css */
+}
+.eyebrow { font-size: var(--text-min) !important; letter-spacing: .22em; }
+.station-kicker, .brand-signature { font-size: var(--text-min) !important; letter-spacing: .2em; }
+.switch { font-size: var(--text-min) !important; }
+h1 { font-size: var(--fs-hero); line-height: 1.05; }
+.category-section > h2, .page-heading h2 { font-size: var(--fs-h2); }
+
+/* ---------- TAP TARGETS: every interactive control is at least 44 x 44 ---------- */
+.icon-button, .search-launch, .account-link, .auth-back, .text-button, .tabs > button, .provider,
+[data-action=radio-filter], [data-action=explore-tab], [data-action=station], [data-action=save], [data-action=save-current],
+[data-action=browse-categories], [data-action=all-songs], [data-action=enhance], [data-action=controls], [data-action=keep-going],
+[data-action=open-3d], [data-action=expand], [data-action=queue], [data-action=mute], [data-action=shuffle], [data-action=repeat],
+[data-action=previous], [data-action=next], [data-action=play], .keep-going-option, .remote-mode-toggle, .privacy-settings-toggle,
+.rail a, .play-button, .genre-card, .station-card, .song-card > button, .switch {
+  min-width: var(--tap-min);
+  min-height: var(--tap-min);
+}
+/* Icon buttons keep their 24 px glyph; the extra area is transparent padding, so the visual rhythm does not change. */
+.icon-button { width: var(--tap-min); height: var(--tap-min); padding: 10px; margin-left: 0; }
+/* styles.css hides the secondary transport icons on phones on purpose; this layer does not re-show them. */
+/* Chips and tabs grow vertically to the floor, never horizontally beyond their text. */
+.tabs > button, [data-action=radio-filter], [data-action=explore-tab], .keep-going-option { padding-top: 10px; padding-bottom: 10px; }
+/* Text links used as buttons get a real hit area without a visible box. */
+.text-button { padding-top: 10px; padding-bottom: 10px; }
+/* The "Keep it going" switch: 44 px row, the 28 x 16 visual knob stays. */
+.switch { align-items: center; padding: 6px 0; }
+/* Range inputs: 44 px hit area, 5 px visible track drawn in the middle; the fill variable from styles.css is kept. */
+input[type=range] {
+  height: var(--tap-min);
+  background:
+    linear-gradient(90deg, #7221ed, #b657fd) 0 50% / var(--fill, 49%) 5px no-repeat,
+    linear-gradient(#343a4b80, #343a4b80) 0 50% / 100% 5px no-repeat;
+  background-color: transparent;
+}
+input[type=range]::-webkit-slider-runnable-track { height: 5px; background: transparent; }
+input[type=range]::-moz-range-track { height: 5px; background: transparent; }
+
+/* ---------- PHONE (<= 767): one column, wrapping action rows ---------- */
+@media (max-width: 767px) {
+  .rail { height: var(--rail-phone); }
+  .rail a { height: calc(var(--rail-phone) - 12px); font-size: var(--text-min); gap: 4px; }
+  .player { bottom: var(--rail-phone); height: var(--player-phone); }
+  .hero-actions { grid-template-columns: 1fr; }
+  .keep-going { flex-wrap: wrap; row-gap: 8px; }
+  .keep-going-choice { margin-left: auto; }
+  .creation-actions { grid-template-columns: 1fr; }
+  .quick-controls, .multi-options, .nested-fields { grid-template-columns: 1fr; }
+  .song-grid, .song-grid.five, .genre-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .station-grid { grid-template-columns: 1fr; }
+  .radio-feature { grid-template-columns: 1fr; }
+  .page-heading { flex-direction: column; align-items: flex-start; gap: 12px; padding: 12px 0 20px; }
+  .page-heading > .primary { margin-top: 0; width: 100%; }
+  .tabs { flex-wrap: wrap; }
+  .tabs > button { flex: 1 1 calc(50% - 8px); min-width: 0; }
+  main { padding-bottom: calc(var(--rail-phone) + var(--player-phone) + 16px); }
+  /* TV-remote mode has no meaning on a phone; the toggle (label previously rendered at 0 px) is not shown there. */
+  .remote-mode-toggle { display: none; }
+}
+
+/* ---------- TABLET PORTRAIT (768 .. 1023): two columns, reframed hero, side rail ---------- */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .create-layout { grid-template-columns: 1fr; }
+  .creation-actions { grid-template-columns: 1fr 1fr; }
+  .hero-actions { grid-template-columns: 1fr 1fr; }
+  .quick-controls { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .song-grid, .song-grid.five, .genre-grid, .station-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .radio-feature { grid-template-columns: 1fr; }
+  .controls-layout { grid-template-columns: 1fr; }
+  .environment { background-position: 62% 20%; }
+  .search-launch { width: 44%; }
+}
+
+/* ---------- TABLET LANDSCAPE (1024 .. 1279): three columns ---------- */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .song-grid, .song-grid.five, .genre-grid, .station-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .create-layout { grid-template-columns: minmax(380px, 1fr) minmax(360px, 1fr); }
+}
+
+/* ---------- MOTION / ACCESSIBILITY ---------- */
+@media (prefers-reduced-motion: reduce) { .keep-going-option, .tabs > button, .icon-button { transition: none; } }
+@media (pointer: coarse) { .text-button, .tabs > button { padding-left: 12px; padding-right: 12px; } }
+
+/* ---------- SECOND PASS (measured after the first layer, 375 px, 2026-09-15 16:4x) ---------- */
+/* Shell: the remaining sub-44 controls, each named from the audit's ancestor chain. */
+.topbar .brand, .segmented > button, .filter-button, .portal-play, .section-heading a, .section-heading button,
+.song-caption .song-title, .password-field button, .recovery button, .signup-link button, .guest-link, .auth-footer button,
+.library-toolbar button, .world-toolbar button {
+  min-width: var(--tap-min); min-height: var(--tap-min);
+}
+.section-heading a, .section-heading button, .signup-link button, .recovery button, .guest-link, .auth-footer button { display: inline-flex; align-items: center; }
+.song-caption .song-title { padding-top: 10px; padding-bottom: 10px; text-align: left; }
+.portal-play { width: var(--tap-min); height: var(--tap-min); }
+/* Shell: the remaining sub-12 px text, each named from the audit. */
+.lyrics-kicker, .lyrics-keep-note, .energy output, #energy-value, .station-meta, .world-bottom span, .device-note, .remote-mode-toggle,
+.portal-heading span, .song-caption span, .library-toolbar span { font-size: var(--text-min) !important; }
+
+/* 3D listening room (player-three.css shrinks its type to 6-10 px under 1150/820/600 px - unreadable on phones).
+ * The room keeps its composition; type and hit areas are raised to the same floors as the rest of the site. */
+.room .eyebrow, .room .stage-pill, .room .scene-heading, .room .private-note, .room .atmosphere small, .room .rail-btn,
+.room .rail-btn span, .room .rail-btn b, .room .lab-worlds-heading span, .room .scene-choice span, .room .browse-worlds span,
+.room .overline, .room #track-detail, .room .timeline span, .room .stage-bottom > div, .room .stage-top .text-btn,
+.room .lab-tune, .room .lab-touch, .room .back-link, .room .lede, .room .atmosphere strong, .room .lab-world-options strong {
+  font-size: var(--text-min) !important; letter-spacing: .04em;
+}
+.room .lede { font-size: 14px !important; }
+.room .track-info h2, .room #track-title { font-size: 16px !important; }
+.room .rail-btn, .room .lab-import, .room .icon-btn, .room .lab-tune, .room .lab-touch, .room .browse-worlds, .room .scene-choice,
+.room .text-btn, .room .intro .primary, .room .atmosphere, .topbar .icon-btn, .topbar .lab-import, .topbar .back-link {
+  min-width: var(--tap-min); min-height: var(--tap-min);
+}
+@media (max-width: 767px) {
+  /* On phones the room's right rail becomes a horizontal bar under the stage instead of a 47 px sliver of 7 px labels. */
+  .room .right-rail { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 8px; width: 100%; padding: 10px 12px; }
+  .room .rail-btn { width: auto; flex: 1 1 calc(33% - 8px); }
+  .room .transport { grid-template-columns: 1fr; gap: 12px; padding: 14px 16px; }
+  .room .lede, .room .room-divider { display: block; }
+}
+/* Third pass (375 px re-measure): the station portals are perspective-scaled, so their CSS size must exceed 44 px for the
+ * rendered box to reach it; the transport bar is a sibling of .room, not a child, so it is addressed by its own class. */
+/* (the .portal-play size is governed by the single rule in the fourth pass below) */
+.transport .icon-btn, .transport .play-btn, .transport input[type=range] { min-width: var(--tap-min); min-height: var(--tap-min); }
+.transport .play-btn { width: var(--tap-min); height: var(--tap-min); }
+.transport .overline, .transport #track-detail, .transport .timeline span, .transport #elapsed, .transport #duration, .scene-choice strong, #scene-choice-name { font-size: var(--text-min) !important; }
+.transport .track-info h2, .transport #track-title { font-size: 16px !important; }
+/* Fourth pass (full 8 x 4 re-measure): perspective portals need 60 px CSS to render 44; the shared player's timeline and
+ * origin line, the lyrics-source label, and the room's remaining decorative/status text reach the 12 px floor. */
+.portal-play, .portal-1 .portal-play, .portal-2 .portal-play { width: 52px; height: 52px; } /* side portals are rotated ~15-20 deg (projected width x0.94-0.97): 52 renders >= 48 px */
+.player #track-origin, .player .timeline span, .player #elapsed, .player #duration, .lyrics-field label, .lyrics-field > label,
+.room .back-link, .topbar .back-link, .lab-world-options i, .lab-capture, .stage-bottom .text-btn, .orbit-hint, #orbit-hint,
+.transport #output-status, .output-caption span, .transport output, #volume-label { font-size: var(--text-min) !important; }

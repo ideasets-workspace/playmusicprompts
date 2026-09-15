@@ -10,10 +10,10 @@ import {createRequire} from 'node:module';
 import {mkdirSync, writeFileSync} from 'node:fs';
 const require = createRequire('c:/Berk/PlayMusicPrompts/docs/design/2026-09-09-html-mockups/tools/package.json');
 const {chromium} = require('playwright');
-const base = 'https://www.playmusicprompts.com', outDir = '.state/verification/2026-09-15/responsive';
+const base = process.env.PMP_AUDIT_BASE || 'https://www.playmusicprompts.com', outDir = process.env.PMP_AUDIT_OUT || '.state/verification/2026-09-15/responsive';
 mkdirSync(outDir, {recursive: true});
-const pages = ['/', '/explore.html', '/radio.html', '/library.html', '/login.html', '/account.html', '/player-launch.html', '/player-three.html'];
-const viewports = [[375, 812], [768, 1024], [1024, 768], [1440, 900]];
+const pages = (process.env.PMP_AUDIT_PAGES ? process.env.PMP_AUDIT_PAGES.split(',') : ['/', '/explore.html', '/radio.html', '/library.html', '/login.html', '/account.html', '/player-launch.html', '/player-three.html']);
+const viewports = (process.env.PMP_AUDIT_WIDTHS ? process.env.PMP_AUDIT_WIDTHS.split(',').map(Number) : [375, 768, 1024, 1440]).map(w => [w, w < 800 ? 812 : w < 1100 ? 768 : 900]);
 const browser = await chromium.launch();
 const report = {};
 for (const path of pages) {
@@ -26,11 +26,16 @@ for (const path of pages) {
     await page.waitForTimeout(1800);
     const m = await page.evaluate(() => {
       const vw = document.documentElement.clientWidth;
+      // Visually hidden form inputs whose accessible target is the enclosing <label> are not tap targets themselves.
+      const hiddenInput = el => el.tagName === 'INPUT' && el.closest('label') && (getComputedStyle(el).opacity === '0' || el.getBoundingClientRect().width <= 1);
       const wide = [...document.querySelectorAll('body *')].filter(el => { const r = el.getBoundingClientRect(); return r.width > 0 && (r.right > vw + 1 || r.left < -1) && getComputedStyle(el).position !== 'fixed'; })
         .slice(0, 12).map(el => `${el.tagName.toLowerCase()}${el.id ? '#' + el.id : ''}${el.className && typeof el.className === 'string' ? '.' + el.className.trim().split(/\s+/).slice(0, 2).join('.') : ''} w=${Math.round(el.getBoundingClientRect().width)} r=${Math.round(el.getBoundingClientRect().right)}`);
-      const small = [...document.querySelectorAll('button, a, input[type=checkbox], input[type=range], [role=button]')].filter(el => { const r = el.getBoundingClientRect(); const cs = getComputedStyle(el); return r.width > 0 && r.height > 0 && cs.visibility !== 'hidden' && (r.width < 44 || r.height < 44); })
-        .map(el => `${el.tagName.toLowerCase()}${el.id ? '#' + el.id : ''}${el.dataset.action ? '[' + el.dataset.action + ']' : ''} ${Math.round(el.getBoundingClientRect().width)}x${Math.round(el.getBoundingClientRect().height)}`);
-      const tiny = [...document.querySelectorAll('body *')].filter(el => el.children.length === 0 && el.textContent.trim() && parseFloat(getComputedStyle(el).fontSize) < 12 && el.getBoundingClientRect().height > 0).slice(0, 10).map(el => `${el.tagName.toLowerCase()}${el.className && typeof el.className === 'string' ? '.' + el.className.trim().split(/\s+/)[0] : ''} ${getComputedStyle(el).fontSize}`);
+      const small = [...document.querySelectorAll('button, a, input[type=checkbox], input[type=range], [role=button]')].filter(el => { const r = el.getBoundingClientRect(); const cs = getComputedStyle(el); return r.width > 0 && r.height > 0 && cs.visibility !== 'hidden' && !hiddenInput(el) && (r.width < 44 || r.height < 44); })
+        .map(el => { const chain = []; let n = el.parentElement; for (let i = 0; i < 2 && n && n !== document.body; i++, n = n.parentElement) chain.push(`${n.tagName.toLowerCase()}${n.id ? '#' + n.id : ''}${n.className && typeof n.className === 'string' ? '.' + n.className.trim().split(/\s+/)[0] : ''}`); return `${chain.reverse().join('>')}>${el.tagName.toLowerCase()}${el.id ? '#' + el.id : ''}${el.className && typeof el.className === 'string' ? '.' + el.className.trim().split(/\s+/)[0] : ''}${el.dataset.action ? '[' + el.dataset.action + ']' : ''} ${Math.round(el.getBoundingClientRect().width)}x${Math.round(el.getBoundingClientRect().height)}`; });
+      const tiny = [...document.querySelectorAll('body *')].filter(el => el.children.length === 0 && el.textContent.trim() && parseFloat(getComputedStyle(el).fontSize) < 12 && el.getBoundingClientRect().height > 0 && el.getBoundingClientRect().width > 0).slice(0, 40).map(el => {
+        const chain = []; let n = el; for (let i = 0; i < 4 && n && n !== document.body; i++, n = n.parentElement) chain.push(`${n.tagName.toLowerCase()}${n.id ? '#' + n.id : ''}${n.className && typeof n.className === 'string' ? '.' + n.className.trim().split(/\s+/).slice(0, 2).join('.') : ''}`);
+        return `${chain.reverse().join('>')} ${getComputedStyle(el).fontSize} "${el.textContent.trim().slice(0, 18)}"`;
+      });
       const player = document.querySelector('footer.player, .player'), header = document.querySelector('header');
       return {viewportWidth: vw, scrollWidth: document.documentElement.scrollWidth, overflowX: document.documentElement.scrollWidth - vw,
         wideElements: wide, smallTapTargets: {count: small.length, sample: small.slice(0, 10)}, tinyText: tiny,
