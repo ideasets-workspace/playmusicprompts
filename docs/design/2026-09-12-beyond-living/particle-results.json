@@ -1,0 +1,27 @@
+{
+  "name": "particle",
+  "expectedChecks": 30,
+  "passedChecks": 30,
+  "passed": true,
+  "problems": [],
+  "script": "docs/design/2026-09-12-beyond-living/particle-check.mjs",
+  "scriptSHA256": "9337cd965e8a77546a7c41b8bfc5423af6a70e93f0ed5ba2f791294b6e714810",
+  "args": [
+    "C:\\Berk\\PlayMusicPrompts\\docs\\design\\2026-09-12-beyond-living\\particle-check.mjs",
+    "C:\\Berk\\PlayMusicPrompts\\website_html_templates_beyond\\lab-aether.js"
+  ],
+  "productionAsset": "lab-aether.js",
+  "report": {
+    "checks": 30,
+    "scope": "actual asset behavior, real Three resources and renderer protocol; GPU pixels require browser verification"
+  },
+  "execution": {
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "error": null,
+    "elapsedMs": 164,
+    "stdout": "PASS The host receives an inside-environment view without object fitting\nPASS Unsupported device honestly selects analytical rendering\nPASS Initial authored topology is finite, coherent and bounded\nPASS Depth field and riders use fixed, finite, spatially varied seeds\nPASS Actual active bands feed retained visual signals and spectrum\nPASS Form transition is continuous, with normalized nonnegative weights\nPASS Motion off freezes an in-progress morph and all automatic clocks/signals\nPASS Explicit frozen form and spatial edits apply at the retained time\nPASS Onsets require actual active playback and enabled pulse response\nPASS Paused playback releases audio envelopes without invented new events\nPASS Low detail reduces real geometry draw counts and distributes all bundles\nPASS Particle density zero removes all structured, suspended and rider draws\nPASS Quality and density reductions also apply to both new detail layers\nPASS Detail attributes stay immutable while the shared audio and time change\nPASS Lab and global glow multiply, all numeric settings reject NaN and clamp\nPASS Ambient flow zero stops transport phase, dt is bounded\nPASS Palette follows the actual world colors\nPASS Direct touch is finite, independent of music, and keeps a released pressure tail\nPASS Motion off retains the touched shape and clocks until resume releases it\nPASS Touch force uses the actual camera ray in the transformed environment\nPASS Half-float path checks actual framebuffer completeness\nPASS Capability probing restores target, cube/mipmap, XR, viewport and scissor exactly\nPASS GPU update ping-pongs real target references and restores renderer state\nPASS Small-preview hairline coverage responds to the actual drawing buffer\nPASS Low quality actually lowers compute cadence to one pass per three calls\nPASS Frozen GPU performs no simulation passes except an explicit spatial edit\nPASS GPU and analytical paths receive the same touch target without generating audio events\nPASS Framebuffer failure selects a truthful fallback without losing renderer state\nPASS Render exception selects analytical fallback and restores host state\nPASS Disposal releases actual Three resources once and stops future work\n{\"checks\":30,\"scope\":\"actual asset behavior, real Three resources and renderer protocol; GPU pixels require browser verification\"}\n",
+    "stderr": ""
+  }
+}

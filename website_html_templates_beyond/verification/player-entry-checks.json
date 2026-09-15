@@ -1,0 +1,10 @@
+{
+  "scope": "Production bootstrap control flow in Node VM; not a browser file-protocol rendering test.",
+  "passed": 4,
+  "checks": [
+    "File entry redirects to its sibling launch guide without attempting the blocked module graph.",
+    "HTTP entry loads the existing player module exactly once.",
+    "Module loading failure leads to the explicit launch guide.",
+    "Hosted entry and failure path retain the current subfolder and origin."
+  ]
+}

@@ -1,0 +1,549 @@
+{
+  "date": "2026-09-11T12:20:13.456Z",
+  "browser": "152.0.7977.83",
+  "productionHashes": {
+    "player-three-audio.js": "3cdf3111556e2fc46cad4ad9044ff756b1e6a8bc9873e9e8fd96409583f5a302",
+    "player-three-sound-ui.js": "55534aec1692323b624da39f063ce53bfeb6f82fcc3a574183965042fecc1e73",
+    "player-three.js": "12e22a0a21ac099c888c2585f34d6b3eb51c005a3b09d3bb184d716f55fcdd99"
+  },
+  "checks": [
+    {
+      "name": "Original startup remains transparent at 44100",
+      "pass": true,
+      "detail": {
+        "peak": 0.5999962091445923,
+        "peakAt": 275,
+        "startupRms": 0.4242640687077432
+      }
+    },
+    {
+      "name": "original impulse remains below full scale at 44100",
+      "pass": true,
+      "detail": {
+        "peak": 0.949999988079071,
+        "peakAt": 22314,
+        "delaySamples": 264,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "original burst remains below full scale at 44100",
+      "pass": true,
+      "detail": {
+        "peak": 0.9499939680099487,
+        "peakAt": 22325,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "gentle impulse remains below full scale at 44100",
+      "pass": true,
+      "detail": {
+        "peak": 0.7764705419540405,
+        "peakAt": 22314,
+        "delaySamples": 264,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "gentle delay aligns with Original at 44100",
+      "pass": true,
+      "detail": {
+        "peak": 0.7764705419540405,
+        "peakAt": 22314,
+        "delaySamples": 264,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "gentle burst remains below full scale at 44100",
+      "pass": true,
+      "detail": {
+        "peak": 0.7053301334381104,
+        "peakAt": 22325,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "punch impulse remains below full scale at 44100",
+      "pass": true,
+      "detail": {
+        "peak": 0.8421919941902161,
+        "peakAt": 22314,
+        "delaySamples": 264,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "punch delay aligns with Original at 44100",
+      "pass": true,
+      "detail": {
+        "peak": 0.8421919941902161,
+        "peakAt": 22314,
+        "delaySamples": 264,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "punch burst remains below full scale at 44100",
+      "pass": true,
+      "detail": {
+        "peak": 0.8009392023086548,
+        "peakAt": 22325,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "night impulse remains below full scale at 44100",
+      "pass": true,
+      "detail": {
+        "peak": 0.43436506390571594,
+        "peakAt": 22314,
+        "delaySamples": 264,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "night delay aligns with Original at 44100",
+      "pass": true,
+      "detail": {
+        "peak": 0.43436506390571594,
+        "peakAt": 22314,
+        "delaySamples": 264,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "night burst remains below full scale at 44100",
+      "pass": true,
+      "detail": {
+        "peak": 0.21152594685554504,
+        "peakAt": 22325,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "25 rapid dynamics reversals on sine at 44100",
+      "pass": true,
+      "detail": {
+        "peak": 0.9499939680099487,
+        "peakAt": 275,
+        "startupRms": 0.6717514420798072
+      }
+    },
+    {
+      "name": "25 rapid dynamics reversals on pulse-train at 44100",
+      "pass": true,
+      "detail": {
+        "peak": 0.949999988079071,
+        "peakAt": 264,
+        "startupRms": 0.0391773392033995
+      }
+    },
+    {
+      "name": "25 rapid dynamics reversals on burst-train at 44100",
+      "pass": true,
+      "detail": {
+        "peak": 0.9499939680099487,
+        "peakAt": 275,
+        "startupRms": 0.3974134079854663
+      }
+    },
+    {
+      "name": "Boosted EQ bypass rapid-reversal regression at 44100",
+      "pass": true,
+      "detail": {
+        "peak": 0.6000000834465027,
+        "peakAt": 35974,
+        "startupRms": 0.20969338616510821
+      }
+    },
+    {
+      "name": "Original startup remains transparent at 48000",
+      "pass": true,
+      "detail": {
+        "peak": 0.6000000238418579,
+        "peakAt": 300,
+        "startupRms": 0.4242640721610332
+      }
+    },
+    {
+      "name": "original impulse remains below full scale at 48000",
+      "pass": true,
+      "detail": {
+        "peak": 0.949999988079071,
+        "peakAt": 24288,
+        "delaySamples": 288,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "original burst remains below full scale at 48000",
+      "pass": true,
+      "detail": {
+        "peak": 0.949999988079071,
+        "peakAt": 24300,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "gentle impulse remains below full scale at 48000",
+      "pass": true,
+      "detail": {
+        "peak": 0.7758989930152893,
+        "peakAt": 24288,
+        "delaySamples": 288,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "gentle delay aligns with Original at 48000",
+      "pass": true,
+      "detail": {
+        "peak": 0.7758989930152893,
+        "peakAt": 24288,
+        "delaySamples": 288,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "gentle burst remains below full scale at 48000",
+      "pass": true,
+      "detail": {
+        "peak": 0.7043025493621826,
+        "peakAt": 24300,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "punch impulse remains below full scale at 48000",
+      "pass": true,
+      "detail": {
+        "peak": 0.8417096138000488,
+        "peakAt": 24288,
+        "delaySamples": 288,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "punch delay aligns with Original at 48000",
+      "pass": true,
+      "detail": {
+        "peak": 0.8417096138000488,
+        "peakAt": 24288,
+        "delaySamples": 288,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "punch burst remains below full scale at 48000",
+      "pass": true,
+      "detail": {
+        "peak": 0.800123393535614,
+        "peakAt": 24300,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "night impulse remains below full scale at 48000",
+      "pass": true,
+      "detail": {
+        "peak": 0.4352388083934784,
+        "peakAt": 24288,
+        "delaySamples": 288,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "night delay aligns with Original at 48000",
+      "pass": true,
+      "detail": {
+        "peak": 0.4352388083934784,
+        "peakAt": 24288,
+        "delaySamples": 288,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "night burst remains below full scale at 48000",
+      "pass": true,
+      "detail": {
+        "peak": 0.2118711620569229,
+        "peakAt": 24300,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "25 rapid dynamics reversals on sine at 48000",
+      "pass": true,
+      "detail": {
+        "peak": 0.949999988079071,
+        "peakAt": 300,
+        "startupRms": 0.6717514334051412
+      }
+    },
+    {
+      "name": "25 rapid dynamics reversals on pulse-train at 48000",
+      "pass": true,
+      "detail": {
+        "peak": 0.949999988079071,
+        "peakAt": 288,
+        "startupRms": 0.03755204674328341
+      }
+    },
+    {
+      "name": "25 rapid dynamics reversals on burst-train at 48000",
+      "pass": true,
+      "detail": {
+        "peak": 0.949999988079071,
+        "peakAt": 300,
+        "startupRms": 0.39741350744363124
+      }
+    },
+    {
+      "name": "Boosted EQ bypass rapid-reversal regression at 48000",
+      "pass": true,
+      "detail": {
+        "peak": 0.6000059843063354,
+        "peakAt": 38772,
+        "startupRms": 0.21005553321485965
+      }
+    },
+    {
+      "name": "Original startup remains transparent at 96000",
+      "pass": true,
+      "detail": {
+        "peak": 0.6000000238418579,
+        "peakAt": 600,
+        "startupRms": 0.42426407315292286
+      }
+    },
+    {
+      "name": "original impulse remains below full scale at 96000",
+      "pass": true,
+      "detail": {
+        "peak": 0.949999988079071,
+        "peakAt": 48576,
+        "delaySamples": 576,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "original burst remains below full scale at 96000",
+      "pass": true,
+      "detail": {
+        "peak": 0.949999988079071,
+        "peakAt": 48600,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "gentle impulse remains below full scale at 96000",
+      "pass": true,
+      "detail": {
+        "peak": 0.7651446461677551,
+        "peakAt": 48576,
+        "delaySamples": 576,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "gentle delay aligns with Original at 96000",
+      "pass": true,
+      "detail": {
+        "peak": 0.7651446461677551,
+        "peakAt": 48576,
+        "delaySamples": 576,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "gentle burst remains below full scale at 96000",
+      "pass": true,
+      "detail": {
+        "peak": 0.6897399425506592,
+        "peakAt": 48600,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "punch impulse remains below full scale at 96000",
+      "pass": true,
+      "detail": {
+        "peak": 0.8330449461936951,
+        "peakAt": 48576,
+        "delaySamples": 576,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "punch delay aligns with Original at 96000",
+      "pass": true,
+      "detail": {
+        "peak": 0.8330449461936951,
+        "peakAt": 48576,
+        "delaySamples": 576,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "punch burst remains below full scale at 96000",
+      "pass": true,
+      "detail": {
+        "peak": 0.7884924411773682,
+        "peakAt": 48600,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "night impulse remains below full scale at 96000",
+      "pass": true,
+      "detail": {
+        "peak": 0.42647141218185425,
+        "peakAt": 48576,
+        "delaySamples": 576,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "night delay aligns with Original at 96000",
+      "pass": true,
+      "detail": {
+        "peak": 0.42647141218185425,
+        "peakAt": 48576,
+        "delaySamples": 576,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "night burst remains below full scale at 96000",
+      "pass": true,
+      "detail": {
+        "peak": 0.20195738971233368,
+        "peakAt": 48600,
+        "startupRms": 0
+      }
+    },
+    {
+      "name": "25 rapid dynamics reversals on sine at 96000",
+      "pass": true,
+      "detail": {
+        "peak": 0.949999988079071,
+        "peakAt": 600,
+        "startupRms": 0.671751438027795
+      }
+    },
+    {
+      "name": "25 rapid dynamics reversals on pulse-train at 96000",
+      "pass": true,
+      "detail": {
+        "peak": 0.949999988079071,
+        "peakAt": 576,
+        "startupRms": 0.04056084627295186
+      }
+    },
+    {
+      "name": "25 rapid dynamics reversals on burst-train at 96000",
+      "pass": true,
+      "detail": {
+        "peak": 0.949999988079071,
+        "peakAt": 600,
+        "startupRms": 0.3974135101784349
+      }
+    },
+    {
+      "name": "Boosted EQ bypass rapid-reversal regression at 96000",
+      "pass": true,
+      "detail": {
+        "peak": 0.6000085473060608,
+        "peakAt": 77400,
+        "startupRms": 0.21155618701315196
+      }
+    },
+    {
+      "name": "Null sound settings normalize safely",
+      "pass": true,
+      "detail": {
+        "enabled": true,
+        "eq": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "width": 1,
+        "balance": 0,
+        "mono": false,
+        "preamp": 0,
+        "autoHeadroom": true,
+        "ambience": 0,
+        "room": "studio",
+        "dynamics": "original"
+      }
+    },
+    {
+      "name": "Malformed preset loads safely in actual UI",
+      "pass": true,
+      "detail": {
+        "settings": {
+          "enabled": true,
+          "eq": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 1,
+          "balance": 0,
+          "mono": false,
+          "preamp": 0,
+          "autoHeadroom": true,
+          "ambience": 0,
+          "room": "studio",
+          "dynamics": "original"
+        },
+        "metrics": null,
+        "profiles": [
+          {
+            "id": "malformed",
+            "name": "Damaged preset"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Right-only stereo audio produces waveform energy",
+      "pass": true,
+      "detail": {
+        "pixelsOutsideCenter": 4134,
+        "metrics": {
+          "leftDb": -96,
+          "rightDb": -16.40330656250348,
+          "peakDb": -13.406773133568757,
+          "correlation": 1,
+          "reduction": 0,
+          "headroomDb": 0,
+          "sampleRate": 48000
+        }
+      }
+    },
+    {
+      "name": "Reviewed production source did not change during test",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "pass": true
+}

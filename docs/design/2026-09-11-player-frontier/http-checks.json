@@ -1,0 +1,32 @@
+[
+  {
+    "file": "player-three.html",
+    "type": "text/html; charset=utf-8",
+    "status": 200
+  },
+  {
+    "file": "player-three-features.js",
+    "type": "text/javascript; charset=utf-8",
+    "status": 200
+  },
+  {
+    "file": "player-three-scene.js",
+    "type": "text/javascript; charset=utf-8",
+    "status": 200
+  },
+  {
+    "file": "player-three-aurora.js",
+    "type": "text/javascript; charset=utf-8",
+    "status": 200
+  },
+  {
+    "file": "player-three-orbital.js",
+    "type": "text/javascript; charset=utf-8",
+    "status": 200
+  },
+  {
+    "file": "player-three-liquid.js",
+    "type": "text/javascript; charset=utf-8",
+    "status": 200
+  }
+]

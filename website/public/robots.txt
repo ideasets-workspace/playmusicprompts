@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /account.html
+Disallow: /login.html
+Disallow: /s/
+
+Sitemap: https://www.playmusicprompts.com/sitemap.xml

@@ -1,0 +1,64 @@
+{
+  "schema": "berk.deep-research/v1",
+  "status": "complete",
+  "date": "2026-09-03",
+  "mode": "B",
+  "topic": "generated-track-catalogue-and-similarity-reuse",
+  "main_report": "docs/research/2026-09-03-generated-track-catalogue-and-similarity-reuse.md",
+  "index": "docs/research/README.md",
+  "source_counts": {
+    "authoritative": 59,
+    "authoritative_note": "sum of per-slice independent families (A 6, B 14, C 20, D 19) before cross-slice de-duplication; overlap is limited to Google/AWS official surfaces; the run floor of 20 is met under any de-duplication",
+    "academic": 24,
+    "academic_full": 6,
+    "primary_full": 34
+  },
+  "claim_counts": {
+    "verified_3plus": 13,
+    "single_source": 31,
+    "unverified": 7,
+    "note": "sum of the four workers' ledgers (A 1/13/1, B 3/9/1+1 relayed, C 4/5+3 two-family/2, D 5/4/3); the parent independently re-verified the 6 primaries listed in the main report's Standards ledger"
+  },
+  "planned_artifacts": 13,
+  "artifacts": [
+    { "path": "docs/research/_runs/2026-09-03-generated-track-catalogue-and-similarity-reuse.scope-plan.md", "role": "scope plan (R3)", "sha256": "9AF689BB789AFB90B2A483AD74F34D61767BE49613859E2D3409C321E6B65DA7", "bytes": 13250, "read_back": true },
+    { "path": "docs/research/_runs/2026-09-03-generated-track-catalogue-and-similarity-reuse.preflight.json", "role": "preflight (R2)", "sha256": "543818B1CFAEEE4BE28F7913E656479B2CEEB2636A2B4B1FE3B7346E6ADA26E1", "bytes": 6486, "read_back": true },
+    { "path": "docs/research/2026-09-03-reuse-slice-a-catalogue-schema-and-server-storage.md", "role": "slice A report (banner: UNVERIFIED RELAY — academic floor unmet)", "sha256": "8E5CF5CD975489E0061F9BC43C5EF5872398B5B76AE3071091A35C078CC26169", "bytes": 50541, "read_back": true },
+    { "path": "docs/research/2026-09-03-reuse-slice-a-source-register.md", "role": "slice A source register", "sha256": "60F2797DEC78003E98BAED792F418BA8755ED28FD2EF5399DBD34062E0D679CD", "bytes": 14413, "read_back": true },
+    { "path": "docs/research/2026-09-03-reuse-slice-b-similarity-retrieval-methods.md", "role": "slice B report", "sha256": "E885221CEA6F36D5873E3D808DC67D90F4900D9F85CDA817060CDD36E87F5732", "bytes": 63953, "read_back": true },
+    { "path": "docs/research/2026-09-03-reuse-slice-b-source-register.md", "role": "slice B source register", "sha256": "5F66E9C2C508503C7E221E12249EF6EB1493579A3F964B781F8751AF1D7DB5F3", "bytes": 11860, "read_back": true },
+    { "path": "docs/research/2026-09-03-reuse-slice-c-reuse-policy-economics-listener-experience.md", "role": "slice C report", "sha256": "B3DF8B756002DC92B288C8FC3F17481C791FCDF4D279ED92814CC1F9F2A25848", "bytes": 73440, "read_back": true },
+    { "path": "docs/research/2026-09-03-reuse-slice-c-source-register.md", "role": "slice C source register", "sha256": "A6D7A01BA42BE374BAAD8BDC6B79A6BB3C473C4E1BD6D55AF95E21A4A552E9F9", "bytes": 14249, "read_back": true },
+    { "path": "docs/research/2026-09-03-reuse-slice-d-rights-policy-privacy.md", "role": "slice D report", "sha256": "8EAEB661BEBB36779138C93CDD8985A7880E20FE3167514ADD99E13BF0A26FB6", "bytes": 52730, "read_back": true },
+    { "path": "docs/research/2026-09-03-reuse-slice-d-source-register.md", "role": "slice D source register", "sha256": "EA36CD110631DD454D6035A6EBB1D85DEFC9B6D9A26AD25A395968C4034D543A", "bytes": 17088, "read_back": true },
+    { "path": "docs/research/2026-09-03-generated-track-catalogue-and-similarity-reuse.md", "role": "parent synthesis + committed recommendation (R15.3)", "sha256": "BB2B28CDD61391A870B7C51F94803B1DDA5D6E0098CD4CD881D5C25BD6D75230", "bytes": 26946, "read_back": true },
+    { "path": "docs/research/README.md", "role": "scoped research index (created; docs/README.md measured absent)", "sha256": "875DDC96A56BC988A377C521E8219F1B1982C48F100CCE8431DB697C51B9D0C1", "bytes": 3159, "read_back": true },
+    { "path": "docs/research/_runs/2026-09-03-generated-track-catalogue-and-similarity-reuse.json", "role": "this completion manifest", "sha256": "self", "read_back": true }
+  ],
+  "standards_ledger": true,
+  "scope_plan": true,
+  "source_register": true,
+  "query_ledger": true,
+  "claim_ledger": true,
+  "contradiction_ledger": true,
+  "preservation_matrix": true,
+  "english_artifacts": true,
+  "indexed": true,
+  "delegations": [
+    { "slice": "A", "agent_id": "2c529146-8e2f-482f-9949-d194866b531c", "brief": "C:\\Users\\berke\\.berk-agent-state\\pmp-reuse-research\\SLICE-A.md + COMMON-BRIEF.md", "gate_audit": "COMPLETE (16266 chars)", "covenant_sha256": "F19F5CB14319E09EC73FDF42FEEF2D3067EC8A5949A34657ED9E5C1104D5F9EB", "context_fields_01_18": true, "acknowledged": true, "outputs": 2, "stop_reason": "execution limit (~122 min), not saturation", "parent_reverified": "AWS/GCS unit prices not re-fetched by the parent (official primaries cited by the worker); recommendation consistent with docs/api/06 'store the gcs_uri'" },
+    { "slice": "B", "agent_id": "cea189d0-3755-45b1-8574-d2d605efb899", "brief": "SLICE-B.md + COMMON-BRIEF.md", "gate_audit": "COMPLETE (17158 chars)", "covenant_sha256": "F19F5CB14319E09EC73FDF42FEEF2D3067EC8A5949A34657ED9E5C1104D5F9EB", "context_fields_01_18": true, "acknowledged": true, "outputs": 2, "stop_reason": "45-min limit, not saturation", "parent_reverified": "laion/larger_clap_music raw README license: apache-2.0; OpenMuQ/MuQ-MuLan-large weights CC-BY-NC 4.0; pgvector README (halfvec 4,000 dims, ef_search 40, iterative_scan)" },
+    { "slice": "C", "agent_id": "f4255bd1-114c-4d11-9c9b-92715c2d8bc9", "brief": "SLICE-C.md + COMMON-BRIEF.md", "gate_audit": "COMPLETE (16531 chars)", "covenant_sha256": "F19F5CB14319E09EC73FDF42FEEF2D3067EC8A5949A34657ED9E5C1104D5F9EB", "context_fields_01_18": true, "acknowledged": true, "outputs": 2, "stop_reason": "execution limit (~2 h 18 min), not saturation", "parent_reverified": "economics formula re-derived by the parent with the ledger latencies measured this session (median 43.7 s, p90 86 s, max 92.5 s)" },
+    { "slice": "D", "agent_id": "f9882240-c53f-44af-bae9-6a22a4a733a5", "brief": "SLICE-D.md + COMMON-BRIEF.md", "gate_audit": "COMPLETE (16807 chars)", "covenant_sha256": "F19F5CB14319E09EC73FDF42FEEF2D3067EC8A5949A34657ED9E5C1104D5F9EB", "context_fields_01_18": true, "acknowledged": true, "outputs": 2, "stop_reason": "45-min limit, not saturation", "parent_reverified": "Google Cloud SST §5(b),(c), §17(b)(i), §20(a),(b),(d),(i) re-read from the live page; Generative AI Indemnified Services list (Lyria absent); Lyria 3 page banner and Pre-GA status" }
+  ],
+  "frontier_axes": null,
+  "known_gaps": [
+    "Slice A: no academic/standards primary read [FULL] (FIPS 180-4, RFC 6716, Zhu 2008, Venti not reached) — banner kept on the slice file",
+    "All four workers stopped on the execution limit, not saturation; unswept lanes are enumerated in each slice report",
+    "[UNVERIFIED] CLAP / bge-m3 CPU inference cost on m7i.large; SynthID survival through the -14 LUFS mastering chain; bucket location of gs://playmusicprompts-content; CloudFront price class for Türkiye; effect of provenance wording on listeners",
+    "Cloud Data Processing Addendum, EU Commission Art. 50 guidelines, EUR-Lex DSA articles, mevzuat.gov.tr texts not opened",
+    "SST §17(b)(i) 'substitute, replace, or circumvent' reading is the worker's and the parent's ordinary-meaning inference — to be put to Google in writing before launch",
+    "Ledger latencies (4.8–92.5 s) measure the generation call only; end-to-end site delivery adds conform/master (measured 35–75 s on 2026-09-02 per STATE.md)"
+  ],
+  "spend_usd_this_run": 0,
+  "completed_at": "2026-09-03T09:10:00Z"
+}

@@ -1,0 +1,46 @@
+{
+  "lane": "three-player-20260911",
+  "owner": "aurora_scene_asset",
+  "scope": "Create a reusable procedural Aurora Veil asset outside the website for parent integration.",
+  "requirements": [
+    "Distinct flowing ribbon silhouette",
+    "Real depth and fine light filaments",
+    "World palette integration",
+    "Actual audio inputs",
+    "Reduced motion freeze",
+    "Bounded resources",
+    "No renderer or external assets"
+  ],
+  "tasks": [
+    {
+      "id": "AURORA-01",
+      "status": "VERIFIED",
+      "objective": "Read governance, lane and live scene contract",
+      "dependencies": [],
+      "next_action": "Create the bounded module",
+      "evidence": "Read full governing law, project memory, current lane ledger, player scene and world definitions in this session."
+    },
+    {
+      "id": "AURORA-02",
+      "status": "VERIFIED",
+      "objective": "Create the parameterized geometry and shader module",
+      "dependencies": [
+        "AURORA-01"
+      ],
+      "next_action": "Parent integrates the provided module into the scene selector.",
+      "completion_evidence": "Actual module exports group, update, setPalette and dispose; no website writes.",
+      "evidence": "Actual exported module exists. Local Three.js r185 instantiated four ribbon meshes and one Points object without imports or a renderer owned by the asset; Chrome shader compilation succeeded."
+    },
+    {
+      "id": "AURORA-03",
+      "status": "VERIFIED_INTEGRATED",
+      "objective": "Verify syntax, finite geometry, bounds and reduced-motion behavior",
+      "dependencies": [
+        "AURORA-02"
+      ],
+      "next_action": "No remaining Aurora asset task; parent integrated rendered scene.",
+      "completion_evidence": "Session-produced asset checks plus parent CUA integrated render review.",
+      "evidence": "node --check passed; verify-aurora.cjs used actual local Three.js and Chrome WebGL. Five asset draw calls, 27648 triangles, 150 points, finite geometry parameters, exact time/audio uniform freeze under changed inputs with motion=false, zero shader errors, idempotent disposal. Standalone screenshot inspected. Shader coordinate bounds x<=2.31, y<=1.957, z<=1.145 fit the explicit geometry box and radius3.3. Parent then integrated Aurora into the real player and inspected its rendered selection, palette behavior and zero page errors."
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "berk.deep-research-completion/v1",
+  "status": "complete",
+  "date": "2026-08-17",
+  "mode": "MODE B (autopilot-decided next step; inline run, no worker dispatch)",
+  "topic": "vm-provisioning-brief",
+  "decisions_served": [
+    "Clause 20/21 provisioning of the film-production instance: machine type, scheduling class, disks, OS image, network posture, compliance posture. Paid step = Berk's approval (D1-D10 brief delivered in chat)."
+  ],
+  "main_report": "docs/moviemaker/research/2026-08-17-vm-provisioning-brief.md",
+  "main_report_sha256": "02627e2a6efb217a35ab78dd162e0de825d0e5ba1bd68c0659b1b731e9833327",
+  "index": "docs/README.md",
+  "index_sha256": "c56539a50b6a6988bfe8eea7a41b9b40dd293cc7de7226f2439947a3c638dfe1",
+  "preflight": "docs/research/_runs/2026-08-17-vm-provisioning-brief.preflight.json",
+  "local_intake": "docs/research/_runs/2026-08-17-vm-provisioning-brief.local-intake.json",
+  "evidence_input": "artifacts/moviemaker/vm_provisioning_brief_sections.json (625 rows, 10 sections + 48 uncategorised)",
+  "source_counts": {
+    "authoritative": 23,
+    "academic": 0,
+    "academic_note": "STATED LIMIT: vendor-pricing/config synthesis of already-judged rows; no academic primary exists for vendor SKU rates; the judging phase's research corpus carried the academic floor for the underlying claims.",
+    "new_captures_this_run": 7
+  },
+  "new_captures": [
+    {"path": "docs/moviemaker/research/_sources/2026-08-17-spot-vms-pricing-page.txt", "sha256_head16": "d06a4ab142911a4b", "bytes": 152844},
+    {"path": "docs/moviemaker/research/_sources/2026-08-17-create-use-spot-vms-doc.txt", "sha256_head16": "53a1e17c916980b3", "bytes": 49780},
+    {"path": "docs/moviemaker/research/_sources/2026-08-17-disk-and-image-pricing-page.txt", "sha256_head16": "b09fe870de60ab22", "bytes": 43835},
+    {"path": "docs/moviemaker/research/_sources/2026-08-17-hyperdisk-overview-doc.txt", "sha256_head16": "ee86a9f40ad86703", "bytes": 22709},
+    {"path": "docs/moviemaker/research/_sources/2026-08-17-persistent-disk-overview-doc.txt", "sha256_head16": "bbdf9d5b2725b69a", "bytes": 20543},
+    {"path": "docs/moviemaker/research/_sources/2026-08-17-assured-workloads-eu-data-boundary-access-justifications.txt", "sha256_head16": "5243112b29ae87ed", "bytes": 33286},
+    {"path": "docs/moviemaker/research/_sources/2026-08-17-rhel-faq-premium-licensing.txt", "sha256": "809e9441551480a068326b0c87057de8620ce2f213ebae93c2839382e6088a66", "bytes": 4586}
+  ],
+  "claim_counts": {
+    "verified_3plus": 4,
+    "single_source": 2,
+    "unverified": 0,
+    "note": "the two [single-source] rates (on-demand $/h; Hyperdisk no-Spot-discount) are governed by the live re-read protocol at the paid step, which is the controlling number by design"
+  },
+  "planned_artifacts": 4,
+  "produced_artifacts": 4,
+  "artifacts_note": "brief + index row + this manifest + 7 source captures (counted as one archive class); all read back after write (hashes above computed from disk)",
+  "standards_ledger": true,
+  "scope_plan": true,
+  "source_register": true,
+  "query_ledger": "4 WebSearch discovery rounds (Spot pricing/preemption; disk+Hyperdisk pricing; premium OS billing; Assured Workloads EU) + 1 WebFetch (RHEL FAQ); SEARCH-FIRST honoured, zero guessed URLs",
+  "claim_ledger": true,
+  "contradiction_ledger": "none found between sources this run; the EU-residency-vs-us-central1 tension is a DECISION recorded in section 3, not a source contradiction",
+  "english_artifacts": true,
+  "indexed": true,
+  "delegations": [],
+  "known_gaps": [
+    "academic floor 0 in this run (stated in scope plan and above)",
+    "Spot rates day-volatile per the vendor's own page; table is sizing evidence only",
+    "SLES/Ubuntu Pro FAQ pages read via search-result text, not archived as standalone captures (key facts cross-present in the archived disk-image-pricing page)",
+    "48 uncategorised rows judged non-load-bearing by reading; re-derivable from the section map"
+  ],
+  "paid_step": "NOT taken - Berk's approval required (Clause 21); D1-D10 brief delivered in chat with this manifest",
+  "spend_usd": 0,
+  "completed_at": "2026-08-17T13:20:00+03:00"
+}

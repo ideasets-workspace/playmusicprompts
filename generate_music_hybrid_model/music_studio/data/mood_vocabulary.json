@@ -1,0 +1,856 @@
+{
+  "$schema_id": "berk.music-studio-vocabulary/v1",
+  "vocabulary": "moods",
+  "consumed_by": "music_studio/param_spec.json -> moods.values_import",
+  "provenance_rule": "every group cites the source read on its date; an entry outside a sourced group may not be added (RED CODE, D-SSM-23)",
+  "groups": [
+    {
+      "source": "C:\\Berk\\BeforeTomorrow\\docs\\design\\BeforeTomorrow_MusicStudio_white.png (canonical UI chips + mood-orbit poles, read visually 2026-08-14)",
+      "entries": [
+        {
+          "id": "epic",
+          "label": "Epic"
+        },
+        {
+          "id": "uplifting",
+          "label": "Uplifting"
+        },
+        {
+          "id": "nostalgic",
+          "label": "Nostalgic"
+        },
+        {
+          "id": "mysterious",
+          "label": "Mysterious"
+        },
+        {
+          "id": "hopeful",
+          "label": "Hopeful"
+        },
+        {
+          "id": "melancholic",
+          "label": "Melancholic"
+        },
+        {
+          "id": "dark",
+          "label": "Dark"
+        },
+        {
+          "id": "aggressive",
+          "label": "Aggressive"
+        }
+      ]
+    },
+    {
+      "source": "docs/research/_sources/2026-08-13-vertex-lyria-prompt-guide.txt L1004 (Google's own named mood examples)",
+      "entries": [
+        {
+          "id": "energetic",
+          "label": "Energetic"
+        },
+        {
+          "id": "melancholy",
+          "label": "Melancholy"
+        },
+        {
+          "id": "peaceful",
+          "label": "Peaceful"
+        },
+        {
+          "id": "tense_suspenseful",
+          "label": "Tense & Suspenseful"
+        }
+      ]
+    },
+    {
+      "source": "docs/research/_sources/2026-08-13-vertex-lyria-prompt-guide.txt L1073-1103 (moods Google's own worked examples exercise: calm, even, nostalgic)",
+      "entries": [
+        {
+          "id": "calm",
+          "label": "Calm"
+        },
+        {
+          "id": "warm",
+          "label": "Warm"
+        }
+      ]
+    },
+    {
+      "source": "docs/research/_sources/2026-08-13-elevenlabs-composition-plans-guide.md (mood styles its archived plans exercise: gentle/conversational, confident, powerful/anthemic)",
+      "entries": [
+        {
+          "id": "gentle",
+          "label": "Gentle"
+        },
+        {
+          "id": "confident",
+          "label": "Confident"
+        },
+        {
+          "id": "anthemic",
+          "label": "Anthemic"
+        }
+      ]
+    },
+    {
+      "source": "docs/research/_sources/2026-08-17-gemiac-geneva-music-induced-affect-checklist-preprint.txt — Table 1, 'List of Feeling Terms Pertaining to the Nine GEMS Factors', capture lines 561-582; the alias code prefix (W/Tr/Te/N/Pe/P/J/T/S) is what makes each term's factor unambiguous even where the PDF-to-text conversion flattened the last rows onto one line.",
+      "entries": [
+        {
+          "id": "filled_with_wonder",
+          "label": "Filled with wonder",
+          "factor": "Wonder",
+          "factor_alias": "W1",
+          "taxonomy": "GEMS"
+        },
+        {
+          "id": "enchanted",
+          "label": "Enchanted",
+          "factor": "Wonder",
+          "factor_alias": "W2",
+          "taxonomy": "GEMS"
+        },
+        {
+          "id": "feelings_of_transcendence",
+          "label": "Feelings of transcendence",
+          "factor": "Transcendence",
+          "factor_alias": "Tr1",
+          "taxonomy": "GEMS"
+        },
+        {
+          "id": "inspired",
+          "label": "Inspired",
+          "factor": "Transcendence",
+          "factor_alias": "Tr2",
+          "taxonomy": "GEMS"
+        },
+        {
+          "id": "full_of_tenderness",
+          "label": "Full of tenderness",
+          "factor": "Tenderness",
+          "factor_alias": "Te1",
+          "taxonomy": "GEMS"
+        },
+        {
+          "id": "warmhearted",
+          "label": "Warmhearted",
+          "factor": "Tenderness",
+          "factor_alias": "Te2",
+          "taxonomy": "GEMS"
+        },
+        {
+          "id": "dreamy",
+          "label": "Dreamy",
+          "factor": "Nostalgia",
+          "factor_alias": "N3",
+          "taxonomy": "GEMS"
+        },
+        {
+          "id": "sentimental",
+          "label": "Sentimental",
+          "factor": "Nostalgia",
+          "factor_alias": "N4",
+          "taxonomy": "GEMS"
+        },
+        {
+          "id": "relaxed",
+          "label": "Relaxed",
+          "factor": "Peacefulness",
+          "factor_alias": "Pe1",
+          "taxonomy": "GEMS"
+        },
+        {
+          "id": "soothed",
+          "label": "Soothed",
+          "factor": "Peacefulness",
+          "factor_alias": "Pe2",
+          "taxonomy": "GEMS"
+        },
+        {
+          "id": "powerful",
+          "label": "Powerful",
+          "factor": "Power",
+          "factor_alias": "P1",
+          "taxonomy": "GEMS"
+        },
+        {
+          "id": "strong",
+          "label": "Strong",
+          "factor": "Power",
+          "factor_alias": "P3",
+          "taxonomy": "GEMS"
+        },
+        {
+          "id": "lively",
+          "label": "Lively",
+          "factor": "Joyful activation",
+          "factor_alias": "J1",
+          "taxonomy": "GEMS"
+        },
+        {
+          "id": "joyful",
+          "label": "Joyful",
+          "factor": "Joyful activation",
+          "factor_alias": "J2",
+          "taxonomy": "GEMS"
+        },
+        {
+          "id": "wanting_to_dance",
+          "label": "Wanting to dance",
+          "factor": "Joyful activation",
+          "factor_alias": "J3",
+          "taxonomy": "GEMS"
+        },
+        {
+          "id": "tense",
+          "label": "Tense",
+          "factor": "Tension",
+          "factor_alias": "T1",
+          "taxonomy": "GEMS"
+        },
+        {
+          "id": "nervous",
+          "label": "Nervous",
+          "factor": "Tension",
+          "factor_alias": "T2",
+          "taxonomy": "GEMS"
+        },
+        {
+          "id": "aroused",
+          "label": "Aroused",
+          "factor": "Tension",
+          "factor_alias": "T3",
+          "taxonomy": "GEMS"
+        },
+        {
+          "id": "agitated",
+          "label": "Agitated",
+          "factor": "Tension",
+          "factor_alias": "T4",
+          "taxonomy": "GEMS"
+        },
+        {
+          "id": "sad",
+          "label": "Sad",
+          "factor": "Sadness",
+          "factor_alias": "S1",
+          "taxonomy": "GEMS"
+        },
+        {
+          "id": "gloomy",
+          "label": "Gloomy",
+          "factor": "Sadness",
+          "factor_alias": "S2",
+          "taxonomy": "GEMS"
+        }
+      ]
+    },
+    {
+      "source": "docs/research/_sources/2026-08-17-gemiac-geneva-music-induced-affect-checklist-preprint.txt — Table 2, 'List of Newly Proposed Feeling Terms Pertaining to Eight New Feeling Classes', capture lines 586-607. One term per line in the capture, so both the class and the term are read directly.",
+      "entries": [
+        {
+          "id": "feelings_of_harmony",
+          "label": "Feelings of harmony",
+          "factor": "Aesthetic emotions",
+          "factor_alias": "AE1",
+          "taxonomy": "GEMIAC extension"
+        },
+        {
+          "id": "feelings_of_beauty",
+          "label": "Feelings of beauty",
+          "factor": "Aesthetic emotions",
+          "factor_alias": "AE2",
+          "taxonomy": "GEMIAC extension"
+        },
+        {
+          "id": "interested",
+          "label": "Interested",
+          "factor": "Epistemic emotions",
+          "factor_alias": "K1",
+          "taxonomy": "GEMIAC extension"
+        },
+        {
+          "id": "discovering_novelty",
+          "label": "Discovering novelty",
+          "factor": "Epistemic emotions",
+          "factor_alias": "K2",
+          "taxonomy": "GEMIAC extension"
+        },
+        {
+          "id": "insight",
+          "label": "Insight",
+          "factor": "Epistemic emotions",
+          "factor_alias": "K3",
+          "taxonomy": "GEMIAC extension"
+        },
+        {
+          "id": "moved",
+          "label": "Moved",
+          "factor": "Moved",
+          "factor_alias": "M1",
+          "taxonomy": "GEMIAC extension"
+        },
+        {
+          "id": "touched",
+          "label": "Touched",
+          "factor": "Moved",
+          "factor_alias": "M2",
+          "taxonomy": "GEMIAC extension"
+        },
+        {
+          "id": "indifferent",
+          "label": "Indifferent",
+          "factor": "Boredom",
+          "factor_alias": "B1",
+          "taxonomy": "GEMIAC extension"
+        },
+        {
+          "id": "bored",
+          "label": "Bored",
+          "factor": "Boredom",
+          "factor_alias": "B2",
+          "taxonomy": "GEMIAC extension"
+        },
+        {
+          "id": "passionate",
+          "label": "Passionate",
+          "factor": "Enthusiasm",
+          "factor_alias": "E1",
+          "taxonomy": "GEMIAC extension"
+        },
+        {
+          "id": "enthusiastic",
+          "label": "Enthusiastic",
+          "factor": "Enthusiasm",
+          "factor_alias": "E2",
+          "taxonomy": "GEMIAC extension"
+        },
+        {
+          "id": "in_awe",
+          "label": "In awe",
+          "factor": "Enthusiasm",
+          "factor_alias": "E3",
+          "taxonomy": "GEMIAC extension"
+        },
+        {
+          "id": "apprehensive",
+          "label": "Apprehensive",
+          "factor": "Fear",
+          "factor_alias": "F1",
+          "taxonomy": "GEMIAC extension"
+        },
+        {
+          "id": "uneasy",
+          "label": "Uneasy",
+          "factor": "Fear",
+          "factor_alias": "F2",
+          "taxonomy": "GEMIAC extension"
+        },
+        {
+          "id": "astonished",
+          "label": "Astonished",
+          "factor": "Surprise",
+          "factor_alias": "Su1",
+          "taxonomy": "GEMIAC extension"
+        },
+        {
+          "id": "amazed",
+          "label": "Amazed",
+          "factor": "Surprise",
+          "factor_alias": "Su2",
+          "taxonomy": "GEMIAC extension"
+        },
+        {
+          "id": "irritated",
+          "label": "Irritated",
+          "factor": "Anger",
+          "factor_alias": "A2",
+          "taxonomy": "GEMIAC extension"
+        },
+        {
+          "id": "angry",
+          "label": "Angry",
+          "factor": "Anger",
+          "factor_alias": "A3",
+          "taxonomy": "GEMIAC extension"
+        }
+      ]
+    },
+    {
+      "source": "docs/research/_sources/2026-08-17-gemiac-geneva-music-induced-affect-checklist-preprint.txt — Table 3, 'Final List of Fuzzy-set Clusters and Feeling Terms for GEMIAC', capture lines 615-629. These are the 14 two-item fuzzy-set classes the authors call Version 1.0 of the GEMIAC.",
+      "entries": [
+        {
+          "id": "filled_with_wonder_amazed",
+          "label": "Filled with wonder, amazed",
+          "factor": "GEMS factor Wonder",
+          "gemiac_cluster": 1,
+          "taxonomy": "GEMIAC v1.0 fuzzy-set class"
+        },
+        {
+          "id": "moved_touched",
+          "label": "Moved, touched",
+          "factor": "New subscale",
+          "gemiac_cluster": 2,
+          "taxonomy": "GEMIAC v1.0 fuzzy-set class"
+        },
+        {
+          "id": "enchanted_in_awe",
+          "label": "Enchanted, in awe",
+          "factor": "GEMS factor Transcendence",
+          "gemiac_cluster": 3,
+          "taxonomy": "GEMIAC v1.0 fuzzy-set class"
+        },
+        {
+          "id": "inspired_enthusiastic",
+          "label": "Inspired, enthusiastic",
+          "factor": "New subscale",
+          "gemiac_cluster": 4,
+          "taxonomy": "GEMIAC v1.0 fuzzy-set class"
+        },
+        {
+          "id": "energetic_lively",
+          "label": "Energetic, lively",
+          "factor": "New subscale",
+          "gemiac_cluster": 5,
+          "taxonomy": "GEMIAC v1.0 fuzzy-set class"
+        },
+        {
+          "id": "joyful_wanting_to_dance",
+          "label": "Joyful, wanting to dance",
+          "factor": "GEMS factor Joyful activation",
+          "gemiac_cluster": 6,
+          "taxonomy": "GEMIAC v1.0 fuzzy-set class"
+        },
+        {
+          "id": "powerful_strong",
+          "label": "Powerful, strong",
+          "factor": "GEMS factor Power",
+          "gemiac_cluster": 7,
+          "taxonomy": "GEMIAC v1.0 fuzzy-set class"
+        },
+        {
+          "id": "full_of_tenderness_warmhearted",
+          "label": "Full of tenderness, warmhearted",
+          "factor": "GEMS factor Tenderness",
+          "gemiac_cluster": 8,
+          "taxonomy": "GEMIAC v1.0 fuzzy-set class"
+        },
+        {
+          "id": "relaxed_peaceful",
+          "label": "Relaxed, peaceful",
+          "factor": "GEMS factor Peacefulness",
+          "gemiac_cluster": 9,
+          "taxonomy": "GEMIAC v1.0 fuzzy-set class"
+        },
+        {
+          "id": "melancholic_sad",
+          "label": "Melancholic, sad",
+          "factor": "GEMS factor Sadness",
+          "gemiac_cluster": 10,
+          "taxonomy": "GEMIAC v1.0 fuzzy-set class"
+        },
+        {
+          "id": "nostalgic_sentimental",
+          "label": "Nostalgic, sentimental",
+          "factor": "GEMS factor Nostalgia",
+          "gemiac_cluster": 11,
+          "taxonomy": "GEMIAC v1.0 fuzzy-set class"
+        },
+        {
+          "id": "indifferent_bored",
+          "label": "Indifferent, bored",
+          "factor": "New subscale",
+          "gemiac_cluster": 12,
+          "taxonomy": "GEMIAC v1.0 fuzzy-set class"
+        },
+        {
+          "id": "tense_uneasy",
+          "label": "Tense, uneasy",
+          "factor": "GEMS factor Tension",
+          "gemiac_cluster": 13,
+          "taxonomy": "GEMIAC v1.0 fuzzy-set class"
+        },
+        {
+          "id": "agitated_aggressive",
+          "label": "Agitated, aggressive",
+          "factor": "New subscale",
+          "gemiac_cluster": 14,
+          "taxonomy": "GEMIAC v1.0 fuzzy-set class"
+        }
+      ]
+    },
+    {
+      "source": "docs/research/_sources/2026-08-17-russell-1980-circumplex-model-of-affect-jpsp.txt — Russell 1980, A Circumplex Model of Affect, J. Pers. Soc. Psychol. The eight reference categories are stated at capture line 101 ('pleasure = 0 deg, excitement = 45 deg, arousal = 90 deg, distress = 135 deg, misery = 180 deg, depression = 225 deg, sleepiness = 270 deg, contentment = 315 deg'); the per-word MEASURED angles are stated in the prose of capture line 127.",
+      "honest_limit": "Line 101 states 'Polar coordinates for the 28 words are available from the author and plotted in Figure 2' — so only the words the prose names numerically have a measured angle here. The other 13 of the 28 are in a FIGURE, not in text, and are therefore left without a coordinate rather than estimated.",
+      "entries": [
+        {
+          "id": "pleasure",
+          "label": "Pleasure",
+          "factor": "Russell circumplex reference category",
+          "circumplex_angle_degrees": 0,
+          "valence": 1.0,
+          "arousal": 0.0,
+          "coordinate_basis": "theoretical reference angle stated in the paper's text",
+          "taxonomy": "Russell 1980 circumplex"
+        },
+        {
+          "id": "excitement",
+          "label": "Excitement",
+          "factor": "Russell circumplex reference category",
+          "circumplex_angle_degrees": 45,
+          "valence": 0.7071,
+          "arousal": 0.7071,
+          "coordinate_basis": "theoretical reference angle stated in the paper's text",
+          "taxonomy": "Russell 1980 circumplex"
+        },
+        {
+          "id": "arousal",
+          "label": "Arousal",
+          "factor": "Russell circumplex reference category",
+          "circumplex_angle_degrees": 90,
+          "valence": 0.0,
+          "arousal": 1.0,
+          "coordinate_basis": "theoretical reference angle stated in the paper's text",
+          "taxonomy": "Russell 1980 circumplex"
+        },
+        {
+          "id": "distress",
+          "label": "Distress",
+          "factor": "Russell circumplex reference category",
+          "circumplex_angle_degrees": 135,
+          "valence": -0.7071,
+          "arousal": 0.7071,
+          "coordinate_basis": "theoretical reference angle stated in the paper's text",
+          "taxonomy": "Russell 1980 circumplex"
+        },
+        {
+          "id": "misery",
+          "label": "Misery",
+          "factor": "Russell circumplex reference category",
+          "circumplex_angle_degrees": 180,
+          "valence": -1.0,
+          "arousal": 0.0,
+          "coordinate_basis": "theoretical reference angle stated in the paper's text",
+          "taxonomy": "Russell 1980 circumplex"
+        },
+        {
+          "id": "depression",
+          "label": "Depression",
+          "factor": "Russell circumplex reference category",
+          "circumplex_angle_degrees": 225,
+          "valence": -0.7071,
+          "arousal": -0.7071,
+          "coordinate_basis": "theoretical reference angle stated in the paper's text",
+          "taxonomy": "Russell 1980 circumplex"
+        },
+        {
+          "id": "sleepiness",
+          "label": "Sleepiness",
+          "factor": "Russell circumplex reference category",
+          "circumplex_angle_degrees": 270,
+          "valence": -0.0,
+          "arousal": -1.0,
+          "coordinate_basis": "theoretical reference angle stated in the paper's text",
+          "taxonomy": "Russell 1980 circumplex"
+        },
+        {
+          "id": "contentment",
+          "label": "Contentment",
+          "factor": "Russell circumplex reference category",
+          "circumplex_angle_degrees": 315,
+          "valence": 0.7071,
+          "arousal": -0.7071,
+          "coordinate_basis": "theoretical reference angle stated in the paper's text",
+          "taxonomy": "Russell 1980 circumplex"
+        },
+        {
+          "id": "happy",
+          "label": "Happy",
+          "factor": "Russell circumplex scaled word",
+          "circumplex_angle_degrees": 7.8,
+          "valence": 0.9907,
+          "arousal": 0.1357,
+          "coordinate_basis": "measured angle stated in the paper's text",
+          "taxonomy": "Russell 1980 circumplex"
+        },
+        {
+          "id": "delighted",
+          "label": "Delighted",
+          "factor": "Russell circumplex scaled word",
+          "circumplex_angle_degrees": 24.9,
+          "valence": 0.907,
+          "arousal": 0.421,
+          "coordinate_basis": "measured angle stated in the paper's text",
+          "taxonomy": "Russell 1980 circumplex"
+        },
+        {
+          "id": "excited",
+          "label": "Excited",
+          "factor": "Russell circumplex scaled word",
+          "circumplex_angle_degrees": 48.6,
+          "valence": 0.6613,
+          "arousal": 0.7501,
+          "coordinate_basis": "measured angle stated in the paper's text",
+          "taxonomy": "Russell 1980 circumplex"
+        },
+        {
+          "id": "alarmed",
+          "label": "Alarmed",
+          "factor": "Russell circumplex scaled word",
+          "circumplex_angle_degrees": 96.5,
+          "valence": -0.1132,
+          "arousal": 0.9936,
+          "coordinate_basis": "measured angle stated in the paper's text",
+          "taxonomy": "Russell 1980 circumplex"
+        },
+        {
+          "id": "miserable",
+          "label": "Miserable",
+          "factor": "Russell circumplex scaled word",
+          "circumplex_angle_degrees": 188.7,
+          "valence": -0.9885,
+          "arousal": -0.1513,
+          "coordinate_basis": "measured angle stated in the paper's text",
+          "taxonomy": "Russell 1980 circumplex"
+        },
+        {
+          "id": "droopy",
+          "label": "Droopy",
+          "factor": "Russell circumplex scaled word",
+          "circumplex_angle_degrees": 256.6,
+          "valence": -0.2317,
+          "arousal": -0.9728,
+          "coordinate_basis": "measured angle stated in the paper's text",
+          "taxonomy": "Russell 1980 circumplex"
+        },
+        {
+          "id": "tired",
+          "label": "Tired",
+          "factor": "Russell circumplex scaled word",
+          "circumplex_angle_degrees": 267.7,
+          "valence": -0.0401,
+          "arousal": -0.9992,
+          "coordinate_basis": "measured angle stated in the paper's text",
+          "taxonomy": "Russell 1980 circumplex"
+        },
+        {
+          "id": "sleepy",
+          "label": "Sleepy",
+          "factor": "Russell circumplex scaled word",
+          "circumplex_angle_degrees": 271.9,
+          "valence": 0.0332,
+          "arousal": -0.9995,
+          "coordinate_basis": "measured angle stated in the paper's text",
+          "taxonomy": "Russell 1980 circumplex"
+        },
+        {
+          "id": "serene",
+          "label": "Serene",
+          "factor": "Russell circumplex scaled word",
+          "circumplex_angle_degrees": 328.6,
+          "valence": 0.8536,
+          "arousal": -0.521,
+          "coordinate_basis": "measured angle stated in the paper's text",
+          "taxonomy": "Russell 1980 circumplex"
+        },
+        {
+          "id": "pleased",
+          "label": "Pleased",
+          "factor": "Russell circumplex scaled word",
+          "circumplex_angle_degrees": 353.2,
+          "valence": 0.993,
+          "arousal": -0.1184,
+          "coordinate_basis": "measured angle stated in the paper's text",
+          "taxonomy": "Russell 1980 circumplex"
+        }
+      ]
+    },
+    {
+      "source": "docs/research/_sources/2026-08-17-hu-downie-2007-exploring-mood-metadata-ismir.txt — Hu & Downie 2007, Exploring Mood Metadata, ISMIR. Table 1 'Popular Set mood label clustering results', capture lines 23-24: 29 mood labels consistently grouped into 5 clusters.",
+      "cluster_assignment_status": "WITHHELD — NOT GUESSED. The PDF-to-text conversion flattened Table 1's five columns row-major and DROPPED the blank cells of the ragged rows, so after the four complete rows the column of each remaining term is not recoverable from this capture. Assigning them would be an invention, so no `mirex_cluster` field is emitted for ANY term and the terms are carried as a sourced flat group. The paper's own words at line 24 support carrying them unlabelled: 'we are NOT going to assign a term label to any of these clusters'.",
+      "entries": [
+        {
+          "id": "rowdy",
+          "label": "Rowdy",
+          "factor": "MIREX Popular Set mood label",
+          "taxonomy": "Hu & Downie 2007 Popular Set",
+          "mirex_cluster": 1
+        },
+        {
+          "id": "literate",
+          "label": "Literate",
+          "factor": "MIREX Popular Set mood label",
+          "taxonomy": "Hu & Downie 2007 Popular Set",
+          "mirex_cluster": 3
+        },
+        {
+          "id": "witty",
+          "label": "Witty",
+          "factor": "MIREX Popular Set mood label",
+          "taxonomy": "Hu & Downie 2007 Popular Set",
+          "mirex_cluster": 4
+        },
+        {
+          "id": "volatile",
+          "label": "Volatile",
+          "factor": "MIREX Popular Set mood label",
+          "taxonomy": "Hu & Downie 2007 Popular Set",
+          "mirex_cluster": 5
+        },
+        {
+          "id": "rousing",
+          "label": "Rousing",
+          "factor": "MIREX Popular Set mood label",
+          "taxonomy": "Hu & Downie 2007 Popular Set",
+          "mirex_cluster": 1
+        },
+        {
+          "id": "amiable_good_natured",
+          "label": "Amiable/ Good natured",
+          "factor": "MIREX Popular Set mood label",
+          "taxonomy": "Hu & Downie 2007 Popular Set",
+          "mirex_cluster": 2
+        },
+        {
+          "id": "wistful",
+          "label": "Wistful",
+          "factor": "MIREX Popular Set mood label",
+          "taxonomy": "Hu & Downie 2007 Popular Set",
+          "mirex_cluster": 3
+        },
+        {
+          "id": "humorous",
+          "label": "Humorous",
+          "factor": "MIREX Popular Set mood label",
+          "taxonomy": "Hu & Downie 2007 Popular Set",
+          "mirex_cluster": 4
+        },
+        {
+          "id": "fiery",
+          "label": "Fiery",
+          "factor": "MIREX Popular Set mood label",
+          "taxonomy": "Hu & Downie 2007 Popular Set",
+          "mirex_cluster": 5
+        },
+        {
+          "id": "sweet",
+          "label": "Sweet",
+          "factor": "MIREX Popular Set mood label",
+          "taxonomy": "Hu & Downie 2007 Popular Set",
+          "mirex_cluster": 2
+        },
+        {
+          "id": "bittersweet",
+          "label": "Bittersweet",
+          "factor": "MIREX Popular Set mood label",
+          "taxonomy": "Hu & Downie 2007 Popular Set",
+          "mirex_cluster": 3
+        },
+        {
+          "id": "whimsical",
+          "label": "Whimsical",
+          "factor": "MIREX Popular Set mood label",
+          "taxonomy": "Hu & Downie 2007 Popular Set",
+          "mirex_cluster": 4
+        },
+        {
+          "id": "visceral",
+          "label": "Visceral",
+          "factor": "MIREX Popular Set mood label",
+          "taxonomy": "Hu & Downie 2007 Popular Set",
+          "mirex_cluster": 5
+        },
+        {
+          "id": "boisterous",
+          "label": "Boisterous",
+          "factor": "MIREX Popular Set mood label",
+          "taxonomy": "Hu & Downie 2007 Popular Set",
+          "mirex_cluster": 1
+        },
+        {
+          "id": "fun",
+          "label": "Fun",
+          "factor": "MIREX Popular Set mood label",
+          "taxonomy": "Hu & Downie 2007 Popular Set",
+          "mirex_cluster": 2
+        },
+        {
+          "id": "autumnal",
+          "label": "Autumnal",
+          "factor": "MIREX Popular Set mood label",
+          "taxonomy": "Hu & Downie 2007 Popular Set",
+          "mirex_cluster": 3
+        },
+        {
+          "id": "wry",
+          "label": "Wry",
+          "factor": "MIREX Popular Set mood label",
+          "taxonomy": "Hu & Downie 2007 Popular Set",
+          "mirex_cluster": 4
+        },
+        {
+          "id": "rollicking",
+          "label": "Rollicking",
+          "factor": "MIREX Popular Set mood label",
+          "taxonomy": "Hu & Downie 2007 Popular Set",
+          "mirex_cluster": 2
+        },
+        {
+          "id": "brooding",
+          "label": "Brooding",
+          "factor": "MIREX Popular Set mood label",
+          "taxonomy": "Hu & Downie 2007 Popular Set",
+          "mirex_cluster": 3
+        },
+        {
+          "id": "campy",
+          "label": "Campy",
+          "factor": "MIREX Popular Set mood label",
+          "taxonomy": "Hu & Downie 2007 Popular Set",
+          "mirex_cluster": 4
+        },
+        {
+          "id": "tense_anxious",
+          "label": "Tense/anxious",
+          "factor": "MIREX Popular Set mood label",
+          "taxonomy": "Hu & Downie 2007 Popular Set",
+          "mirex_cluster": 5
+        },
+        {
+          "id": "cheerful",
+          "label": "Cheerful",
+          "factor": "MIREX Popular Set mood label",
+          "taxonomy": "Hu & Downie 2007 Popular Set",
+          "mirex_cluster": 2
+        },
+        {
+          "id": "poignant",
+          "label": "Poignant",
+          "factor": "MIREX Popular Set mood label",
+          "taxonomy": "Hu & Downie 2007 Popular Set",
+          "mirex_cluster": 3
+        },
+        {
+          "id": "quirky",
+          "label": "Quirky",
+          "factor": "MIREX Popular Set mood label",
+          "taxonomy": "Hu & Downie 2007 Popular Set",
+          "mirex_cluster": 4
+        },
+        {
+          "id": "intense",
+          "label": "Intense",
+          "factor": "MIREX Popular Set mood label",
+          "taxonomy": "Hu & Downie 2007 Popular Set",
+          "mirex_cluster": 5
+        },
+        {
+          "id": "silly",
+          "label": "Silly",
+          "factor": "MIREX Popular Set mood label",
+          "taxonomy": "Hu & Downie 2007 Popular Set",
+          "mirex_cluster": 4
+        }
+      ]
+    }
+  ]
+}

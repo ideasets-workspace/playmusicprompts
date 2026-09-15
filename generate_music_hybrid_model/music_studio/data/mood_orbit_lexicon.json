@@ -1,0 +1,21 @@
+{
+  "$schema_id": "berk.music-studio-vocabulary/v1",
+  "vocabulary": "mood_orbit_lexicon",
+  "consumed_by": "music_studio/planner.py (mood_orbit vector -> deterministic prose clause; architecture s3.2)",
+  "provenance_rule": "pole phrases use the measured register (plain concrete words, direct action verbs); intensity tiers follow the Lyria prompt guide's own graded-language pattern (archived guide, timestamp/intensity prompting section, read 2026-08-14). Identical coordinates always produce an identical clause; the clause is returned in bindings.mood_orbit.sent.",
+  "version": 1,
+  "intensity_tiers": [
+    {"min": 0.0, "max": 0.34, "adverb": "slightly"},
+    {"min": 0.34, "max": 0.67, "adverb": "clearly"},
+    {"min": 0.67, "max": 1.01, "adverb": "intensely"}
+  ],
+  "poles": {
+    "epic": "epic and vast",
+    "uplifting": "uplifting and bright",
+    "hopeful": "hopeful and open",
+    "melancholic": "melancholic and longing",
+    "dark": "dark and heavy",
+    "aggressive": "aggressive and hard-hitting"
+  },
+  "combination_rule": "take the two highest-valued poles; each renders as '<adverb-of-its-tier> <pole phrase>'; joined with ', and '; a single non-zero pole renders alone; the all-zero vector renders as no clause at all"
+}

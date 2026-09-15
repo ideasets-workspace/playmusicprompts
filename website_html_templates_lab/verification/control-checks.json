@@ -1,0 +1,45 @@
+{
+  "checks": [
+    {
+      "name": "Valid browser payload sample for each of100 request parameters",
+      "passed": true
+    },
+    {
+      "name": "Malformed strings, chips, server-assigned fields, lyrics contradiction and insecure webhook rejected",
+      "passed": true
+    },
+    {
+      "name": "Scene survives All controls Apply without entering API payload",
+      "passed": true
+    },
+    {
+      "name": "Automatic vocal mode adds no undefined text",
+      "passed": true
+    },
+    {
+      "name": "Clearing quick choices removes only their generated instruction",
+      "passed": true
+    },
+    {
+      "name": "Reset then Cancel preserves the saved draft",
+      "passed": true
+    },
+    {
+      "name": "Reference rows reindex correctly after deleting an earlier row",
+      "passed": true
+    },
+    {
+      "name": "Lyric mode reveals text, blocks instrumental conflict and accepts a voice",
+      "passed": true
+    },
+    {
+      "name": "Song structure uses typed repeatable section and bar controls",
+      "passed": true
+    },
+    {
+      "name": "Advanced control dialog fits mobile viewport",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

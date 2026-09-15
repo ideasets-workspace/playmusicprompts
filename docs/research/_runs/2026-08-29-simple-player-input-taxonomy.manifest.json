@@ -1,0 +1,33 @@
+{
+  "schema": "berk.deep-research-completion/v1",
+  "date": "2026-08-29",
+  "topic": "simple-player-input-taxonomy",
+  "mode": "B (owner research order, verbatim in scope plan §2)",
+  "covenant_sha256": "F19F5CB14319E09EC73FDF42FEEF2D3067EC8A5949A34657ED9E5C1104D5F9EB",
+  "scope_plan": "docs/research/_runs/2026-08-29-simple-player-input-taxonomy.scope-plan.md",
+  "planned_artifact_count": 8,
+  "produced_artifact_count": 8,
+  "artifacts": [
+    {"path": "docs/research/_runs/2026-08-29-simple-player-input-taxonomy.scope-plan.md", "role": "scope plan"},
+    {"path": "docs/research/2026-08-29-generative-music-input-surfaces-competitors.md", "sha256": "FF826F6CDE5FBB3B0C07D2CA26C07D7735BB33815EC08BB79BABDA3A2406EA11", "role": "slice A"},
+    {"path": "docs/research/2026-08-29-streaming-station-taxonomy-genres-decades-scenes.md", "sha256": "445D6E086287E9B2F66C66E6617E9A6393AE5C9053ED05E122D7C2B7EF5AF018", "role": "slice B"},
+    {"path": "docs/research/2026-08-29-music-preference-prompt-ux-academic.md", "sha256": "8AF7CB95084F9477C0AED6CF5B944DD392AF25BB594F3731110DE56F2F5EC718", "role": "slice C"},
+    {"path": "docs/research/2026-08-29-dark-adaptive-player-ui-knowledge.md", "sha256": "B93E64C2D01A95CBAA20C3E8455FD5AABF1E5DBC1382CF94E8F1EDE58FD5B593", "role": "slice D"},
+    {"path": "docs/research/2026-08-29-simple-player-input-taxonomy-and-values.md", "role": "synthesis (main report)"},
+    {"path": "docs/research/2026-08-29-simple-player-input-taxonomy-source-register.md", "role": "combined register"},
+    {"path": "docs/research/_runs/2026-08-29-simple-player-input-taxonomy.manifest.json", "role": "this manifest"}
+  ],
+  "floors": {
+    "independent_sources": {"floor": 20, "measured": "~142 register rows across 4 slices; ≥20 independent families exceeded in aggregate and within slices B and D alone"},
+    "academic_full_reads": {"floor": 5, "measured": 11, "detail": "8 in slice C (five-part depth records) + 3 in slice D"}
+  },
+  "verification": {
+    "parent_reverified": "all 4 slice reports reopened from disk; SHA-256 recomputed and matched worker claims 4/4; ALL FOUR slices read FULL by parent (A/B at 14:4x, C/D completed at 16:1x-16:2x after Berk's full-read order)",
+    "contradictions_preserved": "5 at synthesis level; slice ledgers carry 6 (B) + 10 (A) + 4 (C) + ledger (D)",
+    "unverified_flags_carried": ["Riffusion/Producer.ai corporate status", "city-night per-stream audiences", "TR sung capability (engine-side, D-SSM-33)"]
+  },
+  "known_gaps_pointer": "synthesis §6",
+  "spend_usd": 0,
+  "delegations": 4,
+  "workers": ["aa2b882c-78a4-4c0d-ab2b-b837c79d22d9", "20e5cc45-0950-4499-9b31-e1abac805c63", "58a86cce-d1fb-430c-be16-def1bb61fe46", "bb1393af-4526-4840-8b25-f583fdc75366"]
+}

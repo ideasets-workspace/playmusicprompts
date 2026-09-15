@@ -1,0 +1,51 @@
+{
+  "checks": [
+    {
+      "name": "Clean 320px layout",
+      "pass": true
+    },
+    {
+      "name": "Clean 390px layout",
+      "pass": true
+    },
+    {
+      "name": "Mobile sound volume accessible and functional",
+      "pass": true
+    },
+    {
+      "name": "Mobile mute accessible and functional",
+      "pass": true
+    },
+    {
+      "name": "Clean 820px layout",
+      "pass": true
+    },
+    {
+      "name": "Clean 1504px layout",
+      "pass": true
+    },
+    {
+      "name": "3D remains rendering through camera drag",
+      "pass": true
+    },
+    {
+      "name": "WebGL context loss has usable fallback",
+      "pass": true
+    },
+    {
+      "name": "Clean 1920px layout",
+      "pass": true
+    },
+    {
+      "name": "Every vendored dependency matches SHA256",
+      "pass": true
+    },
+    {
+      "name": "Official npm tarball integrity verified",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "pass": true,
+  "date": "2026-09-11T11:33:47.593Z"
+}

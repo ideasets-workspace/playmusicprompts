@@ -1,0 +1,76 @@
+{
+  "checks": [
+    {
+      "name": "Nine atmosphere cards present",
+      "pass": true
+    },
+    {
+      "name": "World rendered night",
+      "pass": true
+    },
+    {
+      "name": "World rendered deep",
+      "pass": true
+    },
+    {
+      "name": "World rendered glow",
+      "pass": true
+    },
+    {
+      "name": "World rendered aurora",
+      "pass": true
+    },
+    {
+      "name": "World rendered rain",
+      "pass": true
+    },
+    {
+      "name": "World rendered desert",
+      "pass": true
+    },
+    {
+      "name": "World rendered lunar",
+      "pass": true
+    },
+    {
+      "name": "World rendered ember",
+      "pass": true
+    },
+    {
+      "name": "World rendered cloud",
+      "pass": true
+    },
+    {
+      "name": "Record visibly rotates during actual playback",
+      "pass": true
+    },
+    {
+      "name": "Audio spectrum remains reactive",
+      "pass": true
+    },
+    {
+      "name": "Pause smoothly coasts to rest",
+      "pass": true,
+      "details": 0.0006865657367484336
+    },
+    {
+      "name": "Adjustable spin speed applies",
+      "pass": true
+    },
+    {
+      "name": "Playback camera orbit applies",
+      "pass": true
+    },
+    {
+      "name": "Reduced motion stops record exactly",
+      "pass": true
+    },
+    {
+      "name": "Expanded mobile has no horizontal overflow",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "pass": true,
+  "date": "2026-09-11T11:56:52.831Z"
+}

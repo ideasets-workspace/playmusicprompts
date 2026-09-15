@@ -1,0 +1,22 @@
+{
+  "passed": 14,
+  "checks": [
+    "Real pinned Three ShaderPass constructs neutral and disabled; no output remapping",
+    "Custom GLSL helpers avoid names defined by the actual pinned renderer prefix and common chunks",
+    "Namespace guard rejects the exact duplicate-luminance regression that blackened the enabled GPU pass",
+    "Every optic independently enables the pass; explicit neutral fully bypasses it",
+    "Malformed, negative and oversized controls cannot leak unsafe uniforms",
+    "Film clock stays fixed under Motion off while deliberate static lens edits still apply",
+    "Low quality changes the real streak loop budget, retaining every effect",
+    "Composer setSize uses effective pixels and guards zero/invalid dimensions",
+    "Actual ShaderPass render wiring samples the input texture and updates resized buffer pixels",
+    "Shader highlight gate rejects dark-field blur and preserves positive bright-light response",
+    "Numerical lens field has zero center displacement and bounded symmetric channel separation",
+    "Both streak kernels are normalized, symmetric, bounded and cover the same optical extent",
+    "Fine-grain energy remains bounded and true black stays black",
+    "Cleanup through either API emits one material/geometry disposal and cannot reactivate"
+  ],
+  "module": "/C:/Berk/PlayMusicPrompts/website_html_templates/player-three-optics.js",
+  "moduleSHA256": "2aa3bfc0f4a9f555d4d2f27eebbd373c445a637a99fecb585f275ba614c3d806",
+  "scope": "Pinned Three ShaderPass construction/API checks, render-call plumbing, namespace collision guards against actual renderer-prefix/common definitions, and numerical/source properties. No GPU compilation, screenshot or visual acceptance claim."
+}

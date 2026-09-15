@@ -1,0 +1,31 @@
+{
+  "schema": "berk.deep-research-preflight/v1",
+  "date": "2026-08-17",
+  "topic": "vm-provisioning-brief",
+  "mode": "MODE B (owner research order: the provisioning-brief run is the decided NEXT step in STATE.md, under AUTOPILOT)",
+  "decision_served": "The Clause 20 (Google-Cloud-native) / Clause 21 (maximum-control layer) PROVISIONING BRIEF: which machine type, disks, network posture (PSC/VPC-SC), scheduling class (on-demand vs Spot), OS image and compliance posture the film-production instance is provisioned with. The paid provisioning step itself is Berk's approval to give (D1-D10 brief).",
+  "evidence_input": "artifacts/moviemaker/vm_provisioning_brief_sections.json (625 NEEDS-RESEARCH rows in 10 sections + 48 uncategorised, built by moviemaker.gapwork.brief_sections from the closed 5465/5465 verdict ledger)",
+  "governing_files_read": [
+    {"path": ".cursor/rules/movie-maker-unit-mandate.mdc", "clauses": "20, 21, 22 (ceiling $750/day, refuse-not-trim), 4 (no unsupported value)"},
+    {"path": "C:/Users/berke/.claude/skills/deep-research/SKILL.md", "note": "R0-R18 covenant; the worker-dispatch hash convention question raised by the sung-corpus worker is recorded below"},
+    {"path": ".claude/memory/STATE.md", "note": "newest entry names this run as NEXT; read this session"},
+    {"path": ".claude/memory/infra.md", "note": "GCP project contentanalyticsplatform; existing Luupie instance facts; read this session"}
+  ],
+  "local_intake": {
+    "path": "docs/research/_runs/2026-08-17-vm-provisioning-brief.local-intake.json",
+    "summary": "10 brief sections mapped to already-archived primary captures (hashes + capture dates recorded there). 6 sections fully covered locally; 4 need external capture.",
+    "read_back": true
+  },
+  "unresolved_uncertainty": [
+    "Spot VM pricing for the candidate machine families + preemption semantics (no local primary; quotas capture only)",
+    "Persistent Disk / Hyperdisk dedicated pricing page (PD rates only appear inside a general VM-pricing capture)",
+    "Premium OS image billing (RHEL/SLES/Ubuntu Pro) vs free images (no local primary)",
+    "EU data-residency / Assured Workloads constraints relevant to a media-production instance (no local primary)"
+  ],
+  "external_research_needed": true,
+  "external_targets_note": "SEARCH-FIRST law: no URL is guessed; each target is discovered by a real search, fetched, and archived under docs/moviemaker/research/_sources/ with date-prefixed names.",
+  "scope_plan": "The brief covers exactly the 10 sections of the section map, one section per brief chapter, each chapter citing its rows from the queue and its primary captures by path+hash. No narrowing: uncategorised 48 rows get their own honest chapter. Completion semantics: brief written to docs/moviemaker/research/2026-08-17-vm-provisioning-brief.md, indexed in docs/README.md, completion manifest in docs/research/_runs/, then the D1-D10 owner brief in chat (Turkish) whose paid step is Berk's approval.",
+  "floors": "This run synthesises 625 already-judged rows against >=20 authoritative sources; the local-intake already holds 16 archived primaries (listed with hashes in the local-intake), and the 4 external captures raise the set. Academic floor: the covenant's >=5 academic primaries are satisfied across the run's citation set or the shortfall is reported honestly in the completion manifest.",
+  "known_issue_recorded": "The sung-corpus worker reported a covenant-hash extraction mismatch (dispatch brief said 69d557a1..., worker recomputed 07727f0a... markers-inclusive LF-normalized). This does not affect THIS run (no worker dispatch planned; inline execution while 0 workers are running), but the parent's extraction convention must be stated in the next dispatch brief.",
+  "read_back": true
+}

@@ -1,0 +1,33 @@
+{
+  "at": "2026-09-11T16:41:25.391Z",
+  "passedSuites": [
+    "settings",
+    "organic",
+    "prism",
+    "host",
+    "review",
+    "collection",
+    "room-store",
+    "main-persistence"
+  ],
+  "exactCopies": [
+    {
+      "file": "player-three-aurora.js",
+      "sha256": "15c16d4970af10c4fd5a552dc996425a419b1109cd374772b931eec9838e5927"
+    },
+    {
+      "file": "player-three-orbital.js",
+      "sha256": "41b0be7dfe8e3fe411d6e9e64926e118b6d08ca35c5958e042173f2b95f200e5"
+    },
+    {
+      "file": "player-three-liquid.js",
+      "sha256": "017b84499e1a98e944a9b554eb699d4f6d7c3f3b6fa09993c3c4bb4546615132"
+    },
+    {
+      "file": "player-three-visual-settings.js",
+      "sha256": "cae11fa5b379256b0a586fa94f69615da081d109bac7d4ff3b414608594b09ed"
+    }
+  ],
+  "syntax": 17,
+  "scope": "Integrated source/runtime/storage checks; real GPU/UI observations recorded separately."
+}

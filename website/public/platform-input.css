@@ -1,0 +1,12 @@
+/* Applied only to TV-detected or explicitly enabled remote navigation. */
+.pmp-tv :is(button,a,summary,input,select,textarea,[tabindex],[role="button"]):focus {
+  outline: 3px solid #dfc8ff !important;
+  outline-offset: 5px !important;
+  box-shadow: 0 0 0 7px rgb(153 99 230 / 24%) !important;
+  scroll-margin: 40px;
+}
+.pmp-tv :is(button,a,[role="button"]) { scroll-margin-bottom: 170px; }
+.pmp-tv :is(dialog,.drawer) :is(button,a,input,select,textarea) { scroll-margin: 30px; }
+@media (prefers-reduced-motion: reduce) {
+  .pmp-tv :focus { scroll-behavior: auto; }
+}

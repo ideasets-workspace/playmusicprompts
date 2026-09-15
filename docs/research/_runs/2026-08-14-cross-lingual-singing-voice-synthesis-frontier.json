@@ -1,0 +1,72 @@
+{
+  "schema": "berk.deep-research/v1",
+  "status": "complete",
+  "date": "2026-08-14",
+  "mode": "B",
+  "topic": "cross-lingual-singing-voice-synthesis-frontier",
+  "decision_served": "How to engineer frontier-quality sung vocals in a language no song-generation provider covers (Turkish as the immediate case), instead of shortening the Music Studio language list.",
+  "main_report": "docs/research/2026-08-14-cross-lingual-singing-voice-synthesis-frontier.md",
+  "index": "NOT WRITTEN - the delegation brief forbids modifying any file outside docs/research/, and docs/README.md is outside it. Recorded as a known gap for the parent agent to close.",
+  "source_counts": {
+    "authoritative": 38,
+    "independent_underlying_works": 25,
+    "academic": 23,
+    "academic_full": 5,
+    "primary_full": 5
+  },
+  "academic_full_sources": [
+    "SoulX-Singer, arXiv 2602.07803, 2026-02-08",
+    "TCSinger 2, ACL Findings 2025 (arXiv 2505.14910)",
+    "Transinger, Sensors, 2025-06-26 (doi 10.3390/s25133973)",
+    "MPEcho, arXiv 2607.26698v1, 2026-07",
+    "SVPT, ACL Findings 2024 (aclanthology 2024.findings-acl.585)"
+  ],
+  "claim_counts": {
+    "verified_3plus": 12,
+    "single_source": 4,
+    "unverified": 3
+  },
+  "contradictions_preserved": 6,
+  "planned_artifacts": 2,
+  "artifacts": [
+    {
+      "path": "docs/research/2026-08-14-cross-lingual-singing-voice-synthesis-frontier.md",
+      "role": "main_report",
+      "sha256": "627291411C5144ED6AB88F47E28356596916EB0496800568CAEB97CDF9A113B7",
+      "bytes": 90289,
+      "lines": 744,
+      "read_back": true
+    },
+    {
+      "path": "docs/research/_sources/2026-08-14-*.txt",
+      "role": "raw_source_captures",
+      "file_count": 23,
+      "read_back": true
+    }
+  ],
+  "standards_ledger": true,
+  "scope_plan": true,
+  "source_register": true,
+  "query_ledger": false,
+  "claim_ledger": true,
+  "contradiction_ledger": true,
+  "preservation_matrix": false,
+  "english_artifacts": true,
+  "indexed": false,
+  "axes_requested": 7,
+  "axes_delivered": 7,
+  "delegations": [],
+  "known_gaps": [
+    "No Turkish sung-generation measurement exists in any located source; project's own Lyria-3 datapoint remains n=1.",
+    "The internal 16.14% PER human floor could not be corroborated or refuted externally; Jam-ALT defines no PER metric.",
+    "Transinger's prose and its own Table 2 contradict each other on whether IPA letter/diacritic decomposition helps (contradiction X1) - UNRESOLVED.",
+    "Licence files not opened at the primary for TCSinger 2, alt-eval, Jam-ALT dataset, MUSDB-ALT, SingMOS-Pro, ACE-Step 1.5 repo, DiffRhythm, YuE, and both Zenodo Turkish datasets.",
+    "SoulX-Singer LICENSE body read only as a search-capture excerpt, not opened from the repository; 42,000h training-data provenance undisclosed - legal review required.",
+    "arXiv 2601.00217 (Latent flow matching for expressive SVS, 2026) discovered by citation, not opened - highest-priority next read.",
+    "SingMOS-Pro ground-truth MOS distribution not extracted (read PARTIAL).",
+    "No Singing Voice Conversion Challenge 2025/2026 edition located - NOT FOUND IN THE SEARCHED SCOPE, not proof of non-existence.",
+    "No query ledger file was produced as a separate artefact; queries are summarised in the report methodology rather than logged line by line.",
+    "docs/README.md index entry not written due to the write-isolation limit in the brief."
+  ],
+  "completed_at": "2026-08-14T12:52:45Z"
+}

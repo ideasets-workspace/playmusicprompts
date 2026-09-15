@@ -1,0 +1,188 @@
+{
+  "schema": "berk.deep-research-preflight/v1",
+  "status": "complete",
+  "date": "2026-08-13",
+  "created_at": "2026-08-13T11:19:52.455772+00:00",
+  "topic": "ai-song-generation-platform",
+  "mode": "B — owner research order (frontier trigger engaged: 'en ileri seviyede')",
+  "cwd": "C:/Berk/SsmContentAssetCreator",
+  "owner_order_verbatim": "peki biz suno gibi bu müzik ve ses layer ı kullanarak en ileri sveiyed ekendi müzik üretim api mizi yapamaz mıyız ? araştırır mısın  ||  evet ve suno daki gibi en advanced settimngs ayarlar melodiler vs. vs.",
+  "covenant": {
+    "path": "C:/Users/berke/.claude/skills/deep-research/SKILL.md",
+    "sha256": "35DE1E582310915D42386C177348FA1B39D949D4D207FED37463D43C3581398E",
+    "read_in_full_this_session": true,
+    "installs_hashed_identical": 4
+  },
+  "governing_files": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "D18A2C1CD201C4C3BFDB9F62FF22502C5B48CDCBA201C2728EC7ABB4083B1B4E",
+      "bytes": 25392,
+      "read_back": true
+    },
+    {
+      "path": "CLAUDE.md",
+      "sha256": "481BB89720406C3DDC8185DBD34FC0B17BEF2842071588356F78024DCAB6D210",
+      "bytes": 2699,
+      "read_back": true
+    },
+    {
+      "path": ".cursor/rules/movie-maker-unit-mandate.mdc",
+      "sha256": "9A5B364FFA1E791121FDD5C07799CE37D5DEBE3247313565935A528A1F325D4F",
+      "bytes": 21445,
+      "read_back": true
+    },
+    {
+      "path": ".cursor/rules/berk-research.mdc",
+      "sha256": "F3A987A9A8A02765C68DA6D723FF9BF787CA5AB642524784C0811BFB6025CBE5",
+      "bytes": 5645,
+      "read_back": true
+    },
+    {
+      "path": ".claude/memory/DECISIONS.md",
+      "sha256": "26E54801E8D448F264E04AD0E0BF38A885E9E6358D1FCDC56EFC2B6088ECC8BC",
+      "bytes": 54105,
+      "read_back": true
+    },
+    {
+      "path": ".claude/memory/infra.md",
+      "sha256": "F0AA975ED87AD704633ECF3CB99C7A3C26EA216CB754A8F63796640FAACA9DCC",
+      "bytes": 61864,
+      "read_back": true
+    },
+    {
+      "path": ".claude/memory/STATE.md",
+      "sha256": "3C6EA36583C9CF53C0B05EA07445C679318A7FEDF0F50A8F9D04D73D79E15981",
+      "bytes": 344613,
+      "read_back": true
+    },
+    {
+      "path": ".claude/memory/BOOT.md",
+      "sha256": "E940B49806A785F031E52DF50E5BBB329C5CFDC1270BAEDD074F72E834332A90",
+      "bytes": 13343,
+      "read_back": true
+    },
+    {
+      "path": "C:/Users/berke/.claude/skills/deep-research/SKILL.md",
+      "sha256": "35DE1E582310915D42386C177348FA1B39D949D4D207FED37463D43C3581398E",
+      "bytes": 117261,
+      "read_back": true
+    }
+  ],
+  "code_files": [
+    {
+      "path": "music_lyria/models.py",
+      "sha256": "2FF02446C20F2ACB1AE7DFBE4942707022EA9CDB2C6B0089EC312443DF67554A",
+      "bytes": 13705,
+      "read_back": true
+    },
+    {
+      "path": "music_lyria/lambda_function.py",
+      "sha256": "DC14FAE7DB8CF41D68EB300048885D823E6DF381A74970C322AE24124C352E5C",
+      "bytes": 18891,
+      "read_back": true
+    },
+    {
+      "path": "voice_vertex_tts/models.py",
+      "sha256": "73F307C2B26EC40121397AAE79B9A320E893D6316A92E12A5030776A1B32C6C4",
+      "bytes": 16187,
+      "read_back": true
+    },
+    {
+      "path": "voice_vertex_tts/lambda_function.py",
+      "sha256": "C1049BD102BFB991C8A6846DADAFBA06062C3C7BB312E6F6904708CFCD5BF25E",
+      "bytes": 22423,
+      "read_back": true
+    },
+    {
+      "path": "stt_vertex/models.py",
+      "sha256": "3E55FFDB41873A211E5F2C8A0C950D5F4856BCFB9F48BF1F0F45A656FE33CF0C",
+      "bytes": 12947,
+      "read_back": true
+    },
+    {
+      "path": "audio_live_gemini/models.py",
+      "sha256": "F400FBF45BEB9B105FDDA1BA05C8752C5864D1E3B97ADD37E6106F9C73B4C4BB",
+      "bytes": 14180,
+      "read_back": true
+    },
+    {
+      "path": "audio_live_gemini/lambda_function.py",
+      "sha256": "EB56DF327CD774DDD1C5196578E726C2EA0D1EB3D270187A5F2291E56CE615AD",
+      "bytes": 20920,
+      "read_back": true
+    },
+    {
+      "path": "scripts/measure_lyria_lyrics_capability.py",
+      "sha256": "C649F7A6D74DD19F829B47694A80824370A95E245C11B3B41699E76C276E495E",
+      "bytes": 11850,
+      "read_back": true
+    },
+    {
+      "path": "scripts/measure_vertex_tts_named_voice_control.py",
+      "sha256": "E1D5CF4F62225F2A2DF53A0CF9E1475B5AF40C1DB833C2B81D0DB40B43823555",
+      "bytes": 8872,
+      "read_back": true
+    },
+    {
+      "path": "scripts/holivuud_v2_sound.py",
+      "sha256": "B58A37109BADEC51BB1B964D970CA4DBB05E0923D01FE537AE2BDF011614DE23",
+      "bytes": 7564,
+      "read_back": true
+    }
+  ],
+  "project_documents": [
+    {
+      "path": "docs/ssm-content-asset-generation-api_v5.md",
+      "sha256": "3ACCF465ABD38CB36FC5E71C64C8BF2DC5BF0FBEA58A8CCA600DEF767555F1E0",
+      "bytes": 465220,
+      "read_back": true
+    },
+    {
+      "path": "docs/moviemaker/research/apis/2026-08-05-gcp-account-live-inventory-services-and-models.md",
+      "sha256": "F5C3809CB2B1443CE7E1DB43093E0FB7C5C42599D18511C082D686A4A2EA019C",
+      "bytes": 14928,
+      "read_back": true
+    },
+    {
+      "path": "artifacts/deploy-2026-08-12/lyria-lyrics/findings.json",
+      "sha256": "A662723BA7FD5EDABDD762178008C44C104A4F977CFDFF18A28A0BD527EC1B3F",
+      "bytes": 862,
+      "read_back": true
+    },
+    {
+      "path": "docs/research/_runs/2026-08-13-ai-song-generation-platform.scope-plan.md",
+      "sha256": "66AFEBC498093812C02E5465203760F85DCDCFF7684CEC19AF7A5F53A08ECE82",
+      "bytes": 14637,
+      "read_back": true
+    }
+  ],
+  "code_absence_search": {
+    "performed": true,
+    "roots": [
+      "."
+    ],
+    "queries": [
+      "directory scan for ^(music|voice|sfx|audio|stt)_ worker packages",
+      "grep -i 'lyric|vocal|sing' scripts/holivuud_v2_sound.py",
+      "grep '\"lyric[a-zA-Z]*\"|\"vocal[a-zA-Z]*\"|\"singer\"|\"melody\"' artifacts/schema-archaeology/discovery_v1beta1_20260809T092645Z.json"
+    ],
+    "result": "24 audio worker packages exist (7 music, 9 voice, 6 sfx, stt_vertex, audio_live_gemini) — parts exist, no song ORCHESTRATION module exists anywhere in the repo. The Vertex discovery document has ZERO matches for lyrics/vocal/singer/melody fields, so no vendor parameter for lyrics exists on that surface."
+  },
+  "document_absence_search": {
+    "performed": true,
+    "roots": [
+      "docs"
+    ],
+    "queries": [
+      "docs/**/*.md filtered on name match music|audio|lyria|sound"
+    ],
+    "result": "5 existing sound documents found, ALL about film mix/continuity/delivery standards (loudness, source separation, dialogue intelligibility). NONE covers song generation, lyrics-to-vocal synthesis, or a competitor/product analysis of this class. So this run is not duplicating existing project research."
+  },
+  "uncertainty": "Whether a Suno-class song product (prompt -> structured song with intelligible sung lyrics and Suno-level advanced controls) can be built on our own layers; which stage is impossible with what we own; which lawful providers expose singing synthesis by API with commercial rights; the copyright/ownership conditions; and the measurable quality gate. Local evidence establishes the GAP precisely but cannot answer any of these — they are external-evidence questions.",
+  "local_conclusion": "MEASURED locally this session: Lyria does not reproduce dictated lyrics (0 of 8 words; wordless 'ah' vocalise when words are not dictated; instrumental negative control passed), and the Vertex schema has no lyrics parameter at all. Named-voice selection DOES work on the Vertex TTS surface (controlled F0, 6.72 Hz floor, 4/6 pairs separated). Therefore the missing capability is singing synthesis and song structure, not voice identity — and that determines what the external research must answer.",
+  "external_research_needed": true,
+  "scope_plan": "docs/research/_runs/2026-08-13-ai-song-generation-platform.scope-plan.md",
+  "planned_artifacts": 14,
+  "planned_index_update": "docs/README.md"
+}

@@ -1,0 +1,131 @@
+{
+  "task": "ultra_atmosphere_assets",
+  "date": "2026-09-11",
+  "asset": "worlds-six-atlas.png",
+  "source": "C:/Users/berke/.codex/generated_images/01a09045-467d-75f3-b045-63d07b739a71/exec-a620a5aa-5ee6-42b5-ad71-0c78032b62c4.png",
+  "generation": {
+    "mode": "built-in image_gen",
+    "requests": 1,
+    "postprocessing": "None; copied byte-for-byte into project",
+    "prompt": "Use case: stylized-concept.\nAsset type: production artwork atlas for six immersive music atmospheres in a premium dark Three.js audio player, NOT a UI mockup.\n\nCreate ONE raster atlas with precisely THREE equal SQUARE columns and TWO equal SQUARE rows. Overall canvas aspect ratio exactly 3:2, ideally 3072 x 2048 pixels. There must be six independent edge-to-edge artwork panels, with clean straight joins at one-third and two-thirds of width, and halfway down height. No gutters, padding, frames, border strokes or rounded corners.\n\nTop-left, Aurora: immense luminous emerald and turquoise northern lights flowing above sharp black snow-covered polar mountains, a dark mirror lake in the foreground, tiny distant stars; composition centered around the valley and aurora.\nTop-middle, Rainroom: cinematic neon rainy Tokyo side street at night with glistening asphalt, amber and electric pink light reflected in puddles, deep ink-blue shadows, quiet architectural depth, subtle rainfall. Illuminated signs are abstract unlettered light rectangles; absolutely no letters or text.\nTop-right, Desert bloom: sculptural copper sandstone dunes at blue hour, flowing fine-grained ridges, warm peach light on one dune edge, deep midnight blue sky, tiny distant stars. Sophisticated warm/cool contrast with a clear central dune silhouette.\nBottom-left, Lunar tide: large radiant silver moon centered above a dark rolling ocean, a silver-white path of moonlight on detailed water, ethereal thin mist and rich midnight shadows. Refined almost-monochrome silver and blue.\nBottom-middle, Ember: dark volcanic landscape, glowing orange-red lava veins through black obsidian rock, distant volcanic ridge against deep burgundy atmosphere, floating tiny embers. Dramatic depth and restrained luminous red highlights, no disaster or people.\nBottom-right, Cloud nine: luminous rose-gold cloud banks above a sea of shadowed blue clouds at twilight, peach edges and cool lavender depths, sense of immense altitude, centered opening into soft radiant horizon.\n\nAll six scenes must feel like a cohesive collection of expensive cinematic photographic / physically based 3D album artworks: nuanced materials, volumetric light, extraordinary natural detail, rich darks, crisp atmospheric depth and saturated controlled highlights. Preserve visual clarity at thumbnail size. For each square keep the visual subject and principal light structure within the central 70% so a circular album-portal crop remains compelling. Fill every pixel with artwork.\n\nNO text, typography, labels, logos, watermarks, UI, buttons, album borders, vinyl records, musical notes, people in close-up, collage overlaps, tilted panels, blended panels or cross-panel objects. Six flat front-facing square artworks only."
+  },
+  "width": 1536,
+  "height": 1024,
+  "bytes": 2774696,
+  "sha256": "2f24a78161a104f0e826b6311160a51e674f44e94818e7668ae829239381c71f",
+  "grid": {
+    "columns": 3,
+    "rows": 2,
+    "cellWidth": 512,
+    "cellHeight": 512
+  },
+  "panels": [
+    {
+      "id": "aurora",
+      "name": "Aurora",
+      "column": 0,
+      "row": 0,
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 512,
+        "height": 512
+      },
+      "accent": "#63f6bb",
+      "secondary": "#4fbdcf"
+    },
+    {
+      "id": "rainroom",
+      "name": "Rainroom",
+      "column": 1,
+      "row": 0,
+      "crop": {
+        "x": 512,
+        "y": 0,
+        "width": 512,
+        "height": 512
+      },
+      "accent": "#fd71c9",
+      "secondary": "#ffad62"
+    },
+    {
+      "id": "desert",
+      "name": "Desert bloom",
+      "column": 2,
+      "row": 0,
+      "crop": {
+        "x": 1024,
+        "y": 0,
+        "width": 512,
+        "height": 512
+      },
+      "accent": "#ffa875",
+      "secondary": "#708edb"
+    },
+    {
+      "id": "lunar",
+      "name": "Lunar tide",
+      "column": 0,
+      "row": 1,
+      "crop": {
+        "x": 0,
+        "y": 512,
+        "width": 512,
+        "height": 512
+      },
+      "accent": "#d5e6ff",
+      "secondary": "#7da4d0"
+    },
+    {
+      "id": "ember",
+      "name": "Ember",
+      "column": 1,
+      "row": 1,
+      "crop": {
+        "x": 512,
+        "y": 512,
+        "width": 512,
+        "height": 512
+      },
+      "accent": "#ff7548",
+      "secondary": "#ec3858"
+    },
+    {
+      "id": "cloud",
+      "name": "Cloud nine",
+      "column": 2,
+      "row": 1,
+      "crop": {
+        "x": 1024,
+        "y": 512,
+        "width": 512,
+        "height": 512
+      },
+      "accent": "#ffbaad",
+      "secondary": "#b69ced"
+    }
+  ],
+  "integration": {
+    "pixelCoordinates": "Top-left origin; crop rectangles are exact grid cells.",
+    "cssBackgroundSize": "300% 200%",
+    "threeTextureRepeat": [
+      0.3333333333333333,
+      0.5
+    ],
+    "threeOffsetWithDefaultFlipY": "x = column / 3; y = (1 - row) / 2.",
+    "caution": "If using shared source image across materials, clone texture before setting each offset/repeat. Clamp edge sampling or crop the cells into independent canvas textures to avoid atlas seam sampling."
+  },
+  "visualQA": {
+    "method": "Viewed both generated result and actual copied local PNG at original 1536×1024 resolution.",
+    "findings": [
+      "All six requested worlds are present in the exact requested 3×2 order.",
+      "Clean straight cell joins at x=512, x=1024 and y=512, without gutters or frames.",
+      "Distinct cinematic colors: emerald, neon amber/pink, copper/blue, silver/blue, ember red and rose-gold.",
+      "No readable text, labels, logos, watermarks, UI or people visible.",
+      "Central focal subjects remain suitable for circular album portals.",
+      "Sharp detail and pronounced dark/light contrast preserved; no editing or enlargement was performed."
+    ],
+    "limitation": "Actual generation is 1536×1024 (512px per panel), not the ideal 3072×2048 requested in the prompt. It has been inspected at native resolution. Parent must verify integration and real display quality in the player.",
+    "integrationVerified": false
+  }
+}

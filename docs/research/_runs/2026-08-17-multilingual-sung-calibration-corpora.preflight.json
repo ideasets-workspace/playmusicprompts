@@ -1,0 +1,21 @@
+{
+  "schema": "berk.deep-research-preflight/v1",
+  "status": "external_research_needed",
+  "date": "2026-08-17",
+  "topic": "multilingual-sung-calibration-corpora-nine-languages",
+  "cwd": "c:\\Berk\\SsmContentAssetCreator",
+  "decision_served": "D-SSM-34 (Berk's correction, 2026-08-17, verbatim: 'yaw yanlızca ingilizce nereden çıktı destekleyen tüm diller'): the sung lane targets EVERY registry language. SINGING_PROVEN is per-language and its A9 PER bar needs >=5 lawful human sung recordings with per-recording lyrics per language. EN corpora are on disk (vocadito + LM-SSD); TR's active sub-lane is closed by D-SSM-33; the remaining NINE registry languages (zh, ja, ko, ru, es, fr, de, it, pt — enumerated from generate_music_hybrid_model/music_studio/data/language_registry.json this turn, 11 total) have NO corpus verdict yet. This research produces the per-language lawful-corpus verdicts that gate each language's calibration.",
+  "governing_files_read_this_session": [
+    {"path": ".claude/memory/DECISIONS.md", "note": "D-SSM-30/33/34 read+appended this session; the closure and the all-languages correction bound into this brief"},
+    {"path": "generate_music_hybrid_model/music_studio/data/language_registry.json", "note": "the 11-language list read from disk this turn (the scope's denominator)"},
+    {"path": "docs/research/2026-08-17-human-sung-calibration-corpus.md", "note": "the TR/EN slice — this run EXTENDS its method to the remaining nine languages; its licence-verdict discipline (NC/ND fatal, primary-read licence strings, Zenodo API captures) carries over verbatim"}
+  ],
+  "local_conclusion": {
+    "finding_1": "The TR/EN research already established the method and the exclusion wall (GTSinger/M4Singer/OpenSinger/CSD/DAMP/MUSDB18-lyrics all non-commercial per their own primaries) — several of those excluded corpora COVER the nine target languages, so their verdicts transfer and the search must go BEYOND them.",
+    "finding_2": "No corpus for any of the nine languages exists in this repository (artifacts/calibration-corpus/ holds vocadito, lm-ssd, dssm31-labelled only — enumerated this turn)."
+  },
+  "external_research_needed": true,
+  "uncertainty": "Which lawful (commercial-compatible: CC BY / CC BY-SA / CC0 / public domain / permissive custom) human sung-vocal corpora with per-recording lyrics exist for zh, ja, ko, ru, es, fr, de, it, pt — each language ending in LAWFUL CANDIDATE(S) NAMED or NONE EXISTS, so the per-language calibration order can be planned and the gaps reported to the owner honestly.",
+  "scope_plan": "docs/research/2026-08-17-multilingual-sung-calibration-corpora.md (R3 section at its head)",
+  "read_back": true
+}

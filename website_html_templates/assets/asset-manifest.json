@@ -1,0 +1,11 @@
+{
+  "brand": {"file":"brand-source.png","source":"docs/Designs/PlayMusicPrompts_Logo.png","usage":"Original symbol, cropped by SVG viewBox; HTML wordmark"},
+  "environment": {"file":"world.png","source":"Generated once from the approved home reference on2026-09-11","dimensions":[1586,992]},
+  "stationAtlas": {"file":"stations.png","dimensions":[2172,724],"panels":["Night Drive","Deep Focus","Afterglow"],"source":"Generated once as an art-only atlas from approved reference on2026-09-11"},
+  "coverSource": {"file":"approved-home.png","source":"docs/design/2026-09-11-living-player/page-desktop-prompt-expanded.png","usage":"Artwork regions only, cropped via SVG viewBox; no screenshot text used as interface"},
+  "genreSource": {"file":"approved-explore.png","source":"docs/design/2026-09-11-page-set/02-explore.png","usage":"Six pure genre art regions, labels are HTML"},
+  "radioSource": {"file":"approved-radio.png","source":"docs/design/2026-09-11-page-set/03-radio.png","usage":"Three station art regions and photographic base crop; labels and controls are HTML"},
+  "font": {"file":"inter.woff2","family":"Inter","source":"Project research archive rsms_inter/InterVariable.woff2","license":"Inter-LICENSE.txt"},
+  "parameterSource":"Project docs/api/04-request-body-full.md and local music_studio vocabulary JSON",
+  "audio":"No shipped audio files. Import actual local audio or configure real catalog URLs."
+}

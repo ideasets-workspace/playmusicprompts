@@ -1,0 +1,55 @@
+{
+  "$schema_id": "berk.take-similarity-parameters/v1",
+  "_purpose": "Every parameter of the between-take carbon-copy gate (D-SSM-31 axis 2), each with its evidence. NO value in music_studio/take_similarity.py is set by an agent's judgement: the module refuses to run if a key is missing here (CLAUSE 4 / the 2026-08-16 standing order: maximally parametric, no static values in code).",
+  "_provenance_report": "docs/research/2026-08-17-rhythmic-monotony-and-take-similarity-gate.md",
+  "chroma": {
+    "bins": {"value": 12,
+      "_evidence": "Serra/Serra/Andrzejak, New J. Phys. 11:093017 (2009), read [FULL] 2026-08-17 (capture: docs/research/_sources/2026-08-17-serra-serra-andrzejak-2009-qmax-cross-recurrence-njp.txt): 12-bin HPCP descriptors; librosa chroma_cqt is the HPCP-class equivalent named in the research report's per-method table."},
+    "frame_seconds": {"value": 0.464,
+      "_evidence": "Same primary: 464 ms windows with 50% overlap for the HPCP time series."},
+    "overlap_fraction": {"value": 0.5,
+      "_evidence": "Same primary: 50% overlap stated with the 464 ms window."}
+  },
+  "delay_embedding": {
+    "m": {"value": 10,
+      "_evidence": "Journal parameter set (NJP 2009): delay embedding m=10. Contradiction C4 in the report records the authors' MIREX 2009 variant m=9; the peer-reviewed journal value is adopted, and the paper's own Fig. 7 shows broad optima 7 < (m-1)*tau < 17."},
+    "tau": {"value": 1,
+      "_evidence": "Same primary: tau=1."}
+  },
+  "cross_recurrence": {
+    "kappa": {"value": 0.1,
+      "_evidence": "Same primary, eq. (2) context: epsilon thresholds set so each state keeps a kappa=0.10 fraction of nearest neighbours; robust range 0.05-0.15 per the paper's own sensitivity analysis."}
+  },
+  "qmax": {
+    "gamma_onset": {"value": 5.0,
+      "_evidence": "Same primary, eq. (5)/(6): disruption-onset penalty gamma_o=5 (journal optimum; their Fig. 5 demo uses 3/7 to ILLUSTRATE the mechanism, the tuned values in the results are 5 and 0.5)."},
+    "gamma_extension": {"value": 0.5,
+      "_evidence": "Same primary: disruption-extension penalty gamma_e=0.5."}
+  },
+  "fingerprint": {
+    "bands": {"value": 33,
+      "_evidence": "Haitsma & Kalker, ISMIR 2002, read [FULL] 2026-08-17 (capture: docs/research/_sources/2026-08-17-haitsma-kalker-2002-robust-audio-fingerprinting-ismir.txt): 33 non-overlapping logarithmically spaced bands producing 32 sign bits."},
+    "band_low_hz": {"value": 300.0,
+      "_evidence": "Same primary: band range 300-2000 Hz (the most robust range for the human auditory system, their wording)."},
+    "band_high_hz": {"value": 2000.0,
+      "_evidence": "Same primary: upper edge 2000 Hz."},
+    "frame_seconds": {"value": 0.37,
+      "_evidence": "Same primary: 0.37 s frames."},
+    "frame_overlap_fraction": {"value": 0.96875,
+      "_evidence": "Same primary: overlap factor 31/32 -> one 32-bit sub-fingerprint every 11.6 ms."},
+    "block_subfingerprints": {"value": 256,
+      "_evidence": "Same primary: a fingerprint block is 256 sub-fingerprints (~3 s, 8192 bits)."},
+    "ber_near_copy_threshold": {"value": 0.35,
+      "_evidence": "Same primary: threshold alpha=0.35 with the measured x3 correlation correction gives false-positive probability erfc(6.4)/2 = 3.6e-20; independently restated by Schreiber ISMIR 2011 (capture archived). This is a NEAR-EXACT-COPY operating point carried WITH its published false-positive model; it is NOT the musical-sameness bar (that bar is calibrated, see calibration block)."}
+  },
+  "calibration": {
+    "bar_source": {"value": "bar_calibration.tolerance_limit",
+      "_evidence": "Report axis-3 committed recommendation: the musical-sameness pass/fail bar on normalised Qmax has NO published value (Serra's system is a ranker); it is set negatives-first (MusicLM arXiv:2301.11325 precedent: tau=0.85 from permuted-negative-pair distribution at <0.01% FP) via the project's own logit + exact noncentral-t upper tolerance limit (music_studio/bar_calibration.py)."},
+    "status_until_calibrated": {"value": "NOT_CALIBRATED",
+      "_evidence": "MANDATE CLAUSE 7: a threshold is never guessed; the gate reports NOT_CALIBRATED with its raw scores until the bar artefact exists."}
+  },
+  "limits_read_this_first": {
+    "fingerprint_blindness": "The BER screen is deliberately blind to re-renders that differ in fine texture (primary: >±2.5% speed change breaks it) — it screens near-exact copies only; stage 2 (Qmax) carries the musical-sameness question.",
+    "si_axis_absent": "This file parameterises AXIS 2 only. The within-take monotony gate (axis 1: SI on fitness scape plots + cyclic-tempogram stability) is a separate module with its own parameter file — not yet built; its absence is recorded in STATE.md, never silently."
+  }
+}

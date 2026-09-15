@@ -1,0 +1,526 @@
+{
+ "$schema_id": "berk.music-studio-research-application-ledger/v1",
+ "purpose": "THE MACHINE-CHECKABLE INVENTORY OF EVERY RESEARCH MECHANISM THE MUSIC ENGINE OWES. Berk's finding, 2026-08-15, verbatim: 'benim asıl hayal kırıklığım music engine konusunda yaptığımız araştırmaların 99% ını kullanmamışsın uygulamamışsın bile.' This file exists so that claim is a NUMBER re-computable at any time, not an argument. It is DATA, never engine code (MANDATE CLAUSE 23): the auditor imports it.",
+ "sources": [
+  {
+   "id": "SVS",
+   "path": "docs/research/2026-08-14-cross-lingual-singing-voice-synthesis-frontier.md",
+   "bytes": 90289,
+   "items": "A1-A14, the 'mechanism, element by element' table at line 683 and the application ledger at line 702"
+  },
+  {
+   "id": "TR",
+   "path": "docs/research/2026-08-14-turkish-singing-phonology-and-g2p-for-synthesis.md",
+   "bytes": 102700,
+   "items": "the committed recommendation (R0-R3) at line 523, the G2P layer at line 540, the gate field table at line 552, the five refusals at line 566"
+  },
+  {
+   "id": "ARCH",
+   "path": "docs/music-studio-single-endpoint-architecture.md",
+   "bytes": 65955,
+   "items": "the committed design the two reports above amend"
+  }
+ ],
+ "state_vocabulary": {
+  "IMPLEMENTED": "the mechanism exists in code and a control proves it",
+  "PARTIAL": "some of the mechanism exists; the missing part is named in `gap`",
+  "ABSENT": "no code implements it",
+  "SUPERSEDED": "his later order removed it from scope; recorded with the order rather than silently dropped",
+  "BLOCKED": "cannot proceed without a measurement or an asset that does not exist yet"
+ },
+ "items": [
+  {
+   "id": "A1",
+   "source": "SVS",
+   "title": "lyrics.script becomes a real IPA/phoneme layer, base letter + diacritic set, BOTH encodings behind one flag",
+   "basis": "S05 method + CN 22.77% vs 35.64%, p<0.001; direction of the split is [UNVERIFIED] per X1, so both encodings ship behind a flag our own measurement resolves",
+   "code_evidence_required": [
+    "a typed lyrics phonetic field carrying g2p/ipa/encoding/diacritics",
+    "a merged-vs-split encoding flag",
+    "code that emits the IPA array"
+   ],
+   "implementation_note": "generate_music_hybrid_model/music_studio/phonology.py: PhonemeEncoding enum with THREE members (merged/split/FEATURE). The measured reason for the third: only 5 of the 39 codepoints in the Turkish inventory carry a WITH-modification Unicode name, so the orthographic split leaves ɫ and ʎ atomic; the articulatory split via PHOIBLE features works for all 69. Phone.feature_tokens() emits SIGNED feature tokens (p/t̪ share 25 of 30) after a control proved positive-only tokens shared just 1.",
+   "probe": {
+    "symbol_any": [
+     "PhonemeEncoding",
+     "feature_tokens",
+     "diacritics"
+    ],
+    "module_any": [
+     "generate_music_hybrid_model/music_studio/phonology.py"
+    ],
+    "test_any": [
+     "scripts/test_phonology_layer.py"
+    ]
+   }
+  },
+  {
+   "id": "A2",
+   "source": "SVS",
+   "title": "phoneme-inventory COVERAGE score computed from PHOIBLE's binary features, nearest-neighbour to the engine inventory, stored in the language registry",
+   "basis": "S23 exact nearest-neighbour rule; S27 PHOIBLE 2.0; Turkish delta already known",
+   "code_evidence_required": [
+    "a PHOIBLE feature table as DATA",
+    "a coverage computation",
+    "the score stored per language in the registry"
+   ],
+   "implementation_note": "REAL PHOIBLE 2.0 data: artifacts/phoible/phoible.csv (24,578,868 B, sha256 395E0977...) reduced by scripts/extract_phoible_features.py to data/phoible_segment_features.json — 3,142 segments x 38 features, 105,484 rows read, CC BY-SA 3.0 recorded. compute_feature_coverage() measured Italian as the closest inventory to Turkish at 55.1% exact (mean feature distance 0.0229), with ZERO unmeasurable phones after the measured symbol bridge. STILL OPEN: the score is not yet WRITTEN INTO the language registry (that is A14).",
+   "probe": {
+    "symbol_any": [
+     "compute_feature_coverage",
+     "FeatureTable",
+     "nearest_in"
+    ],
+    "data_any": [
+     "phoible_segment_features"
+    ],
+    "test_any": [
+     "scripts/test_phonology_layer.py"
+    ]
+   }
+  },
+  {
+   "id": "A3",
+   "source": "SVS",
+   "title": "phoneme-level DURATION conditioning via a length regulator: per-phoneme onsets/offsets, never word-level",
+   "basis": "S06 PER 0.4562 -> 0.1865 with phoneme+melody; word-level (JAM-style) 0.7125 i.e. WORSE than nothing; S01 length regulator enforcing note-to-mel alignment",
+   "code_evidence_required": [
+    "a per-phoneme timing structure",
+    "compilation from the section/note plan to phoneme onsets"
+   ],
+   "implementation_note": "generate_music_hybrid_model/music_studio/phoneme_timing.py: LengthRegulator distributes each syllable's note length onto the NUCLEUS (measured on the real plan: an 800 ms note gives a 680 ms vowel against 60 ms consonants) because Turkish axis 7.2 records a held syllable as a held vowel; the vowel set is DERIVED from the inventory data, never listed in code. PhonemeTimeline.expand() is S06's length regulator at token level, frame-exact (130 tokens for 130 frames at 100 Hz). WordLevelTimingRefused makes the 0.7125 shortcut unavailable, and TimingSource keeps PLANNED (an instruction) from ever being reported as MEASURED (evidence) while A11 is open. Control: scripts/test_phoneme_timing.py, 33/33.",
+   "probe": {
+    "symbol_any": [
+     "LengthRegulator",
+     "PhonemeTimeline",
+     "WordLevelTimingRefused",
+     "SyllableRole"
+    ],
+    "module_any": [
+     "generate_music_hybrid_model/music_studio/phoneme_timing.py"
+    ],
+    "test_any": [
+     "scripts/test_phoneme_timing.py"
+    ]
+   }
+  },
+  {
+   "id": "A4",
+   "source": "SVS",
+   "title": "NEVER phoneme-only: melody/pitch conditioning stays on",
+   "basis": "S06 phoneme-only RPA 0.0667, Audiobox CE 4.17 vs 6.97 combined; S03 F0-supervision ablation; S01 dual gating",
+   "code_evidence_required": [
+    "a refusal or guard that prevents a phoneme-only request from being issued"
+   ],
+   "implementation_note": "generate_music_hybrid_model/music_studio/phonology.py: PhonemeDrivePlan.assert_melody_present() RAISES PhonologyError naming the 0.0667 measurement. Control-proven in scripts/test_phonology_layer.py (the refusal fires AND its message carries the number).",
+   "probe": {
+    "symbol_any": [
+     "assert_melody_present",
+     "melody_present"
+    ],
+    "test_any": [
+     "scripts/test_phonology_layer.py"
+    ]
+   }
+  },
+  {
+   "id": "A5",
+   "source": "SVS",
+   "title": "primary engine SoulX-Singer score-control mode on the GPU instance (MIDI + lyrics, note type 3 slur)",
+   "basis": "S01 cross-lingual WER 0.110 vs GT 0.148, SIM 0.898, SingMOS 4.337; Apache-2.0 weights",
+   "state_override": "SUPERSEDED",
+   "superseded_by": "His order 2026-08-14: 'herşey kesinlikle vertex ve google ın kendi servisleir ile olmalı' (D-SSM-24). A third-party singing engine is out of scope; the vocal path must be Google's or our own software on Google compute.",
+   "probe": {
+    "symbol_any": [
+     "soulx"
+    ]
+   }
+  },
+  {
+   "id": "A6",
+   "source": "SVS",
+   "title": "fallback/voice-identity path: speech prompt -> STS style transfer, using voice_vertex_tts (Turkish, generation-proven in this repo) as the PROMPT not the final vocal",
+   "basis": "S03 STS FFE 0.24, Cos 0.89, MOS-S 3.96; S07 language-agnosticism, LSD 4.750 vs DiffSinger 4.643",
+   "code_evidence_required": [
+    "a route that calls voice_vertex_tts as a prompt source",
+    "the STS stage"
+   ],
+   "state_override": "BLOCKED",
+   "superseded_by": "Override 2026-08-16: the STS STAGE has no lawful engine to build against. Measured chain: the research's STS engines (TCSinger 2 - STS FFE 0.24 / Cos 0.89 / MOS-S 3.96; SVPT - LSD 4.750, language-agnostic) are third-party MODELS, exactly the class D-SSM-24 removed when it superseded A5's SoulX-Singer, and no Google/Vertex speech-to-singing surface is known. WHAT WAS BUILT instead of a silent absence: STS_VOCAL is a FIRST-CLASS layer in the A7 path registry (music_studio/routing.py LayerRole.STS_VOCAL + data/generation_paths.json), carrying the full typed refusal - the lawful PROMPT half (voice_vertex_tts, Google, on disk, verified 2026-08-16), the law (D-SSM-24), two unblock conditions (a Google STS surface proven by a completed generation per CLAUSE 6, or Berk widening D-SSM-24 - the same open question queued for CharsiuG2P), and the banned substitute named (raw TTS aligned onto a bed is the downgrade A6 exists to replace; it is NOT offered). Control-proven in test_two_path_routing.py (38/38, five A6 arms). Recorded as BLOCKED rather than ABSENT because the blocker is his scope decision, not missing work.",
+   "probe": {
+    "symbol_any": [
+     "STS_VOCAL"
+    ],
+    "module_any": [
+     "generate_music_hybrid_model/music_studio/routing.py"
+    ],
+    "data_any": [
+     "generation_paths"
+    ],
+    "test_any": [
+     "scripts/test_two_path_routing.py"
+    ],
+    "probe_note": "The original probe searched for `voice_vertex_tts`/`speech_prompt`/`sts_` symbols and spec values that never existed - imagined names again (L48). Tightened 2026-08-16 to the real definition (LayerRole.STS_VOCAL), its evidence file and its control suite."
+   }
+  },
+  {
+   "id": "A7",
+   "source": "SVS",
+   "title": "route the instrumental BED and the VOCAL separately, then mix",
+   "basis": "S06 is an adapter over a frozen backbone (12.1 M params) - the two-path architecture is what the frontier itself does",
+   "code_evidence_required": [
+    "two generation paths in the plan",
+    "a mix stage that combines them"
+   ],
+   "probe": {
+    "symbol_any": [
+     "mix_plan",
+     "TwoPathRouter",
+     "MUSIC_BED",
+     "assert_shippable"
+    ],
+    "module_any": [
+     "generate_music_hybrid_model/music_studio/routing.py"
+    ],
+    "data_any": [
+     "generation_paths"
+    ],
+    "test_any": [
+     "scripts/test_two_path_routing.py"
+    ],
+    "probe_note": "The original probe looked for symbols `bed`/`vocal_path`/`two_path` and a `mix` stage. `bed` is a substring that matches unrelated words and `vocal_path` was never a name in this codebase - a probe written from an imagined implementation rather than the real one. Corrected 2026-08-15 to the names the built module actually uses, plus the module, the evidence data file and the control suite, so the probe measures the mechanism and not a guessed vocabulary. | TIGHTENED 2026-08-15 by scripts/test_ledger_probe_strength.py: 'generation_paths' was a TEXT_ONLY symbol leg (it is the DATA FILE name, already asserted by data_any) and 'two_path' matched prose only. Replaced with the real definitions TwoPathRouter and assert_shippable, read from music_studio/routing.py this session."
+   }
+  },
+  {
+   "id": "A8",
+   "source": "SVS",
+   "title": "the intelligibility gate: separate -> RMS-VAD vocal-activity segmentation -> per-language ASR -> BOTH softened PER and case-insensitive WER",
+   "basis": "S17 23.02% -> 20.35% from segmentation alone, 14.98% on stems; S05 softening rule (homophones + partial phoneme credit); S16 for WER comparability",
+   "code_evidence_required": [
+    "a VAD segmentation stage before ASR",
+    "softened PER",
+    "case-insensitive WER reported beside it"
+   ],
+   "probe": {
+    "symbol_any": [
+     "RmsVadSegmenter",
+     "SegmentationPlan",
+     "phoneme_error_rate_over_variants",
+     "assert_transcribable"
+    ],
+    "module_any": [
+     "generate_music_hybrid_model/music_studio/vocal_activity.py",
+     "generate_music_hybrid_model/music_studio/per_gate.py"
+    ],
+    "test_any": [
+     "scripts/test_rms_vad_segmenter.py",
+     "scripts/test_per_gate.py"
+    ],
+    "data_any": [
+     "intelligibility_gate"
+    ],
+    "probe_note": "TIGHTENED 2026-08-15. It had NO anchor leg at all - symbols only - and rested partly on 'wer', which appears as TEXT ONLY in 10 modules (any module mentioning word error rate in prose satisfied it), plus 'softened', which is ABSENT everywhere. A symbol can be a comment; a module and a control suite cannot. Now anchored on the two real modules, their control suites (37/37 and 25/25) and the intelligibility_gate evidence record, with symbols that are real definitions."
+   }
+  },
+  {
+   "id": "A9",
+   "source": "SVS",
+   "title": "the bar is PER-LANGUAGE and calibrated from >=5 real human sung recordings in that language - never one global threshold",
+   "basis": "S01 same protocol GT WER 0.074 (CN) vs 0.197-0.208 (EN), factor ~2.7; S14 human-vs-human 11.1%",
+   "code_evidence_required": [
+    "a per-language threshold field in the registry",
+    "a calibration routine that consumes labelled recordings"
+   ],
+   "state_override": "PARTIAL",
+   "superseded_by": "Override 2026-08-16, both directions of honesty. BUILT and control-proven (scripts/test_bar_calibration.py, 35/35): music_studio/bar_calibration.py - per-recording logit-transformed PER -> EXACT noncentral-t one-sided upper tolerance limit (p=0.90, gamma=0.95, the B-basis pairing) -> back-transformed bar, with the nonparametric max-of-n bound beside it at its TRUE confidence (46.9% at n=6, measured), Warton-Hui zero adjustment RECORDED in the artefact, eight refusals each proven to fire (n<5, all-zero, zero-variance, out-of-range PER, zero reference phonemes, duplicate ids, no language, no genre), and the Natrella cross-check reproducing NIST's published worked example DIGIT-FOR-DIGIT (1.8752). Parameters live in data/bar_calibration.json with per-value evidence (CLAUSE 4); the derivation is docs/research/2026-08-15-small-sample-one-sided-tolerance-limits-for-quality-gate-thresholds.md. WHY STILL PARTIAL: the title says CALIBRATED FROM >=5 REAL HUMAN SUNG RECORDINGS and zero real recordings exist on disk - A12 is licence-gated (CC BY-NC-ND, Berk's legal reading pending) and its commissioned-recordings half is his to start - so every language's registry bar remains honestly NOT_MEASURED. Flips to IMPLEMENTED on the first real calibration run, which must be reported as the first.",
+   "probe": {
+    "symbol_any": [
+     "CalibrationRefused",
+     "tolerance_factor_exact",
+     "LabelledRecording",
+     "calibrate_bar"
+    ],
+    "module_any": [
+     "generate_music_hybrid_model/music_studio/bar_calibration.py"
+    ],
+    "data_any": [
+     "bar_calibration"
+    ],
+    "test_any": [
+     "scripts/test_bar_calibration.py"
+    ],
+    "registry_field_any": [
+     "bar"
+    ],
+    "probe_note": "PROBE TIGHTENED 2026-08-15, NOT loosened. Two of the original legs were IMAGINED NAMES: `threshold_per_language` is a symbol nothing in this codebase ever defined, and `per_bar` a registry field that never existed - the real field is `bar`, present on 11/11 languages, each honestly {value: NOT_MEASURED, reason: A9 needs >=5 human sung recordings; A12 ABSENT}. Worse, the `calibrat` leg passed on mere MENTIONS of the word in refusal prose across 5 modules while NO calibration routine existed at all - measured this session: a grep of music_studio/ for a def/class whose name contains `calibrat` returns ZERO. That leg could therefore have carried A9 to green with zero A9 work, which is the same false-green class corrected in A10 and A11. The routine's ESTIMATOR is under frontier research (small-sample one-sided tolerance limits for a bounded, skewed, ratio-valued measurement); CLAUSE 4 forbids me inventing it, so this item stays NOT applied until the sourced procedure is implemented AND control-proven."
+   }
+  },
+  {
+   "id": "A10",
+   "source": "SVS",
+   "title": "four negative controls that must each be able to FAIL: human PASSES, instrumental yields no words, wrong lyric FAILS, and non-lexical vocables do NOT count as failure",
+   "basis": "S17 over half of such words deleted regardless of separation quality; the first three already in the architecture",
+   "code_evidence_required": [
+    "four named controls",
+    "the vocable exemption implemented"
+   ],
+   "probe": {
+    "symbol_any": [
+     "vocable",
+     "negative_control",
+     "NON_LEXICAL_VOCABLE",
+     "BACKING_VOCAL"
+    ],
+    "module_any": [
+     "generate_music_hybrid_model/music_studio/vocable_exemption.py"
+    ],
+    "data_any": [
+     "vocable_exemption"
+    ],
+    "test_any": [
+     "scripts/test_per_gate.py",
+     "scripts/test_a10_negative_controls.py"
+    ],
+    "probe_note": "`negative_control` was never a symbol in this codebase - the probe was written from an imagined implementation. Corrected 2026-08-15 to the names the built module uses (the WordClass members, the module, the evidence data file and the four-control suite). PER-CONTROL STATE, never blended: C2/C3/C4 BUILT and control-proven both ways; C1 PARTIAL - the SCORER leg passes a perfect input at PER 0.0 but the HUMAN leg needs real sung audio, which is A12 and is ABSENT. Turkish vocables are NOT_SOURCED, so the Turkish PER is pessimistic by an unmeasured amount."
+   }
+  },
+  {
+   "id": "A11",
+   "source": "SVS",
+   "title": "the aligner is Phonsa/STARS-class, or MFA RETRAINED on calibrated singing - never off-the-shelf MFA",
+   "basis": "S06 MAE 233.9 -> 32.6 ms; S20 beats MFA and SOFA; S21 only 10.08%",
+   "code_evidence_required": [
+    "an aligner module",
+    "or an explicit refusal recording that no lawful aligner is installed"
+   ],
+   "probe": {
+    "symbol_any": [
+     "assert_may_claim_measured_timing",
+     "NoLawfulAlignerError",
+     "MEASURED_UNFIT"
+    ],
+    "module_any": [
+     "generate_music_hybrid_model/music_studio/alignment.py"
+    ],
+    "data_any": [
+     "aligners"
+    ],
+    "test_any": [
+     "scripts/test_aligner_authority.py"
+    ],
+    "probe_note": "The original probe was `symbol_any: [align, phonsa, stars]`, which `per_gate.align` (SEQUENCE alignment, no audio time involved) satisfies on its own - so it could have gone green with no A11 work at all. Corrected 2026-08-15 to the symbols only the built authority layer defines. STATE: A11's second branch is taken - NO LAWFUL ALIGNER IS INSTALLED, recorded per candidate with typed blockers (phonsa: OWNER_SCOPE+LANGUAGE+NOT_INSTALLED; stars: +LICENCE, GTSinger CC BY-NC-SA 4.0 non-commercial; mfa_off_the_shelf: MEASURED_UNFIT on C06's four sources; mfa_retrained: CORPUS_ABSENT only, which makes it the shortest lawful route; sofa: UNRESEARCHED). The refusal is ENFORCED, not annotated: assert_measured() previously trusted its own input's LABEL, so PhonemeTimeline(source=MEASURED) passed silently; it now obtains authority from this registry. Controls 45/45, including a POSITIVE leg proving one lawful aligner would be permitted."
+   }
+  },
+  {
+   "id": "A12",
+   "source": "SVS",
+   "title": "Turkish calibration corpus: MTG/UPF makam a cappella set (word- AND phoneme-level annotation) + our own commissioned recordings",
+   "basis": "S29/S31 phoneme-level annotation, clean a cappella; S30 19 min, 732 words, 6 recordings with MIDI",
+   "code_evidence_required": [
+    "the corpus on disk or a fetch script",
+    "a manifest naming each recording"
+   ],
+ "state_override": "BLOCKED",
+ "superseded_by": "CLOSED BY OWNER DECISION D-SSM-30 (2026-08-17, his words verbatim in .claude/memory/DECISIONS.md): 'paid extra hicbirsey istemiyorum dedim defalarca, kullanacagin hersey google cloud da google assetleri servisleri ile olmali' - the Zenodo corpus is a third-party external asset and is NOT downloaded, NOT used; the fetch script's licence gate stays closed permanently and the manifest remains as the record of why. A9's bar number therefore waits for a GOOGLE-lawful measurement source (own commissioned recordings measured through Google services). PRIOR RECORD, preserved: Override 2026-08-15, in BOTH directions of honesty. BUILT: the manifest (music_studio/data/calibration_corpus.json) names all 12 recordings by MusicBrainz ID - cross-checked between the research report's '12 performances' and the LIVE GitHub listing of georgid/makam_acapella, which carries exactly 12 ID directories - with Zenodo's own MD5 checksums and sizes for both archives; and the fetch script (scripts/fetch_calibration_corpus.py) downloads + verifies them. So the item's two written evidence requirements are met. WHY IT IS STILL NOT IMPLEMENTED: (1) LICENCE, measured from the live Zenodo API record 2026-08-15 - the dataset is CC BY-NC-ND 4.0 (NonCommercial + NoDerivatives), which the research report's own 'Zenodo, open' note UNDERSTATED; whether calibrating a commercial product's gate is 'commercial use' and whether stems/retrained aligners are 'derivatives' is a legal reading ONLY BERK can obtain, so the fetch script REFUSES (control-proven: exit 2) until his approval record exists at music_studio/data/calibration_corpus_licence_approval.json - an agent may not mint that record. (2) The corpus is NOT on disk, so A9's bar and A11's mfa_retrained route stay blocked in fact. (3) The item's own title includes 'our own commissioned recordings' - the licence-clean half - which only Berk can commission. ~19 minutes of sarki-form makam singing also means any bar calibrated on it is a MAKAM-GENRE bar until our own recordings exist.",
+   "probe": {
+    "symbol_any": [
+     "FetchRefused",
+     "assert_owner_approval"
+    ],
+    "data_any": [
+     "calibration_corpus"
+    ],
+    "test_any": [
+     "scripts/fetch_calibration_corpus.py"
+    ],
+    "probe_note": "The old probe searched for data tokens `makam`/`acappella`/`calibration` and the symbol `calibration_corpus` - vocabulary again (L48): the word `makam` already appears in turkish_tradition.json, so the leg was satisfiable by an unrelated data file. Tightened to the built artefacts: the licence gate's own types and the real manifest."
+   }
+  },
+  {
+   "id": "A13",
+   "source": "SVS",
+   "title": "if a language still misses the bar after A1-A11: a bounded fine-tune, not a shrug",
+   "basis": "S09 40 B-token budget; S38 annealing mixing-ratio recipe; S06 12.1 M-parameter adapter; GTSinger may NOT be used commercially (CC BY-NC-SA)",
+   "state_override": "BLOCKED",
+   "superseded_by": "Requires A9's calibrated bar to exist first (nothing can be shown to MISS a bar that does not exist) and, under D-SSM-24, a Google-hosted or self-run training path. Recorded as blocked rather than absent.",
+   "probe": {
+    "symbol_any": [
+     "finetune",
+     "fine_tune",
+     "adapter_train"
+    ]
+   }
+  },
+  {
+   "id": "A14",
+   "source": "SVS",
+   "title": "the registry stores the coverage score, the measured PER, the bar, the protocol and the date PER LANGUAGE; the API enum is GENERATED from it BY IMPORT",
+   "basis": "architecture s2b.3 step 4; Supreme Law prohibition 6 (two lists kept in agreement by discipline is forbidden by name)",
+   "code_evidence_required": [
+    "registry entries carrying coverage/per/bar/protocol/date",
+    "the enum generated by import"
+   ],
+   "probe": {
+    "registry_field_any": [
+     "coverage_score",
+     "measured_per",
+     "bar",
+     "protocol",
+     "established"
+    ],
+    "symbol_any": [
+     "load_language_registry",
+     "language_value_entries",
+     "_resolve_field_imports"
+    ],
+    "module_any": [
+     "generate_music_hybrid_model/music_studio/capabilities.py",
+     "generate_music_hybrid_model/music_studio/models.py"
+    ],
+    "test_any": [
+     "scripts/test_music_studio_capabilities.py"
+    ],
+    "probe_note": "TWO CORRECTIONS 2026-08-15. (1) Two probe field names were IMAGINED: `phoneme_coverage` and `measured_on` exist on 0 languages because the registry's real fields are `coverage_score` (value+method, or NOT_MEASURED+reason) and `established` - the same imagined-name class as A9/A10/A11 (durable lesson L48). (2) The BY-IMPORT half of this item was DOCUMENTED but NOT ENFORCED, measured this session: vocal.fields.language and lyrics.fields.language were served by capabilities() as a bare PROSE SENTENCE (values_import held prose, not a path - prose where a typed field belongs, prohibition 6) while models._check_language enforced the 11 registry codes per axis, so served and enforced agreed only by discipline. REPAIRED: the spec now carries the typed path data/language_registry.json (the displaced prose preserved in values_origin), models.language_value_entries() projects the registry with BOTH axis states plus bar/measured_per/coverage_score badges, capabilities._resolve_field_imports() resolves ALL field-level imports by TARGET (never by field name, so a future language-shaped field cannot regress to prose) and REFUSES an unresolvable import loudly, and test_music_studio_capabilities.py (16/16) asserts served ids == enforced codes with a negative control proving a prose import is refused. Date semantics, stated honestly: `established` is the ENTRY date; a measurement date will ride each measured value when one exists - today every measured_per and bar is NOT_MEASURED with its reason (A12 absent), so a `measured_on` field would have nothing true to say."
+   }
+  },
+  {
+   "id": "TR-R1",
+   "source": "TR",
+   "title": "R1 phoneme-informed ORTHOGRAPHY is the DEFAULT for Turkish: the lyric goes through our G2P and what reaches the model is the orthographic string computed FROM the phoneme sequence, with the phonemes retained as the gate reference",
+   "basis": "Axis 2 zero Turkish articulations absent; S40 tokenisation not phonology is the bottleneck (rho ~ -0.78); S52 ACE-Step 50% stochastic Romanisation",
+   "code_evidence_required": [
+    "a function that renders phoneme-informed orthography",
+    "the planner using it for tr by default",
+    "the phoneme sequence kept as the gate reference"
+   ],
+ "probe": {
+  "symbol_any": [
+   "expected_reading_cost",
+   "worst_measured_substitution",
+   "respell_word"
+  ],
+  "module_any": [
+   "generate_music_hybrid_model/music_studio/turkish_routes.py"
+  ],
+  "data_any": [
+   "phoneme_to_grapheme"
+  ],
+  "test_any": [
+   "scripts/test_r1_respelling.py"
+  ],
+  "route_any": [
+   "R1"
+  ],
+  "probe_note": "The original probe was `symbol_any: [phoneme_informed, respell, orthograph]` - substring legs that prose alone could satisfy (the L48 class). Tightened 2026-08-16 to the symbols only the built mechanism defines: `expected_reading_cost` (E[min-alignment] of the candidate's READING DISTRIBUTION under the Bisani-Ney bigram graphone LM, derived-bound pruning), `worst_measured_substitution` (the derived insertion/deletion penalty floor, 399.0 measured this session), `respell_word` (the phone-local strict-inequality gate + word-level expectation veto). STATE: test_r1_respelling.py exit 0 on 2026-08-16 - 5/5 outcome words correct (nerede/bu/uzun kept, cal->chal, ask->ashk), negative control still reproduces the rejected forward criterion's defect. The two former open cases (bu->bou, nerede->nettede) were MECHANISM defects, measured and fixed - never a spelling-taste decision."
+ }
+  },
+  {
+   "id": "TR-G2P3",
+   "source": "TR",
+   "title": "neural G2P fallback tier, and its Turkish PER must be MEASURED before it is trusted",
+   "basis": "S24/S25 CharsiuG2P ByT5; only the 100-language average is known",
+   "state_override": "BLOCKED",
+   "superseded_by": "CLOSED BY OWNER DECISION D-SSM-30 (2026-08-17, his words verbatim in .claude/memory/DECISIONS.md): 'paid extra hicbirsey istemiyorum dedim defalarca, kullanacagin hersey google cloud da google assetleri servisleri ile olmali' - CharsiuG2P is a third-party model and D-SSM-24's Google-only scope is NOT widened. Tier-3 remains unbuilt BY DECISION; the shipped lexicon (41,373-word MFA dictionary) + sourced rules carry Turkish G2P. Re-opens only if Berk widens the scope explicitly or a Google G2P surface appears.",
+   "code_evidence_required": [
+    "tier 3 wired",
+    "its Turkish PER measured by us"
+   ],
+   "probe": {
+    "symbol_any": [
+     "NeuralG2PTier",
+     "neural_g2p_phonemes"
+    ],
+    "data_any": [
+     "g2p_tier3_measured_per"
+    ],
+    "probe_note": "FALSE GREEN CORRECTED 2026-08-15, and this one had reached IMPLEMENTED. The old probe was `symbol_any: [tier3, neural, charsiu, phonetisaurus]` - all four matched as TEXT ONLY, inside the very sentences that declare the tier ABSENT: `music_studio/g2p_tr.py` L24 reads `TIER 3 - NEURAL (CharsiuG2P ByT5). **NOT INSTALLED HERE.**` and L285 returns `neural_fallback: NOT INSTALLED`. So the more honestly the module documented the absence, the more the probe read it as presence - the audit was measuring VOCABULARY, not mechanism (durable lesson L48). Both required items are unmet, measured this session: tier 3 is NOT wired, and its Turkish PER has never been measured by us (impossible without the model). Correct state: ABSENT, which the audit now derives on its own from the tightened legs. WHAT DOES EXIST, and is NOT being erased by this correction: `scripts/verify_g2p_tier3_phone_set_compatibility.py` measured that our MFA dictionary uses SIX symbols the phonetisaurus v3.0.0 `phones.sym` (65 symbols) cannot emit, and `scripts/test_g2p_tier3_allophone_fold.py` is green at 24/24 with a negative control. That is real PREREQUISITE work for tier 3 - it constrains any future wiring - but it is not the tier. OPEN QUESTION FOR BERK, not decided by me: CharsiuG2P is a third-party model, so whether it may be installed at all is a D-SSM-24 scope question (the same ground on which SoulX-Singer, Phonsa and STARS were removed)."
+   }
+  },
+  {
+   "id": "TR-GATE",
+   "source": "TR",
+   "title": "the Turkish gate reports per + cer + syllable_error_rate + wer, names the ASR (whisper-large-v3, language=tr), names the phonemiser WITH its symbol-set version, feeds note/section durations to the aligner as priors, uses a CALIBRATED bar, and states BERK'S VERDICT",
+   "basis": "S41 PER among the field's answers; S39/S42 CER 3-4x more stable on Turkish; S30 syllable +10 pp and aligner priors +10 pp absolute; C-01 mixed symbol sets silently inflate PER",
+   "code_evidence_required": [
+    "all four metrics",
+    "asr id",
+    "phonemiser id with version",
+    "aligner priors",
+    "calibrated bar",
+    "berk_verdict field"
+   ],
+ "state_override": "PARTIAL",
+ "superseded_by": "Override DOWNWARD 2026-08-15, on the item's own words: the title demands the gate USES A CALIBRATED BAR, and no calibrated bar exists (A9's estimator is delivered but A12's corpus is decision-locked). UPDATED 2026-08-17: the OTHER half of this override is CLOSED - syllable_error_rate now RUNS on the sourced segmenter (music_studio/syllabification.py, constraints + S15's own sentences in data/syllabification.json, controls scripts/test_syllabification.py with S15's own [ha.jat]/[haja:ta] pair as known answers; live measurements this session: identical transcript SER 0.0, one-word corruption 0.1667, empty transcript 1.0). The item stays PARTIAL on the calibrated-bar half alone: REPORTING that the bar is uncalibrated is not USING a calibrated bar. Flips to IMPLEMENTED when A9+A12 deliver the bar.",
+ "probe": {
+  "symbol_any": [
+   "companion_metrics",
+   "berk_verdict_field",
+   "aligner_priors_status",
+   "SYMBOL_SET",
+   "_syllable_error_rate",
+   "TurkishSyllabifier"
+  ],
+  "module_any": [
+   "generate_music_hybrid_model/music_studio/per_gate.py",
+   "generate_music_hybrid_model/music_studio/syllabification.py"
+  ],
+  "data_any": [
+   "syllabification"
+  ],
+  "test_any": [
+   "scripts/test_per_gate.py",
+   "scripts/test_syllabification.py"
+  ],
+    "probe_note": "TIGHTENED AND PARTLY BUILT 2026-08-15. The old probe was vocabulary: `cer` passed as a SUBSTRING of the exception class name SpeCERror, `whisper` matched prose in 4 modules, and `berk_verdict`/`symbol_set`/`syllable_error_rate` were names nothing defined (L48). BUILT this session, each control-proven in test_per_gate.py (34/34): companion_metrics() computes CER and WER on the SAME align() core and the SAME g2p_tr.normalise/words as PER (single source of truth; Python's bare .lower() measured WRONG for Turkish this session: 'I'->'i' where Turkish needs 'ı', 'İ'->'i'+U+0307 phantom dot - the KAPIYI control proves the import is used); CER<WER on the same one-word error reproduces S41/S42's stability argument; protocol.symbol_set names MFA Turkish v3.0.0 (74 phones); aligner_priors_status() reads the A11 registry live (NO_LAWFUL_ALIGNER today, never a hand-written status); berk_verdict_field() is PENDING_BERK by CLAUSE 19 and no instrument may fill it. TWO ITEMS REMAIN HONEST REFUSALS, so this item may stay PARTIAL: (a) syllable_error_rate reports NOT_RUN because no SOURCED Turkish syllabifier exists - S15's suffixation constraint (the two-position rhyme ban, [hajat] vs [hajaːta]) makes a spelling-level maximal-onset splitter wrong by construction, and CLAUSE 4 forbids shipping a guessed one; unlock = a syllabifier built from S15 with a can-pass-AND-can-fail control set; (b) the calibrated bar is still NOT_CALIBRATED - it is A9's estimator (under frontier research) times A12's corpus (ABSENT). The gate's ASR is stt_vertex (Gemini 2.5 Pro) under D-SSM-24, named in the protocol; the title's whisper-large-v3 is the research corpus's own instrument, not ours."
+   }
+  },
+  {
+   "id": "TR-REFUSE",
+   "source": "TR",
+   "title": "five things that must NOT be shipped: makam via key/scale, 9/8 as a Turkish rhythmic control, an uncalibrated Turkish PER threshold, a SINGING_PROVEN claim for Turkish, a claim that a Turkish singing corpus exists",
+   "basis": "S34 24 unequal steps quantised to 1/53-octave commas; S32 111 makams; C-04 Turkish theory does not agree on tuning; S34 usul is additive and appears as 9/4 at a slower mertebe",
+   "code_evidence_required": [
+    "a named refusal for a makam request",
+    "usul as the source with time_signature DERIVED by import",
+    "no uncalibrated threshold anywhere",
+    "tr not SINGING_PROVEN"
+   ],
+   "probe": {
+    "symbol_any": [
+     "TraditionRefusal",
+     "usul",
+     "SpellingFidelity"
+    ],
+    "registry_field_any": [
+     "singing",
+     "coverage_score",
+     "bar",
+     "protocol"
+    ],
+    "registry_forbidden_value": [
+     {
+      "field": "singing",
+      "value": "SINGING_PROVEN",
+      "only_language": "tr",
+      "why": "TR-REFUSE clause 4: no Turkish singing has been measured and A12's calibration corpus does not exist, so the claim would be a shipped lie"
+     },
+     {
+      "field": "singing",
+      "value": "SINGING_PROVEN",
+      "why": "no language has a measured sung take through the Stage-6 chain yet, so the claim is unavailable for EVERY language and not only Turkish"
+     }
+    ],
+    "probe_note": "`registry_field_any` previously asked for a field named `state`, which the registry has never had - it carries `singing` and `speech`. A probe that looks for the wrong field name reports a real mechanism as missing, which is the same false-negative class as the 2026-08-13 hook-wiring auditor. Corrected to the fields the data actually has, and STRENGTHENED with a refusal probe, because TR-REFUSE is about claims that must NOT appear and no presence check can audit an absence. | TIGHTENED 2026-08-15: it was IMPLEMENTED on symbols only, with 'makam' and 'refuse' matching merely as substrings of unrelated names (makam_count, REFUSED). Now anchored on music_studio/turkish_routes.py, its contract suite and the turkish_tradition evidence record, with TraditionRefusal as the real class.",
+    "module_any": [
+     "generate_music_hybrid_model/music_studio/turkish_routes.py"
+    ],
+    "test_any": [
+     "scripts/test_music_studio_contracts.py"
+    ],
+    "data_any": [
+     "turkish_tradition"
+    ]
+   }
+  }
+ ]
+}

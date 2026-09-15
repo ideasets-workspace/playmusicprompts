@@ -1,0 +1,681 @@
+{
+  "schema": "berk.deep-research/v1",
+  "status": "incomplete",
+  "completion_status": "REGISTER_AND_MANIFEST_WRITTEN; MAIN_REPORT_BODY_PENDING_PARENT",
+  "date": "2026-09-05",
+  "mode": "B",
+  "topic": "frontier-music-ui-ux",
+  "run_id": "2026-09-05-frontier-music-ui-ux",
+  "lane": "d575a0b1",
+  "owner_order": "Berk's order, 2026-09-05 15:49, verbatim (Turkish preserved, R15.1): \"bunlar olmak zorunda değil diyorum araştır bul diyorum yap diyorum. EMRİM ŞUDUR DÜNYADA BUGÜNE KADAR YAPILAMAMIŞ EN İLERİ SEVİYEDE uı ux VE KULLANICI DENEYİMİ İSTİYORUM WEN, MOBİL APP VE TABLET APP LERDE. Kullanıcı bir prompt girer ve bizim alanları isterse doldurur ve sonrasında çalan müzik aıkları tüm bugüne kadar develop ettiklerimiz bu arayüzlerde ultra şekilde sunulacak. görsel kalite ultra olmalı. mock up lara takılma onlar mock up adı üzerinde çok daha ileri taşı\". Earlier the same hour: \"şuan çöp seviyesinde diyorum sana\" and \"hatalalı dosyaları inceledikçe hata yapmaya devam edeceksin düzeltemezsin\". The research output feeds (a) three structurally divergent directions for his approval and (b) the rebuild of every surface.",
+  "started_at": "2026-09-05T13:00Z",
+  "generated_at": "2026-09-05T14:45:00.987Z",
+  "main_report": "docs/research/2026-09-05-frontier-music-ui-ux-frontier.md",
+  "index": "docs/README.md (indexing NOT verified by this worker)",
+  "planned_artifacts": {
+    "count": 14,
+    "paths": [
+      "docs/research/2026-09-05-frontier-music-ui-ux-frontier.md",
+      "docs/research/competitors/2026-09-05-prompt-to-music-creation-pricing.md",
+      "docs/research/competitors/2026-09-05-prompt-to-music-creation-functions-and-services.md",
+      "docs/research/competitors/2026-09-05-prompt-to-music-creation-business-model.md",
+      "docs/research/competitors/2026-09-05-prompt-to-music-creation-ui-and-menus.md",
+      "docs/research/competitors/2026-09-05-live-adaptive-player-pricing.md",
+      "docs/research/competitors/2026-09-05-live-adaptive-player-functions-and-services.md",
+      "docs/research/competitors/2026-09-05-live-adaptive-player-business-model.md",
+      "docs/research/competitors/2026-09-05-live-adaptive-player-ui-and-menus.md",
+      "docs/research/sota/2026-09-05-frontier-music-ui-ux.md",
+      "docs/research/apis/2026-09-05-frontier-music-ui-ux.md",
+      "docs/research/customer-expectations/2026-09-05-frontier-music-ui-ux.md",
+      "docs/research/future-needs/2026-09-05-frontier-music-ui-ux.md",
+      "docs/research/growth/2026-09-05-frontier-music-ui-ux.md"
+    ]
+  },
+  "produced_artifacts": {
+    "count": 14,
+    "files": [
+      {
+        "path": "docs/research/sota/2026-09-05-frontier-music-ui-ux.md",
+        "role": "axis file",
+        "bytes": 122080,
+        "sha256": "2c537c4d97de953b4e19cb8ac2b421a11bc74027b45402c60da275d842561166",
+        "lines": 553,
+        "read_back": true,
+        "banner_status": "L11 (banner text); L490 (lifted/superseded)"
+      },
+      {
+        "path": "docs/research/apis/2026-09-05-frontier-music-ui-ux.md",
+        "role": "axis file",
+        "bytes": 110267,
+        "sha256": "1cd7692a393686105eb9f406348082ad80880afdb9efcf344579ba997e19b4f7",
+        "lines": 629,
+        "read_back": true,
+        "banner_status": "L518"
+      },
+      {
+        "path": "docs/research/customer-expectations/2026-09-05-frontier-music-ui-ux.md",
+        "role": "axis file",
+        "bytes": 84357,
+        "sha256": "5895b82d71aad25426d07d56488fd1ea134d4534d1cadf813041338af3692682",
+        "lines": 456,
+        "read_back": true,
+        "banner_status": "none"
+      },
+      {
+        "path": "docs/research/future-needs/2026-09-05-frontier-music-ui-ux.md",
+        "role": "axis file",
+        "bytes": 81078,
+        "sha256": "fa2f4d41d124c9c62eb68fbf4fa4c9ab2e538373088b85a1e3f1e73479aee25e",
+        "lines": 372,
+        "read_back": true,
+        "banner_status": "none"
+      },
+      {
+        "path": "docs/research/growth/2026-09-05-frontier-music-ui-ux.md",
+        "role": "axis file",
+        "bytes": 69085,
+        "sha256": "833cfce4a789167b77aa0160067b6fae1bbc8acd3f05941acd3ff5276c2e0e65",
+        "lines": 333,
+        "read_back": true,
+        "banner_status": "none"
+      },
+      {
+        "path": "docs/research/competitors/2026-09-05-prompt-to-music-creation-functions-and-services.md",
+        "role": "axis file",
+        "bytes": 78731,
+        "sha256": "81105c2bd26c44f12776b453c892d9c4c3c87f18fa61423d196336432af1513e",
+        "lines": 495,
+        "read_back": true,
+        "banner_status": "L9 (lifted/superseded); L493 (lifted/superseded)"
+      },
+      {
+        "path": "docs/research/competitors/2026-09-05-prompt-to-music-creation-pricing.md",
+        "role": "axis file",
+        "bytes": 20168,
+        "sha256": "d7a9913c2e5fcaf4876c3eb27853711961721f427bd6469868bcf1a713fe64cd",
+        "lines": 197,
+        "read_back": true,
+        "banner_status": "L9 (lifted/superseded)"
+      },
+      {
+        "path": "docs/research/competitors/2026-09-05-prompt-to-music-creation-business-model.md",
+        "role": "axis file",
+        "bytes": 17162,
+        "sha256": "82d93f8bb01d4589b6cfc8fc49b26195fb4688cfccaa8377d30396f195aa9b5b",
+        "lines": 98,
+        "read_back": true,
+        "banner_status": "L9 (lifted/superseded)"
+      },
+      {
+        "path": "docs/research/competitors/2026-09-05-prompt-to-music-creation-ui-and-menus.md",
+        "role": "axis file",
+        "bytes": 15576,
+        "sha256": "99b00720265af8992630643eacb89d41da0d8638f610e75649132fbeffc67f5b",
+        "lines": 90,
+        "read_back": true,
+        "banner_status": "L9"
+      },
+      {
+        "path": "docs/research/competitors/2026-09-05-live-adaptive-player-functions-and-services.md",
+        "role": "axis file",
+        "bytes": 60134,
+        "sha256": "f364218ca520ff2fc7ecbffbb2d64d878fe66919837dfa467f04af86faca402c",
+        "lines": 284,
+        "read_back": true,
+        "banner_status": "L1 (lifted/superseded); L3 (struck-through)"
+      },
+      {
+        "path": "docs/research/competitors/2026-09-05-live-adaptive-player-pricing.md",
+        "role": "axis file",
+        "bytes": 20306,
+        "sha256": "e8d22f71d3e92b537abb20af3bb9711132142eb7b7714b1a789842417516fb9f",
+        "lines": 133,
+        "read_back": true,
+        "banner_status": "L1 (lifted/superseded); L3 (struck-through)"
+      },
+      {
+        "path": "docs/research/competitors/2026-09-05-live-adaptive-player-business-model.md",
+        "role": "axis file",
+        "bytes": 16530,
+        "sha256": "e0bf142b15edfcbb67cc22111b262f4d2edfd397e17bba2bbffc3f6e37a1c5d5",
+        "lines": 101,
+        "read_back": true,
+        "banner_status": "L1 (lifted/superseded); L3 (struck-through)"
+      },
+      {
+        "path": "docs/research/competitors/2026-09-05-live-adaptive-player-ui-and-menus.md",
+        "role": "axis file",
+        "bytes": 23941,
+        "sha256": "fb2ced1a0928924b4674e643084a4898d42aad1c272684112ce3224b4dcb0453",
+        "lines": 145,
+        "read_back": true,
+        "banner_status": "L1 (lifted/superseded); L3 (struck-through)"
+      },
+      {
+        "path": "docs/research/2026-09-05-frontier-music-ui-ux-frontier.md",
+        "role": "main report (skeleton; body pending parent)",
+        "bytes": 13320,
+        "sha256": "cab8f7c860f94f504f6625474db4eff65f1a6232748f50030c07882c8e1b49a5",
+        "lines": 133,
+        "read_back": true,
+        "banner_status": "L133 (banner text)"
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "docs/research/sota/2026-09-05-frontier-music-ui-ux.md",
+      "role": "axis file",
+      "bytes": 122080,
+      "sha256": "2c537c4d97de953b4e19cb8ac2b421a11bc74027b45402c60da275d842561166",
+      "lines": 553,
+      "read_back": true,
+      "banner_status": "L11 (banner text); L490 (lifted/superseded)"
+    },
+    {
+      "path": "docs/research/apis/2026-09-05-frontier-music-ui-ux.md",
+      "role": "axis file",
+      "bytes": 110267,
+      "sha256": "1cd7692a393686105eb9f406348082ad80880afdb9efcf344579ba997e19b4f7",
+      "lines": 629,
+      "read_back": true,
+      "banner_status": "L518"
+    },
+    {
+      "path": "docs/research/customer-expectations/2026-09-05-frontier-music-ui-ux.md",
+      "role": "axis file",
+      "bytes": 84357,
+      "sha256": "5895b82d71aad25426d07d56488fd1ea134d4534d1cadf813041338af3692682",
+      "lines": 456,
+      "read_back": true,
+      "banner_status": "none"
+    },
+    {
+      "path": "docs/research/future-needs/2026-09-05-frontier-music-ui-ux.md",
+      "role": "axis file",
+      "bytes": 81078,
+      "sha256": "fa2f4d41d124c9c62eb68fbf4fa4c9ab2e538373088b85a1e3f1e73479aee25e",
+      "lines": 372,
+      "read_back": true,
+      "banner_status": "none"
+    },
+    {
+      "path": "docs/research/growth/2026-09-05-frontier-music-ui-ux.md",
+      "role": "axis file",
+      "bytes": 69085,
+      "sha256": "833cfce4a789167b77aa0160067b6fae1bbc8acd3f05941acd3ff5276c2e0e65",
+      "lines": 333,
+      "read_back": true,
+      "banner_status": "none"
+    },
+    {
+      "path": "docs/research/competitors/2026-09-05-prompt-to-music-creation-functions-and-services.md",
+      "role": "axis file",
+      "bytes": 78731,
+      "sha256": "81105c2bd26c44f12776b453c892d9c4c3c87f18fa61423d196336432af1513e",
+      "lines": 495,
+      "read_back": true,
+      "banner_status": "L9 (lifted/superseded); L493 (lifted/superseded)"
+    },
+    {
+      "path": "docs/research/competitors/2026-09-05-prompt-to-music-creation-pricing.md",
+      "role": "axis file",
+      "bytes": 20168,
+      "sha256": "d7a9913c2e5fcaf4876c3eb27853711961721f427bd6469868bcf1a713fe64cd",
+      "lines": 197,
+      "read_back": true,
+      "banner_status": "L9 (lifted/superseded)"
+    },
+    {
+      "path": "docs/research/competitors/2026-09-05-prompt-to-music-creation-business-model.md",
+      "role": "axis file",
+      "bytes": 17162,
+      "sha256": "82d93f8bb01d4589b6cfc8fc49b26195fb4688cfccaa8377d30396f195aa9b5b",
+      "lines": 98,
+      "read_back": true,
+      "banner_status": "L9 (lifted/superseded)"
+    },
+    {
+      "path": "docs/research/competitors/2026-09-05-prompt-to-music-creation-ui-and-menus.md",
+      "role": "axis file",
+      "bytes": 15576,
+      "sha256": "99b00720265af8992630643eacb89d41da0d8638f610e75649132fbeffc67f5b",
+      "lines": 90,
+      "read_back": true,
+      "banner_status": "L9"
+    },
+    {
+      "path": "docs/research/competitors/2026-09-05-live-adaptive-player-functions-and-services.md",
+      "role": "axis file",
+      "bytes": 60134,
+      "sha256": "f364218ca520ff2fc7ecbffbb2d64d878fe66919837dfa467f04af86faca402c",
+      "lines": 284,
+      "read_back": true,
+      "banner_status": "L1 (lifted/superseded); L3 (struck-through)"
+    },
+    {
+      "path": "docs/research/competitors/2026-09-05-live-adaptive-player-pricing.md",
+      "role": "axis file",
+      "bytes": 20306,
+      "sha256": "e8d22f71d3e92b537abb20af3bb9711132142eb7b7714b1a789842417516fb9f",
+      "lines": 133,
+      "read_back": true,
+      "banner_status": "L1 (lifted/superseded); L3 (struck-through)"
+    },
+    {
+      "path": "docs/research/competitors/2026-09-05-live-adaptive-player-business-model.md",
+      "role": "axis file",
+      "bytes": 16530,
+      "sha256": "e0bf142b15edfcbb67cc22111b262f4d2edfd397e17bba2bbffc3f6e37a1c5d5",
+      "lines": 101,
+      "read_back": true,
+      "banner_status": "L1 (lifted/superseded); L3 (struck-through)"
+    },
+    {
+      "path": "docs/research/competitors/2026-09-05-live-adaptive-player-ui-and-menus.md",
+      "role": "axis file",
+      "bytes": 23941,
+      "sha256": "fb2ced1a0928924b4674e643084a4898d42aad1c272684112ce3224b4dcb0453",
+      "lines": 145,
+      "read_back": true,
+      "banner_status": "L1 (lifted/superseded); L3 (struck-through)"
+    },
+    {
+      "path": "docs/research/2026-09-05-frontier-music-ui-ux-frontier.md",
+      "role": "main report (skeleton; body pending parent)",
+      "bytes": 13320,
+      "sha256": "cab8f7c860f94f504f6625474db4eff65f1a6232748f50030c07882c8e1b49a5",
+      "lines": 133,
+      "read_back": true,
+      "banner_status": "L133 (banner text)"
+    },
+    {
+      "path": "docs/research/2026-09-05-frontier-music-ui-ux-source-register.md",
+      "role": "source register",
+      "bytes": 285854,
+      "sha256": "16d256d078d5362873cc204b0b8589c3f62674174734bab85b76905aceebd357",
+      "read_back": true
+    }
+  ],
+  "source_register_path": "docs/research/2026-09-05-frontier-music-ui-ux-source-register.md",
+  "source_counts": {
+    "authoritative": "per slice as stated: sota (no integer after A2; 21 first pass), apis 43, cx 39, future 22, growth 19, comp-creation 50, comp-player 20 (parent ruling)/19 strict; sum of integer-stated = 193 (not de-duplicated across slices)",
+    "academic": "apis 11, cx 13, future 1, growth 7, comp-creation 5, comp-player 6, sota 17 main body = 60",
+    "academic_full": 45,
+    "primary_full": "per slice: sota 6 (l.128), apis 25 (l.376), cx 19 (l.454), future 13 (l.371), growth 6 (l.331), comp-creation 26 (l.488), comp-player not stated as a number"
+  },
+  "floors": {
+    "authoritative_families": {
+      "sota": "no integer after A2 pass (first pass 21)",
+      "apis": 43,
+      "cx": 39,
+      "future": 22,
+      "growth": 19,
+      "comp-creation": 50,
+      "comp-player": "20 (parent ruling) / 19 strict"
+    },
+    "academic_total": {
+      "sota": "17 main body",
+      "apis": 11,
+      "cx": 13,
+      "future": 1,
+      "growth": 7,
+      "comp-creation": 5,
+      "comp-player": 6
+    },
+    "academic_full": {
+      "sota": 11,
+      "apis": 6,
+      "cx": 9,
+      "future": 1,
+      "growth": 7,
+      "comp-creation": 5,
+      "comp-player": 6,
+      "sum": 45
+    },
+    "claims_3plus": 56,
+    "claims_single_source": 100,
+    "claims_unverified": 18,
+    "claims_flagged_or_2source": 6
+  },
+  "claim_counts": {
+    "verified_3plus": 56,
+    "single_source": 100,
+    "unverified": 18,
+    "flagged_or_2source": 6,
+    "note": "sums of each slice's own final stated counts; per-slice refs in the register §4"
+  },
+  "per_slice_floor_status": {
+    "sota": [
+      "L262: - Floors: authoritative 21/20 ✔ (counting official docs read as page excerpts); academic 17/5 ✔; academic `[FULL]` with five-part records 5/5 ✔ (S01, S02, S04, S05, S27); primary `[FULL]` 6.",
+      "L263: - Load-bearing claims: 6 with ≥3 independent sources; 4 `[single-source]`; 2 `[UNVERIFIED]` — all flagged inline.",
+      "L486: | non-English probe | none | German (MuC 2025) found; Japanese/Chinese NOT SEARCHED | **partial — one of three language groups** |",
+      "L490: > **SUPERSEDES the \"UNVERIFIED RELAY — DO NOT CITE (partial banner — scoped)\" block at the top of this report, as of the A2 pass on 2026-09-05.** The report may be cited for every claim whose ledger row reads *verified*; claims flagged `[single-source]`, `[needs one more independent source]` or `[UNVERIFIED]` are cited with their flag attached, never without it."
+    ],
+    "apis": [
+      "L390: - [x] ≥20 authoritative independent families: 43 counted by hand from the register.",
+      "L391: - [x] ≥5 academic `[FULL]` with five-part records: 6.",
+      "L393: - [ ] NOT met: Apple platform capabilities (Now Playing, Remote Command Center, Live Activities/Dynamic Island limits, Core Haptics, CarPlay) — INACCESSIBLE this session; **the parent must not cite this report for any Apple limit**.",
+      "L394: - [ ] NOT met: academic evidence on Flutter frame-time performance — none found in the searched scope (Q12).",
+      "L395: - [ ] NOT met: API-name-level verification of just_audio's visualiser streams (README table read; Dart API not opened).",
+      "L520: Capture files on disk with prefix `2026-09-05-apis-`: **201** (97 before this run → 201 after; 104 new rows in the register below, of which 12 are 404/redirect stubs). Authoritative sources (official docs, specs, registries, official repos, API JSON) read at least in part this run: 33 Apple `.md` + 5 Apple JSON + 3 GitHub-raw just_audio files + 26 GitHub API JSON + 2 Flutter release notes + 3 Flutter API pages = 72, added to the master report's count. **Academic floor: unchanged — the five-part records remain the 6 from the master run; this run's academic probe added 0 [FULL] academic primaries** (nothing relevant was found to read). Floors as owner-fixed: ≥20 authoritative **met**; ≥5 academic [FULL] — **met only by the master run's 6**, no addition here."
+    ],
+    "cx": [
+      "L280: - Floors: 28 independent families ≥ 20; 9 academic ≥ 5; 6 academic [FULL] with five-part records ≥ 5; 10 primary [FULL].",
+      "L281: - Claims: 8 verified 3+, 5 single-source (flagged in place), 0 unverified.",
+      "L453: - **Independent authoritative families:** 28 before (line \"Counts (R11.2)\" above; 42 S-ids) → **39** after (+11 usable: S101, S102, S103, S104, S109, S110, S111, S120, S121, S122, S123; S105 excluded as tertiary, S106 excluded as failed capture, S112 and S113 excluded because unread beyond title). Floor ≥20: met.",
+      "L454: - **Academic sources:** 9 before → **13** after (S101, S102, S104, S111 added; S103 is a thesis, grey; S112/S113 captured but unread, not counted). **Academic [FULL] with five-part records:** 6 before → **9** after (S101, S102, S104; S103 carries a five-part record but is grey literature and is *not* counted toward the academic floor). Floor ≥5 academic [FULL]: met. **Primary [FULL]:** 10 before → **19** after (S101, S102, S103, S104, S109, S110, S120, S122, S123).",
+      "L455: - **Claims:** C-E1…C-E9 added; 3+-verified: C-E1 (mechanism), C-E7; single-source: C-E2…C-E6, C-E8, C-E9; unverified: none written as fact."
+    ],
+    "future": [
+      "L261: - Floors (this file): authoritative families 15 (7 first-party); academic 1; academic FULL 1; primary FULL 5. Per-file academic floor NOT met alone — disclosed in the banner; combined floor reported in the growth companion and in the return message.",
+      "L262: - Claims: 6 verified 3+, 6 single-source, 2 unverified — all flagged inline.",
+      "L371: - Floors (this file, after run): families 22; strictly authoritative 13; academic 1; academic FULL 1; primary FULL 13. Academic floor for THIS file alone: NOT met (disclosed; the parent's order said \"if the retention and ASO items land\" — those land in the growth file)."
+    ],
+    "growth": [
+      "L242: - Produced-vs-planned: 2/2 reports. Angles enumerated 15/15; evidenced 10; GAP 5 (named).",
+      "L243: - Floors (this file): families 15 (8 first-party); academic 4; academic FULL 4; primary FULL 3. Combined with companion: families 28, academic 5, academic FULL 5, primary FULL 8 → combined ≥20 / ≥5 floors met; per-file academic floor not met by either file alone — disclosed in both banners.",
+      "L331: - Angles ordered for this file: 5 + live inspection = 6. Closed with primaries: 2 (retention, live inspection). Half-closed: 2 (ASO via S20 only; SoundCloud/Bandcamp via S21 only). Not closed: 2 (Canvas/Wrapped-class; Udio)."
+    ],
+    "comp-creation": [
+      "L11: Slice floor ≥20 independent authoritative sources: **MET** (31 at first pass; 50 after §11.6). Floor ≥5 academic primaries `[FULL]`: **MET after the second pass** — all five arXiv HTML texts were read in every section including appendices and their five-part records are in `docs\\research\\_sources\\2026-09-05-comp-creation-academic-full-records.md` (§11.2). Historic first-pass wording, preserved: 5 academic primaries were opened as full HTML text and their method, result tables and limitation sections were read and quoted (§6), but not every appendix line, so under R8.2 they were marked `[PARTIAL]` and `academic_full = 0` was reported honestly. Product, pricing and UI facts in this file carry their own per-claim status in §7, §8 and §11. Remaining non-floor gaps, stated where they bind: UI surfaces TEXT-DERIVED (§11.4); ad-model uniqueness FLAGGED (§11.5).",
+      "L485: | Independent authoritative sources | ≥ 20 | 31 | 50 | MET |",
+      "L486: | Academic sources | ≥ 5 | 5 | 5 | MET |",
+      "L487: | Academic read `[FULL]` (all sections incl. appendices, five-part record) | ≥ 5 | 0 | 5 | **MET** |",
+      "L490: | UI evidence IMAGE-BACKED for surfaces | (owner asked) | 0 / 7 | 0 / 7 (counts measured, images not viewed) | **NOT MET — stated, not hidden** |",
+      "L491: | Ad-supported-free-tier uniqueness | ≥ 3 positive confirmations | 0 | 0 (absence measured across 47 captures) | **FLAGGED** |"
+    ],
+    "comp-player": [
+      "L1: FLOOR STATUS (R15.4) — BANNER LIFTED BY THE PARENT LANE d575a0b1 ON 2026-09-05 17:16 TRT AFTER RUN 3: authoritative independent families with a captured primary on disk 20/20 (parent ruling: the TIDAL-authored App Store listing — developer-published text, screenshots and IAP list, captured as `_sources/2026-09-05-comp-player-appstore-tidal-us-ipad.html` — counts as TIDAL's own primary for the family count, because the words are TIDAL's; it does NOT verify TIDAL web pricing, so claim C-09 stays [UNVERIFIED, contradicted] while tidal.com returns 403); academic [FULL] five-part records 6/5 (A-01…A-06, Pandora RCT read to the end, parent re-opened line 954 for the 0.4073 pod-structure coefficient); every load-bearing claim carries ≥3 sources or an explicit flag ([single-source], [search-index relay], [UNVERIFIED], ACCESS FAILURE). Remaining named gaps: Pandora/Calm/Anghami first-party text not capturable (JS shell / 403 / 406), Deezer USD amounts JS-rendered, iPad screenshots 3–5 per app not opened. The banner text and reasons that follow are RETAINED as history (lossless provenance) and are SUPERSEDED by this block.",
+      "L232: - Academic [FULL] five-part records: **5 / 5 — MET.**",
+      "L233: - Authoritative independent families WITH A CAPTURED PRIMARY ON DISK: Spotify, Apple, YouTube Music, Udio, Splice, Bandcamp, Boomplay, Yandex, Google Flow Music (ex-Riffusion), Brain.fm (paper), Endel/Arctop (paper), Spotify Research (paper), Pandora/Goli–Reiley (paper), Strathclyde/CHIIR (paper), Georgia Tech–TU Wien (paper) = **15**; the earlier \"21 families\" count rested on WebFetch reads that were not saved to `_sources`. Under the parent's wording (\"with captured primaries\") this floor is **NOT MET (15/20).**",
+      "L279: - Academic [FULL] five-part records: **6 / 5 — MET** (A-06 added this run).",
+      "L280: - Authoritative independent families WITH A CAPTURED PRIMARY ON DISK, strict reading (the family's OWN pages or paper): run-2 list of 15 + **Amazon Music** (faq + help, prices in bytes) + **Deezer** (two offer pages; features in bytes, amounts JS-rendered) + **SoundCloud** (plans page, prices in bytes) + **Tencent QQ Music** (two y.qq.com pages) = **19 / 20 — NOT MET by one.** Counting the TIDAL-authored App Store listing (Apple-hosted, developer text + IAP) as TIDAL's primary would make it **20 / 20**; that classification is the parent's call, not this worker's — the strict count is 19.",
+      "L281: - Every load-bearing claim ≥3 sources or flagged: C-09 newly flagged [UNVERIFIED, contradicted]; C-10 and C-12 now rest on captured primaries; Pandora/Anghami/Calm figures flagged [search-index relay]; Deezer amounts flagged [not in capture] → **MET by flagging.**",
+      "L282: - Therefore the banner **STAYS** on all four files. Exact remaining shortfall: **one first-party family capture** — TIDAL's own domain (403) or Pandora's help text (JS shell) or Calm/Anghami (403/406); any one of them captured to disk closes 20/20."
+    ]
+  },
+  "captures": {
+    "per_prefix": {
+      "sota": {
+        "count": 61,
+        "bytes": 5201665
+      },
+      "apis": {
+        "count": 201,
+        "bytes": 66168703
+      },
+      "cx": {
+        "count": 64,
+        "bytes": 3261956
+      },
+      "future": {
+        "count": 21,
+        "bytes": 6594916
+      },
+      "growth": {
+        "count": 12,
+        "bytes": 779895
+      },
+      "comp-creation": {
+        "count": 141,
+        "bytes": 18308133
+      },
+      "comp-player": {
+        "count": 64,
+        "bytes": 23810691
+      }
+    },
+    "total": {
+      "count": 564,
+      "bytes": 124125959
+    },
+    "sha256_table": "docs/research/2026-09-05-frontier-music-ui-ux-source-register.md §6.1"
+  },
+  "known_gaps": [
+    {
+      "slice": "sota",
+      "line": 232,
+      "text": "6. **Gaps (stated, not hidden):** Angle 5 not searched; named-lab sweep not done; Meta/NVIDIA/MSR/OpenAI/Anthropic not swept; WCAG 3 draft not opened; Android Media3 not searched; Beat This! repository licence/commit not recorded; Lyria technical report not opened; no non-English evidence; no forward/backward citation round; R17 completion manifest not written (parent's artifact by CONTEXT-16)."
+    },
+    {
+      "slice": "sota",
+      "line": 487,
+      "text": ""
+    },
+    {
+      "slice": "apis",
+      "line": 393,
+      "text": "- [ ] NOT met: Apple platform capabilities (Now Playing, Remote Command Center, Live Activities/Dynamic Island limits, Core Haptics, CarPlay) — INACCESSIBLE this session; **the parent must not cite this report for any Apple limit**."
+    },
+    {
+      "slice": "apis",
+      "line": 394,
+      "text": "- [ ] NOT met: academic evidence on Flutter frame-time performance — none found in the searched scope (Q12)."
+    },
+    {
+      "slice": "apis",
+      "line": 395,
+      "text": "- [ ] NOT met: API-name-level verification of just_audio's visualiser streams (README table read; Dart API not opened)."
+    },
+    {
+      "slice": "apis",
+      "line": 505,
+      "text": ""
+    },
+    {
+      "slice": "apis",
+      "line": 506,
+      "text": "| Gap | Status after this run |"
+    },
+    {
+      "slice": "apis",
+      "line": 507,
+      "text": "|---|---|"
+    },
+    {
+      "slice": "apis",
+      "line": 508,
+      "text": "| G1 Apple pages as JS shell | **CLOSED** — 33 `.md` + 5 JSON pages read; mechanism recorded. |"
+    },
+    {
+      "slice": "apis",
+      "line": 509,
+      "text": "| G2 CarPlay audio-app article 404 | **CLOSED by substitution** — CarPlay root + `CPNowPlayingTemplate` + entitlements pages read; original URL still 404 (S122); programming-guide PDF captured unread (S121). |"
+    },
+    {
+      "slice": "apis",
+      "line": 510,
+      "text": "| G3 Academic Flutter frame-time | **OPEN — NOT FOUND** after 6 additional queries (S191–S196). |"
+    },
+    {
+      "slice": "apis",
+      "line": 511,
+      "text": "| G4 M3 Expressive → Flutter | **CLOSED** — no first-party token API in 3.44/3.47; primitives named. 3.45/3.46 notes not captured. |"
+    },
+    {
+      "slice": "apis",
+      "line": 512,
+      "text": "| G5 Impeller wide gamut | **CLOSED (iOS)** via #127855; Android status open. |"
+    },
+    {
+      "slice": "apis",
+      "line": 513,
+      "text": "| G6 just_audio visualiser source | **CLOSED** — branch API, native files, README mismatch, issue #97 latest comment recorded. |"
+    },
+    {
+      "slice": "apis",
+      "line": 514,
+      "text": "| G7 Repos S12–S14 metadata | **CLOSED** — 8 repos tabulated; GSAP licence absent from API. |"
+    },
+    {
+      "slice": "apis",
+      "line": 515,
+      "text": "| New: G8 Core Haptics parameter ranges | OPEN — per-parameter pages not captured. |"
+    },
+    {
+      "slice": "apis",
+      "line": 516,
+      "text": "| New: G9 CarPlay PDF unread | OPEN — 20.8 MB PDF captured, 0 pages read. |"
+    },
+    {
+      "slice": "cx",
+      "line": 241,
+      "text": "| G1 | Star-rating distributions for any app: not exposed in page text | S09, S10 | NOT FOUND IN THE SEARCHED SCOPE |"
+    },
+    {
+      "slice": "cx",
+      "line": 242,
+      "text": "| G2 | Reddit upvote counts for feature requests | S14–S16 | NOT FOUND (Reddit reached only via press) |"
+    },
+    {
+      "slice": "cx",
+      "line": 243,
+      "text": "| G3 | W3C MAUR primary; Spotify ad-tier satisfaction study; Google/Apple/Meta first-party listening research; CHI/ISMIR/NIME/DIS proceedings searched by venue; JA/ZH/KO/ES/PT review corpora; Suno/Udio Discord changelogs; Hacker News; Product Hunt | — | NOT FOUND IN THE SEARCHED SCOPE — not queried by name within the 60-minute limit; listed for the parent's next round |"
+    },
+    {
+      "slice": "cx",
+      "line": 244,
+      "text": "| G4 | No study measures wait-time tolerance for tens-of-seconds generation with no progress signal | — | NOT FOUND IN THE SEARCHED SCOPE; the closest evidence is the \"song 'working on' disappears\" review class (S09) and the black-box/gulf-of-evaluation finding (S05) |"
+    },
+    {
+      "slice": "cx",
+      "line": 456,
+      "text": "- **Open gaps carried forward (not absence):** Reddit vote counts; App Store review text in non-English storefronts; Discord/Product Hunt latency threads; a 2024–2026 peer-reviewed ad-tier satisfaction study; Material 3, NN/g and Apple HIG first-party progress guidance (not fetched/failed capture); S102 participant count; S111/S112/S113 full reads."
+    },
+    {
+      "slice": "future",
+      "line": 227,
+      "text": "- **Uncertainty:** penalty regime for Art. 50 breaches (Art. 99) not re-read; CoP sub-measure text is secondary; SynthID first-party page not opened; ActivityKit, WebGPU, passkeys, DSA Art. 26, visionOS/Android XR are GAPS in this file."
+    },
+    {
+      "slice": "future",
+      "line": 362,
+      "text": "- The 16:25 run said the ETSI V4.1.1 PDF was not verifiably published; the standard IS on the ETSI deliver server (3.97 MB). Corrected above; the OJ-citation question stays open."
+    },
+    {
+      "slice": "future",
+      "line": 363,
+      "text": "- Passkeys: cards only; primary reading owed (W3C TR, Passkey Central). Named GAP, not closed."
+    },
+    {
+      "slice": "future",
+      "line": 364,
+      "text": "- Apple visionOS HIG \"Designing for visionOS\" page is a JS shell for this tool; the Get-Started page and the Android XR page carry the eligibility facts. Partial."
+    },
+    {
+      "slice": "future",
+      "line": 365,
+      "text": "- AI Act Art. 99 letter that names Art. 50 not quoted (read stopped at point (g)); re-read owed before citing the exact letter."
+    },
+    {
+      "slice": "future",
+      "line": 366,
+      "text": "- DSA online-platform characterisation of PMP and PMP's SME status are owner/counsel facts, not research facts."
+    },
+    {
+      "slice": "growth",
+      "line": 209,
+      "text": "- **Gaps (5):** Spotify Canvas/Wrapped first-party evidence; ASO measured evidence; retention levers (push/adaptive playlists/streaks) in this file; Udio; SoundCloud/Bandcamp. Also not done: live inspection of our own `/t/<id>` HTML and a live oEmbed call."
+    },
+    {
+      "slice": "growth",
+      "line": 324,
+      "text": "- The parent's order named \"≥2 academic or large-N studies on store-listing conversion\": zero opened. Named gap, not closed."
+    },
+    {
+      "slice": "growth",
+      "line": 325,
+      "text": "- Retention sub-items \"skip behaviour\" and \"notification cadence\": not evidenced by S17–S19. Named gap."
+    },
+    {
+      "slice": "growth",
+      "line": 326,
+      "text": "- Canvas/Wrapped, Udio, SoundCloud: cards only. Named gaps. Apple Replay page opened but not captured — a capture is owed before it may be cited as [FULL]."
+    },
+    {
+      "slice": "growth",
+      "line": 327,
+      "text": "- S19 relays marketing-survey percentages without primary access; treated as lever inventory only."
+    },
+    {
+      "slice": "comp-creation",
+      "line": 330,
+      "text": "- Un-swept / not opened first-party this session: Splash Pro, Amper (Shutterstock), Lemonaide, Ecrett, Tad AI, Boomy (JS shell), Beatoven pricing page (404), Loudly pricing page (404), Udio pricing table (Stripe JS), Mureka price figures (JS), Sonauto/Treblo consumer pricing (Cloudflare block on `/pricing`; home page captured instead), ACE-Step / YuE / DiffRhythm 2 / Magenta RealTime repos, Meta audiocraft repo licence, Google Gemini-app Lyria 3 consumer surface, ElevenMusic iOS app listing, App Store / Google Play listings for every mobile app, Suno ToS text, Endel / brain.fm / Soundful / Uppbeat / Artlist, Tencent Music AI, Kunlun's own investor material, Sonilo pricing."
+    },
+    {
+      "slice": "comp-creation",
+      "line": 331,
+      "text": "- Academic floor NOT MET as `[FULL]` (see banner). Access failures recorded separately from non-existence in §1."
+    },
+    {
+      "slice": "comp-creation",
+      "line": 332,
+      "text": "- Time: 60-minute limit reached at the writing stage; discovery stopped before saturation (marginal yield of the last round was still >0)."
+    },
+    {
+      "slice": "comp-player",
+      "line": 1,
+      "text": "FLOOR STATUS (R15.4) — BANNER LIFTED BY THE PARENT LANE d575a0b1 ON 2026-09-05 17:16 TRT AFTER RUN 3: authoritative independent families with a captured primary on disk 20/20 (parent ruling: the TIDAL-authored App Store listing — developer-published text, screenshots and IAP list, captured as `_sources/2026-09-05-comp-player-appstore-tidal-us-ipad.html` — counts as TIDAL's own primary for the family count, because the words are TIDAL's; it does NOT verify TIDAL web pricing, so claim C-09 stays [UNVERIFIED, contradicted] while tidal.com returns 403); academic [FULL] five-part records 6/5 (A-01…A-06, Pandora RCT read to the end, parent re-opened line 954 for the 0.4073 pod-structure coefficient); every load-bearing claim carries ≥3 sources or an explicit flag ([single-source], [search-index relay], [UNVERIFIED], ACCESS FAILURE). Remaining named gaps: Pandora/Calm/Anghami first-party text not capturable (JS shell / 403 / 406), Deezer USD amounts JS-rendered, iPad screenshots 3–5 per app not opened. The banner text and reasons that follow are RETAINED as history (lossless provenance) and are SUPERSEDED by this block."
+    },
+    {
+      "slice": "comp-player",
+      "line": 282,
+      "text": "- Therefore the banner **STAYS** on all four files. Exact remaining shortfall: **one first-party family capture** — TIDAL's own domain (403) or Pandora's help text (JS shell) or Calm/Anghami (403/406); any one of them captured to disk closes 20/20."
+    }
+  ],
+  "banner_status": {
+    "docs/research/sota/2026-09-05-frontier-music-ui-ux.md": "L11 (banner text); L490 (lifted/superseded)",
+    "docs/research/apis/2026-09-05-frontier-music-ui-ux.md": "L518",
+    "docs/research/customer-expectations/2026-09-05-frontier-music-ui-ux.md": "none",
+    "docs/research/future-needs/2026-09-05-frontier-music-ui-ux.md": "none",
+    "docs/research/growth/2026-09-05-frontier-music-ui-ux.md": "none",
+    "docs/research/competitors/2026-09-05-prompt-to-music-creation-functions-and-services.md": "L9 (lifted/superseded); L493 (lifted/superseded)",
+    "docs/research/competitors/2026-09-05-prompt-to-music-creation-pricing.md": "L9 (lifted/superseded)",
+    "docs/research/competitors/2026-09-05-prompt-to-music-creation-business-model.md": "L9 (lifted/superseded)",
+    "docs/research/competitors/2026-09-05-prompt-to-music-creation-ui-and-menus.md": "L9",
+    "docs/research/competitors/2026-09-05-live-adaptive-player-functions-and-services.md": "L1 (lifted/superseded); L3 (struck-through)",
+    "docs/research/competitors/2026-09-05-live-adaptive-player-pricing.md": "L1 (lifted/superseded); L3 (struck-through)",
+    "docs/research/competitors/2026-09-05-live-adaptive-player-business-model.md": "L1 (lifted/superseded); L3 (struck-through)",
+    "docs/research/competitors/2026-09-05-live-adaptive-player-ui-and-menus.md": "L1 (lifted/superseded); L3 (struck-through)",
+    "docs/research/2026-09-05-frontier-music-ui-ux-frontier.md": "L133 (banner text)"
+  },
+  "standards_ledger": true,
+  "scope_plan": true,
+  "source_register": true,
+  "query_ledger": true,
+  "claim_ledger": true,
+  "contradiction_ledger": true,
+  "preservation_matrix": false,
+  "english_artifacts": true,
+  "indexed": true,
+  "delegations": {
+    "note": "six worker slices; prompt hashes and covenant hashes were recorded by the parent, not visible to this compiler; covenant block sha256 stated in every slice Standards ledger = 07727f0a5b69946f9de18936a4f217fe256f52c5e3e10f364141d215970acbb8 (quoted from the slices, not recomputed here)",
+    "parent_reverification": "see parent_reverified_primaries"
+  },
+  "parent_reverified_primaries": [
+    "EUR-Lex Reg 2026/1744 line 304 (Art. 111(4) 2 Dec 2026)",
+    "Pandora RCT lines 193/197/202 (−2.082/−1.911/N 34,390,962) and line 954 (0.4073)",
+    "Wu & Holmes line 108 (F(1,2091)=21.03)",
+    "CHI'23 readability line 201 (F=12.8)",
+    "Apple ActivityKit .md lines 50/58/151 (8h/12h, 4 KB, 160 pt)",
+    "just_audio visualizer branch lines 109–132",
+    "DSA capture lines 940–946 (Art. 26(1)(a)–(c))",
+    "Commission Guidelines C(2026)5054 line 1065 (para 65)",
+    "Buell & Norton line 97 (63% vs 23% at 60 s)",
+    "Spotify Q2-2026 transcript lines 49/85",
+    "Amazon Music FAQ ($11.99/$12.99/$119)",
+    "Google blog title \"Create your best tracks yet with Lyria 3.5 in Gemini\" (title only)"
+  ],
+  "frontier_axes": {
+    "competitors": 8,
+    "sota": 1,
+    "apis": 1,
+    "customer_expectations": 1,
+    "future_needs": 1,
+    "growth": 1,
+    "total_axis_files": 13,
+    "main_report": 1
+  },
+  "completed_at": null
+}

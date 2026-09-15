@@ -1,0 +1,69 @@
+{
+  "at": "2026-09-11T17:18:16.980Z",
+  "suites": [
+    {
+      "name": "director",
+      "pass": true
+    },
+    {
+      "name": "optics",
+      "pass": true
+    },
+    {
+      "name": "host",
+      "pass": true
+    },
+    {
+      "name": "coordinator",
+      "pass": true
+    },
+    {
+      "name": "ui",
+      "pass": true
+    },
+    {
+      "name": "studio-review",
+      "pass": true
+    },
+    {
+      "name": "settings",
+      "pass": true
+    },
+    {
+      "name": "organic",
+      "pass": true
+    },
+    {
+      "name": "prism",
+      "pass": true
+    },
+    {
+      "name": "collection",
+      "pass": true
+    },
+    {
+      "name": "room-store",
+      "pass": true
+    },
+    {
+      "name": "main-persistence",
+      "pass": true
+    }
+  ],
+  "syntax": 21,
+  "copies": [
+    {
+      "file": "player-three-director.js",
+      "sha256": "15556670c85b51a4d41c3f998e05eaff82703c345dcbea6e8a0b699e18e0d4b4"
+    },
+    {
+      "file": "player-three-director-ui.js",
+      "sha256": "71c85d1518843bee42fba684b1ab417af330b2d9dba6d2c09684817fb8c89933"
+    },
+    {
+      "file": "player-three-optics.js",
+      "sha256": "2aa3bfc0f4a9f555d4d2f27eebbd373c445a637a99fecb585f275ba614c3d806"
+    }
+  ],
+  "scope": "Actual source/function/storage checks with documented host boundaries. GPU, audio UI and PNG acceptance are recorded separately."
+}

@@ -1,0 +1,102 @@
+{
+    "schema":  "berk.deep-research/v1",
+    "status":  "complete-with-named-gaps",
+    "date":  "2026-09-09",
+    "mode":  "MODE_B_OWNER_RESEARCH_ORDER",
+    "owner_order_verbatim":  "önce araştır en ileri sveiyede uı ux componehtlarını en ileri seviyede olanları bul, html componentları",
+    "owner_order_time":  "2026-09-09T14:40+03:00",
+    "topic":  "frontier-ui-components",
+    "covenant_sha256":  "F19F5CB14319E09EC73FDF42FEEF2D3067EC8A5949A34657ED9E5C1104D5F9EB",
+    "main_report":  "docs/research/2026-09-09-frontier-ui-components-frontier.md",
+    "main_report_sha256":  "BCDC504487E68232E752A5438DEAE0781402E9AADDF42BC520BA28C7547A4057",
+    "main_report_lines":  282,
+    "main_report_bytes":  57862,
+    "index":  "docs/research/README.md (entry appended 2026-09-09; docs/README.md measured ABSENT — scope-plan path superseded in the completion audit)",
+    "slices":  [
+                   {
+                       "path":  "docs/research/2026-09-09-frontier-ui-components-platform-primitives.md",
+                       "role":  "slice report: platform-primitives",
+                       "sha256":  "5DBCDBD936E8DA9797E1DBE5A1A85DD54E3E13BCC3645AE0EA1918A4D2B7466C",
+                       "lines":  386,
+                       "bytes":  71784,
+                       "read_back":  true
+                   },
+                   {
+                       "path":  "docs/research/2026-09-09-frontier-ui-components-design-systems-libraries.md",
+                       "role":  "slice report: design-systems-libraries",
+                       "sha256":  "C279C8D33FB0D911E2CEB5BEE750058B608A72DF05E962D938DD8DC5ED694157",
+                       "lines":  301,
+                       "bytes":  71916,
+                       "read_back":  true
+                   },
+                   {
+                       "path":  "docs/research/2026-09-09-frontier-ui-components-music-audio-ui.md",
+                       "role":  "slice report: music-audio-ui",
+                       "sha256":  "03A8DDCA032E84A5659F044D471FF92DB7BEAD7221CDC45ED9BA47FF26CC3EFF",
+                       "lines":  358,
+                       "bytes":  79416,
+                       "read_back":  true
+                   },
+                   {
+                       "path":  "docs/research/2026-09-09-frontier-ui-components-hci-academic.md",
+                       "role":  "slice report: hci-academic",
+                       "sha256":  "A2C4E371D7FFA2158293548A10451BB01E0D10A69090277DE7E675133419E131",
+                       "lines":  406,
+                       "bytes":  84700,
+                       "read_back":  true
+                   },
+                   {
+                       "path":  "docs/research/2026-09-09-frontier-ui-components-typography.md",
+                       "role":  "slice report: typography",
+                       "sha256":  "B375F7ED0CE1BA9BA1458AC8291247FAFFF2CCA5283E1A41E78BA41DEF95897D",
+                       "lines":  347,
+                       "bytes":  59101,
+                       "read_back":  true
+                   },
+                   {
+                       "path":  "docs/research/2026-09-09-frontier-ui-components-adaptive-responsive.md",
+                       "role":  "slice report: adaptive-responsive",
+                       "sha256":  "F0593DBED56D4E54A2DC5D2CF925D6AF83F7E2188A58FBB3E44DCC0D9C51EB88",
+                       "lines":  234,
+                       "bytes":  45226,
+                       "read_back":  true
+                   }
+               ],
+    "source_capture_counts":  {
+                                  "adaptive-responsive":  43,
+                                  "hci-academic":  35,
+                                  "libraries-design-systems":  20,
+                                  "music-audio-ui":  27,
+                                  "platform-primitives":  20,
+                                  "typography":  181
+                              },
+    "source_captures_total":  326,
+    "floors":  {
+                   "authoritative_families_per_slice":  {
+                                                            "platform_primitives":  41,
+                                                            "libraries_design_systems":  38,
+                                                            "music_audio_ui":  37,
+                                                            "hci_academic":  44,
+                                                            "typography":  32,
+                                                            "adaptive_responsive":  44
+                                                        },
+                   "academic_full_distinct":  15,
+                   "academic_full_floor":  5,
+                   "note":  "worker-reported counts; parent re-opened 31 primaries across six slices (tables in the main report); paper-level numbers not re-read by parent are labelled as worker readings"
+               },
+    "parent_reverification":  {
+                                  "slice1":  6,
+                                  "slice2":  6,
+                                  "slice3":  5,
+                                  "slice4":  2,
+                                  "slice5":  6,
+                                  "slice6":  6
+                              },
+    "planned_artifacts":  9,
+    "produced_artifacts":  9,
+    "known_gaps_count":  6,
+    "parent_faults_recorded":  [
+                                   "guessed blog.google URL (404) corrected from worker register",
+                                   "cp1252 UnicodeEncodeError in font measurement, fixed at source"
+                               ]
+}

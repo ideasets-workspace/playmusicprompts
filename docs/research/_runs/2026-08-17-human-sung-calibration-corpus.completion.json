@@ -1,0 +1,64 @@
+{
+  "schema": "berk.deep-research-completion/v1",
+  "status": "complete",
+  "date": "2026-08-17",
+  "mode": "MODE B (owner research order, delegated worker slice)",
+  "topic": "human-sung-calibration-corpus",
+  "decisions_served": [
+    "A9 per-language PER bar calibration input: which human sung-vocal corpora with lyric references are lawful for a COMMERCIAL product under D-SSM-30 (no new paid service), at $0, for Turkish (priority 1) and English (priority 2) — or the proof that none exists, routing A9 to owner-commissioned recordings with a sourced brief."
+  ],
+  "verdicts": {
+    "turkish": "NONE EXISTS in the searched scope -> commissioned-recording brief written (report section B); both TR lyric-aligned corpora are cc-by-nc-nd-4.0 (Zenodo API, records 1287656 and 1283350, read 2026-08-17)",
+    "english": "LAWFUL CANDIDATES NAMED: vocadito (Zenodo 5578807, cc-by-4.0, 17 EN tracks with lyrics) + LM-SSD (Zenodo 20287765, cc-by-4.0, 12 pop songs, 72 takes, per-song lyrics; cover-composition caveat); supplements: 3 commercial-OK JamendoLyrics EN songs (BY x2, BY-SA x1), per-track CC BY ccMixter a cappellas"
+  },
+  "main_report": "docs/research/2026-08-17-human-sung-calibration-corpus.md",
+  "index": "docs/README.md",
+  "source_counts": {
+    "authoritative": 31,
+    "academic": 9,
+    "academic_full": 7,
+    "primary_full": 12
+  },
+  "claim_counts": {
+    "verified_3plus": 7,
+    "single_source": 1,
+    "unverified": 1
+  },
+  "planned_artifacts": 5,
+  "produced_artifact_classes": 5,
+  "artifacts": [
+    {"path": "docs/research/2026-08-17-human-sung-calibration-corpus.md", "role": "main report (extended after '# Outcome first'; head preserved)", "sha256": "2a6044d2ebb92574cbfeab264758c323f07fb55f65f90ca90008e52d7115b828", "read_back": true},
+    {"path": "docs/research/_sources/2026-08-17-singing-corpus-licence-api-captures.txt", "role": "licence API/page captures (load-bearing verdict evidence)", "sha256": "b41f971014db9876d3163f683330e49abead72438aaaf22ffaee21e7212775b5", "read_back": true},
+    {"path": "docs/research/_sources/2026-08-17-lm-ssd-tismir-166-paper.txt", "role": "academic primary [FULL]", "sha256": "704d3160c0ef318e0667be8df718b6dc72dd80cb13c24e88c4d52fd084cb6c92", "read_back": true},
+    {"path": "docs/research/_sources/2026-08-17-vocadito-arxiv-2110-05580-report.txt", "role": "academic primary [FULL]", "sha256": "ad6711d2b114b28455f4b77f1e91b7ade104094dc614b386b3f56aa61121d0c8", "read_back": true},
+    {"path": "docs/research/_sources/2026-08-17-vocalset-ismir2018-paper.txt", "role": "academic primary [FULL]", "sha256": "e33f13b9ac99433e45cd66188c2362454a4f9f65dcbbb890af42f40269ade384", "read_back": true},
+    {"path": "docs/research/_sources/2026-08-17-gtsinger-neurips2024-paper.txt", "role": "academic primary [FULL] (NC licence clause + recording protocol)", "sha256": "60066a242922d3559a68674f52058c4f136425beae986f7bfa0c4d5eac5c222c", "read_back": true},
+    {"path": "docs/research/_sources/2026-08-17-m4singer-neurips2022-paper.txt", "role": "academic primary [FULL] (NC licence clause)", "sha256": "e4ccd51a745fb8750d616614e8fac759a23261e60b3a93159ac74ef2191b3031", "read_back": true},
+    {"path": "docs/research/_sources/2026-08-17-nus-48e-apsipa2013-paper.txt", "role": "academic primary [FULL] (recording protocol for the commissioned brief)", "sha256": "4c34dc424ee85569e839d008a1dfbff913fc0e091c2f8a4dfa40a7832c45ded5", "read_back": true},
+    {"path": "docs/research/_sources/2026-08-17-dali-tismir-30-article.txt", "role": "academic primary [FULL] (AFL annotations, no audio)", "sha256": "7bec3fdb6b8dc7d7d15aa003588e087163f85f189ba2aaf7e842b69df969458b", "read_back": true},
+    {"path": "docs/research/_sources/2026-08-17-jamendolyrics-hf-per-song-licences.txt", "role": "primary capture (per-song licence CSV)", "sha256": "3ac7a54001580d5ecbbf185d0dd2d77d9e7731967818aa5791d15d92b1294761", "read_back": true},
+    {"path": "docs/research/_sources/2026-08-17-medleydb-description-page.txt", "role": "primary capture (NC licence page)", "sha256": "dfcebd00db39313d80125b858e745317bdce0a97481fdba04878b7a535a5e594", "read_back": true},
+    {"path": "docs/research/_sources/2026-08-17-saraga-emr-article.txt", "role": "academic primary [ABS-grade for verdict] (NC licence statement)", "sha256": "bf241ade0d6e0b0f5f450553873b09feb7ad468dae57b0f1d890872472127cbd", "read_back": true},
+    {"path": "docs/README.md", "role": "index row appended (everything above preserved)", "sha256": "4a27390fc0e50e6ea2ec1808015c38aefb13f7faa4f1bfee321dcfc867489719", "read_back": true}
+  ],
+  "standards_ledger": true,
+  "scope_plan": true,
+  "source_register": true,
+  "query_ledger": true,
+  "claim_ledger": true,
+  "contradiction_ledger": true,
+  "preservation_matrix": true,
+  "english_artifacts": true,
+  "indexed": true,
+  "delegations": [],
+  "known_gaps": [
+    "Covenant-hash mismatch: dispatch brief's COVENANT_SHA256 69d557a1ab2b80027be1815c4fc07c37f5bd2c310448d48a6dce64617c14aa17 did not reproduce; recomputed value on all 4 installed copies (markers inclusive, LF-normalized) is 07727f0a5b69946f9de18936a4f217fe256f52c5e3e10f364141d215970acbb8; the parent must state its extraction convention.",
+    "JamendoLyrics: 3 commercial-OK EN rows verified from the dataset's own CSV; the 3 jamendo.com track pages themselves were not fetched (URLs recorded in the capture file).",
+    "alibayram/jeji-turku unreadable this session (HF API 401, page 404) — [PARTIAL]; excluded on YouTube provenance regardless.",
+    "ccMixter pool verified on 2 sample tracks + site policy page, not exhaustively; licence is per track.",
+    "CSV parser recovered 48/79 JamendoLyrics rows cleanly from the page dump; counts reported as a verified lower bound.",
+    "No dataset downloaded ($0 run); content-level verification (audio quality, exact lyric coverage per take) awaits the parent's download decision."
+  ],
+  "spend_usd": 0,
+  "completed_at": "2026-08-17T12:45:00+03:00"
+}

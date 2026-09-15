@@ -1,0 +1,18142 @@
+window.PMP_SCHEMA = {
+  "schema_version": 1,
+  "kind": "human-controls-description",
+  "built_at": "2026-09-11",
+  "scope": "All 100 documented request parameters for local HTML controls; not a live capabilities snapshot or proof of service behavior.",
+  "parameter_count": 100,
+  "excluded_response_parameters": [
+    "rights",
+    "compliance",
+    "analysis_outputs"
+  ],
+  "sources": [
+    {
+      "path": "docs/api/04-request-body-full.md",
+      "sha256": "26a5e16299b1c7b9fe8dc4f0b6597d51bdcc2e50dcc1cd4e24c8191f5293eadb",
+      "bytes": 24686
+    },
+    {
+      "path": "docs/api/14-language-support.md",
+      "sha256": "eed6535c81348f38fdd1ae6cc6acf66d3501d1da6368e5875cd7b5f8b36be401",
+      "bytes": 12696
+    },
+    {
+      "path": "generate_music_hybrid_model/music_studio/param_spec.json",
+      "sha256": "83f9e5a0053d2e8fe5561fb7b39302f5442fe4ccd366bc7c3d9dcdcce2a4a950",
+      "bytes": 42196
+    },
+    {
+      "path": "generate_music_hybrid_model/music_studio/models.py",
+      "sha256": "2971e9e89b5d8edd3955e9acb69a121b2430d74bf4029ec216e38b9ca907fcc7",
+      "bytes": 24231
+    },
+    {
+      "path": "generate_music_hybrid_model/music_studio/data/genre_vocabulary.json",
+      "sha256": "ddf57531e3e99d9654ffd88c6f70f46dc706d074c6fcdf4a31dc1c9089c8f22e",
+      "bytes": 291919
+    },
+    {
+      "path": "generate_music_hybrid_model/music_studio/data/mood_vocabulary.json",
+      "sha256": "0216738e7f84c466a67842c87d8569d7034c0c69f84c0be85c943e3ea7b375e7",
+      "bytes": 28658
+    },
+    {
+      "path": "generate_music_hybrid_model/music_studio/data/era_vocabulary.json",
+      "sha256": "53b7e89d8606dee46458ca33b4a0f46138b07a48036477f687a5a97557c52a3a",
+      "bytes": 6243
+    },
+    {
+      "path": "generate_music_hybrid_model/music_studio/data/instrument_vocabulary.json",
+      "sha256": "ef96cfe911b00246ab699514782908dfcccd0bc926b6dc9f38c022242ccec00b",
+      "bytes": 308084
+    },
+    {
+      "path": "generate_music_hybrid_model/music_studio/data/language_registry.json",
+      "sha256": "3a112bd2da74d847ad7dfb56b85ba2a3a1960959a25fe5198dd97d0ba11bb8ce",
+      "bytes": 20630
+    }
+  ],
+  "source_priority": [
+    "Current generated docs/api/04-request-body-full.md",
+    "Local vocabulary JSON whose counts match current docs",
+    "Only key IDs and a non-enforced historical tempo note from the older 38-parameter spec"
+  ],
+  "groups": [
+    {
+      "id": "idea",
+      "label": "Your idea",
+      "label_origin": "Editorial UI grouping; not an engine enum"
+    },
+    {
+      "id": "composition",
+      "label": "Composition",
+      "label_origin": "Editorial UI grouping; not an engine enum"
+    },
+    {
+      "id": "instruments",
+      "label": "Instruments and texture",
+      "label_origin": "Editorial UI grouping; not an engine enum"
+    },
+    {
+      "id": "voice",
+      "label": "Voice",
+      "label_origin": "Editorial UI grouping; not an engine enum"
+    },
+    {
+      "id": "lyrics",
+      "label": "Lyrics",
+      "label_origin": "Editorial UI grouping; not an engine enum"
+    },
+    {
+      "id": "production",
+      "label": "Production and delivery",
+      "label_origin": "Editorial UI grouping; not an engine enum"
+    },
+    {
+      "id": "references",
+      "label": "References",
+      "label_origin": "Editorial UI grouping; not an engine enum"
+    },
+    {
+      "id": "integration",
+      "label": "Request and integration",
+      "label_origin": "Editorial UI grouping; not an engine enum"
+    }
+  ],
+  "parameters": [
+    {
+      "key": "project",
+      "binding": "client_side",
+      "spec_control": "text",
+      "source_description": "object: `name`, `track_id`, `version_note` — see shape reference",
+      "source_line": 62,
+      "label": "Project",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "idea",
+      "control": "fieldset",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "object",
+      "engine_effect": "None; used by the client and echoed.",
+      "fields": [
+        {
+          "key": "name",
+          "label": "Project name",
+          "type": "string",
+          "control": "text",
+          "max_length": 120,
+          "path": "project.name"
+        },
+        {
+          "key": "version_note",
+          "label": "Version note",
+          "type": "string",
+          "control": "text",
+          "max_length": 200,
+          "path": "project.version_note"
+        }
+      ],
+      "additional_properties": false,
+      "excluded_fields": [
+        {
+          "key": "track_id",
+          "reason": "Server-assigned; refused when client sends it.",
+          "source_line": 175
+        }
+      ],
+      "structured_source_lines": [
+        172,
+        177
+      ],
+      "path": "project"
+    },
+    {
+      "key": "creative_goal",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`epic_cinematic_uplifting`, `dark_tense_driving`, `warm_intimate_acoustic`, `playful_light_quirky`, `melancholic_reflective`, `heroic_triumphant`, `mysterious_atmospheric`, `romantic_sweeping`, `energetic_upbeat_pop`, `calm_ambient_meditative`",
+      "source_line": 63,
+      "label": "Creative goal",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "idea",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "epic_cinematic_uplifting",
+          "label": "Epic cinematic uplifting"
+        },
+        {
+          "id": "dark_tense_driving",
+          "label": "Dark tense driving"
+        },
+        {
+          "id": "warm_intimate_acoustic",
+          "label": "Warm intimate acoustic"
+        },
+        {
+          "id": "playful_light_quirky",
+          "label": "Playful light quirky"
+        },
+        {
+          "id": "melancholic_reflective",
+          "label": "Melancholic reflective"
+        },
+        {
+          "id": "heroic_triumphant",
+          "label": "Heroic triumphant"
+        },
+        {
+          "id": "mysterious_atmospheric",
+          "label": "Mysterious atmospheric"
+        },
+        {
+          "id": "romantic_sweeping",
+          "label": "Romantic sweeping"
+        },
+        {
+          "id": "energetic_upbeat_pop",
+          "label": "Energetic upbeat pop"
+        },
+        {
+          "id": "calm_ambient_meditative",
+          "label": "Calm ambient meditative"
+        }
+      ],
+      "options_complete": true,
+      "path": "creative_goal"
+    },
+    {
+      "key": "prompt",
+      "binding": "typed",
+      "spec_control": "text",
+      "source_description": "max_length 5000 — **REQUIRED**",
+      "source_line": 64,
+      "label": "Describe what you want to hear",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "idea",
+      "control": "text",
+      "source": "docs/api/04-request-body-full.md",
+      "required": true,
+      "type": "string",
+      "max_length": 5000,
+      "path": "prompt"
+    },
+    {
+      "key": "prompt_enhance",
+      "binding": "our_stage",
+      "spec_control": "toggle",
+      "source_description": "object: `enabled`, `style` — see shape reference",
+      "source_line": 65,
+      "label": "Prompt enhance",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "idea",
+      "control": "fieldset",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "object",
+      "fields": [
+        {
+          "key": "enabled",
+          "label": "Enhance my prompt",
+          "type": "boolean",
+          "control": "toggle",
+          "options": [
+            {
+              "id": true,
+              "label": "On"
+            },
+            {
+              "id": false,
+              "label": "Off"
+            }
+          ],
+          "options_complete": true,
+          "default": false,
+          "path": "prompt_enhance.enabled"
+        },
+        {
+          "key": "style",
+          "label": "Style",
+          "type": "string",
+          "control": "combo",
+          "options": [
+            {
+              "id": "cinematic",
+              "label": "Cinematic"
+            },
+            {
+              "id": "conservative",
+              "label": "Conservative"
+            },
+            {
+              "id": "descriptive",
+              "label": "Descriptive"
+            }
+          ],
+          "options_complete": true,
+          "default": "conservative",
+          "path": "prompt_enhance.style"
+        }
+      ],
+      "additional_properties": false,
+      "structured_source_lines": [
+        178,
+        191
+      ],
+      "default": {
+        "enabled": false,
+        "style": "conservative"
+      },
+      "path": "prompt_enhance"
+    },
+    {
+      "key": "negative_prompt",
+      "binding": "typed",
+      "spec_control": "chips",
+      "source_description": "`cheesy`, `meme`, `lo-fi`, `distorted`, `90s_eurodance`, `muddy_low_end`, `harsh_highs`, `off_key_vocals`, `abrupt_ending`",
+      "source_line": 66,
+      "label": "Sounds to avoid",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "idea",
+      "control": "chips",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "path": "negative_prompt[]"
+      },
+      "options": [
+        {
+          "id": "cheesy",
+          "label": "Cheesy"
+        },
+        {
+          "id": "meme",
+          "label": "Meme"
+        },
+        {
+          "id": "lo-fi",
+          "label": "Lo-fi"
+        },
+        {
+          "id": "distorted",
+          "label": "Distorted"
+        },
+        {
+          "id": "90s_eurodance",
+          "label": "90s eurodance"
+        },
+        {
+          "id": "muddy_low_end",
+          "label": "Muddy low end"
+        },
+        {
+          "id": "harsh_highs",
+          "label": "Harsh highs"
+        },
+        {
+          "id": "off_key_vocals",
+          "label": "Off key vocals"
+        },
+        {
+          "id": "abrupt_ending",
+          "label": "Abrupt ending"
+        }
+      ],
+      "options_complete": true,
+      "path": "negative_prompt"
+    },
+    {
+      "key": "genres",
+      "binding": "prose",
+      "spec_control": "multi-select",
+      "source_description": "imported from the service's versioned `genre_vocabulary` data file (2,196 entries)",
+      "source_line": 67,
+      "label": "Genres",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "idea",
+      "control": "multi-select",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "path": "genres[]"
+      },
+      "options": [
+        {
+          "id": "cinematic",
+          "label": "Cinematic"
+        },
+        {
+          "id": "hybrid_orchestral",
+          "label": "Hybrid Orchestral"
+        },
+        {
+          "id": "trailer_music",
+          "label": "Trailer Music"
+        },
+        {
+          "id": "epic",
+          "label": "Epic"
+        },
+        {
+          "id": "cinematic_orchestral_fantasy",
+          "label": "Cinematic Orchestral Fantasy"
+        },
+        {
+          "id": "electronic_dance",
+          "label": "Electronic Dance"
+        },
+        {
+          "id": "classical",
+          "label": "Classical"
+        },
+        {
+          "id": "jazz",
+          "label": "Jazz"
+        },
+        {
+          "id": "ambient",
+          "label": "Ambient"
+        },
+        {
+          "id": "8bit",
+          "label": "8-bit"
+        },
+        {
+          "id": "lo_fi",
+          "label": "Lo-fi"
+        },
+        {
+          "id": "bossa_nova",
+          "label": "Bossa Nova"
+        },
+        {
+          "id": "rnb",
+          "label": "R&B"
+        },
+        {
+          "id": "bollywood",
+          "label": "Bollywood"
+        },
+        {
+          "id": "hip_hop",
+          "label": "Hip-Hop"
+        },
+        {
+          "id": "pop",
+          "label": "Pop"
+        },
+        {
+          "id": "rock_full_band",
+          "label": "Rock (full band)"
+        },
+        {
+          "id": "metal",
+          "label": "Metal"
+        },
+        {
+          "id": "rap",
+          "label": "Rap"
+        },
+        {
+          "id": "turkish_makam_fusion",
+          "label": "Turkish Makam Fusion"
+        },
+        {
+          "id": "anatolian_folk",
+          "label": "Anatolian Folk"
+        },
+        {
+          "id": "2_tone",
+          "label": "2 tone"
+        },
+        {
+          "id": "2_step",
+          "label": "2-step"
+        },
+        {
+          "id": "3_step",
+          "label": "3-step"
+        },
+        {
+          "id": "aak",
+          "label": "aak"
+        },
+        {
+          "id": "abhang",
+          "label": "abhang"
+        },
+        {
+          "id": "aboio",
+          "label": "aboio"
+        },
+        {
+          "id": "abstract_hip_hop",
+          "label": "abstract hip hop"
+        },
+        {
+          "id": "acholitronix",
+          "label": "acholitronix"
+        },
+        {
+          "id": "acid_breaks",
+          "label": "acid breaks"
+        },
+        {
+          "id": "acid_house",
+          "label": "acid house"
+        },
+        {
+          "id": "acid_jazz",
+          "label": "acid jazz"
+        },
+        {
+          "id": "acid_rock",
+          "label": "acid rock"
+        },
+        {
+          "id": "acid_techno",
+          "label": "acid techno"
+        },
+        {
+          "id": "acid_trance",
+          "label": "acid trance"
+        },
+        {
+          "id": "acidcore",
+          "label": "acidcore"
+        },
+        {
+          "id": "acousmatic",
+          "label": "acousmatic"
+        },
+        {
+          "id": "acoustic_blues",
+          "label": "acoustic blues"
+        },
+        {
+          "id": "acoustic_chicago_blues",
+          "label": "acoustic chicago blues"
+        },
+        {
+          "id": "acoustic_rock",
+          "label": "acoustic rock"
+        },
+        {
+          "id": "acoustic_texas_blues",
+          "label": "acoustic texas blues"
+        },
+        {
+          "id": "adhunik_geet",
+          "label": "adhunik geet"
+        },
+        {
+          "id": "afoxe",
+          "label": "afoxê"
+        },
+        {
+          "id": "african_blues",
+          "label": "african blues"
+        },
+        {
+          "id": "afro_house",
+          "label": "afro house"
+        },
+        {
+          "id": "afro_rock",
+          "label": "afro rock"
+        },
+        {
+          "id": "afro_trap",
+          "label": "afro trap"
+        },
+        {
+          "id": "afro_cuban_jazz",
+          "label": "afro-cuban jazz"
+        },
+        {
+          "id": "afro_funk",
+          "label": "afro-funk"
+        },
+        {
+          "id": "afro_jazz",
+          "label": "afro-jazz"
+        },
+        {
+          "id": "afro_zouk",
+          "label": "afro-zouk"
+        },
+        {
+          "id": "afrobeat",
+          "label": "afrobeat"
+        },
+        {
+          "id": "afrobeats",
+          "label": "afrobeats"
+        },
+        {
+          "id": "afropiano",
+          "label": "afropiano"
+        },
+        {
+          "id": "afroswing",
+          "label": "afroswing"
+        },
+        {
+          "id": "agbadza",
+          "label": "agbadza"
+        },
+        {
+          "id": "agbekor",
+          "label": "agbekor"
+        },
+        {
+          "id": "aggrotech",
+          "label": "aggrotech"
+        },
+        {
+          "id": "agronejo",
+          "label": "agronejo"
+        },
+        {
+          "id": "ahwash",
+          "label": "ahwash"
+        },
+        {
+          "id": "aita",
+          "label": "aita"
+        },
+        {
+          "id": "akishibu_kei",
+          "label": "akishibu-kei"
+        },
+        {
+          "id": "al_jeel",
+          "label": "al jeel"
+        },
+        {
+          "id": "aleke",
+          "label": "aleke"
+        },
+        {
+          "id": "algerian_chaabi",
+          "label": "algerian chaabi"
+        },
+        {
+          "id": "algorave",
+          "label": "algorave"
+        },
+        {
+          "id": "alloukou",
+          "label": "alloukou"
+        },
+        {
+          "id": "alpenrock",
+          "label": "alpenrock"
+        },
+        {
+          "id": "alternative_country",
+          "label": "alternative country"
+        },
+        {
+          "id": "alternative_dance",
+          "label": "alternative dance"
+        },
+        {
+          "id": "alternative_folk",
+          "label": "alternative folk"
+        },
+        {
+          "id": "alternative_hip_hop",
+          "label": "alternative hip hop"
+        },
+        {
+          "id": "alternative_metal",
+          "label": "alternative metal"
+        },
+        {
+          "id": "alternative_pop",
+          "label": "alternative pop"
+        },
+        {
+          "id": "alternative_punk",
+          "label": "alternative punk"
+        },
+        {
+          "id": "alternative_r_b",
+          "label": "alternative r&b"
+        },
+        {
+          "id": "alternative_rock",
+          "label": "alternative rock"
+        },
+        {
+          "id": "alte",
+          "label": "alté"
+        },
+        {
+          "id": "amapiano",
+          "label": "amapiano"
+        },
+        {
+          "id": "ambasse_bey",
+          "label": "ambasse bey"
+        },
+        {
+          "id": "ambient_americana",
+          "label": "ambient americana"
+        },
+        {
+          "id": "ambient_dub",
+          "label": "ambient dub"
+        },
+        {
+          "id": "ambient_house",
+          "label": "ambient house"
+        },
+        {
+          "id": "ambient_noise_wall",
+          "label": "ambient noise wall"
+        },
+        {
+          "id": "ambient_plugg",
+          "label": "ambient plugg"
+        },
+        {
+          "id": "ambient_pop",
+          "label": "ambient pop"
+        },
+        {
+          "id": "ambient_techno",
+          "label": "ambient techno"
+        },
+        {
+          "id": "ambient_trance",
+          "label": "ambient trance"
+        },
+        {
+          "id": "ambrosian_chant",
+          "label": "ambrosian chant"
+        },
+        {
+          "id": "american_gamelan",
+          "label": "american gamelan"
+        },
+        {
+          "id": "american_primitive_guitar",
+          "label": "american primitive guitar"
+        },
+        {
+          "id": "americana",
+          "label": "americana"
+        },
+        {
+          "id": "amigacore",
+          "label": "amigacore"
+        },
+        {
+          "id": "anarcho_punk",
+          "label": "anarcho-punk"
+        },
+        {
+          "id": "anatolian_rock",
+          "label": "anatolian rock"
+        },
+        {
+          "id": "andalusian_classical",
+          "label": "andalusian classical"
+        },
+        {
+          "id": "andean_new_age",
+          "label": "andean new age"
+        },
+        {
+          "id": "anglican_chant",
+          "label": "anglican chant"
+        },
+        {
+          "id": "animal_sounds",
+          "label": "animal sounds"
+        },
+        {
+          "id": "anti_folk",
+          "label": "anti-folk"
+        },
+        {
+          "id": "aor",
+          "label": "aor"
+        },
+        {
+          "id": "apala",
+          "label": "apala"
+        },
+        {
+          "id": "appalachian_folk",
+          "label": "appalachian folk"
+        },
+        {
+          "id": "aquacrunk",
+          "label": "aquacrunk"
+        },
+        {
+          "id": "arabesk",
+          "label": "arabesk"
+        },
+        {
+          "id": "arabesk_rap",
+          "label": "arabesk rap"
+        },
+        {
+          "id": "arena_rock",
+          "label": "arena rock"
+        },
+        {
+          "id": "arrocha",
+          "label": "arrocha"
+        },
+        {
+          "id": "arrocha_funk",
+          "label": "arrocha funk"
+        },
+        {
+          "id": "arrocha_sertanejo",
+          "label": "arrocha sertanejo"
+        },
+        {
+          "id": "arrochadeira",
+          "label": "arrochadeira"
+        },
+        {
+          "id": "ars_antiqua",
+          "label": "ars antiqua"
+        },
+        {
+          "id": "ars_nova",
+          "label": "ars nova"
+        },
+        {
+          "id": "ars_subtilior",
+          "label": "ars subtilior"
+        },
+        {
+          "id": "art_pop",
+          "label": "art pop"
+        },
+        {
+          "id": "art_punk",
+          "label": "art punk"
+        },
+        {
+          "id": "art_rock",
+          "label": "art rock"
+        },
+        {
+          "id": "art_song",
+          "label": "art song"
+        },
+        {
+          "id": "artcore",
+          "label": "artcore"
+        },
+        {
+          "id": "ashkenazi_cantorial_music",
+          "label": "ashkenazi cantorial music"
+        },
+        {
+          "id": "asian_rock",
+          "label": "asian rock"
+        },
+        {
+          "id": "asmr",
+          "label": "asmr"
+        },
+        {
+          "id": "assiko",
+          "label": "assiko"
+        },
+        {
+          "id": "atmospheric_black_metal",
+          "label": "atmospheric black metal"
+        },
+        {
+          "id": "atmospheric_drum_and_bass",
+          "label": "atmospheric drum and bass"
+        },
+        {
+          "id": "atmospheric_sludge_metal",
+          "label": "atmospheric sludge metal"
+        },
+        {
+          "id": "audio_documentary",
+          "label": "audio documentary"
+        },
+        {
+          "id": "audio_drama",
+          "label": "audio drama"
+        },
+        {
+          "id": "autonomic",
+          "label": "autonomic"
+        },
+        {
+          "id": "avant_folk",
+          "label": "avant-folk"
+        },
+        {
+          "id": "avant_garde",
+          "label": "avant-garde"
+        },
+        {
+          "id": "avant_garde_jazz",
+          "label": "avant-garde jazz"
+        },
+        {
+          "id": "avant_garde_metal",
+          "label": "avant-garde metal"
+        },
+        {
+          "id": "avant_garde_pop",
+          "label": "avant-garde pop"
+        },
+        {
+          "id": "avant_prog",
+          "label": "avant-prog"
+        },
+        {
+          "id": "avanzada",
+          "label": "avanzada"
+        },
+        {
+          "id": "avtorskaya_pesnya",
+          "label": "avtorskaya pesnya"
+        },
+        {
+          "id": "axe",
+          "label": "axé"
+        },
+        {
+          "id": "bacardi",
+          "label": "bacardi"
+        },
+        {
+          "id": "bachata",
+          "label": "bachata"
+        },
+        {
+          "id": "bachaton",
+          "label": "bachatón"
+        },
+        {
+          "id": "bagad",
+          "label": "bagad"
+        },
+        {
+          "id": "bagatelle",
+          "label": "bagatelle"
+        },
+        {
+          "id": "baguala",
+          "label": "baguala"
+        },
+        {
+          "id": "baila",
+          "label": "baila"
+        },
+        {
+          "id": "baisha_xiyue",
+          "label": "baisha xiyue"
+        },
+        {
+          "id": "baithak_gana",
+          "label": "baithak gana"
+        },
+        {
+          "id": "baiao",
+          "label": "baião"
+        },
+        {
+          "id": "bakersfield_sound",
+          "label": "bakersfield sound"
+        },
+        {
+          "id": "balani_show",
+          "label": "balani show"
+        },
+        {
+          "id": "balearic_beat",
+          "label": "balearic beat"
+        },
+        {
+          "id": "balearic_trance",
+          "label": "balearic trance"
+        },
+        {
+          "id": "balinese_gamelan",
+          "label": "balinese gamelan"
+        },
+        {
+          "id": "balitaw",
+          "label": "balitaw"
+        },
+        {
+          "id": "ballad",
+          "label": "ballad"
+        },
+        {
+          "id": "ballad_opera",
+          "label": "ballad opera"
+        },
+        {
+          "id": "ballet",
+          "label": "ballet"
+        },
+        {
+          "id": "ballet_de_cour",
+          "label": "ballet de cour"
+        },
+        {
+          "id": "ballroom_house",
+          "label": "ballroom house"
+        },
+        {
+          "id": "baltimore_club",
+          "label": "baltimore club"
+        },
+        {
+          "id": "bambuco",
+          "label": "bambuco"
+        },
+        {
+          "id": "banda_sinaloense",
+          "label": "banda sinaloense"
+        },
+        {
+          "id": "bandari",
+          "label": "bandari"
+        },
+        {
+          "id": "bandinha",
+          "label": "bandinha"
+        },
+        {
+          "id": "banga",
+          "label": "banga"
+        },
+        {
+          "id": "bantengan",
+          "label": "bantengan"
+        },
+        {
+          "id": "baqashot",
+          "label": "baqashot"
+        },
+        {
+          "id": "barber_beats",
+          "label": "barber beats"
+        },
+        {
+          "id": "barbershop",
+          "label": "barbershop"
+        },
+        {
+          "id": "bard_rock",
+          "label": "bard rock"
+        },
+        {
+          "id": "bardcore",
+          "label": "bardcore"
+        },
+        {
+          "id": "baroque",
+          "label": "baroque"
+        },
+        {
+          "id": "baroque_pop",
+          "label": "baroque pop"
+        },
+        {
+          "id": "baroque_suite",
+          "label": "baroque suite"
+        },
+        {
+          "id": "bashment_soca",
+          "label": "bashment soca"
+        },
+        {
+          "id": "bass_house",
+          "label": "bass house"
+        },
+        {
+          "id": "bassline",
+          "label": "bassline"
+        },
+        {
+          "id": "batida",
+          "label": "batida"
+        },
+        {
+          "id": "batidao_romantico",
+          "label": "batidão romântico"
+        },
+        {
+          "id": "batonebi_songs",
+          "label": "batonebi songs"
+        },
+        {
+          "id": "battle_rap",
+          "label": "battle rap"
+        },
+        {
+          "id": "battle_record",
+          "label": "battle record"
+        },
+        {
+          "id": "batucada",
+          "label": "batucada"
+        },
+        {
+          "id": "batuque",
+          "label": "batuque"
+        },
+        {
+          "id": "baul_gaan",
+          "label": "baul gaan"
+        },
+        {
+          "id": "beach_music",
+          "label": "beach music"
+        },
+        {
+          "id": "beat_bolha",
+          "label": "beat bolha"
+        },
+        {
+          "id": "beat_bruxaria",
+          "label": "beat bruxaria"
+        },
+        {
+          "id": "beat_fino",
+          "label": "beat fino"
+        },
+        {
+          "id": "beat_music",
+          "label": "beat music"
+        },
+        {
+          "id": "beat_poetry",
+          "label": "beat poetry"
+        },
+        {
+          "id": "beat_rock",
+          "label": "beat rock"
+        },
+        {
+          "id": "beatboxing",
+          "label": "beatboxing"
+        },
+        {
+          "id": "beatdown_hardcore",
+          "label": "beatdown hardcore"
+        },
+        {
+          "id": "bebop",
+          "label": "bebop"
+        },
+        {
+          "id": "bedoui_wahrani",
+          "label": "bedoui wahrani"
+        },
+        {
+          "id": "bedroom_pop",
+          "label": "bedroom pop"
+        },
+        {
+          "id": "beijing_opera",
+          "label": "beijing opera"
+        },
+        {
+          "id": "belgian_techno",
+          "label": "belgian techno"
+        },
+        {
+          "id": "bend_skin",
+          "label": "bend-skin"
+        },
+        {
+          "id": "beneventan_chant",
+          "label": "beneventan chant"
+        },
+        {
+          "id": "benga",
+          "label": "benga"
+        },
+        {
+          "id": "beni",
+          "label": "beni"
+        },
+        {
+          "id": "benna",
+          "label": "benna"
+        },
+        {
+          "id": "beompae",
+          "label": "beompae"
+        },
+        {
+          "id": "berlin_school",
+          "label": "berlin school"
+        },
+        {
+          "id": "bhajan",
+          "label": "bhajan"
+        },
+        {
+          "id": "bhangra",
+          "label": "bhangra"
+        },
+        {
+          "id": "bhavageethe",
+          "label": "bhavageethe"
+        },
+        {
+          "id": "bhojpuri_pop",
+          "label": "bhojpuri pop"
+        },
+        {
+          "id": "big_band",
+          "label": "big band"
+        },
+        {
+          "id": "big_beat",
+          "label": "big beat"
+        },
+        {
+          "id": "big_room_house",
+          "label": "big room house"
+        },
+        {
+          "id": "big_room_trance",
+          "label": "big room trance"
+        },
+        {
+          "id": "biguine",
+          "label": "biguine"
+        },
+        {
+          "id": "bikutsi",
+          "label": "bikutsi"
+        },
+        {
+          "id": "binaural_beats",
+          "label": "binaural beats"
+        },
+        {
+          "id": "biraha",
+          "label": "biraha"
+        },
+        {
+          "id": "birdsong",
+          "label": "birdsong"
+        },
+        {
+          "id": "birmingham_sound",
+          "label": "birmingham sound"
+        },
+        {
+          "id": "bit_music",
+          "label": "bit music"
+        },
+        {
+          "id": "bitpop",
+          "label": "bitpop"
+        },
+        {
+          "id": "black_n_roll",
+          "label": "black 'n' roll"
+        },
+        {
+          "id": "black_ambient",
+          "label": "black ambient"
+        },
+        {
+          "id": "black_metal",
+          "label": "black metal"
+        },
+        {
+          "id": "black_midi",
+          "label": "black midi"
+        },
+        {
+          "id": "black_noise",
+          "label": "black noise"
+        },
+        {
+          "id": "blackened_crust",
+          "label": "blackened crust"
+        },
+        {
+          "id": "blackened_death_metal",
+          "label": "blackened death metal"
+        },
+        {
+          "id": "blackgaze",
+          "label": "blackgaze"
+        },
+        {
+          "id": "bleep_techno",
+          "label": "bleep techno"
+        },
+        {
+          "id": "blue_eyed_soul",
+          "label": "blue-eyed soul"
+        },
+        {
+          "id": "bluegrass",
+          "label": "bluegrass"
+        },
+        {
+          "id": "bluegrass_gospel",
+          "label": "bluegrass gospel"
+        },
+        {
+          "id": "blues",
+          "label": "blues"
+        },
+        {
+          "id": "blues_rock",
+          "label": "blues rock"
+        },
+        {
+          "id": "bocet",
+          "label": "bocet"
+        },
+        {
+          "id": "boduberu",
+          "label": "boduberu"
+        },
+        {
+          "id": "boedra",
+          "label": "boedra"
+        },
+        {
+          "id": "bogino_duu",
+          "label": "bogino duu"
+        },
+        {
+          "id": "bolero",
+          "label": "bolero"
+        },
+        {
+          "id": "bolero_espanol",
+          "label": "bolero español"
+        },
+        {
+          "id": "bolero_son",
+          "label": "bolero son"
+        },
+        {
+          "id": "bolero_beat",
+          "label": "bolero-beat"
+        },
+        {
+          "id": "bomba",
+          "label": "bomba"
+        },
+        {
+          "id": "bomba_del_chota",
+          "label": "bomba del chota"
+        },
+        {
+          "id": "bongo_flava",
+          "label": "bongo flava"
+        },
+        {
+          "id": "boogaloo",
+          "label": "boogaloo"
+        },
+        {
+          "id": "boogie",
+          "label": "boogie"
+        },
+        {
+          "id": "boogie_rock",
+          "label": "boogie rock"
+        },
+        {
+          "id": "boogie_woogie",
+          "label": "boogie-woogie"
+        },
+        {
+          "id": "boom_bap",
+          "label": "boom bap"
+        },
+        {
+          "id": "bounce",
+          "label": "bounce"
+        },
+        {
+          "id": "bounce_beat",
+          "label": "bounce beat"
+        },
+        {
+          "id": "bouncy_techno",
+          "label": "bouncy techno"
+        },
+        {
+          "id": "bouyon",
+          "label": "bouyon"
+        },
+        {
+          "id": "boyfriend_country",
+          "label": "boyfriend country"
+        },
+        {
+          "id": "brass_band",
+          "label": "brass band"
+        },
+        {
+          "id": "brazilian_bass",
+          "label": "brazilian bass"
+        },
+        {
+          "id": "brazilian_phonk",
+          "label": "brazilian phonk"
+        },
+        {
+          "id": "break_in",
+          "label": "break-in"
+        },
+        {
+          "id": "breakbeat",
+          "label": "breakbeat"
+        },
+        {
+          "id": "breakbeat_hardcore",
+          "label": "breakbeat hardcore"
+        },
+        {
+          "id": "breakbeat_kota",
+          "label": "breakbeat kota"
+        },
+        {
+          "id": "breakcore",
+          "label": "breakcore"
+        },
+        {
+          "id": "breaks",
+          "label": "breaks"
+        },
+        {
+          "id": "breakstep",
+          "label": "breakstep"
+        },
+        {
+          "id": "brega",
+          "label": "brega"
+        },
+        {
+          "id": "brega_calypso",
+          "label": "brega calypso"
+        },
+        {
+          "id": "brega_funk",
+          "label": "brega funk"
+        },
+        {
+          "id": "briddim",
+          "label": "briddim"
+        },
+        {
+          "id": "brill_building",
+          "label": "brill building"
+        },
+        {
+          "id": "brit_funk",
+          "label": "brit funk"
+        },
+        {
+          "id": "britcore",
+          "label": "britcore"
+        },
+        {
+          "id": "british_blues",
+          "label": "british blues"
+        },
+        {
+          "id": "british_brass_band",
+          "label": "british brass band"
+        },
+        {
+          "id": "british_folk_rock",
+          "label": "british folk rock"
+        },
+        {
+          "id": "british_rhythm_blues",
+          "label": "british rhythm & blues"
+        },
+        {
+          "id": "britpop",
+          "label": "britpop"
+        },
+        {
+          "id": "bro_country",
+          "label": "bro-country"
+        },
+        {
+          "id": "broadband_noise",
+          "label": "broadband noise"
+        },
+        {
+          "id": "broken_beat",
+          "label": "broken beat"
+        },
+        {
+          "id": "broken_transmission",
+          "label": "broken transmission"
+        },
+        {
+          "id": "brostep",
+          "label": "brostep"
+        },
+        {
+          "id": "brutal_death_metal",
+          "label": "brutal death metal"
+        },
+        {
+          "id": "brutal_prog",
+          "label": "brutal prog"
+        },
+        {
+          "id": "bubblegum_bass",
+          "label": "bubblegum bass"
+        },
+        {
+          "id": "bubblegum_dance",
+          "label": "bubblegum dance"
+        },
+        {
+          "id": "bubblegum_pop",
+          "label": "bubblegum pop"
+        },
+        {
+          "id": "bubbling",
+          "label": "bubbling"
+        },
+        {
+          "id": "bubbling_house",
+          "label": "bubbling house"
+        },
+        {
+          "id": "buchiage_trance",
+          "label": "buchiage trance"
+        },
+        {
+          "id": "budget_rock",
+          "label": "budget rock"
+        },
+        {
+          "id": "budots",
+          "label": "budots"
+        },
+        {
+          "id": "buleria",
+          "label": "bulería"
+        },
+        {
+          "id": "bullerengue",
+          "label": "bullerengue"
+        },
+        {
+          "id": "burger_highlife",
+          "label": "burger-highlife"
+        },
+        {
+          "id": "burmese_classical",
+          "label": "burmese classical"
+        },
+        {
+          "id": "burmese_mono",
+          "label": "burmese mono"
+        },
+        {
+          "id": "burmese_stereo",
+          "label": "burmese stereo"
+        },
+        {
+          "id": "burning_spirits",
+          "label": "burning spirits"
+        },
+        {
+          "id": "burrakatha",
+          "label": "burrakatha"
+        },
+        {
+          "id": "bytebeat",
+          "label": "bytebeat"
+        },
+        {
+          "id": "byzantine_chant",
+          "label": "byzantine chant"
+        },
+        {
+          "id": "bele",
+          "label": "bélé"
+        },
+        {
+          "id": "berite_club",
+          "label": "bérite club"
+        },
+        {
+          "id": "c_pop",
+          "label": "c-pop"
+        },
+        {
+          "id": "c86",
+          "label": "c86"
+        },
+        {
+          "id": "ca_tru",
+          "label": "ca trù"
+        },
+        {
+          "id": "cabaret",
+          "label": "cabaret"
+        },
+        {
+          "id": "cabo_zouk",
+          "label": "cabo zouk"
+        },
+        {
+          "id": "cadence_lypso",
+          "label": "cadence lypso"
+        },
+        {
+          "id": "cadence_rampa",
+          "label": "cadence rampa"
+        },
+        {
+          "id": "cajun",
+          "label": "cajun"
+        },
+        {
+          "id": "cakewalk",
+          "label": "cakewalk"
+        },
+        {
+          "id": "calipso_venezolano",
+          "label": "calipso venezolano"
+        },
+        {
+          "id": "calypso",
+          "label": "calypso"
+        },
+        {
+          "id": "campursari",
+          "label": "campursari"
+        },
+        {
+          "id": "campus_folk",
+          "label": "campus folk"
+        },
+        {
+          "id": "cancion_melodica",
+          "label": "canción melódica"
+        },
+        {
+          "id": "candombe",
+          "label": "candombe"
+        },
+        {
+          "id": "candombe_beat",
+          "label": "candombe beat"
+        },
+        {
+          "id": "cantata",
+          "label": "cantata"
+        },
+        {
+          "id": "cante_alentejano",
+          "label": "cante alentejano"
+        },
+        {
+          "id": "canterbury_scene",
+          "label": "canterbury scene"
+        },
+        {
+          "id": "canto_a_lo_poeta",
+          "label": "canto a lo poeta"
+        },
+        {
+          "id": "canto_cardenche",
+          "label": "canto cardenche"
+        },
+        {
+          "id": "canto_degli_alpini",
+          "label": "canto degli alpini"
+        },
+        {
+          "id": "cantonese_opera",
+          "label": "cantonese opera"
+        },
+        {
+          "id": "cantopop",
+          "label": "cantopop"
+        },
+        {
+          "id": "cantoria",
+          "label": "cantoria"
+        },
+        {
+          "id": "cantu_a_chiterra",
+          "label": "cantu a chiterra"
+        },
+        {
+          "id": "cantu_a_tenore",
+          "label": "cantu a tenore"
+        },
+        {
+          "id": "canzona",
+          "label": "canzona"
+        },
+        {
+          "id": "canzone_d_autore",
+          "label": "canzone d'autore"
+        },
+        {
+          "id": "canzone_napoletana",
+          "label": "canzone napoletana"
+        },
+        {
+          "id": "canzone_neomelodica",
+          "label": "canzone neomelodica"
+        },
+        {
+          "id": "cape_breton_fiddling",
+          "label": "cape breton fiddling"
+        },
+        {
+          "id": "cape_jazz",
+          "label": "cape jazz"
+        },
+        {
+          "id": "caporal",
+          "label": "caporal"
+        },
+        {
+          "id": "capriccio",
+          "label": "capriccio"
+        },
+        {
+          "id": "carimbo",
+          "label": "carimbó"
+        },
+        {
+          "id": "carnatic_classical",
+          "label": "carnatic classical"
+        },
+        {
+          "id": "carnavalito",
+          "label": "carnavalito"
+        },
+        {
+          "id": "carranga",
+          "label": "carranga"
+        },
+        {
+          "id": "celtic",
+          "label": "celtic"
+        },
+        {
+          "id": "celtic_chant",
+          "label": "celtic chant"
+        },
+        {
+          "id": "celtic_electronica",
+          "label": "celtic electronica"
+        },
+        {
+          "id": "celtic_metal",
+          "label": "celtic metal"
+        },
+        {
+          "id": "celtic_new_age",
+          "label": "celtic new age"
+        },
+        {
+          "id": "celtic_punk",
+          "label": "celtic punk"
+        },
+        {
+          "id": "celtic_rock",
+          "label": "celtic rock"
+        },
+        {
+          "id": "central_asian_throat_singing",
+          "label": "central asian throat singing"
+        },
+        {
+          "id": "chacarera",
+          "label": "chacarera"
+        },
+        {
+          "id": "chachacha",
+          "label": "chachachá"
+        },
+        {
+          "id": "chakacha",
+          "label": "chakacha"
+        },
+        {
+          "id": "chalga",
+          "label": "chalga"
+        },
+        {
+          "id": "chamame",
+          "label": "chamamé"
+        },
+        {
+          "id": "chamame_tropical",
+          "label": "chamamé tropical"
+        },
+        {
+          "id": "chamarrita_acoriana",
+          "label": "chamarrita açoriana"
+        },
+        {
+          "id": "chamarrita_rioplatense",
+          "label": "chamarrita rioplatense"
+        },
+        {
+          "id": "chamber_folk",
+          "label": "chamber folk"
+        },
+        {
+          "id": "chamber_pop",
+          "label": "chamber pop"
+        },
+        {
+          "id": "champeta",
+          "label": "champeta"
+        },
+        {
+          "id": "changa_tuki",
+          "label": "changa tuki"
+        },
+        {
+          "id": "change_ringing",
+          "label": "change ringing"
+        },
+        {
+          "id": "changjak_gugak",
+          "label": "changjak gugak"
+        },
+        {
+          "id": "changui",
+          "label": "changüí"
+        },
+        {
+          "id": "chanson_francaise",
+          "label": "chanson française"
+        },
+        {
+          "id": "chanson_quebecoise",
+          "label": "chanson québécoise"
+        },
+        {
+          "id": "chanson_realiste",
+          "label": "chanson réaliste"
+        },
+        {
+          "id": "chanson_a_texte",
+          "label": "chanson à texte"
+        },
+        {
+          "id": "chaozhou_xianshi",
+          "label": "chaozhou xianshi"
+        },
+        {
+          "id": "chap_hop",
+          "label": "chap hop"
+        },
+        {
+          "id": "character_piece",
+          "label": "character piece"
+        },
+        {
+          "id": "charanga",
+          "label": "charanga"
+        },
+        {
+          "id": "chazzanut",
+          "label": "chazzanut"
+        },
+        {
+          "id": "chicago_blues",
+          "label": "chicago blues"
+        },
+        {
+          "id": "chicago_bop",
+          "label": "chicago bop"
+        },
+        {
+          "id": "chicago_drill",
+          "label": "chicago drill"
+        },
+        {
+          "id": "chicago_house",
+          "label": "chicago house"
+        },
+        {
+          "id": "chicago_polka",
+          "label": "chicago polka"
+        },
+        {
+          "id": "chicago_soul",
+          "label": "chicago soul"
+        },
+        {
+          "id": "chicano_rap",
+          "label": "chicano rap"
+        },
+        {
+          "id": "chicha",
+          "label": "chicha"
+        },
+        {
+          "id": "children_s_music",
+          "label": "children's music"
+        },
+        {
+          "id": "chilena",
+          "label": "chilena"
+        },
+        {
+          "id": "chillout",
+          "label": "chillout"
+        },
+        {
+          "id": "chillstep",
+          "label": "chillstep"
+        },
+        {
+          "id": "chillsynth",
+          "label": "chillsynth"
+        },
+        {
+          "id": "chillwave",
+          "label": "chillwave"
+        },
+        {
+          "id": "chimayche",
+          "label": "chimayche"
+        },
+        {
+          "id": "chimurenga",
+          "label": "chimurenga"
+        },
+        {
+          "id": "chinese_classical",
+          "label": "chinese classical"
+        },
+        {
+          "id": "chinese_literati_music",
+          "label": "chinese literati music"
+        },
+        {
+          "id": "chinese_opera",
+          "label": "chinese opera"
+        },
+        {
+          "id": "chinese_revolutionary_opera",
+          "label": "chinese revolutionary opera"
+        },
+        {
+          "id": "chipmunk_soul",
+          "label": "chipmunk soul"
+        },
+        {
+          "id": "chiptune",
+          "label": "chiptune"
+        },
+        {
+          "id": "chopped_and_screwed",
+          "label": "chopped and screwed"
+        },
+        {
+          "id": "chopper",
+          "label": "chopper"
+        },
+        {
+          "id": "choral_symphony",
+          "label": "choral symphony"
+        },
+        {
+          "id": "choro",
+          "label": "choro"
+        },
+        {
+          "id": "chotis_madrileno",
+          "label": "chotis madrileño"
+        },
+        {
+          "id": "christian_hardcore",
+          "label": "christian hardcore"
+        },
+        {
+          "id": "christian_hip_hop",
+          "label": "christian hip hop"
+        },
+        {
+          "id": "christian_metal",
+          "label": "christian metal"
+        },
+        {
+          "id": "christian_rock",
+          "label": "christian rock"
+        },
+        {
+          "id": "christmas_music",
+          "label": "christmas music"
+        },
+        {
+          "id": "church_music",
+          "label": "church music"
+        },
+        {
+          "id": "chuscada",
+          "label": "chuscada"
+        },
+        {
+          "id": "chutney",
+          "label": "chutney"
+        },
+        {
+          "id": "chutney_soca",
+          "label": "chutney soca"
+        },
+        {
+          "id": "cheo",
+          "label": "chèo"
+        },
+        {
+          "id": "chod",
+          "label": "chöd"
+        },
+        {
+          "id": "cilokaq",
+          "label": "cilokaq"
+        },
+        {
+          "id": "cinematic_classical",
+          "label": "cinematic classical"
+        },
+        {
+          "id": "ciranda",
+          "label": "ciranda"
+        },
+        {
+          "id": "circus_march",
+          "label": "circus march"
+        },
+        {
+          "id": "city_pop",
+          "label": "city pop"
+        },
+        {
+          "id": "classic_blues",
+          "label": "classic blues"
+        },
+        {
+          "id": "classic_country",
+          "label": "classic country"
+        },
+        {
+          "id": "classic_jazz",
+          "label": "classic jazz"
+        },
+        {
+          "id": "classic_ragtime",
+          "label": "classic ragtime"
+        },
+        {
+          "id": "classic_rock",
+          "label": "classic rock"
+        },
+        {
+          "id": "classical_crossover",
+          "label": "classical crossover"
+        },
+        {
+          "id": "classical_period",
+          "label": "classical period"
+        },
+        {
+          "id": "close_harmony",
+          "label": "close harmony"
+        },
+        {
+          "id": "cloud_rap",
+          "label": "cloud rap"
+        },
+        {
+          "id": "club",
+          "label": "club"
+        },
+        {
+          "id": "cocktail_nation",
+          "label": "cocktail nation"
+        },
+        {
+          "id": "coco",
+          "label": "coco"
+        },
+        {
+          "id": "coke_rap",
+          "label": "coke rap"
+        },
+        {
+          "id": "coladeira",
+          "label": "coladeira"
+        },
+        {
+          "id": "coldwave",
+          "label": "coldwave"
+        },
+        {
+          "id": "colinda",
+          "label": "colindă"
+        },
+        {
+          "id": "colour_bass",
+          "label": "colour bass"
+        },
+        {
+          "id": "comedy",
+          "label": "comedy"
+        },
+        {
+          "id": "comedy_hip_hop",
+          "label": "comedy hip hop"
+        },
+        {
+          "id": "comedy_rock",
+          "label": "comedy rock"
+        },
+        {
+          "id": "comfy_synth",
+          "label": "comfy synth"
+        },
+        {
+          "id": "compas",
+          "label": "compas"
+        },
+        {
+          "id": "complextro",
+          "label": "complextro"
+        },
+        {
+          "id": "comedie_ballet",
+          "label": "comédie-ballet"
+        },
+        {
+          "id": "concert_band",
+          "label": "concert band"
+        },
+        {
+          "id": "concert_spiritual",
+          "label": "concert spiritual"
+        },
+        {
+          "id": "concertina_band",
+          "label": "concertina band"
+        },
+        {
+          "id": "concerto",
+          "label": "concerto"
+        },
+        {
+          "id": "concerto_for_orchestra",
+          "label": "concerto for orchestra"
+        },
+        {
+          "id": "concerto_grosso",
+          "label": "concerto grosso"
+        },
+        {
+          "id": "conducted_improvisation",
+          "label": "conducted improvisation"
+        },
+        {
+          "id": "conga",
+          "label": "conga"
+        },
+        {
+          "id": "congolese_rumba",
+          "label": "congolese rumba"
+        },
+        {
+          "id": "conscious_hip_hop",
+          "label": "conscious hip hop"
+        },
+        {
+          "id": "contemporary_christian",
+          "label": "contemporary christian"
+        },
+        {
+          "id": "contemporary_classical",
+          "label": "contemporary classical"
+        },
+        {
+          "id": "contemporary_country",
+          "label": "contemporary country"
+        },
+        {
+          "id": "contemporary_folk",
+          "label": "contemporary folk"
+        },
+        {
+          "id": "contemporary_gospel",
+          "label": "contemporary gospel"
+        },
+        {
+          "id": "contemporary_jazz",
+          "label": "contemporary jazz"
+        },
+        {
+          "id": "contemporary_r_b",
+          "label": "contemporary r&b"
+        },
+        {
+          "id": "contenance_angloise",
+          "label": "contenance angloise"
+        },
+        {
+          "id": "contra",
+          "label": "contra"
+        },
+        {
+          "id": "cool_jazz",
+          "label": "cool jazz"
+        },
+        {
+          "id": "coon_song",
+          "label": "coon song"
+        },
+        {
+          "id": "copla",
+          "label": "copla"
+        },
+        {
+          "id": "copla_cajamarquina",
+          "label": "copla cajamarquina"
+        },
+        {
+          "id": "corrido",
+          "label": "corrido"
+        },
+        {
+          "id": "corrido_tumbado",
+          "label": "corrido tumbado"
+        },
+        {
+          "id": "cosmic_country",
+          "label": "cosmic country"
+        },
+        {
+          "id": "country",
+          "label": "country"
+        },
+        {
+          "id": "country_and_irish",
+          "label": "country and irish"
+        },
+        {
+          "id": "country_blues",
+          "label": "country blues"
+        },
+        {
+          "id": "country_boogie",
+          "label": "country boogie"
+        },
+        {
+          "id": "country_folk",
+          "label": "country folk"
+        },
+        {
+          "id": "country_gospel",
+          "label": "country gospel"
+        },
+        {
+          "id": "country_pop",
+          "label": "country pop"
+        },
+        {
+          "id": "country_rap",
+          "label": "country rap"
+        },
+        {
+          "id": "country_rock",
+          "label": "country rock"
+        },
+        {
+          "id": "country_soul",
+          "label": "country soul"
+        },
+        {
+          "id": "country_yodeling",
+          "label": "country yodeling"
+        },
+        {
+          "id": "countrypolitan",
+          "label": "countrypolitan"
+        },
+        {
+          "id": "coupe_decale",
+          "label": "coupé-décalé"
+        },
+        {
+          "id": "cowboy_poetry",
+          "label": "cowboy poetry"
+        },
+        {
+          "id": "cowpunk",
+          "label": "cowpunk"
+        },
+        {
+          "id": "crack_rock_steady",
+          "label": "crack rock steady"
+        },
+        {
+          "id": "crime_jazz",
+          "label": "crime jazz"
+        },
+        {
+          "id": "crossbreed",
+          "label": "crossbreed"
+        },
+        {
+          "id": "crossover_jazz",
+          "label": "crossover jazz"
+        },
+        {
+          "id": "crossover_prog",
+          "label": "crossover prog"
+        },
+        {
+          "id": "crossover_thrash",
+          "label": "crossover thrash"
+        },
+        {
+          "id": "cruise",
+          "label": "cruise"
+        },
+        {
+          "id": "crunk",
+          "label": "crunk"
+        },
+        {
+          "id": "crunkcore",
+          "label": "crunkcore"
+        },
+        {
+          "id": "crust_punk",
+          "label": "crust punk"
+        },
+        {
+          "id": "csardas",
+          "label": "csárdás"
+        },
+        {
+          "id": "cuarteto",
+          "label": "cuarteto"
+        },
+        {
+          "id": "cubaton",
+          "label": "cubatón"
+        },
+        {
+          "id": "cuddlecore",
+          "label": "cuddlecore"
+        },
+        {
+          "id": "cueca",
+          "label": "cueca"
+        },
+        {
+          "id": "cueca_brava",
+          "label": "cueca brava"
+        },
+        {
+          "id": "cumbia",
+          "label": "cumbia"
+        },
+        {
+          "id": "cumbia_amazonica",
+          "label": "cumbia amazónica"
+        },
+        {
+          "id": "cumbia_argentina",
+          "label": "cumbia argentina"
+        },
+        {
+          "id": "cumbia_chilena",
+          "label": "cumbia chilena"
+        },
+        {
+          "id": "cumbia_colombiana",
+          "label": "cumbia colombiana"
+        },
+        {
+          "id": "cumbia_mexicana",
+          "label": "cumbia mexicana"
+        },
+        {
+          "id": "cumbia_nortena_mexicana",
+          "label": "cumbia norteña mexicana"
+        },
+        {
+          "id": "cumbia_nortena_peruana",
+          "label": "cumbia norteña peruana"
+        },
+        {
+          "id": "cumbia_peruana",
+          "label": "cumbia peruana"
+        },
+        {
+          "id": "cumbia_pop",
+          "label": "cumbia pop"
+        },
+        {
+          "id": "cumbia_rebajada",
+          "label": "cumbia rebajada"
+        },
+        {
+          "id": "cumbia_salvadorena",
+          "label": "cumbia salvadoreña"
+        },
+        {
+          "id": "cumbia_santafesina",
+          "label": "cumbia santafesina"
+        },
+        {
+          "id": "cumbia_sonidera",
+          "label": "cumbia sonidera"
+        },
+        {
+          "id": "cumbia_surena_peruana",
+          "label": "cumbia sureña peruana"
+        },
+        {
+          "id": "cumbia_turra",
+          "label": "cumbia turra"
+        },
+        {
+          "id": "cumbia_villera",
+          "label": "cumbia villera"
+        },
+        {
+          "id": "cumbiaton",
+          "label": "cumbiatón"
+        },
+        {
+          "id": "cuple",
+          "label": "cuplé"
+        },
+        {
+          "id": "currulao",
+          "label": "currulao"
+        },
+        {
+          "id": "cururu",
+          "label": "cururu"
+        },
+        {
+          "id": "cyber_metal",
+          "label": "cyber metal"
+        },
+        {
+          "id": "cybergrind",
+          "label": "cybergrind"
+        },
+        {
+          "id": "cyberpunk",
+          "label": "cyberpunk"
+        },
+        {
+          "id": "cai_luong",
+          "label": "cải lương"
+        },
+        {
+          "id": "d_beat",
+          "label": "d-beat"
+        },
+        {
+          "id": "dabke",
+          "label": "dabke"
+        },
+        {
+          "id": "dance",
+          "label": "dance"
+        },
+        {
+          "id": "dance_pop",
+          "label": "dance-pop"
+        },
+        {
+          "id": "dance_punk",
+          "label": "dance-punk"
+        },
+        {
+          "id": "dance_punk_revival",
+          "label": "dance-punk revival"
+        },
+        {
+          "id": "dance_rock",
+          "label": "dance-rock"
+        },
+        {
+          "id": "dancefloor_drum_and_bass",
+          "label": "dancefloor drum and bass"
+        },
+        {
+          "id": "dancehall",
+          "label": "dancehall"
+        },
+        {
+          "id": "dangak",
+          "label": "dangak"
+        },
+        {
+          "id": "dangdut",
+          "label": "dangdut"
+        },
+        {
+          "id": "danmono",
+          "label": "danmono"
+        },
+        {
+          "id": "dansband",
+          "label": "dansband"
+        },
+        {
+          "id": "dansktop",
+          "label": "dansktop"
+        },
+        {
+          "id": "danzon",
+          "label": "danzón"
+        },
+        {
+          "id": "dariacore",
+          "label": "dariacore"
+        },
+        {
+          "id": "dark_ambient",
+          "label": "dark ambient"
+        },
+        {
+          "id": "dark_cabaret",
+          "label": "dark cabaret"
+        },
+        {
+          "id": "dark_disco",
+          "label": "dark disco"
+        },
+        {
+          "id": "dark_electro",
+          "label": "dark electro"
+        },
+        {
+          "id": "dark_folk",
+          "label": "dark folk"
+        },
+        {
+          "id": "dark_garage",
+          "label": "dark garage"
+        },
+        {
+          "id": "dark_jazz",
+          "label": "dark jazz"
+        },
+        {
+          "id": "dark_plugg",
+          "label": "dark plugg"
+        },
+        {
+          "id": "dark_psytrance",
+          "label": "dark psytrance"
+        },
+        {
+          "id": "dark_wave",
+          "label": "dark wave"
+        },
+        {
+          "id": "darkcore",
+          "label": "darkcore"
+        },
+        {
+          "id": "darkcore_edm",
+          "label": "darkcore edm"
+        },
+        {
+          "id": "darkstep",
+          "label": "darkstep"
+        },
+        {
+          "id": "darksynth",
+          "label": "darksynth"
+        },
+        {
+          "id": "data_sonification",
+          "label": "data sonification"
+        },
+        {
+          "id": "death_n_roll",
+          "label": "death 'n' roll"
+        },
+        {
+          "id": "death_industrial",
+          "label": "death industrial"
+        },
+        {
+          "id": "death_metal",
+          "label": "death metal"
+        },
+        {
+          "id": "death_doom_metal",
+          "label": "death-doom metal"
+        },
+        {
+          "id": "deathchant_hardcore",
+          "label": "deathchant hardcore"
+        },
+        {
+          "id": "deathcore",
+          "label": "deathcore"
+        },
+        {
+          "id": "deathgrind",
+          "label": "deathgrind"
+        },
+        {
+          "id": "deathrock",
+          "label": "deathrock"
+        },
+        {
+          "id": "deathstep",
+          "label": "deathstep"
+        },
+        {
+          "id": "dechovka",
+          "label": "dechovka"
+        },
+        {
+          "id": "deconstructed_club",
+          "label": "deconstructed club"
+        },
+        {
+          "id": "deejay",
+          "label": "deejay"
+        },
+        {
+          "id": "deep_drum_and_bass",
+          "label": "deep drum and bass"
+        },
+        {
+          "id": "deep_funk",
+          "label": "deep funk"
+        },
+        {
+          "id": "deep_house",
+          "label": "deep house"
+        },
+        {
+          "id": "deep_soul",
+          "label": "deep soul"
+        },
+        {
+          "id": "deep_tech",
+          "label": "deep tech"
+        },
+        {
+          "id": "deep_techno",
+          "label": "deep techno"
+        },
+        {
+          "id": "delta_blues",
+          "label": "delta blues"
+        },
+        {
+          "id": "dembow",
+          "label": "dembow"
+        },
+        {
+          "id": "demostyle",
+          "label": "demostyle"
+        },
+        {
+          "id": "dennery_segment",
+          "label": "dennery segment"
+        },
+        {
+          "id": "denpa",
+          "label": "denpa"
+        },
+        {
+          "id": "depressive_black_metal",
+          "label": "depressive black metal"
+        },
+        {
+          "id": "descarga",
+          "label": "descarga"
+        },
+        {
+          "id": "desert_blues",
+          "label": "desert blues"
+        },
+        {
+          "id": "desert_rock",
+          "label": "desert rock"
+        },
+        {
+          "id": "desgarrada",
+          "label": "desgarrada"
+        },
+        {
+          "id": "detroit_techno",
+          "label": "detroit techno"
+        },
+        {
+          "id": "detroit_trap",
+          "label": "detroit trap"
+        },
+        {
+          "id": "dhaanto",
+          "label": "dhaanto"
+        },
+        {
+          "id": "dhol_tasha",
+          "label": "dhol tasha"
+        },
+        {
+          "id": "dhrupad",
+          "label": "dhrupad"
+        },
+        {
+          "id": "digicore",
+          "label": "digicore"
+        },
+        {
+          "id": "digital_cumbia",
+          "label": "digital cumbia"
+        },
+        {
+          "id": "digital_fusion",
+          "label": "digital fusion"
+        },
+        {
+          "id": "digital_hardcore",
+          "label": "digital hardcore"
+        },
+        {
+          "id": "dikir_barat",
+          "label": "dikir barat"
+        },
+        {
+          "id": "dimotiko",
+          "label": "dimotiko"
+        },
+        {
+          "id": "dirty_south",
+          "label": "dirty south"
+        },
+        {
+          "id": "disco",
+          "label": "disco"
+        },
+        {
+          "id": "disco_polo",
+          "label": "disco polo"
+        },
+        {
+          "id": "dissonant_black_metal",
+          "label": "dissonant black metal"
+        },
+        {
+          "id": "dissonant_death_metal",
+          "label": "dissonant death metal"
+        },
+        {
+          "id": "diva_house",
+          "label": "diva house"
+        },
+        {
+          "id": "divertissement",
+          "label": "divertissement"
+        },
+        {
+          "id": "dixieland",
+          "label": "dixieland"
+        },
+        {
+          "id": "djanba",
+          "label": "djanba"
+        },
+        {
+          "id": "djent",
+          "label": "djent"
+        },
+        {
+          "id": "doble_paso",
+          "label": "doble paso"
+        },
+        {
+          "id": "dobrado",
+          "label": "dobrado"
+        },
+        {
+          "id": "dohori",
+          "label": "dohori"
+        },
+        {
+          "id": "doina",
+          "label": "doina"
+        },
+        {
+          "id": "dondang_sayang",
+          "label": "dondang sayang"
+        },
+        {
+          "id": "dongjing",
+          "label": "dongjing"
+        },
+        {
+          "id": "donk",
+          "label": "donk"
+        },
+        {
+          "id": "donosti_sound",
+          "label": "donosti sound"
+        },
+        {
+          "id": "doo_wop",
+          "label": "doo-wop"
+        },
+        {
+          "id": "doom_metal",
+          "label": "doom metal"
+        },
+        {
+          "id": "doomcore",
+          "label": "doomcore"
+        },
+        {
+          "id": "doomgaze",
+          "label": "doomgaze"
+        },
+        {
+          "id": "doskpop",
+          "label": "doskpop"
+        },
+        {
+          "id": "downtempo",
+          "label": "downtempo"
+        },
+        {
+          "id": "downtempo_deathcore",
+          "label": "downtempo deathcore"
+        },
+        {
+          "id": "dream_pop",
+          "label": "dream pop"
+        },
+        {
+          "id": "dream_trance",
+          "label": "dream trance"
+        },
+        {
+          "id": "dreampunk",
+          "label": "dreampunk"
+        },
+        {
+          "id": "dreamwave",
+          "label": "dreamwave"
+        },
+        {
+          "id": "drift_phonk",
+          "label": "drift phonk"
+        },
+        {
+          "id": "drill",
+          "label": "drill"
+        },
+        {
+          "id": "drill_and_bass",
+          "label": "drill and bass"
+        },
+        {
+          "id": "drinking_song",
+          "label": "drinking song"
+        },
+        {
+          "id": "drone",
+          "label": "drone"
+        },
+        {
+          "id": "drone_metal",
+          "label": "drone metal"
+        },
+        {
+          "id": "drum_and_bass",
+          "label": "drum and bass"
+        },
+        {
+          "id": "drum_and_bugle_corps",
+          "label": "drum and bugle corps"
+        },
+        {
+          "id": "drumfunk",
+          "label": "drumfunk"
+        },
+        {
+          "id": "drumless_hip_hop",
+          "label": "drumless hip hop"
+        },
+        {
+          "id": "drumline",
+          "label": "drumline"
+        },
+        {
+          "id": "drumstep",
+          "label": "drumstep"
+        },
+        {
+          "id": "dub",
+          "label": "dub"
+        },
+        {
+          "id": "dub_poetry",
+          "label": "dub poetry"
+        },
+        {
+          "id": "dub_techno",
+          "label": "dub techno"
+        },
+        {
+          "id": "dubstep",
+          "label": "dubstep"
+        },
+        {
+          "id": "dubstyle",
+          "label": "dubstyle"
+        },
+        {
+          "id": "dubwise",
+          "label": "dubwise"
+        },
+        {
+          "id": "duma",
+          "label": "duma"
+        },
+        {
+          "id": "dunedin_sound",
+          "label": "dunedin sound"
+        },
+        {
+          "id": "dungeon_chip",
+          "label": "dungeon chip"
+        },
+        {
+          "id": "dungeon_rap",
+          "label": "dungeon rap"
+        },
+        {
+          "id": "dungeon_sound",
+          "label": "dungeon sound"
+        },
+        {
+          "id": "dungeon_synth",
+          "label": "dungeon synth"
+        },
+        {
+          "id": "duranguense",
+          "label": "duranguense"
+        },
+        {
+          "id": "dutch_house",
+          "label": "dutch house"
+        },
+        {
+          "id": "eai",
+          "label": "eai"
+        },
+        {
+          "id": "early_hardstyle",
+          "label": "early hardstyle"
+        },
+        {
+          "id": "east_coast_hip_hop",
+          "label": "east coast hip hop"
+        },
+        {
+          "id": "eastern_style_polka",
+          "label": "eastern-style polka"
+        },
+        {
+          "id": "easy_listening",
+          "label": "easy listening"
+        },
+        {
+          "id": "easycore",
+          "label": "easycore"
+        },
+        {
+          "id": "ebm",
+          "label": "ebm"
+        },
+        {
+          "id": "eccojams",
+          "label": "eccojams"
+        },
+        {
+          "id": "edm",
+          "label": "edm"
+        },
+        {
+          "id": "electric_blues",
+          "label": "electric blues"
+        },
+        {
+          "id": "electric_texas_blues",
+          "label": "electric texas blues"
+        },
+        {
+          "id": "electro",
+          "label": "electro"
+        },
+        {
+          "id": "electro_hop",
+          "label": "electro hop"
+        },
+        {
+          "id": "electro_house",
+          "label": "electro house"
+        },
+        {
+          "id": "electro_latino",
+          "label": "electro latino"
+        },
+        {
+          "id": "electro_swing",
+          "label": "electro swing"
+        },
+        {
+          "id": "electro_trance",
+          "label": "electro trance"
+        },
+        {
+          "id": "electro_disco",
+          "label": "electro-disco"
+        },
+        {
+          "id": "electro_funk",
+          "label": "electro-funk"
+        },
+        {
+          "id": "electro_industrial",
+          "label": "electro-industrial"
+        },
+        {
+          "id": "electroacoustic",
+          "label": "electroacoustic"
+        },
+        {
+          "id": "electroclash",
+          "label": "electroclash"
+        },
+        {
+          "id": "electronic",
+          "label": "electronic"
+        },
+        {
+          "id": "electronic_rock",
+          "label": "electronic rock"
+        },
+        {
+          "id": "electronica",
+          "label": "electronica"
+        },
+        {
+          "id": "electronicore",
+          "label": "electronicore"
+        },
+        {
+          "id": "electropop",
+          "label": "electropop"
+        },
+        {
+          "id": "electropunk",
+          "label": "electropunk"
+        },
+        {
+          "id": "electrotango",
+          "label": "electrotango"
+        },
+        {
+          "id": "eleki",
+          "label": "eleki"
+        },
+        {
+          "id": "eletrofunk",
+          "label": "eletrofunk"
+        },
+        {
+          "id": "embolada",
+          "label": "embolada"
+        },
+        {
+          "id": "emo",
+          "label": "emo"
+        },
+        {
+          "id": "emo_pop",
+          "label": "emo pop"
+        },
+        {
+          "id": "emo_rap",
+          "label": "emo rap"
+        },
+        {
+          "id": "emocore",
+          "label": "emocore"
+        },
+        {
+          "id": "emoviolence",
+          "label": "emoviolence"
+        },
+        {
+          "id": "english_pastoral_school",
+          "label": "english pastoral school"
+        },
+        {
+          "id": "enka",
+          "label": "enka"
+        },
+        {
+          "id": "epic_collage",
+          "label": "epic collage"
+        },
+        {
+          "id": "epic_doom_metal",
+          "label": "epic doom metal"
+        },
+        {
+          "id": "epic_house",
+          "label": "epic house"
+        },
+        {
+          "id": "estrada",
+          "label": "estrada"
+        },
+        {
+          "id": "ethereal_wave",
+          "label": "ethereal wave"
+        },
+        {
+          "id": "ethio_jazz",
+          "label": "ethio-jazz"
+        },
+        {
+          "id": "euphoric_hardstyle",
+          "label": "euphoric hardstyle"
+        },
+        {
+          "id": "euro_house",
+          "label": "euro house"
+        },
+        {
+          "id": "euro_disco",
+          "label": "euro-disco"
+        },
+        {
+          "id": "euro_trance",
+          "label": "euro-trance"
+        },
+        {
+          "id": "eurobeat",
+          "label": "eurobeat"
+        },
+        {
+          "id": "eurodance",
+          "label": "eurodance"
+        },
+        {
+          "id": "europop",
+          "label": "europop"
+        },
+        {
+          "id": "euskal_kantagintza_berria",
+          "label": "euskal kantagintza berria"
+        },
+        {
+          "id": "exotica",
+          "label": "exotica"
+        },
+        {
+          "id": "experimental",
+          "label": "experimental"
+        },
+        {
+          "id": "experimental_big_band",
+          "label": "experimental big band"
+        },
+        {
+          "id": "experimental_electronic",
+          "label": "experimental electronic"
+        },
+        {
+          "id": "experimental_hip_hop",
+          "label": "experimental hip hop"
+        },
+        {
+          "id": "experimental_rock",
+          "label": "experimental rock"
+        },
+        {
+          "id": "expressionism",
+          "label": "expressionism"
+        },
+        {
+          "id": "extratone",
+          "label": "extratone"
+        },
+        {
+          "id": "fado",
+          "label": "fado"
+        },
+        {
+          "id": "fado_de_coimbra",
+          "label": "fado de coimbra"
+        },
+        {
+          "id": "fairy_tale",
+          "label": "fairy tale"
+        },
+        {
+          "id": "fakaseasea",
+          "label": "fakaseasea"
+        },
+        {
+          "id": "falak",
+          "label": "falak"
+        },
+        {
+          "id": "famo",
+          "label": "famo"
+        },
+        {
+          "id": "fandango",
+          "label": "fandango"
+        },
+        {
+          "id": "fandango_caicara",
+          "label": "fandango caiçara"
+        },
+        {
+          "id": "fantasia",
+          "label": "fantasia"
+        },
+        {
+          "id": "fantezi",
+          "label": "fantezi"
+        },
+        {
+          "id": "festejo",
+          "label": "festejo"
+        },
+        {
+          "id": "festival_progressive_house",
+          "label": "festival progressive house"
+        },
+        {
+          "id": "festival_trap",
+          "label": "festival trap"
+        },
+        {
+          "id": "fidget_house",
+          "label": "fidget house"
+        },
+        {
+          "id": "field_recording",
+          "label": "field recording"
+        },
+        {
+          "id": "fife_and_drum",
+          "label": "fife and drum"
+        },
+        {
+          "id": "fife_and_drum_blues",
+          "label": "fife and drum blues"
+        },
+        {
+          "id": "fijiri",
+          "label": "fijiri"
+        },
+        {
+          "id": "filin",
+          "label": "filin"
+        },
+        {
+          "id": "filipino_rondalla",
+          "label": "filipino rondalla"
+        },
+        {
+          "id": "filk",
+          "label": "filk"
+        },
+        {
+          "id": "filmi",
+          "label": "filmi"
+        },
+        {
+          "id": "finnish_tango",
+          "label": "finnish tango"
+        },
+        {
+          "id": "flamenco",
+          "label": "flamenco"
+        },
+        {
+          "id": "flamenco_jazz",
+          "label": "flamenco jazz"
+        },
+        {
+          "id": "flamenco_pop",
+          "label": "flamenco pop"
+        },
+        {
+          "id": "flashcore",
+          "label": "flashcore"
+        },
+        {
+          "id": "flex_dance_music",
+          "label": "flex dance music"
+        },
+        {
+          "id": "florida_breaks",
+          "label": "florida breaks"
+        },
+        {
+          "id": "fm_synthesis",
+          "label": "fm synthesis"
+        },
+        {
+          "id": "folk",
+          "label": "folk"
+        },
+        {
+          "id": "folk_metal",
+          "label": "folk metal"
+        },
+        {
+          "id": "folk_pop",
+          "label": "folk pop"
+        },
+        {
+          "id": "folk_punk",
+          "label": "folk punk"
+        },
+        {
+          "id": "folk_rock",
+          "label": "folk rock"
+        },
+        {
+          "id": "folkhop",
+          "label": "folkhop"
+        },
+        {
+          "id": "folktronica",
+          "label": "folktronica"
+        },
+        {
+          "id": "fon_leb",
+          "label": "fon leb"
+        },
+        {
+          "id": "football_chant",
+          "label": "football chant"
+        },
+        {
+          "id": "footwork",
+          "label": "footwork"
+        },
+        {
+          "id": "footwork_jungle",
+          "label": "footwork jungle"
+        },
+        {
+          "id": "forest_psytrance",
+          "label": "forest psytrance"
+        },
+        {
+          "id": "forro",
+          "label": "forró"
+        },
+        {
+          "id": "forro_de_favela",
+          "label": "forró de favela"
+        },
+        {
+          "id": "forro_eletronico",
+          "label": "forró eletrônico"
+        },
+        {
+          "id": "forro_universitario",
+          "label": "forró universitário"
+        },
+        {
+          "id": "frapcore",
+          "label": "frapcore"
+        },
+        {
+          "id": "frat_rap",
+          "label": "frat rap"
+        },
+        {
+          "id": "frat_rock",
+          "label": "frat rock"
+        },
+        {
+          "id": "freak_folk",
+          "label": "freak folk"
+        },
+        {
+          "id": "freakbeat",
+          "label": "freakbeat"
+        },
+        {
+          "id": "free_car_music",
+          "label": "free car music"
+        },
+        {
+          "id": "free_folk",
+          "label": "free folk"
+        },
+        {
+          "id": "free_funk",
+          "label": "free funk"
+        },
+        {
+          "id": "free_improvisation",
+          "label": "free improvisation"
+        },
+        {
+          "id": "free_jazz",
+          "label": "free jazz"
+        },
+        {
+          "id": "free_tekno",
+          "label": "free tekno"
+        },
+        {
+          "id": "freeform_hardcore",
+          "label": "freeform hardcore"
+        },
+        {
+          "id": "freestyle",
+          "label": "freestyle"
+        },
+        {
+          "id": "french_electro",
+          "label": "french electro"
+        },
+        {
+          "id": "french_house",
+          "label": "french house"
+        },
+        {
+          "id": "frenchcore",
+          "label": "frenchcore"
+        },
+        {
+          "id": "frevo",
+          "label": "frevo"
+        },
+        {
+          "id": "frevo_de_bloco",
+          "label": "frevo de bloco"
+        },
+        {
+          "id": "frevo_de_rua",
+          "label": "frevo de rua"
+        },
+        {
+          "id": "frevo_eletrico",
+          "label": "frevo elétrico"
+        },
+        {
+          "id": "frevo_cancao",
+          "label": "frevo-canção"
+        },
+        {
+          "id": "fugue",
+          "label": "fugue"
+        },
+        {
+          "id": "fuji",
+          "label": "fuji"
+        },
+        {
+          "id": "full_on",
+          "label": "full-on"
+        },
+        {
+          "id": "funana",
+          "label": "funaná"
+        },
+        {
+          "id": "funeral_doom_metal",
+          "label": "funeral doom metal"
+        },
+        {
+          "id": "funeral_march",
+          "label": "funeral march"
+        },
+        {
+          "id": "fungi",
+          "label": "fungi"
+        },
+        {
+          "id": "funk",
+          "label": "funk"
+        },
+        {
+          "id": "funk_automotivo",
+          "label": "funk automotivo"
+        },
+        {
+          "id": "funk_brasileiro",
+          "label": "funk brasileiro"
+        },
+        {
+          "id": "funk_carioca",
+          "label": "funk carioca"
+        },
+        {
+          "id": "funk_consciente",
+          "label": "funk consciente"
+        },
+        {
+          "id": "funk_de_bh",
+          "label": "funk de bh"
+        },
+        {
+          "id": "funk_mandelao",
+          "label": "funk mandelão"
+        },
+        {
+          "id": "funk_melody",
+          "label": "funk melody"
+        },
+        {
+          "id": "funk_metal",
+          "label": "funk metal"
+        },
+        {
+          "id": "funk_ostentacao",
+          "label": "funk ostentação"
+        },
+        {
+          "id": "funk_proibidao",
+          "label": "funk proibidão"
+        },
+        {
+          "id": "funk_rock",
+          "label": "funk rock"
+        },
+        {
+          "id": "funknejo",
+          "label": "funknejo"
+        },
+        {
+          "id": "funkot",
+          "label": "funkot"
+        },
+        {
+          "id": "funktronica",
+          "label": "funktronica"
+        },
+        {
+          "id": "funky_breaks",
+          "label": "funky breaks"
+        },
+        {
+          "id": "funky_house",
+          "label": "funky house"
+        },
+        {
+          "id": "fusion_gugak",
+          "label": "fusion gugak"
+        },
+        {
+          "id": "future_bass",
+          "label": "future bass"
+        },
+        {
+          "id": "future_bounce",
+          "label": "future bounce"
+        },
+        {
+          "id": "future_core",
+          "label": "future core"
+        },
+        {
+          "id": "future_funk",
+          "label": "future funk"
+        },
+        {
+          "id": "future_garage",
+          "label": "future garage"
+        },
+        {
+          "id": "future_house",
+          "label": "future house"
+        },
+        {
+          "id": "future_rave",
+          "label": "future rave"
+        },
+        {
+          "id": "future_riddim",
+          "label": "future riddim"
+        },
+        {
+          "id": "futurepop",
+          "label": "futurepop"
+        },
+        {
+          "id": "futurism",
+          "label": "futurism"
+        },
+        {
+          "id": "g_funk",
+          "label": "g-funk"
+        },
+        {
+          "id": "g_house",
+          "label": "g-house"
+        },
+        {
+          "id": "gaana",
+          "label": "gaana"
+        },
+        {
+          "id": "gabber",
+          "label": "gabber"
+        },
+        {
+          "id": "gaelic_psalm_singing",
+          "label": "gaelic psalm singing"
+        },
+        {
+          "id": "gagaku",
+          "label": "gagaku"
+        },
+        {
+          "id": "gagok",
+          "label": "gagok"
+        },
+        {
+          "id": "gaita_zuliana",
+          "label": "gaita zuliana"
+        },
+        {
+          "id": "gallican_chant",
+          "label": "gallican chant"
+        },
+        {
+          "id": "gambang_kromong",
+          "label": "gambang kromong"
+        },
+        {
+          "id": "gamelan",
+          "label": "gamelan"
+        },
+        {
+          "id": "gamelan_angklung",
+          "label": "gamelan angklung"
+        },
+        {
+          "id": "gamelan_beleganjur",
+          "label": "gamelan beleganjur"
+        },
+        {
+          "id": "gamelan_degung",
+          "label": "gamelan degung"
+        },
+        {
+          "id": "gamelan_gender_wayang",
+          "label": "gamelan gender wayang"
+        },
+        {
+          "id": "gamelan_gong_gede",
+          "label": "gamelan gong gede"
+        },
+        {
+          "id": "gamelan_gong_kebyar",
+          "label": "gamelan gong kebyar"
+        },
+        {
+          "id": "gamelan_jegog",
+          "label": "gamelan jegog"
+        },
+        {
+          "id": "gamelan_joged_bumbung",
+          "label": "gamelan joged bumbung"
+        },
+        {
+          "id": "gamelan_salendro",
+          "label": "gamelan salendro"
+        },
+        {
+          "id": "gamelan_sekaten",
+          "label": "gamelan sekaten"
+        },
+        {
+          "id": "gamelan_selunding",
+          "label": "gamelan selunding"
+        },
+        {
+          "id": "gamelan_semar_pegulingan",
+          "label": "gamelan semar pegulingan"
+        },
+        {
+          "id": "gamelan_siteran",
+          "label": "gamelan siteran"
+        },
+        {
+          "id": "gamelan_surakarta",
+          "label": "gamelan surakarta"
+        },
+        {
+          "id": "gangsta_rap",
+          "label": "gangsta rap"
+        },
+        {
+          "id": "garage_house",
+          "label": "garage house"
+        },
+        {
+          "id": "garage_psych",
+          "label": "garage psych"
+        },
+        {
+          "id": "garage_punk",
+          "label": "garage punk"
+        },
+        {
+          "id": "garage_rock",
+          "label": "garage rock"
+        },
+        {
+          "id": "garage_rock_revival",
+          "label": "garage rock revival"
+        },
+        {
+          "id": "garba",
+          "label": "garba"
+        },
+        {
+          "id": "geek_rock",
+          "label": "geek rock"
+        },
+        {
+          "id": "genge",
+          "label": "genge"
+        },
+        {
+          "id": "gengetone",
+          "label": "gengetone"
+        },
+        {
+          "id": "ghazal",
+          "label": "ghazal"
+        },
+        {
+          "id": "ghetto_funk",
+          "label": "ghetto funk"
+        },
+        {
+          "id": "ghetto_house",
+          "label": "ghetto house"
+        },
+        {
+          "id": "ghettotech",
+          "label": "ghettotech"
+        },
+        {
+          "id": "ginan",
+          "label": "ginan"
+        },
+        {
+          "id": "glam",
+          "label": "glam"
+        },
+        {
+          "id": "glam_metal",
+          "label": "glam metal"
+        },
+        {
+          "id": "glam_punk",
+          "label": "glam punk"
+        },
+        {
+          "id": "glam_rock",
+          "label": "glam rock"
+        },
+        {
+          "id": "glitch",
+          "label": "glitch"
+        },
+        {
+          "id": "glitch_hop",
+          "label": "glitch hop"
+        },
+        {
+          "id": "glitch_hop_edm",
+          "label": "glitch hop edm"
+        },
+        {
+          "id": "glitch_pop",
+          "label": "glitch pop"
+        },
+        {
+          "id": "gnawa",
+          "label": "gnawa"
+        },
+        {
+          "id": "go_go",
+          "label": "go-go"
+        },
+        {
+          "id": "goa_trance",
+          "label": "goa trance"
+        },
+        {
+          "id": "gommance",
+          "label": "gommance"
+        },
+        {
+          "id": "gondang",
+          "label": "gondang"
+        },
+        {
+          "id": "goombay",
+          "label": "goombay"
+        },
+        {
+          "id": "goregrind",
+          "label": "goregrind"
+        },
+        {
+          "id": "gorenoise",
+          "label": "gorenoise"
+        },
+        {
+          "id": "gospel",
+          "label": "gospel"
+        },
+        {
+          "id": "gospel_house",
+          "label": "gospel house"
+        },
+        {
+          "id": "gospel_hymn",
+          "label": "gospel hymn"
+        },
+        {
+          "id": "gospel_reggae",
+          "label": "gospel reggae"
+        },
+        {
+          "id": "gothic",
+          "label": "gothic"
+        },
+        {
+          "id": "gothic_country",
+          "label": "gothic country"
+        },
+        {
+          "id": "gothic_metal",
+          "label": "gothic metal"
+        },
+        {
+          "id": "gothic_rock",
+          "label": "gothic rock"
+        },
+        {
+          "id": "gqom",
+          "label": "gqom"
+        },
+        {
+          "id": "grand_opera",
+          "label": "grand opera"
+        },
+        {
+          "id": "graphical_sound",
+          "label": "graphical sound"
+        },
+        {
+          "id": "grebo",
+          "label": "grebo"
+        },
+        {
+          "id": "gregorian_chant",
+          "label": "gregorian chant"
+        },
+        {
+          "id": "grime",
+          "label": "grime"
+        },
+        {
+          "id": "grindcore",
+          "label": "grindcore"
+        },
+        {
+          "id": "griot",
+          "label": "griot"
+        },
+        {
+          "id": "groove_metal",
+          "label": "groove metal"
+        },
+        {
+          "id": "group_sounds",
+          "label": "group sounds"
+        },
+        {
+          "id": "grunge",
+          "label": "grunge"
+        },
+        {
+          "id": "grupera",
+          "label": "grupera"
+        },
+        {
+          "id": "gstanzl",
+          "label": "gstanzl"
+        },
+        {
+          "id": "guaguanco",
+          "label": "guaguancó"
+        },
+        {
+          "id": "guajira",
+          "label": "guajira"
+        },
+        {
+          "id": "guangdong_yinyue",
+          "label": "guangdong yinyue"
+        },
+        {
+          "id": "guaracha",
+          "label": "guaracha"
+        },
+        {
+          "id": "guaracha_edm",
+          "label": "guaracha edm"
+        },
+        {
+          "id": "guaracha_santiaguena",
+          "label": "guaracha santiagueña"
+        },
+        {
+          "id": "guarania",
+          "label": "guarania"
+        },
+        {
+          "id": "guayla",
+          "label": "guayla"
+        },
+        {
+          "id": "gufeng",
+          "label": "gufeng"
+        },
+        {
+          "id": "guggenmusik",
+          "label": "guggenmusik"
+        },
+        {
+          "id": "guided_meditation",
+          "label": "guided meditation"
+        },
+        {
+          "id": "guitarrada",
+          "label": "guitarrada"
+        },
+        {
+          "id": "gumbe",
+          "label": "gumbe"
+        },
+        {
+          "id": "guoyue",
+          "label": "guoyue"
+        },
+        {
+          "id": "gwo_ka",
+          "label": "gwo ka"
+        },
+        {
+          "id": "gypsy_jazz",
+          "label": "gypsy jazz"
+        },
+        {
+          "id": "gypsy_punk",
+          "label": "gypsy punk"
+        },
+        {
+          "id": "genero_chico",
+          "label": "género chico"
+        },
+        {
+          "id": "genero_grande",
+          "label": "género grande"
+        },
+        {
+          "id": "g_ana",
+          "label": "għana"
+        },
+        {
+          "id": "habanera",
+          "label": "habanera"
+        },
+        {
+          "id": "haitian_vodou_drumming",
+          "label": "haitian vodou drumming"
+        },
+        {
+          "id": "halftime",
+          "label": "halftime"
+        },
+        {
+          "id": "hambo",
+          "label": "hambo"
+        },
+        {
+          "id": "hamburger_schule",
+          "label": "hamburger schule"
+        },
+        {
+          "id": "hands_up",
+          "label": "hands up"
+        },
+        {
+          "id": "hanmai",
+          "label": "hanmai"
+        },
+        {
+          "id": "haozi",
+          "label": "haozi"
+        },
+        {
+          "id": "hapa_haole",
+          "label": "hapa haole"
+        },
+        {
+          "id": "happy_hardcore",
+          "label": "happy hardcore"
+        },
+        {
+          "id": "harana",
+          "label": "harana"
+        },
+        {
+          "id": "harawi",
+          "label": "harawi"
+        },
+        {
+          "id": "hard_beat",
+          "label": "hard beat"
+        },
+        {
+          "id": "hard_bop",
+          "label": "hard bop"
+        },
+        {
+          "id": "hard_drum",
+          "label": "hard drum"
+        },
+        {
+          "id": "hard_house",
+          "label": "hard house"
+        },
+        {
+          "id": "hard_nrg",
+          "label": "hard nrg"
+        },
+        {
+          "id": "hard_renaissance",
+          "label": "hard renaissance"
+        },
+        {
+          "id": "hard_rock",
+          "label": "hard rock"
+        },
+        {
+          "id": "hard_techno",
+          "label": "hard techno"
+        },
+        {
+          "id": "hard_trance",
+          "label": "hard trance"
+        },
+        {
+          "id": "hard_trap",
+          "label": "hard trap"
+        },
+        {
+          "id": "hardbag",
+          "label": "hardbag"
+        },
+        {
+          "id": "hardbass",
+          "label": "hardbass"
+        },
+        {
+          "id": "hardcore_breaks",
+          "label": "hardcore breaks"
+        },
+        {
+          "id": "hardcore_hip_hop",
+          "label": "hardcore hip hop"
+        },
+        {
+          "id": "hardcore_punk",
+          "label": "hardcore punk"
+        },
+        {
+          "id": "hardcore_techno",
+          "label": "hardcore techno"
+        },
+        {
+          "id": "hardgroove_techno",
+          "label": "hardgroove techno"
+        },
+        {
+          "id": "hardstep",
+          "label": "hardstep"
+        },
+        {
+          "id": "hardstyle",
+          "label": "hardstyle"
+        },
+        {
+          "id": "hardtekk",
+          "label": "hardtekk"
+        },
+        {
+          "id": "hardvapour",
+          "label": "hardvapour"
+        },
+        {
+          "id": "hardwave",
+          "label": "hardwave"
+        },
+        {
+          "id": "harsh_noise",
+          "label": "harsh noise"
+        },
+        {
+          "id": "harsh_noise_wall",
+          "label": "harsh noise wall"
+        },
+        {
+          "id": "hauntology",
+          "label": "hauntology"
+        },
+        {
+          "id": "heartland_rock",
+          "label": "heartland rock"
+        },
+        {
+          "id": "heaven_trap",
+          "label": "heaven trap"
+        },
+        {
+          "id": "heavy_metal",
+          "label": "heavy metal"
+        },
+        {
+          "id": "heavy_psych",
+          "label": "heavy psych"
+        },
+        {
+          "id": "heikyoku",
+          "label": "heikyoku"
+        },
+        {
+          "id": "henan_opera",
+          "label": "henan opera"
+        },
+        {
+          "id": "hexd",
+          "label": "hexd"
+        },
+        {
+          "id": "hi_nrg",
+          "label": "hi-nrg"
+        },
+        {
+          "id": "hi_tech",
+          "label": "hi-tech"
+        },
+        {
+          "id": "hi_tech_full_on",
+          "label": "hi-tech full-on"
+        },
+        {
+          "id": "highlife",
+          "label": "highlife"
+        },
+        {
+          "id": "hill_country_blues",
+          "label": "hill country blues"
+        },
+        {
+          "id": "himene_tarava",
+          "label": "himene tarava"
+        },
+        {
+          "id": "hindustani_classical",
+          "label": "hindustani classical"
+        },
+        {
+          "id": "hip_hop_soul",
+          "label": "hip hop soul"
+        },
+        {
+          "id": "hip_house",
+          "label": "hip house"
+        },
+        {
+          "id": "hipco",
+          "label": "hipco"
+        },
+        {
+          "id": "hiplife",
+          "label": "hiplife"
+        },
+        {
+          "id": "holy_minimalism",
+          "label": "holy minimalism"
+        },
+        {
+          "id": "honky_tonk",
+          "label": "honky tonk"
+        },
+        {
+          "id": "honkyoku",
+          "label": "honkyoku"
+        },
+        {
+          "id": "hopepunk",
+          "label": "hopepunk"
+        },
+        {
+          "id": "hornpipe",
+          "label": "hornpipe"
+        },
+        {
+          "id": "horror_punk",
+          "label": "horror punk"
+        },
+        {
+          "id": "horror_synth",
+          "label": "horror synth"
+        },
+        {
+          "id": "horrorcore",
+          "label": "horrorcore"
+        },
+        {
+          "id": "hot_rod_music",
+          "label": "hot rod music"
+        },
+        {
+          "id": "house",
+          "label": "house"
+        },
+        {
+          "id": "houston_sound",
+          "label": "houston sound"
+        },
+        {
+          "id": "huapango",
+          "label": "huapango"
+        },
+        {
+          "id": "huaylarsh",
+          "label": "huaylarsh"
+        },
+        {
+          "id": "huayno",
+          "label": "huayno"
+        },
+        {
+          "id": "humppa",
+          "label": "humppa"
+        },
+        {
+          "id": "hungarian_folk",
+          "label": "hungarian folk"
+        },
+        {
+          "id": "hyangak",
+          "label": "hyangak"
+        },
+        {
+          "id": "hybrid_trap",
+          "label": "hybrid trap"
+        },
+        {
+          "id": "hyper_techno",
+          "label": "hyper techno"
+        },
+        {
+          "id": "hyperpop",
+          "label": "hyperpop"
+        },
+        {
+          "id": "hypertechno",
+          "label": "hypertechno"
+        },
+        {
+          "id": "hyphy",
+          "label": "hyphy"
+        },
+        {
+          "id": "hypnagogic_pop",
+          "label": "hypnagogic pop"
+        },
+        {
+          "id": "hat_tuong",
+          "label": "hát tuồng"
+        },
+        {
+          "id": "iavnana",
+          "label": "iavnana"
+        },
+        {
+          "id": "idm",
+          "label": "idm"
+        },
+        {
+          "id": "idol_kayo",
+          "label": "idol kayō"
+        },
+        {
+          "id": "illbient",
+          "label": "illbient"
+        },
+        {
+          "id": "impressionism",
+          "label": "impressionism"
+        },
+        {
+          "id": "impromptu",
+          "label": "impromptu"
+        },
+        {
+          "id": "indeterminacy",
+          "label": "indeterminacy"
+        },
+        {
+          "id": "indian_classical",
+          "label": "indian classical"
+        },
+        {
+          "id": "indian_pop",
+          "label": "indian pop"
+        },
+        {
+          "id": "indie_folk",
+          "label": "indie folk"
+        },
+        {
+          "id": "indie_pop",
+          "label": "indie pop"
+        },
+        {
+          "id": "indie_rock",
+          "label": "indie rock"
+        },
+        {
+          "id": "indie_surf",
+          "label": "indie surf"
+        },
+        {
+          "id": "indietronica",
+          "label": "indietronica"
+        },
+        {
+          "id": "indo_jazz",
+          "label": "indo jazz"
+        },
+        {
+          "id": "indorock",
+          "label": "indorock"
+        },
+        {
+          "id": "industrial",
+          "label": "industrial"
+        },
+        {
+          "id": "industrial_folk_song",
+          "label": "industrial folk song"
+        },
+        {
+          "id": "industrial_hardcore",
+          "label": "industrial hardcore"
+        },
+        {
+          "id": "industrial_hip_hop",
+          "label": "industrial hip hop"
+        },
+        {
+          "id": "industrial_metal",
+          "label": "industrial metal"
+        },
+        {
+          "id": "industrial_musical",
+          "label": "industrial musical"
+        },
+        {
+          "id": "industrial_rock",
+          "label": "industrial rock"
+        },
+        {
+          "id": "industrial_techno",
+          "label": "industrial techno"
+        },
+        {
+          "id": "instrumental",
+          "label": "instrumental"
+        },
+        {
+          "id": "instrumental_hip_hop",
+          "label": "instrumental hip hop"
+        },
+        {
+          "id": "instrumental_jazz",
+          "label": "instrumental jazz"
+        },
+        {
+          "id": "instrumental_rock",
+          "label": "instrumental rock"
+        },
+        {
+          "id": "integral_serialism",
+          "label": "integral serialism"
+        },
+        {
+          "id": "interview",
+          "label": "interview"
+        },
+        {
+          "id": "iraqi_maqam",
+          "label": "iraqi maqam"
+        },
+        {
+          "id": "irish_folk",
+          "label": "irish folk"
+        },
+        {
+          "id": "isa",
+          "label": "isa"
+        },
+        {
+          "id": "isicathamiya",
+          "label": "isicathamiya"
+        },
+        {
+          "id": "islamic_modal_music",
+          "label": "islamic modal music"
+        },
+        {
+          "id": "italo_dance",
+          "label": "italo dance"
+        },
+        {
+          "id": "italo_house",
+          "label": "italo house"
+        },
+        {
+          "id": "italo_disco",
+          "label": "italo-disco"
+        },
+        {
+          "id": "izlan",
+          "label": "izlan"
+        },
+        {
+          "id": "izvorna_bosanska_muzika",
+          "label": "izvorna bosanska muzika"
+        },
+        {
+          "id": "j_core",
+          "label": "j-core"
+        },
+        {
+          "id": "j_euro",
+          "label": "j-euro"
+        },
+        {
+          "id": "j_pop",
+          "label": "j-pop"
+        },
+        {
+          "id": "j_rock",
+          "label": "j-rock"
+        },
+        {
+          "id": "jackin_house",
+          "label": "jackin house"
+        },
+        {
+          "id": "jaipongan",
+          "label": "jaipongan"
+        },
+        {
+          "id": "jam_band",
+          "label": "jam band"
+        },
+        {
+          "id": "jamaican_ska",
+          "label": "jamaican ska"
+        },
+        {
+          "id": "james_bay_fiddling",
+          "label": "james bay fiddling"
+        },
+        {
+          "id": "jamgrass",
+          "label": "jamgrass"
+        },
+        {
+          "id": "jangle_pop",
+          "label": "jangle pop"
+        },
+        {
+          "id": "japanese_classical",
+          "label": "japanese classical"
+        },
+        {
+          "id": "javanese_gamelan",
+          "label": "javanese gamelan"
+        },
+        {
+          "id": "jawaiian",
+          "label": "jawaiian"
+        },
+        {
+          "id": "jazz_blues",
+          "label": "jazz blues"
+        },
+        {
+          "id": "jazz_fusion",
+          "label": "jazz fusion"
+        },
+        {
+          "id": "jazz_guachaca",
+          "label": "jazz guachaca"
+        },
+        {
+          "id": "jazz_house",
+          "label": "jazz house"
+        },
+        {
+          "id": "jazz_mugham",
+          "label": "jazz mugham"
+        },
+        {
+          "id": "jazz_poetry",
+          "label": "jazz poetry"
+        },
+        {
+          "id": "jazz_pop",
+          "label": "jazz pop"
+        },
+        {
+          "id": "jazz_rap",
+          "label": "jazz rap"
+        },
+        {
+          "id": "jazz_rock",
+          "label": "jazz rock"
+        },
+        {
+          "id": "jazz_funk",
+          "label": "jazz-funk"
+        },
+        {
+          "id": "jazzstep",
+          "label": "jazzstep"
+        },
+        {
+          "id": "jeongak",
+          "label": "jeongak"
+        },
+        {
+          "id": "jerk",
+          "label": "jerk"
+        },
+        {
+          "id": "jerk_rap",
+          "label": "jerk rap"
+        },
+        {
+          "id": "jersey_club",
+          "label": "jersey club"
+        },
+        {
+          "id": "jersey_club_rap",
+          "label": "jersey club rap"
+        },
+        {
+          "id": "jersey_drill",
+          "label": "jersey drill"
+        },
+        {
+          "id": "jersey_sound",
+          "label": "jersey sound"
+        },
+        {
+          "id": "jesus_music",
+          "label": "jesus music"
+        },
+        {
+          "id": "jiangnan_sizhu",
+          "label": "jiangnan sizhu"
+        },
+        {
+          "id": "jit",
+          "label": "jit"
+        },
+        {
+          "id": "jiuta",
+          "label": "jiuta"
+        },
+        {
+          "id": "joik",
+          "label": "joik"
+        },
+        {
+          "id": "jongo",
+          "label": "jongo"
+        },
+        {
+          "id": "joropo",
+          "label": "joropo"
+        },
+        {
+          "id": "jota",
+          "label": "jota"
+        },
+        {
+          "id": "jovem_guarda",
+          "label": "jovem guarda"
+        },
+        {
+          "id": "jubilee",
+          "label": "jubilee"
+        },
+        {
+          "id": "jug_band",
+          "label": "jug band"
+        },
+        {
+          "id": "juke",
+          "label": "juke"
+        },
+        {
+          "id": "jump_blues",
+          "label": "jump blues"
+        },
+        {
+          "id": "jump_up",
+          "label": "jump up"
+        },
+        {
+          "id": "jumpstyle",
+          "label": "jumpstyle"
+        },
+        {
+          "id": "jungle",
+          "label": "jungle"
+        },
+        {
+          "id": "jungle_dutch",
+          "label": "jungle dutch"
+        },
+        {
+          "id": "jungle_techno",
+          "label": "jungle techno"
+        },
+        {
+          "id": "jungle_terror",
+          "label": "jungle terror"
+        },
+        {
+          "id": "junkanoo",
+          "label": "junkanoo"
+        },
+        {
+          "id": "jacara",
+          "label": "jácara"
+        },
+        {
+          "id": "juju",
+          "label": "jùjú"
+        },
+        {
+          "id": "joruri",
+          "label": "jōruri"
+        },
+        {
+          "id": "k_pop",
+          "label": "k-pop"
+        },
+        {
+          "id": "kabarett",
+          "label": "kabarett"
+        },
+        {
+          "id": "kacapi_suling",
+          "label": "kacapi suling"
+        },
+        {
+          "id": "kadongo_kamu",
+          "label": "kadongo kamu"
+        },
+        {
+          "id": "kafi",
+          "label": "kafi"
+        },
+        {
+          "id": "kagura",
+          "label": "kagura"
+        },
+        {
+          "id": "kai",
+          "label": "kai"
+        },
+        {
+          "id": "kakawin",
+          "label": "kakawin"
+        },
+        {
+          "id": "kalattut",
+          "label": "kalattut"
+        },
+        {
+          "id": "kalindula",
+          "label": "kalindula"
+        },
+        {
+          "id": "kalon_ny_fahiny",
+          "label": "kalon'ny fahiny"
+        },
+        {
+          "id": "kan_ha_diskan",
+          "label": "kan ha diskan"
+        },
+        {
+          "id": "kaneka",
+          "label": "kaneka"
+        },
+        {
+          "id": "kankyo_ongaku",
+          "label": "kankyō ongaku"
+        },
+        {
+          "id": "kantan_chamorrita",
+          "label": "kantan chamorrita"
+        },
+        {
+          "id": "kanto",
+          "label": "kanto"
+        },
+        {
+          "id": "kantruem",
+          "label": "kantruem"
+        },
+        {
+          "id": "kapuka",
+          "label": "kapuka"
+        },
+        {
+          "id": "kaseko",
+          "label": "kaseko"
+        },
+        {
+          "id": "kawaii_future_bass",
+          "label": "kawaii future bass"
+        },
+        {
+          "id": "kawaii_metal",
+          "label": "kawaii metal"
+        },
+        {
+          "id": "kayokyoku",
+          "label": "kayōkyoku"
+        },
+        {
+          "id": "kecak",
+          "label": "kecak"
+        },
+        {
+          "id": "keller_synth",
+          "label": "keller synth"
+        },
+        {
+          "id": "keroncong",
+          "label": "keroncong"
+        },
+        {
+          "id": "kete",
+          "label": "kete"
+        },
+        {
+          "id": "ketuk_tilu",
+          "label": "ketuk tilu"
+        },
+        {
+          "id": "khrueang_sai",
+          "label": "khrueang sai"
+        },
+        {
+          "id": "khyal",
+          "label": "khyal"
+        },
+        {
+          "id": "kidandali",
+          "label": "kidandali"
+        },
+        {
+          "id": "kidumbak",
+          "label": "kidumbak"
+        },
+        {
+          "id": "kilapanga",
+          "label": "kilapanga"
+        },
+        {
+          "id": "kirtan",
+          "label": "kirtan"
+        },
+        {
+          "id": "kizomba",
+          "label": "kizomba"
+        },
+        {
+          "id": "klapa",
+          "label": "klapa"
+        },
+        {
+          "id": "klasik",
+          "label": "klasik"
+        },
+        {
+          "id": "kleinkunst",
+          "label": "kleinkunst"
+        },
+        {
+          "id": "klezmer",
+          "label": "klezmer"
+        },
+        {
+          "id": "kliningan",
+          "label": "kliningan"
+        },
+        {
+          "id": "konnakol",
+          "label": "konnakol"
+        },
+        {
+          "id": "kontakion",
+          "label": "kontakion"
+        },
+        {
+          "id": "koplo",
+          "label": "koplo"
+        },
+        {
+          "id": "korean_ballad",
+          "label": "korean ballad"
+        },
+        {
+          "id": "korean_classical",
+          "label": "korean classical"
+        },
+        {
+          "id": "korean_revolutionary_opera",
+          "label": "korean revolutionary opera"
+        },
+        {
+          "id": "kouta",
+          "label": "kouta"
+        },
+        {
+          "id": "krakowiak",
+          "label": "krakowiak"
+        },
+        {
+          "id": "krautrock",
+          "label": "krautrock"
+        },
+        {
+          "id": "krushclub",
+          "label": "krushclub"
+        },
+        {
+          "id": "kreyol_djaz",
+          "label": "kréyol djaz"
+        },
+        {
+          "id": "kuda_lumping",
+          "label": "kuda lumping"
+        },
+        {
+          "id": "kuduro",
+          "label": "kuduro"
+        },
+        {
+          "id": "kujawiak",
+          "label": "kujawiak"
+        },
+        {
+          "id": "kulintang",
+          "label": "kulintang"
+        },
+        {
+          "id": "kumi_daiko",
+          "label": "kumi-daiko"
+        },
+        {
+          "id": "kumiuta",
+          "label": "kumiuta"
+        },
+        {
+          "id": "kundiman",
+          "label": "kundiman"
+        },
+        {
+          "id": "kunqu",
+          "label": "kunqu"
+        },
+        {
+          "id": "kwaito",
+          "label": "kwaito"
+        },
+        {
+          "id": "kwassa_kwassa",
+          "label": "kwassa kwassa"
+        },
+        {
+          "id": "kwela",
+          "label": "kwela"
+        },
+        {
+          "id": "kyivan_chant",
+          "label": "kyivan chant"
+        },
+        {
+          "id": "konsrock",
+          "label": "könsrock"
+        },
+        {
+          "id": "laiko",
+          "label": "laiko"
+        },
+        {
+          "id": "lambada",
+          "label": "lambada"
+        },
+        {
+          "id": "lando",
+          "label": "landó"
+        },
+        {
+          "id": "langgam_jawa",
+          "label": "langgam jawa"
+        },
+        {
+          "id": "latin",
+          "label": "latin"
+        },
+        {
+          "id": "latin_ballad",
+          "label": "latin ballad"
+        },
+        {
+          "id": "latin_disco",
+          "label": "latin disco"
+        },
+        {
+          "id": "latin_funk",
+          "label": "latin funk"
+        },
+        {
+          "id": "latin_house",
+          "label": "latin house"
+        },
+        {
+          "id": "latin_jazz",
+          "label": "latin jazz"
+        },
+        {
+          "id": "latin_pop",
+          "label": "latin pop"
+        },
+        {
+          "id": "latin_rock",
+          "label": "latin rock"
+        },
+        {
+          "id": "latin_soul",
+          "label": "latin soul"
+        },
+        {
+          "id": "lauda",
+          "label": "lauda"
+        },
+        {
+          "id": "lavani",
+          "label": "lavani"
+        },
+        {
+          "id": "lecture",
+          "label": "lecture"
+        },
+        {
+          "id": "leftfield",
+          "label": "leftfield"
+        },
+        {
+          "id": "lento_violento",
+          "label": "lento violento"
+        },
+        {
+          "id": "levenslied",
+          "label": "levenslied"
+        },
+        {
+          "id": "lied",
+          "label": "lied"
+        },
+        {
+          "id": "liedermacher",
+          "label": "liedermacher"
+        },
+        {
+          "id": "liquid_funk",
+          "label": "liquid funk"
+        },
+        {
+          "id": "liquid_riddim",
+          "label": "liquid riddim"
+        },
+        {
+          "id": "liscio",
+          "label": "liscio"
+        },
+        {
+          "id": "livetronica",
+          "label": "livetronica"
+        },
+        {
+          "id": "liwa",
+          "label": "liwa"
+        },
+        {
+          "id": "lo_fi_hip_hop",
+          "label": "lo-fi hip hop"
+        },
+        {
+          "id": "lo_fi_house",
+          "label": "lo-fi house"
+        },
+        {
+          "id": "lolicore",
+          "label": "lolicore"
+        },
+        {
+          "id": "loner_folk",
+          "label": "loner folk"
+        },
+        {
+          "id": "loud_kei",
+          "label": "loud kei"
+        },
+        {
+          "id": "louisiana_blues",
+          "label": "louisiana blues"
+        },
+        {
+          "id": "lounge",
+          "label": "lounge"
+        },
+        {
+          "id": "lovers_rock",
+          "label": "lovers rock"
+        },
+        {
+          "id": "lowend",
+          "label": "lowend"
+        },
+        {
+          "id": "lowercase",
+          "label": "lowercase"
+        },
+        {
+          "id": "luk_krung",
+          "label": "luk krung"
+        },
+        {
+          "id": "luk_thung",
+          "label": "luk thung"
+        },
+        {
+          "id": "lullaby",
+          "label": "lullaby"
+        },
+        {
+          "id": "lundu",
+          "label": "lundu"
+        },
+        {
+          "id": "lute_song",
+          "label": "lute song"
+        },
+        {
+          "id": "landlermusik",
+          "label": "ländlermusik"
+        },
+        {
+          "id": "machine_rock",
+          "label": "machine rock"
+        },
+        {
+          "id": "mad",
+          "label": "mad"
+        },
+        {
+          "id": "madchester",
+          "label": "madchester"
+        },
+        {
+          "id": "maddahi",
+          "label": "maddahi"
+        },
+        {
+          "id": "madrigal",
+          "label": "madrigal"
+        },
+        {
+          "id": "mafioso_rap",
+          "label": "mafioso rap"
+        },
+        {
+          "id": "maftirim",
+          "label": "maftirim"
+        },
+        {
+          "id": "mahori",
+          "label": "mahori"
+        },
+        {
+          "id": "mahraganat",
+          "label": "mahraganat"
+        },
+        {
+          "id": "mainstream_rock",
+          "label": "mainstream rock"
+        },
+        {
+          "id": "makina",
+          "label": "makina"
+        },
+        {
+          "id": "makossa",
+          "label": "makossa"
+        },
+        {
+          "id": "malaguena_venezolana",
+          "label": "malagueña venezolana"
+        },
+        {
+          "id": "malay_gamelan",
+          "label": "malay gamelan"
+        },
+        {
+          "id": "malhun",
+          "label": "malhun"
+        },
+        {
+          "id": "mallsoft",
+          "label": "mallsoft"
+        },
+        {
+          "id": "malouf",
+          "label": "malouf"
+        },
+        {
+          "id": "maloya",
+          "label": "maloya"
+        },
+        {
+          "id": "maloya_electronique",
+          "label": "maloya électronique"
+        },
+        {
+          "id": "maloya_elektrik",
+          "label": "maloya élektrik"
+        },
+        {
+          "id": "mambo",
+          "label": "mambo"
+        },
+        {
+          "id": "mambo_chileno",
+          "label": "mambo chileno"
+        },
+        {
+          "id": "mambo_urbano",
+          "label": "mambo urbano"
+        },
+        {
+          "id": "mandopop",
+          "label": "mandopop"
+        },
+        {
+          "id": "manele",
+          "label": "manele"
+        },
+        {
+          "id": "mangambeu",
+          "label": "mangambeu"
+        },
+        {
+          "id": "mangue_beat",
+          "label": "mangue beat"
+        },
+        {
+          "id": "manila_sound",
+          "label": "manila sound"
+        },
+        {
+          "id": "mantra",
+          "label": "mantra"
+        },
+        {
+          "id": "manyao",
+          "label": "manyao"
+        },
+        {
+          "id": "mappila",
+          "label": "mappila"
+        },
+        {
+          "id": "marabi",
+          "label": "marabi"
+        },
+        {
+          "id": "maracatu",
+          "label": "maracatu"
+        },
+        {
+          "id": "march",
+          "label": "march"
+        },
+        {
+          "id": "marching_band",
+          "label": "marching band"
+        },
+        {
+          "id": "marchinha",
+          "label": "marchinha"
+        },
+        {
+          "id": "mariachi",
+          "label": "mariachi"
+        },
+        {
+          "id": "marinera",
+          "label": "marinera"
+        },
+        {
+          "id": "marrabenta",
+          "label": "marrabenta"
+        },
+        {
+          "id": "martial_industrial",
+          "label": "martial industrial"
+        },
+        {
+          "id": "mashcore",
+          "label": "mashcore"
+        },
+        {
+          "id": "maskanda",
+          "label": "maskanda"
+        },
+        {
+          "id": "mass",
+          "label": "mass"
+        },
+        {
+          "id": "mataali",
+          "label": "mataali"
+        },
+        {
+          "id": "math_pop",
+          "label": "math pop"
+        },
+        {
+          "id": "math_rock",
+          "label": "math rock"
+        },
+        {
+          "id": "mathcore",
+          "label": "mathcore"
+        },
+        {
+          "id": "maxixe",
+          "label": "maxixe"
+        },
+        {
+          "id": "mazurka",
+          "label": "mazurka"
+        },
+        {
+          "id": "mbalax",
+          "label": "mbalax"
+        },
+        {
+          "id": "mbaqanga",
+          "label": "mbaqanga"
+        },
+        {
+          "id": "mbole",
+          "label": "mbolé"
+        },
+        {
+          "id": "mbube",
+          "label": "mbube"
+        },
+        {
+          "id": "mchiriku",
+          "label": "mchiriku"
+        },
+        {
+          "id": "medieval",
+          "label": "medieval"
+        },
+        {
+          "id": "medieval_lyric_poetry",
+          "label": "medieval lyric poetry"
+        },
+        {
+          "id": "medieval_metal",
+          "label": "medieval metal"
+        },
+        {
+          "id": "medieval_rock",
+          "label": "medieval rock"
+        },
+        {
+          "id": "mega_funk",
+          "label": "mega funk"
+        },
+        {
+          "id": "meiji_shinkyoku",
+          "label": "meiji shinkyoku"
+        },
+        {
+          "id": "melbourne_bounce",
+          "label": "melbourne bounce"
+        },
+        {
+          "id": "melodic_bass",
+          "label": "melodic bass"
+        },
+        {
+          "id": "melodic_black_metal",
+          "label": "melodic black metal"
+        },
+        {
+          "id": "melodic_death_metal",
+          "label": "melodic death metal"
+        },
+        {
+          "id": "melodic_dubstep",
+          "label": "melodic dubstep"
+        },
+        {
+          "id": "melodic_hardcore",
+          "label": "melodic hardcore"
+        },
+        {
+          "id": "melodic_house",
+          "label": "melodic house"
+        },
+        {
+          "id": "melodic_metalcore",
+          "label": "melodic metalcore"
+        },
+        {
+          "id": "melodic_techno",
+          "label": "melodic techno"
+        },
+        {
+          "id": "melodic_trance",
+          "label": "melodic trance"
+        },
+        {
+          "id": "memphis_rap",
+          "label": "memphis rap"
+        },
+        {
+          "id": "mento",
+          "label": "mento"
+        },
+        {
+          "id": "menzuma",
+          "label": "menzuma"
+        },
+        {
+          "id": "merecumbe",
+          "label": "merecumbé"
+        },
+        {
+          "id": "merengue",
+          "label": "merengue"
+        },
+        {
+          "id": "merengue_tipico",
+          "label": "merengue típico"
+        },
+        {
+          "id": "merenhouse",
+          "label": "merenhouse"
+        },
+        {
+          "id": "merequetengue",
+          "label": "merequetengue"
+        },
+        {
+          "id": "merseybeat",
+          "label": "merseybeat"
+        },
+        {
+          "id": "metalcore",
+          "label": "metalcore"
+        },
+        {
+          "id": "meyxana",
+          "label": "meyxana"
+        },
+        {
+          "id": "mgodro",
+          "label": "mgodro"
+        },
+        {
+          "id": "miami_bass",
+          "label": "miami bass"
+        },
+        {
+          "id": "microfunk",
+          "label": "microfunk"
+        },
+        {
+          "id": "microhouse",
+          "label": "microhouse"
+        },
+        {
+          "id": "microsound",
+          "label": "microsound"
+        },
+        {
+          "id": "microtonal_classical",
+          "label": "microtonal classical"
+        },
+        {
+          "id": "midtempo_bass",
+          "label": "midtempo bass"
+        },
+        {
+          "id": "midwest_emo",
+          "label": "midwest emo"
+        },
+        {
+          "id": "miejski_folk",
+          "label": "miejski folk"
+        },
+        {
+          "id": "military_cadence",
+          "label": "military cadence"
+        },
+        {
+          "id": "milonga",
+          "label": "milonga"
+        },
+        {
+          "id": "min_yo",
+          "label": "min'yō"
+        },
+        {
+          "id": "minatory",
+          "label": "minatory"
+        },
+        {
+          "id": "mincecore",
+          "label": "mincecore"
+        },
+        {
+          "id": "minimal_drum_and_bass",
+          "label": "minimal drum and bass"
+        },
+        {
+          "id": "minimal_synth",
+          "label": "minimal synth"
+        },
+        {
+          "id": "minimal_techno",
+          "label": "minimal techno"
+        },
+        {
+          "id": "minimal_wave",
+          "label": "minimal wave"
+        },
+        {
+          "id": "minimalism",
+          "label": "minimalism"
+        },
+        {
+          "id": "minneapolis_sound",
+          "label": "minneapolis sound"
+        },
+        {
+          "id": "minstrelsy",
+          "label": "minstrelsy"
+        },
+        {
+          "id": "mobb_music",
+          "label": "mobb music"
+        },
+        {
+          "id": "mod",
+          "label": "mod"
+        },
+        {
+          "id": "mod_revival",
+          "label": "mod revival"
+        },
+        {
+          "id": "moda_de_viola",
+          "label": "moda de viola"
+        },
+        {
+          "id": "modal_jazz",
+          "label": "modal jazz"
+        },
+        {
+          "id": "modern_blues",
+          "label": "modern blues"
+        },
+        {
+          "id": "modern_classical",
+          "label": "modern classical"
+        },
+        {
+          "id": "modern_creative",
+          "label": "modern creative"
+        },
+        {
+          "id": "modern_hardtek",
+          "label": "modern hardtek"
+        },
+        {
+          "id": "modern_laiko",
+          "label": "modern laiko"
+        },
+        {
+          "id": "modinha",
+          "label": "modinha"
+        },
+        {
+          "id": "moe_song",
+          "label": "moe song"
+        },
+        {
+          "id": "monodrama",
+          "label": "monodrama"
+        },
+        {
+          "id": "mood_kayo",
+          "label": "mood kayō"
+        },
+        {
+          "id": "moogsploitation",
+          "label": "moogsploitation"
+        },
+        {
+          "id": "moombahcore",
+          "label": "moombahcore"
+        },
+        {
+          "id": "moombahton",
+          "label": "moombahton"
+        },
+        {
+          "id": "mor_lam",
+          "label": "mor lam"
+        },
+        {
+          "id": "mor_lam_sing",
+          "label": "mor lam sing"
+        },
+        {
+          "id": "morenada",
+          "label": "morenada"
+        },
+        {
+          "id": "morna",
+          "label": "morna"
+        },
+        {
+          "id": "moroccan_chaabi",
+          "label": "moroccan chaabi"
+        },
+        {
+          "id": "motet",
+          "label": "motet"
+        },
+        {
+          "id": "motown",
+          "label": "motown"
+        },
+        {
+          "id": "moutya",
+          "label": "moutya"
+        },
+        {
+          "id": "movimiento_alterado",
+          "label": "movimiento alterado"
+        },
+        {
+          "id": "mozarabic_chant",
+          "label": "mozarabic chant"
+        },
+        {
+          "id": "mpb",
+          "label": "mpb"
+        },
+        {
+          "id": "muak",
+          "label": "muak"
+        },
+        {
+          "id": "mugham",
+          "label": "mugham"
+        },
+        {
+          "id": "mugithi",
+          "label": "mugithi"
+        },
+        {
+          "id": "muineira",
+          "label": "muiñeira"
+        },
+        {
+          "id": "mulatos",
+          "label": "mulatós"
+        },
+        {
+          "id": "muliza",
+          "label": "muliza"
+        },
+        {
+          "id": "murga",
+          "label": "murga"
+        },
+        {
+          "id": "murga_uruguaya",
+          "label": "murga uruguaya"
+        },
+        {
+          "id": "musette",
+          "label": "musette"
+        },
+        {
+          "id": "music_hall",
+          "label": "music hall"
+        },
+        {
+          "id": "musical",
+          "label": "musical"
+        },
+        {
+          "id": "musique_concrete",
+          "label": "musique concrète"
+        },
+        {
+          "id": "musique_concrete_instrumentale",
+          "label": "musique concrète instrumentale"
+        },
+        {
+          "id": "muzika_mizrahit",
+          "label": "muzika mizrahit"
+        },
+        {
+          "id": "muzika_yehudit_mekorit",
+          "label": "muzika yehudit mekorit"
+        },
+        {
+          "id": "muzikat_dika_on",
+          "label": "muzikat dika'on"
+        },
+        {
+          "id": "muziki_wa_dansi",
+          "label": "muziki wa dansi"
+        },
+        {
+          "id": "melodie",
+          "label": "mélodie"
+        },
+        {
+          "id": "meringue",
+          "label": "méringue"
+        },
+        {
+          "id": "metis_fiddling",
+          "label": "métis fiddling"
+        },
+        {
+          "id": "musica_cebolla",
+          "label": "música cebolla"
+        },
+        {
+          "id": "musica_criolla",
+          "label": "música criolla"
+        },
+        {
+          "id": "musica_de_intervencao",
+          "label": "música de intervenção"
+        },
+        {
+          "id": "musica_festera",
+          "label": "música festera"
+        },
+        {
+          "id": "musica_llanera",
+          "label": "música llanera"
+        },
+        {
+          "id": "musica_tipica_chilena",
+          "label": "música típica chilena"
+        },
+        {
+          "id": "musiqa_lubnaniyya",
+          "label": "mūsīqā lubnāniyya"
+        },
+        {
+          "id": "nagauta",
+          "label": "nagauta"
+        },
+        {
+          "id": "nanguan",
+          "label": "nanguan"
+        },
+        {
+          "id": "narcocorrido",
+          "label": "narcocorrido"
+        },
+        {
+          "id": "narodnozabavna_glasba",
+          "label": "narodnozabavna glasba"
+        },
+        {
+          "id": "nasheed",
+          "label": "nasheed"
+        },
+        {
+          "id": "nashville_sound",
+          "label": "nashville sound"
+        },
+        {
+          "id": "native_american_new_age",
+          "label": "native american new age"
+        },
+        {
+          "id": "nature_sounds",
+          "label": "nature sounds"
+        },
+        {
+          "id": "natya_sangeet",
+          "label": "natya sangeet"
+        },
+        {
+          "id": "nederbeat",
+          "label": "nederbeat"
+        },
+        {
+          "id": "nederpop",
+          "label": "nederpop"
+        },
+        {
+          "id": "neo_kyma",
+          "label": "neo kyma"
+        },
+        {
+          "id": "neo_rave",
+          "label": "neo rave"
+        },
+        {
+          "id": "neo_soul",
+          "label": "neo soul"
+        },
+        {
+          "id": "neo_acoustic",
+          "label": "neo-acoustic"
+        },
+        {
+          "id": "neo_bop",
+          "label": "neo-bop"
+        },
+        {
+          "id": "neo_city_pop",
+          "label": "neo-city pop"
+        },
+        {
+          "id": "neo_grime",
+          "label": "neo-grime"
+        },
+        {
+          "id": "neo_medieval_folk",
+          "label": "neo-medieval folk"
+        },
+        {
+          "id": "neo_progressive_rock",
+          "label": "neo-progressive rock"
+        },
+        {
+          "id": "neo_psychedelia",
+          "label": "neo-psychedelia"
+        },
+        {
+          "id": "neo_rockabilly",
+          "label": "neo-rockabilly"
+        },
+        {
+          "id": "neo_traditional_country",
+          "label": "neo-traditional country"
+        },
+        {
+          "id": "neoclassical_dark_wave",
+          "label": "neoclassical dark wave"
+        },
+        {
+          "id": "neoclassical_metal",
+          "label": "neoclassical metal"
+        },
+        {
+          "id": "neoclassical_new_age",
+          "label": "neoclassical new age"
+        },
+        {
+          "id": "neoclassicism",
+          "label": "neoclassicism"
+        },
+        {
+          "id": "neocrust",
+          "label": "neocrust"
+        },
+        {
+          "id": "neofolk",
+          "label": "neofolk"
+        },
+        {
+          "id": "neofolklore",
+          "label": "neofolklore"
+        },
+        {
+          "id": "neon_pop_punk",
+          "label": "neon pop punk"
+        },
+        {
+          "id": "neoperreo",
+          "label": "neoperreo"
+        },
+        {
+          "id": "neoromanticism",
+          "label": "neoromanticism"
+        },
+        {
+          "id": "nepali_lok_geet",
+          "label": "nepali lok geet"
+        },
+        {
+          "id": "nerdcore",
+          "label": "nerdcore"
+        },
+        {
+          "id": "nerdcore_techno",
+          "label": "nerdcore techno"
+        },
+        {
+          "id": "neue_deutsche_harte",
+          "label": "neue deutsche härte"
+        },
+        {
+          "id": "neue_deutsche_todeskunst",
+          "label": "neue deutsche todeskunst"
+        },
+        {
+          "id": "neue_deutsche_welle",
+          "label": "neue deutsche welle"
+        },
+        {
+          "id": "neurofunk",
+          "label": "neurofunk"
+        },
+        {
+          "id": "neurohop",
+          "label": "neurohop"
+        },
+        {
+          "id": "new_age",
+          "label": "new age"
+        },
+        {
+          "id": "new_beat",
+          "label": "new beat"
+        },
+        {
+          "id": "new_complexity",
+          "label": "new complexity"
+        },
+        {
+          "id": "new_jack_swing",
+          "label": "new jack swing"
+        },
+        {
+          "id": "new_jazz",
+          "label": "new jazz"
+        },
+        {
+          "id": "new_mexico_music",
+          "label": "new mexico music"
+        },
+        {
+          "id": "new_orleans_blues",
+          "label": "new orleans blues"
+        },
+        {
+          "id": "new_orleans_r_b",
+          "label": "new orleans r&b"
+        },
+        {
+          "id": "new_rave",
+          "label": "new rave"
+        },
+        {
+          "id": "new_romantic",
+          "label": "new romantic"
+        },
+        {
+          "id": "new_wave",
+          "label": "new wave"
+        },
+        {
+          "id": "new_york_drill",
+          "label": "new york drill"
+        },
+        {
+          "id": "ngoma",
+          "label": "ngoma"
+        },
+        {
+          "id": "ngam_tho",
+          "label": "ngâm thơ"
+        },
+        {
+          "id": "nhac_tien_chien",
+          "label": "nhạc tiền chiến"
+        },
+        {
+          "id": "nhac_vang",
+          "label": "nhạc vàng"
+        },
+        {
+          "id": "nhac_o",
+          "label": "nhạc đỏ"
+        },
+        {
+          "id": "night_full_on",
+          "label": "night full-on"
+        },
+        {
+          "id": "nightcore",
+          "label": "nightcore"
+        },
+        {
+          "id": "nigun",
+          "label": "nigun"
+        },
+        {
+          "id": "nintendocore",
+          "label": "nintendocore"
+        },
+        {
+          "id": "nitzhonot",
+          "label": "nitzhonot"
+        },
+        {
+          "id": "njuup",
+          "label": "njuup"
+        },
+        {
+          "id": "no_melody_trap",
+          "label": "no melody trap"
+        },
+        {
+          "id": "no_wave",
+          "label": "no wave"
+        },
+        {
+          "id": "nocturne",
+          "label": "nocturne"
+        },
+        {
+          "id": "noh",
+          "label": "noh"
+        },
+        {
+          "id": "noiadance",
+          "label": "noiadance"
+        },
+        {
+          "id": "noise",
+          "label": "noise"
+        },
+        {
+          "id": "noise_pop",
+          "label": "noise pop"
+        },
+        {
+          "id": "noise_rock",
+          "label": "noise rock"
+        },
+        {
+          "id": "noisecore",
+          "label": "noisecore"
+        },
+        {
+          "id": "noisegrind",
+          "label": "noisegrind"
+        },
+        {
+          "id": "non_music",
+          "label": "non-music"
+        },
+        {
+          "id": "nortec",
+          "label": "nortec"
+        },
+        {
+          "id": "norteno",
+          "label": "norteño"
+        },
+        {
+          "id": "northern_soul",
+          "label": "northern soul"
+        },
+        {
+          "id": "nouveau_zydeco",
+          "label": "nouveau zydeco"
+        },
+        {
+          "id": "nova_canco",
+          "label": "nova cançó"
+        },
+        {
+          "id": "novelty_piano",
+          "label": "novelty piano"
+        },
+        {
+          "id": "novo_dub",
+          "label": "novo dub"
+        },
+        {
+          "id": "nu_disco",
+          "label": "nu disco"
+        },
+        {
+          "id": "nu_jazz",
+          "label": "nu jazz"
+        },
+        {
+          "id": "nu_metal",
+          "label": "nu metal"
+        },
+        {
+          "id": "nu_skool_breaks",
+          "label": "nu skool breaks"
+        },
+        {
+          "id": "nu_style_gabber",
+          "label": "nu style gabber"
+        },
+        {
+          "id": "nueva_cancion",
+          "label": "nueva canción"
+        },
+        {
+          "id": "nueva_cancion_chilena",
+          "label": "nueva canción chilena"
+        },
+        {
+          "id": "nueva_cancion_espanola",
+          "label": "nueva canción española"
+        },
+        {
+          "id": "nueva_cumbia_chilena",
+          "label": "nueva cumbia chilena"
+        },
+        {
+          "id": "nueva_trova",
+          "label": "nueva trova"
+        },
+        {
+          "id": "nuevo_cancionero",
+          "label": "nuevo cancionero"
+        },
+        {
+          "id": "nuevo_flamenco",
+          "label": "nuevo flamenco"
+        },
+        {
+          "id": "nuevo_tango",
+          "label": "nuevo tango"
+        },
+        {
+          "id": "nustyle",
+          "label": "nustyle"
+        },
+        {
+          "id": "nwobhm",
+          "label": "nwobhm"
+        },
+        {
+          "id": "nyu_myujikku",
+          "label": "nyū myūjikku"
+        },
+        {
+          "id": "neo_trad",
+          "label": "néo-trad"
+        },
+        {
+          "id": "nota",
+          "label": "nóta"
+        },
+        {
+          "id": "oberek",
+          "label": "oberek"
+        },
+        {
+          "id": "occult_rock",
+          "label": "occult rock"
+        },
+        {
+          "id": "odissi_classical",
+          "label": "odissi classical"
+        },
+        {
+          "id": "ogene_music",
+          "label": "ogene music"
+        },
+        {
+          "id": "oi",
+          "label": "oi"
+        },
+        {
+          "id": "old_roman_chant",
+          "label": "old roman chant"
+        },
+        {
+          "id": "old_school_death_metal",
+          "label": "old school death metal"
+        },
+        {
+          "id": "old_school_hip_hop",
+          "label": "old school hip hop"
+        },
+        {
+          "id": "old_time",
+          "label": "old-time"
+        },
+        {
+          "id": "omutibo",
+          "label": "omutibo"
+        },
+        {
+          "id": "onda_nueva",
+          "label": "onda nueva"
+        },
+        {
+          "id": "ondo",
+          "label": "ondō"
+        },
+        {
+          "id": "onkyo",
+          "label": "onkyo"
+        },
+        {
+          "id": "opera",
+          "label": "opera"
+        },
+        {
+          "id": "opera_buffa",
+          "label": "opera buffa"
+        },
+        {
+          "id": "opera_semiseria",
+          "label": "opera semiseria"
+        },
+        {
+          "id": "opera_seria",
+          "label": "opera seria"
+        },
+        {
+          "id": "opera_ballet",
+          "label": "opera-ballet"
+        },
+        {
+          "id": "operatic_pop",
+          "label": "operatic pop"
+        },
+        {
+          "id": "operetta",
+          "label": "operetta"
+        },
+        {
+          "id": "opm",
+          "label": "opm"
+        },
+        {
+          "id": "opera_comique",
+          "label": "opéra comique"
+        },
+        {
+          "id": "oratorio",
+          "label": "oratorio"
+        },
+        {
+          "id": "orchestral",
+          "label": "orchestral"
+        },
+        {
+          "id": "orchestral_jazz",
+          "label": "orchestral jazz"
+        },
+        {
+          "id": "orchestral_song",
+          "label": "orchestral song"
+        },
+        {
+          "id": "organic_house",
+          "label": "organic house"
+        },
+        {
+          "id": "ori_deck",
+          "label": "ori deck"
+        },
+        {
+          "id": "oriental_ballad",
+          "label": "oriental ballad"
+        },
+        {
+          "id": "orkes_gambus",
+          "label": "orkes gambus"
+        },
+        {
+          "id": "orthodox_pop",
+          "label": "orthodox pop"
+        },
+        {
+          "id": "outlaw_country",
+          "label": "outlaw country"
+        },
+        {
+          "id": "outrun",
+          "label": "outrun"
+        },
+        {
+          "id": "outsider_house",
+          "label": "outsider house"
+        },
+        {
+          "id": "overture",
+          "label": "overture"
+        },
+        {
+          "id": "p_funk",
+          "label": "p-funk"
+        },
+        {
+          "id": "pachanga",
+          "label": "pachanga"
+        },
+        {
+          "id": "pacific_reggae",
+          "label": "pacific reggae"
+        },
+        {
+          "id": "pagan_black_metal",
+          "label": "pagan black metal"
+        },
+        {
+          "id": "pagan_folk",
+          "label": "pagan folk"
+        },
+        {
+          "id": "paghjella",
+          "label": "paghjella"
+        },
+        {
+          "id": "pagode",
+          "label": "pagode"
+        },
+        {
+          "id": "pagode_romantico",
+          "label": "pagode romântico"
+        },
+        {
+          "id": "pagodao",
+          "label": "pagodão"
+        },
+        {
+          "id": "paisley_underground",
+          "label": "paisley underground"
+        },
+        {
+          "id": "palingsound",
+          "label": "palingsound"
+        },
+        {
+          "id": "palm_wine",
+          "label": "palm-wine"
+        },
+        {
+          "id": "palo_de_mayo",
+          "label": "palo de mayo"
+        },
+        {
+          "id": "pandilla",
+          "label": "pandilla"
+        },
+        {
+          "id": "pansori",
+          "label": "pansori"
+        },
+        {
+          "id": "paramaribop",
+          "label": "paramaribop"
+        },
+        {
+          "id": "parang",
+          "label": "parang"
+        },
+        {
+          "id": "parlour_music",
+          "label": "parlour music"
+        },
+        {
+          "id": "partido_alto",
+          "label": "partido alto"
+        },
+        {
+          "id": "partyschlager",
+          "label": "partyschlager"
+        },
+        {
+          "id": "pasillo",
+          "label": "pasillo"
+        },
+        {
+          "id": "pasodoble",
+          "label": "pasodoble"
+        },
+        {
+          "id": "passion_setting",
+          "label": "passion setting"
+        },
+        {
+          "id": "payada",
+          "label": "payada"
+        },
+        {
+          "id": "peak_time_techno",
+          "label": "peak time techno"
+        },
+        {
+          "id": "pep_band",
+          "label": "pep band"
+        },
+        {
+          "id": "persian_classical",
+          "label": "persian classical"
+        },
+        {
+          "id": "persian_pop",
+          "label": "persian pop"
+        },
+        {
+          "id": "philly_club",
+          "label": "philly club"
+        },
+        {
+          "id": "philly_club_rap",
+          "label": "philly club rap"
+        },
+        {
+          "id": "philly_drill",
+          "label": "philly drill"
+        },
+        {
+          "id": "philly_soul",
+          "label": "philly soul"
+        },
+        {
+          "id": "phleng_phuea_chiwit",
+          "label": "phleng phuea chiwit"
+        },
+        {
+          "id": "phonk",
+          "label": "phonk"
+        },
+        {
+          "id": "phonk_house",
+          "label": "phonk house"
+        },
+        {
+          "id": "piano_blues",
+          "label": "piano blues"
+        },
+        {
+          "id": "piano_rock",
+          "label": "piano rock"
+        },
+        {
+          "id": "picopop",
+          "label": "picopop"
+        },
+        {
+          "id": "piedmont_blues",
+          "label": "piedmont blues"
+        },
+        {
+          "id": "pigfuck",
+          "label": "pigfuck"
+        },
+        {
+          "id": "pilon",
+          "label": "pilón"
+        },
+        {
+          "id": "pimba",
+          "label": "pimba"
+        },
+        {
+          "id": "pinpeat",
+          "label": "pinpeat"
+        },
+        {
+          "id": "piosenka_aktorska",
+          "label": "piosenka aktorska"
+        },
+        {
+          "id": "pipe_band_music",
+          "label": "pipe band music"
+        },
+        {
+          "id": "piphat",
+          "label": "piphat"
+        },
+        {
+          "id": "pirekua",
+          "label": "pirekua"
+        },
+        {
+          "id": "piseiro",
+          "label": "piseiro"
+        },
+        {
+          "id": "piyyut",
+          "label": "piyyut"
+        },
+        {
+          "id": "pizzica",
+          "label": "pizzica"
+        },
+        {
+          "id": "plainchant",
+          "label": "plainchant"
+        },
+        {
+          "id": "plena",
+          "label": "plena"
+        },
+        {
+          "id": "plugg",
+          "label": "plugg"
+        },
+        {
+          "id": "pluggnb",
+          "label": "pluggnb"
+        },
+        {
+          "id": "plunderphonics",
+          "label": "plunderphonics"
+        },
+        {
+          "id": "poetry",
+          "label": "poetry"
+        },
+        {
+          "id": "polca_criolla",
+          "label": "polca criolla"
+        },
+        {
+          "id": "polifonia_occitana",
+          "label": "polifonia occitana"
+        },
+        {
+          "id": "political_hip_hop",
+          "label": "political hip hop"
+        },
+        {
+          "id": "polka",
+          "label": "polka"
+        },
+        {
+          "id": "polka_paraguaya",
+          "label": "polka paraguaya"
+        },
+        {
+          "id": "polonaise",
+          "label": "polonaise"
+        },
+        {
+          "id": "pon_chak_disco",
+          "label": "pon-chak disco"
+        },
+        {
+          "id": "pop_ghazal",
+          "label": "pop ghazal"
+        },
+        {
+          "id": "pop_kreatif",
+          "label": "pop kreatif"
+        },
+        {
+          "id": "pop_metal",
+          "label": "pop metal"
+        },
+        {
+          "id": "pop_minang",
+          "label": "pop minang"
+        },
+        {
+          "id": "pop_punk",
+          "label": "pop punk"
+        },
+        {
+          "id": "pop_rap",
+          "label": "pop rap"
+        },
+        {
+          "id": "pop_rai",
+          "label": "pop raï"
+        },
+        {
+          "id": "pop_rock",
+          "label": "pop rock"
+        },
+        {
+          "id": "pop_screamo",
+          "label": "pop screamo"
+        },
+        {
+          "id": "pop_soul",
+          "label": "pop soul"
+        },
+        {
+          "id": "pop_yeh_yeh",
+          "label": "pop yeh-yeh"
+        },
+        {
+          "id": "porn_groove",
+          "label": "porn groove"
+        },
+        {
+          "id": "pornogrind",
+          "label": "pornogrind"
+        },
+        {
+          "id": "porro",
+          "label": "porro"
+        },
+        {
+          "id": "post_bop",
+          "label": "post-bop"
+        },
+        {
+          "id": "post_britpop",
+          "label": "post-britpop"
+        },
+        {
+          "id": "post_classical",
+          "label": "post-classical"
+        },
+        {
+          "id": "post_dubstep",
+          "label": "post-dubstep"
+        },
+        {
+          "id": "post_grunge",
+          "label": "post-grunge"
+        },
+        {
+          "id": "post_hardcore",
+          "label": "post-hardcore"
+        },
+        {
+          "id": "post_industrial",
+          "label": "post-industrial"
+        },
+        {
+          "id": "post_metal",
+          "label": "post-metal"
+        },
+        {
+          "id": "post_minimalism",
+          "label": "post-minimalism"
+        },
+        {
+          "id": "post_punk",
+          "label": "post-punk"
+        },
+        {
+          "id": "post_punk_revival",
+          "label": "post-punk revival"
+        },
+        {
+          "id": "post_rock",
+          "label": "post-rock"
+        },
+        {
+          "id": "powada",
+          "label": "powada"
+        },
+        {
+          "id": "power_electronics",
+          "label": "power electronics"
+        },
+        {
+          "id": "power_metal",
+          "label": "power metal"
+        },
+        {
+          "id": "power_noise",
+          "label": "power noise"
+        },
+        {
+          "id": "power_pop",
+          "label": "power pop"
+        },
+        {
+          "id": "power_soca",
+          "label": "power soca"
+        },
+        {
+          "id": "powerstomp",
+          "label": "powerstomp"
+        },
+        {
+          "id": "powerviolence",
+          "label": "powerviolence"
+        },
+        {
+          "id": "praise_worship",
+          "label": "praise & worship"
+        },
+        {
+          "id": "praise_break",
+          "label": "praise break"
+        },
+        {
+          "id": "prank_calls",
+          "label": "prank calls"
+        },
+        {
+          "id": "prelude",
+          "label": "prelude"
+        },
+        {
+          "id": "process_music",
+          "label": "process music"
+        },
+        {
+          "id": "production_music",
+          "label": "production music"
+        },
+        {
+          "id": "progressive",
+          "label": "progressive"
+        },
+        {
+          "id": "progressive_bluegrass",
+          "label": "progressive bluegrass"
+        },
+        {
+          "id": "progressive_breaks",
+          "label": "progressive breaks"
+        },
+        {
+          "id": "progressive_country",
+          "label": "progressive country"
+        },
+        {
+          "id": "progressive_electronic",
+          "label": "progressive electronic"
+        },
+        {
+          "id": "progressive_folk",
+          "label": "progressive folk"
+        },
+        {
+          "id": "progressive_house",
+          "label": "progressive house"
+        },
+        {
+          "id": "progressive_metal",
+          "label": "progressive metal"
+        },
+        {
+          "id": "progressive_metalcore",
+          "label": "progressive metalcore"
+        },
+        {
+          "id": "progressive_pop",
+          "label": "progressive pop"
+        },
+        {
+          "id": "progressive_psytrance",
+          "label": "progressive psytrance"
+        },
+        {
+          "id": "progressive_rock",
+          "label": "progressive rock"
+        },
+        {
+          "id": "progressive_soul",
+          "label": "progressive soul"
+        },
+        {
+          "id": "progressive_trance",
+          "label": "progressive trance"
+        },
+        {
+          "id": "proto_punk",
+          "label": "proto-punk"
+        },
+        {
+          "id": "psichedelia_occulta_italiana",
+          "label": "psichedelia occulta italiana"
+        },
+        {
+          "id": "psybient",
+          "label": "psybient"
+        },
+        {
+          "id": "psybreaks",
+          "label": "psybreaks"
+        },
+        {
+          "id": "psychedelic",
+          "label": "psychedelic"
+        },
+        {
+          "id": "psychedelic_folk",
+          "label": "psychedelic folk"
+        },
+        {
+          "id": "psychedelic_pop",
+          "label": "psychedelic pop"
+        },
+        {
+          "id": "psychedelic_rock",
+          "label": "psychedelic rock"
+        },
+        {
+          "id": "psychedelic_soul",
+          "label": "psychedelic soul"
+        },
+        {
+          "id": "psychobilly",
+          "label": "psychobilly"
+        },
+        {
+          "id": "psychploitation",
+          "label": "psychploitation"
+        },
+        {
+          "id": "psycore",
+          "label": "psycore"
+        },
+        {
+          "id": "psystyle",
+          "label": "psystyle"
+        },
+        {
+          "id": "psytrance",
+          "label": "psytrance"
+        },
+        {
+          "id": "pub_rock",
+          "label": "pub rock"
+        },
+        {
+          "id": "puirt_a_beul",
+          "label": "puirt à beul"
+        },
+        {
+          "id": "pumpcore",
+          "label": "pumpcore"
+        },
+        {
+          "id": "pungmul",
+          "label": "pungmul"
+        },
+        {
+          "id": "punk",
+          "label": "punk"
+        },
+        {
+          "id": "punk_blues",
+          "label": "punk blues"
+        },
+        {
+          "id": "punk_poetry",
+          "label": "punk poetry"
+        },
+        {
+          "id": "punk_rap",
+          "label": "punk rap"
+        },
+        {
+          "id": "punk_rock",
+          "label": "punk rock"
+        },
+        {
+          "id": "punta",
+          "label": "punta"
+        },
+        {
+          "id": "punto",
+          "label": "punto"
+        },
+        {
+          "id": "purple_sound",
+          "label": "purple sound"
+        },
+        {
+          "id": "puxa",
+          "label": "puxa"
+        },
+        {
+          "id": "pasztordal",
+          "label": "pásztordal"
+        },
+        {
+          "id": "piobaireachd",
+          "label": "pìobaireachd"
+        },
+        {
+          "id": "q_pop",
+          "label": "q-pop"
+        },
+        {
+          "id": "qaraami",
+          "label": "qaraami"
+        },
+        {
+          "id": "qasidah_modern",
+          "label": "qasidah modern"
+        },
+        {
+          "id": "qawwali",
+          "label": "qawwali"
+        },
+        {
+          "id": "quan_ho",
+          "label": "quan họ"
+        },
+        {
+          "id": "queercore",
+          "label": "queercore"
+        },
+        {
+          "id": "quiet_storm",
+          "label": "quiet storm"
+        },
+        {
+          "id": "quyi",
+          "label": "quyi"
+        },
+        {
+          "id": "r_b",
+          "label": "r&b"
+        },
+        {
+          "id": "rabbit_song",
+          "label": "rabbit song"
+        },
+        {
+          "id": "rabiz",
+          "label": "rabiz"
+        },
+        {
+          "id": "raga_rock",
+          "label": "raga rock"
+        },
+        {
+          "id": "rage",
+          "label": "rage"
+        },
+        {
+          "id": "ragga",
+          "label": "ragga"
+        },
+        {
+          "id": "ragga_hip_hop",
+          "label": "ragga hip-hop"
+        },
+        {
+          "id": "ragga_jungle",
+          "label": "ragga jungle"
+        },
+        {
+          "id": "raggacore",
+          "label": "raggacore"
+        },
+        {
+          "id": "raggatek",
+          "label": "raggatek"
+        },
+        {
+          "id": "ragtime",
+          "label": "ragtime"
+        },
+        {
+          "id": "ragtime_song",
+          "label": "ragtime song"
+        },
+        {
+          "id": "rain_sounds",
+          "label": "rain sounds"
+        },
+        {
+          "id": "ranchera",
+          "label": "ranchera"
+        },
+        {
+          "id": "rap_metal",
+          "label": "rap metal"
+        },
+        {
+          "id": "rap_rock",
+          "label": "rap rock"
+        },
+        {
+          "id": "rapcore",
+          "label": "rapcore"
+        },
+        {
+          "id": "rapso",
+          "label": "rapso"
+        },
+        {
+          "id": "raqs_baladi",
+          "label": "raqs baladi"
+        },
+        {
+          "id": "rara",
+          "label": "rara"
+        },
+        {
+          "id": "rasin",
+          "label": "rasin"
+        },
+        {
+          "id": "rasqueado_cuiabano",
+          "label": "rasqueado cuiabano"
+        },
+        {
+          "id": "rasteirinha",
+          "label": "rasteirinha"
+        },
+        {
+          "id": "ratchet_music",
+          "label": "ratchet music"
+        },
+        {
+          "id": "rautalanka",
+          "label": "rautalanka"
+        },
+        {
+          "id": "rave",
+          "label": "rave"
+        },
+        {
+          "id": "raw_punk",
+          "label": "raw punk"
+        },
+        {
+          "id": "rawphoric",
+          "label": "rawphoric"
+        },
+        {
+          "id": "rawstyle",
+          "label": "rawstyle"
+        },
+        {
+          "id": "rai",
+          "label": "raï"
+        },
+        {
+          "id": "rebetiko",
+          "label": "rebetiko"
+        },
+        {
+          "id": "red_dirt",
+          "label": "red dirt"
+        },
+        {
+          "id": "red_disco",
+          "label": "red disco"
+        },
+        {
+          "id": "red_song",
+          "label": "red song"
+        },
+        {
+          "id": "reductionism",
+          "label": "reductionism"
+        },
+        {
+          "id": "regalia",
+          "label": "regalia"
+        },
+        {
+          "id": "reggae",
+          "label": "reggae"
+        },
+        {
+          "id": "reggae_rock",
+          "label": "reggae rock"
+        },
+        {
+          "id": "reggae_pop",
+          "label": "reggae-pop"
+        },
+        {
+          "id": "reggaeton",
+          "label": "reggaeton"
+        },
+        {
+          "id": "regional_mexicano",
+          "label": "regional mexicano"
+        },
+        {
+          "id": "renaissance",
+          "label": "renaissance"
+        },
+        {
+          "id": "reparto",
+          "label": "reparto"
+        },
+        {
+          "id": "repente",
+          "label": "repente"
+        },
+        {
+          "id": "requiem",
+          "label": "requiem"
+        },
+        {
+          "id": "revue",
+          "label": "revue"
+        },
+        {
+          "id": "rhumba",
+          "label": "rhumba"
+        },
+        {
+          "id": "ricercar",
+          "label": "ricercar"
+        },
+        {
+          "id": "riddim_dubstep",
+          "label": "riddim dubstep"
+        },
+        {
+          "id": "rigsar",
+          "label": "rigsar"
+        },
+        {
+          "id": "ring_shout",
+          "label": "ring shout"
+        },
+        {
+          "id": "riot_grrrl",
+          "label": "riot grrrl"
+        },
+        {
+          "id": "ripsaw",
+          "label": "ripsaw"
+        },
+        {
+          "id": "ritmada",
+          "label": "ritmada"
+        },
+        {
+          "id": "ritual_ambient",
+          "label": "ritual ambient"
+        },
+        {
+          "id": "rizitika",
+          "label": "rizitika"
+        },
+        {
+          "id": "rkt",
+          "label": "rkt"
+        },
+        {
+          "id": "rock",
+          "label": "rock"
+        },
+        {
+          "id": "rock_and_roll",
+          "label": "rock and roll"
+        },
+        {
+          "id": "rock_andaluz",
+          "label": "rock andaluz"
+        },
+        {
+          "id": "rock_andino",
+          "label": "rock andino"
+        },
+        {
+          "id": "rock_kapak",
+          "label": "rock kapak"
+        },
+        {
+          "id": "rock_musical",
+          "label": "rock musical"
+        },
+        {
+          "id": "rock_opera",
+          "label": "rock opera"
+        },
+        {
+          "id": "rock_rural",
+          "label": "rock rural"
+        },
+        {
+          "id": "rock_urbano",
+          "label": "rock urbano"
+        },
+        {
+          "id": "rock_urbano_mexicano",
+          "label": "rock urbano mexicano"
+        },
+        {
+          "id": "rockabilly",
+          "label": "rockabilly"
+        },
+        {
+          "id": "rocksteady",
+          "label": "rocksteady"
+        },
+        {
+          "id": "rom_kbach",
+          "label": "rom kbach"
+        },
+        {
+          "id": "romanian_popcorn",
+          "label": "romanian popcorn"
+        },
+        {
+          "id": "romantic_classical",
+          "label": "romantic classical"
+        },
+        {
+          "id": "romantic_flow",
+          "label": "romantic flow"
+        },
+        {
+          "id": "romantische_oper",
+          "label": "romantische oper"
+        },
+        {
+          "id": "rominimal",
+          "label": "rominimal"
+        },
+        {
+          "id": "roots_reggae",
+          "label": "roots reggae"
+        },
+        {
+          "id": "roots_rock",
+          "label": "roots rock"
+        },
+        {
+          "id": "rumba",
+          "label": "rumba"
+        },
+        {
+          "id": "rumba_catalana",
+          "label": "rumba catalana"
+        },
+        {
+          "id": "rumba_cubana",
+          "label": "rumba cubana"
+        },
+        {
+          "id": "rumba_flamenca",
+          "label": "rumba flamenca"
+        },
+        {
+          "id": "runo_song",
+          "label": "runo song"
+        },
+        {
+          "id": "russian_chanson",
+          "label": "russian chanson"
+        },
+        {
+          "id": "russian_orthodox_liturgical_music",
+          "label": "russian orthodox liturgical music"
+        },
+        {
+          "id": "russian_romance",
+          "label": "russian romance"
+        },
+        {
+          "id": "rustic_stomp",
+          "label": "rustic stomp"
+        },
+        {
+          "id": "ryukoka",
+          "label": "ryūkōka"
+        },
+        {
+          "id": "rokyoku",
+          "label": "rōkyoku"
+        },
+        {
+          "id": "sa_idi",
+          "label": "sa'idi"
+        },
+        {
+          "id": "sacred_harp",
+          "label": "sacred harp"
+        },
+        {
+          "id": "sacred_steel",
+          "label": "sacred steel"
+        },
+        {
+          "id": "saeta",
+          "label": "saeta"
+        },
+        {
+          "id": "salegy",
+          "label": "salegy"
+        },
+        {
+          "id": "salsa",
+          "label": "salsa"
+        },
+        {
+          "id": "salsa_choke",
+          "label": "salsa choke"
+        },
+        {
+          "id": "salsa_dura",
+          "label": "salsa dura"
+        },
+        {
+          "id": "salsa_romantica",
+          "label": "salsa romántica"
+        },
+        {
+          "id": "saluang_klasik",
+          "label": "saluang klasik"
+        },
+        {
+          "id": "samba",
+          "label": "samba"
+        },
+        {
+          "id": "samba_de_breque",
+          "label": "samba de breque"
+        },
+        {
+          "id": "samba_de_gafieira",
+          "label": "samba de gafieira"
+        },
+        {
+          "id": "samba_de_roda",
+          "label": "samba de roda"
+        },
+        {
+          "id": "samba_de_terreiro",
+          "label": "samba de terreiro"
+        },
+        {
+          "id": "samba_rap",
+          "label": "samba rap"
+        },
+        {
+          "id": "samba_soul",
+          "label": "samba soul"
+        },
+        {
+          "id": "samba_cancao",
+          "label": "samba-canção"
+        },
+        {
+          "id": "samba_choro",
+          "label": "samba-choro"
+        },
+        {
+          "id": "samba_enredo",
+          "label": "samba-enredo"
+        },
+        {
+          "id": "samba_exaltacao",
+          "label": "samba-exaltação"
+        },
+        {
+          "id": "samba_jazz",
+          "label": "samba-jazz"
+        },
+        {
+          "id": "samba_joia",
+          "label": "samba-joia"
+        },
+        {
+          "id": "samba_reggae",
+          "label": "samba-reggae"
+        },
+        {
+          "id": "samba_rock",
+          "label": "samba-rock"
+        },
+        {
+          "id": "sambalanco",
+          "label": "sambalanço"
+        },
+        {
+          "id": "sambass",
+          "label": "sambass"
+        },
+        {
+          "id": "sample_drill",
+          "label": "sample drill"
+        },
+        {
+          "id": "sampledelia",
+          "label": "sampledelia"
+        },
+        {
+          "id": "samri",
+          "label": "samri"
+        },
+        {
+          "id": "sanjo",
+          "label": "sanjo"
+        },
+        {
+          "id": "sante_engage",
+          "label": "santé engagé"
+        },
+        {
+          "id": "sarala_gee",
+          "label": "sarala gee"
+        },
+        {
+          "id": "sardana",
+          "label": "sardana"
+        },
+        {
+          "id": "sarum_chant",
+          "label": "sarum chant"
+        },
+        {
+          "id": "sasscore",
+          "label": "sasscore"
+        },
+        {
+          "id": "sawt",
+          "label": "sawt"
+        },
+        {
+          "id": "saya_afroboliviana",
+          "label": "saya afroboliviana"
+        },
+        {
+          "id": "scam_rap",
+          "label": "scam rap"
+        },
+        {
+          "id": "schlager",
+          "label": "schlager"
+        },
+        {
+          "id": "schottische",
+          "label": "schottische"
+        },
+        {
+          "id": "schranz",
+          "label": "schranz"
+        },
+        {
+          "id": "scottish_country_dance_music",
+          "label": "scottish country dance music"
+        },
+        {
+          "id": "screamo",
+          "label": "screamo"
+        },
+        {
+          "id": "scrumpy_and_western",
+          "label": "scrumpy and western"
+        },
+        {
+          "id": "sea_shanty",
+          "label": "sea shanty"
+        },
+        {
+          "id": "sean_nos",
+          "label": "sean-nós"
+        },
+        {
+          "id": "seapunk",
+          "label": "seapunk"
+        },
+        {
+          "id": "seggae",
+          "label": "seggae"
+        },
+        {
+          "id": "seguidilla",
+          "label": "seguidilla"
+        },
+        {
+          "id": "seishun_punk",
+          "label": "seishun punk"
+        },
+        {
+          "id": "semba",
+          "label": "semba"
+        },
+        {
+          "id": "semi_trot",
+          "label": "semi-trot"
+        },
+        {
+          "id": "serenade",
+          "label": "serenade"
+        },
+        {
+          "id": "seresta",
+          "label": "seresta"
+        },
+        {
+          "id": "serialism",
+          "label": "serialism"
+        },
+        {
+          "id": "sermon",
+          "label": "sermon"
+        },
+        {
+          "id": "sertanejo",
+          "label": "sertanejo"
+        },
+        {
+          "id": "sertanejo_raiz",
+          "label": "sertanejo raiz"
+        },
+        {
+          "id": "sertanejo_romantico",
+          "label": "sertanejo romântico"
+        },
+        {
+          "id": "sertanejo_universitario",
+          "label": "sertanejo universitário"
+        },
+        {
+          "id": "seto_leelo",
+          "label": "seto leelo"
+        },
+        {
+          "id": "sevdalinka",
+          "label": "sevdalinka"
+        },
+        {
+          "id": "sevillanas",
+          "label": "sevillanas"
+        },
+        {
+          "id": "sexy_drill",
+          "label": "sexy drill"
+        },
+        {
+          "id": "shaabi",
+          "label": "shaabi"
+        },
+        {
+          "id": "shabad_kirtan",
+          "label": "shabad kirtan"
+        },
+        {
+          "id": "shan_ge",
+          "label": "shan'ge"
+        },
+        {
+          "id": "shangaan_electro",
+          "label": "shangaan electro"
+        },
+        {
+          "id": "shanto",
+          "label": "shanto"
+        },
+        {
+          "id": "shashmaqam",
+          "label": "shashmaqam"
+        },
+        {
+          "id": "shatta",
+          "label": "shatta"
+        },
+        {
+          "id": "shibuya_kei",
+          "label": "shibuya-kei"
+        },
+        {
+          "id": "shidaiqu",
+          "label": "shidaiqu"
+        },
+        {
+          "id": "shima_uta",
+          "label": "shima-uta"
+        },
+        {
+          "id": "shinkyoku",
+          "label": "shinkyoku"
+        },
+        {
+          "id": "shitgaze",
+          "label": "shitgaze"
+        },
+        {
+          "id": "shoegaze",
+          "label": "shoegaze"
+        },
+        {
+          "id": "shoor",
+          "label": "shoor"
+        },
+        {
+          "id": "shomyo",
+          "label": "shōmyō"
+        },
+        {
+          "id": "sichuan_opera",
+          "label": "sichuan opera"
+        },
+        {
+          "id": "sierreno",
+          "label": "sierreño"
+        },
+        {
+          "id": "sigidrigi",
+          "label": "sigidrigi"
+        },
+        {
+          "id": "sigilkore",
+          "label": "sigilkore"
+        },
+        {
+          "id": "sinawi",
+          "label": "sinawi"
+        },
+        {
+          "id": "sinfonia_concertante",
+          "label": "sinfonia concertante"
+        },
+        {
+          "id": "singeli",
+          "label": "singeli"
+        },
+        {
+          "id": "singer_songwriter",
+          "label": "singer-songwriter"
+        },
+        {
+          "id": "singspiel",
+          "label": "singspiel"
+        },
+        {
+          "id": "sissy_bounce",
+          "label": "sissy bounce"
+        },
+        {
+          "id": "sitarsploitation",
+          "label": "sitarsploitation"
+        },
+        {
+          "id": "sizhu_music",
+          "label": "sizhu music"
+        },
+        {
+          "id": "ska",
+          "label": "ska"
+        },
+        {
+          "id": "ska_punk",
+          "label": "ska punk"
+        },
+        {
+          "id": "skacore",
+          "label": "skacore"
+        },
+        {
+          "id": "skate_punk",
+          "label": "skate punk"
+        },
+        {
+          "id": "sketch_comedy",
+          "label": "sketch comedy"
+        },
+        {
+          "id": "skiffle",
+          "label": "skiffle"
+        },
+        {
+          "id": "skiladiko",
+          "label": "skiladiko"
+        },
+        {
+          "id": "skinhead_reggae",
+          "label": "skinhead reggae"
+        },
+        {
+          "id": "skullstep",
+          "label": "skullstep"
+        },
+        {
+          "id": "skweee",
+          "label": "skweee"
+        },
+        {
+          "id": "slack_key_guitar",
+          "label": "slack-key guitar"
+        },
+        {
+          "id": "slacker_rock",
+          "label": "slacker rock"
+        },
+        {
+          "id": "slam_death_metal",
+          "label": "slam death metal"
+        },
+        {
+          "id": "slam_poetry",
+          "label": "slam poetry"
+        },
+        {
+          "id": "slap_house",
+          "label": "slap house"
+        },
+        {
+          "id": "sleaze_rock",
+          "label": "sleaze rock"
+        },
+        {
+          "id": "slimepunk",
+          "label": "slimepunk"
+        },
+        {
+          "id": "slow_waltz",
+          "label": "slow waltz"
+        },
+        {
+          "id": "slowcore",
+          "label": "slowcore"
+        },
+        {
+          "id": "slowed_reverb",
+          "label": "slowed & reverb"
+        },
+        {
+          "id": "sludge_metal",
+          "label": "sludge metal"
+        },
+        {
+          "id": "slushwave",
+          "label": "slushwave"
+        },
+        {
+          "id": "smooth_jazz",
+          "label": "smooth jazz"
+        },
+        {
+          "id": "smooth_soul",
+          "label": "smooth soul"
+        },
+        {
+          "id": "snap",
+          "label": "snap"
+        },
+        {
+          "id": "soca",
+          "label": "soca"
+        },
+        {
+          "id": "soft_rock",
+          "label": "soft rock"
+        },
+        {
+          "id": "soft_visual",
+          "label": "soft visual"
+        },
+        {
+          "id": "son_calentano",
+          "label": "son calentano"
+        },
+        {
+          "id": "son_cubano",
+          "label": "son cubano"
+        },
+        {
+          "id": "son_de_pascua",
+          "label": "son de pascua"
+        },
+        {
+          "id": "son_huasteco",
+          "label": "son huasteco"
+        },
+        {
+          "id": "son_istmeno",
+          "label": "son istmeño"
+        },
+        {
+          "id": "son_jarocho",
+          "label": "son jarocho"
+        },
+        {
+          "id": "son_montuno",
+          "label": "son montuno"
+        },
+        {
+          "id": "son_nica",
+          "label": "son nica"
+        },
+        {
+          "id": "sonata",
+          "label": "sonata"
+        },
+        {
+          "id": "songo",
+          "label": "songo"
+        },
+        {
+          "id": "sonorism",
+          "label": "sonorism"
+        },
+        {
+          "id": "sophisti_pop",
+          "label": "sophisti-pop"
+        },
+        {
+          "id": "soukous",
+          "label": "soukous"
+        },
+        {
+          "id": "soul",
+          "label": "soul"
+        },
+        {
+          "id": "soul_blues",
+          "label": "soul blues"
+        },
+        {
+          "id": "soul_jazz",
+          "label": "soul jazz"
+        },
+        {
+          "id": "sound_art",
+          "label": "sound art"
+        },
+        {
+          "id": "sound_collage",
+          "label": "sound collage"
+        },
+        {
+          "id": "sound_effects",
+          "label": "sound effects"
+        },
+        {
+          "id": "sound_poetry",
+          "label": "sound poetry"
+        },
+        {
+          "id": "southeast_asian_classical",
+          "label": "southeast asian classical"
+        },
+        {
+          "id": "southern_gospel",
+          "label": "southern gospel"
+        },
+        {
+          "id": "southern_hip_hop",
+          "label": "southern hip hop"
+        },
+        {
+          "id": "southern_metal",
+          "label": "southern metal"
+        },
+        {
+          "id": "southern_rock",
+          "label": "southern rock"
+        },
+        {
+          "id": "southern_soul",
+          "label": "southern soul"
+        },
+        {
+          "id": "sovietwave",
+          "label": "sovietwave"
+        },
+        {
+          "id": "space_age_pop",
+          "label": "space age pop"
+        },
+        {
+          "id": "space_ambient",
+          "label": "space ambient"
+        },
+        {
+          "id": "space_disco",
+          "label": "space disco"
+        },
+        {
+          "id": "space_rock",
+          "label": "space rock"
+        },
+        {
+          "id": "space_rock_revival",
+          "label": "space rock revival"
+        },
+        {
+          "id": "spacesynth",
+          "label": "spacesynth"
+        },
+        {
+          "id": "spamwave",
+          "label": "spamwave"
+        },
+        {
+          "id": "spectralism",
+          "label": "spectralism"
+        },
+        {
+          "id": "speech",
+          "label": "speech"
+        },
+        {
+          "id": "speed_garage",
+          "label": "speed garage"
+        },
+        {
+          "id": "speed_house",
+          "label": "speed house"
+        },
+        {
+          "id": "speed_metal",
+          "label": "speed metal"
+        },
+        {
+          "id": "speedcore",
+          "label": "speedcore"
+        },
+        {
+          "id": "spiritual_art_song",
+          "label": "spiritual art song"
+        },
+        {
+          "id": "spiritual_jazz",
+          "label": "spiritual jazz"
+        },
+        {
+          "id": "spirituals",
+          "label": "spirituals"
+        },
+        {
+          "id": "splittercore",
+          "label": "splittercore"
+        },
+        {
+          "id": "spoken_word",
+          "label": "spoken word"
+        },
+        {
+          "id": "spouge",
+          "label": "spouge"
+        },
+        {
+          "id": "standup_comedy",
+          "label": "standup comedy"
+        },
+        {
+          "id": "staifi",
+          "label": "staïfi"
+        },
+        {
+          "id": "steampunk",
+          "label": "steampunk"
+        },
+        {
+          "id": "steel_band",
+          "label": "steel band"
+        },
+        {
+          "id": "stenchcore",
+          "label": "stenchcore"
+        },
+        {
+          "id": "sticheron",
+          "label": "sticheron"
+        },
+        {
+          "id": "stochastic_music",
+          "label": "stochastic music"
+        },
+        {
+          "id": "stomp_and_holler",
+          "label": "stomp and holler"
+        },
+        {
+          "id": "stoner_metal",
+          "label": "stoner metal"
+        },
+        {
+          "id": "stoner_rap",
+          "label": "stoner rap"
+        },
+        {
+          "id": "stoner_rock",
+          "label": "stoner rock"
+        },
+        {
+          "id": "stornello",
+          "label": "stornello"
+        },
+        {
+          "id": "street_punk",
+          "label": "street punk"
+        },
+        {
+          "id": "stride",
+          "label": "stride"
+        },
+        {
+          "id": "string_quartet",
+          "label": "string quartet"
+        },
+        {
+          "id": "stutter_house",
+          "label": "stutter house"
+        },
+        {
+          "id": "sufi_rock",
+          "label": "sufi rock"
+        },
+        {
+          "id": "sufiana_kalam",
+          "label": "sufiana kalam"
+        },
+        {
+          "id": "sundanese_pop",
+          "label": "sundanese pop"
+        },
+        {
+          "id": "sungura",
+          "label": "sungura"
+        },
+        {
+          "id": "sunshine_pop",
+          "label": "sunshine pop"
+        },
+        {
+          "id": "suomisaundi",
+          "label": "suomisaundi"
+        },
+        {
+          "id": "surf",
+          "label": "surf"
+        },
+        {
+          "id": "surf_punk",
+          "label": "surf punk"
+        },
+        {
+          "id": "surf_rock",
+          "label": "surf rock"
+        },
+        {
+          "id": "sutartines",
+          "label": "sutartinės"
+        },
+        {
+          "id": "swamp_blues",
+          "label": "swamp blues"
+        },
+        {
+          "id": "swamp_pop",
+          "label": "swamp pop"
+        },
+        {
+          "id": "swamp_rock",
+          "label": "swamp rock"
+        },
+        {
+          "id": "swancore",
+          "label": "swancore"
+        },
+        {
+          "id": "sweet_jazz",
+          "label": "sweet jazz"
+        },
+        {
+          "id": "swing",
+          "label": "swing"
+        },
+        {
+          "id": "swing_revival",
+          "label": "swing revival"
+        },
+        {
+          "id": "symphonic_black_metal",
+          "label": "symphonic black metal"
+        },
+        {
+          "id": "symphonic_metal",
+          "label": "symphonic metal"
+        },
+        {
+          "id": "symphonic_mugham",
+          "label": "symphonic mugham"
+        },
+        {
+          "id": "symphonic_poem",
+          "label": "symphonic poem"
+        },
+        {
+          "id": "symphonic_prog",
+          "label": "symphonic prog"
+        },
+        {
+          "id": "symphonic_rock",
+          "label": "symphonic rock"
+        },
+        {
+          "id": "symphony",
+          "label": "symphony"
+        },
+        {
+          "id": "synth_funk",
+          "label": "synth funk"
+        },
+        {
+          "id": "synth_pop",
+          "label": "synth-pop"
+        },
+        {
+          "id": "synthwave",
+          "label": "synthwave"
+        },
+        {
+          "id": "sega",
+          "label": "séga"
+        },
+        {
+          "id": "sega_tambour",
+          "label": "séga tambour"
+        },
+        {
+          "id": "sokyoku",
+          "label": "sōkyoku"
+        },
+        {
+          "id": "t_pop",
+          "label": "t-pop"
+        },
+        {
+          "id": "taarab",
+          "label": "taarab"
+        },
+        {
+          "id": "tajaraste",
+          "label": "tajaraste"
+        },
+        {
+          "id": "takamba",
+          "label": "takamba"
+        },
+        {
+          "id": "talempong",
+          "label": "talempong"
+        },
+        {
+          "id": "talempong_goyang",
+          "label": "talempong goyang"
+        },
+        {
+          "id": "talking_blues",
+          "label": "talking blues"
+        },
+        {
+          "id": "tallava",
+          "label": "tallava"
+        },
+        {
+          "id": "tamborera",
+          "label": "tamborera"
+        },
+        {
+          "id": "tamborito",
+          "label": "tamborito"
+        },
+        {
+          "id": "tamborzao",
+          "label": "tamborzão"
+        },
+        {
+          "id": "tammurriata",
+          "label": "tammurriata"
+        },
+        {
+          "id": "tango",
+          "label": "tango"
+        },
+        {
+          "id": "tanjidor",
+          "label": "tanjidor"
+        },
+        {
+          "id": "taoist_ritual_music",
+          "label": "taoist ritual music"
+        },
+        {
+          "id": "tape_music",
+          "label": "tape music"
+        },
+        {
+          "id": "tappa",
+          "label": "tappa"
+        },
+        {
+          "id": "taquirari",
+          "label": "taquirari"
+        },
+        {
+          "id": "tarana",
+          "label": "tarana"
+        },
+        {
+          "id": "tarantella",
+          "label": "tarantella"
+        },
+        {
+          "id": "tarawangsa",
+          "label": "tarawangsa"
+        },
+        {
+          "id": "tarraxinha",
+          "label": "tarraxinha"
+        },
+        {
+          "id": "tassa",
+          "label": "tassa"
+        },
+        {
+          "id": "tassu",
+          "label": "tassu"
+        },
+        {
+          "id": "tbm",
+          "label": "tbm"
+        },
+        {
+          "id": "tchinkoume",
+          "label": "tchinkoumé"
+        },
+        {
+          "id": "tearout",
+          "label": "tearout"
+        },
+        {
+          "id": "tearout_brostep",
+          "label": "tearout brostep"
+        },
+        {
+          "id": "tech_house",
+          "label": "tech house"
+        },
+        {
+          "id": "tech_trance",
+          "label": "tech trance"
+        },
+        {
+          "id": "technical_death_metal",
+          "label": "technical death metal"
+        },
+        {
+          "id": "technical_thrash_metal",
+          "label": "technical thrash metal"
+        },
+        {
+          "id": "techno",
+          "label": "techno"
+        },
+        {
+          "id": "techno_bass",
+          "label": "techno bass"
+        },
+        {
+          "id": "techno_kayo",
+          "label": "techno kayō"
+        },
+        {
+          "id": "technobanda",
+          "label": "technobanda"
+        },
+        {
+          "id": "technoid",
+          "label": "technoid"
+        },
+        {
+          "id": "techstep",
+          "label": "techstep"
+        },
+        {
+          "id": "tecnobrega",
+          "label": "tecnobrega"
+        },
+        {
+          "id": "tecnofunk",
+          "label": "tecnofunk"
+        },
+        {
+          "id": "tecnomerengue",
+          "label": "tecnomerengue"
+        },
+        {
+          "id": "tecnorumba",
+          "label": "tecnorumba"
+        },
+        {
+          "id": "teen_pop",
+          "label": "teen pop"
+        },
+        {
+          "id": "tejano",
+          "label": "tejano"
+        },
+        {
+          "id": "tembang_cianjuran",
+          "label": "tembang cianjuran"
+        },
+        {
+          "id": "terror_plugg",
+          "label": "terror plugg"
+        },
+        {
+          "id": "terrorcore",
+          "label": "terrorcore"
+        },
+        {
+          "id": "tex_mex",
+          "label": "tex-mex"
+        },
+        {
+          "id": "texas_blues",
+          "label": "texas blues"
+        },
+        {
+          "id": "texas_country",
+          "label": "texas country"
+        },
+        {
+          "id": "thai_classical",
+          "label": "thai classical"
+        },
+        {
+          "id": "thall",
+          "label": "thall"
+        },
+        {
+          "id": "theme_and_variations",
+          "label": "theme and variations"
+        },
+        {
+          "id": "third_stream",
+          "label": "third stream"
+        },
+        {
+          "id": "third_wave_ska",
+          "label": "third wave ska"
+        },
+        {
+          "id": "thrash_metal",
+          "label": "thrash metal"
+        },
+        {
+          "id": "thrashcore",
+          "label": "thrashcore"
+        },
+        {
+          "id": "thumri",
+          "label": "thumri"
+        },
+        {
+          "id": "tibetan_buddhist_chant",
+          "label": "tibetan buddhist chant"
+        },
+        {
+          "id": "tiento",
+          "label": "tiento"
+        },
+        {
+          "id": "timba",
+          "label": "timba"
+        },
+        {
+          "id": "timbila",
+          "label": "timbila"
+        },
+        {
+          "id": "tin_pan_alley",
+          "label": "tin pan alley"
+        },
+        {
+          "id": "tivaner_inngernerlu",
+          "label": "tivaner inngernerlu"
+        },
+        {
+          "id": "tizita",
+          "label": "tizita"
+        },
+        {
+          "id": "toada_de_boi",
+          "label": "toada de boi"
+        },
+        {
+          "id": "toccata",
+          "label": "toccata"
+        },
+        {
+          "id": "tonada_asturiana",
+          "label": "tonada asturiana"
+        },
+        {
+          "id": "tonada_potosina",
+          "label": "tonada potosina"
+        },
+        {
+          "id": "tonadilla",
+          "label": "tonadilla"
+        },
+        {
+          "id": "tondero",
+          "label": "tondero"
+        },
+        {
+          "id": "tontipop",
+          "label": "tontipop"
+        },
+        {
+          "id": "totalism",
+          "label": "totalism"
+        },
+        {
+          "id": "tough_guy_hardcore",
+          "label": "tough guy hardcore"
+        },
+        {
+          "id": "township_bubblegum",
+          "label": "township bubblegum"
+        },
+        {
+          "id": "township_jive",
+          "label": "township jive"
+        },
+        {
+          "id": "toypop",
+          "label": "toypop"
+        },
+        {
+          "id": "toytown_pop",
+          "label": "toytown pop"
+        },
+        {
+          "id": "toytown_techno",
+          "label": "toytown techno"
+        },
+        {
+          "id": "tradi_moderne_congolais",
+          "label": "tradi-moderne congolais"
+        },
+        {
+          "id": "tradi_moderne_ivoirien",
+          "label": "tradi-moderne ivoirien"
+        },
+        {
+          "id": "traditional_black_gospel",
+          "label": "traditional black gospel"
+        },
+        {
+          "id": "traditional_bluegrass",
+          "label": "traditional bluegrass"
+        },
+        {
+          "id": "traditional_country",
+          "label": "traditional country"
+        },
+        {
+          "id": "traditional_doom_metal",
+          "label": "traditional doom metal"
+        },
+        {
+          "id": "traditional_pop",
+          "label": "traditional pop"
+        },
+        {
+          "id": "traditional_sega",
+          "label": "traditional séga"
+        },
+        {
+          "id": "tragedie_en_musique",
+          "label": "tragédie en musique"
+        },
+        {
+          "id": "trallalero",
+          "label": "trallalero"
+        },
+        {
+          "id": "trampska_hudba",
+          "label": "trampská hudba"
+        },
+        {
+          "id": "trance",
+          "label": "trance"
+        },
+        {
+          "id": "trance_2_0",
+          "label": "trance 2.0"
+        },
+        {
+          "id": "trance_metal",
+          "label": "trance metal"
+        },
+        {
+          "id": "trancestep",
+          "label": "trancestep"
+        },
+        {
+          "id": "trap",
+          "label": "trap"
+        },
+        {
+          "id": "trap_dancehall",
+          "label": "trap dancehall"
+        },
+        {
+          "id": "trap_edm",
+          "label": "trap edm"
+        },
+        {
+          "id": "trap_latino",
+          "label": "trap latino"
+        },
+        {
+          "id": "trap_metal",
+          "label": "trap metal"
+        },
+        {
+          "id": "trap_shaabi",
+          "label": "trap shaabi"
+        },
+        {
+          "id": "trap_soul",
+          "label": "trap soul"
+        },
+        {
+          "id": "trapfunk",
+          "label": "trapfunk"
+        },
+        {
+          "id": "tread",
+          "label": "tread"
+        },
+        {
+          "id": "tribal_ambient",
+          "label": "tribal ambient"
+        },
+        {
+          "id": "tribal_guarachero",
+          "label": "tribal guarachero"
+        },
+        {
+          "id": "tribal_house",
+          "label": "tribal house"
+        },
+        {
+          "id": "trikitixa",
+          "label": "trikitixa"
+        },
+        {
+          "id": "trip_hop",
+          "label": "trip hop"
+        },
+        {
+          "id": "troparion",
+          "label": "troparion"
+        },
+        {
+          "id": "tropical_house",
+          "label": "tropical house"
+        },
+        {
+          "id": "tropical_rock",
+          "label": "tropical rock"
+        },
+        {
+          "id": "tropicanibalismo",
+          "label": "tropicanibalismo"
+        },
+        {
+          "id": "tropicalia",
+          "label": "tropicália"
+        },
+        {
+          "id": "tropipop",
+          "label": "tropipop"
+        },
+        {
+          "id": "trot",
+          "label": "trot"
+        },
+        {
+          "id": "trova",
+          "label": "trova"
+        },
+        {
+          "id": "trova_yucateca",
+          "label": "trova yucateca"
+        },
+        {
+          "id": "truck_driving_country",
+          "label": "truck driving country"
+        },
+        {
+          "id": "tsapiky",
+          "label": "tsapiky"
+        },
+        {
+          "id": "tsonga_disco",
+          "label": "tsonga disco"
+        },
+        {
+          "id": "tsugaru_jamisen",
+          "label": "tsugaru-jamisen"
+        },
+        {
+          "id": "tumba",
+          "label": "tumba"
+        },
+        {
+          "id": "tumba_francesa",
+          "label": "tumba francesa"
+        },
+        {
+          "id": "tumbele",
+          "label": "tumbélé"
+        },
+        {
+          "id": "turbo_folk",
+          "label": "turbo-folk"
+        },
+        {
+          "id": "turkish_classical",
+          "label": "turkish classical"
+        },
+        {
+          "id": "turkish_folk",
+          "label": "turkish folk"
+        },
+        {
+          "id": "turkish_pop",
+          "label": "turkish pop"
+        },
+        {
+          "id": "turntablism",
+          "label": "turntablism"
+        },
+        {
+          "id": "twee_pop",
+          "label": "twee pop"
+        },
+        {
+          "id": "twerk",
+          "label": "twerk"
+        },
+        {
+          "id": "twoubadou",
+          "label": "twoubadou"
+        },
+        {
+          "id": "tan_co_giao_duyen",
+          "label": "tân cổ giao duyên"
+        },
+        {
+          "id": "uaajeerneq",
+          "label": "uaajeerneq"
+        },
+        {
+          "id": "udigrudi",
+          "label": "udigrudi"
+        },
+        {
+          "id": "uk_drill",
+          "label": "uk drill"
+        },
+        {
+          "id": "uk_funky",
+          "label": "uk funky"
+        },
+        {
+          "id": "uk_garage",
+          "label": "uk garage"
+        },
+        {
+          "id": "uk_hardcore",
+          "label": "uk hardcore"
+        },
+        {
+          "id": "uk_jackin",
+          "label": "uk jackin"
+        },
+        {
+          "id": "uk_street_soul",
+          "label": "uk street soul"
+        },
+        {
+          "id": "uk82",
+          "label": "uk82"
+        },
+        {
+          "id": "unakesa",
+          "label": "unakesa"
+        },
+        {
+          "id": "underground_hip_hop",
+          "label": "underground hip hop"
+        },
+        {
+          "id": "unyago",
+          "label": "unyago"
+        },
+        {
+          "id": "upopo",
+          "label": "upopo"
+        },
+        {
+          "id": "uptempo_hardcore",
+          "label": "uptempo hardcore"
+        },
+        {
+          "id": "urban_contemporary_gospel",
+          "label": "urban contemporary gospel"
+        },
+        {
+          "id": "urban_cowboy",
+          "label": "urban cowboy"
+        },
+        {
+          "id": "urtiin_duu",
+          "label": "urtiin duu"
+        },
+        {
+          "id": "urumi_melam",
+          "label": "urumi melam"
+        },
+        {
+          "id": "us_power_metal",
+          "label": "us power metal"
+        },
+        {
+          "id": "utopian_virtual",
+          "label": "utopian virtual"
+        },
+        {
+          "id": "uyghur_muqam",
+          "label": "uyghur muqam"
+        },
+        {
+          "id": "uzun_hava",
+          "label": "uzun hava"
+        },
+        {
+          "id": "v_pop",
+          "label": "v-pop"
+        },
+        {
+          "id": "vaigat",
+          "label": "vaigat"
+        },
+        {
+          "id": "valaam_chant",
+          "label": "valaam chant"
+        },
+        {
+          "id": "vallenato",
+          "label": "vallenato"
+        },
+        {
+          "id": "vals_criollo",
+          "label": "vals criollo"
+        },
+        {
+          "id": "vals_venezolano",
+          "label": "vals venezolano"
+        },
+        {
+          "id": "valsa_brasileira",
+          "label": "valsa brasileira"
+        },
+        {
+          "id": "vanera",
+          "label": "vanera"
+        },
+        {
+          "id": "vapornoise",
+          "label": "vapornoise"
+        },
+        {
+          "id": "vaportrap",
+          "label": "vaportrap"
+        },
+        {
+          "id": "vaporwave",
+          "label": "vaporwave"
+        },
+        {
+          "id": "vaudeville",
+          "label": "vaudeville"
+        },
+        {
+          "id": "vaudeville_blues",
+          "label": "vaudeville blues"
+        },
+        {
+          "id": "vedic_chant",
+          "label": "vedic chant"
+        },
+        {
+          "id": "verbunkos",
+          "label": "verbunkos"
+        },
+        {
+          "id": "verismo",
+          "label": "verismo"
+        },
+        {
+          "id": "vietnamese_bolero",
+          "label": "vietnamese bolero"
+        },
+        {
+          "id": "vietnamese_classical",
+          "label": "vietnamese classical"
+        },
+        {
+          "id": "viking_metal",
+          "label": "viking metal"
+        },
+        {
+          "id": "viking_rock",
+          "label": "viking rock"
+        },
+        {
+          "id": "villancico",
+          "label": "villancico"
+        },
+        {
+          "id": "vinahouse",
+          "label": "vinahouse"
+        },
+        {
+          "id": "visa",
+          "label": "visa"
+        },
+        {
+          "id": "visual_kei",
+          "label": "visual kei"
+        },
+        {
+          "id": "vocal_house",
+          "label": "vocal house"
+        },
+        {
+          "id": "vocal_jazz",
+          "label": "vocal jazz"
+        },
+        {
+          "id": "vocal_surf",
+          "label": "vocal surf"
+        },
+        {
+          "id": "vocal_trance",
+          "label": "vocal trance"
+        },
+        {
+          "id": "vocalese",
+          "label": "vocalese"
+        },
+        {
+          "id": "volkstumliche_musik",
+          "label": "volkstümliche musik"
+        },
+        {
+          "id": "vude",
+          "label": "vude"
+        },
+        {
+          "id": "wa_euro",
+          "label": "wa euro"
+        },
+        {
+          "id": "waila",
+          "label": "waila"
+        },
+        {
+          "id": "waka",
+          "label": "waka"
+        },
+        {
+          "id": "waltz",
+          "label": "waltz"
+        },
+        {
+          "id": "wangga",
+          "label": "wangga"
+        },
+        {
+          "id": "war_metal",
+          "label": "war metal"
+        },
+        {
+          "id": "wassoulou",
+          "label": "wassoulou"
+        },
+        {
+          "id": "waulking_song",
+          "label": "waulking song"
+        },
+        {
+          "id": "wave",
+          "label": "wave"
+        },
+        {
+          "id": "weightless",
+          "label": "weightless"
+        },
+        {
+          "id": "west_coast_breaks",
+          "label": "west coast breaks"
+        },
+        {
+          "id": "west_coast_hip_hop",
+          "label": "west coast hip hop"
+        },
+        {
+          "id": "west_coast_swing",
+          "label": "west coast swing"
+        },
+        {
+          "id": "western",
+          "label": "western"
+        },
+        {
+          "id": "western_classical",
+          "label": "western classical"
+        },
+        {
+          "id": "western_swing",
+          "label": "western swing"
+        },
+        {
+          "id": "whale_song",
+          "label": "whale song"
+        },
+        {
+          "id": "whistling",
+          "label": "whistling"
+        },
+        {
+          "id": "white_voice",
+          "label": "white voice"
+        },
+        {
+          "id": "winter_synth",
+          "label": "winter synth"
+        },
+        {
+          "id": "witch_house",
+          "label": "witch house"
+        },
+        {
+          "id": "wong_shadow",
+          "label": "wong shadow"
+        },
+        {
+          "id": "wonky",
+          "label": "wonky"
+        },
+        {
+          "id": "wonky_techno",
+          "label": "wonky techno"
+        },
+        {
+          "id": "work_song",
+          "label": "work song"
+        },
+        {
+          "id": "world_fusion",
+          "label": "world fusion"
+        },
+        {
+          "id": "worldbeat",
+          "label": "worldbeat"
+        },
+        {
+          "id": "wyrd_folk",
+          "label": "wyrd folk"
+        },
+        {
+          "id": "xaxado",
+          "label": "xaxado"
+        },
+        {
+          "id": "xian_psych",
+          "label": "xian psych"
+        },
+        {
+          "id": "xote",
+          "label": "xote"
+        },
+        {
+          "id": "xtra_raw",
+          "label": "xtra raw"
+        },
+        {
+          "id": "xuc",
+          "label": "xuc"
+        },
+        {
+          "id": "xam",
+          "label": "xẩm"
+        },
+        {
+          "id": "yacht_rock",
+          "label": "yacht rock"
+        },
+        {
+          "id": "yakousei",
+          "label": "yakousei"
+        },
+        {
+          "id": "yangzhou_opera",
+          "label": "yangzhou opera"
+        },
+        {
+          "id": "yanyue",
+          "label": "yanyue"
+        },
+        {
+          "id": "yaravi",
+          "label": "yaraví"
+        },
+        {
+          "id": "yayue",
+          "label": "yayue"
+        },
+        {
+          "id": "yodeling",
+          "label": "yodeling"
+        },
+        {
+          "id": "ytpmv",
+          "label": "ytpmv"
+        },
+        {
+          "id": "yu_mex",
+          "label": "yu-mex"
+        },
+        {
+          "id": "yue_opera",
+          "label": "yue opera"
+        },
+        {
+          "id": "yukar",
+          "label": "yukar"
+        },
+        {
+          "id": "ye_ye",
+          "label": "yé-yé"
+        },
+        {
+          "id": "zamacueca",
+          "label": "zamacueca"
+        },
+        {
+          "id": "zamba",
+          "label": "zamba"
+        },
+        {
+          "id": "zamrock",
+          "label": "zamrock"
+        },
+        {
+          "id": "zarzuela",
+          "label": "zarzuela"
+        },
+        {
+          "id": "zarzuela_barroca",
+          "label": "zarzuela barroca"
+        },
+        {
+          "id": "zeitoper",
+          "label": "zeitoper"
+        },
+        {
+          "id": "zema",
+          "label": "zema"
+        },
+        {
+          "id": "zemirot",
+          "label": "zemirot"
+        },
+        {
+          "id": "zenonesque",
+          "label": "zenonesque"
+        },
+        {
+          "id": "zess",
+          "label": "zess"
+        },
+        {
+          "id": "zeuhl",
+          "label": "zeuhl"
+        },
+        {
+          "id": "zeybek",
+          "label": "zeybek"
+        },
+        {
+          "id": "zhongguo_feng",
+          "label": "zhongguo feng"
+        },
+        {
+          "id": "ziglibithy",
+          "label": "ziglibithy"
+        },
+        {
+          "id": "zinli",
+          "label": "zinli"
+        },
+        {
+          "id": "znamenny_chant",
+          "label": "znamenny chant"
+        },
+        {
+          "id": "zoblazo",
+          "label": "zoblazo"
+        },
+        {
+          "id": "zohioliin_duu",
+          "label": "zohioliin duu"
+        },
+        {
+          "id": "zolo",
+          "label": "zolo"
+        },
+        {
+          "id": "zouglou",
+          "label": "zouglou"
+        },
+        {
+          "id": "zouk",
+          "label": "zouk"
+        },
+        {
+          "id": "zouk_love",
+          "label": "zouk love"
+        },
+        {
+          "id": "zydeco",
+          "label": "zydeco"
+        },
+        {
+          "id": "entekhno",
+          "label": "éntekhno"
+        },
+        {
+          "id": "etude",
+          "label": "étude"
+        },
+        {
+          "id": "ozgun_muzik",
+          "label": "özgün müzik"
+        },
+        {
+          "id": "calgija",
+          "label": "čalgija"
+        },
+        {
+          "id": "ote_a",
+          "label": "ʻōteʻa"
+        }
+      ],
+      "options_complete": true,
+      "options_source": "generate_music_hybrid_model/music_studio/data/genre_vocabulary.json",
+      "options_json_path": "groups[].entries[]",
+      "metadata_gaps": [
+        "Current local document does not specify a selection maximum; missing metadata does not prove that the service has no limit."
+      ],
+      "path": "genres"
+    },
+    {
+      "key": "eras",
+      "binding": "prose",
+      "spec_control": "multi-select",
+      "source_description": "imported from the service's versioned `era_vocabulary` data file (14 entries)",
+      "source_line": 68,
+      "label": "Eras",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "idea",
+      "control": "multi-select",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "path": "eras[]"
+      },
+      "options": [
+        {
+          "id": "era_1920s",
+          "label": "1920s"
+        },
+        {
+          "id": "era_1930s",
+          "label": "1930s"
+        },
+        {
+          "id": "era_1940s",
+          "label": "1940s"
+        },
+        {
+          "id": "era_1950s",
+          "label": "1950s"
+        },
+        {
+          "id": "era_1960s",
+          "label": "1960s"
+        },
+        {
+          "id": "era_1970s",
+          "label": "1970s"
+        },
+        {
+          "id": "era_1980s",
+          "label": "1980s"
+        },
+        {
+          "id": "era_1990s",
+          "label": "1990s"
+        },
+        {
+          "id": "era_2000s",
+          "label": "2000s"
+        },
+        {
+          "id": "era_2010s",
+          "label": "2010s"
+        },
+        {
+          "id": "era_2020s",
+          "label": "2020s"
+        },
+        {
+          "id": "era_modifier_early",
+          "label": "Early"
+        },
+        {
+          "id": "era_modifier_classic",
+          "label": "Classic"
+        },
+        {
+          "id": "era_modifier_modern",
+          "label": "Modern"
+        }
+      ],
+      "options_complete": true,
+      "options_source": "generate_music_hybrid_model/music_studio/data/era_vocabulary.json",
+      "options_json_path": "groups[].entries[]",
+      "metadata_gaps": [
+        "Current local document does not specify a selection maximum; missing metadata does not prove that the service has no limit."
+      ],
+      "path": "eras"
+    },
+    {
+      "key": "moods",
+      "binding": "prose",
+      "spec_control": "multi-select",
+      "source_description": "imported from the service's versioned `mood_vocabulary` data file (114 entries)",
+      "source_line": 69,
+      "label": "Moods",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "idea",
+      "control": "multi-select",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "path": "moods[]"
+      },
+      "options": [
+        {
+          "id": "epic",
+          "label": "Epic"
+        },
+        {
+          "id": "uplifting",
+          "label": "Uplifting"
+        },
+        {
+          "id": "nostalgic",
+          "label": "Nostalgic"
+        },
+        {
+          "id": "mysterious",
+          "label": "Mysterious"
+        },
+        {
+          "id": "hopeful",
+          "label": "Hopeful"
+        },
+        {
+          "id": "melancholic",
+          "label": "Melancholic"
+        },
+        {
+          "id": "dark",
+          "label": "Dark"
+        },
+        {
+          "id": "aggressive",
+          "label": "Aggressive"
+        },
+        {
+          "id": "energetic",
+          "label": "Energetic"
+        },
+        {
+          "id": "melancholy",
+          "label": "Melancholy"
+        },
+        {
+          "id": "peaceful",
+          "label": "Peaceful"
+        },
+        {
+          "id": "tense_suspenseful",
+          "label": "Tense & Suspenseful"
+        },
+        {
+          "id": "calm",
+          "label": "Calm"
+        },
+        {
+          "id": "warm",
+          "label": "Warm"
+        },
+        {
+          "id": "gentle",
+          "label": "Gentle"
+        },
+        {
+          "id": "confident",
+          "label": "Confident"
+        },
+        {
+          "id": "anthemic",
+          "label": "Anthemic"
+        },
+        {
+          "id": "filled_with_wonder",
+          "label": "Filled with wonder"
+        },
+        {
+          "id": "enchanted",
+          "label": "Enchanted"
+        },
+        {
+          "id": "feelings_of_transcendence",
+          "label": "Feelings of transcendence"
+        },
+        {
+          "id": "inspired",
+          "label": "Inspired"
+        },
+        {
+          "id": "full_of_tenderness",
+          "label": "Full of tenderness"
+        },
+        {
+          "id": "warmhearted",
+          "label": "Warmhearted"
+        },
+        {
+          "id": "dreamy",
+          "label": "Dreamy"
+        },
+        {
+          "id": "sentimental",
+          "label": "Sentimental"
+        },
+        {
+          "id": "relaxed",
+          "label": "Relaxed"
+        },
+        {
+          "id": "soothed",
+          "label": "Soothed"
+        },
+        {
+          "id": "powerful",
+          "label": "Powerful"
+        },
+        {
+          "id": "strong",
+          "label": "Strong"
+        },
+        {
+          "id": "lively",
+          "label": "Lively"
+        },
+        {
+          "id": "joyful",
+          "label": "Joyful"
+        },
+        {
+          "id": "wanting_to_dance",
+          "label": "Wanting to dance"
+        },
+        {
+          "id": "tense",
+          "label": "Tense"
+        },
+        {
+          "id": "nervous",
+          "label": "Nervous"
+        },
+        {
+          "id": "aroused",
+          "label": "Aroused"
+        },
+        {
+          "id": "agitated",
+          "label": "Agitated"
+        },
+        {
+          "id": "sad",
+          "label": "Sad"
+        },
+        {
+          "id": "gloomy",
+          "label": "Gloomy"
+        },
+        {
+          "id": "feelings_of_harmony",
+          "label": "Feelings of harmony"
+        },
+        {
+          "id": "feelings_of_beauty",
+          "label": "Feelings of beauty"
+        },
+        {
+          "id": "interested",
+          "label": "Interested"
+        },
+        {
+          "id": "discovering_novelty",
+          "label": "Discovering novelty"
+        },
+        {
+          "id": "insight",
+          "label": "Insight"
+        },
+        {
+          "id": "moved",
+          "label": "Moved"
+        },
+        {
+          "id": "touched",
+          "label": "Touched"
+        },
+        {
+          "id": "indifferent",
+          "label": "Indifferent"
+        },
+        {
+          "id": "bored",
+          "label": "Bored"
+        },
+        {
+          "id": "passionate",
+          "label": "Passionate"
+        },
+        {
+          "id": "enthusiastic",
+          "label": "Enthusiastic"
+        },
+        {
+          "id": "in_awe",
+          "label": "In awe"
+        },
+        {
+          "id": "apprehensive",
+          "label": "Apprehensive"
+        },
+        {
+          "id": "uneasy",
+          "label": "Uneasy"
+        },
+        {
+          "id": "astonished",
+          "label": "Astonished"
+        },
+        {
+          "id": "amazed",
+          "label": "Amazed"
+        },
+        {
+          "id": "irritated",
+          "label": "Irritated"
+        },
+        {
+          "id": "angry",
+          "label": "Angry"
+        },
+        {
+          "id": "filled_with_wonder_amazed",
+          "label": "Filled with wonder, amazed"
+        },
+        {
+          "id": "moved_touched",
+          "label": "Moved, touched"
+        },
+        {
+          "id": "enchanted_in_awe",
+          "label": "Enchanted, in awe"
+        },
+        {
+          "id": "inspired_enthusiastic",
+          "label": "Inspired, enthusiastic"
+        },
+        {
+          "id": "energetic_lively",
+          "label": "Energetic, lively"
+        },
+        {
+          "id": "joyful_wanting_to_dance",
+          "label": "Joyful, wanting to dance"
+        },
+        {
+          "id": "powerful_strong",
+          "label": "Powerful, strong"
+        },
+        {
+          "id": "full_of_tenderness_warmhearted",
+          "label": "Full of tenderness, warmhearted"
+        },
+        {
+          "id": "relaxed_peaceful",
+          "label": "Relaxed, peaceful"
+        },
+        {
+          "id": "melancholic_sad",
+          "label": "Melancholic, sad"
+        },
+        {
+          "id": "nostalgic_sentimental",
+          "label": "Nostalgic, sentimental"
+        },
+        {
+          "id": "indifferent_bored",
+          "label": "Indifferent, bored"
+        },
+        {
+          "id": "tense_uneasy",
+          "label": "Tense, uneasy"
+        },
+        {
+          "id": "agitated_aggressive",
+          "label": "Agitated, aggressive"
+        },
+        {
+          "id": "pleasure",
+          "label": "Pleasure"
+        },
+        {
+          "id": "excitement",
+          "label": "Excitement"
+        },
+        {
+          "id": "arousal",
+          "label": "Arousal"
+        },
+        {
+          "id": "distress",
+          "label": "Distress"
+        },
+        {
+          "id": "misery",
+          "label": "Misery"
+        },
+        {
+          "id": "depression",
+          "label": "Depression"
+        },
+        {
+          "id": "sleepiness",
+          "label": "Sleepiness"
+        },
+        {
+          "id": "contentment",
+          "label": "Contentment"
+        },
+        {
+          "id": "happy",
+          "label": "Happy"
+        },
+        {
+          "id": "delighted",
+          "label": "Delighted"
+        },
+        {
+          "id": "excited",
+          "label": "Excited"
+        },
+        {
+          "id": "alarmed",
+          "label": "Alarmed"
+        },
+        {
+          "id": "miserable",
+          "label": "Miserable"
+        },
+        {
+          "id": "droopy",
+          "label": "Droopy"
+        },
+        {
+          "id": "tired",
+          "label": "Tired"
+        },
+        {
+          "id": "sleepy",
+          "label": "Sleepy"
+        },
+        {
+          "id": "serene",
+          "label": "Serene"
+        },
+        {
+          "id": "pleased",
+          "label": "Pleased"
+        },
+        {
+          "id": "rowdy",
+          "label": "Rowdy"
+        },
+        {
+          "id": "literate",
+          "label": "Literate"
+        },
+        {
+          "id": "witty",
+          "label": "Witty"
+        },
+        {
+          "id": "volatile",
+          "label": "Volatile"
+        },
+        {
+          "id": "rousing",
+          "label": "Rousing"
+        },
+        {
+          "id": "amiable_good_natured",
+          "label": "Amiable/ Good natured"
+        },
+        {
+          "id": "wistful",
+          "label": "Wistful"
+        },
+        {
+          "id": "humorous",
+          "label": "Humorous"
+        },
+        {
+          "id": "fiery",
+          "label": "Fiery"
+        },
+        {
+          "id": "sweet",
+          "label": "Sweet"
+        },
+        {
+          "id": "bittersweet",
+          "label": "Bittersweet"
+        },
+        {
+          "id": "whimsical",
+          "label": "Whimsical"
+        },
+        {
+          "id": "visceral",
+          "label": "Visceral"
+        },
+        {
+          "id": "boisterous",
+          "label": "Boisterous"
+        },
+        {
+          "id": "fun",
+          "label": "Fun"
+        },
+        {
+          "id": "autumnal",
+          "label": "Autumnal"
+        },
+        {
+          "id": "wry",
+          "label": "Wry"
+        },
+        {
+          "id": "rollicking",
+          "label": "Rollicking"
+        },
+        {
+          "id": "brooding",
+          "label": "Brooding"
+        },
+        {
+          "id": "campy",
+          "label": "Campy"
+        },
+        {
+          "id": "tense_anxious",
+          "label": "Tense/anxious"
+        },
+        {
+          "id": "cheerful",
+          "label": "Cheerful"
+        },
+        {
+          "id": "poignant",
+          "label": "Poignant"
+        },
+        {
+          "id": "quirky",
+          "label": "Quirky"
+        },
+        {
+          "id": "intense",
+          "label": "Intense"
+        },
+        {
+          "id": "silly",
+          "label": "Silly"
+        }
+      ],
+      "options_complete": true,
+      "options_source": "generate_music_hybrid_model/music_studio/data/mood_vocabulary.json",
+      "options_json_path": "groups[].entries[]",
+      "metadata_gaps": [
+        "Current local document does not specify a selection maximum; missing metadata does not prove that the service has no limit."
+      ],
+      "path": "moods"
+    },
+    {
+      "key": "prompt_blocks",
+      "binding": "prose",
+      "spec_control": "chips",
+      "source_description": "array of objects: `role`, `text`, `weight` — see shape reference",
+      "source_line": 70,
+      "label": "Prompt blocks",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "idea",
+      "control": "repeater",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "control": "fieldset",
+        "fields": [
+          {
+            "key": "role",
+            "label": "Role",
+            "type": "string",
+            "control": "combo",
+            "options": [
+              {
+                "id": "bass",
+                "label": "Bass"
+              },
+              {
+                "id": "climax",
+                "label": "Climax"
+              },
+              {
+                "id": "harmony",
+                "label": "Harmony"
+              },
+              {
+                "id": "hook",
+                "label": "Hook"
+              },
+              {
+                "id": "outro",
+                "label": "Outro"
+              },
+              {
+                "id": "percussion",
+                "label": "Percussion"
+              },
+              {
+                "id": "texture",
+                "label": "Texture"
+              },
+              {
+                "id": "transition",
+                "label": "Transition"
+              }
+            ],
+            "options_complete": true,
+            "path": "prompt_blocks[].role"
+          },
+          {
+            "key": "text",
+            "label": "Direction",
+            "type": "string",
+            "control": "text",
+            "max_length": 280,
+            "path": "prompt_blocks[].text"
+          },
+          {
+            "key": "weight",
+            "label": "Weight",
+            "type": "number",
+            "control": "slider",
+            "minimum": 0,
+            "maximum": 1,
+            "step": 0.1,
+            "path": "prompt_blocks[].weight"
+          }
+        ],
+        "additional_properties": false,
+        "path": "prompt_blocks[]"
+      },
+      "structured_source_lines": [
+        192,
+        203
+      ],
+      "default": [],
+      "path": "prompt_blocks"
+    },
+    {
+      "key": "tempo_bpm",
+      "binding": "prose",
+      "spec_control": "slider",
+      "source_description": "`60`, `80`, `100`, `120`, `128`, `140`, `160`, `174`",
+      "source_line": 71,
+      "label": "Tempo (BPM)",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "composition",
+      "control": "number",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "number",
+      "options": [
+        {
+          "id": 60,
+          "label": "60"
+        },
+        {
+          "id": 80,
+          "label": "80"
+        },
+        {
+          "id": 100,
+          "label": "100"
+        },
+        {
+          "id": 120,
+          "label": "120"
+        },
+        {
+          "id": 128,
+          "label": "128"
+        },
+        {
+          "id": 140,
+          "label": "140"
+        },
+        {
+          "id": 160,
+          "label": "160"
+        },
+        {
+          "id": 174,
+          "label": "174"
+        }
+      ],
+      "options_complete": false,
+      "unit": "BPM",
+      "options_role": "documented_presets",
+      "metadata_gaps": [
+        "Current 103-parameter document lists eight presets but no continuous bounds or step. Do not treat presets as the only allowed values or enforce the historical 40..220 range without capabilities."
+      ],
+      "historical_metadata": {
+        "source": "generate_music_hybrid_model/music_studio/param_spec.json",
+        "minimum": 40,
+        "maximum": 220,
+        "step": 1,
+        "current_status": "unverified; do not enforce automatically"
+      },
+      "path": "tempo_bpm"
+    },
+    {
+      "key": "key",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "generated: 12 roots × 9 modes",
+      "source_line": 72,
+      "label": "Key and scale",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "composition",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "C|major",
+          "label": "C Major"
+        },
+        {
+          "id": "C|minor",
+          "label": "C Minor"
+        },
+        {
+          "id": "C|ionian",
+          "label": "C Ionian"
+        },
+        {
+          "id": "C|dorian",
+          "label": "C Dorian"
+        },
+        {
+          "id": "C|phrygian",
+          "label": "C Phrygian"
+        },
+        {
+          "id": "C|lydian",
+          "label": "C Lydian"
+        },
+        {
+          "id": "C|mixolydian",
+          "label": "C Mixolydian"
+        },
+        {
+          "id": "C|aeolian",
+          "label": "C Aeolian"
+        },
+        {
+          "id": "C|locrian",
+          "label": "C Locrian"
+        },
+        {
+          "id": "C#|major",
+          "label": "C# Major"
+        },
+        {
+          "id": "C#|minor",
+          "label": "C# Minor"
+        },
+        {
+          "id": "C#|ionian",
+          "label": "C# Ionian"
+        },
+        {
+          "id": "C#|dorian",
+          "label": "C# Dorian"
+        },
+        {
+          "id": "C#|phrygian",
+          "label": "C# Phrygian"
+        },
+        {
+          "id": "C#|lydian",
+          "label": "C# Lydian"
+        },
+        {
+          "id": "C#|mixolydian",
+          "label": "C# Mixolydian"
+        },
+        {
+          "id": "C#|aeolian",
+          "label": "C# Aeolian"
+        },
+        {
+          "id": "C#|locrian",
+          "label": "C# Locrian"
+        },
+        {
+          "id": "D|major",
+          "label": "D Major"
+        },
+        {
+          "id": "D|minor",
+          "label": "D Minor"
+        },
+        {
+          "id": "D|ionian",
+          "label": "D Ionian"
+        },
+        {
+          "id": "D|dorian",
+          "label": "D Dorian"
+        },
+        {
+          "id": "D|phrygian",
+          "label": "D Phrygian"
+        },
+        {
+          "id": "D|lydian",
+          "label": "D Lydian"
+        },
+        {
+          "id": "D|mixolydian",
+          "label": "D Mixolydian"
+        },
+        {
+          "id": "D|aeolian",
+          "label": "D Aeolian"
+        },
+        {
+          "id": "D|locrian",
+          "label": "D Locrian"
+        },
+        {
+          "id": "D#|major",
+          "label": "D# Major"
+        },
+        {
+          "id": "D#|minor",
+          "label": "D# Minor"
+        },
+        {
+          "id": "D#|ionian",
+          "label": "D# Ionian"
+        },
+        {
+          "id": "D#|dorian",
+          "label": "D# Dorian"
+        },
+        {
+          "id": "D#|phrygian",
+          "label": "D# Phrygian"
+        },
+        {
+          "id": "D#|lydian",
+          "label": "D# Lydian"
+        },
+        {
+          "id": "D#|mixolydian",
+          "label": "D# Mixolydian"
+        },
+        {
+          "id": "D#|aeolian",
+          "label": "D# Aeolian"
+        },
+        {
+          "id": "D#|locrian",
+          "label": "D# Locrian"
+        },
+        {
+          "id": "E|major",
+          "label": "E Major"
+        },
+        {
+          "id": "E|minor",
+          "label": "E Minor"
+        },
+        {
+          "id": "E|ionian",
+          "label": "E Ionian"
+        },
+        {
+          "id": "E|dorian",
+          "label": "E Dorian"
+        },
+        {
+          "id": "E|phrygian",
+          "label": "E Phrygian"
+        },
+        {
+          "id": "E|lydian",
+          "label": "E Lydian"
+        },
+        {
+          "id": "E|mixolydian",
+          "label": "E Mixolydian"
+        },
+        {
+          "id": "E|aeolian",
+          "label": "E Aeolian"
+        },
+        {
+          "id": "E|locrian",
+          "label": "E Locrian"
+        },
+        {
+          "id": "F|major",
+          "label": "F Major"
+        },
+        {
+          "id": "F|minor",
+          "label": "F Minor"
+        },
+        {
+          "id": "F|ionian",
+          "label": "F Ionian"
+        },
+        {
+          "id": "F|dorian",
+          "label": "F Dorian"
+        },
+        {
+          "id": "F|phrygian",
+          "label": "F Phrygian"
+        },
+        {
+          "id": "F|lydian",
+          "label": "F Lydian"
+        },
+        {
+          "id": "F|mixolydian",
+          "label": "F Mixolydian"
+        },
+        {
+          "id": "F|aeolian",
+          "label": "F Aeolian"
+        },
+        {
+          "id": "F|locrian",
+          "label": "F Locrian"
+        },
+        {
+          "id": "F#|major",
+          "label": "F# Major"
+        },
+        {
+          "id": "F#|minor",
+          "label": "F# Minor"
+        },
+        {
+          "id": "F#|ionian",
+          "label": "F# Ionian"
+        },
+        {
+          "id": "F#|dorian",
+          "label": "F# Dorian"
+        },
+        {
+          "id": "F#|phrygian",
+          "label": "F# Phrygian"
+        },
+        {
+          "id": "F#|lydian",
+          "label": "F# Lydian"
+        },
+        {
+          "id": "F#|mixolydian",
+          "label": "F# Mixolydian"
+        },
+        {
+          "id": "F#|aeolian",
+          "label": "F# Aeolian"
+        },
+        {
+          "id": "F#|locrian",
+          "label": "F# Locrian"
+        },
+        {
+          "id": "G|major",
+          "label": "G Major"
+        },
+        {
+          "id": "G|minor",
+          "label": "G Minor"
+        },
+        {
+          "id": "G|ionian",
+          "label": "G Ionian"
+        },
+        {
+          "id": "G|dorian",
+          "label": "G Dorian"
+        },
+        {
+          "id": "G|phrygian",
+          "label": "G Phrygian"
+        },
+        {
+          "id": "G|lydian",
+          "label": "G Lydian"
+        },
+        {
+          "id": "G|mixolydian",
+          "label": "G Mixolydian"
+        },
+        {
+          "id": "G|aeolian",
+          "label": "G Aeolian"
+        },
+        {
+          "id": "G|locrian",
+          "label": "G Locrian"
+        },
+        {
+          "id": "G#|major",
+          "label": "G# Major"
+        },
+        {
+          "id": "G#|minor",
+          "label": "G# Minor"
+        },
+        {
+          "id": "G#|ionian",
+          "label": "G# Ionian"
+        },
+        {
+          "id": "G#|dorian",
+          "label": "G# Dorian"
+        },
+        {
+          "id": "G#|phrygian",
+          "label": "G# Phrygian"
+        },
+        {
+          "id": "G#|lydian",
+          "label": "G# Lydian"
+        },
+        {
+          "id": "G#|mixolydian",
+          "label": "G# Mixolydian"
+        },
+        {
+          "id": "G#|aeolian",
+          "label": "G# Aeolian"
+        },
+        {
+          "id": "G#|locrian",
+          "label": "G# Locrian"
+        },
+        {
+          "id": "A|major",
+          "label": "A Major"
+        },
+        {
+          "id": "A|minor",
+          "label": "A Minor"
+        },
+        {
+          "id": "A|ionian",
+          "label": "A Ionian"
+        },
+        {
+          "id": "A|dorian",
+          "label": "A Dorian"
+        },
+        {
+          "id": "A|phrygian",
+          "label": "A Phrygian"
+        },
+        {
+          "id": "A|lydian",
+          "label": "A Lydian"
+        },
+        {
+          "id": "A|mixolydian",
+          "label": "A Mixolydian"
+        },
+        {
+          "id": "A|aeolian",
+          "label": "A Aeolian"
+        },
+        {
+          "id": "A|locrian",
+          "label": "A Locrian"
+        },
+        {
+          "id": "A#|major",
+          "label": "A# Major"
+        },
+        {
+          "id": "A#|minor",
+          "label": "A# Minor"
+        },
+        {
+          "id": "A#|ionian",
+          "label": "A# Ionian"
+        },
+        {
+          "id": "A#|dorian",
+          "label": "A# Dorian"
+        },
+        {
+          "id": "A#|phrygian",
+          "label": "A# Phrygian"
+        },
+        {
+          "id": "A#|lydian",
+          "label": "A# Lydian"
+        },
+        {
+          "id": "A#|mixolydian",
+          "label": "A# Mixolydian"
+        },
+        {
+          "id": "A#|aeolian",
+          "label": "A# Aeolian"
+        },
+        {
+          "id": "A#|locrian",
+          "label": "A# Locrian"
+        },
+        {
+          "id": "B|major",
+          "label": "B Major"
+        },
+        {
+          "id": "B|minor",
+          "label": "B Minor"
+        },
+        {
+          "id": "B|ionian",
+          "label": "B Ionian"
+        },
+        {
+          "id": "B|dorian",
+          "label": "B Dorian"
+        },
+        {
+          "id": "B|phrygian",
+          "label": "B Phrygian"
+        },
+        {
+          "id": "B|lydian",
+          "label": "B Lydian"
+        },
+        {
+          "id": "B|mixolydian",
+          "label": "B Mixolydian"
+        },
+        {
+          "id": "B|aeolian",
+          "label": "B Aeolian"
+        },
+        {
+          "id": "B|locrian",
+          "label": "B Locrian"
+        }
+      ],
+      "options_complete": true,
+      "options_source": "generate_music_hybrid_model/music_studio/param_spec.json",
+      "options_generator": {
+        "roots": [
+          "C",
+          "C#",
+          "D",
+          "D#",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#",
+          "A",
+          "A#",
+          "B"
+        ],
+        "modes": [
+          "major",
+          "minor",
+          "ionian",
+          "dorian",
+          "phrygian",
+          "lydian",
+          "mixolydian",
+          "aeolian",
+          "locrian"
+        ],
+        "wire_format": "root|mode",
+        "source": "generate_music_hybrid_model/music_studio/models.py:213-215"
+      },
+      "metadata_gaps": [
+        "108-key cardinality is documented currently; exact IDs and delimiter use the older local spec/generator, without a fresh live capabilities validation."
+      ],
+      "path": "key"
+    },
+    {
+      "key": "time_signature",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`4/4`, `3/4`, `6/8`, `2/4`, `5/4`, `7/8`, `9/8`, `12/8`, `5/8`, `7/4`, `10/8`",
+      "source_line": 73,
+      "label": "Time signature",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "composition",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "4/4",
+          "label": "4/4"
+        },
+        {
+          "id": "3/4",
+          "label": "3/4"
+        },
+        {
+          "id": "6/8",
+          "label": "6/8"
+        },
+        {
+          "id": "2/4",
+          "label": "2/4"
+        },
+        {
+          "id": "5/4",
+          "label": "5/4"
+        },
+        {
+          "id": "7/8",
+          "label": "7/8"
+        },
+        {
+          "id": "9/8",
+          "label": "9/8"
+        },
+        {
+          "id": "12/8",
+          "label": "12/8"
+        },
+        {
+          "id": "5/8",
+          "label": "5/8"
+        },
+        {
+          "id": "7/4",
+          "label": "7/4"
+        },
+        {
+          "id": "10/8",
+          "label": "10/8"
+        }
+      ],
+      "options_complete": true,
+      "path": "time_signature"
+    },
+    {
+      "key": "duration",
+      "binding": "enforced",
+      "spec_control": "combo",
+      "source_description": "object: `target_seconds`, `tolerance_seconds`, `on_miss` — see shape reference",
+      "source_line": 74,
+      "label": "Duration",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "composition",
+      "control": "fieldset",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "object",
+      "fields": [
+        {
+          "key": "target_seconds",
+          "label": "Track length",
+          "type": "integer",
+          "control": "slider",
+          "default": 135,
+          "unit": "seconds",
+          "minimum": 10,
+          "maximum": 180,
+          "step": 1,
+          "path": "duration.target_seconds"
+        },
+        {
+          "key": "tolerance_seconds",
+          "label": "Duration tolerance",
+          "type": "number",
+          "control": "slider",
+          "default": 2,
+          "unit": "seconds",
+          "minimum": 0,
+          "maximum": 10,
+          "path": "duration.tolerance_seconds"
+        },
+        {
+          "key": "on_miss",
+          "label": "If the length differs",
+          "type": "string",
+          "control": "combo",
+          "options": [
+            {
+              "id": "accept",
+              "label": "Accept"
+            },
+            {
+              "id": "regenerate",
+              "label": "Regenerate"
+            },
+            {
+              "id": "trim",
+              "label": "Trim"
+            }
+          ],
+          "options_complete": true,
+          "default": "trim",
+          "path": "duration.on_miss"
+        }
+      ],
+      "additional_properties": false,
+      "structured_source_lines": [
+        204,
+        219
+      ],
+      "default": {
+        "target_seconds": 135,
+        "tolerance_seconds": 2,
+        "on_miss": "trim"
+      },
+      "path": "duration"
+    },
+    {
+      "key": "structure",
+      "binding": "compiled",
+      "spec_control": "chips",
+      "source_description": "array of objects: `section`, `bars` — see shape reference",
+      "source_line": 75,
+      "label": "Structure",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "composition",
+      "control": "repeater",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "control": "fieldset",
+        "fields": [
+          {
+            "key": "section",
+            "label": "Section",
+            "type": "string",
+            "control": "combo",
+            "options": [
+              {
+                "id": "breakdown",
+                "label": "Breakdown"
+              },
+              {
+                "id": "bridge",
+                "label": "Bridge"
+              },
+              {
+                "id": "build",
+                "label": "Build"
+              },
+              {
+                "id": "chorus",
+                "label": "Chorus"
+              },
+              {
+                "id": "drop",
+                "label": "Drop"
+              },
+              {
+                "id": "interlude",
+                "label": "Interlude"
+              },
+              {
+                "id": "intro",
+                "label": "Intro"
+              },
+              {
+                "id": "outro",
+                "label": "Outro"
+              },
+              {
+                "id": "pre_chorus",
+                "label": "Pre chorus"
+              },
+              {
+                "id": "solo",
+                "label": "Solo"
+              },
+              {
+                "id": "verse",
+                "label": "Verse"
+              }
+            ],
+            "options_complete": true,
+            "required": true,
+            "path": "structure[].section"
+          },
+          {
+            "key": "bars",
+            "label": "Bars",
+            "type": "integer",
+            "control": "slider",
+            "required": true,
+            "minimum": 1,
+            "maximum": 64,
+            "step": 1,
+            "path": "structure[].bars"
+          }
+        ],
+        "additional_properties": false,
+        "path": "structure[]"
+      },
+      "max_items": 12,
+      "structured_source_lines": [
+        220,
+        266
+      ],
+      "default": [
+        {
+          "section": "intro",
+          "bars": 8
+        },
+        {
+          "section": "build",
+          "bars": 8
+        },
+        {
+          "section": "verse",
+          "bars": 16
+        },
+        {
+          "section": "pre_chorus",
+          "bars": 8
+        },
+        {
+          "section": "chorus",
+          "bars": 16
+        },
+        {
+          "section": "bridge",
+          "bars": 8
+        },
+        {
+          "section": "drop",
+          "bars": 8
+        },
+        {
+          "section": "outro",
+          "bars": 8
+        }
+      ],
+      "path": "structure"
+    },
+    {
+      "key": "arrangement_ai",
+      "binding": "our_stage",
+      "spec_control": "toggle",
+      "source_description": "`on`, `off`",
+      "source_line": 76,
+      "label": "Arrangement ai",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "composition",
+      "control": "toggle",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "on",
+          "label": "On"
+        },
+        {
+          "id": "off",
+          "label": "Off"
+        }
+      ],
+      "options_complete": true,
+      "path": "arrangement_ai"
+    },
+    {
+      "key": "energy_curve",
+      "binding": "compiled",
+      "spec_control": "envelope",
+      "source_description": "object: `preset`, `points` — see shape reference",
+      "source_line": 77,
+      "label": "Energy curve",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "composition",
+      "control": "fieldset",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "object",
+      "fields": [
+        {
+          "key": "preset",
+          "label": "Preset",
+          "type": "string",
+          "control": "combo",
+          "options": [
+            {
+              "id": "cinematic",
+              "label": "Cinematic"
+            },
+            {
+              "id": "custom",
+              "label": "Custom"
+            },
+            {
+              "id": "double_peak",
+              "label": "Double peak"
+            },
+            {
+              "id": "flat",
+              "label": "Flat"
+            },
+            {
+              "id": "front_loaded",
+              "label": "Front loaded"
+            },
+            {
+              "id": "linear_rise",
+              "label": "Linear rise"
+            },
+            {
+              "id": "valley",
+              "label": "Valley"
+            }
+          ],
+          "options_complete": true,
+          "default": "cinematic",
+          "path": "energy_curve.preset"
+        },
+        {
+          "key": "points",
+          "label": "Energy points",
+          "type": "array",
+          "control": "repeater",
+          "items": {
+            "type": "object",
+            "control": "fieldset",
+            "fields": [
+              {
+                "key": "t",
+                "label": "Time",
+                "type": "number",
+                "control": "number",
+                "unit": "seconds",
+                "required": true,
+                "minimum": 0,
+                "path": "energy_curve.points[].t"
+              },
+              {
+                "key": "v",
+                "label": "Energy",
+                "type": "number",
+                "control": "slider",
+                "required": true,
+                "minimum": 0,
+                "maximum": 1,
+                "path": "energy_curve.points[].v"
+              }
+            ],
+            "additional_properties": false,
+            "path": "energy_curve.points[]"
+          },
+          "path": "energy_curve.points"
+        }
+      ],
+      "additional_properties": false,
+      "structured_source_lines": [
+        267,
+        280
+      ],
+      "default": {
+        "preset": "cinematic"
+      },
+      "path": "energy_curve"
+    },
+    {
+      "key": "instruments",
+      "binding": "prose",
+      "spec_control": "multi-select",
+      "source_description": "imported from the service's versioned `instrument_vocabulary` data file (1,057 entries)",
+      "source_line": 78,
+      "label": "Instruments",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "instruments",
+      "control": "multi-select",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "path": "instruments[]"
+      },
+      "options": [
+        {
+          "id": "strings_ensemble",
+          "label": "Strings Ensemble"
+        },
+        {
+          "id": "brass_section",
+          "label": "Brass Section"
+        },
+        {
+          "id": "hybrid_drums",
+          "label": "Hybrid Drums"
+        },
+        {
+          "id": "percussion_timpani",
+          "label": "Percussion / Timpani"
+        },
+        {
+          "id": "synth_atmos",
+          "label": "Synth Atmos"
+        },
+        {
+          "id": "choir_ahh",
+          "label": "Choir 'Ahh'"
+        },
+        {
+          "id": "piano",
+          "label": "Piano"
+        },
+        {
+          "id": "synthesizer",
+          "label": "Synthesizer"
+        },
+        {
+          "id": "acoustic_guitar",
+          "label": "Acoustic Guitar"
+        },
+        {
+          "id": "string_orchestra",
+          "label": "String Orchestra"
+        },
+        {
+          "id": "electronic_drums",
+          "label": "Electronic Drums"
+        },
+        {
+          "id": "nylon_guitar",
+          "label": "Nylon Guitar"
+        },
+        {
+          "id": "bass_guitar",
+          "label": "Bass Guitar"
+        },
+        {
+          "id": "rising_synth",
+          "label": "Rising Synth"
+        },
+        {
+          "id": "baglama_saz",
+          "label": "Bağlama / Saz"
+        },
+        {
+          "id": "ney",
+          "label": "Ney"
+        },
+        {
+          "id": "darbuka",
+          "label": "Darbuka"
+        },
+        {
+          "id": "12_string_guitar",
+          "label": "12 string guitar"
+        },
+        {
+          "id": "17_string_bass_koto",
+          "label": "17-string bass koto"
+        },
+        {
+          "id": "anglo_concertina",
+          "label": "Anglo concertina"
+        },
+        {
+          "id": "appalachian_dulcimer",
+          "label": "Appalachian dulcimer"
+        },
+        {
+          "id": "baltic_psalteries",
+          "label": "Baltic psalteries"
+        },
+        {
+          "id": "bata_drum",
+          "label": "Batá drum"
+        },
+        {
+          "id": "blaster_beam",
+          "label": "Blaster Beam"
+        },
+        {
+          "id": "cembalet",
+          "label": "Cembalet"
+        },
+        {
+          "id": "chapman_stick",
+          "label": "Chapman stick"
+        },
+        {
+          "id": "cretan_lyra",
+          "label": "Cretan lyra"
+        },
+        {
+          "id": "cristal_baschet",
+          "label": "Cristal Baschet"
+        },
+        {
+          "id": "denis_d_or",
+          "label": "Denis d'or"
+        },
+        {
+          "id": "dubreq_stylophone",
+          "label": "Dubreq Stylophone"
+        },
+        {
+          "id": "e_flat_clarinet",
+          "label": "E-flat clarinet"
+        },
+        {
+          "id": "ewi",
+          "label": "EWI"
+        },
+        {
+          "id": "english_concertina",
+          "label": "English concertina"
+        },
+        {
+          "id": "english_flageolet",
+          "label": "English flageolet"
+        },
+        {
+          "id": "french_horn",
+          "label": "French horn"
+        },
+        {
+          "id": "german_concertina",
+          "label": "German concertina"
+        },
+        {
+          "id": "german_harp",
+          "label": "German harp"
+        },
+        {
+          "id": "gravikord",
+          "label": "Gravikord"
+        },
+        {
+          "id": "great_highland_bagpipe",
+          "label": "Great Highland bagpipe"
+        },
+        {
+          "id": "guitaret",
+          "label": "Guitaret"
+        },
+        {
+          "id": "hammond_organ",
+          "label": "Hammond organ"
+        },
+        {
+          "id": "hawaiian_guitar",
+          "label": "Hawaiian guitar"
+        },
+        {
+          "id": "indonesian_rebab",
+          "label": "Indonesian rebab"
+        },
+        {
+          "id": "irish_bouzouki",
+          "label": "Irish bouzouki"
+        },
+        {
+          "id": "irish_flute",
+          "label": "Irish flute"
+        },
+        {
+          "id": "irish_harp_clarsach",
+          "label": "Irish harp / clàrsach"
+        },
+        {
+          "id": "lyricon",
+          "label": "Lyricon"
+        },
+        {
+          "id": "magyar_duda",
+          "label": "Magyar duda"
+        },
+        {
+          "id": "mark_tree",
+          "label": "Mark tree"
+        },
+        {
+          "id": "marxophone",
+          "label": "Marxophone"
+        },
+        {
+          "id": "mexican_vihuela",
+          "label": "Mexican vihuela"
+        },
+        {
+          "id": "minimoog",
+          "label": "Minimoog"
+        },
+        {
+          "id": "moog",
+          "label": "Moog"
+        },
+        {
+          "id": "northumbrian_pipes",
+          "label": "Northumbrian pipes"
+        },
+        {
+          "id": "otamatone",
+          "label": "Otamatone"
+        },
+        {
+          "id": "paraguayan_harp",
+          "label": "Paraguayan harp"
+        },
+        {
+          "id": "pianet",
+          "label": "Pianet"
+        },
+        {
+          "id": "pierrot_ensemble",
+          "label": "Pierrot ensemble"
+        },
+        {
+          "id": "portuguese_guitar",
+          "label": "Portuguese guitar"
+        },
+        {
+          "id": "radhika_s_mohan_veena",
+          "label": "Radhika's Mohan veena"
+        },
+        {
+          "id": "reactable",
+          "label": "Reactable"
+        },
+        {
+          "id": "rhodes_piano",
+          "label": "Rhodes piano"
+        },
+        {
+          "id": "saraswati_veena",
+          "label": "Saraswati veena"
+        },
+        {
+          "id": "schwyzerorgeli",
+          "label": "Schwyzerörgeli"
+        },
+        {
+          "id": "scottish_smallpipes",
+          "label": "Scottish smallpipes"
+        },
+        {
+          "id": "serbo_croatian_tamburica_orchestra",
+          "label": "Serbo-Croatian tamburica orchestra"
+        },
+        {
+          "id": "stroh_violin",
+          "label": "Stroh violin"
+        },
+        {
+          "id": "the_great_stalacpipe_organ",
+          "label": "The Great Stalacpipe Organ"
+        },
+        {
+          "id": "tonette",
+          "label": "Tonette"
+        },
+        {
+          "id": "vm_bhatt_s_mohan_veena",
+          "label": "VM Bhatt's Mohan veena"
+        },
+        {
+          "id": "vietnamese_guitar",
+          "label": "Vietnamese guitar"
+        },
+        {
+          "id": "wagner_tuba",
+          "label": "Wagner tuba"
+        },
+        {
+          "id": "warr_guitar",
+          "label": "Warr guitar"
+        },
+        {
+          "id": "wiener_horn",
+          "label": "Wiener Horn"
+        },
+        {
+          "id": "wurlitzer_electric_piano",
+          "label": "Wurlitzer electric piano"
+        },
+        {
+          "id": "xaphoon",
+          "label": "Xaphoon"
+        },
+        {
+          "id": "accordina",
+          "label": "accordina"
+        },
+        {
+          "id": "accordion",
+          "label": "accordion"
+        },
+        {
+          "id": "acoustic_bass_guitar",
+          "label": "acoustic bass guitar"
+        },
+        {
+          "id": "acoustic_fretless_guitar",
+          "label": "acoustic fretless guitar"
+        },
+        {
+          "id": "aeolian_harp",
+          "label": "aeolian harp"
+        },
+        {
+          "id": "afoxe",
+          "label": "afoxé"
+        },
+        {
+          "id": "agogo",
+          "label": "agogô"
+        },
+        {
+          "id": "ajaeng",
+          "label": "ajaeng"
+        },
+        {
+          "id": "akete",
+          "label": "akete"
+        },
+        {
+          "id": "akkordolia",
+          "label": "akkordolia"
+        },
+        {
+          "id": "alfaia",
+          "label": "alfaia"
+        },
+        {
+          "id": "algozey",
+          "label": "algozey"
+        },
+        {
+          "id": "alphorn",
+          "label": "alphorn"
+        },
+        {
+          "id": "alto_clarinet",
+          "label": "alto clarinet"
+        },
+        {
+          "id": "alto_flute",
+          "label": "alto flute"
+        },
+        {
+          "id": "alto_saxophone",
+          "label": "alto saxophone"
+        },
+        {
+          "id": "alto_viol",
+          "label": "alto viol"
+        },
+        {
+          "id": "amadinda",
+          "label": "amadinda"
+        },
+        {
+          "id": "aman_khuur",
+          "label": "aman khuur"
+        },
+        {
+          "id": "analog_synthesizer",
+          "label": "analog synthesizer"
+        },
+        {
+          "id": "angklung",
+          "label": "angklung"
+        },
+        {
+          "id": "ankle_rattlers",
+          "label": "ankle rattlers"
+        },
+        {
+          "id": "antara",
+          "label": "antara"
+        },
+        {
+          "id": "anvil",
+          "label": "anvil"
+        },
+        {
+          "id": "archlute",
+          "label": "archlute"
+        },
+        {
+          "id": "archtop_guitar",
+          "label": "archtop guitar"
+        },
+        {
+          "id": "arghul",
+          "label": "arghul"
+        },
+        {
+          "id": "arpeggione",
+          "label": "arpeggione"
+        },
+        {
+          "id": "arrabel",
+          "label": "arrabel"
+        },
+        {
+          "id": "ashiko",
+          "label": "ashiko"
+        },
+        {
+          "id": "atabaque",
+          "label": "atabaque"
+        },
+        {
+          "id": "atarigane",
+          "label": "atarigane"
+        },
+        {
+          "id": "autoharp",
+          "label": "autoharp"
+        },
+        {
+          "id": "baandu",
+          "label": "baandu"
+        },
+        {
+          "id": "baglamas",
+          "label": "baglamas"
+        },
+        {
+          "id": "bagpipe",
+          "label": "bagpipe"
+        },
+        {
+          "id": "bajo_sexto",
+          "label": "bajo sexto"
+        },
+        {
+          "id": "balafon",
+          "label": "balafon"
+        },
+        {
+          "id": "balalaika",
+          "label": "balalaika"
+        },
+        {
+          "id": "bandoneon",
+          "label": "bandoneón"
+        },
+        {
+          "id": "bandora",
+          "label": "bandora"
+        },
+        {
+          "id": "bandura",
+          "label": "bandura"
+        },
+        {
+          "id": "bandurria",
+          "label": "bandurria"
+        },
+        {
+          "id": "bangu",
+          "label": "bangu"
+        },
+        {
+          "id": "banhu",
+          "label": "banhu"
+        },
+        {
+          "id": "banjitar",
+          "label": "banjitar"
+        },
+        {
+          "id": "banjo",
+          "label": "banjo"
+        },
+        {
+          "id": "banjo_ukulele",
+          "label": "banjo-ukulele"
+        },
+        {
+          "id": "banjolin",
+          "label": "banjolin"
+        },
+        {
+          "id": "bansuri",
+          "label": "bansuri"
+        },
+        {
+          "id": "barbat",
+          "label": "barbat"
+        },
+        {
+          "id": "baritone_guitar",
+          "label": "baritone guitar"
+        },
+        {
+          "id": "baritone_horn",
+          "label": "baritone horn"
+        },
+        {
+          "id": "baritone_saxophone",
+          "label": "baritone saxophone"
+        },
+        {
+          "id": "baroque_guitar",
+          "label": "baroque guitar"
+        },
+        {
+          "id": "baroque_rackett",
+          "label": "baroque rackett"
+        },
+        {
+          "id": "baroque_trumpet",
+          "label": "baroque trumpet"
+        },
+        {
+          "id": "barrel_drum",
+          "label": "barrel drum"
+        },
+        {
+          "id": "barrel_organ",
+          "label": "barrel organ"
+        },
+        {
+          "id": "baryton",
+          "label": "baryton"
+        },
+        {
+          "id": "bass",
+          "label": "bass"
+        },
+        {
+          "id": "bass_clarinet",
+          "label": "bass clarinet"
+        },
+        {
+          "id": "bass_drum",
+          "label": "bass drum"
+        },
+        {
+          "id": "bass_flute",
+          "label": "bass flute"
+        },
+        {
+          "id": "bass_harmonica",
+          "label": "bass harmonica"
+        },
+        {
+          "id": "bass_oboe",
+          "label": "bass oboe"
+        },
+        {
+          "id": "bass_pedals",
+          "label": "bass pedals"
+        },
+        {
+          "id": "bass_recorder",
+          "label": "bass recorder"
+        },
+        {
+          "id": "bass_saxophone",
+          "label": "bass saxophone"
+        },
+        {
+          "id": "bass_synthesizer",
+          "label": "bass synthesizer"
+        },
+        {
+          "id": "bass_trombone",
+          "label": "bass trombone"
+        },
+        {
+          "id": "bass_trumpet",
+          "label": "bass trumpet"
+        },
+        {
+          "id": "bass_viol",
+          "label": "bass viol"
+        },
+        {
+          "id": "bass_violin",
+          "label": "bass violin"
+        },
+        {
+          "id": "basset_clarinet",
+          "label": "basset clarinet"
+        },
+        {
+          "id": "basset_horn",
+          "label": "basset horn"
+        },
+        {
+          "id": "bassoon",
+          "label": "bassoon"
+        },
+        {
+          "id": "bateria",
+          "label": "bateria"
+        },
+        {
+          "id": "bawu",
+          "label": "bawu"
+        },
+        {
+          "id": "bayan",
+          "label": "bayan"
+        },
+        {
+          "id": "bazooka",
+          "label": "bazooka"
+        },
+        {
+          "id": "baglama_saz_family",
+          "label": "bağlama (saz) family"
+        },
+        {
+          "id": "bedug",
+          "label": "bedug"
+        },
+        {
+          "id": "bell",
+          "label": "bell"
+        },
+        {
+          "id": "bell_plate",
+          "label": "bell plate"
+        },
+        {
+          "id": "bell_tree",
+          "label": "bell tree"
+        },
+        {
+          "id": "bellowed_reed",
+          "label": "bellowed reed"
+        },
+        {
+          "id": "bendir",
+          "label": "bendir"
+        },
+        {
+          "id": "berda",
+          "label": "berda"
+        },
+        {
+          "id": "berimbau",
+          "label": "berimbau"
+        },
+        {
+          "id": "bhapang",
+          "label": "bhapang"
+        },
+        {
+          "id": "bicycle_bell",
+          "label": "bicycle bell"
+        },
+        {
+          "id": "bin_sasara",
+          "label": "bin-sasara"
+        },
+        {
+          "id": "bin_sitar",
+          "label": "bin-sitar"
+        },
+        {
+          "id": "biniou",
+          "label": "biniou"
+        },
+        {
+          "id": "birbyne",
+          "label": "birbynė"
+        },
+        {
+          "id": "birch_lur",
+          "label": "birch lur"
+        },
+        {
+          "id": "bisernica",
+          "label": "bisernica"
+        },
+        {
+          "id": "biwa",
+          "label": "biwa"
+        },
+        {
+          "id": "boatswain_s_pipe",
+          "label": "boatswain's pipe"
+        },
+        {
+          "id": "bodhran",
+          "label": "bodhrán"
+        },
+        {
+          "id": "body_percussion",
+          "label": "body percussion"
+        },
+        {
+          "id": "bolon",
+          "label": "bolon"
+        },
+        {
+          "id": "bombarde",
+          "label": "bombarde"
+        },
+        {
+          "id": "bombo_leguero",
+          "label": "bombo legüero"
+        },
+        {
+          "id": "bonang",
+          "label": "bonang"
+        },
+        {
+          "id": "bonang_barung",
+          "label": "bonang barung"
+        },
+        {
+          "id": "bonang_panembung",
+          "label": "bonang panembung"
+        },
+        {
+          "id": "bonang_panerus",
+          "label": "bonang panerus"
+        },
+        {
+          "id": "bones",
+          "label": "bones"
+        },
+        {
+          "id": "bongos",
+          "label": "bongos"
+        },
+        {
+          "id": "boobam",
+          "label": "boobam"
+        },
+        {
+          "id": "boomwhacker",
+          "label": "boomwhacker"
+        },
+        {
+          "id": "bouzar_gouzouki",
+          "label": "bouzar / gouzouki"
+        },
+        {
+          "id": "bouzouki",
+          "label": "bouzouki"
+        },
+        {
+          "id": "bowed_lute",
+          "label": "bowed lute"
+        },
+        {
+          "id": "bowed_lyre",
+          "label": "bowed lyre"
+        },
+        {
+          "id": "bowed_piano",
+          "label": "bowed piano"
+        },
+        {
+          "id": "bowed_psaltery",
+          "label": "bowed psaltery"
+        },
+        {
+          "id": "bowed_string_instruments",
+          "label": "bowed string instruments"
+        },
+        {
+          "id": "brass",
+          "label": "brass"
+        },
+        {
+          "id": "brac",
+          "label": "brač"
+        },
+        {
+          "id": "bronze_lur",
+          "label": "bronze lur"
+        },
+        {
+          "id": "brushes",
+          "label": "brushes"
+        },
+        {
+          "id": "bugarija",
+          "label": "bugarija"
+        },
+        {
+          "id": "bugle",
+          "label": "bugle"
+        },
+        {
+          "id": "buisine",
+          "label": "buisine"
+        },
+        {
+          "id": "buk",
+          "label": "buk"
+        },
+        {
+          "id": "bulbul_tarang",
+          "label": "bulbul tarang"
+        },
+        {
+          "id": "bullroarer",
+          "label": "bullroarer"
+        },
+        {
+          "id": "button_accordion",
+          "label": "button accordion"
+        },
+        {
+          "id": "buzuq",
+          "label": "buzuq"
+        },
+        {
+          "id": "bin",
+          "label": "bīn"
+        },
+        {
+          "id": "cabasa",
+          "label": "cabasa"
+        },
+        {
+          "id": "cabrette",
+          "label": "cabrette"
+        },
+        {
+          "id": "caixa",
+          "label": "caixa"
+        },
+        {
+          "id": "cajon",
+          "label": "cajón"
+        },
+        {
+          "id": "calabash",
+          "label": "calabash"
+        },
+        {
+          "id": "calliope",
+          "label": "calliope"
+        },
+        {
+          "id": "calung",
+          "label": "calung"
+        },
+        {
+          "id": "castanets",
+          "label": "castanets"
+        },
+        {
+          "id": "cavaquinho",
+          "label": "cavaquinho"
+        },
+        {
+          "id": "caxixi",
+          "label": "caxixi"
+        },
+        {
+          "id": "celesta",
+          "label": "celesta"
+        },
+        {
+          "id": "cello",
+          "label": "cello"
+        },
+        {
+          "id": "chacha",
+          "label": "chacha"
+        },
+        {
+          "id": "chakhe",
+          "label": "chakhe"
+        },
+        {
+          "id": "chalumeau",
+          "label": "chalumeau"
+        },
+        {
+          "id": "chamber_organ",
+          "label": "chamber organ"
+        },
+        {
+          "id": "chamberlin",
+          "label": "chamberlin"
+        },
+        {
+          "id": "chande",
+          "label": "chande"
+        },
+        {
+          "id": "chanzy",
+          "label": "chanzy"
+        },
+        {
+          "id": "chap",
+          "label": "chap"
+        },
+        {
+          "id": "charango",
+          "label": "charango"
+        },
+        {
+          "id": "charumera",
+          "label": "charumera"
+        },
+        {
+          "id": "chau_gong",
+          "label": "chau gong"
+        },
+        {
+          "id": "chikuzen_biwa",
+          "label": "chikuzen biwa"
+        },
+        {
+          "id": "chime_bar",
+          "label": "chime bar"
+        },
+        {
+          "id": "ching",
+          "label": "ching"
+        },
+        {
+          "id": "chirimia",
+          "label": "chirimía"
+        },
+        {
+          "id": "chirimia_and_drum",
+          "label": "chirimía and drum"
+        },
+        {
+          "id": "chitarra_battente",
+          "label": "chitarra battente"
+        },
+        {
+          "id": "chitra_veena",
+          "label": "chitra veena"
+        },
+        {
+          "id": "chromatic_button_accordion",
+          "label": "chromatic button accordion"
+        },
+        {
+          "id": "chromatic_harmonica",
+          "label": "chromatic harmonica"
+        },
+        {
+          "id": "chuurqin",
+          "label": "chuurqin"
+        },
+        {
+          "id": "cimbalom",
+          "label": "cimbalom"
+        },
+        {
+          "id": "cimbasso",
+          "label": "cimbasso"
+        },
+        {
+          "id": "cimpoi",
+          "label": "cimpoi"
+        },
+        {
+          "id": "citole",
+          "label": "citole"
+        },
+        {
+          "id": "cittern",
+          "label": "cittern"
+        },
+        {
+          "id": "cizhonghu",
+          "label": "cizhonghu"
+        },
+        {
+          "id": "clapper",
+          "label": "clapper"
+        },
+        {
+          "id": "clapstick",
+          "label": "clapstick"
+        },
+        {
+          "id": "clarinet",
+          "label": "clarinet"
+        },
+        {
+          "id": "classical_guitar",
+          "label": "classical guitar"
+        },
+        {
+          "id": "classical_kemence",
+          "label": "classical kemençe"
+        },
+        {
+          "id": "claves",
+          "label": "claves"
+        },
+        {
+          "id": "clavichord",
+          "label": "clavichord"
+        },
+        {
+          "id": "clavinet",
+          "label": "clavinet"
+        },
+        {
+          "id": "claviola",
+          "label": "claviola"
+        },
+        {
+          "id": "clavioline",
+          "label": "clavioline"
+        },
+        {
+          "id": "claviorganum",
+          "label": "claviorganum"
+        },
+        {
+          "id": "cobla",
+          "label": "cobla"
+        },
+        {
+          "id": "cobla_de_tres_quartans",
+          "label": "cobla de tres quartans"
+        },
+        {
+          "id": "concert_flute",
+          "label": "concert flute"
+        },
+        {
+          "id": "concert_harp",
+          "label": "concert harp"
+        },
+        {
+          "id": "concertina",
+          "label": "concertina"
+        },
+        {
+          "id": "conch",
+          "label": "conch"
+        },
+        {
+          "id": "concussion_idiophone",
+          "label": "concussion idiophone"
+        },
+        {
+          "id": "congas",
+          "label": "congas"
+        },
+        {
+          "id": "continuum",
+          "label": "continuum"
+        },
+        {
+          "id": "contrabass_clarinet",
+          "label": "contrabass clarinet"
+        },
+        {
+          "id": "contrabass_flute",
+          "label": "contrabass flute"
+        },
+        {
+          "id": "contrabass_recorder",
+          "label": "contrabass recorder"
+        },
+        {
+          "id": "contrabass_saxophone",
+          "label": "contrabass saxophone"
+        },
+        {
+          "id": "contrabassoon",
+          "label": "contrabassoon"
+        },
+        {
+          "id": "cor_anglais",
+          "label": "cor anglais"
+        },
+        {
+          "id": "cornamuse",
+          "label": "cornamuse"
+        },
+        {
+          "id": "cornemuse_du_centre",
+          "label": "cornemuse du Centre"
+        },
+        {
+          "id": "cornet",
+          "label": "cornet"
+        },
+        {
+          "id": "cornett",
+          "label": "cornett"
+        },
+        {
+          "id": "cowbell",
+          "label": "cowbell"
+        },
+        {
+          "id": "craviola",
+          "label": "craviola"
+        },
+        {
+          "id": "crotales",
+          "label": "crotales"
+        },
+        {
+          "id": "crumhorn",
+          "label": "crumhorn"
+        },
+        {
+          "id": "crwth",
+          "label": "crwth"
+        },
+        {
+          "id": "cuatro",
+          "label": "cuatro"
+        },
+        {
+          "id": "cuica",
+          "label": "cuíca"
+        },
+        {
+          "id": "cylindrical_drum",
+          "label": "cylindrical drum"
+        },
+        {
+          "id": "cymbal",
+          "label": "cymbal"
+        },
+        {
+          "id": "co_ke",
+          "label": "cò ke"
+        },
+        {
+          "id": "cumbus",
+          "label": "cümbüş"
+        },
+        {
+          "id": "daegeum",
+          "label": "daegeum"
+        },
+        {
+          "id": "daf",
+          "label": "daf"
+        },
+        {
+          "id": "daire",
+          "label": "daire"
+        },
+        {
+          "id": "daluo",
+          "label": "daluo"
+        },
+        {
+          "id": "danso",
+          "label": "danso"
+        },
+        {
+          "id": "daruan",
+          "label": "daruan"
+        },
+        {
+          "id": "davul",
+          "label": "davul"
+        },
+        {
+          "id": "dhol",
+          "label": "dhol"
+        },
+        {
+          "id": "dholak",
+          "label": "dholak"
+        },
+        {
+          "id": "diatonic_button_accordion",
+          "label": "diatonic button accordion"
+        },
+        {
+          "id": "diddley_bow",
+          "label": "diddley bow"
+        },
+        {
+          "id": "didgeridoo",
+          "label": "didgeridoo"
+        },
+        {
+          "id": "dilruba",
+          "label": "dilruba"
+        },
+        {
+          "id": "ding_tac_ta",
+          "label": "ding tac ta"
+        },
+        {
+          "id": "disk_drive",
+          "label": "disk drive"
+        },
+        {
+          "id": "diyingehu",
+          "label": "diyingehu"
+        },
+        {
+          "id": "dizi",
+          "label": "dizi"
+        },
+        {
+          "id": "djembe",
+          "label": "djembe"
+        },
+        {
+          "id": "djoza",
+          "label": "djoza"
+        },
+        {
+          "id": "dohol",
+          "label": "dohol"
+        },
+        {
+          "id": "dolceola",
+          "label": "dolceola"
+        },
+        {
+          "id": "dombra",
+          "label": "dombra"
+        },
+        {
+          "id": "domra",
+          "label": "domra"
+        },
+        {
+          "id": "donso_ng_ni",
+          "label": "donso ngɔni"
+        },
+        {
+          "id": "doshpuluur",
+          "label": "doshpuluur"
+        },
+        {
+          "id": "double_bass",
+          "label": "double bass"
+        },
+        {
+          "id": "double_reed",
+          "label": "double reed"
+        },
+        {
+          "id": "doyra",
+          "label": "doyra"
+        },
+        {
+          "id": "dramyin",
+          "label": "dramyin"
+        },
+        {
+          "id": "drum_machine",
+          "label": "drum machine"
+        },
+        {
+          "id": "drums_drum_set",
+          "label": "drums (drum set)"
+        },
+        {
+          "id": "duck_call",
+          "label": "duck call"
+        },
+        {
+          "id": "duduk",
+          "label": "duduk"
+        },
+        {
+          "id": "dudy_podhalanskie",
+          "label": "dudy podhalanskie"
+        },
+        {
+          "id": "dudy_wielkopolskie",
+          "label": "dudy wielkopolskie"
+        },
+        {
+          "id": "duggi",
+          "label": "duggi"
+        },
+        {
+          "id": "dulce_melos",
+          "label": "dulce melos"
+        },
+        {
+          "id": "dulcian",
+          "label": "dulcian"
+        },
+        {
+          "id": "dulcitone",
+          "label": "dulcitone"
+        },
+        {
+          "id": "dulzaina",
+          "label": "dulzaina"
+        },
+        {
+          "id": "dunun",
+          "label": "dunun"
+        },
+        {
+          "id": "dutar",
+          "label": "dutar"
+        },
+        {
+          "id": "duxianqin",
+          "label": "duxianqin"
+        },
+        {
+          "id": "dudmaisis",
+          "label": "dūdmaišis"
+        },
+        {
+          "id": "ebow",
+          "label": "ebow"
+        },
+        {
+          "id": "effects",
+          "label": "effects"
+        },
+        {
+          "id": "electric_bass_guitar",
+          "label": "electric bass guitar"
+        },
+        {
+          "id": "electric_cello",
+          "label": "electric cello"
+        },
+        {
+          "id": "electric_fretless_guitar",
+          "label": "electric fretless guitar"
+        },
+        {
+          "id": "electric_grand_piano",
+          "label": "electric grand piano"
+        },
+        {
+          "id": "electric_guitar",
+          "label": "electric guitar"
+        },
+        {
+          "id": "electric_harp",
+          "label": "electric harp"
+        },
+        {
+          "id": "electric_lap_steel_guitar",
+          "label": "electric lap steel guitar"
+        },
+        {
+          "id": "electric_piano",
+          "label": "electric piano"
+        },
+        {
+          "id": "electric_sitar",
+          "label": "electric sitar"
+        },
+        {
+          "id": "electric_upright_bass",
+          "label": "electric upright bass"
+        },
+        {
+          "id": "electric_viola",
+          "label": "electric viola"
+        },
+        {
+          "id": "electric_violin",
+          "label": "electric violin"
+        },
+        {
+          "id": "electronic_drum_set",
+          "label": "electronic drum set"
+        },
+        {
+          "id": "electronic_instruments",
+          "label": "electronic instruments"
+        },
+        {
+          "id": "electronic_organ",
+          "label": "electronic organ"
+        },
+        {
+          "id": "electronic_shruti_box",
+          "label": "electronic shruti box"
+        },
+        {
+          "id": "elektronium",
+          "label": "elektronium"
+        },
+        {
+          "id": "end_blown_flute",
+          "label": "end-blown flute"
+        },
+        {
+          "id": "erhu",
+          "label": "erhu"
+        },
+        {
+          "id": "esraj",
+          "label": "esraj"
+        },
+        {
+          "id": "euphonium",
+          "label": "euphonium"
+        },
+        {
+          "id": "farfisa",
+          "label": "farfisa"
+        },
+        {
+          "id": "fiddle",
+          "label": "fiddle"
+        },
+        {
+          "id": "fife",
+          "label": "fife"
+        },
+        {
+          "id": "finger_cymbals",
+          "label": "finger cymbals"
+        },
+        {
+          "id": "finger_snaps",
+          "label": "finger snaps"
+        },
+        {
+          "id": "fipple_flute",
+          "label": "fipple flute"
+        },
+        {
+          "id": "fiscorn",
+          "label": "fiscorn"
+        },
+        {
+          "id": "five_string_banjo",
+          "label": "five-string banjo"
+        },
+        {
+          "id": "flageolet",
+          "label": "flageolet"
+        },
+        {
+          "id": "flamenco_guitar",
+          "label": "flamenco guitar"
+        },
+        {
+          "id": "floppy_disk_drive",
+          "label": "floppy disk drive"
+        },
+        {
+          "id": "flugelhorn",
+          "label": "flugelhorn"
+        },
+        {
+          "id": "flumpet",
+          "label": "flumpet"
+        },
+        {
+          "id": "flute",
+          "label": "flute"
+        },
+        {
+          "id": "flutina",
+          "label": "flutina"
+        },
+        {
+          "id": "flute_d_amour",
+          "label": "flûte d'amour"
+        },
+        {
+          "id": "folk_harp",
+          "label": "folk harp"
+        },
+        {
+          "id": "foot_stomps",
+          "label": "foot stomps"
+        },
+        {
+          "id": "footbass",
+          "label": "footbass"
+        },
+        {
+          "id": "four_string_banjo",
+          "label": "four-string banjo"
+        },
+        {
+          "id": "frame_drum",
+          "label": "frame drum"
+        },
+        {
+          "id": "free_reed",
+          "label": "free reed"
+        },
+        {
+          "id": "fretless_bass",
+          "label": "fretless bass"
+        },
+        {
+          "id": "friction_drum",
+          "label": "friction drum"
+        },
+        {
+          "id": "friction_idiophone",
+          "label": "friction idiophone"
+        },
+        {
+          "id": "frottoir",
+          "label": "frottoir"
+        },
+        {
+          "id": "fujara",
+          "label": "fujara"
+        },
+        {
+          "id": "fundeh",
+          "label": "fundeh"
+        },
+        {
+          "id": "gadulka",
+          "label": "gadulka"
+        },
+        {
+          "id": "gaida",
+          "label": "gaida"
+        },
+        {
+          "id": "gaita_asturiana",
+          "label": "gaita asturiana"
+        },
+        {
+          "id": "gaita_de_boto",
+          "label": "gaita de boto"
+        },
+        {
+          "id": "gaita_gallega",
+          "label": "gaita gallega"
+        },
+        {
+          "id": "gaita_sanabresa",
+          "label": "gaita sanabresa"
+        },
+        {
+          "id": "gajdy",
+          "label": "gajdy"
+        },
+        {
+          "id": "gambang",
+          "label": "gambang"
+        },
+        {
+          "id": "game_console_sound_chip",
+          "label": "game console sound chip"
+        },
+        {
+          "id": "gamelan",
+          "label": "gamelan"
+        },
+        {
+          "id": "gankogui",
+          "label": "gankogui"
+        },
+        {
+          "id": "ganza",
+          "label": "ganzá"
+        },
+        {
+          "id": "gaohu",
+          "label": "gaohu"
+        },
+        {
+          "id": "garifuna_drum",
+          "label": "garifuna drum"
+        },
+        {
+          "id": "garklein_recorder",
+          "label": "garklein recorder"
+        },
+        {
+          "id": "garmon",
+          "label": "garmon"
+        },
+        {
+          "id": "gayageum",
+          "label": "gayageum"
+        },
+        {
+          "id": "gehu",
+          "label": "gehu"
+        },
+        {
+          "id": "gemshorn",
+          "label": "gemshorn"
+        },
+        {
+          "id": "gender",
+          "label": "gendèr"
+        },
+        {
+          "id": "gender_barung",
+          "label": "gendèr barung"
+        },
+        {
+          "id": "gender_panerus",
+          "label": "gendèr panerus"
+        },
+        {
+          "id": "gender_wayang",
+          "label": "gendèr wayang"
+        },
+        {
+          "id": "geomungo",
+          "label": "geomungo"
+        },
+        {
+          "id": "ghatam",
+          "label": "ghatam"
+        },
+        {
+          "id": "ghaychak",
+          "label": "ghaychak"
+        },
+        {
+          "id": "ghijak",
+          "label": "ghijak"
+        },
+        {
+          "id": "gittern",
+          "label": "gittern"
+        },
+        {
+          "id": "gizmo",
+          "label": "gizmo"
+        },
+        {
+          "id": "glass_harmonica",
+          "label": "glass harmonica"
+        },
+        {
+          "id": "glass_harp",
+          "label": "glass harp"
+        },
+        {
+          "id": "glockenspiel",
+          "label": "glockenspiel"
+        },
+        {
+          "id": "goblet_drum",
+          "label": "goblet drum"
+        },
+        {
+          "id": "gong",
+          "label": "gong"
+        },
+        {
+          "id": "gong_bass_drum",
+          "label": "gong bass drum"
+        },
+        {
+          "id": "gong_chime",
+          "label": "gong-chime"
+        },
+        {
+          "id": "gopichant",
+          "label": "gopichant"
+        },
+        {
+          "id": "gralla",
+          "label": "gralla"
+        },
+        {
+          "id": "gramorimba",
+          "label": "gramorimba"
+        },
+        {
+          "id": "grand_piano",
+          "label": "grand piano"
+        },
+        {
+          "id": "great_bass_recorder_c_bass_recorder",
+          "label": "great bass recorder / c-bass recorder"
+        },
+        {
+          "id": "guan",
+          "label": "guan"
+        },
+        {
+          "id": "guban",
+          "label": "guban"
+        },
+        {
+          "id": "gudok",
+          "label": "gudok"
+        },
+        {
+          "id": "guitalele",
+          "label": "guitalele"
+        },
+        {
+          "id": "guitar",
+          "label": "guitar"
+        },
+        {
+          "id": "guitar_family",
+          "label": "guitar family"
+        },
+        {
+          "id": "guitar_synthesizer",
+          "label": "guitar synthesizer"
+        },
+        {
+          "id": "guitarron_chileno",
+          "label": "guitarrón chileno"
+        },
+        {
+          "id": "guitarron_mexicano",
+          "label": "guitarrón mexicano"
+        },
+        {
+          "id": "guitorgan",
+          "label": "guitorgan"
+        },
+        {
+          "id": "gumbri",
+          "label": "gumbri"
+        },
+        {
+          "id": "guqin",
+          "label": "guqin"
+        },
+        {
+          "id": "gusli",
+          "label": "gusli"
+        },
+        {
+          "id": "guzheng",
+          "label": "guzheng"
+        },
+        {
+          "id": "guira",
+          "label": "güira"
+        },
+        {
+          "id": "guiro",
+          "label": "güiro"
+        },
+        {
+          "id": "haegeum",
+          "label": "haegeum"
+        },
+        {
+          "id": "hammered_dulcimer",
+          "label": "hammered dulcimer"
+        },
+        {
+          "id": "handbell",
+          "label": "handbell"
+        },
+        {
+          "id": "handclaps",
+          "label": "handclaps"
+        },
+        {
+          "id": "handpan",
+          "label": "handpan"
+        },
+        {
+          "id": "hard_disk_drive",
+          "label": "hard disk drive"
+        },
+        {
+          "id": "hardingfele",
+          "label": "hardingfele"
+        },
+        {
+          "id": "harmonica",
+          "label": "harmonica"
+        },
+        {
+          "id": "harmonium",
+          "label": "harmonium"
+        },
+        {
+          "id": "harp",
+          "label": "harp"
+        },
+        {
+          "id": "harp_guitar",
+          "label": "harp guitar"
+        },
+        {
+          "id": "harpejji",
+          "label": "harpejji"
+        },
+        {
+          "id": "harpsichord",
+          "label": "harpsichord"
+        },
+        {
+          "id": "heckelphone",
+          "label": "heckelphone"
+        },
+        {
+          "id": "heike_biwa",
+          "label": "heike biwa"
+        },
+        {
+          "id": "helicon",
+          "label": "helicon"
+        },
+        {
+          "id": "hi_hat",
+          "label": "hi-hat"
+        },
+        {
+          "id": "hichiriki",
+          "label": "hichiriki"
+        },
+        {
+          "id": "hmong_flute",
+          "label": "hmông flute"
+        },
+        {
+          "id": "horn",
+          "label": "horn"
+        },
+        {
+          "id": "hotchiku",
+          "label": "hotchiku"
+        },
+        {
+          "id": "hourglass_drum",
+          "label": "hourglass drum"
+        },
+        {
+          "id": "hue_puruhau",
+          "label": "hue puruhau"
+        },
+        {
+          "id": "hue_puruwai",
+          "label": "hue puruwai"
+        },
+        {
+          "id": "hulusi",
+          "label": "hulusi"
+        },
+        {
+          "id": "hummel",
+          "label": "hummel"
+        },
+        {
+          "id": "huqin",
+          "label": "huqin"
+        },
+        {
+          "id": "hurdy_gurdy",
+          "label": "hurdy gurdy"
+        },
+        {
+          "id": "hydraulophone",
+          "label": "hydraulophone"
+        },
+        {
+          "id": "hyoshigi",
+          "label": "hyoshigi"
+        },
+        {
+          "id": "harjedalspipa",
+          "label": "härjedalspipa"
+        },
+        {
+          "id": "hummelchen",
+          "label": "hümmelchen"
+        },
+        {
+          "id": "idiophone",
+          "label": "idiophone"
+        },
+        {
+          "id": "igil",
+          "label": "igil"
+        },
+        {
+          "id": "janggu",
+          "label": "janggu"
+        },
+        {
+          "id": "jantar",
+          "label": "jantar"
+        },
+        {
+          "id": "jegogan",
+          "label": "jegogan"
+        },
+        {
+          "id": "jeli_ng_ni",
+          "label": "jeli ngɔni"
+        },
+        {
+          "id": "jing",
+          "label": "jing"
+        },
+        {
+          "id": "jing_erhu",
+          "label": "jing'erhu"
+        },
+        {
+          "id": "jinghu",
+          "label": "jinghu"
+        },
+        {
+          "id": "jouhikko",
+          "label": "jouhikko"
+        },
+        {
+          "id": "jublag",
+          "label": "jublag"
+        },
+        {
+          "id": "jug",
+          "label": "jug"
+        },
+        {
+          "id": "junjung",
+          "label": "junjung"
+        },
+        {
+          "id": "k_long_put",
+          "label": "k'lông pút"
+        },
+        {
+          "id": "kacapi",
+          "label": "kacapi"
+        },
+        {
+          "id": "kacapi_indung",
+          "label": "kacapi indung"
+        },
+        {
+          "id": "kacapi_rincik",
+          "label": "kacapi rincik"
+        },
+        {
+          "id": "kacapi_siter",
+          "label": "kacapi siter"
+        },
+        {
+          "id": "kachva_sitar",
+          "label": "kachva sitar"
+        },
+        {
+          "id": "kagurabue",
+          "label": "kagurabue"
+        },
+        {
+          "id": "kamale_ng_ni",
+          "label": "kamale ngɔni"
+        },
+        {
+          "id": "kamancheh",
+          "label": "kamancheh"
+        },
+        {
+          "id": "kanjira",
+          "label": "kanjira"
+        },
+        {
+          "id": "kankles",
+          "label": "kanklės"
+        },
+        {
+          "id": "kannel",
+          "label": "kannel"
+        },
+        {
+          "id": "kantele",
+          "label": "kantele"
+        },
+        {
+          "id": "kantilan",
+          "label": "kantilan"
+        },
+        {
+          "id": "kanun",
+          "label": "kanun"
+        },
+        {
+          "id": "kartal",
+          "label": "kartal"
+        },
+        {
+          "id": "kaval",
+          "label": "kaval"
+        },
+        {
+          "id": "kazoo",
+          "label": "kazoo"
+        },
+        {
+          "id": "kecer",
+          "label": "kecer"
+        },
+        {
+          "id": "kemanak",
+          "label": "kemanak"
+        },
+        {
+          "id": "kemenche",
+          "label": "kemenche"
+        },
+        {
+          "id": "kemence_of_the_black_sea",
+          "label": "kemençe of the Black Sea"
+        },
+        {
+          "id": "kempli",
+          "label": "kempli"
+        },
+        {
+          "id": "kempul",
+          "label": "kempul"
+        },
+        {
+          "id": "kempyang",
+          "label": "kempyang"
+        },
+        {
+          "id": "kendang",
+          "label": "kendang"
+        },
+        {
+          "id": "kendang_lanang",
+          "label": "kendang lanang"
+        },
+        {
+          "id": "kendang_wadon",
+          "label": "kendang wadon"
+        },
+        {
+          "id": "kendhang_batangan",
+          "label": "kendhang batangan"
+        },
+        {
+          "id": "kendhang_gendhing",
+          "label": "kendhang gendhing"
+        },
+        {
+          "id": "kendhang_indung",
+          "label": "kendhang indung"
+        },
+        {
+          "id": "kendhang_ketipung",
+          "label": "kendhang ketipung"
+        },
+        {
+          "id": "kendhang_kulanter",
+          "label": "kendhang kulanter"
+        },
+        {
+          "id": "kendhang_wayangan",
+          "label": "kendhang wayangan"
+        },
+        {
+          "id": "kenong",
+          "label": "kenong"
+        },
+        {
+          "id": "kepyak",
+          "label": "kepyak"
+        },
+        {
+          "id": "kethuk",
+          "label": "kethuk"
+        },
+        {
+          "id": "kettle_drum",
+          "label": "kettle drum"
+        },
+        {
+          "id": "keyboard",
+          "label": "keyboard"
+        },
+        {
+          "id": "keyboard_bass",
+          "label": "keyboard bass"
+        },
+        {
+          "id": "keyed_box_zither",
+          "label": "keyed box zither"
+        },
+        {
+          "id": "keyed_brass_instruments",
+          "label": "keyed brass instruments"
+        },
+        {
+          "id": "keytar",
+          "label": "keytar"
+        },
+        {
+          "id": "khamak",
+          "label": "khamak"
+        },
+        {
+          "id": "khene",
+          "label": "khene"
+        },
+        {
+          "id": "khim",
+          "label": "khim"
+        },
+        {
+          "id": "khlui",
+          "label": "khlui"
+        },
+        {
+          "id": "khong_wong",
+          "label": "khong wong"
+        },
+        {
+          "id": "khong_wong_lek",
+          "label": "khong wong lek"
+        },
+        {
+          "id": "khong_wong_yai",
+          "label": "khong wong yai"
+        },
+        {
+          "id": "khulsan_khuur",
+          "label": "khulsan khuur"
+        },
+        {
+          "id": "khen_meo",
+          "label": "khèn Mèo"
+        },
+        {
+          "id": "ki_pah",
+          "label": "ki pah"
+        },
+        {
+          "id": "kinnari_vina",
+          "label": "kinnari vina"
+        },
+        {
+          "id": "kinnor",
+          "label": "kinnor"
+        },
+        {
+          "id": "kithara",
+          "label": "kithara"
+        },
+        {
+          "id": "kkwaenggwari",
+          "label": "kkwaenggwari"
+        },
+        {
+          "id": "klong_khaek",
+          "label": "klong khaek"
+        },
+        {
+          "id": "klong_song_na",
+          "label": "klong song na"
+        },
+        {
+          "id": "klong_that",
+          "label": "klong that"
+        },
+        {
+          "id": "klong_yao",
+          "label": "klong yao"
+        },
+        {
+          "id": "kokle",
+          "label": "kokle"
+        },
+        {
+          "id": "kokyu",
+          "label": "kokyu"
+        },
+        {
+          "id": "komuz",
+          "label": "komuz"
+        },
+        {
+          "id": "kora",
+          "label": "kora"
+        },
+        {
+          "id": "kortholt",
+          "label": "kortholt"
+        },
+        {
+          "id": "koto",
+          "label": "koto"
+        },
+        {
+          "id": "kotsuzumi",
+          "label": "kotsuzumi"
+        },
+        {
+          "id": "krakeb",
+          "label": "krakeb"
+        },
+        {
+          "id": "krap",
+          "label": "krap"
+        },
+        {
+          "id": "krap_khu",
+          "label": "krap khū"
+        },
+        {
+          "id": "krap_phuang",
+          "label": "krap phuang"
+        },
+        {
+          "id": "krap_sepha",
+          "label": "krap sēphā"
+        },
+        {
+          "id": "krar",
+          "label": "krar"
+        },
+        {
+          "id": "kudum",
+          "label": "kudüm"
+        },
+        {
+          "id": "ken_bau",
+          "label": "kèn bầu"
+        },
+        {
+          "id": "ken_la",
+          "label": "kèn lá"
+        },
+        {
+          "id": "kos",
+          "label": "kös"
+        },
+        {
+          "id": "koauau",
+          "label": "kōauau"
+        },
+        {
+          "id": "koauau_ponga_ihu",
+          "label": "kōauau ponga ihu"
+        },
+        {
+          "id": "lamellaphone",
+          "label": "lamellaphone"
+        },
+        {
+          "id": "langeleik",
+          "label": "langeleik"
+        },
+        {
+          "id": "laouto",
+          "label": "laouto"
+        },
+        {
+          "id": "lap_harp",
+          "label": "lap harp"
+        },
+        {
+          "id": "lap_steel_guitar",
+          "label": "lap steel guitar"
+        },
+        {
+          "id": "laser_harp",
+          "label": "laser harp"
+        },
+        {
+          "id": "lasso_d_amore",
+          "label": "lasso d'amore"
+        },
+        {
+          "id": "launeddas",
+          "label": "launeddas"
+        },
+        {
+          "id": "lautenwerck",
+          "label": "lautenwerck"
+        },
+        {
+          "id": "lavta",
+          "label": "lavta"
+        },
+        {
+          "id": "limbe",
+          "label": "limbe"
+        },
+        {
+          "id": "lira_da_braccio",
+          "label": "lira da braccio"
+        },
+        {
+          "id": "lirone",
+          "label": "lirone"
+        },
+        {
+          "id": "lithophone",
+          "label": "lithophone"
+        },
+        {
+          "id": "liuqin",
+          "label": "liuqin"
+        },
+        {
+          "id": "low_whistle",
+          "label": "low whistle"
+        },
+        {
+          "id": "lute",
+          "label": "lute"
+        },
+        {
+          "id": "lute_family",
+          "label": "lute family"
+        },
+        {
+          "id": "lutheal",
+          "label": "luthéal"
+        },
+        {
+          "id": "lyra_viol",
+          "label": "lyra viol"
+        },
+        {
+          "id": "lyre",
+          "label": "lyre"
+        },
+        {
+          "id": "madal",
+          "label": "madal"
+        },
+        {
+          "id": "maddale",
+          "label": "maddale"
+        },
+        {
+          "id": "mandocello",
+          "label": "mandocello"
+        },
+        {
+          "id": "mandoguitar",
+          "label": "mandoguitar"
+        },
+        {
+          "id": "mandola",
+          "label": "mandola"
+        },
+        {
+          "id": "mandolin",
+          "label": "mandolin"
+        },
+        {
+          "id": "mandolute",
+          "label": "mandolute"
+        },
+        {
+          "id": "mandora_gallichon",
+          "label": "mandora / gallichon"
+        },
+        {
+          "id": "maracas",
+          "label": "maracas"
+        },
+        {
+          "id": "marimba",
+          "label": "marimba"
+        },
+        {
+          "id": "marimba_lumina",
+          "label": "marimba lumina"
+        },
+        {
+          "id": "marimbula",
+          "label": "marímbula"
+        },
+        {
+          "id": "mashak",
+          "label": "mashak"
+        },
+        {
+          "id": "matstsyanka",
+          "label": "matstsyanka"
+        },
+        {
+          "id": "mbira",
+          "label": "mbira"
+        },
+        {
+          "id": "mellophone",
+          "label": "mellophone"
+        },
+        {
+          "id": "mellotron",
+          "label": "mellotron"
+        },
+        {
+          "id": "melodica",
+          "label": "melodica"
+        },
+        {
+          "id": "melophone",
+          "label": "melophone"
+        },
+        {
+          "id": "membranophone",
+          "label": "membranophone"
+        },
+        {
+          "id": "metallophone",
+          "label": "metallophone"
+        },
+        {
+          "id": "mezwed",
+          "label": "mezwed"
+        },
+        {
+          "id": "mijwiz",
+          "label": "mijwiz"
+        },
+        {
+          "id": "minipiano",
+          "label": "minipiano"
+        },
+        {
+          "id": "mirliton",
+          "label": "mirliton"
+        },
+        {
+          "id": "monkey_stick",
+          "label": "monkey stick"
+        },
+        {
+          "id": "morin_khuur",
+          "label": "morin khuur"
+        },
+        {
+          "id": "morsing",
+          "label": "morsing"
+        },
+        {
+          "id": "mouth_harp",
+          "label": "mouth harp"
+        },
+        {
+          "id": "mouth_organ",
+          "label": "mouth organ"
+        },
+        {
+          "id": "mridangam",
+          "label": "mridangam"
+        },
+        {
+          "id": "mukkuri",
+          "label": "mukkuri"
+        },
+        {
+          "id": "musette_de_cour",
+          "label": "musette de cour"
+        },
+        {
+          "id": "musical_bow",
+          "label": "musical bow"
+        },
+        {
+          "id": "musical_box",
+          "label": "musical box"
+        },
+        {
+          "id": "musical_saw",
+          "label": "musical saw"
+        },
+        {
+          "id": "nabal",
+          "label": "nabal"
+        },
+        {
+          "id": "nadaswaram",
+          "label": "nadaswaram"
+        },
+        {
+          "id": "nagadou_daiko",
+          "label": "nagadou-daiko"
+        },
+        {
+          "id": "nagak",
+          "label": "nagak"
+        },
+        {
+          "id": "nai",
+          "label": "nai"
+        },
+        {
+          "id": "naobo",
+          "label": "naobo"
+        },
+        {
+          "id": "natural_brass_instruments",
+          "label": "natural brass instruments"
+        },
+        {
+          "id": "natural_horn",
+          "label": "natural horn"
+        },
+        {
+          "id": "natural_trumpet",
+          "label": "natural trumpet"
+        },
+        {
+          "id": "neyanban",
+          "label": "neyanban"
+        },
+        {
+          "id": "nguru",
+          "label": "nguru"
+        },
+        {
+          "id": "ng_ni",
+          "label": "ngɔni"
+        },
+        {
+          "id": "njarka",
+          "label": "njarka"
+        },
+        {
+          "id": "nohkan",
+          "label": "nohkan"
+        },
+        {
+          "id": "nose_flute",
+          "label": "nose flute"
+        },
+        {
+          "id": "nose_whistle",
+          "label": "nose whistle"
+        },
+        {
+          "id": "nyatiti",
+          "label": "nyatiti"
+        },
+        {
+          "id": "nyckelharpa",
+          "label": "nyckelharpa"
+        },
+        {
+          "id": "oboe",
+          "label": "oboe"
+        },
+        {
+          "id": "oboe_d_amore",
+          "label": "oboe d'amore"
+        },
+        {
+          "id": "oboe_da_caccia",
+          "label": "oboe da caccia"
+        },
+        {
+          "id": "ocarina",
+          "label": "ocarina"
+        },
+        {
+          "id": "ocean_drum",
+          "label": "ocean drum"
+        },
+        {
+          "id": "octave_mandolin",
+          "label": "octave mandolin"
+        },
+        {
+          "id": "octavilla",
+          "label": "octavilla"
+        },
+        {
+          "id": "octavina",
+          "label": "octavina"
+        },
+        {
+          "id": "octoban",
+          "label": "octoban"
+        },
+        {
+          "id": "octobass",
+          "label": "octobass"
+        },
+        {
+          "id": "oktawka",
+          "label": "oktawka"
+        },
+        {
+          "id": "olifant",
+          "label": "olifant"
+        },
+        {
+          "id": "omnichord",
+          "label": "omnichord"
+        },
+        {
+          "id": "ondes_martenot",
+          "label": "ondes Martenot"
+        },
+        {
+          "id": "ondioline",
+          "label": "ondioline"
+        },
+        {
+          "id": "ophicleide",
+          "label": "ophicleide"
+        },
+        {
+          "id": "organ",
+          "label": "organ"
+        },
+        {
+          "id": "orpharion",
+          "label": "orpharion"
+        },
+        {
+          "id": "orphica",
+          "label": "orphica"
+        },
+        {
+          "id": "other_instruments",
+          "label": "other instruments"
+        },
+        {
+          "id": "oud",
+          "label": "oud"
+        },
+        {
+          "id": "oval_spinet",
+          "label": "oval spinet"
+        },
+        {
+          "id": "pahu",
+          "label": "pahū"
+        },
+        {
+          "id": "pahu_pounamu",
+          "label": "pahū pounamu"
+        },
+        {
+          "id": "paiban",
+          "label": "paiban"
+        },
+        {
+          "id": "pakhawaj",
+          "label": "pakhawaj"
+        },
+        {
+          "id": "pan_flute",
+          "label": "pan flute"
+        },
+        {
+          "id": "pang_gu_ly_hu_hmong",
+          "label": "pang gu ly hu hmông"
+        },
+        {
+          "id": "pardessus_de_viole",
+          "label": "pardessus de viole"
+        },
+        {
+          "id": "parkapzuk",
+          "label": "parkapzuk"
+        },
+        {
+          "id": "pedal_accordion",
+          "label": "pedal accordion"
+        },
+        {
+          "id": "pedal_piano",
+          "label": "pedal piano"
+        },
+        {
+          "id": "pedal_steel_guitar",
+          "label": "pedal steel guitar"
+        },
+        {
+          "id": "pemade",
+          "label": "pemade"
+        },
+        {
+          "id": "percussion",
+          "label": "percussion"
+        },
+        {
+          "id": "percussion_idiophone",
+          "label": "percussion idiophone"
+        },
+        {
+          "id": "phach",
+          "label": "phách"
+        },
+        {
+          "id": "pi",
+          "label": "pi"
+        },
+        {
+          "id": "pi_nai",
+          "label": "pi nai"
+        },
+        {
+          "id": "piano_accordion",
+          "label": "piano accordion"
+        },
+        {
+          "id": "piano_duo",
+          "label": "piano duo"
+        },
+        {
+          "id": "piano_four_hands",
+          "label": "piano four hands"
+        },
+        {
+          "id": "piano_quartet",
+          "label": "piano quartet"
+        },
+        {
+          "id": "piano_spinet",
+          "label": "piano spinet"
+        },
+        {
+          "id": "piano_trio",
+          "label": "piano trio"
+        },
+        {
+          "id": "piccolo",
+          "label": "piccolo"
+        },
+        {
+          "id": "piccolo_oboe",
+          "label": "piccolo oboe"
+        },
+        {
+          "id": "piccolo_trumpet",
+          "label": "piccolo trumpet"
+        },
+        {
+          "id": "piffero",
+          "label": "piffero"
+        },
+        {
+          "id": "pipa",
+          "label": "pipa"
+        },
+        {
+          "id": "pipe_and_tabor",
+          "label": "pipe and tabor"
+        },
+        {
+          "id": "pipe_organ",
+          "label": "pipe organ"
+        },
+        {
+          "id": "piri",
+          "label": "piri"
+        },
+        {
+          "id": "piva",
+          "label": "piva"
+        },
+        {
+          "id": "pkhachich",
+          "label": "pkhachich"
+        },
+        {
+          "id": "plucked_idiophone",
+          "label": "plucked idiophone"
+        },
+        {
+          "id": "plucked_string_instruments",
+          "label": "plucked string instruments"
+        },
+        {
+          "id": "pluriarc",
+          "label": "pluriarc"
+        },
+        {
+          "id": "pocket_trumpet",
+          "label": "pocket trumpet"
+        },
+        {
+          "id": "poi",
+          "label": "poi"
+        },
+        {
+          "id": "poi_awhiowhio",
+          "label": "poi āwhiowhio"
+        },
+        {
+          "id": "porotiti",
+          "label": "porotiti"
+        },
+        {
+          "id": "portative",
+          "label": "portative"
+        },
+        {
+          "id": "post_horn",
+          "label": "post horn"
+        },
+        {
+          "id": "practice_chanter",
+          "label": "practice chanter"
+        },
+        {
+          "id": "prepared_piano",
+          "label": "prepared piano"
+        },
+        {
+          "id": "primero",
+          "label": "primero"
+        },
+        {
+          "id": "psaltery",
+          "label": "psaltery"
+        },
+        {
+          "id": "pi_thiu",
+          "label": "pí thiu"
+        },
+        {
+          "id": "pakuru",
+          "label": "pākuru"
+        },
+        {
+          "id": "pate",
+          "label": "pātē"
+        },
+        {
+          "id": "porutu",
+          "label": "pōrutu"
+        },
+        {
+          "id": "pukaea",
+          "label": "pūkaea"
+        },
+        {
+          "id": "pumotomoto",
+          "label": "pūmotomoto"
+        },
+        {
+          "id": "pupakapaka",
+          "label": "pūpakapaka"
+        },
+        {
+          "id": "purerehua",
+          "label": "pūrerehua"
+        },
+        {
+          "id": "putatara",
+          "label": "pūtātara"
+        },
+        {
+          "id": "putorino",
+          "label": "pūtōrino"
+        },
+        {
+          "id": "qilaut",
+          "label": "qilaut"
+        },
+        {
+          "id": "quadruple_reed",
+          "label": "quadruple reed"
+        },
+        {
+          "id": "quena",
+          "label": "quena"
+        },
+        {
+          "id": "quijada",
+          "label": "quijada"
+        },
+        {
+          "id": "quinto",
+          "label": "quinto"
+        },
+        {
+          "id": "rainstick",
+          "label": "rainstick"
+        },
+        {
+          "id": "rammana",
+          "label": "rammana"
+        },
+        {
+          "id": "ranat_ek",
+          "label": "ranat ek"
+        },
+        {
+          "id": "ranat_kaeo",
+          "label": "ranat kaeo"
+        },
+        {
+          "id": "ranat_thum",
+          "label": "ranat thum"
+        },
+        {
+          "id": "ratchet",
+          "label": "ratchet"
+        },
+        {
+          "id": "rauschpfeife",
+          "label": "rauschpfeife"
+        },
+        {
+          "id": "ravanahatta",
+          "label": "ravanahatta"
+        },
+        {
+          "id": "rebab",
+          "label": "rebab"
+        },
+        {
+          "id": "rebec",
+          "label": "rebec"
+        },
+        {
+          "id": "reclam_de_xeremies",
+          "label": "reclam de xeremies"
+        },
+        {
+          "id": "reco_reco",
+          "label": "reco-reco"
+        },
+        {
+          "id": "recorder",
+          "label": "recorder"
+        },
+        {
+          "id": "reed_organ",
+          "label": "reed organ"
+        },
+        {
+          "id": "reeds",
+          "label": "reeds"
+        },
+        {
+          "id": "regal",
+          "label": "regal"
+        },
+        {
+          "id": "rehu",
+          "label": "rehu"
+        },
+        {
+          "id": "renaissance_rackett",
+          "label": "renaissance rackett"
+        },
+        {
+          "id": "repeater",
+          "label": "repeater"
+        },
+        {
+          "id": "repinique",
+          "label": "repinique"
+        },
+        {
+          "id": "resonator_guitar",
+          "label": "resonator guitar"
+        },
+        {
+          "id": "reyong",
+          "label": "reyong"
+        },
+        {
+          "id": "rhythm_sticks",
+          "label": "rhythm sticks"
+        },
+        {
+          "id": "riq",
+          "label": "riq"
+        },
+        {
+          "id": "rondador",
+          "label": "rondador"
+        },
+        {
+          "id": "ronroco",
+          "label": "ronroco"
+        },
+        {
+          "id": "rototom",
+          "label": "rototom"
+        },
+        {
+          "id": "ruan",
+          "label": "ruan"
+        },
+        {
+          "id": "rubab",
+          "label": "rubab"
+        },
+        {
+          "id": "rudra_veena",
+          "label": "rudra veena"
+        },
+        {
+          "id": "ryuteki",
+          "label": "ryuteki"
+        },
+        {
+          "id": "roria",
+          "label": "rōria"
+        },
+        {
+          "id": "sabar",
+          "label": "sabar"
+        },
+        {
+          "id": "sac_de_gemecs",
+          "label": "sac de gemecs"
+        },
+        {
+          "id": "sackbut",
+          "label": "sackbut"
+        },
+        {
+          "id": "saduk",
+          "label": "saduk"
+        },
+        {
+          "id": "saluang",
+          "label": "saluang"
+        },
+        {
+          "id": "samba_whistle",
+          "label": "samba whistle"
+        },
+        {
+          "id": "samica",
+          "label": "samica"
+        },
+        {
+          "id": "sampler",
+          "label": "sampler"
+        },
+        {
+          "id": "sanshin",
+          "label": "sanshin"
+        },
+        {
+          "id": "santoor",
+          "label": "santoor"
+        },
+        {
+          "id": "sanxian",
+          "label": "sanxian"
+        },
+        {
+          "id": "sarangi",
+          "label": "sarangi"
+        },
+        {
+          "id": "sarod",
+          "label": "sarod"
+        },
+        {
+          "id": "saron_barung",
+          "label": "saron barung"
+        },
+        {
+          "id": "saron_demung",
+          "label": "saron demung"
+        },
+        {
+          "id": "saron_family",
+          "label": "saron family"
+        },
+        {
+          "id": "saron_panerus",
+          "label": "saron panerus"
+        },
+        {
+          "id": "saron_peking",
+          "label": "saron peking"
+        },
+        {
+          "id": "saron_wayang",
+          "label": "saron wayang"
+        },
+        {
+          "id": "sarrusophone",
+          "label": "sarrusophone"
+        },
+        {
+          "id": "sasando",
+          "label": "sasando"
+        },
+        {
+          "id": "satsuma_biwa",
+          "label": "satsuma biwa"
+        },
+        {
+          "id": "saw_duang",
+          "label": "saw duang"
+        },
+        {
+          "id": "saw_sam_sai",
+          "label": "saw sam sai"
+        },
+        {
+          "id": "saw_u",
+          "label": "saw u"
+        },
+        {
+          "id": "saxophone",
+          "label": "saxophone"
+        },
+        {
+          "id": "saxophone_quartet",
+          "label": "saxophone quartet"
+        },
+        {
+          "id": "scraped_idiophone",
+          "label": "scraped idiophone"
+        },
+        {
+          "id": "segunda",
+          "label": "segunda"
+        },
+        {
+          "id": "seni_rebab",
+          "label": "seni rebab"
+        },
+        {
+          "id": "serpent",
+          "label": "serpent"
+        },
+        {
+          "id": "setar",
+          "label": "setar"
+        },
+        {
+          "id": "shaken_idiophone",
+          "label": "shaken idiophone"
+        },
+        {
+          "id": "shakers",
+          "label": "shakers"
+        },
+        {
+          "id": "shakuhachi",
+          "label": "shakuhachi"
+        },
+        {
+          "id": "shamisen",
+          "label": "shamisen"
+        },
+        {
+          "id": "shawm",
+          "label": "shawm"
+        },
+        {
+          "id": "shehnai",
+          "label": "shehnai"
+        },
+        {
+          "id": "shekere",
+          "label": "shekere"
+        },
+        {
+          "id": "sheng",
+          "label": "sheng"
+        },
+        {
+          "id": "shichepshin",
+          "label": "shichepshin"
+        },
+        {
+          "id": "shime_daiko",
+          "label": "shime-daiko"
+        },
+        {
+          "id": "shinobue",
+          "label": "shinobue"
+        },
+        {
+          "id": "sho",
+          "label": "sho"
+        },
+        {
+          "id": "shofar",
+          "label": "shofar"
+        },
+        {
+          "id": "shruti_box",
+          "label": "shruti box"
+        },
+        {
+          "id": "shudraga",
+          "label": "shudraga"
+        },
+        {
+          "id": "siku",
+          "label": "siku"
+        },
+        {
+          "id": "singing_bowl",
+          "label": "singing bowl"
+        },
+        {
+          "id": "single_reed",
+          "label": "single reed"
+        },
+        {
+          "id": "sistrum",
+          "label": "sistrum"
+        },
+        {
+          "id": "sitar",
+          "label": "sitar"
+        },
+        {
+          "id": "slapstick",
+          "label": "slapstick"
+        },
+        {
+          "id": "slenthem",
+          "label": "slenthem"
+        },
+        {
+          "id": "slentho",
+          "label": "slentho"
+        },
+        {
+          "id": "slide_brass_instruments",
+          "label": "slide brass instruments"
+        },
+        {
+          "id": "slide_guitar",
+          "label": "slide guitar"
+        },
+        {
+          "id": "slide_whistle",
+          "label": "slide whistle"
+        },
+        {
+          "id": "slit_drum",
+          "label": "slit drum"
+        },
+        {
+          "id": "snare_drum",
+          "label": "snare drum"
+        },
+        {
+          "id": "somu_dudas",
+          "label": "somu dūdas"
+        },
+        {
+          "id": "song_loan",
+          "label": "song loan"
+        },
+        {
+          "id": "sopilka",
+          "label": "sopilka"
+        },
+        {
+          "id": "sopranino_recorder",
+          "label": "sopranino recorder"
+        },
+        {
+          "id": "sopranino_saxophone",
+          "label": "sopranino saxophone"
+        },
+        {
+          "id": "soprano_clarinet",
+          "label": "soprano clarinet"
+        },
+        {
+          "id": "soprano_flute",
+          "label": "soprano flute"
+        },
+        {
+          "id": "soprano_recorder",
+          "label": "soprano recorder"
+        },
+        {
+          "id": "soprano_saxophone",
+          "label": "soprano saxophone"
+        },
+        {
+          "id": "soprano_violin",
+          "label": "soprano violin"
+        },
+        {
+          "id": "sordellina",
+          "label": "sordellina"
+        },
+        {
+          "id": "sousaphone",
+          "label": "sousaphone"
+        },
+        {
+          "id": "spike_fiddle",
+          "label": "spike-fiddle"
+        },
+        {
+          "id": "spilapipa",
+          "label": "spilåpipa"
+        },
+        {
+          "id": "spinet",
+          "label": "spinet"
+        },
+        {
+          "id": "spinettone",
+          "label": "spinettone"
+        },
+        {
+          "id": "spoons",
+          "label": "spoons"
+        },
+        {
+          "id": "steel_guitar",
+          "label": "steel guitar"
+        },
+        {
+          "id": "steel_string_acoustic_guitar",
+          "label": "steel-string acoustic guitar"
+        },
+        {
+          "id": "steelpan",
+          "label": "steelpan"
+        },
+        {
+          "id": "stick_zither",
+          "label": "stick zither"
+        },
+        {
+          "id": "string_quartet",
+          "label": "string quartet"
+        },
+        {
+          "id": "string_quintet",
+          "label": "string quintet"
+        },
+        {
+          "id": "string_synthesizer",
+          "label": "string synthesizer"
+        },
+        {
+          "id": "string_trio",
+          "label": "string trio"
+        },
+        {
+          "id": "strings",
+          "label": "strings"
+        },
+        {
+          "id": "struck_idiophone",
+          "label": "struck idiophone"
+        },
+        {
+          "id": "struck_string_instruments",
+          "label": "struck string instruments"
+        },
+        {
+          "id": "subcontrabass_recorder",
+          "label": "subcontrabass recorder"
+        },
+        {
+          "id": "suikinkutsu",
+          "label": "suikinkutsu"
+        },
+        {
+          "id": "suka",
+          "label": "suka"
+        },
+        {
+          "id": "suling",
+          "label": "suling"
+        },
+        {
+          "id": "suona",
+          "label": "suona"
+        },
+        {
+          "id": "surbahar",
+          "label": "surbahar"
+        },
+        {
+          "id": "surdo",
+          "label": "surdo"
+        },
+        {
+          "id": "sursingar",
+          "label": "sursingar"
+        },
+        {
+          "id": "swaragat",
+          "label": "swaragat"
+        },
+        {
+          "id": "swarmandal",
+          "label": "swarmandal"
+        },
+        {
+          "id": "synclavier",
+          "label": "synclavier"
+        },
+        {
+          "id": "syrinx",
+          "label": "syrinx"
+        },
+        {
+          "id": "sao_meo",
+          "label": "sáo meò"
+        },
+        {
+          "id": "sao_truc",
+          "label": "sáo trúc"
+        },
+        {
+          "id": "sackpipa",
+          "label": "säckpipa"
+        },
+        {
+          "id": "senh_tien",
+          "label": "sênh tiền"
+        },
+        {
+          "id": "t_rung",
+          "label": "t'rưng"
+        },
+        {
+          "id": "tabla",
+          "label": "tabla"
+        },
+        {
+          "id": "table_steel_guitar",
+          "label": "table steel guitar"
+        },
+        {
+          "id": "tabor",
+          "label": "tabor"
+        },
+        {
+          "id": "tack_piano",
+          "label": "tack piano"
+        },
+        {
+          "id": "taepyeongso",
+          "label": "taepyeongso"
+        },
+        {
+          "id": "taiko",
+          "label": "taiko"
+        },
+        {
+          "id": "taishogoto",
+          "label": "taishogoto"
+        },
+        {
+          "id": "talharpa",
+          "label": "talharpa"
+        },
+        {
+          "id": "talkbox",
+          "label": "talkbox"
+        },
+        {
+          "id": "talking_drum",
+          "label": "talking drum"
+        },
+        {
+          "id": "tamborim",
+          "label": "tamborim"
+        },
+        {
+          "id": "tambourine",
+          "label": "tambourine"
+        },
+        {
+          "id": "tambura",
+          "label": "tambura"
+        },
+        {
+          "id": "tanbou_ka",
+          "label": "tanbou ka"
+        },
+        {
+          "id": "tanbur",
+          "label": "tanbur"
+        },
+        {
+          "id": "tangent_piano",
+          "label": "tangent piano"
+        },
+        {
+          "id": "tanpura",
+          "label": "tanpura"
+        },
+        {
+          "id": "taonga_puoro",
+          "label": "taonga pūoro"
+        },
+        {
+          "id": "tap_dance",
+          "label": "tap dance"
+        },
+        {
+          "id": "tape",
+          "label": "tape"
+        },
+        {
+          "id": "taphon",
+          "label": "taphon"
+        },
+        {
+          "id": "tar",
+          "label": "tar"
+        },
+        {
+          "id": "taragot",
+          "label": "taragot"
+        },
+        {
+          "id": "tarota",
+          "label": "tarota"
+        },
+        {
+          "id": "te_ku",
+          "label": "te kū"
+        },
+        {
+          "id": "tef",
+          "label": "tef"
+        },
+        {
+          "id": "telharmonium",
+          "label": "telharmonium"
+        },
+        {
+          "id": "temple_blocks",
+          "label": "temple blocks"
+        },
+        {
+          "id": "temur_khuur",
+          "label": "temür khuur"
+        },
+        {
+          "id": "tenor_banjo",
+          "label": "tenor banjo"
+        },
+        {
+          "id": "tenor_guitar",
+          "label": "tenor guitar"
+        },
+        {
+          "id": "tenor_horn_alto_horn",
+          "label": "tenor horn / alto horn"
+        },
+        {
+          "id": "tenor_recorder",
+          "label": "tenor recorder"
+        },
+        {
+          "id": "tenor_saxophone",
+          "label": "tenor saxophone"
+        },
+        {
+          "id": "tenor_trombone",
+          "label": "tenor trombone"
+        },
+        {
+          "id": "tenor_viol",
+          "label": "tenor viol"
+        },
+        {
+          "id": "tenor_violin",
+          "label": "tenor violin"
+        },
+        {
+          "id": "tenora",
+          "label": "tenora"
+        },
+        {
+          "id": "thavil",
+          "label": "thavil"
+        },
+        {
+          "id": "theatre_organ",
+          "label": "theatre organ"
+        },
+        {
+          "id": "theorbo",
+          "label": "theorbo"
+        },
+        {
+          "id": "theremin",
+          "label": "theremin"
+        },
+        {
+          "id": "thon",
+          "label": "thon"
+        },
+        {
+          "id": "three_hole_pipe",
+          "label": "three-hole pipe"
+        },
+        {
+          "id": "ti_bwa",
+          "label": "ti bwa"
+        },
+        {
+          "id": "tible",
+          "label": "tible"
+        },
+        {
+          "id": "timbales",
+          "label": "timbales"
+        },
+        {
+          "id": "timpani",
+          "label": "timpani"
+        },
+        {
+          "id": "tin_whistle",
+          "label": "tin whistle"
+        },
+        {
+          "id": "tinya",
+          "label": "tinya"
+        },
+        {
+          "id": "tiple",
+          "label": "tiple"
+        },
+        {
+          "id": "tieu",
+          "label": "tiêu"
+        },
+        {
+          "id": "tololoche",
+          "label": "tololoche"
+        },
+        {
+          "id": "tom_tom",
+          "label": "tom-tom"
+        },
+        {
+          "id": "tonkori",
+          "label": "tonkori"
+        },
+        {
+          "id": "topshuur",
+          "label": "topshuur"
+        },
+        {
+          "id": "torupill",
+          "label": "torupill"
+        },
+        {
+          "id": "toy_piano",
+          "label": "toy piano"
+        },
+        {
+          "id": "traditional_basque_ensemble",
+          "label": "traditional basque ensemble"
+        },
+        {
+          "id": "transverse_flute",
+          "label": "transverse flute"
+        },
+        {
+          "id": "trautonium",
+          "label": "trautonium"
+        },
+        {
+          "id": "treble_flute",
+          "label": "treble flute"
+        },
+        {
+          "id": "treble_recorder_alto_recorder",
+          "label": "treble recorder / alto recorder"
+        },
+        {
+          "id": "treble_viol",
+          "label": "treble viol"
+        },
+        {
+          "id": "treble_violin",
+          "label": "treble violin"
+        },
+        {
+          "id": "tres",
+          "label": "tres"
+        },
+        {
+          "id": "triangle",
+          "label": "triangle"
+        },
+        {
+          "id": "trikiti",
+          "label": "trikiti"
+        },
+        {
+          "id": "tritantri_veena",
+          "label": "tritantri veena"
+        },
+        {
+          "id": "tromba_marina",
+          "label": "tromba marina"
+        },
+        {
+          "id": "trombone",
+          "label": "trombone"
+        },
+        {
+          "id": "trumpet",
+          "label": "trumpet"
+        },
+        {
+          "id": "trumpet_family",
+          "label": "trumpet family"
+        },
+        {
+          "id": "tram_ple",
+          "label": "tràm plè"
+        },
+        {
+          "id": "trang_jau",
+          "label": "trắng jâu"
+        },
+        {
+          "id": "trang_lu",
+          "label": "trắng lu"
+        },
+        {
+          "id": "trong_bong",
+          "label": "trống bông"
+        },
+        {
+          "id": "tsampouna",
+          "label": "tsampouna"
+        },
+        {
+          "id": "tuba",
+          "label": "tuba"
+        },
+        {
+          "id": "tubax",
+          "label": "tubax"
+        },
+        {
+          "id": "tube_zither",
+          "label": "tube zither"
+        },
+        {
+          "id": "tubon",
+          "label": "tubon"
+        },
+        {
+          "id": "tubular_bells",
+          "label": "tubular bells"
+        },
+        {
+          "id": "tubulum",
+          "label": "tubulum"
+        },
+        {
+          "id": "tulum",
+          "label": "tulum"
+        },
+        {
+          "id": "tumbi",
+          "label": "tumbi"
+        },
+        {
+          "id": "tumutumu",
+          "label": "tumutumu"
+        },
+        {
+          "id": "tun_tuna",
+          "label": "tun tuna"
+        },
+        {
+          "id": "tungso",
+          "label": "tungso"
+        },
+        {
+          "id": "turntable",
+          "label": "turntable"
+        },
+        {
+          "id": "txalaparta",
+          "label": "txalaparta"
+        },
+        {
+          "id": "txistu",
+          "label": "txistu"
+        },
+        {
+          "id": "typewriter",
+          "label": "typewriter"
+        },
+        {
+          "id": "tzoura",
+          "label": "tzoura"
+        },
+        {
+          "id": "tokere",
+          "label": "tōkere"
+        },
+        {
+          "id": "udu",
+          "label": "udu"
+        },
+        {
+          "id": "ugal",
+          "label": "ugal"
+        },
+        {
+          "id": "uilleann_pipes",
+          "label": "uilleann pipes"
+        },
+        {
+          "id": "ukeke",
+          "label": "ukeke"
+        },
+        {
+          "id": "ukulele",
+          "label": "ukulele"
+        },
+        {
+          "id": "upright_piano",
+          "label": "upright piano"
+        },
+        {
+          "id": "vacuum_cleaner",
+          "label": "vacuum cleaner"
+        },
+        {
+          "id": "valiha",
+          "label": "valiha"
+        },
+        {
+          "id": "valve_trombone",
+          "label": "valve trombone"
+        },
+        {
+          "id": "valved_brass_instruments",
+          "label": "valved brass instruments"
+        },
+        {
+          "id": "veena",
+          "label": "veena"
+        },
+        {
+          "id": "venu",
+          "label": "venu"
+        },
+        {
+          "id": "vertical_viola",
+          "label": "vertical viola"
+        },
+        {
+          "id": "vessel_flute",
+          "label": "vessel flute"
+        },
+        {
+          "id": "veuze",
+          "label": "veuze"
+        },
+        {
+          "id": "vibrandoneon",
+          "label": "vibrandoneon"
+        },
+        {
+          "id": "vibraphone",
+          "label": "vibraphone"
+        },
+        {
+          "id": "vibraslap",
+          "label": "vibraslap"
+        },
+        {
+          "id": "vichitra_veena",
+          "label": "vichitra veena"
+        },
+        {
+          "id": "vielle",
+          "label": "vielle"
+        },
+        {
+          "id": "vihuela",
+          "label": "vihuela"
+        },
+        {
+          "id": "viol_consort",
+          "label": "viol consort"
+        },
+        {
+          "id": "viol_family",
+          "label": "viol family"
+        },
+        {
+          "id": "viola",
+          "label": "viola"
+        },
+        {
+          "id": "viola_caipira",
+          "label": "viola caipira"
+        },
+        {
+          "id": "viola_d_amore",
+          "label": "viola d'amore"
+        },
+        {
+          "id": "viola_da_gamba",
+          "label": "viola da gamba"
+        },
+        {
+          "id": "viola_organista",
+          "label": "viola organista"
+        },
+        {
+          "id": "violin",
+          "label": "violin"
+        },
+        {
+          "id": "violin_family",
+          "label": "violin family"
+        },
+        {
+          "id": "violin_octet",
+          "label": "violin octet"
+        },
+        {
+          "id": "violino_piccolo",
+          "label": "violino piccolo"
+        },
+        {
+          "id": "viololyra",
+          "label": "viololyra"
+        },
+        {
+          "id": "violoncello_piccolo",
+          "label": "violoncello piccolo"
+        },
+        {
+          "id": "violone",
+          "label": "violone"
+        },
+        {
+          "id": "violotta",
+          "label": "violotta"
+        },
+        {
+          "id": "virginal",
+          "label": "virginal"
+        },
+        {
+          "id": "vocoder",
+          "label": "vocoder"
+        },
+        {
+          "id": "voice_synthesizer",
+          "label": "voice synthesizer"
+        },
+        {
+          "id": "vuvuzela",
+          "label": "vuvuzela"
+        },
+        {
+          "id": "walaycho",
+          "label": "walaycho"
+        },
+        {
+          "id": "washboard",
+          "label": "washboard"
+        },
+        {
+          "id": "washtub_bass",
+          "label": "washtub bass"
+        },
+        {
+          "id": "water_drum",
+          "label": "water drum"
+        },
+        {
+          "id": "waterphone",
+          "label": "waterphone"
+        },
+        {
+          "id": "wavedrum",
+          "label": "wavedrum"
+        },
+        {
+          "id": "whistle",
+          "label": "whistle"
+        },
+        {
+          "id": "willow_flute",
+          "label": "willow flute"
+        },
+        {
+          "id": "wind_chime",
+          "label": "wind chime"
+        },
+        {
+          "id": "wind_instruments",
+          "label": "wind instruments"
+        },
+        {
+          "id": "wind_synthesizer",
+          "label": "wind synthesizer"
+        },
+        {
+          "id": "wire_strung_harp",
+          "label": "wire-strung harp"
+        },
+        {
+          "id": "wood_block",
+          "label": "wood block"
+        },
+        {
+          "id": "wooden_fish",
+          "label": "wooden fish"
+        },
+        {
+          "id": "woodwind",
+          "label": "woodwind"
+        },
+        {
+          "id": "wot",
+          "label": "wot"
+        },
+        {
+          "id": "xalam",
+          "label": "xalam"
+        },
+        {
+          "id": "xeremies",
+          "label": "xeremies"
+        },
+        {
+          "id": "xiao",
+          "label": "xiao"
+        },
+        {
+          "id": "xiaoluo",
+          "label": "xiaoluo"
+        },
+        {
+          "id": "xun",
+          "label": "xun"
+        },
+        {
+          "id": "xylophone",
+          "label": "xylophone"
+        },
+        {
+          "id": "xylorimba",
+          "label": "xylorimba"
+        },
+        {
+          "id": "yangqin",
+          "label": "yangqin"
+        },
+        {
+          "id": "yatga",
+          "label": "yatga"
+        },
+        {
+          "id": "yayl_tanbur",
+          "label": "yaylı tanbur"
+        },
+        {
+          "id": "yazh",
+          "label": "yazh"
+        },
+        {
+          "id": "yehu",
+          "label": "yehu"
+        },
+        {
+          "id": "yonggo",
+          "label": "yonggo"
+        },
+        {
+          "id": "yoochin",
+          "label": "yoochin"
+        },
+        {
+          "id": "yu",
+          "label": "yu"
+        },
+        {
+          "id": "yueqin",
+          "label": "yueqin"
+        },
+        {
+          "id": "zabumba",
+          "label": "zabumba"
+        },
+        {
+          "id": "zampogna",
+          "label": "zampogna"
+        },
+        {
+          "id": "zarb",
+          "label": "zarb"
+        },
+        {
+          "id": "zhaleika",
+          "label": "zhaleika"
+        },
+        {
+          "id": "zhonghu",
+          "label": "zhonghu"
+        },
+        {
+          "id": "zhongruan",
+          "label": "zhongruan"
+        },
+        {
+          "id": "zhuihu",
+          "label": "zhuihu"
+        },
+        {
+          "id": "zill",
+          "label": "zill"
+        },
+        {
+          "id": "zither",
+          "label": "zither"
+        },
+        {
+          "id": "zurna",
+          "label": "zurna"
+        },
+        {
+          "id": "cevgen",
+          "label": "çevgen"
+        },
+        {
+          "id": "utogardon",
+          "label": "ütőgardon"
+        },
+        {
+          "id": "ing_buot",
+          "label": "đing buốt"
+        },
+        {
+          "id": "ing_nam",
+          "label": "đing năm"
+        },
+        {
+          "id": "an_bau",
+          "label": "đàn bầu"
+        },
+        {
+          "id": "an_nguyet",
+          "label": "đàn nguyệt"
+        },
+        {
+          "id": "an_nhi",
+          "label": "đàn nhị"
+        },
+        {
+          "id": "an_tam",
+          "label": "đàn tam"
+        },
+        {
+          "id": "an_tam_thap_luc",
+          "label": "đàn tam thập lục"
+        },
+        {
+          "id": "an_tranh",
+          "label": "đàn tranh"
+        },
+        {
+          "id": "an_tu",
+          "label": "đàn tứ"
+        },
+        {
+          "id": "an_tu_day",
+          "label": "đàn tứ dây"
+        },
+        {
+          "id": "an_ty_ba",
+          "label": "đàn tỳ bà"
+        },
+        {
+          "id": "giga",
+          "label": "ģīga"
+        },
+        {
+          "id": "otsuzumi",
+          "label": "ōtsuzumi"
+        },
+        {
+          "id": "sargija",
+          "label": "šargija"
+        },
+        {
+          "id": "zafzafa",
+          "label": "żafżafa"
+        },
+        {
+          "id": "zaqq",
+          "label": "żaqq"
+        },
+        {
+          "id": "zummara",
+          "label": "żummara"
+        }
+      ],
+      "options_complete": true,
+      "options_source": "generate_music_hybrid_model/music_studio/data/instrument_vocabulary.json",
+      "options_json_path": "groups[].entries[]",
+      "metadata_gaps": [
+        "Current local document does not specify a selection maximum; missing metadata does not prove that the service has no limit."
+      ],
+      "path": "instruments"
+    },
+    {
+      "key": "sonic_tags",
+      "binding": "prose",
+      "spec_control": "chips",
+      "source_description": "`cinematic_swell`, `warm_analog`, `nostalgic_texture`, `hybrid_orchestral`, `punchy_low_end`, `no_vocals`, `dramatic_hits`, `wide_stereo`, `ethereal_pads`, `dark_undertone` — max_selected 10",
+      "source_line": 79,
+      "label": "Sonic tags",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "idea",
+      "control": "chips",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "path": "sonic_tags[]"
+      },
+      "options": [
+        {
+          "id": "cinematic_swell",
+          "label": "Cinematic swell"
+        },
+        {
+          "id": "warm_analog",
+          "label": "Warm analog"
+        },
+        {
+          "id": "nostalgic_texture",
+          "label": "Nostalgic texture"
+        },
+        {
+          "id": "hybrid_orchestral",
+          "label": "Hybrid orchestral"
+        },
+        {
+          "id": "punchy_low_end",
+          "label": "Punchy low end"
+        },
+        {
+          "id": "no_vocals",
+          "label": "No vocals"
+        },
+        {
+          "id": "dramatic_hits",
+          "label": "Dramatic hits"
+        },
+        {
+          "id": "wide_stereo",
+          "label": "Wide stereo"
+        },
+        {
+          "id": "ethereal_pads",
+          "label": "Ethereal pads"
+        },
+        {
+          "id": "dark_undertone",
+          "label": "Dark undertone"
+        }
+      ],
+      "options_complete": true,
+      "max_selected": 10,
+      "max_items": 10,
+      "path": "sonic_tags"
+    },
+    {
+      "key": "mood_orbit",
+      "binding": "compiled",
+      "spec_control": "radar",
+      "source_description": "object: `axes`, `value_range` — see shape reference",
+      "source_line": 80,
+      "label": "Mood orbit",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "idea",
+      "control": "fieldset",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "object",
+      "fields": [
+        {
+          "key": "axes",
+          "label": "Mood balance",
+          "type": "object",
+          "control": "fieldset",
+          "fields": [
+            {
+              "key": "aggressive",
+              "label": "Aggressive",
+              "type": "number",
+              "control": "slider",
+              "minimum": 0,
+              "maximum": 1,
+              "path": "mood_orbit.axes.aggressive"
+            },
+            {
+              "key": "dark",
+              "label": "Dark",
+              "type": "number",
+              "control": "slider",
+              "minimum": 0,
+              "maximum": 1,
+              "path": "mood_orbit.axes.dark"
+            },
+            {
+              "key": "epic",
+              "label": "Epic",
+              "type": "number",
+              "control": "slider",
+              "minimum": 0,
+              "maximum": 1,
+              "path": "mood_orbit.axes.epic"
+            },
+            {
+              "key": "hopeful",
+              "label": "Hopeful",
+              "type": "number",
+              "control": "slider",
+              "minimum": 0,
+              "maximum": 1,
+              "path": "mood_orbit.axes.hopeful"
+            },
+            {
+              "key": "melancholic",
+              "label": "Melancholic",
+              "type": "number",
+              "control": "slider",
+              "minimum": 0,
+              "maximum": 1,
+              "path": "mood_orbit.axes.melancholic"
+            },
+            {
+              "key": "uplifting",
+              "label": "Uplifting",
+              "type": "number",
+              "control": "slider",
+              "minimum": 0,
+              "maximum": 1,
+              "path": "mood_orbit.axes.uplifting"
+            }
+          ],
+          "additional_properties": false,
+          "path": "mood_orbit.axes"
+        }
+      ],
+      "additional_properties": false,
+      "shape_note": "Wire shape {axes:{pole:number}} follows the explicit validator description at lines 283 and 387; value_range in the summary is metadata, not a client field.",
+      "excluded_fields": [
+        {
+          "key": "value_range",
+          "reason": "Range metadata, not part of the explicit axes-to-value request map.",
+          "source_line": 387
+        }
+      ],
+      "structured_source_lines": [
+        281,
+        286
+      ],
+      "path": "mood_orbit"
+    },
+    {
+      "key": "vocal",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "object: `mode`, `language`, `language_policy` — see shape reference",
+      "source_line": 81,
+      "label": "Vocal",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "voice",
+      "control": "fieldset",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "object",
+      "fields": [
+        {
+          "key": "mode",
+          "label": "Voice mode",
+          "type": "string",
+          "control": "combo",
+          "options": [
+            {
+              "id": "choir",
+              "label": "Choir"
+            },
+            {
+              "id": "duet",
+              "label": "Duet"
+            },
+            {
+              "id": "female",
+              "label": "Female"
+            },
+            {
+              "id": "instrumental",
+              "label": "Instrumental"
+            },
+            {
+              "id": "male",
+              "label": "Male"
+            },
+            {
+              "id": "plan_decides",
+              "label": "Plan decides"
+            },
+            {
+              "id": "spoken",
+              "label": "Spoken"
+            }
+          ],
+          "options_complete": true,
+          "default": "instrumental",
+          "path": "vocal.mode"
+        },
+        {
+          "key": "language",
+          "label": "Language",
+          "type": "string",
+          "control": "language",
+          "format": "language-code",
+          "options": [
+            {
+              "id": "en",
+              "label": "English"
+            },
+            {
+              "id": "tr",
+              "label": "Türkçe"
+            },
+            {
+              "id": "zh",
+              "label": "中文 (Mandarin)"
+            },
+            {
+              "id": "ja",
+              "label": "日本語"
+            },
+            {
+              "id": "ko",
+              "label": "한국어"
+            },
+            {
+              "id": "ru",
+              "label": "Русский"
+            },
+            {
+              "id": "es",
+              "label": "Español"
+            },
+            {
+              "id": "fr",
+              "label": "Français"
+            },
+            {
+              "id": "de",
+              "label": "Deutsch"
+            },
+            {
+              "id": "it",
+              "label": "Italiano"
+            },
+            {
+              "id": "pt",
+              "label": "Português"
+            }
+          ],
+          "options_complete": false,
+          "allow_custom_code": true,
+          "options_source": "generate_music_hybrid_model/music_studio/data/language_registry.json",
+          "current_options_provider": {
+            "parameter": "vocal",
+            "field": "language",
+            "operation": "capabilities",
+            "expected_documented_count": 109
+          },
+          "metadata_gaps": [
+            "The complete Gemini-union language file is absent from the checkout. These 11 local options are suggestions, NOT a closed list of supported languages. Resolve the current 109-code universe through capabilities before membership validation."
+          ],
+          "default": "en",
+          "path": "vocal.language"
+        },
+        {
+          "key": "language_policy",
+          "label": "Language handling",
+          "type": "string",
+          "control": "combo",
+          "options": [
+            {
+              "id": "measure",
+              "label": "Measure"
+            },
+            {
+              "id": "prefer_proven",
+              "label": "Prefer proven"
+            },
+            {
+              "id": "strict",
+              "label": "Strict"
+            }
+          ],
+          "options_complete": true,
+          "default": "measure",
+          "path": "vocal.language_policy"
+        }
+      ],
+      "additional_properties": false,
+      "structured_source_lines": [
+        287,
+        302
+      ],
+      "default": {
+        "mode": "instrumental",
+        "language": "en",
+        "language_policy": "measure"
+      },
+      "path": "vocal"
+    },
+    {
+      "key": "lyrics",
+      "binding": "typed",
+      "spec_control": "combo",
+      "source_description": "object: `mode`, `text`, `theme`, `verify`, `language`, `script` — see shape reference",
+      "source_line": 82,
+      "label": "Lyrics",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "lyrics",
+      "control": "fieldset",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "object",
+      "fields": [
+        {
+          "key": "mode",
+          "label": "Lyrics source",
+          "type": "string",
+          "control": "combo",
+          "options": [
+            {
+              "id": "ai_write",
+              "label": "Ai write"
+            },
+            {
+              "id": "custom",
+              "label": "Custom"
+            },
+            {
+              "id": "none",
+              "label": "None"
+            }
+          ],
+          "options_complete": true,
+          "default": "none",
+          "path": "lyrics.mode"
+        },
+        {
+          "key": "text",
+          "label": "Your lyrics",
+          "type": "string",
+          "control": "text",
+          "control_hint": "textarea",
+          "active_when": {
+            "path": "lyrics.mode",
+            "equals": "custom"
+          },
+          "required_when": {
+            "path": "lyrics.mode",
+            "equals": "custom"
+          },
+          "max_length": 2000,
+          "path": "lyrics.text"
+        },
+        {
+          "key": "theme",
+          "label": "Lyric theme",
+          "type": "string",
+          "control": "text",
+          "control_hint": "textarea",
+          "active_when": {
+            "path": "lyrics.mode",
+            "equals": "ai_write"
+          },
+          "max_length": 1000,
+          "path": "lyrics.theme"
+        },
+        {
+          "key": "verify",
+          "label": "Measure lyric accuracy",
+          "type": "boolean",
+          "control": "toggle",
+          "options": [
+            {
+              "id": true,
+              "label": "On"
+            },
+            {
+              "id": false,
+              "label": "Off"
+            }
+          ],
+          "options_complete": true,
+          "default": true,
+          "path": "lyrics.verify"
+        },
+        {
+          "key": "language",
+          "label": "Language",
+          "type": "string",
+          "control": "language",
+          "format": "language-code",
+          "options": [
+            {
+              "id": "en",
+              "label": "English"
+            },
+            {
+              "id": "tr",
+              "label": "Türkçe"
+            },
+            {
+              "id": "zh",
+              "label": "中文 (Mandarin)"
+            },
+            {
+              "id": "ja",
+              "label": "日本語"
+            },
+            {
+              "id": "ko",
+              "label": "한국어"
+            },
+            {
+              "id": "ru",
+              "label": "Русский"
+            },
+            {
+              "id": "es",
+              "label": "Español"
+            },
+            {
+              "id": "fr",
+              "label": "Français"
+            },
+            {
+              "id": "de",
+              "label": "Deutsch"
+            },
+            {
+              "id": "it",
+              "label": "Italiano"
+            },
+            {
+              "id": "pt",
+              "label": "Português"
+            }
+          ],
+          "options_complete": false,
+          "allow_custom_code": true,
+          "options_source": "generate_music_hybrid_model/music_studio/data/language_registry.json",
+          "current_options_provider": {
+            "parameter": "vocal",
+            "field": "language",
+            "operation": "capabilities",
+            "expected_documented_count": 109
+          },
+          "metadata_gaps": [
+            "The complete Gemini-union language file is absent from the checkout. These 11 local options are suggestions, NOT a closed list of supported languages. Resolve the current 109-code universe through capabilities before membership validation."
+          ],
+          "path": "lyrics.language"
+        },
+        {
+          "key": "script",
+          "label": "Writing system",
+          "type": "string",
+          "control": "combo",
+          "options": [
+            {
+              "id": "auto",
+              "label": "Auto"
+            },
+            {
+              "id": "latin",
+              "label": "Latin"
+            }
+          ],
+          "options_complete": true,
+          "path": "lyrics.script"
+        }
+      ],
+      "additional_properties": false,
+      "metadata_gaps": [
+        "Structured section 309 names the registry; validation 382/doc14 describe the larger union. Refresh capabilities to settle the current full language list."
+      ],
+      "structured_source_lines": [
+        303,
+        320
+      ],
+      "default": {
+        "mode": "none",
+        "verify": true
+      },
+      "path": "lyrics"
+    },
+    {
+      "key": "references",
+      "binding": "compiled",
+      "spec_control": "upload",
+      "source_description": "array of objects: `kind`, `url`, `text` — see shape reference",
+      "source_line": 83,
+      "label": "References",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "references",
+      "control": "repeater",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "control": "fieldset",
+        "fields": [
+          {
+            "key": "kind",
+            "label": "Reference type",
+            "type": "string",
+            "control": "combo",
+            "options": [
+              {
+                "id": "descriptor",
+                "label": "Descriptor"
+              },
+              {
+                "id": "midi",
+                "label": "Midi"
+              },
+              {
+                "id": "user_audio",
+                "label": "User audio"
+              }
+            ],
+            "options_complete": true,
+            "required": true,
+            "path": "references[].kind"
+          },
+          {
+            "key": "url",
+            "label": "Reference URL",
+            "type": "string",
+            "control": "text",
+            "format": "uri",
+            "control_hint": "url",
+            "active_when": {
+              "path": "references[].kind",
+              "in": [
+                "user_audio",
+                "midi"
+              ]
+            },
+            "path": "references[].url"
+          },
+          {
+            "key": "text",
+            "label": "Describe the reference",
+            "type": "string",
+            "control": "text",
+            "control_hint": "textarea",
+            "active_when": {
+              "path": "references[].kind",
+              "equals": "descriptor"
+            },
+            "max_length": 500,
+            "path": "references[].text"
+          }
+        ],
+        "additional_properties": false,
+        "path": "references[]"
+      },
+      "upload_note": "The documented wire field is a URI. An asset picker requires a real upload/storage integration; a local filename is not an engine URL.",
+      "max_items": 3,
+      "structured_source_lines": [
+        321,
+        334
+      ],
+      "default": [],
+      "path": "references"
+    },
+    {
+      "key": "output_package",
+      "binding": "our_stage",
+      "spec_control": "combo",
+      "source_description": "`single_track`, `variations`, `stems_bundle`",
+      "source_line": 84,
+      "label": "Output package",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "production",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "single_track",
+          "label": "Single track"
+        },
+        {
+          "id": "variations",
+          "label": "Variations"
+        },
+        {
+          "id": "stems_bundle",
+          "label": "Stems bundle"
+        }
+      ],
+      "options_complete": true,
+      "path": "output_package"
+    },
+    {
+      "key": "variation_count",
+      "binding": "our_stage",
+      "spec_control": "slider",
+      "source_description": "`2`, `3`, `4`",
+      "source_line": 85,
+      "label": "Variation count",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "production",
+      "control": "slider",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "integer",
+      "options": [
+        {
+          "id": 2,
+          "label": "2"
+        },
+        {
+          "id": 3,
+          "label": "3"
+        },
+        {
+          "id": 4,
+          "label": "4"
+        }
+      ],
+      "options_complete": true,
+      "minimum": 2,
+      "maximum": 4,
+      "step": 1,
+      "active_when": {
+        "path": "output_package",
+        "equals": "variations"
+      },
+      "path": "variation_count"
+    },
+    {
+      "key": "labels",
+      "binding": "our_stage",
+      "spec_control": "text",
+      "source_description": "object: `shape` — see shape reference",
+      "source_line": 86,
+      "label": "Labels",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "integration",
+      "control": "key-value",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "object",
+      "key_schema": {
+        "type": "string",
+        "label": "Label name"
+      },
+      "additional_properties": {
+        "type": "string",
+        "label": "Value"
+      },
+      "shape_note": "Direct string-valued object; do not send a literal shape wrapper.",
+      "structured_source_lines": [
+        335,
+        339
+      ],
+      "path": "labels"
+    },
+    {
+      "key": "route",
+      "binding": "typed",
+      "spec_control": "combo",
+      "source_description": "`auto`, `lyria-3-pro-preview`, `lyria-3-clip-preview`, `lyria-002`",
+      "source_line": 87,
+      "label": "Route",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "integration",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "auto",
+          "label": "Auto"
+        },
+        {
+          "id": "lyria-3-pro-preview",
+          "label": "Lyria-3-pro-preview"
+        },
+        {
+          "id": "lyria-3-clip-preview",
+          "label": "Lyria-3-clip-preview"
+        },
+        {
+          "id": "lyria-002",
+          "label": "Lyria-002"
+        }
+      ],
+      "options_complete": true,
+      "path": "route"
+    },
+    {
+      "key": "quality",
+      "binding": "our_stage",
+      "spec_control": "combo",
+      "source_description": "`draft`, `balanced`, `ultra`",
+      "source_line": 88,
+      "label": "Quality",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "production",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "draft",
+          "label": "Draft"
+        },
+        {
+          "id": "balanced",
+          "label": "Balanced"
+        },
+        {
+          "id": "ultra",
+          "label": "Ultra"
+        }
+      ],
+      "options_complete": true,
+      "path": "quality"
+    },
+    {
+      "key": "controls",
+      "binding": "compiled",
+      "spec_control": "slider",
+      "source_description": "object: `harmony_complexity`, `rhythm_density`, `sonic_polish` — see shape reference",
+      "source_line": 89,
+      "label": "Controls",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "composition",
+      "control": "fieldset",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "object",
+      "fields": [
+        {
+          "key": "harmony_complexity",
+          "label": "Harmony complexity",
+          "type": "integer",
+          "control": "slider",
+          "default": 7,
+          "minimum": 0,
+          "maximum": 10,
+          "step": 1,
+          "path": "controls.harmony_complexity"
+        },
+        {
+          "key": "rhythm_density",
+          "label": "Rhythm density",
+          "type": "integer",
+          "control": "slider",
+          "default": 6,
+          "minimum": 0,
+          "maximum": 10,
+          "step": 1,
+          "path": "controls.rhythm_density"
+        },
+        {
+          "key": "sonic_polish",
+          "label": "Sonic polish",
+          "type": "integer",
+          "control": "slider",
+          "default": 8,
+          "minimum": 0,
+          "maximum": 10,
+          "step": 1,
+          "path": "controls.sonic_polish"
+        }
+      ],
+      "additional_properties": false,
+      "structured_source_lines": [
+        340,
+        355
+      ],
+      "default": {
+        "harmony_complexity": 7,
+        "rhythm_density": 6,
+        "sonic_polish": 8
+      },
+      "path": "controls"
+    },
+    {
+      "key": "mastering",
+      "binding": "enforced",
+      "spec_control": "combo",
+      "source_description": "object: `target`, `loudness_lufs`, `true_peak_db` — see shape reference",
+      "source_line": 90,
+      "label": "Mastering",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "production",
+      "control": "fieldset",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "object",
+      "fields": [
+        {
+          "key": "target",
+          "label": "Mastering target",
+          "type": "string",
+          "control": "combo",
+          "options": [
+            {
+              "id": "broadcast",
+              "label": "Broadcast"
+            },
+            {
+              "id": "cinematic_trailer",
+              "label": "Cinematic trailer"
+            },
+            {
+              "id": "game",
+              "label": "Game"
+            },
+            {
+              "id": "none",
+              "label": "None"
+            },
+            {
+              "id": "social",
+              "label": "Social"
+            },
+            {
+              "id": "streaming",
+              "label": "Streaming"
+            }
+          ],
+          "options_complete": true,
+          "default": "cinematic_trailer",
+          "path": "mastering.target"
+        },
+        {
+          "key": "loudness_lufs",
+          "label": "Loudness (LUFS)",
+          "type": "string",
+          "control": "combo",
+          "options": [
+            {
+              "id": "-11",
+              "label": "-11"
+            },
+            {
+              "id": "-14",
+              "label": "-14"
+            },
+            {
+              "id": "-16",
+              "label": "-16"
+            },
+            {
+              "id": "-23",
+              "label": "-23"
+            },
+            {
+              "id": "-9",
+              "label": "-9"
+            }
+          ],
+          "options_complete": true,
+          "default": "-9",
+          "path": "mastering.loudness_lufs"
+        },
+        {
+          "key": "true_peak_db",
+          "label": "True peak",
+          "type": "number",
+          "control": "slider",
+          "default": -1.0,
+          "unit": "dB",
+          "minimum": -3,
+          "maximum": 0,
+          "path": "mastering.true_peak_db"
+        }
+      ],
+      "additional_properties": false,
+      "structured_source_lines": [
+        356,
+        370
+      ],
+      "default": {
+        "target": "cinematic_trailer",
+        "loudness_lufs": "-9",
+        "true_peak_db": -1.0
+      },
+      "path": "mastering"
+    },
+    {
+      "key": "export",
+      "binding": "enforced",
+      "spec_control": "combo",
+      "source_description": "`wav24_48k`, `wav16_48k`, `flac_48k`, `mp3_320`, `mp3_native`",
+      "source_line": 91,
+      "label": "Export",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "production",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "wav24_48k",
+          "label": "Wav24 48k"
+        },
+        {
+          "id": "wav16_48k",
+          "label": "Wav16 48k"
+        },
+        {
+          "id": "flac_48k",
+          "label": "Flac 48k"
+        },
+        {
+          "id": "mp3_320",
+          "label": "Mp3 320"
+        },
+        {
+          "id": "mp3_native",
+          "label": "Mp3 native"
+        }
+      ],
+      "options_complete": true,
+      "path": "export"
+    },
+    {
+      "key": "stems",
+      "binding": "our_stage",
+      "spec_control": "multi-select",
+      "source_description": "`drums`, `bass`, `music`, `vocals`, `fx`, `ambience`, `master`",
+      "source_line": 92,
+      "label": "Stems",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "production",
+      "control": "multi-select",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "path": "stems[]"
+      },
+      "options": [
+        {
+          "id": "drums",
+          "label": "Drums"
+        },
+        {
+          "id": "bass",
+          "label": "Bass"
+        },
+        {
+          "id": "music",
+          "label": "Music"
+        },
+        {
+          "id": "vocals",
+          "label": "Vocals"
+        },
+        {
+          "id": "fx",
+          "label": "Fx"
+        },
+        {
+          "id": "ambience",
+          "label": "Ambience"
+        },
+        {
+          "id": "master",
+          "label": "Master"
+        }
+      ],
+      "options_complete": true,
+      "path": "stems"
+    },
+    {
+      "key": "seed",
+      "binding": "typed",
+      "spec_control": "text",
+      "source_description": "type integer, min 0",
+      "source_line": 95,
+      "label": "Seed",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "integration",
+      "control": "number",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "integer",
+      "minimum": 0,
+      "step": 1,
+      "path": "seed"
+    },
+    {
+      "key": "webhook_url",
+      "binding": "our_stage",
+      "spec_control": "text",
+      "source_description": "type https_uri",
+      "source_line": 96,
+      "label": "Webhook url",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "integration",
+      "control": "url",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "format": "uri",
+      "allowed_protocols": [
+        "https:"
+      ],
+      "path": "webhook_url"
+    },
+    {
+      "key": "async",
+      "binding": "our_stage",
+      "spec_control": "toggle",
+      "source_description": "`true`, `false`",
+      "source_line": 97,
+      "label": "Async",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "integration",
+      "control": "toggle",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "boolean",
+      "options": [
+        {
+          "id": true,
+          "label": "On"
+        },
+        {
+          "id": false,
+          "label": "Off"
+        }
+      ],
+      "options_complete": true,
+      "path": "async"
+    },
+    {
+      "key": "dry_run",
+      "binding": "our_stage",
+      "spec_control": "toggle",
+      "source_description": "`true`, `false`",
+      "source_line": 98,
+      "label": "Dry run",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "integration",
+      "control": "toggle",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "boolean",
+      "options": [
+        {
+          "id": true,
+          "label": "On"
+        },
+        {
+          "id": false,
+          "label": "Off"
+        }
+      ],
+      "options_complete": true,
+      "path": "dry_run"
+    },
+    {
+      "key": "capabilities",
+      "binding": "our_stage",
+      "spec_control": "toggle",
+      "source_description": "`true`",
+      "source_line": 99,
+      "label": "Capabilities",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "integration",
+      "control": "toggle",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "boolean",
+      "options": [
+        {
+          "id": true,
+          "label": "On"
+        }
+      ],
+      "options_complete": true,
+      "false_action": "omit",
+      "path": "capabilities"
+    },
+    {
+      "key": "client_side_echo",
+      "binding": "client_side",
+      "spec_control": "text",
+      "source_description": "free text",
+      "source_line": 101,
+      "label": "Client side echo",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "integration",
+      "control": "text",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "free_text": true,
+      "engine_effect": "None; used by the client and echoed.",
+      "path": "client_side_echo"
+    },
+    {
+      "key": "vocal_style",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`belting`, `soft`, `breathy`, `raspy`, `operatic`, `rap`, `falsetto`, `conversational`",
+      "source_line": 102,
+      "label": "Vocal style",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "voice",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "belting",
+          "label": "Belting"
+        },
+        {
+          "id": "soft",
+          "label": "Soft"
+        },
+        {
+          "id": "breathy",
+          "label": "Breathy"
+        },
+        {
+          "id": "raspy",
+          "label": "Raspy"
+        },
+        {
+          "id": "operatic",
+          "label": "Operatic"
+        },
+        {
+          "id": "rap",
+          "label": "Rap"
+        },
+        {
+          "id": "falsetto",
+          "label": "Falsetto"
+        },
+        {
+          "id": "conversational",
+          "label": "Conversational"
+        }
+      ],
+      "options_complete": true,
+      "path": "vocal_style"
+    },
+    {
+      "key": "vocal_register",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`soprano`, `alto`, `tenor`, `baritone`, `bass`",
+      "source_line": 103,
+      "label": "Vocal register",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "voice",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "soprano",
+          "label": "Soprano"
+        },
+        {
+          "id": "alto",
+          "label": "Alto"
+        },
+        {
+          "id": "tenor",
+          "label": "Tenor"
+        },
+        {
+          "id": "baritone",
+          "label": "Baritone"
+        },
+        {
+          "id": "bass",
+          "label": "Bass"
+        }
+      ],
+      "options_complete": true,
+      "path": "vocal_register"
+    },
+    {
+      "key": "vocal_effects",
+      "binding": "prose",
+      "spec_control": "chips",
+      "source_description": "`reverb`, `doubling`, `harmony_stack`, `autotune`, `telephone`, `whisper`",
+      "source_line": 104,
+      "label": "Vocal effects",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "voice",
+      "control": "chips",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "path": "vocal_effects[]"
+      },
+      "options": [
+        {
+          "id": "reverb",
+          "label": "Reverb"
+        },
+        {
+          "id": "doubling",
+          "label": "Doubling"
+        },
+        {
+          "id": "harmony_stack",
+          "label": "Harmony stack"
+        },
+        {
+          "id": "autotune",
+          "label": "Autotune"
+        },
+        {
+          "id": "telephone",
+          "label": "Telephone"
+        },
+        {
+          "id": "whisper",
+          "label": "Whisper"
+        }
+      ],
+      "options_complete": true,
+      "path": "vocal_effects"
+    },
+    {
+      "key": "backing_vocals",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`none`, `harmonies`, `choir`, `call_response`, `oohs_aahs`, `gang_vocals`",
+      "source_line": 105,
+      "label": "Backing vocals",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "voice",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "none",
+          "label": "None"
+        },
+        {
+          "id": "harmonies",
+          "label": "Harmonies"
+        },
+        {
+          "id": "choir",
+          "label": "Choir"
+        },
+        {
+          "id": "call_response",
+          "label": "Call response"
+        },
+        {
+          "id": "oohs_aahs",
+          "label": "Oohs aahs"
+        },
+        {
+          "id": "gang_vocals",
+          "label": "Gang vocals"
+        }
+      ],
+      "options_complete": true,
+      "path": "backing_vocals"
+    },
+    {
+      "key": "adlibs",
+      "binding": "prose",
+      "spec_control": "text",
+      "source_description": "free text → prose clause",
+      "source_line": 106,
+      "label": "Adlibs",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "voice",
+      "control": "text",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "free_text": true,
+      "path": "adlibs"
+    },
+    {
+      "key": "lyrics_structure",
+      "binding": "prose",
+      "spec_control": "text",
+      "source_description": "free text → prose clause",
+      "source_line": 107,
+      "label": "Lyrics structure",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "lyrics",
+      "control": "text",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "free_text": true,
+      "path": "lyrics_structure"
+    },
+    {
+      "key": "lyrics_language_per_line",
+      "binding": "prose",
+      "spec_control": "text",
+      "source_description": "free text → prose clause",
+      "source_line": 108,
+      "label": "Lyrics language per line",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "lyrics",
+      "control": "text",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "free_text": true,
+      "path": "lyrics_language_per_line"
+    },
+    {
+      "key": "lyrics_orthography_route",
+      "binding": "our_stage",
+      "spec_control": "combo",
+      "source_description": "`R0`, `R1`",
+      "source_line": 109,
+      "label": "Lyrics orthography route",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "lyrics",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "R0",
+          "label": "R0"
+        },
+        {
+          "id": "R1",
+          "label": "R1"
+        }
+      ],
+      "options_complete": true,
+      "path": "lyrics_orthography_route"
+    },
+    {
+      "key": "lyrics_verify_metric",
+      "binding": "our_stage",
+      "spec_control": "combo",
+      "source_description": "`per`, `cer`, `wer`, `ser`",
+      "source_line": 110,
+      "label": "Lyrics verify metric",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "lyrics",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "per",
+          "label": "Per"
+        },
+        {
+          "id": "cer",
+          "label": "Cer"
+        },
+        {
+          "id": "wer",
+          "label": "Wer"
+        },
+        {
+          "id": "ser",
+          "label": "Ser"
+        }
+      ],
+      "options_complete": true,
+      "path": "lyrics_verify_metric"
+    },
+    {
+      "key": "lyrics_threshold_override",
+      "binding": "our_stage",
+      "spec_control": "slider",
+      "source_description": "numeric 0.0–1.0 step 0.001",
+      "source_line": 111,
+      "label": "Lyrics threshold override",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "lyrics",
+      "control": "slider",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "step": 0.001,
+      "path": "lyrics_threshold_override"
+    },
+    {
+      "key": "lyrics_measurement_domain",
+      "binding": "our_stage",
+      "spec_control": "combo",
+      "source_description": "`stem`, `mix`",
+      "source_line": 112,
+      "label": "Lyrics measurement domain",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "lyrics",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "stem",
+          "label": "Stem"
+        },
+        {
+          "id": "mix",
+          "label": "Mix"
+        }
+      ],
+      "options_complete": true,
+      "path": "lyrics_measurement_domain"
+    },
+    {
+      "key": "vocal_intensity",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`gentle`, `moderate`, `powerful`, `explosive`",
+      "source_line": 113,
+      "label": "Vocal intensity",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "voice",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "gentle",
+          "label": "Gentle"
+        },
+        {
+          "id": "moderate",
+          "label": "Moderate"
+        },
+        {
+          "id": "powerful",
+          "label": "Powerful"
+        },
+        {
+          "id": "explosive",
+          "label": "Explosive"
+        }
+      ],
+      "options_complete": true,
+      "path": "vocal_intensity"
+    },
+    {
+      "key": "vocal_emotion",
+      "binding": "prose",
+      "spec_control": "chips",
+      "source_description": "free text → prose clause",
+      "source_line": 114,
+      "label": "Vocal emotion",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "voice",
+      "control": "chips",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "path": "vocal_emotion[]"
+      },
+      "free_text": true,
+      "path": "vocal_emotion"
+    },
+    {
+      "key": "vocal_accent",
+      "binding": "prose",
+      "spec_control": "text",
+      "source_description": "free text → prose clause",
+      "source_line": 115,
+      "label": "Vocal accent",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "voice",
+      "control": "text",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "free_text": true,
+      "path": "vocal_accent"
+    },
+    {
+      "key": "mix_stereo_width",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`mono`, `narrow`, `natural`, `wide`, `ultra_wide`",
+      "source_line": 116,
+      "label": "Mix stereo width",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "production",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "mono",
+          "label": "Mono"
+        },
+        {
+          "id": "narrow",
+          "label": "Narrow"
+        },
+        {
+          "id": "natural",
+          "label": "Natural"
+        },
+        {
+          "id": "wide",
+          "label": "Wide"
+        },
+        {
+          "id": "ultra_wide",
+          "label": "Ultra wide"
+        }
+      ],
+      "options_complete": true,
+      "path": "mix_stereo_width"
+    },
+    {
+      "key": "mix_dynamic_range",
+      "binding": "enforced",
+      "spec_control": "slider",
+      "source_description": "numeric 1–20 step 1 LU",
+      "source_line": 117,
+      "label": "Mix dynamic range",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "production",
+      "control": "slider",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "integer",
+      "minimum": 1.0,
+      "maximum": 20.0,
+      "step": 1.0,
+      "unit": "LU",
+      "path": "mix_dynamic_range"
+    },
+    {
+      "key": "mix_low_end",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`tight`, `punchy`, `deep`, `warm`, `minimal`",
+      "source_line": 118,
+      "label": "Mix low end",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "production",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "tight",
+          "label": "Tight"
+        },
+        {
+          "id": "punchy",
+          "label": "Punchy"
+        },
+        {
+          "id": "deep",
+          "label": "Deep"
+        },
+        {
+          "id": "warm",
+          "label": "Warm"
+        },
+        {
+          "id": "minimal",
+          "label": "Minimal"
+        }
+      ],
+      "options_complete": true,
+      "path": "mix_low_end"
+    },
+    {
+      "key": "mix_brightness",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`dark`, `warm`, `balanced`, `bright`, `airy`",
+      "source_line": 119,
+      "label": "Mix brightness",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "production",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "dark",
+          "label": "Dark"
+        },
+        {
+          "id": "warm",
+          "label": "Warm"
+        },
+        {
+          "id": "balanced",
+          "label": "Balanced"
+        },
+        {
+          "id": "bright",
+          "label": "Bright"
+        },
+        {
+          "id": "airy",
+          "label": "Airy"
+        }
+      ],
+      "options_complete": true,
+      "path": "mix_brightness"
+    },
+    {
+      "key": "mix_vocal_prominence",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`buried`, `blended`, `forward`, `dominant`",
+      "source_line": 120,
+      "label": "Mix vocal prominence",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "production",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "buried",
+          "label": "Buried"
+        },
+        {
+          "id": "blended",
+          "label": "Blended"
+        },
+        {
+          "id": "forward",
+          "label": "Forward"
+        },
+        {
+          "id": "dominant",
+          "label": "Dominant"
+        }
+      ],
+      "options_complete": true,
+      "path": "mix_vocal_prominence"
+    },
+    {
+      "key": "master_style",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`transparent`, `loud`, `vintage`, `punchy`, `smooth`",
+      "source_line": 121,
+      "label": "Master style",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "production",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "transparent",
+          "label": "Transparent"
+        },
+        {
+          "id": "loud",
+          "label": "Loud"
+        },
+        {
+          "id": "vintage",
+          "label": "Vintage"
+        },
+        {
+          "id": "punchy",
+          "label": "Punchy"
+        },
+        {
+          "id": "smooth",
+          "label": "Smooth"
+        }
+      ],
+      "options_complete": true,
+      "path": "master_style"
+    },
+    {
+      "key": "arrangement_density",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`sparse`, `moderate`, `dense`, `wall_of_sound`",
+      "source_line": 122,
+      "label": "Arrangement density",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "composition",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "sparse",
+          "label": "Sparse"
+        },
+        {
+          "id": "moderate",
+          "label": "Moderate"
+        },
+        {
+          "id": "dense",
+          "label": "Dense"
+        },
+        {
+          "id": "wall_of_sound",
+          "label": "Wall of sound"
+        }
+      ],
+      "options_complete": true,
+      "path": "arrangement_density"
+    },
+    {
+      "key": "dynamics_shape",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`steady`, `building`, `swelling`, `call_and_drop`, `waves`",
+      "source_line": 123,
+      "label": "Dynamics shape",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "composition",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "steady",
+          "label": "Steady"
+        },
+        {
+          "id": "building",
+          "label": "Building"
+        },
+        {
+          "id": "swelling",
+          "label": "Swelling"
+        },
+        {
+          "id": "call_and_drop",
+          "label": "Call and drop"
+        },
+        {
+          "id": "waves",
+          "label": "Waves"
+        }
+      ],
+      "options_complete": true,
+      "path": "dynamics_shape"
+    },
+    {
+      "key": "transitions",
+      "binding": "prose",
+      "spec_control": "chips",
+      "source_description": "`riser`, `impact`, `drum_fill`, `silence`, `sweep`",
+      "source_line": 124,
+      "label": "Transitions",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "composition",
+      "control": "chips",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "path": "transitions[]"
+      },
+      "options": [
+        {
+          "id": "riser",
+          "label": "Riser"
+        },
+        {
+          "id": "impact",
+          "label": "Impact"
+        },
+        {
+          "id": "drum_fill",
+          "label": "Drum fill"
+        },
+        {
+          "id": "silence",
+          "label": "Silence"
+        },
+        {
+          "id": "sweep",
+          "label": "Sweep"
+        }
+      ],
+      "options_complete": true,
+      "path": "transitions"
+    },
+    {
+      "key": "groove_feel",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`straight`, `swing`, `shuffle`, `laid_back`, `pushed`, `syncopated`",
+      "source_line": 125,
+      "label": "Groove feel",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "composition",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "straight",
+          "label": "Straight"
+        },
+        {
+          "id": "swing",
+          "label": "Swing"
+        },
+        {
+          "id": "shuffle",
+          "label": "Shuffle"
+        },
+        {
+          "id": "laid_back",
+          "label": "Laid back"
+        },
+        {
+          "id": "pushed",
+          "label": "Pushed"
+        },
+        {
+          "id": "syncopated",
+          "label": "Syncopated"
+        }
+      ],
+      "options_complete": true,
+      "path": "groove_feel"
+    },
+    {
+      "key": "harmonic_palette",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`diatonic`, `modal`, `jazz`, `chromatic`, `dissonant`",
+      "source_line": 126,
+      "label": "Harmonic palette",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "composition",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "diatonic",
+          "label": "Diatonic"
+        },
+        {
+          "id": "modal",
+          "label": "Modal"
+        },
+        {
+          "id": "jazz",
+          "label": "Jazz"
+        },
+        {
+          "id": "chromatic",
+          "label": "Chromatic"
+        },
+        {
+          "id": "dissonant",
+          "label": "Dissonant"
+        }
+      ],
+      "options_complete": true,
+      "path": "harmonic_palette"
+    },
+    {
+      "key": "melodic_character",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`catchy`, `flowing`, `angular`, `minimal`, `virtuosic`",
+      "source_line": 127,
+      "label": "Melodic character",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "composition",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "catchy",
+          "label": "Catchy"
+        },
+        {
+          "id": "flowing",
+          "label": "Flowing"
+        },
+        {
+          "id": "angular",
+          "label": "Angular"
+        },
+        {
+          "id": "minimal",
+          "label": "Minimal"
+        },
+        {
+          "id": "virtuosic",
+          "label": "Virtuosic"
+        }
+      ],
+      "options_complete": true,
+      "path": "melodic_character"
+    },
+    {
+      "key": "rhythmic_feel",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`simple`, `moderate`, `complex`, `broken`",
+      "source_line": 128,
+      "label": "Rhythmic feel",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "composition",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "simple",
+          "label": "Simple"
+        },
+        {
+          "id": "moderate",
+          "label": "Moderate"
+        },
+        {
+          "id": "complex",
+          "label": "Complex"
+        },
+        {
+          "id": "broken",
+          "label": "Broken"
+        }
+      ],
+      "options_complete": true,
+      "path": "rhythmic_feel"
+    },
+    {
+      "key": "percussion_style",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`acoustic_kit`, `electronic`, `orchestral`, `world`, `hybrid`, `none`",
+      "source_line": 129,
+      "label": "Percussion style",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "instruments",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "acoustic_kit",
+          "label": "Acoustic kit"
+        },
+        {
+          "id": "electronic",
+          "label": "Electronic"
+        },
+        {
+          "id": "orchestral",
+          "label": "Orchestral"
+        },
+        {
+          "id": "world",
+          "label": "World"
+        },
+        {
+          "id": "hybrid",
+          "label": "Hybrid"
+        },
+        {
+          "id": "none",
+          "label": "None"
+        }
+      ],
+      "options_complete": true,
+      "path": "percussion_style"
+    },
+    {
+      "key": "bass_style",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`electric`, `synth`, `upright`, `sub`, `808`, `none`",
+      "source_line": 130,
+      "label": "Bass style",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "instruments",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "electric",
+          "label": "Electric"
+        },
+        {
+          "id": "synth",
+          "label": "Synth"
+        },
+        {
+          "id": "upright",
+          "label": "Upright"
+        },
+        {
+          "id": "sub",
+          "label": "Sub"
+        },
+        {
+          "id": "808",
+          "label": "808"
+        },
+        {
+          "id": "none",
+          "label": "None"
+        }
+      ],
+      "options_complete": true,
+      "path": "bass_style"
+    },
+    {
+      "key": "texture_layers",
+      "binding": "prose",
+      "spec_control": "chips",
+      "source_description": "`pads`, `field_recording`, `drones`, `arpeggios`, `risers`, `vinyl_crackle`",
+      "source_line": 131,
+      "label": "Texture layers",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "instruments",
+      "control": "chips",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "path": "texture_layers[]"
+      },
+      "options": [
+        {
+          "id": "pads",
+          "label": "Pads"
+        },
+        {
+          "id": "field_recording",
+          "label": "Field recording"
+        },
+        {
+          "id": "drones",
+          "label": "Drones"
+        },
+        {
+          "id": "arpeggios",
+          "label": "Arpeggios"
+        },
+        {
+          "id": "risers",
+          "label": "Risers"
+        },
+        {
+          "id": "vinyl_crackle",
+          "label": "Vinyl crackle"
+        }
+      ],
+      "options_complete": true,
+      "path": "texture_layers"
+    },
+    {
+      "key": "sound_fx",
+      "binding": "prose",
+      "spec_control": "chips",
+      "source_description": "free text → prose clause",
+      "source_line": 132,
+      "label": "Sound fx",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "instruments",
+      "control": "chips",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "path": "sound_fx[]"
+      },
+      "free_text": true,
+      "path": "sound_fx"
+    },
+    {
+      "key": "production_era",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`modern_hifi`, `vintage_analog`, `lo_fi`, `demo`, `polished`",
+      "source_line": 133,
+      "label": "Production era",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "production",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "modern_hifi",
+          "label": "Modern hifi"
+        },
+        {
+          "id": "vintage_analog",
+          "label": "Vintage analog"
+        },
+        {
+          "id": "lo_fi",
+          "label": "Lo fi"
+        },
+        {
+          "id": "demo",
+          "label": "Demo"
+        },
+        {
+          "id": "polished",
+          "label": "Polished"
+        }
+      ],
+      "options_complete": true,
+      "path": "production_era"
+    },
+    {
+      "key": "spatial_ambience",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`dry`, `room`, `hall`, `cathedral`, `outdoor`",
+      "source_line": 134,
+      "label": "Spatial ambience",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "production",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "dry",
+          "label": "Dry"
+        },
+        {
+          "id": "room",
+          "label": "Room"
+        },
+        {
+          "id": "hall",
+          "label": "Hall"
+        },
+        {
+          "id": "cathedral",
+          "label": "Cathedral"
+        },
+        {
+          "id": "outdoor",
+          "label": "Outdoor"
+        }
+      ],
+      "options_complete": true,
+      "path": "spatial_ambience"
+    },
+    {
+      "key": "intro_style",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`cold_open`, `fade_in`, `atmospheric`, `instrumental_hook`, `vocal_first`",
+      "source_line": 135,
+      "label": "Intro style",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "composition",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "cold_open",
+          "label": "Cold open"
+        },
+        {
+          "id": "fade_in",
+          "label": "Fade in"
+        },
+        {
+          "id": "atmospheric",
+          "label": "Atmospheric"
+        },
+        {
+          "id": "instrumental_hook",
+          "label": "Instrumental hook"
+        },
+        {
+          "id": "vocal_first",
+          "label": "Vocal first"
+        }
+      ],
+      "options_complete": true,
+      "path": "intro_style"
+    },
+    {
+      "key": "outro_style",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`hard_stop`, `fade_out`, `ritardando`, `outro_solo`, `ambient_tail`",
+      "source_line": 136,
+      "label": "Outro style",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "composition",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "hard_stop",
+          "label": "Hard stop"
+        },
+        {
+          "id": "fade_out",
+          "label": "Fade out"
+        },
+        {
+          "id": "ritardando",
+          "label": "Ritardando"
+        },
+        {
+          "id": "outro_solo",
+          "label": "Outro solo"
+        },
+        {
+          "id": "ambient_tail",
+          "label": "Ambient tail"
+        }
+      ],
+      "options_complete": true,
+      "path": "outro_style"
+    },
+    {
+      "key": "tempo_feel",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`relaxed`, `steady`, `driving`, `frantic`, `rubato`",
+      "source_line": 137,
+      "label": "Tempo feel",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "composition",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "relaxed",
+          "label": "Relaxed"
+        },
+        {
+          "id": "steady",
+          "label": "Steady"
+        },
+        {
+          "id": "driving",
+          "label": "Driving"
+        },
+        {
+          "id": "frantic",
+          "label": "Frantic"
+        },
+        {
+          "id": "rubato",
+          "label": "Rubato"
+        }
+      ],
+      "options_complete": true,
+      "path": "tempo_feel"
+    },
+    {
+      "key": "solo_instrument",
+      "binding": "prose",
+      "spec_control": "text",
+      "source_description": "free text → prose clause",
+      "source_line": 138,
+      "label": "Solo instrument",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "instruments",
+      "control": "text",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "free_text": true,
+      "path": "solo_instrument"
+    },
+    {
+      "key": "chord_progression",
+      "binding": "prose",
+      "spec_control": "text",
+      "source_description": "free text → prose clause",
+      "source_line": 139,
+      "label": "Chord progression",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "composition",
+      "control": "text",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "free_text": true,
+      "path": "chord_progression"
+    },
+    {
+      "key": "cultural_style",
+      "binding": "prose",
+      "spec_control": "text",
+      "source_description": "free text → prose clause",
+      "source_line": 140,
+      "label": "Cultural style",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "idea",
+      "control": "text",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "free_text": true,
+      "path": "cultural_style"
+    },
+    {
+      "key": "reference_artist_style",
+      "binding": "prose",
+      "spec_control": "text",
+      "source_description": "free text → prose clause",
+      "source_line": 141,
+      "label": "Reference artist style",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "idea",
+      "control": "text",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "free_text": true,
+      "path": "reference_artist_style"
+    },
+    {
+      "key": "instrumentation_notes",
+      "binding": "prose",
+      "spec_control": "text",
+      "source_description": "free text → prose clause",
+      "source_line": 142,
+      "label": "Instrumentation notes",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "instruments",
+      "control": "text",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "free_text": true,
+      "path": "instrumentation_notes"
+    },
+    {
+      "key": "mood_progression",
+      "binding": "prose",
+      "spec_control": "text",
+      "source_description": "free text → prose clause",
+      "source_line": 143,
+      "label": "Mood progression",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "composition",
+      "control": "text",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "free_text": true,
+      "path": "mood_progression"
+    },
+    {
+      "key": "target_use",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`film_trailer`, `game`, `advert`, `podcast`, `streaming_single`, `social_clip`",
+      "source_line": 144,
+      "label": "Target use",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "idea",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "film_trailer",
+          "label": "Film trailer"
+        },
+        {
+          "id": "game",
+          "label": "Game"
+        },
+        {
+          "id": "advert",
+          "label": "Advert"
+        },
+        {
+          "id": "podcast",
+          "label": "Podcast"
+        },
+        {
+          "id": "streaming_single",
+          "label": "Streaming single"
+        },
+        {
+          "id": "social_clip",
+          "label": "Social clip"
+        }
+      ],
+      "options_complete": true,
+      "path": "target_use"
+    },
+    {
+      "key": "reference_tempo_source",
+      "binding": "prose",
+      "spec_control": "text",
+      "source_description": "free text → prose clause",
+      "source_line": 145,
+      "label": "Reference tempo source",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "composition",
+      "control": "text",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "free_text": true,
+      "path": "reference_tempo_source"
+    },
+    {
+      "key": "mix_compression",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`gentle`, `moderate`, `heavy`, `none`",
+      "source_line": 146,
+      "label": "Mix compression",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "production",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "gentle",
+          "label": "Gentle"
+        },
+        {
+          "id": "moderate",
+          "label": "Moderate"
+        },
+        {
+          "id": "heavy",
+          "label": "Heavy"
+        },
+        {
+          "id": "none",
+          "label": "None"
+        }
+      ],
+      "options_complete": true,
+      "path": "mix_compression"
+    },
+    {
+      "key": "mix_saturation",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`clean`, `tape`, `tube`, `distorted`",
+      "source_line": 147,
+      "label": "Mix saturation",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "production",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "clean",
+          "label": "Clean"
+        },
+        {
+          "id": "tape",
+          "label": "Tape"
+        },
+        {
+          "id": "tube",
+          "label": "Tube"
+        },
+        {
+          "id": "distorted",
+          "label": "Distorted"
+        }
+      ],
+      "options_complete": true,
+      "path": "mix_saturation"
+    },
+    {
+      "key": "fade_in_seconds",
+      "binding": "enforced",
+      "spec_control": "slider",
+      "source_description": "numeric 0–15 step 1 seconds",
+      "source_line": 148,
+      "label": "Fade in seconds",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "production",
+      "control": "slider",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "integer",
+      "minimum": 0.0,
+      "maximum": 15.0,
+      "step": 1.0,
+      "unit": "seconds",
+      "path": "fade_in_seconds"
+    },
+    {
+      "key": "fade_out_seconds",
+      "binding": "enforced",
+      "spec_control": "slider",
+      "source_description": "numeric 0–15 step 1 seconds",
+      "source_line": 149,
+      "label": "Fade out seconds",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "production",
+      "control": "slider",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "integer",
+      "minimum": 0.0,
+      "maximum": 15.0,
+      "step": 1.0,
+      "unit": "seconds",
+      "path": "fade_out_seconds"
+    },
+    {
+      "key": "normalize_output",
+      "binding": "enforced",
+      "spec_control": "toggle",
+      "source_description": "`true`, `false`",
+      "source_line": 150,
+      "label": "Normalize output",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "production",
+      "control": "toggle",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "boolean",
+      "options": [
+        {
+          "id": true,
+          "label": "On"
+        },
+        {
+          "id": false,
+          "label": "Off"
+        }
+      ],
+      "options_complete": true,
+      "path": "normalize_output"
+    },
+    {
+      "key": "run_originality_gate",
+      "binding": "our_stage",
+      "spec_control": "toggle",
+      "source_description": "`true`, `false`",
+      "source_line": 151,
+      "label": "Run originality gate",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "production",
+      "control": "toggle",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "boolean",
+      "options": [
+        {
+          "id": true,
+          "label": "On"
+        },
+        {
+          "id": false,
+          "label": "Off"
+        }
+      ],
+      "options_complete": true,
+      "path": "run_originality_gate"
+    },
+    {
+      "key": "channel_layout",
+      "binding": "enforced",
+      "spec_control": "combo",
+      "source_description": "`stereo`, `mono`",
+      "source_line": 152,
+      "label": "Channel layout",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "production",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "stereo",
+          "label": "Stereo"
+        },
+        {
+          "id": "mono",
+          "label": "Mono"
+        }
+      ],
+      "options_complete": true,
+      "path": "channel_layout"
+    },
+    {
+      "key": "loop_ready",
+      "binding": "prose",
+      "spec_control": "toggle",
+      "source_description": "`true`",
+      "source_line": 153,
+      "label": "Loop ready",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "composition",
+      "control": "toggle",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "boolean",
+      "options": [
+        {
+          "id": true,
+          "label": "On"
+        }
+      ],
+      "options_complete": true,
+      "false_action": "omit",
+      "path": "loop_ready"
+    },
+    {
+      "key": "click_track",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`tight`, `human`, `loose`",
+      "source_line": 154,
+      "label": "Click track",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "composition",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "tight",
+          "label": "Tight"
+        },
+        {
+          "id": "human",
+          "label": "Human"
+        },
+        {
+          "id": "loose",
+          "label": "Loose"
+        }
+      ],
+      "options_complete": true,
+      "path": "click_track"
+    },
+    {
+      "key": "key_change",
+      "binding": "prose",
+      "spec_control": "text",
+      "source_description": "free text → prose clause",
+      "source_line": 155,
+      "label": "Key change",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "composition",
+      "control": "text",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "free_text": true,
+      "path": "key_change"
+    },
+    {
+      "key": "hook_placement",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`early`, `chorus`, `throughout`, `delayed`",
+      "source_line": 156,
+      "label": "Hook placement",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "composition",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "early",
+          "label": "Early"
+        },
+        {
+          "id": "chorus",
+          "label": "Chorus"
+        },
+        {
+          "id": "throughout",
+          "label": "Throughout"
+        },
+        {
+          "id": "delayed",
+          "label": "Delayed"
+        }
+      ],
+      "options_complete": true,
+      "path": "hook_placement"
+    },
+    {
+      "key": "tension_curve",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`constant`, `release_heavy`, `single_arc`, `cyclical`",
+      "source_line": 157,
+      "label": "Tension curve",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "composition",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "constant",
+          "label": "Constant"
+        },
+        {
+          "id": "release_heavy",
+          "label": "Release heavy"
+        },
+        {
+          "id": "single_arc",
+          "label": "Single arc"
+        },
+        {
+          "id": "cyclical",
+          "label": "Cyclical"
+        }
+      ],
+      "options_complete": true,
+      "path": "tension_curve"
+    },
+    {
+      "key": "vocal_layering",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`single`, `double`, `stacked`, `unison_octave`",
+      "source_line": 158,
+      "label": "Vocal layering",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "voice",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "single",
+          "label": "Single"
+        },
+        {
+          "id": "double",
+          "label": "Double"
+        },
+        {
+          "id": "stacked",
+          "label": "Stacked"
+        },
+        {
+          "id": "unison_octave",
+          "label": "Unison octave"
+        }
+      ],
+      "options_complete": true,
+      "path": "vocal_layering"
+    },
+    {
+      "key": "vocal_pronunciation",
+      "binding": "prose",
+      "spec_control": "text",
+      "source_description": "free text → prose clause",
+      "source_line": 159,
+      "label": "Vocal pronunciation",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "voice",
+      "control": "text",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "free_text": true,
+      "path": "vocal_pronunciation"
+    },
+    {
+      "key": "syllable_stress",
+      "binding": "prose",
+      "spec_control": "text",
+      "source_description": "free text → prose clause",
+      "source_line": 160,
+      "label": "Syllable stress",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "voice",
+      "control": "text",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "free_text": true,
+      "path": "syllable_stress"
+    },
+    {
+      "key": "melisma",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`none`, `light`, `heavy`",
+      "source_line": 161,
+      "label": "Melisma",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "voice",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "none",
+          "label": "None"
+        },
+        {
+          "id": "light",
+          "label": "Light"
+        },
+        {
+          "id": "heavy",
+          "label": "Heavy"
+        }
+      ],
+      "options_complete": true,
+      "path": "melisma"
+    },
+    {
+      "key": "vibrato",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`none`, `subtle`, `expressive`, `operatic`",
+      "source_line": 162,
+      "label": "Vibrato",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "voice",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "none",
+          "label": "None"
+        },
+        {
+          "id": "subtle",
+          "label": "Subtle"
+        },
+        {
+          "id": "expressive",
+          "label": "Expressive"
+        },
+        {
+          "id": "operatic",
+          "label": "Operatic"
+        }
+      ],
+      "options_complete": true,
+      "path": "vibrato"
+    },
+    {
+      "key": "song_title_in_lyrics",
+      "binding": "prose",
+      "spec_control": "text",
+      "source_description": "free text → prose clause",
+      "source_line": 163,
+      "label": "Song title in lyrics",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "lyrics",
+      "control": "text",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "free_text": true,
+      "path": "song_title_in_lyrics"
+    },
+    {
+      "key": "countin",
+      "binding": "prose",
+      "spec_control": "combo",
+      "source_description": "`none`, `count_in`, `pickup`, `downbeat`",
+      "source_line": 164,
+      "label": "Countin",
+      "label_origin": "Editorial plain-English UI label",
+      "group": "composition",
+      "control": "combo",
+      "source": "docs/api/04-request-body-full.md",
+      "required": false,
+      "type": "string",
+      "options": [
+        {
+          "id": "none",
+          "label": "None"
+        },
+        {
+          "id": "count_in",
+          "label": "Count in"
+        },
+        {
+          "id": "pickup",
+          "label": "Pickup"
+        },
+        {
+          "id": "downbeat",
+          "label": "Downbeat"
+        }
+      ],
+      "options_complete": true,
+      "path": "countin"
+    }
+  ],
+  "serialization_contract": {
+    "only_required_top_level": "prompt",
+    "omit_unset_optional_fields": true,
+    "omit_inactive_conditional_fields": true,
+    "never_send_excluded_fields": true,
+    "options_use": "Submit id unchanged, preserving JSON string/number/boolean types; label is presentation only.",
+    "condition_paths": "Absolute root paths; [] means the same containing repeater item in active_when.",
+    "default_semantics": "A documented default describes server omission behavior, not permission to send every default. Missing default means unavailable, not null.",
+    "constraint_semantics": "Missing limit, range, step, required flag or default means it is not stated in the local source. Do not invent a service constraint from the widget; the service remains authoritative.",
+    "language_options": "options_complete=false means load runtime options or permit explicit code entry. Do not restrict to the local eleven-language subset.",
+    "slider_steps": "Where step is not documented, allow decimals (HTML step=any).",
+    "arrays": "multi-select/chips use arrays; repeaters use their item schema; labels is a direct string-valued object.",
+    "object_controls": "Recursively render fields/items; no documented composite requires a raw JSON editor.",
+    "labels_origin": "Top-level labels/groups are editorial; vocabulary labels are copied from the source."
+  },
+  "cross_field_rules": [
+    {
+      "id": "lyrics_requires_text",
+      "if": {
+        "path": "lyrics.mode",
+        "equals": "custom"
+      },
+      "then": {
+        "path": "lyrics.text",
+        "required": true
+      },
+      "source_line": 382
+    },
+    {
+      "id": "lyrics_and_instrumental_conflict",
+      "if": {
+        "all": [
+          {
+            "path": "lyrics.mode",
+            "in": [
+              "custom",
+              "ai_write"
+            ]
+          },
+          {
+            "path": "vocal.mode",
+            "equals": "instrumental",
+            "default_if_omitted": "instrumental"
+          }
+        ]
+      },
+      "then": {
+        "invalid": true,
+        "message": "Choose a voice for lyrics, or set lyrics to None."
+      },
+      "source_line": 382
+    },
+    {
+      "id": "variation_package",
+      "if": {
+        "path": "output_package",
+        "not_equals": "variations"
+      },
+      "then": {
+        "path": "variation_count",
+        "must_omit": true
+      },
+      "source_line": 384
+    },
+    {
+      "id": "reference_contract",
+      "source_line": 383,
+      "server_validation_required": true,
+      "note": "Only descriptor, midi and user_audio kinds; named commercial-track references may be refused."
+    },
+    {
+      "id": "script_phonemiser_contract",
+      "source_line": 382,
+      "server_validation_required": true,
+      "note": "Non-Latin lyrics under the tr/en Latin-only phonemiser language are refused; never silently switch the requested language."
+    }
+  ],
+  "metadata_gaps": [
+    {
+      "field": "tempo_bpm",
+      "missing": [
+        "current continuous minimum",
+        "current continuous maximum",
+        "current step"
+      ],
+      "resolution": "Refresh capabilities; eight documented presets are available."
+    },
+    {
+      "field": "vocal.language / lyrics.language",
+      "missing": [
+        "complete current 109-code union"
+      ],
+      "resolution": "Local eleven-language suggestions are not a closed accepted set. Refresh capabilities."
+    },
+    {
+      "field": "key",
+      "missing": [
+        "live confirmation of exact IDs"
+      ],
+      "resolution": "Current doc confirms 12x9; exact wire IDs are sourced from the local older spec and explicit generator."
+    },
+    {
+      "field": "limits/defaults not stated in current docs",
+      "missing": [
+        "unspecified metadata"
+      ],
+      "resolution": "Do not guess; runtime capabilities can hydrate missing values. All documented limits are included."
+    },
+    {
+      "field": "mood_orbit / labels",
+      "missing": [],
+      "resolution": "Explicit validator wire shapes outrank shorthand table labels: {axes:{pole:value}} and {key:string}."
+    }
+  ],
+  "verification": {
+    "source_table_rows": 103,
+    "source_request_rows": 100,
+    "unique_parameter_keys": 100,
+    "omitted_output_fields": [
+      "rights",
+      "compliance",
+      "analysis_outputs"
+    ],
+    "structured_parameter_count": 13,
+    "vocabulary_option_counts": {
+      "genres": 2196,
+      "moods": 114,
+      "eras": 14,
+      "instruments": 1057
+    },
+    "key_option_count": 108,
+    "runtime_validated": false,
+    "construction_steps": [
+      {
+        "id": "SCHEMA-READ",
+        "status": "verified",
+        "evidence": "Read the complete current table and all generated structured-shape/validation sections; parse source vocabulary JSON."
+      },
+      {
+        "id": "SCHEMA-MAP",
+        "status": "verified",
+        "evidence": "Preserve all request keys and documented limits; recursively describe every structured-section heading."
+      },
+      {
+        "id": "SCHEMA-CHECK",
+        "status": "verified",
+        "evidence": "Exact request-key and structured-heading set comparisons; option uniqueness and counts; output/server-assigned exclusions; source hashes."
+      }
+    ]
+  }
+}
+;

@@ -1,0 +1,193 @@
+{
+  "checks": [
+    {
+      "name": "Mono source is centered on both channels",
+      "pass": true,
+      "detail": {
+        "l": 0.1414213565191437,
+        "r": 0.1414213565191437,
+        "correlation": 1,
+        "peak": 0.20000000298023224,
+        "tail": 3814.2629293725417,
+        "headroom": 0,
+        "response": 1,
+        "gain": 1
+      }
+    },
+    {
+      "name": "Stereo identity preserves channel separation",
+      "pass": true,
+      "detail": {
+        "l": 0.1414213565191437,
+        "r": 0,
+        "correlation": 0,
+        "peak": 0.20000000298023224,
+        "tail": 3814.2629293725417,
+        "headroom": 0,
+        "response": 1,
+        "gain": 1
+      }
+    },
+    {
+      "name": "Zero width produces dual mono",
+      "pass": true,
+      "detail": {
+        "l": 0.07071067825957185,
+        "r": 0.07071067825957185,
+        "correlation": 1,
+        "peak": 0.10000000149011612,
+        "tail": 1907.1314646862709,
+        "headroom": 0,
+        "response": 1,
+        "gain": 1
+      }
+    },
+    {
+      "name": "Wide matrix matches M/S equation",
+      "pass": true,
+      "detail": {
+        "l": 0.21213203630777183,
+        "r": 0.07071067825957185,
+        "correlation": -1.0000000000002633,
+        "peak": 0.30000001192092896,
+        "tail": 5721.394428983404,
+        "headroom": 0,
+        "response": 1,
+        "gain": 1
+      }
+    },
+    {
+      "name": "Full right balance attenuates left only",
+      "pass": true,
+      "detail": {
+        "l": 0,
+        "r": 0.1414213565191437,
+        "correlation": 0,
+        "peak": 0.20000000298023224,
+        "tail": 0,
+        "headroom": 0,
+        "response": 1,
+        "gain": 1
+      }
+    },
+    {
+      "name": "Antiphase stereo is preserved audibly",
+      "pass": true,
+      "detail": {
+        "l": 0.1414213565191437,
+        "r": 0.1414213565191437,
+        "correlation": -1,
+        "peak": 0.20000000298023224,
+        "tail": 3814.2629293725417,
+        "headroom": 0,
+        "response": 1,
+        "gain": 1
+      }
+    },
+    {
+      "name": "Real ten-band filter boosts 1 kHz",
+      "pass": true,
+      "detail": {
+        "l": 0.2821728068024648,
+        "r": 0,
+        "correlation": 0,
+        "peak": 0.39905261993408203,
+        "tail": 7610.4578286845135,
+        "headroom": 0,
+        "response": 1.995029330253601,
+        "gain": 1
+      }
+    },
+    {
+      "name": "Combined EQ and width headroom is computed",
+      "pass": true,
+      "detail": {
+        "l": 0.10558348802760968,
+        "r": 0.035194496012436974,
+        "correlation": -0.9999999999999657,
+        "peak": 0.14913401007652283,
+        "tail": 2853.4669378651306,
+        "headroom": 16.51645905939779,
+        "response": 3.348057746887207,
+        "gain": 0.14934031665325165
+      }
+    },
+    {
+      "name": "Effects bypass restores original signal",
+      "pass": true,
+      "detail": {
+        "l": 0.1414213565191437,
+        "r": 0,
+        "correlation": 0,
+        "peak": 0.20000000298023224,
+        "tail": 3814.2629293725417,
+        "headroom": 0,
+        "response": 1,
+        "gain": 1
+      }
+    },
+    {
+      "name": "Native dynamics changes the measured output",
+      "pass": true,
+      "detail": {
+        "night": {
+          "l": 0.10287941222311912,
+          "r": 0.10287941222311912,
+          "correlation": 1,
+          "peak": 0.1456444412469864,
+          "tail": 2774.7270832397408,
+          "headroom": 0,
+          "response": 1,
+          "gain": 1
+        },
+        "original": {
+          "l": 0.5656854260765748,
+          "r": 0.5656854260765748,
+          "correlation": 1,
+          "peak": 0.800000011920929,
+          "tail": 15257.051717490167,
+          "headroom": 0,
+          "response": 1,
+          "gain": 1
+        }
+      }
+    },
+    {
+      "name": "Room convolution produces a real decay tail",
+      "pass": true,
+      "detail": {
+        "dry": 0,
+        "wet": 4.490478707217669
+      }
+    },
+    {
+      "name": "Mono remains mono with stereo ambience enabled",
+      "pass": true,
+      "detail": {
+        "l": 0.044013903260018986,
+        "r": 0.044013903260018986,
+        "correlation": 1,
+        "peak": 0.06519770622253418,
+        "tail": 1187.9575198896064,
+        "headroom": 2,
+        "response": 1,
+        "gain": 0.7943282127380371
+      }
+    },
+    {
+      "name": "Ten EQ inputs are wired",
+      "pass": true
+    },
+    {
+      "name": "Named preset restores complete settings",
+      "pass": true
+    },
+    {
+      "name": "Sound preferences survive reload",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "pass": true,
+  "date": "2026-09-11T12:17:59.311Z"
+}

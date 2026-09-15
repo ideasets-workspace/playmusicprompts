@@ -1,0 +1,39 @@
+{
+ "$schema_id": "berk.music-studio.bar-calibration/v1",
+ "purpose": "Research item A9 - parameters of the per-language PER bar calibration. Every value carries its provenance IN THIS FILE (MANDATE CLAUSE 4: no value enters production without a research path + exact clause, or a named measurement). The consuming module is music_studio/bar_calibration.py; the procedure's full derivation is the research report below.",
+ "provenance_report": "docs/research/2026-08-15-small-sample-one-sided-tolerance-limits-for-quality-gate-thresholds.md",
+
+ "procedure": {
+  "id": "one-sided-upper-tolerance-limit.logit-normal.noncentral-t.v1",
+  "summary": "per-recording PER -> logit transform -> exact one-sided upper tolerance limit x_bar + k*s with k = nct.ppf(gamma, n-1, z_p*sqrt(n))/sqrt(n) -> back-transform to a PER bar; the assumption-free nonparametric max-of-n bound is reported BESIDE it with its TRUE confidence, never silently substituted",
+  "evidence": "report sections F1 (tolerance limit vs confidence/prediction interval, NIST definition read [FULL] + clinical reference ranges + aerospace B-basis, 3+ sources) and F2 (exact k three-way verified THIS session: the Natrella implementation reproduces NIST's own worked example digit-for-digit, 1.8752)"
+ },
+
+ "coverage_p": {
+  "value": 0.90,
+  "evidence": "report F1/T15: the B-basis pairing (90 % coverage / 95 % confidence) is the acceptance-limit convention of the industries that set accept/reject limits from small samples (CMH-17 aerospace allowables; clinical reference ranges T13). Chosen over p=0.95 because at n=5..12 the p=0.95 factor (4.20 at n=5) pushes the bar so far from the sample that the gate stops discriminating - the k table in report F2 carries both columns so this trade-off is visible, not hidden"
+ },
+ "confidence_gamma": {
+  "value": 0.95,
+  "evidence": "the B-basis confidence level (report T15); also ISO 16269-6's tabulated standard level (T4 - text archived; its numeric Annex C did not survive capture, so the value is cross-anchored on T15 + the NIST-reproduced computation instead)"
+ },
+ "minimum_recordings": {
+  "value": 5,
+  "evidence": "A9's own floor, verbatim: 'calibrated from >=5 real human sung recordings in that language' (docs/research/2026-08-14-cross-lingual-singing-voice-synthesis-frontier.md, item A9). Below it the routine REFUSES - it never returns a number with a caveat"
+ },
+ "small_sample_warning_below": {
+  "value": 8,
+  "evidence": "report F2 table, measured: k(5)=3.4066 vs k(8)=2.5819 vs k(20)=1.9260 - below n=8 the factor exceeds ~2.6 and the bar sits >1.3x further from the mean than at n=20, so the artefact carries SMALL_SAMPLE naming k. The boundary is the first n in the computed table where k drops below 2.6; it widens nothing and blocks nothing (a reporting threshold, not a gate)"
+ },
+ "zero_adjustment": {
+  "method": "warton-hui-smallest-nonzero",
+  "evidence": "Warton & Hui 2011 (archived [PARTIAL this session], _sources/2026-08-15-warton-hui-2011-esa-journal-record.md): 'Some of the proportions were equal to 0, so the smallest non-zero percentage response (0.48%) was added to the logit function' - their own documented practice for zeros under the logit. If EVERY value is zero there is no smallest non-zero and the parametric route REFUSES (a degenerate all-perfect sample cannot support a variance estimate; more recordings are the fix, not a synthetic epsilon)"
+ },
+
+ "nonparametric_companion": {
+  "formula": "confidence that max of n covers proportion p = 1 - p^n",
+  "evidence": "Wilks' formula (report T17) + this-session computation: n=5 -> 0.4095, n=6 -> 0.4686, n=12 -> 0.7176 at p=0.90; reaching gamma=0.95 needs n>=29. Reported beside the parametric bar so the normality assumption is always accompanied by the assumption-free number and its honest (weak) confidence"
+ },
+
+ "scope_rule": "the bar's protocol MUST carry the corpus genre (music_studio/data/calibration_corpus.json sufficiency_for_A9: ~19 min of sarki-form makam singing makes a MAKAM-GENRE bar until our own commissioned recordings exist) - a bar may never be silently widened beyond the material that calibrated it"
+}

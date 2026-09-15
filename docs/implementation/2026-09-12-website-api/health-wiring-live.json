@@ -1,0 +1,8 @@
+{
+  "verifiedAt": "2026-09-12T17:32:34.313Z",
+  "localEndpoint": "/api/connection",
+  "upstreamEndpoint": "GET /health",
+  "httpStatus": 200,
+  "available": true,
+  "checkedAt": 1789234354309
+}

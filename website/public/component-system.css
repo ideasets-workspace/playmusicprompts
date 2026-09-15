@@ -1,0 +1,42 @@
+/* Applied from the project's 2026-09-09 frontier synthesis: native modal
+   semantics, container adaptation, progressive disclosure and reduced motion.
+   Shared brand layer; this does not claim React Aria is installed. */
+:root{--surface-panel:#10131d;--surface-line:#ffffff16;--surface-text:#f4f1fa;--surface-muted:#abb2c6;--surface-accent:#c1a4ff;color-scheme:dark}
+html:has(#modal[open]){overflow:hidden;scrollbar-gutter:stable}
+#modal{color:var(--surface-text);background:var(--surface-panel);border:1px solid #bfa2ff38;border-radius:24px;padding:0;width:600px;max-width:calc(100vw - 40px);max-height:calc(100dvh - 48px);overflow:hidden;box-shadow:0 32px 100px #0009,0 0 0 1px #ffffff04;font-optical-sizing:auto;opacity:0;transform:translateY(10px) scale(.985);transition:opacity .2s ease,transform .24s cubic-bezier(.2,.8,.2,1),display .24s allow-discrete,overlay .24s allow-discrete}
+#modal[open]{opacity:1;transform:none}#modal.wide{width:1020px}
+#modal::backdrop{background:#02040ab3;backdrop-filter:blur(12px);opacity:1;transition:opacity .2s,display .24s allow-discrete,overlay .24s allow-discrete}
+@starting-style{#modal[open]{opacity:0;transform:translateY(10px) scale(.985)}#modal[open]::backdrop{opacity:0}}
+#modal-content{display:flex;flex-direction:column;max-height:inherit;min-height:0;container:modal / inline-size}
+#modal .dialog-head{position:relative;display:flex;gap:20px;align-items:center;justify-content:space-between;padding:24px 28px 20px;background:transparent;border-bottom:1px solid var(--surface-line);flex-shrink:0}
+#modal .dialog-head>div{min-width:0}#modal .dialog-head h2{font-size:1.4rem;line-height:1.25;letter-spacing:-.03em;text-wrap:balance;font-weight:600}
+#modal .dialog-head p{font-size:.85rem;line-height:1.5;color:var(--surface-muted);margin:8px 0 0;text-wrap:pretty}
+#modal .dialog-head>.icon-button{width:40px;height:40px;flex-shrink:0;border:1px solid var(--surface-line);background:#ffffff04;border-radius:50%;color:#c9c8d6}
+#modal .dialog-head>.icon-button:hover{background:#ffffff12;color:white}
+#modal .dialog-body{padding:24px 28px;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#7c688d66 transparent;min-height:0}
+#modal .dialog-footer{padding:16px 28px;display:flex;align-items:center;justify-content:flex-end;gap:12px;border-top:1px solid var(--surface-line);background:#ffffff02;flex-shrink:0}
+#modal .dialog-footer:empty{display:none}#modal :is(button,input,select,textarea,summary):focus-visible{outline:2px solid #d2bbff;outline-offset:3px}
+#modal :is(button,input,select){min-height:44px}
+#modal :is(.primary,.secondary){border-radius:12px;font-weight:550;font-size:.88rem;min-height:44px;padding:11px 20px}
+#modal .primary{background:#c5a8ff;color:#201139;border:1px solid #dfcdff66;box-shadow:0 4px 18px #a986ff18}#modal .primary:hover{background:#d5c0ff}
+#modal .secondary{background:#ffffff06;border:1px solid #ffffff22;color:#e8e3f1;box-shadow:none}#modal .secondary:hover{background:#ffffff0d;border-color:#c4a8ff55}
+#modal :is(.option-row,.track-row){border-radius:12px;transition:background .15s,border-color .15s}
+#modal .option-row{padding:12px 16px;border:1px solid transparent;background:transparent;min-height:50px}#modal .option-row:hover{background:#ffffff07}#modal .option-row[aria-pressed=true]{border-color:#bc9ce65c;background:#bb96ff13}
+#modal .dialog-search,#modal .search-box{background:#080b12;border:1px solid #ffffff20;border-radius:12px;min-height:46px}
+#modal .control-card{background:#ffffff02;border-color:var(--surface-line);border-radius:14px}#modal .control-card[open]{background:#181827;border-color:#bca0f74a}
+#modal .control-card summary{min-height:54px;padding:14px 18px}#modal .control-card .control-set{border:1px solid #ffffff15;border-radius:6px;padding:2px 8px;line-height:1.5;background:#ffffff04}
+#modal .control-groups{gap:4px;position:sticky;top:0}#modal .control-groups button{border-radius:10px;min-height:40px}
+#modal .controls-toolbar{padding:18px 24px;position:sticky;top:-24px;z-index:2;background:#10131dfa;backdrop-filter:blur(16px)}
+#modal .control-field :is(input:not([type=checkbox]):not([type=range]),select,textarea){background:#0a0c14;border-color:#ffffff24;border-radius:10px;line-height:1.5}
+#modal .control-field small{display:block;line-height:1.5;margin-top:7px;color:#a6afc4}#modal .selected-chip{background:#b996ff16;color:#e4d4ff;border-color:#c0a1ff40}
+#modal .choice{background:#ffffff03;border-color:#ffffff17;min-height:44px;border-radius:10px}#modal .choice:has(input:checked){background:#b392ff16;border-color:#b392ff66}
+#modal .notice{border-radius:12px;line-height:1.6;font-size:.86rem}
+#modal .connected-result{border:1px solid var(--surface-line);border-radius:12px;background:#070a1166;overflow:hidden}
+#modal .connected-result>summary{padding:14px 16px;min-height:44px;color:#c5bfd3;cursor:pointer}
+#modal .connected-result dl{margin:0;padding:0 16px 10px}#modal .connected-result dl>div{display:grid;grid-template-columns:1fr 1.2fr;gap:16px;padding:12px 0;border-bottom:1px solid #ffffff0b;font-size:.78rem;line-height:1.55}
+#modal .connected-result dt{color:#a7afc4}#modal .connected-result dd{margin:0;overflow-wrap:anywhere}
+@container modal (max-width:560px){#modal .dialog-head{padding:20px}#modal .dialog-body{padding:20px}#modal .dialog-footer{padding:14px 20px;flex-wrap:wrap}#modal .controls-layout{grid-template-columns:1fr}#modal .control-groups{display:flex;flex-direction:row;overflow:auto;padding:12px 16px;border-bottom:1px solid var(--surface-line);position:static}#modal .control-groups button{white-space:nowrap;flex-shrink:0}#modal #controls-form{border-left:0;padding:16px}#modal .controls-toolbar{padding:12px 16px;top:-20px}#modal .connected-result dl>div{grid-template-columns:1fr;gap:4px}}
+@media(max-width:600px){#modal{width:100%;max-width:100%;max-height:calc(100dvh - max(16px,env(safe-area-inset-top)));margin:auto 0 0;border-radius:24px 24px 0 0;border-bottom:0;transform:translateY(16px)}#modal[open]{transform:none}#modal .dialog-footer{padding-bottom:max(16px,env(safe-area-inset-bottom))}#modal .dialog-head h2{font-size:1.25rem}}
+@media(prefers-reduced-motion:reduce){#modal{transform:none;transition:opacity .12s,display .12s allow-discrete,overlay .12s allow-discrete}#modal::backdrop{backdrop-filter:none;transition:none}@starting-style{#modal[open]{transform:none}}}
+@media(prefers-reduced-transparency:reduce){#modal::backdrop{backdrop-filter:none;background:#050710e8}#modal .controls-toolbar{backdrop-filter:none}}
+@media(forced-colors:active){#modal{background:Canvas;border:2px solid CanvasText;box-shadow:none}#modal::backdrop{backdrop-filter:none}#modal .primary,#modal .secondary,#modal .choice,#modal .control-card,#modal .connected-result{border:1px solid ButtonText;color:ButtonText;background:ButtonFace}#modal :focus-visible{outline-color:Highlight}}

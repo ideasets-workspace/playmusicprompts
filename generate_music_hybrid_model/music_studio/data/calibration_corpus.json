@@ -1,0 +1,66 @@
+{
+ "$schema_id": "berk.music-studio.calibration-corpus/v1",
+ "purpose": "Research item A12 - the Turkish calibration corpus: the MTG/UPF Turkish Makam Acapella Sections Dataset, the ONLY Turkish sung material with word- and phoneme-level annotation found by the 55-source Turkish research (2026-08-14). Feeds A9's per-language bar calibration and A11's mfa_retrained_on_singing route. This manifest names each recording and carries the fetch/verify contract; the corpus itself is NOT on disk.",
+ "authority": "docs/research/2026-08-14-turkish-singing-phonology-and-g2p-for-synthesis.md section 5.1 (S27/S29/S30) - and the LIVE Zenodo API record + GitHub repository listing, both fetched 2026-08-15 (evidence below supersedes the report's own licence note)",
+
+ "LICENCE_BLOCKER_READ_THIS_FIRST": {
+  "measured": "the LIVE Zenodo record (https://zenodo.org/api/records/1287656, fetched 2026-08-15) declares license id `cc-by-nc-nd-4.0` - Creative Commons Attribution-NonCommercial-NoDerivatives 4.0.",
+  "what_this_contradicts": "the Turkish research report's own availability column says 'Zenodo, open'. Access IS open; USE is not: NC forbids commercial use and ND forbids distributing derivatives. This correction is exactly why the manifest was written from the live API and not from the report (a relayed claim carries zero verification).",
+  "same_class_as": "GTSinger (CC BY-NC-SA 4.0), which blocks STARS and A13's commercial fine-tune - recorded in data/aligners.json and the A13 ledger entry.",
+  "the_open_question_FOR_BERK": "whether calibrating an internal quality gate for a commercial product counts as 'commercial use' of an NC-licensed corpus, and whether separated stems / retrained aligner models are 'derivatives' under ND. This is a legal reading, not a technical one, and it is NOT decided here. Until he decides: the fetch script REFUSES to download without an explicit owner-approval marker, and NOTHING in the engine may consume this corpus.",
+  "what_is_lawful_meanwhile": "reading the metadata (this manifest), citing the papers, and planning. The 'our own commissioned recordings' half of A12 has NO licence problem and remains the clean route - it needs recording sessions, which only Berk can commission."
+ },
+
+ "dataset": {
+  "title": "Turkish Makam Acapella Sections Dataset",
+  "version": "2.0",
+  "doi": "10.5281/zenodo.1287656",
+  "zenodo_record": "https://zenodo.org/api/records/1287656",
+  "publication_date": "2015-07-14",
+  "creators": ["Dzhambazov, G. (MTG-UPF)", "Şentürk, S. (MTG-UPF)", "Serra, X. (MTG-UPF)"],
+  "annotations": "TextGrid (Praat): sections, lyrics phrases, lyrics words - each aligned to its audio segment. NOTE the preserved contradiction from the research report: the GitHub README claims 'word and phoneme level' while the Zenodo description says 'section, lyrics phrases and lyrics words'; which levels the TextGrids actually carry is DECIDED BY OPENING THEM after a lawful fetch, never by either claim.",
+  "citation_required_one_of": [
+   "Dzhambazov, G., & Serra X. (2015). Modeling of Phoneme Durations for Alignment between Polyphonic Audio and Lyrics. SMC 2015.",
+   "Dzhambazov, G., Şentürk S., & Serra X. (2015). Searching Lyrical Phrases in A-Capella Turkish Makam Recordings. ISMIR 2015."
+  ]
+ },
+
+ "archives": [
+  {"key": "turkish-makam-acapella-sections-dataset-2.0.zip", "size_bytes": 292739162, "md5": "d2dd83021b750ef67d49f638d1778021", "organisation": "by artist", "url": "https://zenodo.org/api/records/1287656/files/turkish-makam-acapella-sections-dataset-2.0.zip/content"},
+  {"key": "makam_acapella-master_1.0.zip", "size_bytes": 305827427, "md5": "d3fd28620749e4d8da37ebdf5ee1f8e0", "organisation": "by MusicBrainz ID", "url": "https://zenodo.org/api/records/1287656/files/makam_acapella-master_1.0.zip/content"}
+ ],
+
+ "recordings": {
+  "count": 12,
+  "count_cross_check": "the research report (S29) says '12 performances of 11 compositions, 8 female / 4 male'; the LIVE GitHub listing of georgid/makam_acapella (fetched 2026-08-15) carries exactly 12 MusicBrainz-ID directories - the two independent sources agree on 12",
+  "identifier_kind": "MusicBrainz recording ID (the makam_acapella-master archive is organised by these)",
+  "ids": [
+   "1701ceba-bd5a-477e-b883-5dacac67da43",
+   "2ec806b4-7df2-4fd4-9752-140a0bcc9730",
+   "338e24ba-1f19-49a1-ad6a-2b89e0e09c38",
+   "43745ff1-0848-4592-b1ad-9e7b172b0ebd",
+   "567b6a3c-0f08-42f8-b844-e9affdc9d215",
+   "727cff89-392f-4d15-926d-63b2697d7f3f",
+   "8c7eccf5-0d9e-4f33-89f0-87e95b7da970",
+   "9c26ff74-8541-4282-8a6e-5ba9aa5cc8a1",
+   "b49c633c-5059-4658-a6e0-9f84a1ffb08b",
+   "dd536d18-aa84-451c-b7e5-d97271300b8c",
+   "f5a89c06-d9bc-4425-a8e6-0f44f7c108ef",
+   "feda89e3-a50d-4ff8-87d4-c1e531cc1233"
+  ],
+  "per_recording_metadata": "artist, makam, composition and duration are INSIDE the archives and are filled in by the fetch script after a lawful download - inventing them here from memory would be the rote class"
+ },
+
+ "sufficiency_for_A9": {
+  "n_available": 12,
+  "a9_floor": ">=5 real human sung recordings per language",
+  "honest_note": "12 recordings meet A9's floor arithmetically, BUT the corpus is ~19 minutes of şarkı-form makam singing by professional singers - a genre and style bar. A bar calibrated on it is a MAKAM-SINGING bar until recordings in the production's own styles exist ('our own commissioned recordings', the second half of A12). The calibration routine must carry the corpus's genre in its protocol so the bar's scope is never silently widened."
+ },
+
+ "fetch_contract": {
+  "script": "scripts/fetch_calibration_corpus.py",
+  "gate": "REFUSES to download unless the owner-approval marker exists: music_studio/data/calibration_corpus_licence_approval.json carrying {approved_by: 'Berk', date, scope} written by HIM (a marker minted by an agent is not approval - a gate whose key you minted yourself is not a gate, Law Zero).",
+  "verify": "MD5 per archive against the checksums above (Zenodo's own), size match, then per-recording directory presence for all 12 IDs",
+  "destination": "artifacts/calibration-corpus/turkish-makam-acapella/ (artifacts tree, NOT music_studio/data - a 600 MB corpus is not engine data)"
+ }
+}

@@ -1,0 +1,89 @@
+{
+ "$schema_id": "berk.music-studio.aligners/v1",
+ "purpose": "Research item A11 — 'the aligner is Phonsa/STARS-class, or MFA RETRAINED on calibrated singing, never off-the-shelf MFA'. A11 permits EITHER an aligner module OR an explicit refusal recording that no lawful aligner is installed. This file is that record, per candidate, with the measurement or licence that blocks each one. music_studio/alignment.py reads it and holds no verdict of its own.",
+ "authority": "docs/research/2026-08-14-cross-lingual-singing-voice-synthesis-frontier.md items A11 and C06 (VERIFIED, 4 independent sources) and section 5.3 · .claude/memory/DECISIONS.md D-SSM-24 · .claude/rules/movie-maker-unit-mandate.md CLAUSE 7",
+
+ "what_an_aligner_is_for_here": {
+  "needed_by": [
+   "A3 — to turn a PLANNED phoneme timeline into a MEASURED one (music_studio/phoneme_timing.py TimingSource.MEASURED)",
+   "A9/A12 — to annotate human sung recordings at phoneme level so a per-language PER bar can be calibrated"
+  ],
+  "NOT_needed_by": [
+   "A8's PER. That aligns two PHONEME SEQUENCES by edit distance (music_studio/per_gate.py); it never touches audio time. Conflating sequence alignment with forced alignment would make A11 look like a blocker for the intelligibility gate, which it is not."
+  ],
+  "the_distinction_that_must_not_be_lost": {
+   "we_DO_use": "the MFA Turkish pronunciation DICTIONARY (music_studio/data/lexicon/turkish_mfa.dict, CC BY 4.0) — a text-to-phoneme LEXICON, tier 1 of music_studio/g2p_tr.py. Measured on disk 2026-08-15: 1,658,763 B, 49,651 lines, 41,377 UNIQUE words (the line count is higher because a word may carry pronunciation variants).",
+   "we_do_NOT_use": "MFA's ACOUSTIC MODEL / forced aligner — audio-to-time. Grepped this session across music_studio/: zero occurrences of textgrid, forced-align, acoustic model, praat or onset_ms.",
+   "why_it_matters": "C06 indicts MFA as an ALIGNER. It says nothing against MFA's dictionary. Reading C06 as 'stop using MFA' would discard a CC BY 4.0 lexicon of 41,377 words over a finding about a different component."
+  }
+ },
+
+ "candidates": [
+  {
+   "id": "phonsa",
+   "name": "Phonsa (shipped with MPEcho, S06)",
+   "class": "singing-specific phoneme aligner",
+   "measured_quality": {"alignment_mae_ms": 32.6, "mfa_comparison_mae_ms": 233.9, "pco": 0.965, "mfa_pco": 0.767, "pcas": 0.897, "mfa_pcas": 0.680, "source": "S06 MPEcho, read in the frontier report section 5.3 this session"},
+   "architecture": "Whisper encoder + chunked self-attention (4 heads, 500-frame / 10 s chunks, 50 % overlap), CTC + frame-level CE multi-task loss, special breath and boundary tokens (the boundary token exists so Viterbi can segment consecutive identical phonemes)",
+   "state": "BLOCKED",
+   "blockers": [
+    {"kind": "OWNER_SCOPE", "detail": "a third-party MODEL. D-SSM-24 (his order 2026-08-14, 'herşey kesinlikle vertex ve google ın kendi servisleir ile olmalı') removed SoulX-Singer on exactly this ground, wherever it runs. Only Berk can widen that scope."},
+    {"kind": "LANGUAGE", "detail": "all Phonsa data is Mandarin — 30.92 h train / 16.54 h test. Turkish would be an unproven zero-shot cross-lingual use, which is a measurement to run, never a capability to assume (MANDATE CLAUSE 6)."},
+    {"kind": "NOT_INSTALLED", "detail": "no Phonsa artefact exists on this machine. Nothing was downloaded."}
+   ]
+  },
+  {
+   "id": "stars",
+   "name": "STARS (S20, ACL Findings 2025)",
+   "class": "unified singing transcription + alignment + style annotation",
+   "measured_quality": {"ber": 18.6, "iou": 80.9, "beats": ["MFA", "SOFA"], "source": "S20, read in the frontier report this session"},
+   "state": "BLOCKED",
+   "blockers": [
+    {"kind": "OWNER_SCOPE", "detail": "a third-party MODEL — same D-SSM-24 ground as Phonsa."},
+    {"kind": "LICENCE", "detail": "STARS uses GTSinger, which is CC BY-NC-SA 4.0 — NON-COMMERCIAL. Stated in BOTH S03 and S20 (independent users of the same corpus), which the report treats as BINDING. A non-commercial training corpus is a legal blocker for a product, not a technical one, and it is not mine to waive."},
+    {"kind": "LANGUAGE", "detail": "Chinese, plus a Chinese-union-English multilingual test. Turkish unproven."},
+    {"kind": "NOT_INSTALLED", "detail": "no STARS artefact on this machine."}
+   ]
+  },
+  {
+   "id": "mfa_off_the_shelf",
+   "name": "Montreal Forced Aligner, pre-trained models, used as-is",
+   "class": "speech forced aligner",
+   "state": "REFUSED",
+   "blockers": [
+    {"kind": "MEASURED_UNFIT", "detail": "C06, VERIFIED across FOUR independent sources: S06 measures MAE 233.9 ms (vs Phonsa 32.6 ms — 7.2x worse), PCO 0.767, PCAS 0.680; S20 shows STARS beats MFA and SOFA on BER/IOU; S21 finds 'the recognition accuracy... only 10.08 %... not ideal' for singing audio; S05 uses MFA ONLY to initialise boundaries and then has three certified music annotators cross-validate in Praat. Using it as the timing instrument would be an instrument-not-controlled violation of this project's MEASUREMENT LAW."}
+   ],
+   "note": "This is the DEFAULT anyone would reach for, which is why it is recorded as REFUSED rather than merely absent."
+  },
+  {
+   "id": "mfa_retrained_on_singing",
+   "name": "MFA retrained on manually calibrated singing TextGrids",
+   "class": "speech aligner adapted to singing",
+   "state": "BLOCKED",
+   "blockers": [
+    {"kind": "CORPUS_ABSENT", "detail": "it needs calibrated singing material, which is research item A12 and is ABSENT. S21 reports 'significant improvement... before and after training', so the PATH is real; the INPUT does not exist."}
+   ],
+   "note": "This is the only candidate with NO owner-scope blocker and NO licence problem in the ALIGNER itself: MFA is our own run over our own material. CORRECTED 2026-08-15, same day: the TRAINING MATERIAL the route points at today (A12's makam corpus) was measured from the live Zenodo record as CC BY-NC-ND 4.0 - NonCommercial + NoDerivatives - so retraining on IT inherits a licence question only Berk can answer (music_studio/data/calibration_corpus.json, LICENCE_BLOCKER block). The route stays cleanest via A12's OTHER half: our own commissioned recordings, which carry no licence at all."
+  },
+  {
+   "id": "sofa",
+   "name": "SOFA (singing-specific aligner, named by S20 as a baseline it beats)",
+   "class": "singing-specific aligner",
+   "state": "UNRESEARCHED",
+   "blockers": [
+    {"kind": "UNRESEARCHED", "detail": "the only thing established this session is that S20 reports STARS beating it. Its licence, languages, architecture and installability were NOT investigated. Recorded as an open path rather than dismissed, because dismissing an unread option is the 'there is no X' class."}
+   ]
+  }
+ ],
+
+ "verdict": {
+  "state": "NO_LAWFUL_ALIGNER_INSTALLED",
+  "verbatim_from_the_report": "using off-the-shelf MFA as the timing instrument for a Turkish singing gate would be an instrument-not-controlled violation of this project's MEASUREMENT LAW. The lawful choices are Phonsa/STARS-class singing-specific aligners, or MFA retrained on calibrated singing material, with a control set proving the aligner can both agree and disagree.",
+  "consequence_enforced_in_code": "No MEASURED phoneme timeline may be minted. music_studio/phoneme_timing.py's TimingSource.MEASURED requires this registry to name a lawful aligner, and it names none — so a timeline claiming MEASURED is refused at the moment of the claim rather than believed because of its label.",
+  "what_it_does_NOT_block": "PLANNED timelines (A3's length regulator) and A8's sequence-level PER both continue: neither needs audio-time alignment.",
+  "shortest_route_to_unblock": "A12's calibrated Turkish singing corpus -> MFA retrained on it -> a control set proving the retrained aligner can both agree and disagree with human boundaries. That route has no licence and no owner-scope blocker.",
+  "requires_his_decision_to_take_the_other_route": "adopting Phonsa or STARS would need D-SSM-24 widened, and STARS would additionally need the CC BY-NC-SA 4.0 non-commercial question answered by someone qualified. Neither is mine to decide."
+ },
+
+ "control_requirement_carried_forward": "Any aligner that ever becomes lawful arrives WITH a control set proving it can both agree and disagree with human boundaries (the report's own wording). An aligner accepted without that control would be an uncontrolled instrument, which is the defect class this project has paid for eleven times."
+}

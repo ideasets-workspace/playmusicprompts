@@ -1,0 +1,80 @@
+{
+  "url": "https://www.playmusicprompts.com/stream",
+  "prompt": "slow cinematic piano nocturne with distant strings, calm and spacious, instrumental",
+  "startedAt": "2026-09-05T19:29:43.595Z",
+  "harness": {
+    "muteAudio": false,
+    "reducedMotionEmulated": "no-preference",
+    "mediaControl": {
+      "log": [
+        "playing"
+      ],
+      "t": 1,
+      "rs": 4
+    }
+  },
+  "phases": [
+    {
+      "phase": "typed",
+      "state": {
+        "ready": true,
+        "nowTitle": null,
+        "lock": null,
+        "playing": "false",
+        "pulseAnimation": null,
+        "pulseDuration": null,
+        "barSeconds": "",
+        "reducedMotion": false,
+        "renderer": "pending",
+        "canvas": null,
+        "headerMeta": [
+          "102 live parameters",
+          "0 stops · 0 ahead · buffer target 2"
+        ],
+        "horizon": [
+          "Nothing in preparation. When the stream is on, the next take is prepared while this one plays."
+        ],
+        "clock": "0:00 0:00",
+        "seekMax": "0",
+        "card": null,
+        "pastCount": 0,
+        "futureCount": 0,
+        "playLabel": "Play"
+      }
+    },
+    {
+      "phase": "submitted",
+      "at": "2026-09-05T19:29:46.455Z",
+      "state": {
+        "ready": true,
+        "nowTitle": null,
+        "lock": null,
+        "playing": "false",
+        "pulseAnimation": null,
+        "pulseDuration": null,
+        "barSeconds": "",
+        "reducedMotion": false,
+        "renderer": "pending",
+        "canvas": null,
+        "headerMeta": [
+          "102 live parameters",
+          "0 stops · 0 ahead · buffer target 2"
+        ],
+        "horizon": [
+          "One take · instrumental\n0:02\n\nDocumented range 90–140 s · phase: queued · job cmtos1hf\n\nValidate & plan\n9 validation checks, route choice, prompt compiled to prose\n~1 s\nMix plan\nlawful layers decided before any billable call\n~1 s\nGenerate (Ideasets Hybrid Music Composer Model)\nthe music itself — 60-150 s per take\n~110 s\nStore & measure\nffprobe reads the real duration, codec, channels\n~1 s\nConform\n"
+        ],
+        "clock": "0:00 0:00",
+        "seekMax": "0",
+        "card": null,
+        "pastCount": 0,
+        "futureCount": 0,
+        "playLabel": "Play"
+      }
+    }
+  ],
+  "elapsedSeconds": 35,
+  "result": "failed",
+  "failureCards": [
+    "Not delivered\n\nThe model refused this content; reword the brief materially and try again.\n\nengine said\nRuntimeError: Vertex error 400: {\"error\":{\"message\":\"Request blocked for an unspecified policy reason. Please modify your input and retry.\",\"code\":\"content_blocked\"}}\nerror code\nGENERATION_FAILED\nstatus\n502\nrequest id\n3d84519a-bddb-4572-a4b7-855cf003988d"
+  ]
+}

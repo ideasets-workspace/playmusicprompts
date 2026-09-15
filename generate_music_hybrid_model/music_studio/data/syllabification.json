@@ -1,0 +1,48 @@
+{
+ "$schema_id": "berk.music-studio-syllabification/v1",
+ "purpose": "Constraints for the Turkish phoneme-level syllable segmenter (research item TR-GATE's sourced syllabifier). Every constraint carries the primary sentence it was read from, so a challenge to a split is a challenge to a source, never to an opinion in code.",
+ "source": {
+  "id": "S15",
+  "title": "The Phonology of Turkish",
+  "author": "\u00d6ner \u00d6z\u00e7elik",
+  "publisher": "Oxford University Press",
+  "year": 2024,
+  "isbn": "9780192696779",
+  "read": "PARTIAL \u2014 publisher author-preview (Introduction + front matter, 31 pages), downloaded and archived 2026-08-17 at docs/research/_sources/_cache/s15-phonology-of-turkish-preview.pdf (888,595 B); text extraction at s15-preview-extracted.txt. Chapter 3's BODY (coda-cluster sonority conditions \u00a73.5.2.1, the appendix \u00a73.6) is NOT in the preview \u2014 only its table of contents \u2014 which is exactly why this file licenses SEGMENTATION ONLY and no wellformedness judgement (see limits)."
+ },
+ "constraints": {
+  "no_complex_onsets": {
+   "rule": "a syllable onset carries at most ONE consonant; at a word-internal consonant junction of n consonants, n-1 close the previous syllable and exactly 1 opens the next",
+   "s15_sentence": "\"there are no complex onsets in the language on the surface\" \u2014 Introduction \u00a71.3, stated as the Optimality-Theoretic ranking fact that Turkish ranks the markedness constraint banning complex onsets above faithfulness.",
+   "consequence_for_segmentation": "CC \u2192 C.C; CCC \u2192 CC.C (the LAST consonant is the onset; everything before it is coda material whose internal wellformedness this module deliberately does not judge)"
+  },
+  "rhyme_two_position_ban": {
+   "rule": "a rhyme has at most two positions: a long-vowel nucleus and a coda consonant cannot co-occur in one syllable",
+   "s15_sentence": "\"Turkish places a ban on rhymes with more than two positions. As such, even though closed syllables and long vowels are permitted separately in Turkish, the two cannot co-occur in the same syllable.\" \u2014 Introduction \u00a71.1, with the worked pair [hajat] (nominative) vs [haja:t-a] (suffixed).",
+   "consequence_for_segmentation": "a produced syllable with a long-vowel nucleus AND a coda is REPORTED as a violation flag, never silently repaired \u2014 repair (vowel shortening, \u00a73.4.1.1) is a phonological process whose conditions live in the chapter body the preview does not carry"
+  },
+  "heterosyllabic_vowel_sequences": {
+   "rule": "two adjacent nuclei never share a syllable: V.V (hiatus)",
+   "s15_sentence": "table of contents \u00a73.4.2.1: \"Heterosyllabic vowel sequences: hiatus (avoidance and inevitability)\" \u2014 the section TITLE itself states the heterosyllabic analysis; the body is outside the preview, so this constraint is used for the split and nothing more.",
+   "consequence_for_segmentation": "VV \u2192 V.V"
+  },
+  "soft_g_never_onset": {
+   "rule": "\u011f never opens a syllable (documented for completeness; the MFA phone layer this engine runs on realises \u011f as vowel length or [j], so the segment \u027e0 never reaches the segmenter as a consonant)",
+   "s15_sentence": "table of contents \u00a73.3.1.1: \"The ban on soft-g <\u011f> appearing in the onset position: ambisyllabicity\"; Introduction: \"<\u011f> ... never appears in word-initial position ... analyzed as ambisyllabic in this book\".",
+   "consequence_for_segmentation": "none at the phone level (measured in docs/research/2026-08-14-turkish-singing-phonology-and-g2p-for-synthesis.md \u00a71.3: \u027e0 does not appear in the MFA Turkish v3.0.0 phone list at all); recorded so a future orthography-level caller cannot assume this module handles it"
+  },
+  "post_suffixation_input": {
+   "rule": "the segmenter's input is the POST-G2P phoneme sequence of the FULL word form (stem+suffixes), never the bare spelling",
+   "s15_sentence": "the [hajat]/[haja:ta] alternation (\u00a71.1) shows syllable shape depends on the suffixed form \u2014 the constraint per_gate.py already cites: \"syllabification must run AFTER suffixation\".",
+   "consequence_for_segmentation": "the module accepts phonemes (the G2P already processed the complete surface word) and REFUSES raw text"
+  }
+ },
+ "nucleus_definition": {
+  "rule": "a nucleus is any segment whose PHOIBLE `syllabic` feature is `+`; consonants are `-`; a segment PHOIBLE cannot classify is a REFUSAL, never a guess",
+  "single_source_of_truth": "music_studio/phonology.py FeatureTable (the same table the functional-load metric measures in) \u2014 a second vowel list here would be the two-lists construction MANDATE CLAUSE 23 forbids"
+ },
+ "limits_read_this_first": {
+  "segmentation_not_wellformedness": "this module SPLITS a verified phoneme sequence into syllables under the three structural constraints above; it does NOT judge whether a coda cluster is permissible Turkish (\u00a73.5.2.1's sonority/place conditions) and does NOT apply repair processes (epenthesis \u00a73.3.2.1/\u00a73.5.2.2, shortening \u00a73.4.1.1, degemination \u00a73.5.2.3) \u2014 all of those live in the chapter body the archived preview does not carry. A caller needing wellformedness gets a named refusal.",
+  "why_this_is_enough_for_TR_GATE": "the gate's syllable_error_rate compares REFERENCE vs TRANSCRIPT syllabifications produced by the SAME deterministic segmenter, so both sides carry identical segmentation conventions and the metric measures the TRANSCRIPT'S deviation from the lyric, not the segmenter's own taste."
+ }
+}

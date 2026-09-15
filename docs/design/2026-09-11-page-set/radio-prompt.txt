@@ -1,0 +1,27 @@
+Use case: ui-mockup. Create ONE separate RADIO page for PlayMusicPrompts, using the APPROVED HOME in image 1 as the exact visual-system reference. Preserve the original recognizable logo/wordmark, black immersive architectural music world, neon violet/magenta/cyan glass, realistic 3D depth and wet reflections, shared left rail and header, persistent single waveform player. All copy English, large and crisp. Landscape desktop around 1584x1104, complete uncropped page, no device frame.
+
+Header: original PlayMusicPrompts logo, search "Search songs, stations, and moods", right "Sign in".
+Rail order: "Create", "Explore", "Radio", "Library"; ONLY RADIO selected in violet.
+Main page, top left eyebrow "RADIO". Large two-line heading:
+"Find your station."
+"Stay in the music."
+Supporting sentence "Choose a mood. Settle into a station that keeps playing."
+Three quiet closed filter controls upper right: "Mood", "Genre", "Era".
+
+A spectacular but usable three-station gallery occupies the center. It is a radio destination, so DO NOT show the home prompt composer, genre-grid or random extra widgets.
+On the left below the introduction, a clean featured-station info area: small label "FEATURED STATION"; bold title "Deep Focus"; description "Ambient textures. Space to think."; small metadata "Ambient · Instrumental"; a large luminous violet button with play icon "Play Deep Focus".
+To the right of this feature copy, arrange three richly luminous 3D glass station portals on circular vinyl plinths, continuous with the approved world's architecture:
+- Largest central portal: "Deep Focus", immersive deep-cyan underwater light / serene diver art from the reference, with a big circular PLAY triangle.
+- Adjacent smaller portal: "Night Drive", purple rainy-city art from the reference, waveform symbol and exact status "Now playing". This is the currently playing station; do NOT put a play triangle over its active status.
+- Third smaller portal: "Afterglow", violet sunset/ocean art from the reference, circular PLAY triangle.
+Use thoughtful perspective and spacing. Portal titles legible, no card overlaps with the feature text.
+
+Below the main stage, a quieter three-card collection with heading "More stations" and right link "Browse all stations".
+Three wide artwork station cards:
+"Slow Mornings" — warm cafe window, piano and gentle lavender dawn.
+"Deep Rest" — tranquil moonlit blue-violet clouds/water, restful.
+"Full Energy" — energetic vivid magenta/cyan rhythmic light trails.
+Each has one discreet circular play control. No invented listener counts, song counts, live badges, fake artist names or statistics.
+
+Bottom player EXACT SAME SESSION as the approved home: Night Drive artwork/title, "Made for you", outlined heart; shuffle, previous, large luminous PAUSE circle, next, repeat; violet waveform "01:24" / "03:48"; queue, "Keep it going" toggle ON, green status dot "Next song ready"; volume, expand. The user has opened Radio but has NOT yet pressed Play Deep Focus. Therefore Night Drive remains now playing in both the small portal and bottom player. The featured Deep Focus is ready to choose, not already playing. Never show two active tracks.
+Strong action hierarchy, large readable labels, luxurious spatial scene and generous space. Keep the entire player and lower cards in frame. No pricing, credits, composer, charts, Turkish or design annotations.

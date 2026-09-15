@@ -1,0 +1,468 @@
+{
+  "$schema_id": "berk.music-studio-param-spec/v1",
+  "endpoint": "generate-music-hybrid-model",
+  "worker": "ssm-content-worker-generate-music-hybrid-model",
+  "canonical_ui": "C:\\Berk\\BeforeTomorrow\\docs\\design\\BeforeTomorrow_MusicStudio_white.png",
+  "authority": "docs/music-studio-single-endpoint-architecture.md (SSOT for semantics; this file is the SSOT for the parameter surface). His orders 2026-08-14: all 48 UI controls supported completely; maximum predefined values selectable via combos; the UI renders every request param FROM this document; Vertex and Google's own services only (D-SSM-24); separated stems as our own open-weights software on GCE (his approval 18:55).",
+  "consumers_by_import": ["music_studio worker validation (models.py)", "BeforeTomorrow Music Studio UI (renders panels from this file)", "generated v5 API doc section"],
+  "value_origin_legend": {
+    "png": "visible in the canonical UI mock-up, read visually 2026-08-14",
+    "worker_enum": "a typed enum already present in a deployed worker of this repo, read from its source this session",
+    "architecture_contract": "defined by the architecture document; vendor carrier unproven until the $0 probe runs (SCHEMA IS NEVER CAPABILITY)",
+    "music_theory_canon": "closed mathematical set (12 chromatic roots x documented modes), not a vendor claim",
+    "turkish_tradition_research": "docs/research/2026-08-14-turkish-singing-phonology-and-g2p-for-synthesis.md axis 7 (aksak meters)",
+    "language_registry": "generated at build time from titles/languages/ registry states (D-SSM-17); never hand-listed here",
+    "lyria_launch_probe_pending": "named in Google's Lyria 3 launch material read 2026-08-14; enters the spec as typed ONLY after a generation-proven probe",
+    "our_stage": "implemented by our own pipeline stage; values are our stage's documented inputs"
+  },
+  "bindings_legend": {
+    "typed": "a real vendor request field on the chosen route",
+    "prose": "folded into the prompt because no vendor field exists; the sent clause is returned",
+    "enforced": "we measure the delivered file and trim/re-render to the requested value",
+    "compiled": "deterministically compiled by our own stage into per-section directives",
+    "refused": "rejected by name with the measured reason",
+    "response_field": "an OUTPUT the API computes and returns; not a request parameter",
+    "client_side": "UI-local; stored and echoed, no generation effect"
+  },
+  "parameters": [
+    {
+      "name": "project", "ui_control": "Project / Track Name", "panel": 1, "section": "Creative Brief",
+      "control": "text", "binding": "client_side", "free_text": true,
+      "fields": {"name": {"max_length": 120}, "track_id": {"server_assigned": true}, "version_note": {"max_length": 200}},
+      "default": {"value": null, "evidence": "no default; user-named (png shows 'Odyssey Trailer Theme' as sample data, not a default)"}
+    },
+    {
+      "name": "creative_goal", "ui_control": "Creative Goal (dropdown)", "panel": 1, "section": "Creative Brief",
+      "control": "combo", "binding": "prose", "free_text": false,
+      "values_origin": "png sample + our_stage lexicon (each goal owns a fixed prose clause, versioned in data/creative_goal_lexicon.json)",
+      "values": [
+        {"id": "epic_cinematic_uplifting", "label": "Epic, cinematic & emotionally uplifting"},
+        {"id": "dark_tense_driving", "label": "Dark, tense & driving"},
+        {"id": "warm_intimate_acoustic", "label": "Warm, intimate & acoustic"},
+        {"id": "playful_light_quirky", "label": "Playful, light & quirky"},
+        {"id": "melancholic_reflective", "label": "Melancholic & reflective"},
+        {"id": "heroic_triumphant", "label": "Heroic & triumphant"},
+        {"id": "mysterious_atmospheric", "label": "Mysterious & atmospheric"},
+        {"id": "romantic_sweeping", "label": "Romantic & sweeping"},
+        {"id": "energetic_upbeat_pop", "label": "Energetic upbeat pop"},
+        {"id": "calm_ambient_meditative", "label": "Calm, ambient & meditative"}
+      ],
+      "default": {"value": "epic_cinematic_uplifting", "evidence": "png shows this selection in the mock-up"}
+    },
+    {
+      "name": "prompt", "ui_control": "Describe the track in detail (5000 chars)", "panel": 1, "section": "Creative Brief",
+      "control": "text", "binding": "typed", "free_text": true,
+      "constraints": {"max_length": 5000},
+      "default": {"value": null, "evidence": "png counter reads '312/5000' - 5000 is the UI cap; the per-route prompt cap is enforced by the worker at request time"}
+    },
+    {
+      "name": "prompt_enhance", "ui_control": "Enhance (prompt rewriting)", "panel": 1, "section": "Creative Brief",
+      "control": "toggle", "binding": "our_stage", "free_text": false,
+      "values_origin": "our_stage (Gemini rewrite service; style set is ours)",
+      "fields": {"enabled": {"type": "boolean"}, "style": {"values": [
+        {"id": "conservative", "label": "Conservative (preserve wording, fix gaps)"},
+        {"id": "descriptive", "label": "Descriptive (expand instrumentation & dynamics)"},
+        {"id": "cinematic", "label": "Cinematic (trailer-language rewrite)"}
+      ]}},
+      "default": {"value": {"enabled": false, "style": "conservative"}, "evidence": "off by default: a rewrite the user did not ask for would alter dictated wording (verbatim law, rules/01 s11)"}
+    },
+    {
+      "name": "negative_prompt", "ui_control": "Negative prompt / avoid (chips)", "panel": 1, "section": "Creative Brief",
+      "control": "chips", "binding": "typed", "free_text": true,
+      "values_origin": "png chips as seed suggestions; free chips allowed (negative_prompt is a measured typed field on the Lyria :predict surface)",
+      "values": [
+        {"id": "cheesy", "label": "cheesy"}, {"id": "meme", "label": "meme"}, {"id": "lo-fi", "label": "lo-fi"},
+        {"id": "distorted", "label": "distorted"}, {"id": "90s_eurodance", "label": "90s eurodance"},
+        {"id": "muddy_low_end", "label": "muddy low end"}, {"id": "harsh_highs", "label": "harsh highs"},
+        {"id": "off_key_vocals", "label": "off-key vocals"}, {"id": "abrupt_ending", "label": "abrupt ending"}
+      ],
+      "default": {"value": [], "evidence": "empty by default; suggestions only"}
+    },
+    {
+      "name": "genres", "ui_control": "Genres / Subgenres (chips)", "panel": 1, "section": "Creative Brief",
+      "control": "multi-select", "binding": "prose", "free_text": false,
+      "values_origin": "data/genre_vocabulary.json - VALUE SET from MusicBrainz genre entities (CC0 core data, https://musicbrainz.org/doc/About/Data_License; commercial use allowed per https://metabrainz.org/datasets/postgres-dumps; full set swept 2026-08-18, 2184/2184 against the service's own genre-count) with the FAMILY axis joined by exact folded name from Wikidata's P279 subclass graph over Q188451 music genre (also CC0). The original png chips and research-corpus tags remain as their own earlier sourced group. Grouping is mandatory rather than cosmetic: the taxonomy research rejects a flat list at any size (745-subgenre flat taxonomy scores per-label F 0.032-0.115; overload is removed by categorising, not by shortening)",
+      "values_import": "data/genre_vocabulary.json",
+      "constraints": {"max_selected": 6},
+      "default": {"value": ["cinematic"], "evidence": "png shows Cinematic as first chip"}
+    },
+    {
+      "name": "eras", "ui_control": "Era / Stylistic Timeframe (chips)", "panel": 1, "section": "Creative Brief",
+      "control": "multi-select", "binding": "prose", "free_text": false,
+      "values_origin": "data/era_vocabulary.json - Google's own Lyria 3 prompting guide (2026-04-07, read [FULL] 2026-08-18) instructs 'Reference genres and eras ... stylistic timeframe (e.g. the 1950s, early 90s)'; kept OUT of genres because AcousticBrainz taxonomy practice strips era tokens from genre lists (research contradiction CT-8, resolved by giving era its own axis)",
+      "values_import": "data/era_vocabulary.json",
+      "constraints": {"max_selected": 2, "max_selected_evidence": "Google's own construction combines at most one modifier with one decade ('early 90s'), so two selections is the widest shape the source demonstrates"},
+      "default": {"value": [], "evidence": "no default era: the guide treats the timeframe as an optional refinement, and imposing one would silently date every track the user did not date"}
+    },
+    {
+      "name": "moods", "ui_control": "Mood / Emotion (chips)", "panel": 1, "section": "Creative Brief",
+      "control": "multi-select", "binding": "prose", "free_text": false,
+      "values_origin": "data/mood_vocabulary.json - GEMS 9 factors and the GEMIAC extension classes (Coutinho & Scherer, GEneva Music-Induced Affect Checklist preprint, Tables 1-3), Russell's 1980 circumplex reference angles and his 15 text-stated measured word angles with valence/arousal derived from them by the model's own axis definition, and the 29 MIREX Popular Set labels (Hu & Downie, ISMIR 2007, Table 1). Every transcribed string and number is asserted to occur in its archived capture by scripts/build_mood_vocabulary.py, which refuses the whole batch on one mismatch (it caught a real transcription failure on first run). MIREX cluster numbers are deliberately NOT emitted: the capture's table collapsed row-major and the column of the ragged rows is unrecoverable, so assigning them would be invention",
+      "values_import": "data/mood_vocabulary.json",
+      "constraints": {"max_selected": 6},
+      "default": {"value": [], "evidence": "no default mood; the creative_goal clause already carries one"}
+    },
+    {
+      "name": "prompt_blocks", "ui_control": "Prompt Presets / Blocks (8 reusable blocks)", "panel": 1, "section": "Prompt Presets",
+      "control": "chips", "binding": "prose", "free_text": true,
+      "values_origin": "user library (stored per account) + 8 starter blocks visible in the png",
+      "fields": {"role": {"values": [
+        {"id": "hook", "label": "Hook / Main Theme"}, {"id": "texture", "label": "Texture / Atmosphere"},
+        {"id": "percussion", "label": "Percussion / Groove"}, {"id": "harmony", "label": "Harmony / Chords"},
+        {"id": "climax", "label": "Climax / Impact"}, {"id": "transition", "label": "Transition / Rise"},
+        {"id": "bass", "label": "Bass / Low End"}, {"id": "outro", "label": "Outro / Resolve"}
+      ]}, "text": {"max_length": 280}, "weight": {"min": 0.0, "max": 1.0, "step": 0.1, "note": "WIRED 2026-08-23 (MUS-API-009): weight compiles as clause ORDER — blocks are sorted highest-weight-first before rendering, because position is the only carrier a prose surface offers (no measured vendor field weights a clause); the sent order is returned in bindings"}},
+      "default": {"value": [], "evidence": "png shows 8 role cards; block text is user-authored"}
+    },
+    {
+      "name": "tempo_bpm", "ui_control": "Tempo (BPM) + Tap Tempo", "panel": 2, "section": "Composition",
+      "control": "slider", "binding": "prose", "free_text": false,
+      "constraints": {"min": 40, "max": 220, "step": 1},
+      "values_origin": "png shows 128 BPM; slider range 40-220 covers largo to extreme d&b; the combo presets below are the named tempo anchors the UI offers beside the slider; requested value is MEASURED back (beat tracking) and returned in measured.*",
+      "values": [
+        {"id": "60", "label": "60 BPM (largo / ballad)"}, {"id": "80", "label": "80 BPM (downtempo)"},
+        {"id": "100", "label": "100 BPM (mid-tempo)"}, {"id": "120", "label": "120 BPM (house / pop)"},
+        {"id": "128", "label": "128 BPM (trailer / EDM)"}, {"id": "140", "label": "140 BPM (uptempo)"},
+        {"id": "160", "label": "160 BPM (drum & bass low)"}, {"id": "174", "label": "174 BPM (drum & bass)"}
+      ],
+      "default": {"value": 120, "evidence": "png sample is 128; 120 is the neutral midpoint the UI opens on - marked UI-default, not a musical claim"}
+    },
+    {
+      "name": "key", "ui_control": "Key / Scale (C Minor, Aeolian)", "panel": 2, "section": "Composition",
+      "control": "combo", "binding": "prose", "free_text": false,
+      "values_origin": "music_theory_canon - closed set: 12 chromatic roots x 2 tonalities + 7 diatonic modes; generated by models.py at load (root x mode product), never hand-enumerated",
+      "values_generated": {"roots": ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"], "modes": ["major","minor","ionian","dorian","phrygian","lydian","mixolydian","aeolian","locrian"]},
+      "default": {"value": "C|minor", "evidence": "png shows 'C Minor / Aeolian' (minor = aeolian); the wire shape is the generated 'root|mode' id — the id set models.py validates against, so the default is expressible in its own value set (a dict default here would be refused by the endpoint's own validator)"}
+    },
+    {
+      "name": "time_signature", "ui_control": "Time Signature (4/4)", "panel": 2, "section": "Composition",
+      "control": "combo", "binding": "prose", "free_text": false,
+      "values_origin": "png (4/4) + turkish_tradition_research axis 7: the aksak additive meters are MANDATORY members - a Western-only list was named an amateurish design in the architecture s3.3",
+      "values": [
+        {"id": "4/4", "label": "4/4"}, {"id": "3/4", "label": "3/4"}, {"id": "6/8", "label": "6/8"},
+        {"id": "2/4", "label": "2/4"}, {"id": "5/4", "label": "5/4"}, {"id": "7/8", "label": "7/8 (aksak)"},
+        {"id": "9/8", "label": "9/8 (aksak)"}, {"id": "12/8", "label": "12/8"}, {"id": "5/8", "label": "5/8"},
+        {"id": "7/4", "label": "7/4"}, {"id": "10/8", "label": "10/8 (aksak)"}
+      ],
+      "note": "prose PLUS enforced estimate: measured.time_signature_estimated is returned once its estimator has a passing control set; until then it reports NOT_RUN (architecture s3.3)",
+      "default": {"value": "4/4", "evidence": "png shows 4/4"}
+    },
+    {
+      "name": "duration", "ui_control": "Duration (02:15 exact)", "panel": 2, "section": "Composition",
+      "control": "combo", "binding": "enforced", "free_text": false,
+      "values_origin": "our_stage (generate-measure-conform); Lyria 3 launch names 'duration controls' - if the $0 probe proves a real field, binding upgrades to typed (lyria_launch_probe_pending)",
+      "fields": {
+        "target_seconds": {"min": 10, "max": 180, "step": 1, "note": "180 s cap = Lyria 3 Pro documented ~3 min ceiling (Google launch blog, read 2026-08-14)"},
+        "tolerance_seconds": {"min": 0, "max": 10, "default": 2},
+        "on_miss": {"values": [
+          {"id": "trim", "label": "Trim to target (musically-aware fade)"},
+          {"id": "regenerate", "label": "Regenerate (costs another pass)"},
+          {"id": "accept", "label": "Accept the delivered length"}
+        ]}
+      },
+      "default": {"value": {"target_seconds": 135, "tolerance_seconds": 2, "on_miss": "trim"}, "evidence": "png shows 02:15; on_miss=trim because duration is not requestable on lyria-002 (measured 139.26/146.73/159.63 s unasked)"}
+    },
+    {
+      "name": "structure", "ui_control": "Structure Builder (8 named sections, bars)", "panel": 2, "section": "Composition",
+      "control": "chips", "binding": "compiled", "free_text": false,
+      "values_origin": "png section names + architecture_contract s3.1 (compiled to Lyria [mm:ss] prose + section directives; Lyria 3 Composer mode is lyria_launch_probe_pending - typed if proven)",
+      "fields": {
+        "section": {"values": [
+          {"id": "intro", "label": "Intro"}, {"id": "build", "label": "Build"}, {"id": "verse", "label": "Verse"},
+          {"id": "pre_chorus", "label": "Pre-Chorus"}, {"id": "chorus", "label": "Chorus"}, {"id": "bridge", "label": "Bridge"},
+          {"id": "drop", "label": "Drop"}, {"id": "outro", "label": "Outro"}, {"id": "interlude", "label": "Interlude"},
+          {"id": "solo", "label": "Solo"}, {"id": "breakdown", "label": "Breakdown"}
+        ]},
+        "bars": {"min": 1, "max": 64, "step": 1}
+      },
+      "constraints": {"max_sections": 12},
+      "default": {"value": [{"section":"intro","bars":8},{"section":"build","bars":8},{"section":"verse","bars":16},{"section":"pre_chorus","bars":8},{"section":"chorus","bars":16},{"section":"bridge","bars":8},{"section":"drop","bars":8},{"section":"outro","bars":8}], "evidence": "the png's own 8-section example"}
+    },
+    {
+      "name": "arrangement_ai", "ui_control": "Arrangement Intelligence (toggle)", "panel": 2, "section": "Composition",
+      "control": "toggle", "binding": "our_stage", "free_text": false,
+      "covers_ui_controls": ["Auto Suggest (structure)", "Smart Suggestions (3, Apply)"],
+      "values_origin": "our_stage (Gemini arrangement adviser: proposes structure/energy/instrument edits; every suggestion is a diff the user applies, never a silent change)",
+      "values": [
+        {"id": "on", "label": "On (suggestions offered as applyable diffs)"},
+        {"id": "off", "label": "Off (no suggestions)"}
+      ],
+      "default": {"value": true, "evidence": "png shows the toggle ON"}
+    },
+    {
+      "name": "energy_curve", "ui_control": "Energy Curve (editable envelope)", "panel": 2, "section": "Composition",
+      "control": "envelope", "binding": "compiled", "free_text": false,
+      "values_origin": "architecture_contract s3.1: sampled at structure boundaries, compiled to per-section intensity directives; binding returned as compiled_stepwise (honest about not being continuous inside a section)",
+      "fields": {
+        "preset": {"values": [
+          {"id": "cinematic", "label": "Cinematic (slow rise, chorus peak, warm resolve)"},
+          {"id": "linear_rise", "label": "Linear rise"}, {"id": "double_peak", "label": "Double peak"},
+          {"id": "front_loaded", "label": "Front-loaded"}, {"id": "valley", "label": "Valley (quiet middle)"},
+          {"id": "flat", "label": "Flat"}, {"id": "custom", "label": "Custom (edit points)"}
+        ]},
+        "points": {"free_form": true, "shape": "[{t: seconds, v: 0..1}]"}
+      },
+      "default": {"value": {"preset": "cinematic"}, "evidence": "png dropdown shows 'Cinematic'"}
+    },
+    {
+      "name": "instruments", "ui_control": "Instrument Palette (6 + Add)", "panel": 2, "section": "Composition",
+      "control": "multi-select", "binding": "prose", "free_text": false,
+      "values_origin": "data/instrument_vocabulary.json - VALUE SET from MusicBrainz instrument entities (CC0 core data; commercial use allowed per https://metabrainz.org/datasets/postgres-dumps), reconciled 2026-08-18 between the web service and the browse list (1046 entities = 806 matched + 227 repaired by individual lookup + 13 service-only, with 15 browse rows PROVEN not to be entities). Each entry carries MusicBrainz's own `type` as the UI grouping axis and capability UNPROVEN, because per-instrument rendering quality on the Google routes is unmeasured. General MIDI was REJECTED as the spine for a licence reason, not a quality one: MMA0007/RP003 states 'ALL RIGHTS RESERVED. NO PART OF THIS DOCUMENT MAY BE REPRODUCED' (D-SSM-35). The png's six tiles and the research corpus tags remain as their own earlier sourced groups",
+      "values_import": "data/instrument_vocabulary.json",
+      "constraints": {"max_selected": 12},
+      "default": {"value": ["strings_ensemble","brass_section","hybrid_drums","percussion_timpani","synth_atmos","choir_ahh"], "evidence": "the png's six visible tiles"}
+    },
+    {
+      "name": "sonic_tags", "ui_control": "Sonic Tags (10 free tags)", "panel": 2, "section": "Composition",
+      "control": "chips", "binding": "prose", "free_text": true,
+      "values_origin": "png chips as suggestions; free entry allowed (tags fold into the prompt on the Google-only routes; the ACE typed-tag carrier was removed by D-SSM-24)",
+      "values": [
+        {"id": "cinematic_swell", "label": "cinematic swell"}, {"id": "warm_analog", "label": "warm analog"},
+        {"id": "nostalgic_texture", "label": "nostalgic texture"}, {"id": "hybrid_orchestral", "label": "hybrid orchestral"},
+        {"id": "punchy_low_end", "label": "punchy low-end"}, {"id": "no_vocals", "label": "no vocals"},
+        {"id": "dramatic_hits", "label": "dramatic hits"}, {"id": "wide_stereo", "label": "wide stereo"},
+        {"id": "ethereal_pads", "label": "ethereal pads"}, {"id": "dark_undertone", "label": "dark undertone"}
+      ],
+      "constraints": {"max_selected": 10},
+      "default": {"value": [], "evidence": "empty; png chips are suggestions"}
+    },
+    {
+      "name": "mood_orbit", "ui_control": "Mood Orbit (2-D mood vector)", "panel": 2, "section": "Composition",
+      "control": "radar", "binding": "compiled", "free_text": false,
+      "values_origin": "architecture_contract s3.2: resolved through the versioned lexicon data/mood_orbit_lexicon.json (magnitude selects intensity tier, angle selects blend); the sent clause is returned in bindings.mood_orbit.sent",
+      "fields": {"axes": {"values": [
+        {"id": "epic", "label": "Epic"}, {"id": "uplifting", "label": "Uplifting"},
+        {"id": "hopeful", "label": "Hopeful"}, {"id": "melancholic", "label": "Melancholic"},
+        {"id": "dark", "label": "Dark"}, {"id": "aggressive", "label": "Aggressive"}
+      ]}, "value_range": {"min": 0.0, "max": 1.0}},
+      "default": {"value": null, "evidence": "optional; the png's orbit shows the six pole labels used here"}
+    },
+    {
+      "name": "vocal", "ui_control": "Vocal Mode: Instrumental", "panel": 2, "section": "Vocal & Lyric",
+      "covers_ui_controls": ["Vocal Mode: Male / Female / Duet / Choir / Spoken / Plan Decides"],
+      "control": "combo", "binding": "prose", "free_text": false,
+      "values_origin": "png's seven vocal-mode tiles; instrumental maps to the TYPED instrumental_only field on music_lyria (worker_enum); voice character is prose + MEASURE (speech_config.voice was measured INERT - no named-voice claim is made)",
+      "fields": {
+        "mode": {"values": [
+          {"id": "instrumental", "label": "Instrumental", "binding_note": "typed: music_lyria.instrumental_only"},
+          {"id": "male", "label": "Male"}, {"id": "female", "label": "Female"}, {"id": "duet", "label": "Duet"},
+          {"id": "choir", "label": "Choir"}, {"id": "spoken", "label": "Spoken"},
+          {"id": "plan_decides", "label": "Plan Decides"}
+        ]},
+        "language": {"values_import": "data/language_registry.json", "values_origin": "GENERATED from titles/languages/ registry (language_registry, D-SSM-17); each entry carries its evidence state badge; sung accepts SINGING_PROVEN, spoken accepts SPEECH_PROVEN. Until 2026-08-15 this prose SAT IN values_import itself, so the field-level import was unresolvable and capabilities served the sentence instead of the 11 codes the validator enforces - prose where a typed field belongs (Supreme Law prohibition 6)."},
+        "language_policy": {"values": [
+          {"id": "strict", "label": "Strict (refuse an unproven language)"},
+          {"id": "prefer_proven", "label": "Prefer proven (fall back and report language_fallback)"}
+        ]}
+      },
+      "default": {"value": {"mode": "instrumental", "language": "en", "language_policy": "strict"}, "evidence": "png shows Instrumental selected; strict is the honest default - a silent fallback is the deception class"}
+    },
+    {
+      "name": "lyrics", "ui_control": "Lyric Mode: None", "panel": 2, "section": "Vocal & Lyric",
+      "covers_ui_controls": ["Lyric Mode: Custom (dictated lyrics)", "Lyric Mode: AI Write + Lyric Prompt (1000)"],
+      "control": "combo", "binding": "typed", "free_text": true,
+      "values_origin": "png's three lyric modes; custom text rides Lyria's measured 'Lyrics:' prompt convention (generation-proven 2026-08-13, 7/8 Turkish words); ai_write is our Gemini stage; R1 phoneme drive applies per the language registry route",
+      "fields": {
+        "mode": {"values": [
+          {"id": "none", "label": "None"},
+          {"id": "custom", "label": "Custom (your exact words, character-for-character)"},
+          {"id": "ai_write", "label": "AI Write (theme-driven)"}
+        ]},
+        "text": {"max_length": 2000, "active_when": "mode=custom", "cap_evidence": "UI cap pending measurement: the Lyria prompt cap for the Lyrics: convention has NOT been probed; this cap is a conservative UI bound and the worker enforces the MEASURED cap once the $0 probe establishes it - it is on the probe list, never assumed"},
+        "theme": {"max_length": 1000, "active_when": "mode=ai_write", "note": "png cap 0/1000"},
+        "verify": {"type": "boolean", "note": "runs the PER gate on the separated vocal stem via stt_vertex (Gemini 2.5 Pro); returns lyrics_verification.*"},
+        "language": {"values_import": "data/language_registry.json", "values_origin": "GENERATED from titles/languages/ registry, same source as vocal.language; may differ from vocal.language for code-switching (architecture s2b.4). Until 2026-08-15 this prose sat in values_import itself; see vocal.language for the measured defect."},
+        "script": {"values": [
+          {"id": "latin", "label": "Latin"}, {"id": "auto", "label": "Auto-detect"}
+        ], "note": "G2P/Romanisation hint for the R1 phoneme drive"}
+      },
+      "default": {"value": {"mode": "none", "verify": true}, "evidence": "png shows None selected; verify=true because the returned PER number is the product's differentiator"}
+    },
+    {
+      "name": "references", "ui_control": "References / Inspiration (3 named tracks)", "panel": 2, "section": "References",
+      "covers_ui_controls": ["Upload Audio / MIDI reference"],
+      "control": "upload", "binding": "compiled", "free_text": true,
+      "values_origin": "architecture s1.3 (legal boundary) + D-SSM-24: kind=user_audio is analysed by OUR OWN code on GCE into descriptors that drive Lyria (no third-party service); kind=midi is parsed by our code into structure/tempo/key descriptors; kind=descriptor is prose; a NAMED commercial track is refused BY NAME with the legal reason (D-SSM-14)",
+      "fields": {
+        "kind": {"values": [
+          {"id": "user_audio", "label": "Your own audio file"},
+          {"id": "midi", "label": "Your MIDI file (analysed to descriptors; note-exact conditioning has no Google path today and is NOT promised)"},
+          {"id": "descriptor", "label": "Sonic description (text)"}
+        ]},
+        "url": {"type": "uri", "active_when": "kind in [user_audio, midi]"},
+        "text": {"max_length": 500, "active_when": "kind=descriptor"}
+      },
+      "constraints": {"max_items": 3},
+      "default": {"value": [], "evidence": "empty; the png's three named commercial tracks are the REFUSAL example, not a default"}
+    },
+    {
+      "name": "output_package", "ui_control": "Output Package (Single Track)", "panel": 3, "section": "Generation & Output",
+      "control": "combo", "binding": "our_stage", "free_text": false,
+      "values_origin": "png dropdown + architecture s2.2. WIRED 2026-08-23 (MUS-API-009): 'variations' now drives N separate delegate generations in the conductor (one uniform path on both Lyria surfaces, because sampleCount is a :predict-only envelope field and the Interactions body was measured to accept only {model, input}); before that date the value was accepted and consumed by NOTHING, the class D-SSM-16 bans by name",
+      "values": [
+        {"id": "single_track", "label": "Single Track"},
+        {"id": "variations", "label": "Variations (n takes via variation_count; seed is not bit-deterministic here - measured 23.87 dB apart on identical requests - so variations are REAL alternatives; EVERY take bills one generation, Clause 22)"},
+        {"id": "stems_bundle", "label": "Stems Bundle (master + 7 stems)"}
+      ],
+      "default": {"value": "single_track", "evidence": "png shows Single Track"}
+    },
+    {
+      "name": "variation_count", "ui_control": "Variations count (active with Output Package = Variations)", "panel": 3, "section": "Generation & Output",
+      "control": "slider", "binding": "our_stage", "free_text": false,
+      "values_origin": "worker contract music_lyria/models.py MAX_SAMPLE_COUNT = 4 (the Vertex predict fan-out convention used across this repo, read from that file 2026-08-23); minimum 2 because one take is not a variation set. Added 2026-08-23 (MUS-API-009): output_package=variations previously had no count carrier at all",
+      "constraints": {"min": 2, "max": 4, "step": 1},
+      "active_when": "output_package=variations",
+      "values": [
+        {"id": "2", "label": "2 takes (the minimum a variation set can mean; 2 billed generations)"},
+        {"id": "3", "label": "3 takes (3 billed generations)"},
+        {"id": "4", "label": "4 takes (the worker's MAX_SAMPLE_COUNT ceiling; 4 billed generations)"}
+      ],
+      "default": {"value": 2, "evidence": "the smallest N that satisfies the 'n takes' label; each take bills one full generation (Clause 22), so the default is the minimum the word 'variations' can honestly mean"}
+    },
+    {
+      "name": "labels", "ui_control": "Job labels (key-value provenance metadata)", "panel": 3, "section": "Generation & Output",
+      "control": "text", "binding": "our_stage", "free_text": true,
+      "values_origin": "worker contract music_lyria/models.py `labels: Dict[str, str]` (read 2026-08-23) - forwarded to the delegate and echoed in the response for provenance; no generation effect. Added 2026-08-23 (MUS-API-009): the worker supported it, the API could not carry it - a code-vs-API gap Berk's maximum-parameter rule forbids",
+      "fields": {"shape": {"type": "object", "note": "string keys to string values; validated at the boundary"}},
+      "default": {"value": null, "evidence": "optional; the worker declares no cap, so none is invented here (CLAUSE 4)"}
+    },
+    {
+      "name": "route", "ui_control": "Model selector (BT-Music v2.0)", "panel": 3, "section": "Generation & Output",
+      "control": "combo", "binding": "typed", "free_text": false,
+      "values_origin": "worker_enum music_lyria MODELS (D-SSM-24: Google models only); the UI label 'BT-Music v2.0' is the product alias for the auto route",
+      "values": [
+        {"id": "auto", "label": "BT-Music v2.0 (auto: the conductor picks per request)"},
+        {"id": "lyria-3-pro-preview", "label": "Lyria 3 Pro (full songs, vocals; generation-proven)"},
+        {"id": "lyria-3-clip-preview", "label": "Lyria 3 Clip (30 s clips)"},
+        {"id": "lyria-002", "label": "Lyria 2 (instrumental only, 16-bit 48 kHz PCM; GA)"}
+      ],
+      "default": {"value": "auto", "evidence": "png shows the alias; auto is the conductor's contract (route.why is returned)"}
+    },
+    {
+      "name": "quality", "ui_control": "Quality Mode (Draft / Balanced / Ultra)", "panel": 3, "section": "Generation & Output",
+      "control": "combo", "binding": "our_stage", "free_text": false,
+      "values_origin": "png's three tiles; maps to clip-vs-pro route choice + our conform/master depth; NO vendor quality knob is claimed (none is measured)",
+      "values": [
+        {"id": "draft", "label": "Draft (fast: clip model, single pass, no mastering)"},
+        {"id": "balanced", "label": "Balanced (pro model + two-pass master)"},
+        {"id": "ultra", "label": "Ultra (pro model + full stage chain + verification gates)"}
+      ],
+      "default": {"value": "balanced", "evidence": "png marks Balanced 'Recommended'"}
+    },
+    {
+      "name": "controls", "ui_control": "Harmony Complexity 7/10", "panel": 3, "section": "Generation & Output",
+      "covers_ui_controls": ["Rhythm Density 6/10", "Sonic Polish 8/10"],
+      "control": "slider", "binding": "compiled", "free_text": false,
+      "values_origin": "architecture s3.4: graded lexicon prose (prose_graded) on the Google-only routes; the knob-mapping A/B (build step 6b, his decision) may upgrade any of the three to a measured mapping. THE NAMED PRESETS ARE IMPORTED, NOT INLINED: data/knob_grade_lexicon.json owns the five tiers and each knob's clause per tier, so the UI combos, the planner's prompt clause and this spec can never disagree by hand (MANDATE CLAUSE 23). Added 2026-08-15 after a live render-contract control measured these three sliders as the only ones offering NO predefined values while tempo_bpm offered eight - a violation of his order 'tüm herşeyde maximum predefined değerlerimiz olmalı'. NOTE THE KEY NAME: this is `presets_import`, NOT `values_import`. A first attempt reused `values_import` and models.load_vocabulary REFUSED it - 'vocabulary data/knob_grade_lexicon.json carries zero entries' - because that key contracts a groups[].entries[] vocabulary and this lexicon is tier-shaped. The gate was right; a different shape gets its OWN typed key rather than a reused one that would have to be loosened.",
+      "presets_import": "data/knob_grade_lexicon.json",
+      "fields": {
+        "harmony_complexity": {"min": 0, "max": 10, "step": 1, "presets_from": "knob_grade_lexicon.knobs.harmony_complexity"},
+        "rhythm_density": {"min": 0, "max": 10, "step": 1, "presets_from": "knob_grade_lexicon.knobs.rhythm_density", "note": "deliberately NOT wired to any vendor knob - an invented mapping presented as a control is the accepted-and-ignored class"},
+        "sonic_polish": {"min": 0, "max": 10, "step": 1, "presets_from": "knob_grade_lexicon.knobs.sonic_polish"}
+      },
+      "default": {"value": {"harmony_complexity": 7, "rhythm_density": 6, "sonic_polish": 8}, "evidence": "the png's own slider positions"}
+    },
+    {
+      "name": "mastering", "ui_control": "Mixing / Mastering Target", "panel": 3, "section": "Generation & Output",
+      "covers_ui_controls": ["Loudness Target (-9 LUFS)"],
+      "control": "combo", "binding": "enforced", "free_text": false,
+      "values_origin": "our_stage (two-pass loudness, film-law s15 pattern: never single-pass, measured LRA 11.5->4.1 silently on one pass); target list = png + the delivery contexts the mastering stage documents",
+      "fields": {
+        "target": {"values": [
+          {"id": "cinematic_trailer", "label": "Cinematic Trailer"},
+          {"id": "streaming", "label": "Streaming (music platforms)"},
+          {"id": "broadcast", "label": "Broadcast / TV"},
+          {"id": "game", "label": "Game / interactive"},
+          {"id": "social", "label": "Social media"},
+          {"id": "none", "label": "No mastering (raw model master)"}
+        ]},
+        "loudness_lufs": {"values": [
+          {"id": "-9", "label": "-9 LUFS (trailer-loud)"}, {"id": "-11", "label": "-11 LUFS"},
+          {"id": "-14", "label": "-14 LUFS (streaming norm)"}, {"id": "-16", "label": "-16 LUFS"},
+          {"id": "-23", "label": "-23 LUFS (EBU R128 broadcast)"}
+        ]},
+        "true_peak_db": {"min": -3.0, "max": 0.0, "default": -1.0}
+      },
+      "default": {"value": {"target": "cinematic_trailer", "loudness_lufs": "-9", "true_peak_db": -1.0}, "evidence": "png shows Cinematic Trailer and -9 LUFS; measured loudness/true-peak are returned in measured.*"}
+    },
+    {
+      "name": "export", "ui_control": "Export Format (24-bit WAV)", "panel": 3, "section": "Generation & Output",
+      "control": "combo", "binding": "enforced", "free_text": false,
+      "values_origin": "our transcode stage (native|transcoded|refused per architecture s1.2); export.upsampled_from names the true source depth - a 24-bit container from a 16-bit source is packaging, not information",
+      "values": [
+        {"id": "wav24_48k", "label": "24-bit WAV 48 kHz (transcoded; upsampled_from returned)"},
+        {"id": "wav16_48k", "label": "16-bit WAV 48 kHz (native on lyria-002)"},
+        {"id": "flac_48k", "label": "FLAC 48 kHz (lossless transcode)"},
+        {"id": "mp3_320", "label": "MP3 320 kbps"},
+        {"id": "mp3_native", "label": "MP3 (native on lyria-3, 44.1 kHz measured)"}
+      ],
+      "default": {"value": "wav24_48k", "evidence": "png shows 24-bit WAV"}
+    },
+    {
+      "name": "stems", "ui_control": "Stems to Include (7 checkboxes)", "panel": 3, "section": "Generation & Output",
+      "control": "multi-select", "binding": "our_stage", "free_text": false,
+      "values_origin": "png's seven checkboxes; mechanism per stem locked by Berk's approval of option (a), 2026-08-14 18:55: separated = our own open-weights separator software on GCE; generated = Lyria beds; rendered = our master stage; every stem returns origin",
+      "values": [
+        {"id": "drums", "label": "Drums", "origin": "separated"}, {"id": "bass", "label": "Bass", "origin": "separated"},
+        {"id": "music", "label": "Music", "origin": "separated"}, {"id": "vocals", "label": "Vocals", "origin": "separated"},
+        {"id": "fx", "label": "FX", "origin": "generated"}, {"id": "ambience", "label": "Ambience", "origin": "generated"},
+        {"id": "master", "label": "Master", "origin": "rendered"}
+      ],
+      "default": {"value": ["master"], "evidence": "master always delivered; others opt-in (each costs a stage run)"}
+    },
+    {
+      "name": "rights", "ui_control": "Rights & Licensing (Commercial, full sync)", "panel": 3, "section": "Rights & Compliance",
+      "control": "toggle", "binding": "response_field", "free_text": false,
+      "values_origin": "architecture s1.4: the badge may say COMMERCIAL USE, never COPYRIGHT (USCO Part 2 + Thaler v. Perlmutter: no copyright vests in a wholly AI-generated work)",
+      "response_shape": {"commercial_use": true, "sync": true, "copyright_warranted": false, "basis": "returned verbatim with every job"},
+      "default": {"value": {"commercial_use": true, "sync": true}, "evidence": "png badge; copyright_warranted is ALWAYS false and stated"}
+    },
+    {
+      "name": "compliance", "ui_control": "C2PA Proof (Verified)", "panel": 3, "section": "Rights & Compliance",
+      "covers_ui_controls": ["DDEX AI-Credit (Verified)"],
+      "control": "toggle", "binding": "response_field", "free_text": false,
+      "values_origin": "Lyria 3 outputs carry SynthID + C2PA natively (Google launch material, read 2026-08-14); our read-back verifier proves the manifest SURVIVED our render stages (survived_render); DDEX AI-credit is our own stage; EU AI Act Art. 50(2) binding since 2026-08-02 (D-SSM-15)",
+      "response_shape": {"c2pa": {"state": "signed|absent", "survived_render": "boolean", "verified_by": "reader id"}, "ddex_ai_credit": {"state": "written|absent"}},
+      "default": {"value": {"c2pa": true, "ddex_ai_credit": true}, "evidence": "both mandatory; a green tick without a read-back is the decoration class"}
+    },
+    {
+      "name": "seed", "ui_control": "Reproducible seed (implied by Versions)", "panel": 3, "section": "Versions",
+      "covers_ui_controls": ["Versions (v1/v2/v3, current)"],
+      "control": "text", "binding": "typed", "free_text": true,
+      "values_origin": "worker_enum (seed is a real field on 5 workers); HONEST LIMIT carried in the label: a seed is a provenance record, not a re-render promise (same request twice measured 23.87 dB apart)",
+      "constraints": {"type": "integer", "min": 0},
+      "default": {"value": null, "evidence": "server assigns and RETURNS a seed when absent, so every version is at least provenance-addressable"}
+    },
+    {
+      "name": "webhook_url", "ui_control": "Generate button (async job)", "panel": 3, "section": "Generation & Output",
+      "control": "text", "binding": "our_stage", "free_text": true,
+      "values_origin": "async job contract (job_id returned immediately; completion pushed). WIRED 2026-08-23 (MUS-API-009): the conductor now POSTs the full response envelope to this URL after delivery, best-effort with a bounded timeout, and echoes the outcome in `webhook.{delivered,status|error}`; before that date the field was accepted and consumed by ZERO code lines (measured: 1 rg hit, the spec itself)",
+      "constraints": {"type": "https_uri"},
+      "default": {"value": null, "evidence": "optional; polling via job status remains available"}
+    },
+    {
+      "name": "capabilities", "ui_control": "Capability discovery (POST body flag)", "panel": 0, "section": "Discovery",
+      "control": "toggle", "binding": "our_stage", "free_text": false,
+      "values": [
+        {"id": "true", "label": "Return the discoverable matrix (no validation, no spend) — same content as GET /capabilities"}
+      ],
+      "values_origin": "lambda_function.py capabilities branch: a body of {capabilities: true} returns the discoverable matrix with no validation and no spend — the same matrix as GET /capabilities. RECORDED IN THE SPEC 2026-08-23 (MUS-API-009): the flag existed only in code, a code-vs-spec divergence Berk's audit order of 2026-08-23 exposed; the spec is the single source of truth and may not be narrower than the code",
+      "default": {"value": null, "evidence": "absent by default; GET /capabilities is the primary discovery route"}
+    },
+    {
+      "name": "analysis_outputs", "ui_control": "Sonic DNA radar (6 axes)", "panel": 3, "section": "Response-only",
+      "covers_ui_controls": ["Arrangement Overview (waveform per section)"],
+      "control": "radar", "binding": "response_field", "free_text": false,
+      "values_origin": "architecture s3.5: computed from the DELIVERED audio by our estimators; any axis without a passing control returns NOT_RUN, never a number",
+      "response_shape": {"sonic_dna": "6 axes with estimator+confidence each", "arrangement": "[{section, start_seconds, end_seconds, source: planned|detected, peaks_url}]"},
+      "default": {"value": null, "evidence": "response-only; the UI renders these, the request never sends them"}
+    },
+    {
+      "name": "client_side_echo", "ui_control": "Collaborate (comments, avatars)", "panel": 0, "section": "Client-side",
+      "covers_ui_controls": ["Storage quota (8.4 / 20 TB)", "Transport / playback + timecode"],
+      "control": "text", "binding": "client_side", "free_text": true,
+      "values_origin": "UI-local concerns; enumerated so the coverage gate can prove nothing from the png was silently dropped",
+      "default": {"value": null, "evidence": "no generation effect; BeforeTomorrow app state"}
+    }
+  ]
+}

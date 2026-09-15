@@ -1,0 +1,88 @@
+/* Connected states inherit the accepted site's palette and controls. */
+.connected-notice{font-size:.92rem;line-height:1.7;color:#c5cde0;overflow-wrap:anywhere}
+.connected-notice+.connected-notice{margin-top:16px}
+.connected-caption{font-size:.82rem;color:var(--muted,#aab6cf);margin:0 0 14px}
+.connected-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:16px}
+.connected-actions:empty{display:none}
+.request-plan-facts{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0}.request-plan-facts dt{font-size:.75rem;color:#a9b9d2}.request-plan-facts dd{margin:5px 0 0;font-size:.88rem;overflow-wrap:anywhere}.request-plan-section{margin-top:16px;font-size:.86rem}.request-plan-section summary{padding:12px 0;cursor:pointer;color:#d6bdfa}.request-plan-section pre{white-space:pre-wrap;overflow-wrap:anywhere;font:400 .8rem/1.7 inherit;background:#070c1566;border:1px solid #8291ac30;border-radius:10px;padding:15px;max-height:420px;overflow:auto}.request-binding{margin:12px 0}.request-binding small{color:#b9c4d8}.request-parameter-list{display:grid;gap:12px;margin-top:22px;max-height:50vh;overflow:auto}.request-parameter-list>div{display:flex;justify-content:space-between;gap:15px;font-size:.8rem}.request-parameter-list code{color:#b8a5d8}
+.connected-result{margin-top:16px;font-size:.78rem;color:#bbc6dc}.connected-result summary{cursor:pointer;color:#d5bff4;padding:9px 0}.connected-result dl{display:grid;gap:8px;margin:10px 0}.connected-result dl>div{display:flex;justify-content:space-between;gap:12px}.connected-result dd{margin:0;color:#eef2fb}.connected-result p{font-size:.73rem;line-height:1.6;margin:12px 0 0;color:#aab8d0}
+.connected-error,.connected-job-error{color:#ffd4d1;background:#9b3d4321;border-left:2px solid #ed9994;padding:11px 14px;font-size:.85rem;line-height:1.55;overflow-wrap:anywhere}
+.connected-error{margin-top:16px}.connected-error[hidden]{display:none}
+.connected-danger{background:#b83f59!important;color:white!important}
+.connected-library-status{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px;margin:20px 0;border:1px solid #ad83dd3d;background:linear-gradient(120deg,#3a235447,#14253e3b);border-radius:16px}
+.connected-library-status[hidden]{display:none}.connected-library-status strong{display:block;font-size:1.15rem;letter-spacing:-.025em}.connected-library-status p{font-size:.86rem;line-height:1.65;color:#bdc9e0;margin-top:7px;max-width:650px}.connected-library-status .connected-actions{margin:0;flex-shrink:0}
+.connected-unavailable{font-size:.8rem;line-height:1.5;color:#d6c4ed;max-width:200px}
+.connected-account-actions,.connected-sign-in{display:flex;flex-direction:column;gap:18px;margin:25px 0}.connected-account-actions>a{text-align:center}.connected-sign-in .primary{width:100%}.connected-sign-in .connected-notice{text-align:center;font-size:.82rem}
+.connected-unavailable-card{padding:23px;border:1px solid #a080cc45;border-radius:13px;background:#4c347a1e;line-height:1.6}.connected-unavailable-card>.icon{margin-bottom:16px;color:#cab1f2}.connected-unavailable-card strong{display:block;font-size:1rem}.connected-unavailable-card p{margin-top:10px;color:#bdc9e0;font-size:.88rem}
+.connected-playlist-row{gap:12px}.connected-playlist-row>.connected-row-actions{flex:0 0 auto;display:flex;gap:2px;align-items:center}.connected-row-actions .icon-button{width:33px;height:40px}.connected-missing{display:flex;align-items:center;justify-content:center;background:#262a3e;color:#c3b0e1;font-size:1.6rem}.connected-explanation{display:grid;gap:17px}.connected-explanation .connected-notice{margin:0}
+.connected-jobs{margin:32px 0 12px;padding:24px;border:1px solid #8797b333;border-radius:18px;background:linear-gradient(130deg,#182034c7,#12101ec2);box-shadow:0 18px 50px #02060c20}.connected-jobs[hidden]{display:none}
+.connected-jobs-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:20px}.connected-jobs-heading h2{font-size:1.28rem;letter-spacing:-.035em}.connected-jobs-heading>.text-button{font-size:.8rem;flex-shrink:0}.connected-eyebrow{text-transform:uppercase;font-size:.63rem;letter-spacing:.18em;color:#b799e0;margin-bottom:6px}
+.connected-job-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:14px;max-height:600px;overflow:auto;scrollbar-color:#8c6dad55 transparent;padding:2px}
+.connected-job{padding:20px;border:1px solid #788dac30;border-radius:12px;background:#080d189c;min-width:0}.connected-job-top{display:flex;align-items:center;gap:12px}.connected-job-top>div{flex:1;min-width:0}.connected-job h3{font-size:.97rem;letter-spacing:-.02em;line-height:1.4}.connected-job time,.connected-job-top small{font-size:.73rem;color:#a9b6cf}.connected-job-number{font-size:.66rem;color:#8d99b0;font-variant-numeric:tabular-nums;letter-spacing:.08em}.connected-job-dot{width:8px;height:8px;background:#bea3ea;border-radius:50%;flex-shrink:0;box-shadow:0 0 12px #af89ec55}.connected-job[data-status=ready] .connected-job-dot{background:#7edab3;box-shadow:0 0 12px #7edab333}.connected-job[data-status=failed] .connected-job-dot,.connected-job[data-status=ingest_failed] .connected-job-dot,.connected-job[data-status=uncertain] .connected-job-dot,.connected-job[data-status=partial] .connected-job-dot{background:#edb48c;box-shadow:none}
+.connected-job-description{font-size:.82rem;color:#b3bfd7;line-height:1.65;margin-top:15px}.connected-job-error{margin-top:12px;font-size:.78rem}.connected-job-takes{display:flex;flex-direction:column;gap:8px;margin-top:16px}.connected-job-takes .secondary{display:flex;gap:10px;align-items:center;justify-content:flex-start;font-size:.82rem;min-height:42px;padding:9px 12px;text-align:left}.connected-job-takes .icon{width:16px;height:16px}.connected-job-takes span{overflow-wrap:anywhere}.connected-job .connected-actions .secondary{font-size:.78rem;min-height:40px;padding:8px 12px}
+@media(max-width:760px){.connected-library-status{align-items:flex-start;flex-direction:column;gap:17px;padding:20px}.connected-unavailable{max-width:none}.connected-jobs{padding:18px;margin-top:24px}.connected-job-list{max-height:520px}.connected-jobs-heading{gap:14px}.connected-jobs-heading>.text-button{font-size:.73rem}.connected-jobs-heading h2{font-size:1.12rem}.connected-job{padding:17px}.connected-playlist-row{flex-wrap:wrap}.connected-playlist-row>.connected-row-actions{margin-left:auto}.connected-playlist-row>div:not(.connected-row-actions){min-width:130px}}
+@media(prefers-reduced-motion:reduce){.connected-jobs *{scroll-behavior:auto}}
+/* Explicit TV input mode also makes the remote contract testable on desktop. */
+.remote-mode-toggle{position:relative;flex-shrink:0;border:1px solid #bca0ef55;border-radius:20px;background:#101320ed;color:#ded2f7;padding:7px 13px;font:500 11px/1.3 Inter,sans-serif;cursor:pointer}
+.remote-mode-toggle[aria-pressed=true]{background:#9b68e8;color:#fff;border-color:#d9c3ff}
+.privacy-settings-toggle{position:relative;flex-shrink:0;border:1px solid #bca0ef55;border-radius:20px;background:#101320ed;color:#ded2f7;padding:7px 13px;font:500 11px/1.3 Inter,sans-serif;cursor:pointer}
+.remote-mode-toggle:focus-visible{outline:3px solid #ddc8ff;outline-offset:4px}
+@media(max-width:600px){.remote-mode-toggle{font-size:0;padding:9px}.remote-mode-toggle::after{content:'TV';font-size:10px}.privacy-settings-toggle{font-size:0;padding:9px}.privacy-settings-toggle::after{content:'Privacy';font-size:10px}}
+.topbar nav{margin-left:auto}.topbar .remote-mode-toggle{margin-left:18px}
+@media(max-width:1100px){.topbar .remote-mode-toggle{margin-left:8px}}
+@media(max-width:600px){.topbar .brand>span{display:none}.topbar .remote-mode-toggle{font-size:0;width:36px;padding:7px;flex-shrink:0}.topbar .remote-mode-toggle::after{content:'TV';font-size:10px}}
+/* Create & Play sits directly under the prompt box (owner order 2026-09-15); the row inherits its grid
+   from styles.css and only needs vertical breathing room now that it follows .prompt-wrap instead of Energy. */
+.prompt-wrap+.creation-actions{margin-top:12px}
+.creation-actions+.form-status:not([hidden]){margin-top:4px}
+.creation-actions~.quick-controls{margin-top:14px}
+/* "Open 3D" in the bottom bar: an icon-button that also carries a two-letter label, on the same violet
+   tokens the prompt box uses (#9458cc / #b167fc). Under 900px the bar's icon buttons are hidden by
+   styles.css and the expanded player dialog exposes the same action instead. */
+.open-3d-button{width:auto;height:36px;border-radius:18px;padding:0 12px 0 9px;gap:5px;font-size:.78rem;font-weight:700;letter-spacing:.04em;color:#e7dcff;border:1px solid #9458cc66;background:linear-gradient(130deg,#1a1230,#2a1b4a)}
+.open-3d-button:hover{border-color:#b167fccc;color:#fff}
+.open-3d-button .icon{width:18px;height:18px}
+.open-3d-button[aria-busy=true]{opacity:.6}
+/* FIRST-SCREEN HERO ACTIONS (owner order 2026-09-15 10:59, approved 11:10 "başla"): two equal large actions under
+   the prompt — "Create & Play" (existing primary gradient) and "Play something for me" (deep-cyan glass) — with the
+   "And keep it going" Yes / No pair under the second. The pair is a segmented control whose pressed state is
+   rendered from the server listening-session flag (see player.js syncKeepGoingChoice); it never owns state. */
+.hero-actions{grid-template-columns:1fr 1fr;gap:14px;align-items:start;padding:0;margin-top:14px}
+.hero-action{display:flex;flex-direction:column;gap:8px;min-width:0}
+.hero-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;width:100%;min-height:64px;padding:14px 22px;border-radius:16px;font-size:1.15rem;font-weight:700;letter-spacing:-.01em;line-height:1.15;text-align:center;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.hero-actions .primary.hero-button{font-size:1.15rem;padding:14px 22px;border-radius:16px}
+.hero-button .icon{width:24px;height:24px}
+.hero-button:hover{transform:translateY(-1px)}
+.hero-button:active{transform:translateY(0)}
+.hero-button-listen{color:#eaf9ff;border:1px solid #3fd8ff66;background:radial-gradient(120% 140% at 0% 0%,#0c3f4f 0%,#0a1a2a 45%,#0b1220 100%);box-shadow:0 0 0 1px #3fd8ff14 inset,0 10px 30px #06b6d41f}
+.hero-button-listen:hover{border-color:#66e3ffb3;box-shadow:0 0 0 1px #3fd8ff33 inset,0 14px 36px #06b6d433}
+.hero-button-listen .icon{border:1px solid #9be9ff;border-radius:50%;padding:4px}
+.hero-secondary{align-self:center;font-size:.86rem;gap:8px;padding:6px 10px;color:#c9c0e6}
+.hero-secondary .icon{width:18px;height:18px}
+.keep-going{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 10px 8px 14px;border-radius:12px;background:#0b1220b3;border:1px solid #2a3a5a66}
+.keep-going-label{font-size:.86rem;color:#c5d6ee;white-space:nowrap}
+.keep-going-choice{display:inline-flex;padding:3px;border-radius:999px;background:#060b14;border:1px solid #2a3a5a}
+.keep-going-option{min-width:52px;min-height:30px;padding:4px 14px;border-radius:999px;font-size:.84rem;font-weight:600;color:#a9bbd6;transition:background .18s ease,color .18s ease}
+.keep-going-option[aria-pressed=true]{background:linear-gradient(135deg,#3fd8ff,#1aa7e0);color:#04121c;box-shadow:0 0 14px #3fd8ff55}
+.keep-going-option:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+@media(max-width:767px){.hero-actions{grid-template-columns:1fr;gap:12px}.hero-button{min-height:58px;font-size:1.05rem}.hero-actions .primary.hero-button{font-size:1.05rem}}
+@media(prefers-reduced-motion:reduce){.hero-button,.keep-going-option{transition:none}.hero-button:hover{transform:none}}
+/* ACCOUNTS (owner order 2026-09-15 10:30). Password LENGTH meter (NIST 800-63B-4: length is the rule, no
+   composition hints anywhere), the one remaining external-provider button when unavailable, and account.html. */
+.password-meter{margin:6px 2px 0;font-size:.8rem;color:#aab6cf}
+.password-meter[data-state=short]{color:#ffd4a3}.password-meter[data-state=ok]{color:#9be9ff}
+/* Replaces the "Forgot password?" link while the site has no mail transport (account-client.js, identity.mail=false). */
+.recovery-note{font-size:.84rem;line-height:1.45;color:#b7c2d9;margin-top:-5px;margin-bottom:17px}
+.provider.is-unavailable{opacity:.5;cursor:not-allowed}
+.provider.is-unavailable::after{content:' · not connected yet';font-size:.78rem;color:#aab6cf}
+.account-page{max-width:560px;margin:24px auto;padding:28px 26px 22px;border-radius:18px}
+.account-page h1{font-size:1.9rem;margin-bottom:10px}.account-page h2{font-size:1.05rem;margin:22px 0 10px;color:#e7dcff}
+.account-facts{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;margin:12px 0 10px;font-size:.95rem}
+.account-facts dt{color:#aab6cf}.account-facts dd{margin:0;overflow-wrap:anywhere}
+.account-form{display:flex;flex-direction:column;gap:10px;padding-top:6px;border-top:1px solid #2a3a5a66}
+.account-form .primary,.account-form .danger{align-self:flex-start;margin-top:4px}
+.account-form-danger h2{color:#ffbdbd}.account-hint{font-size:.86rem;color:#c5cde0}
+.danger{display:inline-flex;align-items:center;min-height:44px;padding:10px 20px;border-radius:12px;border:1px solid #ff8a8a99;color:#ffd6d6;background:#3a0f16}
+.danger:hover{background:#4d1119}
+.account-link-button{display:inline-flex;align-items:center;min-height:44px;padding:10px 22px;border-radius:12px;margin-top:8px}
+@media(max-width:600px){.account-page{margin:12px 0;padding:20px 16px}}

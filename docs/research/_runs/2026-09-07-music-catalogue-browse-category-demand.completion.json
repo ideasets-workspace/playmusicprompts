@@ -1,0 +1,72 @@
+{
+  "schema": "berk.deep-research/v1",
+  "status": "complete",
+  "date": "2026-09-07",
+  "mode": "MODE_B_OWNER_RESEARCH_ORDER",
+  "topic": "music-catalogue-browse-category-demand",
+  "main_report": "docs/research/2026-09-07-music-catalogue-browse-category-demand.md",
+  "main_report_sha256": "764ED8521EE0E4DE1696AB1239E73121F9EFA6265FF43C4EF262B431BF426DAE",
+  "main_report_lines": 329,
+  "main_report_chars": 67573,
+  "index": "docs/README.md does not exist in this project (measured Test-Path=False, 2026-09-07); no index entry could be appended; recorded in known_gaps of the main report",
+  "source_counts": {
+    "authoritative_provenance_families": 23,
+    "academic": 8,
+    "academic_full": 6,
+    "primary_full": 12,
+    "method_note": "R11.2 deduplication applied: multiple press relays of one first-party producer's data (e.g. 3 Spotify Newsroom pages, 3 independent press outlets covering the same Luminate figure) are counted as one primary provenance family plus separate corroboration entries, not as separate authoritative sources. Full arithmetic shown in the main report's Source register section."
+  },
+  "claim_counts": {
+    "verified_3plus": 6,
+    "single_source": 3,
+    "unverified": 1
+  },
+  "planned_artifacts": 4,
+  "artifacts": [
+    {
+      "path": "docs/research/_runs/2026-09-07-music-catalogue-browse-category-demand.preflight.json",
+      "role": "R2 preflight record",
+      "read_back": true
+    },
+    {
+      "path": "docs/research/_runs/2026-09-07-music-catalogue-browse-category-demand.scope-plan.md",
+      "role": "R3 scope plan",
+      "read_back": true
+    },
+    {
+      "path": "docs/research/2026-09-07-music-catalogue-browse-category-demand.md",
+      "role": "main report",
+      "sha256": "764ED8521EE0E4DE1696AB1239E73121F9EFA6265FF43C4EF262B431BF426DAE",
+      "read_back": true
+    },
+    {
+      "path": "docs/research/_runs/2026-09-07-music-catalogue-browse-category-demand.completion.json",
+      "role": "this completion manifest",
+      "read_back": false
+    }
+  ],
+  "standards_ledger": true,
+  "scope_plan": true,
+  "source_register": true,
+  "query_ledger": true,
+  "claim_ledger": true,
+  "contradiction_ledger": true,
+  "preservation_matrix": "N/A - no owner-atom preservation required for this non-frontier, non-rule-authoring research task",
+  "english_artifacts": true,
+  "indexed": false,
+  "delegations": {
+    "note": "This subagent did not further delegate to any sub-subagent (system constraint: subagent may not spawn additional subagents unless explicitly requested). All research performed directly by this subagent."
+  },
+  "frontier_axes": "N/A - R0.2 frontier trigger was not fired by the delegating brief; this is a MODE B research order under R0.1, not a frontier push. The R14 six-axis competitor/SOTA/API/customer/future/growth document tree does not apply.",
+  "known_gaps": [
+    "No 2024/2025/2026 IFPI global genre-popularity top-10 ranking exists in the searched scope; 2023 is the newest available edition with such a ranking.",
+    "India and China genre-level (not just market-scale) demand data is thin relative to Western-market IFPI/Luminate data.",
+    "No AI-generated-music-specific instrumental/vocal demand split exists in any source found; proxies used and labelled as proxies.",
+    "Academic situational-listening literature sampled is German/Australian-heavy, not literally global.",
+    "Every Noise at Once's machine-readable popularity list remains unavailable (JS-rendered, frozen since Dec 2023).",
+    "This subagent could not access PlayMusicPrompts' own literal genre/mood/era vocabulary files; cross-referencing recommended cells against the actual 2,196/114/14-entry lists is named as a downstream step for the delegating agent/Berk.",
+    "docs/README.md does not exist in this project; no index entry appended.",
+    "The Mordor Intelligence commercial-background-music market-size figure is single-source; no second market-sizing firm cross-checked this session."
+  ],
+  "completed_at": "2026-09-07T08:15:00+03:00"
+}

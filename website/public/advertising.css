@@ -1,0 +1,11 @@
+.pmp-ima-container { display:none; }
+.pmp-ad-break[hidden],.pmp-banner[hidden] { display:none !important; }
+.pmp-ad-break { position:fixed; z-index:150; left:50%; bottom:145px; transform:translateX(-50%); display:flex; align-items:center; gap:14px; max-width:calc(100vw - 32px); padding:12px 18px; border:1px solid #6a4a89; border-radius:16px; background:#191121; color:#f6efff; box-shadow:0 12px 40px #0008; font-family:inherit; font-size:14px; line-height:1.4; }
+.pmp-ad-status { font-weight:600; }
+.pmp-ad-progress { color:#c0aecf; white-space:nowrap; font-size:12px; }
+.pmp-ad-break button { color:#faf4ff; background:#392447; border:1px solid #70588a; border-radius:9px; padding:8px 12px; font:inherit; white-space:nowrap; cursor:pointer; }
+.pmp-ad-break button:disabled { opacity:.6; cursor:default; }
+.pmp-ad-break button:focus-visible { outline:3px solid #dfc8ff; outline-offset:3px; }
+.pmp-banner { position:relative; z-index:2; width:fit-content; max-width:calc(100vw - 32px); margin:24px auto 160px; text-align:center; overflow:hidden; }
+.pmp-banner>span { display:block; margin-bottom:5px; color:#9d91aa; font-size:10px; letter-spacing:.08em; }
+@media(max-width:600px) { .pmp-ad-break { bottom:120px; flex-wrap:wrap; justify-content:center; gap:8px; width:calc(100vw - 32px); } .pmp-ad-status { flex-basis:100%; text-align:center; } }

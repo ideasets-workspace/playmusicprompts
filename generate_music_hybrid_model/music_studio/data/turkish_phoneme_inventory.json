@@ -1,0 +1,1698 @@
+{
+  "$schema_id": "berk.music-studio-phoneme-inventory/v1",
+  "language": "tr",
+  "generated_from": {
+    "path": "docs/research/2026-08-14-turkish-singing-phonology-and-g2p-for-synthesis.md",
+    "section": "## 2.2 THE MACHINE-READABLE PHONEME TABLE",
+    "source_bytes": 102700
+  },
+  "generator": "scripts/extract_turkish_phoneme_table.py",
+  "provenance_rule": "EVERY cell in this file was PARSED from the research document named above, never retyped. The document's legend defines the presence states; its section 2.5 verifies the row count. Re-run the generator after any edit to the document and the control will re-verify the counts.",
+  "presence_states": {
+    "Y": "present",
+    "len": "present_without_length",
+    "art": "present_other_convention",
+    "—": "absent",
+    "-": "absent"
+  },
+  "covered_languages": [
+    "ZH",
+    "EN",
+    "JA",
+    "KO",
+    "RU",
+    "ES",
+    "FR",
+    "DE",
+    "IT"
+  ],
+  "phone_count": 69,
+  "absent_from_union": [
+    "ɫː",
+    "ʃː",
+    "ʎː"
+  ],
+  "coverage_by_language": {
+    "ZH": {
+      "present": 16,
+      "partial": 0,
+      "absent": 53,
+      "coverage_present_only": 0.2319,
+      "coverage_including_partial": 0.2319
+    },
+    "EN": {
+      "present": 27,
+      "partial": 0,
+      "absent": 42,
+      "coverage_present_only": 0.3913,
+      "coverage_including_partial": 0.3913
+    },
+    "JA": {
+      "present": 33,
+      "partial": 1,
+      "absent": 35,
+      "coverage_present_only": 0.4783,
+      "coverage_including_partial": 0.4928
+    },
+    "KO": {
+      "present": 29,
+      "partial": 1,
+      "absent": 39,
+      "coverage_present_only": 0.4203,
+      "coverage_including_partial": 0.4348
+    },
+    "RU": {
+      "present": 41,
+      "partial": 2,
+      "absent": 26,
+      "coverage_present_only": 0.5942,
+      "coverage_including_partial": 0.6232
+    },
+    "ES": {
+      "present": 24,
+      "partial": 0,
+      "absent": 45,
+      "coverage_present_only": 0.3478,
+      "coverage_including_partial": 0.3478
+    },
+    "FR": {
+      "present": 26,
+      "partial": 0,
+      "absent": 43,
+      "coverage_present_only": 0.3768,
+      "coverage_including_partial": 0.3768
+    },
+    "DE": {
+      "present": 29,
+      "partial": 0,
+      "absent": 40,
+      "coverage_present_only": 0.4203,
+      "coverage_including_partial": 0.4203
+    },
+    "IT": {
+      "present": 28,
+      "partial": 5,
+      "absent": 36,
+      "coverage_present_only": 0.4058,
+      "coverage_including_partial": 0.4783
+    }
+  },
+  "phones": [
+    {
+      "index": 1,
+      "phone": "a",
+      "merged": "a",
+      "base": "a",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "a",
+      "presence_by_language": {
+        "ZH": "present",
+        "EN": "absent",
+        "JA": "present",
+        "KO": "absent",
+        "RU": "present",
+        "ES": "present",
+        "FR": "present",
+        "DE": "present",
+        "IT": "present"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 2,
+      "phone": "aː",
+      "merged": "aː",
+      "base": "a",
+      "diacritics": [
+        "MODIFIER LETTER TRIANGULAR COLON"
+      ],
+      "is_long": true,
+      "turkish_letters": "a (from ğ / loan)",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "present",
+        "KO": "absent",
+        "RU": "absent",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "present",
+        "IT": "present"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 3,
+      "phone": "b",
+      "merged": "b",
+      "base": "b",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "b",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "present",
+        "JA": "present",
+        "KO": "present",
+        "RU": "present",
+        "ES": "present",
+        "FR": "present",
+        "DE": "present",
+        "IT": "present"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 4,
+      "phone": "bː",
+      "merged": "bː",
+      "base": "b",
+      "diacritics": [
+        "MODIFIER LETTER TRIANGULAR COLON"
+      ],
+      "is_long": true,
+      "turkish_letters": "bb",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "present",
+        "KO": "absent",
+        "RU": "present",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "absent",
+        "IT": "present"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 5,
+      "phone": "c",
+      "merged": "c",
+      "base": "c",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "k before front V",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "present",
+        "JA": "present",
+        "KO": "present",
+        "RU": "present",
+        "ES": "present",
+        "FR": "present",
+        "DE": "present",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 6,
+      "phone": "cː",
+      "merged": "cː",
+      "base": "c",
+      "diacritics": [
+        "MODIFIER LETTER TRIANGULAR COLON"
+      ],
+      "is_long": true,
+      "turkish_letters": "kk before front V",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "present",
+        "KO": "present",
+        "RU": "absent",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "absent",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 7,
+      "phone": "dʒ",
+      "merged": "dʒ",
+      "base": "dʒ",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "c",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "present",
+        "JA": "absent",
+        "KO": "absent",
+        "RU": "absent",
+        "ES": "absent",
+        "FR": "present",
+        "DE": "absent",
+        "IT": "present_other_convention"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 8,
+      "phone": "dʒː",
+      "merged": "dʒː",
+      "base": "dʒ",
+      "diacritics": [
+        "MODIFIER LETTER TRIANGULAR COLON"
+      ],
+      "is_long": true,
+      "turkish_letters": "cc",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "absent",
+        "KO": "absent",
+        "RU": "absent",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "absent",
+        "IT": "present_other_convention"
+      },
+      "in_covered_union": true,
+      "union_note": "YES (IT only)"
+    },
+    {
+      "index": 9,
+      "phone": "d̪",
+      "merged": "d̪",
+      "base": "d",
+      "diacritics": [
+        "COMBINING BRIDGE BELOW"
+      ],
+      "is_long": false,
+      "turkish_letters": "d",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "present",
+        "JA": "absent",
+        "KO": "absent",
+        "RU": "present",
+        "ES": "present",
+        "FR": "absent",
+        "DE": "absent",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 10,
+      "phone": "d̪ː",
+      "merged": "d̪ː",
+      "base": "d",
+      "diacritics": [
+        "COMBINING BRIDGE BELOW",
+        "MODIFIER LETTER TRIANGULAR COLON"
+      ],
+      "is_long": true,
+      "turkish_letters": "dd",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "absent",
+        "KO": "absent",
+        "RU": "present",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "absent",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES (RU only)"
+    },
+    {
+      "index": 11,
+      "phone": "e",
+      "merged": "e",
+      "base": "e",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "e",
+      "presence_by_language": {
+        "ZH": "present",
+        "EN": "absent",
+        "JA": "present",
+        "KO": "present",
+        "RU": "present",
+        "ES": "present",
+        "FR": "present",
+        "DE": "absent",
+        "IT": "present"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 12,
+      "phone": "eː",
+      "merged": "eː",
+      "base": "e",
+      "diacritics": [
+        "MODIFIER LETTER TRIANGULAR COLON"
+      ],
+      "is_long": true,
+      "turkish_letters": "e (from ğ)",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "present",
+        "KO": "present",
+        "RU": "absent",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "present",
+        "IT": "present"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 13,
+      "phone": "f",
+      "merged": "f",
+      "base": "f",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "f",
+      "presence_by_language": {
+        "ZH": "present",
+        "EN": "present",
+        "JA": "absent",
+        "KO": "absent",
+        "RU": "present",
+        "ES": "present",
+        "FR": "present",
+        "DE": "present",
+        "IT": "present"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 14,
+      "phone": "fː",
+      "merged": "fː",
+      "base": "f",
+      "diacritics": [
+        "MODIFIER LETTER TRIANGULAR COLON"
+      ],
+      "is_long": true,
+      "turkish_letters": "ff",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "absent",
+        "KO": "absent",
+        "RU": "present",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "absent",
+        "IT": "present"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 15,
+      "phone": "h",
+      "merged": "h",
+      "base": "h",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "h",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "present",
+        "JA": "present",
+        "KO": "present",
+        "RU": "absent",
+        "ES": "present",
+        "FR": "absent",
+        "DE": "present",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 16,
+      "phone": "hː",
+      "merged": "hː",
+      "base": "h",
+      "diacritics": [
+        "MODIFIER LETTER TRIANGULAR COLON"
+      ],
+      "is_long": true,
+      "turkish_letters": "hh",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "present",
+        "KO": "absent",
+        "RU": "absent",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "absent",
+        "IT": "present"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 17,
+      "phone": "i",
+      "merged": "i",
+      "base": "i",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "i",
+      "presence_by_language": {
+        "ZH": "present",
+        "EN": "present",
+        "JA": "present",
+        "KO": "present",
+        "RU": "absent",
+        "ES": "present",
+        "FR": "present",
+        "DE": "present",
+        "IT": "present"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 18,
+      "phone": "iː",
+      "merged": "iː",
+      "base": "i",
+      "diacritics": [
+        "MODIFIER LETTER TRIANGULAR COLON"
+      ],
+      "is_long": true,
+      "turkish_letters": "i (from ğ)",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "present",
+        "JA": "present",
+        "KO": "present",
+        "RU": "absent",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "present",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 19,
+      "phone": "j",
+      "merged": "j",
+      "base": "j",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "y",
+      "presence_by_language": {
+        "ZH": "present",
+        "EN": "absent",
+        "JA": "present",
+        "KO": "present",
+        "RU": "present",
+        "ES": "present",
+        "FR": "present",
+        "DE": "present",
+        "IT": "present"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 20,
+      "phone": "jː",
+      "merged": "jː",
+      "base": "j",
+      "diacritics": [
+        "MODIFIER LETTER TRIANGULAR COLON"
+      ],
+      "is_long": true,
+      "turkish_letters": "yy",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "absent",
+        "KO": "absent",
+        "RU": "present",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "absent",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES (RU only)"
+    },
+    {
+      "index": 21,
+      "phone": "k",
+      "merged": "k",
+      "base": "k",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "k",
+      "presence_by_language": {
+        "ZH": "present",
+        "EN": "present",
+        "JA": "present",
+        "KO": "present",
+        "RU": "present",
+        "ES": "present",
+        "FR": "present",
+        "DE": "present",
+        "IT": "present"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 22,
+      "phone": "kː",
+      "merged": "kː",
+      "base": "k",
+      "diacritics": [
+        "MODIFIER LETTER TRIANGULAR COLON"
+      ],
+      "is_long": true,
+      "turkish_letters": "kk",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "present",
+        "KO": "present",
+        "RU": "present",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "absent",
+        "IT": "present_other_convention"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 23,
+      "phone": "m",
+      "merged": "m",
+      "base": "m",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "m",
+      "presence_by_language": {
+        "ZH": "present",
+        "EN": "present",
+        "JA": "present",
+        "KO": "present",
+        "RU": "present",
+        "ES": "present",
+        "FR": "present",
+        "DE": "present",
+        "IT": "present"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 24,
+      "phone": "mː",
+      "merged": "mː",
+      "base": "m",
+      "diacritics": [
+        "MODIFIER LETTER TRIANGULAR COLON"
+      ],
+      "is_long": true,
+      "turkish_letters": "mm",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "present",
+        "KO": "present",
+        "RU": "present",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "absent",
+        "IT": "present"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 25,
+      "phone": "n̪",
+      "merged": "n̪",
+      "base": "n",
+      "diacritics": [
+        "COMBINING BRIDGE BELOW"
+      ],
+      "is_long": false,
+      "turkish_letters": "n",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "absent",
+        "KO": "absent",
+        "RU": "present",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "absent",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES (RU only)"
+    },
+    {
+      "index": 26,
+      "phone": "n̪ː",
+      "merged": "n̪ː",
+      "base": "n",
+      "diacritics": [
+        "COMBINING BRIDGE BELOW",
+        "MODIFIER LETTER TRIANGULAR COLON"
+      ],
+      "is_long": true,
+      "turkish_letters": "nn",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "absent",
+        "KO": "absent",
+        "RU": "present",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "absent",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES (RU only)"
+    },
+    {
+      "index": 27,
+      "phone": "o",
+      "merged": "o",
+      "base": "o",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "o",
+      "presence_by_language": {
+        "ZH": "present",
+        "EN": "absent",
+        "JA": "present",
+        "KO": "present",
+        "RU": "present",
+        "ES": "present",
+        "FR": "present",
+        "DE": "absent",
+        "IT": "present"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 28,
+      "phone": "oː",
+      "merged": "oː",
+      "base": "o",
+      "diacritics": [
+        "MODIFIER LETTER TRIANGULAR COLON"
+      ],
+      "is_long": true,
+      "turkish_letters": "o (from ğ)",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "present",
+        "KO": "present",
+        "RU": "absent",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "present",
+        "IT": "present"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 29,
+      "phone": "p",
+      "merged": "p",
+      "base": "p",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "p",
+      "presence_by_language": {
+        "ZH": "present",
+        "EN": "present",
+        "JA": "present",
+        "KO": "present",
+        "RU": "present",
+        "ES": "present",
+        "FR": "present",
+        "DE": "present",
+        "IT": "present"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 30,
+      "phone": "pː",
+      "merged": "pː",
+      "base": "p",
+      "diacritics": [
+        "MODIFIER LETTER TRIANGULAR COLON"
+      ],
+      "is_long": true,
+      "turkish_letters": "pp",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "present",
+        "KO": "present",
+        "RU": "present",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "absent",
+        "IT": "present"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 31,
+      "phone": "s̪",
+      "merged": "s̪",
+      "base": "s",
+      "diacritics": [
+        "COMBINING BRIDGE BELOW"
+      ],
+      "is_long": false,
+      "turkish_letters": "s",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "absent",
+        "KO": "absent",
+        "RU": "present",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "absent",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES (RU only)"
+    },
+    {
+      "index": 32,
+      "phone": "s̪ː",
+      "merged": "s̪ː",
+      "base": "s",
+      "diacritics": [
+        "COMBINING BRIDGE BELOW",
+        "MODIFIER LETTER TRIANGULAR COLON"
+      ],
+      "is_long": true,
+      "turkish_letters": "ss",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "absent",
+        "KO": "absent",
+        "RU": "present",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "absent",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES (RU only)"
+    },
+    {
+      "index": 33,
+      "phone": "tʃ",
+      "merged": "tʃ",
+      "base": "tʃ",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "ç",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "present",
+        "JA": "absent",
+        "KO": "absent",
+        "RU": "absent",
+        "ES": "present",
+        "FR": "present",
+        "DE": "present",
+        "IT": "present_other_convention"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 34,
+      "phone": "tʃː",
+      "merged": "tʃː",
+      "base": "tʃ",
+      "diacritics": [
+        "MODIFIER LETTER TRIANGULAR COLON"
+      ],
+      "is_long": true,
+      "turkish_letters": "çç",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "absent",
+        "KO": "absent",
+        "RU": "absent",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "absent",
+        "IT": "present_other_convention"
+      },
+      "in_covered_union": true,
+      "union_note": "YES (IT only)"
+    },
+    {
+      "index": 35,
+      "phone": "t̪",
+      "merged": "t̪",
+      "base": "t",
+      "diacritics": [
+        "COMBINING BRIDGE BELOW"
+      ],
+      "is_long": false,
+      "turkish_letters": "t",
+      "presence_by_language": {
+        "ZH": "present",
+        "EN": "present",
+        "JA": "absent",
+        "KO": "absent",
+        "RU": "present",
+        "ES": "present",
+        "FR": "present",
+        "DE": "absent",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 36,
+      "phone": "t̪ː",
+      "merged": "t̪ː",
+      "base": "t",
+      "diacritics": [
+        "COMBINING BRIDGE BELOW",
+        "MODIFIER LETTER TRIANGULAR COLON"
+      ],
+      "is_long": true,
+      "turkish_letters": "tt",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "absent",
+        "KO": "absent",
+        "RU": "present",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "absent",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES (RU only)"
+    },
+    {
+      "index": 37,
+      "phone": "u",
+      "merged": "u",
+      "base": "u",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "u",
+      "presence_by_language": {
+        "ZH": "present",
+        "EN": "absent",
+        "JA": "absent",
+        "KO": "present",
+        "RU": "present",
+        "ES": "present",
+        "FR": "present",
+        "DE": "absent",
+        "IT": "present"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 38,
+      "phone": "uː",
+      "merged": "uː",
+      "base": "u",
+      "diacritics": [
+        "MODIFIER LETTER TRIANGULAR COLON"
+      ],
+      "is_long": true,
+      "turkish_letters": "u (from ğ)",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "absent",
+        "KO": "present",
+        "RU": "absent",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "present",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 39,
+      "phone": "v",
+      "merged": "v",
+      "base": "v",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "v",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "present",
+        "JA": "present",
+        "KO": "absent",
+        "RU": "present",
+        "ES": "present",
+        "FR": "present",
+        "DE": "present",
+        "IT": "present"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 40,
+      "phone": "vː",
+      "merged": "vː",
+      "base": "v",
+      "diacritics": [
+        "MODIFIER LETTER TRIANGULAR COLON"
+      ],
+      "is_long": true,
+      "turkish_letters": "vv",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "absent",
+        "KO": "absent",
+        "RU": "present",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "absent",
+        "IT": "present"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 41,
+      "phone": "y",
+      "merged": "y",
+      "base": "y",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "ü",
+      "presence_by_language": {
+        "ZH": "present",
+        "EN": "absent",
+        "JA": "absent",
+        "KO": "absent",
+        "RU": "absent",
+        "ES": "absent",
+        "FR": "present",
+        "DE": "absent",
+        "IT": "present"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 42,
+      "phone": "yː",
+      "merged": "yː",
+      "base": "y",
+      "diacritics": [
+        "MODIFIER LETTER TRIANGULAR COLON"
+      ],
+      "is_long": true,
+      "turkish_letters": "ü (from ğ)",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "absent",
+        "KO": "absent",
+        "RU": "absent",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "present",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES (DE only)"
+    },
+    {
+      "index": 43,
+      "phone": "z̪",
+      "merged": "z̪",
+      "base": "z",
+      "diacritics": [
+        "COMBINING BRIDGE BELOW"
+      ],
+      "is_long": false,
+      "turkish_letters": "z",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "absent",
+        "KO": "absent",
+        "RU": "present",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "absent",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES (RU only)"
+    },
+    {
+      "index": 44,
+      "phone": "z̪ː",
+      "merged": "z̪ː",
+      "base": "z",
+      "diacritics": [
+        "COMBINING BRIDGE BELOW",
+        "MODIFIER LETTER TRIANGULAR COLON"
+      ],
+      "is_long": true,
+      "turkish_letters": "zz",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "absent",
+        "KO": "absent",
+        "RU": "present",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "absent",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES (RU only)"
+    },
+    {
+      "index": 45,
+      "phone": "ç",
+      "merged": "ç",
+      "base": "c",
+      "diacritics": [
+        "COMBINING CEDILLA"
+      ],
+      "is_long": false,
+      "turkish_letters": "h before front V",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "present",
+        "JA": "present",
+        "KO": "present",
+        "RU": "present",
+        "ES": "present",
+        "FR": "absent",
+        "DE": "present",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 46,
+      "phone": "çː",
+      "merged": "çː",
+      "base": "c",
+      "diacritics": [
+        "COMBINING CEDILLA",
+        "MODIFIER LETTER TRIANGULAR COLON"
+      ],
+      "is_long": true,
+      "turkish_letters": "hh before front V",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "present",
+        "KO": "present",
+        "RU": "present",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "absent",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 47,
+      "phone": "ø",
+      "merged": "ø",
+      "base": "ø",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "ö",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "absent",
+        "KO": "absent",
+        "RU": "absent",
+        "ES": "absent",
+        "FR": "present",
+        "DE": "absent",
+        "IT": "present"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 48,
+      "phone": "øː",
+      "merged": "øː",
+      "base": "ø",
+      "diacritics": [
+        "MODIFIER LETTER TRIANGULAR COLON"
+      ],
+      "is_long": true,
+      "turkish_letters": "ö (from ğ)",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "absent",
+        "KO": "absent",
+        "RU": "absent",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "present",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES (DE only)"
+    },
+    {
+      "index": 49,
+      "phone": "ŋ",
+      "merged": "ŋ",
+      "base": "ŋ",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "n before velar",
+      "presence_by_language": {
+        "ZH": "present",
+        "EN": "present",
+        "JA": "present",
+        "KO": "present",
+        "RU": "absent",
+        "ES": "present",
+        "FR": "present",
+        "DE": "present",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 50,
+      "phone": "ɛ",
+      "merged": "ɛ",
+      "base": "ɛ",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "e in closed syll.",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "present",
+        "JA": "absent",
+        "KO": "present",
+        "RU": "present",
+        "ES": "absent",
+        "FR": "present",
+        "DE": "present",
+        "IT": "present"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 51,
+      "phone": "ɟ",
+      "merged": "ɟ",
+      "base": "ɟ",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "g before front V",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "present",
+        "JA": "present",
+        "KO": "present",
+        "RU": "present",
+        "ES": "present",
+        "FR": "present",
+        "DE": "present",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 52,
+      "phone": "ɟː",
+      "merged": "ɟː",
+      "base": "ɟ",
+      "diacritics": [
+        "MODIFIER LETTER TRIANGULAR COLON"
+      ],
+      "is_long": true,
+      "turkish_letters": "gg before front V",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "present",
+        "KO": "absent",
+        "RU": "present",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "absent",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 53,
+      "phone": "ɡ",
+      "merged": "ɡ",
+      "base": "ɡ",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "g",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "present",
+        "JA": "present",
+        "KO": "present",
+        "RU": "present",
+        "ES": "present",
+        "FR": "present",
+        "DE": "present",
+        "IT": "present"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 54,
+      "phone": "ɨ",
+      "merged": "ɨ",
+      "base": "ɨ",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "ı / i word-final open syll.",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "present",
+        "KO": "present",
+        "RU": "present",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "absent",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES (see 2.3)"
+    },
+    {
+      "index": 55,
+      "phone": "ɪ",
+      "merged": "ɪ",
+      "base": "ɪ",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "i word-final open syll.",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "present",
+        "JA": "absent",
+        "KO": "absent",
+        "RU": "present",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "present",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 56,
+      "phone": "ɫ",
+      "merged": "ɫ",
+      "base": "ɫ",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "l with back V",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "present",
+        "JA": "absent",
+        "KO": "absent",
+        "RU": "present",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "absent",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 57,
+      "phone": "ɫː",
+      "merged": "ɫː",
+      "base": "ɫ",
+      "diacritics": [
+        "MODIFIER LETTER TRIANGULAR COLON"
+      ],
+      "is_long": true,
+      "turkish_letters": "ll with back V",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "absent",
+        "KO": "absent",
+        "RU": "present_without_length",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "absent",
+        "IT": "absent"
+      },
+      "in_covered_union": false,
+      "union_note": "NO — length only"
+    },
+    {
+      "index": 58,
+      "phone": "ɯ",
+      "merged": "ɯ",
+      "base": "ɯ",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "ı",
+      "presence_by_language": {
+        "ZH": "present",
+        "EN": "absent",
+        "JA": "present",
+        "KO": "absent",
+        "RU": "absent",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "absent",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 59,
+      "phone": "ɯː",
+      "merged": "ɯː",
+      "base": "ɯ",
+      "diacritics": [
+        "MODIFIER LETTER TRIANGULAR COLON"
+      ],
+      "is_long": true,
+      "turkish_letters": "ı (from ğ)",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "present",
+        "KO": "absent",
+        "RU": "absent",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "absent",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES (JA only)"
+    },
+    {
+      "index": 60,
+      "phone": "ɲ",
+      "merged": "ɲ",
+      "base": "ɲ",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "n before palatal",
+      "presence_by_language": {
+        "ZH": "present",
+        "EN": "present",
+        "JA": "present",
+        "KO": "present",
+        "RU": "present",
+        "ES": "present",
+        "FR": "present",
+        "DE": "present",
+        "IT": "present"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 61,
+      "phone": "ɾ",
+      "merged": "ɾ",
+      "base": "ɾ",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "r",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "present",
+        "JA": "present",
+        "KO": "present",
+        "RU": "absent",
+        "ES": "present",
+        "FR": "absent",
+        "DE": "absent",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 62,
+      "phone": "ɾː",
+      "merged": "ɾː",
+      "base": "ɾ",
+      "diacritics": [
+        "MODIFIER LETTER TRIANGULAR COLON"
+      ],
+      "is_long": true,
+      "turkish_letters": "rr",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "present_other_convention",
+        "KO": "absent",
+        "RU": "absent",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "absent",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES (JA only)"
+    },
+    {
+      "index": 63,
+      "phone": "ʃ",
+      "merged": "ʃ",
+      "base": "ʃ",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "ş",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "present",
+        "JA": "absent",
+        "KO": "absent",
+        "RU": "absent",
+        "ES": "absent",
+        "FR": "present",
+        "DE": "present",
+        "IT": "present"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 64,
+      "phone": "ʃː",
+      "merged": "ʃː",
+      "base": "ʃ",
+      "diacritics": [
+        "MODIFIER LETTER TRIANGULAR COLON"
+      ],
+      "is_long": true,
+      "turkish_letters": "şş",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "absent",
+        "KO": "absent",
+        "RU": "absent",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "absent",
+        "IT": "absent"
+      },
+      "in_covered_union": false,
+      "union_note": "NO — length only"
+    },
+    {
+      "index": 65,
+      "phone": "ʊ",
+      "merged": "ʊ",
+      "base": "ʊ",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "u word-final open syll.",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "present",
+        "JA": "absent",
+        "KO": "absent",
+        "RU": "present",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "present",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 66,
+      "phone": "ʎ",
+      "merged": "ʎ",
+      "base": "ʎ",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "l before front V",
+      "presence_by_language": {
+        "ZH": "present",
+        "EN": "present",
+        "JA": "absent",
+        "KO": "present",
+        "RU": "present",
+        "ES": "present",
+        "FR": "present",
+        "DE": "absent",
+        "IT": "present"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    },
+    {
+      "index": 67,
+      "phone": "ʎː",
+      "merged": "ʎː",
+      "base": "ʎ",
+      "diacritics": [
+        "MODIFIER LETTER TRIANGULAR COLON"
+      ],
+      "is_long": true,
+      "turkish_letters": "ll before front V",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "absent",
+        "KO": "present_without_length",
+        "RU": "present_without_length",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "absent",
+        "IT": "absent"
+      },
+      "in_covered_union": false,
+      "union_note": "NO — length only"
+    },
+    {
+      "index": 68,
+      "phone": "ʏ",
+      "merged": "ʏ",
+      "base": "ʏ",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "ü word-final open syll.",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "absent",
+        "JA": "absent",
+        "KO": "absent",
+        "RU": "absent",
+        "ES": "absent",
+        "FR": "absent",
+        "DE": "present",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES (DE only)"
+    },
+    {
+      "index": 69,
+      "phone": "ʒ",
+      "merged": "ʒ",
+      "base": "ʒ",
+      "diacritics": [],
+      "is_long": false,
+      "turkish_letters": "j",
+      "presence_by_language": {
+        "ZH": "absent",
+        "EN": "present",
+        "JA": "absent",
+        "KO": "absent",
+        "RU": "absent",
+        "ES": "absent",
+        "FR": "present",
+        "DE": "absent",
+        "IT": "absent"
+      },
+      "in_covered_union": true,
+      "union_note": "YES"
+    }
+  ]
+}

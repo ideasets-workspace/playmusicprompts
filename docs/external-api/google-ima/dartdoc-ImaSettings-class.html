@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en"><head><script type="text/javascript" src="https://www.googletagmanager.com/gtm.js?id=GTM-MX6DBN9" async="async"></script><script type="text/javascript" src="/static/hash-atjdgfma/js/gtm.js"></script><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/><meta name="generator" content="made with love by dartdoc"/><meta name="description" content="API docs for the ImaSettings class from the interactive_media_ads library, for the Dart programming language."/><title>ImaSettings class - interactive_media_ads library - Dart API</title><link rel="canonical" href="https://pub.dev/documentation/interactive_media_ads/latest/interactive_media_ads/ImaSettings-class.html"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/><link rel="stylesheet" href="/static/hash-atjdgfma/css/dartdoc.css"/><link rel="icon" href="/favicon.ico?hash=nk4nss8c7444fg0chird9erqef2vkhb8"/></head><body class="light-theme" data-base-href="../" data-using-base-href="false"><noscript><iframe class="-gtm-iframe" src="https://www.googletagmanager.com/ns.html?id=GTM-MX6DBN9" height="0" width="0"></iframe></noscript><script src="/static/hash-atjdgfma/js/dark-init.js"></script><div id="overlay-under-drawer"></div><header id="title"><span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span><a class="hidden-xs" href="/"><img class="-dart-logo-img" src="/static/hash-atjdgfma/img/dart-logo.svg" alt="" width="30" height="30" role="presentation" aria-label="Go to the landing page of pub.dev"/></a><ol class="breadcrumbs gt-separated dark hidden-xs"><li><a href="/packages/interactive_media_ads">interactive_media_ads package</a></li><li><a href="../index.html">documentation</a></li><li><a href="../interactive_media_ads/">interactive_media_ads.dart</a></li><li class="self-crumb">ImaSettings class</li></ol><div class="self-name">ImaSettings class</div><form class="search navbar-right" role="search"><input id="search-box" class="form-control typeahead" type="text" placeholder="Loading search..." autocomplete="off"/></form><button id="theme-button" class="toggle" aria-label="Light and dark mode toggle" title="Toggle between light and dark mode"><span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">dark_mode</span><span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">light_mode</span></button></header><main><div id="dartdoc-main-content" class="main-content" data-above-sidebar="interactive_media_ads/interactive_media_ads-library-sidebar.html" data-below-sidebar="interactive_media_ads/ImaSettings-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">ImaSettings</span> class 
+ 
+</h1></div>
+
+    
+<div class="desc markdown markdown-body">
+  <p>Defines general SDK settings that are used when creating an <a href="../interactive_media_ads/AdsLoader-class.html">AdsLoader</a>.</p>
+<h2 id="platform-specific-features">Platform-Specific Features</h2>
+<p>This class contains an underlying implementation provided by the current
+platform. Once a platform implementation is imported, the examples below
+can be followed to use features provided by a platform's implementation.</p>
+<p>Below is an example of setting platform-specific creation parameters for
+iOS and Android:</p>
+<pre class="language-dart"><code class="language-dart">PlatformImaSettingsCreationParams params =
+    const PlatformImaSettingsCreationParams();
+
+if (InteractiveMediaAdsPlatform.instance is IOSInteractiveMediaAdsPlatform) {
+  params = IOSImaSettingsCreationParams
+      .fromPlatformImaSettingsCreationParams(
+    params,
+  );
+} else if (InteractiveMediaAdsPlatform.instance is AndroidInteractiveMediaAdsPlatform) {
+  params = AndroidImaSettingsCreationParams
+      .fromPlatformImaSettingsCreationParams(
+    params,
+  );
+}
+
+final ImaSettings settings = ImaSettings.fromPlatformCreationParams(
+  params,
+);
+</code></pre>
+<p>Below is an example of accessing the platform-specific implementation for
+iOS and Android:</p>
+<pre class="language-dart"><code class="language-dart">final ImaSettings settings = ImaSettings();
+
+switch (settings.platform) {
+  case final IOSImaSettings iosSettings:
+    // ...
+  case final AndroidImaSettings androidSettings:
+    // ...
+}
+</code></pre>
+</div>
+
+
+    <div>
+      <dl class="dl-horizontal">
+        
+
+        
+        
+
+
+        
+        
+  <dt>Annotations</dt>
+  <dd>
+    <ul class="annotation-list clazz-relationships">
+        <li>@<a href="https://api.flutter.dev/flutter/widgets/immutable-constant.html">immutable</a></li>
+    </ul>
+  </dd>
+
+
+      </dl>
+    </div>
+
+    
+  <div class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+    <dl class="constructor-summary-list">
+        <dt id="ImaSettings.new" class="callable">
+          <span class="name"><a href="../interactive_media_ads/ImaSettings/ImaSettings.html">ImaSettings</a></span><span class="signature">({<span class="parameter" id="param-language"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">language</span></span>})</span>
+        </dt>
+        <dd>
+          Creates an <a href="../interactive_media_ads/ImaSettings-class.html">ImaSettings</a>.
+        </dd>
+        <dt id="ImaSettings.fromPlatform" class="callable">
+          <span class="name"><a href="../interactive_media_ads/ImaSettings/ImaSettings.fromPlatform.html">ImaSettings.fromPlatform</a></span><span class="signature">(<span class="parameter" id="fromPlatform-param-platform"><span class="type-annotation">PlatformImaSettings</span> <span class="parameter-name">platform</span></span>)</span>
+        </dt>
+        <dd>
+          Constructs an <a href="../interactive_media_ads/ImaSettings-class.html">ImaSettings</a> from a specific platform implementation.
+            <div class="constructor-modifier features">const</div>
+        </dd>
+        <dt id="ImaSettings.fromPlatformCreationParams" class="callable">
+          <span class="name"><a href="../interactive_media_ads/ImaSettings/ImaSettings.fromPlatformCreationParams.html">ImaSettings.fromPlatformCreationParams</a></span><span class="signature">(<span class="parameter" id="fromPlatformCreationParams-param-params"><span class="type-annotation">PlatformImaSettingsCreationParams</span> <span class="parameter-name">params</span></span>)</span>
+        </dt>
+        <dd>
+          Constructs an <a href="../interactive_media_ads/ImaSettings-class.html">ImaSettings</a> from creation params for a specific platform.
+        </dd>
+    </dl>
+  </div>
+    
+  <div class="summary offset-anchor" id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="hashCode" class="property">
+  <span class="name"><a href="../interactive_media_ads/ImaSettings/hashCode.html">hashCode</a></span>
+  <span class="signature">→ <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="platform" class="property">
+  <span class="name"><a href="../interactive_media_ads/ImaSettings/platform.html">platform</a></span>
+  <span class="signature">→ PlatformImaSettings</span>
+  
+
+</dt>
+<dd>
+  Implementation of <code>PlatformImaSettings</code> for the current platform.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">→ <a href="https://api.flutter.dev/flutter/dart-core/Type-class.html">Type</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </div>
+
+    
+  <div class="summary offset-anchor" id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">→ dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="setAutoPlayAdBreaks" class="callable">
+  <span class="name"><a href="../interactive_media_ads/ImaSettings/setAutoPlayAdBreaks.html">setAutoPlayAdBreaks</a></span><span class="signature">(<wbr><span class="parameter" id="setAutoPlayAdBreaks-param-autoPlayAdBreaks"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">autoPlayAdBreaks</span></span>)
+    <span class="returntype parameter">→ <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Specifies whether to automatically play VMAP and ad rules ad breaks.
+  
+
+</dd>
+
+        <dt id="setDebugMode" class="callable">
+  <span class="name"><a href="../interactive_media_ads/ImaSettings/setDebugMode.html">setDebugMode</a></span><span class="signature">(<wbr><span class="parameter" id="setDebugMode-param-enabled"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">enabled</span></span>)
+    <span class="returntype parameter">→ <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Enables and disables the debug mode, which is disabled by default.
+  
+
+</dd>
+
+        <dt id="setFeatureFlags" class="callable">
+  <span class="name"><a href="../interactive_media_ads/ImaSettings/setFeatureFlags.html">setFeatureFlags</a></span><span class="signature">(<wbr><span class="parameter" id="setFeatureFlags-param-featureFlags"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">featureFlags</span></span>)
+    <span class="returntype parameter">→ <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Sets the feature flags and their states to control experimental features.
+  
+
+</dd>
+
+        <dt id="setMaxRedirects" class="callable">
+  <span class="name"><a href="../interactive_media_ads/ImaSettings/setMaxRedirects.html">setMaxRedirects</a></span><span class="signature">(<wbr><span class="parameter" id="setMaxRedirects-param-maxRedirects"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">maxRedirects</span></span>)
+    <span class="returntype parameter">→ <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Specifies maximum number of redirects after which subsequent redirects
+will be denied, and the ad load aborted.
+  
+
+</dd>
+
+        <dt id="setPlayerType" class="callable">
+  <span class="name"><a href="../interactive_media_ads/ImaSettings/setPlayerType.html">setPlayerType</a></span><span class="signature">(<wbr><span class="parameter" id="setPlayerType-param-playerType"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">playerType</span></span>)
+    <span class="returntype parameter">→ <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Sets the partner specified video player that is integrating with the SDK.
+  
+
+</dd>
+
+        <dt id="setPlayerVersion" class="callable">
+  <span class="name"><a href="../interactive_media_ads/ImaSettings/setPlayerVersion.html">setPlayerVersion</a></span><span class="signature">(<wbr><span class="parameter" id="setPlayerVersion-param-playerVersion"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">playerVersion</span></span>)
+    <span class="returntype parameter">→ <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Sets the partner specified player version that is integrating with the
+SDK.
+  
+
+</dd>
+
+        <dt id="setPpid" class="callable">
+  <span class="name"><a href="../interactive_media_ads/ImaSettings/setPpid.html">setPpid</a></span><span class="signature">(<wbr><span class="parameter" id="setPpid-param-ppid"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">ppid</span></span>)
+    <span class="returntype parameter">→ <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Sets the Publisher Provided Identification (PPID) sent with ads request.
+  
+
+</dd>
+
+        <dt id="setSessionID" class="callable">
+  <span class="name"><a href="../interactive_media_ads/ImaSettings/setSessionID.html">setSessionID</a></span><span class="signature">(<wbr><span class="parameter" id="setSessionID-param-sessionID"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">sessionID</span></span>)
+    <span class="returntype parameter">→ <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Sets the session ID to identify a single user session.
+  
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">→ <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </div>
+    
+  <div class="summary offset-anchor" id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable">
+  <span class="name"><a href="../interactive_media_ads/ImaSettings/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">→ <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The equality operator.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+    </dl>
+  </div>
+    
+    
+    
+
+  </div><div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left"><header id="header-search-sidebar" class="hidden-l"><form class="search-sidebar" role="search"><input id="search-sidebar" class="form-control typeahead" type="text" placeholder="Loading search..." autocomplete="off"/></form></header><ol id="sidebar-nav" class="breadcrumbs gt-separated dark hidden-l"><li><a href="/packages/interactive_media_ads">interactive_media_ads package</a></li><li><a href="../index.html">documentation</a></li><li><a href="../interactive_media_ads/">interactive_media_ads</a></li><li class="self-crumb">ImaSettings class</li></ol>
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+
+
+
+    <h5>interactive_media_ads library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div></main><footer><span class="no-break">interactive_media_ads 0.3.0+17</span></footer><script src="/static/hash-atjdgfma/dartdoc/resources/highlight.pack.js"></script><script src="/static/hash-atjdgfma/dartdoc/resources/docs.dart.js"></script></body></html>

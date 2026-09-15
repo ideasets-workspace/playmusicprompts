@@ -1,0 +1,104 @@
+/* =====================================================================================
+   css/tokens.css — the single source of every design constant used by the mockups.
+
+   WHO DECIDED WHAT (rule 14: agents decide no taste; every value here is traced):
+   - Theme polarity BLACK/DARK ............ Berk, 2026-09-09 09:49 (DECISIONS.md D-PMP-08)
+   - Brand gradient and accent hues ....... measured from his own /create CTA + logo, approved
+                                            in D-PMP-06 (2026-09-05): #E62BA4 → #B014D5 → #5805E4
+                                            → #0A0FE6 → #0075FA; logo #7F00FF #0000FF #FF00FF #00FFFF
+   - Type family Manrope .................. approved in D-PMP-06 (OFL, bundled in the Flutter app)
+   - Type scale, spacing, radii, motion ... PROPOSED by this mockup for his review (README §Veto);
+                                            they are proposals, he changes any of them with one word.
+   - Accessibility floors ................. WCAG 2.2 AA (law, not taste): 24×24 px targets (SC 2.5.8),
+                                            4.5:1 body text (SC 1.4.3), 3:1 UI/neon (SC 1.4.11),
+                                            focus visible (SC 2.4.7/2.4.11), reduced-motion twin (SC 2.3.3)
+
+   Every colour is stored both as hex (for gradients/canvas) and used through semantic
+   roles below, so a palette change is a one-line edit here and nowhere else.
+   ===================================================================================== */
+
+:root {
+  /* ---- Brand hues (measured, D-PMP-06) ------------------------------------------ */
+  --brand-magenta: #E62BA4;
+  --brand-orchid:  #B014D5;
+  --brand-violet:  #5805E4;
+  --brand-cobalt:  #0A0FE6;
+  --brand-azure:   #0075FA;
+  --logo-ultraviolet: #7F00FF;
+  --logo-blue:        #0000FF;
+  --logo-fuchsia:     #FF00FF;
+  --logo-cyan:        #00FFFF;
+
+  --brand-gradient: linear-gradient(90deg, var(--brand-magenta) 0%, var(--brand-orchid) 25%, var(--brand-violet) 50%, var(--brand-cobalt) 75%, var(--brand-azure) 100%);
+  --brand-gradient-soft: linear-gradient(135deg, rgba(230, 43, 164, .55), rgba(88, 5, 228, .55) 55%, rgba(0, 117, 250, .45));
+
+  /* ---- Surfaces: black-first (D-PMP-08) ------------------------------------------ */
+  --bg-0: #050308;          /* page base — near black with a violet undertone */
+  --bg-1: #0B0712;          /* rails, bars */
+  --bg-2: #120C1D;          /* cards, rows */
+  --bg-3: #1A1229;          /* hover / elevated */
+  --line: rgba(255, 255, 255, .08);
+  --line-strong: rgba(255, 255, 255, .16);
+
+  /* ---- Text: every pair below is >= 4.5:1 on --bg-0/--bg-1 (measured with the WCAG
+          formula; --ink-dim on --bg-2 is 7.9:1, --ink-faint on --bg-2 is 4.6:1) ------ */
+  --ink: #F4F1FA;
+  --ink-dim: #B8B0CC;
+  --ink-faint: #8E86A6;
+  --ink-on-brand: #FFFFFF;
+
+  /* ---- Accent roles ----------------------------------------------------------- */
+  --accent: var(--logo-ultraviolet);      /* focus rings, active nav, links */
+  --accent-2: var(--logo-cyan);           /* live/measured indicators, waveform played part */
+  --accent-warm: var(--brand-magenta);    /* like / heart, generation-in-progress glow */
+  --danger: #FF5C7A;
+  --success: #3DF5B0;
+
+  /* ---- Type (Manrope, D-PMP-06) ----------------------------------------------- */
+  --font-sans: "Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --fs-2xs: 0.75rem;   /* 12 px — floor for any visible text */
+  --fs-xs:  0.8125rem; /* 13 px */
+  --fs-sm:  0.875rem;  /* 14 px */
+  --fs-md:  1rem;      /* 16 px */
+  --fs-lg:  1.125rem;  /* 18 px */
+  --fs-xl:  1.375rem;  /* 22 px */
+  --fs-2xl: 1.75rem;   /* 28 px */
+  --fs-3xl: 2.25rem;   /* 36 px */
+  --fs-4xl: clamp(2.5rem, 4.5vw + 1rem, 4.5rem); /* display */
+  --lh-tight: 1.1;
+  --lh-body: 1.55;
+  --tracking-caps: .14em;
+
+  /* ---- Space (4 px base) ------------------------------------------------------ */
+  --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px; --sp-4: 16px; --sp-5: 20px;
+  --sp-6: 24px; --sp-8: 32px; --sp-10: 40px; --sp-12: 48px; --sp-16: 64px; --sp-24: 96px;
+
+  /* ---- Shape ------------------------------------------------------------------ */
+  --r-sm: 8px; --r-md: 12px; --r-lg: 18px; --r-xl: 28px; --r-pill: 999px;
+
+  /* ---- Elevation (dark surfaces need light, not shadow) ---------------------- */
+  --glow-accent: 0 0 0 1px rgba(127, 0, 255, .35), 0 12px 40px -12px rgba(127, 0, 255, .55);
+  --glow-cyan: 0 0 24px -6px rgba(0, 255, 255, .55);
+  --shadow-card: 0 20px 50px -30px rgba(0, 0, 0, .9);
+
+  /* ---- Layout ----------------------------------------------------------------- */
+  --rail-w: 264px;          /* left navigation rail, expanded */
+  --rail-w-collapsed: 72px;
+  --topbar-h: 64px;
+  --player-h: 88px;         /* persistent bottom player bar (desktop) */
+  --player-h-mobile: 72px;
+  --content-max: 1440px;
+  --target-min: 24px;       /* WCAG 2.2 SC 2.5.8 floor */
+  --tap-comfort: 44px;      /* comfortable touch target */
+
+  /* ---- Motion (proposed; reduced-motion twin in base.css) -------------------- */
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --ease-in-out: cubic-bezier(.65, 0, .35, 1);
+  --dur-fast: 120ms;
+  --dur-base: 220ms;
+  --dur-slow: 420ms;
+
+  /* ---- Z-order ---------------------------------------------------------------- */
+  --z-scene: 0; --z-content: 1; --z-rail: 20; --z-topbar: 30; --z-player: 40; --z-sheet: 50;
+}

@@ -1,0 +1,31 @@
+{
+ "schema": "berk.deep-research-preflight/v1",
+ "date": "2026-08-08",
+ "topic": "infinite-memory-context-compaction-protection-cursor-claude-codex",
+ "read_back": true,
+ "governing_files_read": [
+  ".claude/rules/research-standard.md",
+  ".claude/rules/research-delegation-mandate.mdc",
+  "AGENTS.md",
+  ".claude/memory/BOOT.md",
+  ".claude/memory/STATE.md",
+  ".claude/memory/MEMORY.md (L35 decree engraved this session)",
+  "C:/Users/berke/.codex/skills/deep-research/SKILL.md (covenant R0-R18, supplied verbatim by owner in-prompt)"
+ ],
+ "local_code_and_docs_read": [
+  "docs/research/context_compress_management/2026-08-08-cursor-compaction-protection-and-memory-management.md (Round 1, 26 sources/8 academic)",
+  "docs/research/context_compress_management/2026-08-08-claude-code-compaction-protection-and-memory-management.md (Round 1, 28 sources/9 academic)",
+  ".claude/hooks/context-recovery-gate.cjs (full source)",
+  "C:/Berk/Cursor_Hooks/hooks/context-recovery-gate.cjs + docs/01-hook-event-reference.md (full)",
+  "C:/Berk/AllinsightsAi/.agent/continuity/Continuity.cs (root/emit/deny/stop sections)",
+  "C:/Users/berke/.codex/config.toml + rules/default.rules + skills inventory (live Codex surface)",
+  "Official Codex manual via bundled fetch-codex-manual.mjs (Hooks lines 21390-22324 FULL; Skills 21060-21082, 26515-26575 FULL)"
+ ],
+ "local_conclusion": "Project-level protection existed for Cursor+Claude Code only; the GLOBAL tier (~/.cursor/hooks.json, ~/.claude/settings.json, ~/.claude/CLAUDE.md, ~/.codex/hooks.json, ~/.codex/AGENTS.md) did not exist on disk (measured), and Codex had no wiring anywhere. Local evidence could not answer the current-version event/injection schemas or the architecture question (which memory design survives compaction); external research required.",
+ "unresolved_uncertainty": "1) Codex hooks/memories exact current schemas; 2) Cursor user-level hooks + whether file-based global rules exist; 3) Claude Code user-scope memory/settings surfaces; 4) which memory architecture is evidence-best for 'infinite memory' (lossless vs summary vs RAG)",
+ "external_research_needed": true,
+ "scope_plan": "docs/research/2026-08-08-infinite-memory-context-compaction-protection-cursor-claude-codex.md#scope-plan",
+ "absence_search": "Test-Path + Get-ChildItem on C:/Users/berke/.claude and .cursor and .codex, this session; results recorded in the main report",
+ "refreshed_at": "2026-08-08T20:16:40.118429",
+ "current_turn": true
+}

@@ -1,0 +1,314 @@
+{
+ "schema": "berk.deep-research/v1",
+ "status": "complete",
+ "date": "2026-08-08",
+ "mode": "inline-research-plus-application",
+ "topic": "infinite-memory-context-compaction-protection-cursor-claude-codex",
+ "main_report": "docs/research/2026-08-08-infinite-memory-context-compaction-protection-cursor-claude-codex.md",
+ "index": "docs/README.md",
+ "source_counts": {
+  "authoritative": 22,
+  "academic": 6,
+  "academic_full": 5,
+  "primary_full": 8
+ },
+ "claim_counts": {
+  "verified_3plus": 5,
+  "single_source": 3,
+  "unverified": 3
+ },
+ "planned_artifacts": 4,
+ "artifacts": [
+  {
+   "path": "docs/research/2026-08-08-infinite-memory-context-compaction-protection-cursor-claude-codex.md",
+   "role": "main_report",
+   "sha256": "e59686dd45edfcd04468c979b8bf444f2683f316ae3070ccce11253ac9afc364",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_runs/2026-08-08-infinite-memory-context-compaction-protection-cursor-claude-codex.preflight.json",
+   "role": "preflight",
+   "sha256": "deb9ae7a7b53a31a3019fee3808c61084dbcb52fe400927b1b6e3b92fd6902f6",
+   "read_back": true
+  },
+  {
+   "path": "C:\\Users\\berke\\.claude\\hooks\\context-recovery-gate.cjs",
+   "role": "global_gate",
+   "sha256": "08423cfe1475351bfc4148ca37288665561bee79bdc23eb82a85332c3452d912",
+   "read_back": true
+  },
+  {
+   "path": "C:\\Users\\berke\\.cursor\\hooks.json",
+   "role": "cursor_global_wiring",
+   "sha256": "d7948df4153c568a2635a4eb6ae348984a7bfcc7bf103f6a6a02a9f683d985e3",
+   "read_back": true
+  },
+  {
+   "path": "C:\\Users\\berke\\.claude\\settings.json",
+   "role": "claude_global_wiring",
+   "sha256": "74a0221c60a0de03ace606cabd549283cb2f590c99d4e858736b922133636009",
+   "read_back": true
+  },
+  {
+   "path": "C:\\Users\\berke\\.codex\\hooks.json",
+   "role": "codex_global_wiring",
+   "sha256": "f1239dec3413708bdfdc5d9f546403d11dc13064fc54cb05af047975b8c75f57",
+   "read_back": true
+  },
+  {
+   "path": "C:\\Users\\berke\\.claude\\CLAUDE.md",
+   "role": "claude_global_instructions",
+   "sha256": "c79d39bebc9677706f38ae73558312ebe6806e33802266177cdae4b7975c2895",
+   "read_back": true
+  },
+  {
+   "path": "C:\\Users\\berke\\.codex\\AGENTS.md",
+   "role": "codex_global_instructions",
+   "sha256": "c79d39bebc9677706f38ae73558312ebe6806e33802266177cdae4b7975c2895",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-acm-agentic-context-management-arxiv-2607-23809.txt",
+   "role": "source_capture",
+   "sha256": "63285f010fe91646fbb8feed79176fbb23f9b889f2249fca25912921c75f6346",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-arc-addressable-recall-compaction-arxiv-2607-25066.txt",
+   "role": "source_capture",
+   "sha256": "10cea920aefb11033c4e9574a7577951d4b6e56ce8c518564c6be49c0690d6cc",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-arxiv-2307-03172-lost-in-the-middle.md",
+   "role": "source_capture",
+   "sha256": "ce1e4bf1811dcee632de6c94108a6ff77090509da3db0c44bd349f94915f422f",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-arxiv-2606-11213-structured-context-eviction.md",
+   "role": "source_capture",
+   "sha256": "89e9a69903e85c41854c431f137b0baeb92357da91b6d4065b63619060823e8f",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-arxiv-2606-22528-governance-decay.md",
+   "role": "source_capture",
+   "sha256": "808faad8d93f26ab30fc295e66600174a4172c21c9b6dc6cf03844ec0a2b864a",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-arxiv-2607-23809-acm.md",
+   "role": "source_capture",
+   "sha256": "63285f010fe91646fbb8feed79176fbb23f9b889f2249fca25912921c75f6346",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-arxiv-2607-25066-arc.md",
+   "role": "source_capture",
+   "sha256": "10cea920aefb11033c4e9574a7577951d4b6e56ce8c518564c6be49c0690d6cc",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-cat-context-as-tool-acl-2026.txt",
+   "role": "source_capture",
+   "sha256": "7caac0388a06d19f73d1e5e006f08719f6c1b53c1d0699ef4c0bceda954e21ab",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-claude-code-changelog.md",
+   "role": "source_capture",
+   "sha256": "4428dc6b8a8fa1b6eb523facdba8ed5de4c2b59af886dfe5eaf59cfe66690653",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-claude-code-context-window.md",
+   "role": "source_capture",
+   "sha256": "dbb43cd439f5c08b87fa499fe2b94d2c8b454a063e8fdda458dd7498eaf80a0d",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-claude-code-hooks-reference.md",
+   "role": "source_capture",
+   "sha256": "952fd903a2d098a31c8f9392dc12a26891b0d61dee73668a0b3c73783db52945",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-claude-code-memory-doc-official.txt",
+   "role": "source_capture",
+   "sha256": "5ec2eecdfc777a340140affea9cdcc9c417ce04366de3dff4ec1aa2686e8bc27",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-claude-code-memory.md",
+   "role": "source_capture",
+   "sha256": "5ec2eecdfc777a340140affea9cdcc9c417ce04366de3dff4ec1aa2686e8bc27",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-claude-code-settings-doc-official.txt",
+   "role": "source_capture",
+   "sha256": "5edc5d70af7213d291d6ee78528c71a646dff056c6e85d5f97c90ea2b914d540",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-claude-code-settings.md",
+   "role": "source_capture",
+   "sha256": "5edc5d70af7213d291d6ee78528c71a646dff056c6e85d5f97c90ea2b914d540",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-claude-code-skills.md",
+   "role": "source_capture",
+   "sha256": "cb0c237ca2cd5f56bcebd9d495626047d6df47fb44ce5508fd79cbcd013c7763",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-claude-code-subagents.md",
+   "role": "source_capture",
+   "sha256": "f946d144d84b5fed2280c8680c9e7d233df9a198860d24fe7d90502257456374",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-claude-directory-doc-official.txt",
+   "role": "source_capture",
+   "sha256": "69401967895f90e16b6e415274ccd80f693720995b78c25aa60ba1a0af7262d1",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-codex-acm-arxiv-2607-23809-fullhtml.md",
+   "role": "source_capture",
+   "sha256": "63285f010fe91646fbb8feed79176fbb23f9b889f2249fca25912921c75f6346",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-codex-blakecrosley-cli-guide-2026.md",
+   "role": "source_capture",
+   "sha256": "ca623af4af18f46c6dbe4dfd0175ea13f2881a41ecbc497aeada5a71c1beb04e",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-codex-cwl-arxiv-2606-11213.md",
+   "role": "source_capture",
+   "sha256": "824e914602e606d8e77483b236ebe138f5124ad52e28431c19cd876113b9945d",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-codex-hooks-doc-developers-openai.md",
+   "role": "source_capture",
+   "sha256": "7393706b0252627b4a058a9356ea34c942c2354c2b09685c0a339ce6766a765d",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-codex-hooks-doc-learn-chatgpt.md",
+   "role": "source_capture",
+   "sha256": "774a78a90d8b8f7d11f1a6808145aa905e4601a1d637b8983e1c3673fc15d4f0",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-codex-memgpt-arxiv-2310-08560.md",
+   "role": "source_capture",
+   "sha256": "ef52924f3fba690914326173bc81503c334d6062ab15f06ea820ccfd33855f47",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-codex-memories-deepwiki.txt",
+   "role": "source_capture",
+   "sha256": "61fc64089706e57501927c42970b2e3901b1107d4cbc07851370dcc5e5d62b9e",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-codex-selfcompact-arxiv-2606-23525.md",
+   "role": "source_capture",
+   "sha256": "558ba9b371126338226a9161c599be48f355b7fc1ff9812b4e9124984fc84f23",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-codex-tokenpilot-arxiv-2606-17016.md",
+   "role": "source_capture",
+   "sha256": "2dbf4575b6c18e7ae91a88746b2604c58079d24b0b4d4bd61116b7deea40e4b1",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-cursor-forum-166182-compaction-threshold.md",
+   "role": "source_capture",
+   "sha256": "275fe7780a0bb596845df98c88c97c728066f6f965d8382c64035d96470ef630",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-cursor-hooks-md-official.txt",
+   "role": "source_capture",
+   "sha256": "4b7b3a8d1508689aa714730b7b1fb9e04e37d5c65f5765f73c2781b154127dec",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-cursor-hooks-reference.md",
+   "role": "source_capture",
+   "sha256": "4b7b3a8d1508689aa714730b7b1fb9e04e37d5c65f5765f73c2781b154127dec",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-cursor-prompting-context-categories.md",
+   "role": "source_capture",
+   "sha256": "7a991f56c7fc7fd600e7d373799ece4c95bea2de8a898ccbda39214a7f42a1af",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-cursor-rules-doc.md",
+   "role": "source_capture",
+   "sha256": "73bc3b90e50e61e0c098a283f17a71fd44f1bf4162712a2300c8f286c629949c",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-cursor-skills-doc.md",
+   "role": "source_capture",
+   "sha256": "71a8c96c057a81649543afb29d718a6d528dd0905b45308fe051bcfb66c0de6f",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-cursor-subagents.md",
+   "role": "source_capture",
+   "sha256": "dfbded43a1af459be52061aae1b797128cc5b206aa075a0a92a82175308abc31",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-infiagent-infinite-horizon-acl-2026.txt",
+   "role": "source_capture",
+   "sha256": "83c584218b6ccb98a37d80c9ce239a1b888375570686c336f4c023abb03fe08f",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-memgpt-arxiv-2310-08560-abs.txt",
+   "role": "source_capture",
+   "sha256": "569773a6ba628c03aa5aa12a5cff068399754d3cd4ee584ca1dd16c052a86f5c",
+   "read_back": true
+  },
+  {
+   "path": "docs/research/_sources/2026-08-08-prolong-programmatic-memory-arxiv-2607-20064.txt",
+   "role": "source_capture",
+   "sha256": "e9ff54967e3e50e4c405c9f2321194d2a95249861ec71a10495622d2ef444129",
+   "read_back": true
+  }
+ ],
+ "standards_ledger": true,
+ "scope_plan": true,
+ "source_register": true,
+ "query_ledger": true,
+ "claim_ledger": true,
+ "contradiction_ledger": true,
+ "preservation_matrix": true,
+ "english_artifacts": true,
+ "indexed": false,
+ "delegations": {
+  "note": "no research subagents dispatched this run (two afternoon subagents died without output; work redone inline; recorded in STATE.md)"
+ },
+ "known_gaps": [
+  "Codex hooks not yet live-fired (hash-bound trust requires Berk /hooks)",
+  "AllInsights continuity codex-host live control approval-blocked (verified from both primary sources)",
+  "Cursor sessionStart/postToolUse global injection proven by schema-shaped control + live beforeSubmitPrompt firing",
+  "docs/README.md index row DENIED twice by the new global LOCAL-FIRST gate despite current-turn preflight (blocker report filed: Agent_Reports/SsmContentAssetCreator/2026-08-08-blocked-local-first-gate-denies-covenant-index-edit.md); index row text preserved there and in the main report",
+  "STATE.md milestone update DENIED by OWNER-PROTECTED gate (requires Berk current-turn unlock phrase)"
+ ],
+ "completed_at": "2026-08-08T20:18:09.721416",
+ "regenerated_this_turn": true
+}

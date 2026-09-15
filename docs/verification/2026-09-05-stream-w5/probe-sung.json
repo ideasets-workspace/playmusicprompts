@@ -1,0 +1,605 @@
+{
+  "url": "https://www.playmusicprompts.com/stream",
+  "prompt": "a warm, hopeful indie-folk song about walking home at dawn, female voice, acoustic guitar and soft piano",
+  "startedAt": "2026-09-05T19:58:03.543Z",
+  "harness": {
+    "muteAudio": false,
+    "reducedMotionEmulated": "no-preference",
+    "mediaControl": {
+      "log": [
+        "playing"
+      ],
+      "t": 1,
+      "rs": 4
+    }
+  },
+  "phases": [
+    {
+      "phase": "typed",
+      "state": {
+        "ready": true,
+        "nowTitle": null,
+        "lock": null,
+        "playing": "false",
+        "pulseAnimation": null,
+        "pulseDuration": null,
+        "barSeconds": "",
+        "reducedMotion": false,
+        "renderer": "pending",
+        "canvas": null,
+        "headerMeta": [
+          "102 live parameters",
+          "0 stops · 0 ahead · buffer target 2"
+        ],
+        "horizon": [
+          "Nothing in preparation. When the stream is on, the next take is prepared while this one plays."
+        ],
+        "clock": "0:00 0:00",
+        "seekMax": "0",
+        "card": null,
+        "pastCount": 0,
+        "futureCount": 0,
+        "playLabel": "Play"
+      }
+    },
+    {
+      "phase": "submitted",
+      "at": "2026-09-05T19:58:07.072Z",
+      "state": {
+        "ready": true,
+        "nowTitle": null,
+        "lock": null,
+        "playing": "false",
+        "pulseAnimation": null,
+        "pulseDuration": null,
+        "barSeconds": "",
+        "reducedMotion": false,
+        "renderer": "pending",
+        "canvas": null,
+        "headerMeta": [
+          "102 live parameters",
+          "0 stops · 0 ahead · buffer target 2"
+        ],
+        "horizon": [
+          "One take · sung\n0:02\n\nDocumented range 230–280 s · phase: queued · job cmtot1xn\n\nValidate & plan\n9 validation checks, route choice, lyric quoted verbatim\n~1 s\nMix plan\nlawful layers decided before any billable call\n~1 s\nGenerate (Ideasets Hybrid Music Composer Model)\nsung take — 60-150 s\n~130 s\nStore & measure\nffprobe on the delivered file\n~1 s\nConform\nbar-aligned trim to your target\n~2 s\nMaster &"
+        ],
+        "clock": "0:00 0:00",
+        "seekMax": "0",
+        "card": null,
+        "pastCount": 0,
+        "futureCount": 0,
+        "playLabel": "Play"
+      }
+    },
+    {
+      "phase": "delivered",
+      "at": "2026-09-05T19:59:52.300Z",
+      "state": {
+        "ready": true,
+        "nowTitle": "Take 1 · a warm, hopeful indie-folk song about walking home at dawn, female voice, acoustic guitar and soft piano",
+        "lock": "generated for you · visual pulses at 107.67 bpm (measured) · downbeat not measured",
+        "playing": "true",
+        "pulseAnimation": null,
+        "pulseDuration": null,
+        "barSeconds": "2.2290331568682085s",
+        "reducedMotion": false,
+        "renderer": "webgl2",
+        "canvas": {
+          "frameMs": "4.2",
+          "longFrames": "0",
+          "frames": "14979",
+          "motion": "animate",
+          "w": 334,
+          "h": 334
+        },
+        "headerMeta": [
+          "102 live parameters",
+          "1 stops · 0 ahead · buffer target 2",
+          "quota 30/100"
+        ],
+        "horizon": [
+          "Nothing in preparation. When the stream is on, the next take is prepared while this one plays."
+        ],
+        "clock": "1:00 2:12",
+        "seekMax": "132.388583",
+        "card": [
+          "prose sentThe piece is approximately 135 seconds long, continuous from beginning to end. a warm, hopeful indie-folk song about walking home at dawn, female voice, acoustic guitar and soft piano Vocal style: a female voice, singing in en. The singer sings original lyrics fitting the mood and story of the music.",
+          "vocalprosebinding classprosesent asVocal style: a female voice, singing in en.",
+          "prompttypedbinding classtyped",
+          "durationprose_hint_plus_enforcedbinding classprose_hint_plus_enforcedsent asThe piece is approximately 135 seconds long, continuous from beginning to end.noteprose length request (no vendor duration field exists — measured); the conform stage enforces target±tolerance on the delivered file per duration.on_miss when it runs (render_plan.conform)"
+        ],
+        "pastCount": 0,
+        "futureCount": 0,
+        "playLabel": "Pause"
+      }
+    }
+  ],
+  "sung": {
+    "vocal": "female",
+    "lyrics": "ai_write",
+    "vocalOptions": [
+      "instrumental",
+      "male",
+      "female",
+      "duet",
+      "choir",
+      "spoken",
+      "plan_decides"
+    ]
+  },
+  "elapsedSeconds": 45,
+  "result": "delivered",
+  "playbackSamples": [
+    {
+      "atSeconds": 5,
+      "clock": "0:05 2:12",
+      "playing": "true",
+      "pulse": null,
+      "pulseDuration": null,
+      "renderer": "webgl2",
+      "canvas": {
+        "frameMs": "4.2",
+        "longFrames": "0",
+        "frames": "1764",
+        "motion": "animate",
+        "w": 334,
+        "h": 334
+      },
+      "horizonCards": 1,
+      "horizonFirst": "Nothing in preparation. When the stream is on, the next take is prepared while t",
+      "future": 0
+    },
+    {
+      "atSeconds": 10,
+      "clock": "0:10 2:12",
+      "playing": "true",
+      "pulse": null,
+      "pulseDuration": null,
+      "renderer": "webgl2",
+      "canvas": {
+        "frameMs": "4.2",
+        "longFrames": "0",
+        "frames": "2970",
+        "motion": "animate",
+        "w": 334,
+        "h": 334
+      },
+      "horizonCards": 1,
+      "horizonFirst": "Nothing in preparation. When the stream is on, the next take is prepared while t",
+      "future": 0
+    },
+    {
+      "atSeconds": 15,
+      "clock": "0:15 2:12",
+      "playing": "true",
+      "pulse": null,
+      "pulseDuration": null,
+      "renderer": "webgl2",
+      "canvas": {
+        "frameMs": "4.2",
+        "longFrames": "0",
+        "frames": "4174",
+        "motion": "animate",
+        "w": 334,
+        "h": 334
+      },
+      "horizonCards": 1,
+      "horizonFirst": "Nothing in preparation. When the stream is on, the next take is prepared while t",
+      "future": 0
+    },
+    {
+      "atSeconds": 20,
+      "clock": "0:20 2:12",
+      "playing": "true",
+      "pulse": null,
+      "pulseDuration": null,
+      "renderer": "webgl2",
+      "canvas": {
+        "frameMs": "4.2",
+        "longFrames": "0",
+        "frames": "5373",
+        "motion": "animate",
+        "w": 334,
+        "h": 334
+      },
+      "horizonCards": 1,
+      "horizonFirst": "Nothing in preparation. When the stream is on, the next take is prepared while t",
+      "future": 0
+    },
+    {
+      "atSeconds": 25,
+      "clock": "0:25 2:12",
+      "playing": "true",
+      "pulse": null,
+      "pulseDuration": null,
+      "renderer": "webgl2",
+      "canvas": {
+        "frameMs": "4.2",
+        "longFrames": "0",
+        "frames": "6571",
+        "motion": "animate",
+        "w": 334,
+        "h": 334
+      },
+      "horizonCards": 1,
+      "horizonFirst": "Nothing in preparation. When the stream is on, the next take is prepared while t",
+      "future": 0
+    },
+    {
+      "atSeconds": 30,
+      "clock": "0:30 2:12",
+      "playing": "true",
+      "pulse": null,
+      "pulseDuration": null,
+      "renderer": "webgl2",
+      "canvas": {
+        "frameMs": "4.2",
+        "longFrames": "0",
+        "frames": "7774",
+        "motion": "animate",
+        "w": 334,
+        "h": 334
+      },
+      "horizonCards": 1,
+      "horizonFirst": "Nothing in preparation. When the stream is on, the next take is prepared while t",
+      "future": 0
+    },
+    {
+      "atSeconds": 35,
+      "clock": "0:35 2:12",
+      "playing": "true",
+      "pulse": null,
+      "pulseDuration": null,
+      "renderer": "webgl2",
+      "canvas": {
+        "frameMs": "4.2",
+        "longFrames": "0",
+        "frames": "8973",
+        "motion": "animate",
+        "w": 334,
+        "h": 334
+      },
+      "horizonCards": 1,
+      "horizonFirst": "Nothing in preparation. When the stream is on, the next take is prepared while t",
+      "future": 0
+    },
+    {
+      "atSeconds": 40,
+      "clock": "0:40 2:12",
+      "playing": "true",
+      "pulse": null,
+      "pulseDuration": null,
+      "renderer": "webgl2",
+      "canvas": {
+        "frameMs": "4.2",
+        "longFrames": "0",
+        "frames": "10175",
+        "motion": "animate",
+        "w": 334,
+        "h": 334
+      },
+      "horizonCards": 1,
+      "horizonFirst": "Nothing in preparation. When the stream is on, the next take is prepared while t",
+      "future": 0
+    },
+    {
+      "atSeconds": 45,
+      "clock": "0:45 2:12",
+      "playing": "true",
+      "pulse": null,
+      "pulseDuration": null,
+      "renderer": "webgl2",
+      "canvas": {
+        "frameMs": "4.2",
+        "longFrames": "0",
+        "frames": "11376",
+        "motion": "animate",
+        "w": 334,
+        "h": 334
+      },
+      "horizonCards": 1,
+      "horizonFirst": "Nothing in preparation. When the stream is on, the next take is prepared while t",
+      "future": 0
+    },
+    {
+      "atSeconds": 50,
+      "clock": "0:50 2:12",
+      "playing": "true",
+      "pulse": null,
+      "pulseDuration": null,
+      "renderer": "webgl2",
+      "canvas": {
+        "frameMs": "4.2",
+        "longFrames": "0",
+        "frames": "12576",
+        "motion": "animate",
+        "w": 334,
+        "h": 334
+      },
+      "horizonCards": 1,
+      "horizonFirst": "Nothing in preparation. When the stream is on, the next take is prepared while t",
+      "future": 0
+    },
+    {
+      "atSeconds": 55,
+      "clock": "0:55 2:12",
+      "playing": "true",
+      "pulse": null,
+      "pulseDuration": null,
+      "renderer": "webgl2",
+      "canvas": {
+        "frameMs": "4.2",
+        "longFrames": "0",
+        "frames": "13778",
+        "motion": "animate",
+        "w": 334,
+        "h": 334
+      },
+      "horizonCards": 1,
+      "horizonFirst": "Nothing in preparation. When the stream is on, the next take is prepared while t",
+      "future": 0
+    },
+    {
+      "atSeconds": 60,
+      "clock": "1:00 2:12",
+      "playing": "true",
+      "pulse": null,
+      "pulseDuration": null,
+      "renderer": "webgl2",
+      "canvas": {
+        "frameMs": "4.2",
+        "longFrames": "0",
+        "frames": "14978",
+        "motion": "animate",
+        "w": 334,
+        "h": 334
+      },
+      "horizonCards": 1,
+      "horizonFirst": "Nothing in preparation. When the stream is on, the next take is prepared while t",
+      "future": 0
+    }
+  ],
+  "reducedMotion": {
+    "ready": true,
+    "nowTitle": "Take 1 · a warm, hopeful indie-folk song about walking home at dawn, female voice, acoustic guitar and soft piano",
+    "lock": "generated for you · visual pulses at 107.67 bpm (measured) · downbeat not measured",
+    "playing": "true",
+    "pulseAnimation": null,
+    "pulseDuration": null,
+    "barSeconds": "2.2290331568682085s",
+    "reducedMotion": true,
+    "renderer": "webgl2",
+    "canvas": {
+      "frameMs": "4.2",
+      "longFrames": "0",
+      "frames": "14980",
+      "motion": "static",
+      "w": 334,
+      "h": 334
+    },
+    "headerMeta": [
+      "102 live parameters",
+      "1 stops · 0 ahead · buffer target 2",
+      "quota 30/100"
+    ],
+    "horizon": [
+      "Nothing in preparation. When the stream is on, the next take is prepared while this one plays."
+    ],
+    "clock": "1:01 2:12",
+    "seekMax": "132.388583",
+    "card": [
+      "prose sentThe piece is approximately 135 seconds long, continuous from beginning to end. a warm, hopeful indie-folk song about walking home at dawn, female voice, acoustic guitar and soft piano Vocal style: a female voice, singing in en. The singer sings original lyrics fitting the mood and story of the music.",
+      "vocalprosebinding classprosesent asVocal style: a female voice, singing in en.",
+      "prompttypedbinding classtyped",
+      "durationprose_hint_plus_enforcedbinding classprose_hint_plus_enforcedsent asThe piece is approximately 135 seconds long, continuous from beginning to end.noteprose length request (no vendor duration field exists — measured); the conform stage enforces target±tolerance on the delivered file per duration.on_miss when it runs (render_plan.conform)"
+    ],
+    "pastCount": 0,
+    "futureCount": 0,
+    "playLabel": "Pause"
+  },
+  "card": [
+    "prose sentThe piece is approximately 135 seconds long, continuous from beginning to end. a warm, hopeful indie-folk song about walking home at dawn, female voice, acoustic guitar and soft piano Vocal style: a female voice, singing in en. The singer sings original lyrics fitting the mood and story of the music.",
+    "vocalprosebinding classprosesent asVocal style: a female voice, singing in en.",
+    "prompttypedbinding classtyped",
+    "durationprose_hint_plus_enforcedbinding classprose_hint_plus_enforcedsent asThe piece is approximately 135 seconds long, continuous from beginning to end.noteprose length request (no vendor duration field exists — measured); the conform stage enforces target±tolerance on the delivered file per duration.on_miss when it runs (render_plan.conform)"
+  ],
+  "mediaSession": {
+    "supported": true,
+    "title": "Take 1 · a warm, hopeful indie-folk song about walking home at dawn, female voice, acoustic guitar and soft piano",
+    "artist": "Composed for you by Ideasets Hybrid Music Composer",
+    "album": "PlayMusicPrompts",
+    "artworkCount": 0,
+    "playbackState": "playing"
+  },
+  "miniBar": {
+    "beforeScroll": "true",
+    "scrolledDown": {
+      "visible": "true",
+      "ariaHidden": "false",
+      "title": "Take 1 · a warm, hopeful indie-folk song about walking home at dawn, female voice, acoustic guitar and soft piano",
+      "next": "next · prepared while you listen",
+      "bottomGap": 0,
+      "height": 72,
+      "smallTargets": 0
+    },
+    "afterScrollBack": "true"
+  },
+  "provenance": {
+    "present": true,
+    "digitalSourceType": "digsrctype:trainedAlgorithmicMedia",
+    "digitalSourceTypeUri": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+    "requestId": "84c77502-d35e-441c-9430-b3f091f54d7f",
+    "take": "Take 1 · a warm, hopeful indie-folk song about walking home at dawn, female voice, acoustic guitar and soft piano",
+    "lead": "Composed for you by Ideasets Hybrid Music Composer",
+    "rowCount": 31,
+    "rows": {
+      "request id": "84c77502-d35e-441c-9430-b3f091f54d7f",
+      "endpoint": "playmusicprompts-music-api",
+      "model chosen": "lyria-3-pro-preview",
+      "why": "vocals/lyrics requested: lyria-3-pro is the only surface measured to sing dictated words (findings 2026-08-13)",
+      "surface that answered": "interactions",
+      "model that answered": "lyria-3-pro-preview matches the route",
+      "service": "music-api",
+      "platform": "cloud-run",
+      "revision": "music-api-00057-dw4",
+      "revision known to the engine": "yes",
+      "api version": "2.1-cloudrun",
+      "configuration": "music-api",
+      "C2PA content credentials declared": "yes",
+      "what that means today": "C2PA content credentials are NOT embedded in the delivered file today. The flag records the platform's intent; the embedding step does not exist yet and is named here rather than implied by a true value.",
+      "DDEX AI credit": "yes",
+      "where the credit lives": "the DDEX AI-credit information is carried in this response, not in the audio file's own metadata",
+      "source of these flags": "music_studio/param_spec.json — the `compliance` parameter's declared default",
+      "sync use": "yes",
+      "commercial use": "yes",
+      "copyright warranted": "no",
+      "basis": "Vertex AI Lyria output under Google Cloud's own terms for generated content; this field records the platform's assertion and is not legal advice",
+      "source of this assertion": "music_studio/param_spec.json — the `rights` parameter's declared default",
+      "seed": "199995312",
+      "sent to the model": "no",
+      "source": "server (secrets.randbits(31))",
+      "note": "NOT sent: the Interactions surface body is {model, input} and has no seed field (measured); the seed below is a provenance record of this request only",
+      "honest limit": "a seed is a provenance record, not a re-render promise (the same request twice measured 23.87 dB apart on Veo; Lyria's determinism is not measured here)",
+      "opt-in": "yes",
+      "measured": "no",
+      "reason": "D-SSM-31 originality gate is opt-in (set run_originality_gate: true). It then runs in the background and the response carries a poll URL; the gate is wired, proven and crash-free (JIT cache baked into the image).",
+      "tradition notices": "none for this take"
+    }
+  },
+  "record": {
+    "requestId": "84c77502-d35e-441c-9430-b3f091f54d7f",
+    "leaves": 200,
+    "rendered": 205,
+    "missing": [
+      "bindings.lyrics.sent",
+      "mix_plan.refusals[].not_a_workaround",
+      "mix_plan.refusals[].what_would_unblock_it[]"
+    ],
+    "chapters": [
+      {
+        "id": "source",
+        "rows": 7,
+        "h": 747
+      },
+      {
+        "id": "pulse",
+        "rows": 17,
+        "h": 1439
+      },
+      {
+        "id": "sound",
+        "rows": 20,
+        "h": 1348
+      },
+      {
+        "id": "finish",
+        "rows": 43,
+        "h": 2573
+      },
+      {
+        "id": "composition",
+        "rows": 20,
+        "h": 1835
+      },
+      {
+        "id": "suggestions",
+        "rows": 44,
+        "h": 2489
+      },
+      {
+        "id": "words",
+        "rows": 7,
+        "h": 564
+      },
+      {
+        "id": "files",
+        "rows": 32,
+        "h": 2589
+      },
+      {
+        "id": "provenance",
+        "rows": 31,
+        "h": 2313
+      },
+      {
+        "id": "quota",
+        "rows": 6,
+        "h": 396
+      }
+    ],
+    "rawJsonBlocks": 0,
+    "tempo": {
+      "state": "MEASURED",
+      "bpm": 107.67
+    },
+    "suggestions": 3,
+    "hearItButtons": 3,
+    "lockLine": "generated for you · visual pulses at 107.67 bpm (measured) · downbeat not measured",
+    "sungVerdict": null
+  },
+  "recordWidths": [
+    {
+      "width": 375,
+      "clipHeight": 6000,
+      "horizontalOverflowPx": 0,
+      "smallTargets": 0
+    },
+    {
+      "width": 768,
+      "clipHeight": 6000,
+      "horizontalOverflowPx": 0,
+      "smallTargets": 0
+    },
+    {
+      "width": 1440,
+      "clipHeight": 6000,
+      "horizontalOverflowPx": 0,
+      "smallTargets": 0
+    }
+  ],
+  "afterSkip": {
+    "ready": true,
+    "nowTitle": "Take 1 · a warm, hopeful indie-folk song about walking home at dawn, female voice, acoustic guitar and soft piano",
+    "lock": "generated for you · visual pulses at 107.67 bpm (measured) · downbeat not measured",
+    "playing": "false",
+    "pulseAnimation": null,
+    "pulseDuration": null,
+    "barSeconds": "2.2290331568682085s",
+    "reducedMotion": false,
+    "renderer": "webgl2",
+    "canvas": {
+      "frameMs": "4.2",
+      "longFrames": "1",
+      "frames": "16433",
+      "motion": "static",
+      "w": 566,
+      "h": 566
+    },
+    "headerMeta": [
+      "102 live parameters",
+      "1 stops · 0 ahead · buffer target 2",
+      "quota 30/100"
+    ],
+    "horizon": [
+      "One take · sung\n0:01\n\nDocumented range 230–280 s · phase: queued · job cmtot4e6\n\nValidate & plan\n9 validation checks, route choice, lyric quoted verbatim\n~1 s\nMix plan\nlawful layers decided before any billable call\n~1 s\nGenerate (Ideasets Hybrid Music Composer Model)\nsung take — 60-150 s\n~130 s\nStore & measure\nffprobe on the delivered file\n~1 s\nConform\nbar-aligned trim to your target\n~2 s\nMaster &"
+    ],
+    "clock": "1:07 2:12",
+    "seekMax": "132.388583",
+    "card": [
+      "prose sentThe piece is approximately 135 seconds long, continuous from beginning to end. a warm, hopeful indie-folk song about walking home at dawn, female voice, acoustic guitar and soft piano Vocal style: a female voice, singing in en. The singer sings original lyrics fitting the mood and story of the music.",
+      "vocalprosebinding classprosesent asVocal style: a female voice, singing in en.",
+      "prompttypedbinding classtyped",
+      "durationprose_hint_plus_enforcedbinding classprose_hint_plus_enforcedsent asThe piece is approximately 135 seconds long, continuous from beginning to end.noteprose length request (no vendor duration field exists — measured); the conform stage enforces target±tolerance on the delivered file per duration.on_miss when it runs (render_plan.conform)"
+    ],
+    "pastCount": 0,
+    "futureCount": 0,
+    "playLabel": "Play"
+  },
+  "afterSkipAutoPrepared": {
+    "seconds": 45,
+    "nowTitle": "Take 2 · a warm, hopeful indie-folk song about walking home at dawn, female voice, acoustic guitar and soft piano",
+    "playing": "true",
+    "past": 1,
+    "horizon": 1
+  }
+}

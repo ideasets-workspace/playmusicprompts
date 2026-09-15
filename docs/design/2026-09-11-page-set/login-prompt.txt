@@ -1,0 +1,27 @@
+Use case: ui-mockup.
+Create ONE separate high-fidelity LOGIN page for PlayMusicPrompts using image 1 as the approved brand, materials and interface reference. This is page 1 of a consistent app design set, not a poster. Keep the recognizable original PlayMusicPrompts logo and wordmark, rich black architectural music gallery, neon violet/magenta/cyan glass and reflections, expensive spatial depth, crisp large readable English typography. Landscape desktop, complete page around 1584x1104, no device frame.
+
+Composition: focused two-column authentication page. Top left original logo. Top right small arrow link "Back to music". No left navigation rail or global search on this focused auth page. Left 55%: evocative music-world scene using the reference's rain-lit Night Drive glass portal, sculptural circular vinyl plinth and violet reflections. Above this art, a large bold two-line headline:
+"Your music."
+"Always with you."
+Supporting text: "Save the songs you love. Pick up on any device."
+Give the art and lettering ample breathing room. Do not duplicate the sign-in form or add feature cards, numbers, testimonials or pricing.
+
+Right 40%: one premium spacious near-black translucent sign-in card, a fine subtle violet edge, beautifully aligned. All text very legible. Exact form copy:
+"Welcome back."
+"Sign in to save and revisit your music."
+Three full-width separate tasteful provider buttons, with recognizable proper small provider marks:
+"Continue with Google"
+"Continue with Amazon"
+"Continue with Apple"
+Then fine divider with "or use your email".
+Label "Email", empty input placeholder "you@example.com".
+Label "Password", empty input placeholder "Enter your password", eye icon at right.
+Right-aligned link "Forgot password?"
+Large luminous violet primary button "Sign in".
+Below: "New here? Create an account" with Create an account as a link.
+Separate clear understated return link "Continue without an account".
+Small final links "Privacy" · "Terms" · "Help".
+Do not draw a fake user email, password dots, validation error or sign-in success. No password minimum in a sign-in field. Do not omit any provider or guest-return link.
+
+At the bottom preserve the reference's full-width persistent single-player bar: this screenshot depicts navigating to sign-in while music continues. Left original Night Drive cover, "Night Drive", "Made for you", heart icon. Center shuffle, previous, luminous PAUSE circle, next, repeat; violet waveform scrubber, "01:24" and "03:48". Right "Keep it going" toggle ON, green dot "Next song ready", queue, volume, expand. All elements spaced and fully inside frame. No second player or simultaneous loading state. Make this feel like the very same premium product as the reference, with a distinct focused login composition. Render exact English, no Turkish, no UI annotations.

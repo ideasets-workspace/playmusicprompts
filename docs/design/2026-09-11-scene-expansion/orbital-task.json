@@ -1,0 +1,20 @@
+{
+  "lane": "three-player-20260911",
+  "owner": "orbital_scene_asset",
+  "parent_objective": "Add three genuinely different selectable 3D experiences while preserving the approved player",
+  "scope": "One procedural Orbital geometry asset outside the website checkout",
+  "acceptance": [
+    "Independent kinetic orbital sculpture, no record or architectural base",
+    "Physically lit segmented metal arcs, luminous trajectories, crystal core and orbiting satellites",
+    "Passed THREE namespace; no imports, network, renderer, animation loop or DOM",
+    "Audio-reactive movement, palette changes and complete motion-off freeze",
+    "Approximately 20 draw calls, radius around 2.6 and y extent around 2.1",
+    "Actual syntax, bounds, matrix and freeze verification; parent owns rendered integration review"
+  ],
+  "tasks": [
+    {"id":"ORB-01","objective":"Read law, lane and current scene contract","status":"VERIFIED","evidence":"Full law, lane pointer and dated ledger read; actual player-three-scene.js and worlds.js inspected"},
+    {"id":"ORB-02","objective":"Author isolated procedural asset","status":"VERIFIED","dependencies":["ORB-01"],"evidence":"orbital-asset.js; Node syntax check passed, 18 draw calls and 22316 triangles with actual local Three.js r185"},
+    {"id":"ORB-03","objective":"Verify module contract and geometric behavior","status":"VERIFIED","dependencies":["ORB-02"],"evidence":"orbital-verification.json: six geometry/behavior checks passed, outward normals, envelope, exact motion-off freeze, palette and resume"},
+    {"id":"ORB-04","objective":"Hand off asset and verification limits","status":"VERIFIED_INTEGRATED","dependencies":["ORB-03"],"next_action":"No remaining Orbital asset task","evidence":"Parent integrated the module in player-three.html and inspected actual CUA renders after selection, palette changes and reload; the scene remained distinct and page logs were empty. Geometry-only limits are recorded in ORB-03."}
+  ]
+}

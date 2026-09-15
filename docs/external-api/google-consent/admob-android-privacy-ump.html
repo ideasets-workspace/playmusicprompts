@@ -1,0 +1,5340 @@
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html 
+      lang="th-x-mtfrom-en"
+      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="721724668570-nbkv1cfusk7kk4eni4pjvepaus73b13t.apps.googleusercontent.com"><meta name="google-signin-scope"
+          content="profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award https://www.googleapis.com/auth/devprofiles.full_control.firstparty"><meta property="og:site_name" content="Google for Developers">
+    <meta property="og:type" content="website"><meta name="theme-color" content="#fff"><meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel="manifest" href="/_pwa/developers/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap">
+      <link rel="stylesheet"
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notosansthai.css"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/css/app.css">
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/favicon-new.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/touchicon-180-new.png"><link rel="canonical" href="https://developers.google.com/admob/android/privacy?hl=th"><link rel="search" type="application/opensearchdescription+xml"
+            title="Google for Developers" href="https://developers.google.com/s/opensearch.xml?hl=th">
+      <link rel="alternate" hreflang="en"
+          href="https://developers.google.com/admob/android/privacy" /><link rel="alternate" hreflang="x-default" href="https://developers.google.com/admob/android/privacy" /><link rel="alternate" hreflang="ar"
+          href="https://developers.google.com/admob/android/privacy?hl=ar" /><link rel="alternate" hreflang="bn"
+          href="https://developers.google.com/admob/android/privacy?hl=bn" /><link rel="alternate" hreflang="zh-Hans"
+          href="https://developers.google.com/admob/android/privacy?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant"
+          href="https://developers.google.com/admob/android/privacy?hl=zh-tw" /><link rel="alternate" hreflang="fa"
+          href="https://developers.google.com/admob/android/privacy?hl=fa" /><link rel="alternate" hreflang="fr"
+          href="https://developers.google.com/admob/android/privacy?hl=fr" /><link rel="alternate" hreflang="de"
+          href="https://developers.google.com/admob/android/privacy?hl=de" /><link rel="alternate" hreflang="he"
+          href="https://developers.google.com/admob/android/privacy?hl=he" /><link rel="alternate" hreflang="hi"
+          href="https://developers.google.com/admob/android/privacy?hl=hi" /><link rel="alternate" hreflang="id"
+          href="https://developers.google.com/admob/android/privacy?hl=id" /><link rel="alternate" hreflang="it"
+          href="https://developers.google.com/admob/android/privacy?hl=it" /><link rel="alternate" hreflang="ja"
+          href="https://developers.google.com/admob/android/privacy?hl=ja" /><link rel="alternate" hreflang="ko"
+          href="https://developers.google.com/admob/android/privacy?hl=ko" /><link rel="alternate" hreflang="pl"
+          href="https://developers.google.com/admob/android/privacy?hl=pl" /><link rel="alternate" hreflang="pt-BR"
+          href="https://developers.google.com/admob/android/privacy?hl=pt-br" /><link rel="alternate" hreflang="ru"
+          href="https://developers.google.com/admob/android/privacy?hl=ru" /><link rel="alternate" hreflang="es-419"
+          href="https://developers.google.com/admob/android/privacy?hl=es-419" /><link rel="alternate" hreflang="th"
+          href="https://developers.google.com/admob/android/privacy?hl=th" /><link rel="alternate" hreflang="tr"
+          href="https://developers.google.com/admob/android/privacy?hl=tr" /><link rel="alternate" hreflang="vi"
+          href="https://developers.google.com/admob/android/privacy?hl=vi" /><title>ตั้งค่า UMP SDK &nbsp;|&nbsp; Android &nbsp;|&nbsp; Google for Developers</title>
+
+<meta property="og:title" content="ตั้งค่า UMP SDK &nbsp;|&nbsp; Android &nbsp;|&nbsp; Google for Developers"><meta name="description" content="ดูข้อมูลเกี่ยวกับฟีเจอร์ด้านความเป็นส่วนตัวและการปฏิบัติตามข้อกำหนดของ SDK สำหรับ User Messaging Platform (UMP)">
+  <meta property="og:description" content="ดูข้อมูลเกี่ยวกับฟีเจอร์ด้านความเป็นส่วนตัวและการปฏิบัติตามข้อกำหนดของ SDK สำหรับ User Messaging Platform (UMP)"><meta property="og:url" content="https://developers.google.com/admob/android/privacy?hl=th"><meta property="og:image" content="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/opengraph/white.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675"><meta property="og:locale" content="th"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    
+    "headline": "ตั้งค่า UMP SDK"
+  }
+</script><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "AdMob",
+      "item": "https://developers.google.com/admob"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Mobile Ads SDK (Legacy) for Android",
+      "item": "https://developers.google.com/admob/android/quick-start"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ตั้งค่า UMP SDK",
+      "item": "https://developers.google.com/admob/android/privacy"
+    }]
+  }
+  </script><link rel="alternate machine-translated-from" hreflang="en"
+        href="https://developers.google.com/admob/android/privacy?hl=en">
+  
+
+  
+
+  
+
+  
+
+
+    </head>
+  <body class="color-scheme--light"
+        template="page"
+        theme="white"
+        type="article"
+        
+        
+        
+        layout="docs"
+        
+        
+        
+        
+        
+        display-toc
+        pending>
+  
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+  
+  
+    <a href="#main-content" class="skip-link button">
+      
+      ข้ามไปที่เนื้อหาหลัก
+    </a>
+    <section class="devsite-wrapper">
+      <devsite-cookie-notification-bar></devsite-cookie-notification-bar>
+        <devsite-header role="banner">
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner" data-nosnippet>
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="เปิดเมนู">
+        </button>
+        
+<div class="devsite-product-name-wrapper">
+
+  
+    
+  
+
+
+
+  
+  
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             devsite-has-google-wordmark">
+    
+    
+    
+      
+      
+        
+  <a href="https://developers.google.com/admob?hl=th"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Upper Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Google AdMob"
+      
+    >
+    
+          <svg class="devsite-google-wordmark"
+       xmlns="http://www.w3.org/2000/svg"
+       viewBox="0 0 148 48">
+    <title>Google</title>
+    <path class="devsite-google-wordmark-svg-path" d="M19.58,37.65c-9.87,0-18.17-8.04-18.17-17.91c0-9.87,8.3-17.91,18.17-17.91c5.46,0,9.35,2.14,12.27,4.94l-3.45,3.45c-2.1-1.97-4.93-3.49-8.82-3.49c-7.21,0-12.84,5.81-12.84,13.02c0,7.21,5.64,13.02,12.84,13.02c4.67,0,7.34-1.88,9.04-3.58c1.4-1.4,2.32-3.41,2.66-6.16H19.58v-4.89h16.47c0.18,0.87,0.26,1.92,0.26,3.06c0,3.67-1.01,8.21-4.24,11.44C28.93,35.9,24.91,37.65,19.58,37.65z M61.78,26.12c0,6.64-5.1,11.53-11.36,11.53s-11.36-4.89-11.36-11.53c0-6.68,5.1-11.53,11.36-11.53S61.78,19.43,61.78,26.12z M56.8,26.12c0-4.15-2.96-6.99-6.39-6.99c-3.43,0-6.39,2.84-6.39,6.99c0,4.11,2.96,6.99,6.39,6.99C53.84,33.11,56.8,30.22,56.8,26.12z M87.25,26.12c0,6.64-5.1,11.53-11.36,11.53c-6.26,0-11.36-4.89-11.36-11.53c0-6.68,5.1-11.53,11.36-11.53C82.15,14.59,87.25,19.43,87.25,26.12zM82.28,26.12c0-4.15-2.96-6.99-6.39-6.99c-3.43,0-6.39,2.84-6.39,6.99c0,4.11,2.96,6.99,6.39,6.99C79.32,33.11,82.28,30.22,82.28,26.12z M112.09,15.29v20.7c0,8.52-5.02,12.01-10.96,12.01c-5.59,0-8.95-3.76-10.22-6.81l4.41-1.83c0.79,1.88,2.71,4.1,5.81,4.1c3.8,0,6.16-2.36,6.16-6.77v-1.66h-0.18c-1.14,1.4-3.32,2.62-6.07,2.62c-5.76,0-11.05-5.02-11.05-11.49c0-6.51,5.28-11.57,11.05-11.57c2.75,0,4.93,1.22,6.07,2.58h0.18v-1.88H112.09z M107.64,26.16c0-4.06-2.71-7.03-6.16-7.03c-3.49,0-6.42,2.97-6.42,7.03c0,4.02,2.93,6.94,6.42,6.94C104.93,33.11,107.64,30.18,107.64,26.16z M120.97,3.06v33.89h-5.07V3.06H120.97z M140.89,29.92l3.93,2.62c-1.27,1.88-4.32,5.11-9.61,5.11c-6.55,0-11.28-5.07-11.28-11.53c0-6.86,4.77-11.53,10.71-11.53c5.98,0,8.91,4.76,9.87,7.34l0.52,1.31l-15.42,6.38c1.18,2.31,3.01,3.49,5.59,3.49C137.79,33.11,139.58,31.84,140.89,29.92zM128.79,25.77l10.31-4.28c-0.57-1.44-2.27-2.45-4.28-2.45C132.24,19.04,128.66,21.31,128.79,25.77z"/>
+  </svg>AdMob
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+  </span>
+
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+            
+              
+              
+  <devsite-tabs class="upper-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="แท็บระดับบน">
+      
+        
+          <tab class="devsite-dropdown
+    
+    
+    
+    ">
+  
+    <button
+      class="devsite-tabs-content devsite-tabs-dropdown-only gc-analytics-event  devsite-icon devsite-icon-arrow-drop-down"
+  
+       track-type="nav"
+       track-metadata-position="nav - เอกสารประกอบ"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: เอกสารประกอบ"
+         
+           track-name="เอกสารประกอบ"
+         
+       >
+    เอกสารประกอบ
+  
+  </button>
+  
+  <div class="devsite-tabs-dropdown" role="menu" aria-label="submenu" hidden>
+    <div class="devsite-tabs-dropdown-content">
+      
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/admob/android/next-gen/quick-start?hl=th"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/admob/android/next-gen/quick-start?hl=th"
+                     track-metadata-position="nav - เอกสารประกอบ"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  
+                    
+                     data-category="AdMob upper tabs docs"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      GMA Next-Gen SDK สำหรับ Android
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/admob/ios/quick-start?hl=th"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/admob/ios/quick-start?hl=th"
+                     track-metadata-position="nav - เอกสารประกอบ"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  
+                    
+                     data-category="AdMob upper tabs docs"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      SDK โฆษณาบนอุปกรณ์เคลื่อนที่สำหรับ iOS
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/admob/unity/quick-start?hl=th"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/admob/unity/quick-start?hl=th"
+                     track-metadata-position="nav - เอกสารประกอบ"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  
+                    
+                     data-category="AdMob upper tabs docs"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      ปลั๊กอิน Unity สำหรับโฆษณาบนอุปกรณ์เคลื่อนที่
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/admob/flutter/quick-start?hl=th"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/admob/flutter/quick-start?hl=th"
+                     track-metadata-position="nav - เอกสารประกอบ"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  
+                    
+                     data-category="AdMob upper tabs docs"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      ปลั๊กอิน Flutter สำหรับโฆษณาบนอุปกรณ์เคลื่อนที่
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/admob/android/quick-start?hl=th"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/admob/android/quick-start?hl=th"
+                     track-metadata-position="nav - เอกสารประกอบ"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  
+                    
+                     data-category="AdMob upper tabs docs"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      SDK โฆษณาบนอุปกรณ์เคลื่อนที่สำหรับ Android (เดิม)
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/admob/api?hl=th"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/admob/api?hl=th"
+                     track-metadata-position="nav - เอกสารประกอบ"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  
+                    
+                     data-category="AdMob upper tabs docs"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      AdMob API
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+        
+          <tab class="devsite-dropdown
+    
+    
+    
+    ">
+  
+    <button
+      class="devsite-tabs-content devsite-tabs-dropdown-only gc-analytics-event  devsite-icon devsite-icon-arrow-drop-down"
+  
+       track-type="nav"
+       track-metadata-position="nav - ตัวอย่าง"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: ตัวอย่าง"
+         
+           track-name="ตัวอย่าง"
+         
+       >
+    ตัวอย่าง
+  
+  </button>
+  
+  <div class="devsite-tabs-dropdown" role="menu" aria-label="submenu" hidden>
+    <div class="devsite-tabs-dropdown-content">
+      
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="//github.com/googleads/gma-next-gen-sdk-android-examples"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="//github.com/googleads/gma-next-gen-sdk-android-examples"
+                     track-metadata-position="nav - ตัวอย่าง"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  
+                    
+                     data-category="AdMob upper tabs samples"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      GMA Next-Gen SDK สำหรับ Android
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="//github.com/googleads/googleads-mobile-ios-examples"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="//github.com/googleads/googleads-mobile-ios-examples"
+                     track-metadata-position="nav - ตัวอย่าง"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  
+                    
+                     data-category="AdMob upper tabs samples"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      SDK โฆษณาบนอุปกรณ์เคลื่อนที่สำหรับ iOS
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="//github.com/googleads/googleads-mobile-unity/tree/main/samples"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="//github.com/googleads/googleads-mobile-unity/tree/main/samples"
+                     track-metadata-position="nav - ตัวอย่าง"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  
+                    
+                     data-category="AdMob upper tabs samples"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      ปลั๊กอิน Unity สำหรับโฆษณาบนอุปกรณ์เคลื่อนที่
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="//github.com/googleads/googleads-mobile-flutter/tree/main/samples/admob"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="//github.com/googleads/googleads-mobile-flutter/tree/main/samples/admob"
+                     track-metadata-position="nav - ตัวอย่าง"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  
+                    
+                     data-category="AdMob upper tabs samples"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      ปลั๊กอิน Flutter สำหรับโฆษณาบนอุปกรณ์เคลื่อนที่
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="//github.com/googleads/googleads-mobile-android-examples"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="//github.com/googleads/googleads-mobile-android-examples"
+                     track-metadata-position="nav - ตัวอย่าง"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  
+                    
+                     data-category="AdMob upper tabs samples"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      SDK โฆษณาบนอุปกรณ์เคลื่อนที่สำหรับ Android (เดิม)
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="//github.com/googleads/googleads-admob-api-samples"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="//github.com/googleads/googleads-admob-api-samples"
+                     track-metadata-position="nav - ตัวอย่าง"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  
+                    
+                     data-category="AdMob upper tabs samples"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      AdMob API
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+        
+          <tab class="devsite-dropdown
+    
+    devsite-active
+    
+    ">
+  
+    <a href="https://developers.google.com/admob/android/deprecation?hl=th"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/admob/android/deprecation?hl=th"
+    
+       track-type="nav"
+       track-metadata-position="nav - ความช่วยเหลือและชุมชน"
+       track-metadata-module="primary nav"
+       aria-label="ความช่วยเหลือและชุมชน, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: ความช่วยเหลือและชุมชน"
+         
+           track-name="ความช่วยเหลือและชุมชน"
+         
+       >
+    ความช่วยเหลือและชุมชน
+  
+    </a>
+    
+      <button
+         aria-haspopup="menu"
+         aria-expanded="false"
+         aria-label="เมนูแบบเลื่อนลงสำหรับ ความช่วยเหลือและชุมชน"
+         track-type="nav"
+         track-metadata-eventdetail="https://developers.google.com/admob/android/deprecation?hl=th"
+         track-metadata-position="nav - ความช่วยเหลือและชุมชน"
+         track-metadata-module="primary nav"
+         
+          
+            data-category="Site-Wide Custom Events"
+          
+            data-label="Tab: ความช่วยเหลือและชุมชน"
+          
+            track-name="ความช่วยเหลือและชุมชน"
+          
+        
+         class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></button>
+    
+  
+  <div class="devsite-tabs-dropdown" role="menu" aria-label="submenu" hidden>
+    <div class="devsite-tabs-dropdown-content">
+      
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>การสนับสนุน</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="//support.google.com/admob/contact/contact_us_gma_sdk?hl=th"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="//support.google.com/admob/contact/contact_us_gma_sdk?hl=th"
+                     track-metadata-position="nav - ความช่วยเหลือและชุมชน"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="การสนับสนุน"
+                     
+                     tooltip
+                  
+                    
+                     data-category="AdMob upper tabs support"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      การสนับสนุน Google Mobile Ads SDK
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="//support.google.com/admob/gethelp?hl=th"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="//support.google.com/admob/gethelp?hl=th"
+                     track-metadata-position="nav - ความช่วยเหลือและชุมชน"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="การสนับสนุน"
+                     
+                     tooltip
+                  
+                    
+                     data-category="AdMob upper tabs support"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      การสนับสนุนของ AdMob
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>ศูนย์ช่วยเหลือ</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="//support.google.com/admob?hl=th"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="//support.google.com/admob?hl=th"
+                     track-metadata-position="nav - ความช่วยเหลือและชุมชน"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="ศูนย์ช่วยเหลือ"
+                     
+                     tooltip
+                  
+                    
+                     data-category="AdMob upper tabs help"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      ศูนย์ช่วยเหลือของ AdMob
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="//support.google.com/admob/community?hl=th"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="//support.google.com/admob/community?hl=th"
+                     track-metadata-position="nav - ความช่วยเหลือและชุมชน"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="ศูนย์ช่วยเหลือ"
+                     
+                     tooltip
+                  
+                    
+                     data-category="AdMob upper tabs help"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      ชุมชนความช่วยเหลือของ AdMob
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>ชุมชน</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="//goo.gle/google-admob-discord"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="//goo.gle/google-admob-discord"
+                     track-metadata-position="nav - ความช่วยเหลือและชุมชน"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="ชุมชน"
+                     
+                     tooltip
+                  
+                    
+                     data-category="AdMob upper tabs community"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Discord
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="//ads-developers.googleblog.com/search/label/mobile_ads_sdk"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="//ads-developers.googleblog.com/search/label/mobile_ads_sdk"
+                     track-metadata-position="nav - ความช่วยเหลือและชุมชน"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="ชุมชน"
+                     
+                     tooltip
+                  
+                    
+                     data-category="AdMob upper tabs community"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      บล็อกนักพัฒนาโฆษณา
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="//youtube.com/@AdMob?hl=th"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="//youtube.com/@AdMob?hl=th"
+                     track-metadata-position="nav - ความช่วยเหลือและชุมชน"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="ชุมชน"
+                     
+                     tooltip
+                  
+                    
+                     data-category="AdMob upper tabs community"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      YouTube
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/ads?hl=th"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developers.google.com/ads?hl=th"
+                     track-metadata-position="nav - ความช่วยเหลือและชุมชน"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="ชุมชน"
+                     
+                     tooltip
+                  
+                    
+                     data-category="AdMob upper tabs community"
+                    
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      โฆษณาและการวัดผลของ Google
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+            
+           </div>
+          
+<devsite-search
+    enable-signin
+    enable-search
+    enable-suggestions
+      enable-query-completion
+    
+    enable-search-summaries
+    project-name="Android"
+    tenant-name="Google for Developers"
+    project-scope="/admob/android/quick-start"
+    url-scoped="https://developers.google.com/s/results/admob/android/quick-start?hl=th"
+    
+    
+    
+    >
+  <form class="devsite-search-form" action="https://developers.google.com/s/results?hl=th" method="GET">
+    <div class="devsite-search-container">
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              
+              aria-label="เปิดการค้นหา"></button>
+      <div class="devsite-searchbox">
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          
+          aria-label="ค้นหา"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          autocomplete="off"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          
+          placeholder="ค้นหา"
+          role="combobox"
+          type="text"
+          value=""
+          >
+          <div class="devsite-search-image material-icons" aria-hidden="true">
+            
+              <svg class="devsite-search-ai-image" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_6641_386)">
+                    <path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14167 15.375 4.875 14.125C3.625 12.8583 3 11.3167 3 9.5C3 7.68333 3.625 6.15 4.875 4.9C6.14167 3.63333 7.68333 3 9.5 3C10.0167 3 10.5167 3.05833 11 3.175C11.4833 3.275 11.9417 3.43333 12.375 3.65L10.825 5.2C10.6083 5.13333 10.3917 5.08333 10.175 5.05C9.95833 5.01667 9.73333 5 9.5 5C8.25 5 7.18333 5.44167 6.3 6.325C5.43333 7.19167 5 8.25 5 9.5C5 10.75 5.43333 11.8167 6.3 12.7C7.18333 13.5667 8.25 14 9.5 14C10.6667 14 11.6667 13.625 12.5 12.875C13.35 12.1083 13.8417 11.15 13.975 10H15.975C15.925 10.6333 15.7833 11.2333 15.55 11.8C15.3333 12.3667 15.05 12.8667 14.7 13.3L21 19.6L19.6 21ZM17.5 12C17.5 10.4667 16.9667 9.16667 15.9 8.1C14.8333 7.03333 13.5333 6.5 12 6.5C13.5333 6.5 14.8333 5.96667 15.9 4.9C16.9667 3.83333 17.5 2.53333 17.5 0.999999C17.5 2.53333 18.0333 3.83333 19.1 4.9C20.1667 5.96667 21.4667 6.5 23 6.5C21.4667 6.5 20.1667 7.03333 19.1 8.1C18.0333 9.16667 17.5 10.4667 17.5 12Z" fill="#5F6368"/>
+                  </g>
+                <defs>
+                <clipPath id="clip0_6641_386">
+                <rect width="24" height="24" fill="white"/>
+                </clipPath>
+                </defs>
+              </svg>
+            
+          </div>
+          <div class="devsite-search-shortcut-icon-container" aria-hidden="true">
+            <kbd class="devsite-search-shortcut-icon">/</kbd>
+          </div>
+      </div>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          
+          aria-label="ปิดการค้นหา"></button>
+</devsite-search>
+
+        </div>
+
+        
+
+          
+
+          
+
+          
+
+          
+
+          
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es"
+        >Español</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+
+          
+
+        
+
+        
+          <devsite-user 
+                        
+                        
+                          enable-profiles
+                        
+                        
+                          fp-auth
+                        
+                        id="devsite-user">
+            
+              
+              <span class="button devsite-top-button" aria-hidden="true" visually-hidden>ลงชื่อเข้าใช้</span>
+            
+          </devsite-user>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="devsite-collapsible-section
+    ">
+    <div class="devsite-header-background">
+      
+        
+          <div class="devsite-product-id-row"
+           >
+            <div class="devsite-product-description-row">
+              
+                
+                <div class="devsite-product-id">
+                  
+                  
+                  
+                    <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/admob/android/quick-start?hl=th"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Lower Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Google Mobile Ads SDK (Legacy) for Android"
+      
+    >
+    
+          Mobile Ads SDK (Legacy) for Android
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+                </div>
+                
+              
+              
+            </div>
+            
+          </div>
+          
+        
+      
+      
+        <div class="devsite-doc-set-nav-row">
+          
+          
+            
+            
+  <devsite-tabs class="lower-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="แท็บระดับล่าง">
+      
+        
+          <tab  class="devsite-active">
+            
+    <a href="https://developers.google.com/admob/android/deprecation?hl=th"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/admob/android/deprecation?hl=th"
+    
+       track-type="nav"
+       track-metadata-position="nav - คำแนะนำ"
+       track-metadata-module="primary nav"
+       aria-label="คำแนะนำ, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: คำแนะนำ"
+         
+           track-name="คำแนะนำ"
+         
+       >
+    คำแนะนำ
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/admob/android/reference/com/google/android/gms/ads/package-summary?hl=th"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/admob/android/reference/com/google/android/gms/ads/package-summary?hl=th"
+    
+       track-type="nav"
+       track-metadata-position="nav - ข้อมูลอ้างอิง"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: ข้อมูลอ้างอิง"
+         
+           track-name="ข้อมูลอ้างอิง"
+         
+       >
+    ข้อมูลอ้างอิง
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/admob/android/sdk?hl=th"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/admob/android/sdk?hl=th"
+    
+       track-type="nav"
+       track-metadata-position="nav - ดาวน์โหลด"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: ดาวน์โหลด"
+         
+           track-name="ดาวน์โหลด"
+         
+       >
+    ดาวน์โหลด
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="//github.com/googleads/googleads-mobile-android-examples"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="//github.com/googleads/googleads-mobile-android-examples"
+    
+       track-type="nav"
+       track-metadata-position="nav - ตัวอย่าง"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: ตัวอย่าง"
+         
+           track-name="ตัวอย่าง"
+         
+       >
+    ตัวอย่าง
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/admob/support?hl=th"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/admob/support?hl=th"
+    
+       track-type="nav"
+       track-metadata-position="nav - การสนับสนุน"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: การสนับสนุน"
+         
+           track-name="การสนับสนุน"
+         
+       >
+    การสนับสนุน
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+          
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+  
+
+  
+</devsite-header>
+        <devsite-book-nav scrollbars >
+          
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-book-nav-filter"
+     >
+  <span class="filter-list-icon material-icons" aria-hidden="true"></span>
+  <input type="text"
+         placeholder="ตัวกรอง"
+         
+         aria-label="พิมพ์เพื่อกรอง"
+         role="searchbox">
+  
+  <span class="filter-clear-button hidden"
+        data-title="ล้างตัวกรอง"
+        aria-label="ล้างตัวกรอง"
+        role="button"
+        tabindex="0"></span>
+</div>
+
+<nav class="devsite-book-nav devsite-nav nocontent" data-nosnippet
+     aria-label="เมนูด้านข้าง">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="ปิดการนำทาง">
+    </button>
+    <div class="devsite-product-name-wrapper">
+
+  
+    
+  
+
+
+  
+      <span class="devsite-product-name">
+        
+        
+        <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             devsite-has-google-wordmark">
+    
+    
+    
+      
+      
+        
+  <a href="https://developers.google.com/admob?hl=th"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Upper Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Google AdMob"
+      
+    >
+    
+          <svg class="devsite-google-wordmark"
+       xmlns="http://www.w3.org/2000/svg"
+       viewBox="0 0 148 48">
+    <title>Google</title>
+    <path class="devsite-google-wordmark-svg-path" d="M19.58,37.65c-9.87,0-18.17-8.04-18.17-17.91c0-9.87,8.3-17.91,18.17-17.91c5.46,0,9.35,2.14,12.27,4.94l-3.45,3.45c-2.1-1.97-4.93-3.49-8.82-3.49c-7.21,0-12.84,5.81-12.84,13.02c0,7.21,5.64,13.02,12.84,13.02c4.67,0,7.34-1.88,9.04-3.58c1.4-1.4,2.32-3.41,2.66-6.16H19.58v-4.89h16.47c0.18,0.87,0.26,1.92,0.26,3.06c0,3.67-1.01,8.21-4.24,11.44C28.93,35.9,24.91,37.65,19.58,37.65z M61.78,26.12c0,6.64-5.1,11.53-11.36,11.53s-11.36-4.89-11.36-11.53c0-6.68,5.1-11.53,11.36-11.53S61.78,19.43,61.78,26.12z M56.8,26.12c0-4.15-2.96-6.99-6.39-6.99c-3.43,0-6.39,2.84-6.39,6.99c0,4.11,2.96,6.99,6.39,6.99C53.84,33.11,56.8,30.22,56.8,26.12z M87.25,26.12c0,6.64-5.1,11.53-11.36,11.53c-6.26,0-11.36-4.89-11.36-11.53c0-6.68,5.1-11.53,11.36-11.53C82.15,14.59,87.25,19.43,87.25,26.12zM82.28,26.12c0-4.15-2.96-6.99-6.39-6.99c-3.43,0-6.39,2.84-6.39,6.99c0,4.11,2.96,6.99,6.39,6.99C79.32,33.11,82.28,30.22,82.28,26.12z M112.09,15.29v20.7c0,8.52-5.02,12.01-10.96,12.01c-5.59,0-8.95-3.76-10.22-6.81l4.41-1.83c0.79,1.88,2.71,4.1,5.81,4.1c3.8,0,6.16-2.36,6.16-6.77v-1.66h-0.18c-1.14,1.4-3.32,2.62-6.07,2.62c-5.76,0-11.05-5.02-11.05-11.49c0-6.51,5.28-11.57,11.05-11.57c2.75,0,4.93,1.22,6.07,2.58h0.18v-1.88H112.09z M107.64,26.16c0-4.06-2.71-7.03-6.16-7.03c-3.49,0-6.42,2.97-6.42,7.03c0,4.02,2.93,6.94,6.42,6.94C104.93,33.11,107.64,30.18,107.64,26.16z M120.97,3.06v33.89h-5.07V3.06H120.97z M140.89,29.92l3.93,2.62c-1.27,1.88-4.32,5.11-9.61,5.11c-6.55,0-11.28-5.07-11.28-11.53c0-6.86,4.77-11.53,10.71-11.53c5.98,0,8.91,4.76,9.87,7.34l0.52,1.31l-15.42,6.38c1.18,2.31,3.01,3.49,5.59,3.49C137.79,33.11,139.58,31.84,140.89,29.92zM128.79,25.77l10.31-4.28c-0.57-1.44-2.27-2.45-4.28-2.45C132.24,19.04,128.66,21.31,128.79,25.77z"/>
+  </svg>AdMob
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+      </span>
+    
+
+</div>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+      
+        <ul class="devsite-nav-list">
+          
+            <li class="devsite-nav-item">
+              
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: เอกสารประกอบ"
+      
+        track-name="เอกสารประกอบ"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      เอกสารประกอบ
+   </span>
+    
+  
+  </span>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+               ">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: เอกสารประกอบ"
+      
+        track-name="เอกสารประกอบ"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="เอกสารประกอบ">
+      เพิ่มเติม
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="เอกสารประกอบ">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: ตัวอย่าง"
+      
+        track-name="ตัวอย่าง"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      ตัวอย่าง
+   </span>
+    
+  
+  </span>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+               ">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: ตัวอย่าง"
+      
+        track-name="ตัวอย่าง"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="ตัวอย่าง">
+      เพิ่มเติม
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="ตัวอย่าง">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/admob/android/deprecation"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: ความช่วยเหลือและชุมชน"
+      
+        track-name="ความช่วยเหลือและชุมชน"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: ความช่วยเหลือและชุมชน"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      ความช่วยเหลือและชุมชน
+   </span>
+    
+  
+  </a>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+               ">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: ความช่วยเหลือและชุมชน"
+      
+        track-name="ความช่วยเหลือและชุมชน"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="ความช่วยเหลือและชุมชน">
+      เพิ่มเติม
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="ความช่วยเหลือและชุมชน">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+              
+                <ul class="devsite-nav-responsive-tabs">
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/admob/android/deprecation"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: คำแนะนำ"
+      
+        track-name="คำแนะนำ"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: คำแนะนำ"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip menu="_book">
+      คำแนะนำ
+   </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/admob/android/reference/com/google/android/gms/ads/package-summary"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: ข้อมูลอ้างอิง"
+      
+        track-name="ข้อมูลอ้างอิง"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: ข้อมูลอ้างอิง"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      ข้อมูลอ้างอิง
+   </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/admob/android/sdk"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: ดาวน์โหลด"
+      
+        track-name="ดาวน์โหลด"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: ดาวน์โหลด"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      ดาวน์โหลด
+   </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="//github.com/googleads/googleads-mobile-android-examples"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: ตัวอย่าง"
+      
+        track-name="ตัวอย่าง"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: ตัวอย่าง"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      ตัวอย่าง
+   </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/admob/support"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: การสนับสนุน"
+      
+        track-name="การสนับสนุน"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: การสนับสนุน"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      การสนับสนุน
+   </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+          
+          
+        </ul>
+      
+    </div>
+    
+      <div class="devsite-mobile-nav-bottom">
+        
+          
+          <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item"><a href="/admob/android/deprecation"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>จัดการการเลิกใช้งานและการหยุดให้บริการ SDK</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-external"><a href="/admob/android/next-gen/migration"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ย้ายข้อมูลไปยัง GMA Next-Gen SDK</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="ภายนอก"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item"><a href="/admob/android/quick-start"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ตั้งค่า SDK โฆษณาในอุปกรณ์เคลื่อนที่ของ Google (เดิม)</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/admob/android/rel-notes"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>บันทึกประจำรุ่น</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/admob/android/migration"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ย้ายข้อมูลเวอร์ชัน SDK</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/admob/android/test-ads"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>เปิดใช้โฆษณาทดสอบ</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/admob/android/optimize-initialization"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>เพิ่มประสิทธิภาพการเริ่มต้นและโหลดโฆษณา</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-beta"><a href="/admob/android/ai-tools"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ใช้เครื่องมือ AI</span><span class="devsite-nav-icon material-icons"
+        data-icon="beta"
+        data-title="เบต้า"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>เลือกรูปแบบโฆษณา</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/admob/android/app-open"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>การเปิดแอป</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>แบนเนอร์</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/admob/android/banner"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ตั้งค่าโฆษณาแบนเนอร์</span></a></li><li class="devsite-nav-item"><a href="/admob/android/banner/inline-adaptive"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ใช้แบนเนอร์แบบปรับขนาดได้ที่แทรกในบรรทัดสำหรับแบนเนอร์ที่เลื่อน</span></a></li><li class="devsite-nav-item"><a href="/admob/android/banner/collapsible"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ใช้แบนเนอร์แบบยุบได้</span></a></li><li class="devsite-nav-item"><a href="/admob/android/banner/fixed-size"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ตั้งค่าขนาดแบนเนอร์คงที่</span></a></li><li class="devsite-nav-item
+           devsite-nav-deprecated"><a href="/admob/android/banner/smart"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>แบนเนอร์อัจฉริยะ</span><span class="devsite-nav-icon material-icons"
+        data-icon="deprecated"
+        data-title="เลิกใช้งานแล้ว"
+        aria-hidden="true"></span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item"><a href="/admob/android/interstitial"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>โฆษณาคั่นระหว่างหน้า</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>เนทีฟ</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/admob/android/native"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>โหลดโฆษณาเนทีฟ</span></a></li><li class="devsite-nav-item"><a href="/admob/android/native/advanced"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>แสดงโฆษณาเนทีฟ</span></a></li><li class="devsite-nav-item"><a href="/admob/android/native/full-screen"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>แสดงโฆษณาเนทีฟแบบเต็มหน้าจอ</span></a></li><li class="devsite-nav-item"><a href="/admob/android/native/templates"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>จัดสไตล์เลย์เอาต์โฆษณาด้วยเทมเพลตโฆษณาเนทีฟ</span></a></li><li class="devsite-nav-item"><a href="/admob/android/native/validator"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ตรวจสอบความถูกต้องของโฆษณาเนทีฟ</span></a></li><li class="devsite-nav-item"><a href="/admob/android/native/options"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ตั้งค่าฟีเจอร์ขั้นสูง</span></a></li><li class="devsite-nav-item"><a href="/admob/android/native/video-ads"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ตอบกลับเหตุการณ์วิดีโอ</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item"><a href="/admob/android/rewarded"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ได้รับรางวัลแล้ว</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-beta"><a href="/admob/android/rewarded-interstitial"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>โฆษณาคั่นระหว่างหน้าที่มีการให้รางวัล</span><span class="devsite-nav-icon material-icons"
+        data-icon="beta"
+        data-title="เบต้า"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>ผสานรวมสื่อกลาง AdMob</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/admob/android/mediation"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ตั้งค่าสื่อกลาง AdMob</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/admob/android/choose-networks"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>เลือกแหล่งที่มาของโฆษณา</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>ผสานรวมแหล่งที่มาของโฆษณา</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item
+           devsite-nav-deprecated"><a href="/admob/android/mediation/adcolony"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdColony</span><span class="devsite-nav-icon material-icons"
+        data-icon="deprecated"
+        data-title="เลิกใช้งานแล้ว"
+        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/admob/android/mediation/applovin"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AppLovin</span></a></li><li class="devsite-nav-item"><a href="/admob/android/mediation/bidmachine"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>BidMachine</span></a></li><li class="devsite-nav-item
+           devsite-nav-beta"><a href="/admob/android/mediation/bigo"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>BIGO Ads SDK</span><span class="devsite-nav-icon material-icons"
+        data-icon="beta"
+        data-title="เบต้า"
+        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/admob/android/mediation/chartboost"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Chartboost</span></a></li><li class="devsite-nav-item"><a href="/admob/android/mediation/dt-exchange"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>DT Exchange (previously Fyber)</span></a></li><li class="devsite-nav-item"><a href="/admob/android/mediation/imobile"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>i-mobile</span></a></li><li class="devsite-nav-item"><a href="/admob/android/mediation/inmobi"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>InMobi</span></a></li><li class="devsite-nav-item"><a href="/admob/android/mediation/ironsource"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ironSource</span></a></li><li class="devsite-nav-item"><a href="/admob/android/mediation/liftoff-monetize"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Liftoff Monetize (previously Vungle)</span></a></li><li class="devsite-nav-item"><a href="/admob/android/mediation/line"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>LY Ads Network (previously Line Ads Network)</span></a></li><li class="devsite-nav-item"><a href="/admob/android/mediation/maio"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>maio</span></a></li><li class="devsite-nav-item"><a href="/admob/android/mediation/meta"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Meta Audience Network (previously Facebook)</span></a></li><li class="devsite-nav-item"><a href="/admob/android/mediation/mintegral"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Mintegral</span></a></li><li class="devsite-nav-item"><a href="/admob/android/mediation/moloco"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Moloco</span></a></li><li class="devsite-nav-item"><a href="/admob/android/mediation/mytarget"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>myTarget</span></a></li><li class="devsite-nav-item
+           devsite-nav-deprecated"><a href="/admob/android/mediation/nend"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>nend</span><span class="devsite-nav-icon material-icons"
+        data-icon="deprecated"
+        data-title="เลิกใช้งานแล้ว"
+        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/admob/android/mediation/pangle"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Pangle</span></a></li><li class="devsite-nav-item"><a href="/admob/android/mediation/pubmatic"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>PubMatic OpenWrap</span></a></li><li class="devsite-nav-item
+           devsite-nav-deprecated"><a href="/admob/android/mediation/tapjoy"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Tapjoy</span><span class="devsite-nav-icon material-icons"
+        data-icon="deprecated"
+        data-title="เลิกใช้งานแล้ว"
+        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/admob/android/mediation/unity"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Unity Ads</span></a></li><li class="devsite-nav-item"><a href="/admob/android/mediation/vpon"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Vpon</span></a></li><li class="devsite-nav-item
+           devsite-nav-deprecated"><a href="/admob/android/mediation/yahoo"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Yahoo (previously Verizon Media)</span><span class="devsite-nav-icon material-icons"
+        data-icon="deprecated"
+        data-title="เลิกใช้งานแล้ว"
+        aria-hidden="true"></span></a></li><li class="devsite-nav-item"><a href="/admob/android/mediation/zucks"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Zucks</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item"><a href="/admob/android/troubleshoot-bidding"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>แก้ปัญหาการเสนอราคา</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>สร้างเหตุการณ์ที่กำหนดเอง</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/admob/android/custom-events/setup"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>สร้างเหตุการณ์ที่กําหนดเอง</span></a></li><li class="devsite-nav-item"><a href="/admob/android/custom-events/banner"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>แบนเนอร์</span></a></li><li class="devsite-nav-item"><a href="/admob/android/custom-events/interstitial"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>โฆษณาคั่นระหว่างหน้า</span></a></li><li class="devsite-nav-item"><a href="/admob/android/custom-events/native"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>เนทีฟ</span></a></li><li class="devsite-nav-item"><a href="/admob/android/custom-events/rewarded"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ได้รับรางวัลแล้ว</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>ควบคุมความเป็นส่วนตัว</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/admob/android/privacy/strategies"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>กลยุทธ์</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/admob/android/privacy/ad-serving-modes"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>รูปแบบการแสดงโฆษณา</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/admob/android/privacy/play-data-disclosure"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>การเปิดเผยข้อมูล Google Play</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/admob/android/privacy/precise-location"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>นโยบายข้อมูลตำแหน่งที่แน่นอน</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/admob/android/privacy/us-states"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>กฎหมายคุ้มครองความเป็นส่วนตัวของรัฐในสหรัฐอเมริกา</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>SDK สำหรับ User Messaging Platform (UMP)</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/admob/android/privacy"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ตั้งค่า UMP SDK</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>จัดการการสนับสนุน IAB</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/admob/android/privacy/gdpr"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>เปิดเผยต่อผู้ใช้ใน EEA</span></a></li><li class="devsite-nav-item"><a href="/admob/android/privacy/us-iab-support"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>เปิดเผยต่อผู้ใช้ในสหรัฐอเมริกา</span></a></li><li class="devsite-nav-item"><a href="/admob/android/privacy/consent-mode"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ตีความค่าโหมดความยินยอม</span></a></li><li class="devsite-nav-item
+           devsite-nav-beta"><a href="/admob/android/privacy/sync-consent"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ความยินยอมในการซิงค์ในแอป</span><span class="devsite-nav-icon material-icons"
+        data-icon="beta"
+        data-title="เบต้า"
+        aria-hidden="true"></span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-break"></li><li class="devsite-nav-item"><a href="/admob/android/privacy/release-notes"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>บันทึกประจำรุ่น</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>แก้ปัญหาเกี่ยวกับโฆษณา</span>
+      </div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>จัดการเครื่องมือตรวจสอบโฆษณา</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/admob/android/ad-inspector"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ภาพรวม</span></a></li><li class="devsite-nav-item"><a href="/admob/android/ad-inspector/launch-ad-inspector"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>เปิดใช้เครื่องมือตรวจสอบโฆษณา</span></a></li><li class="devsite-nav-item"><a href="/admob/android/ad-inspector/verify-adapter-integrations"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ยืนยันการผสานรวมอะแดปเตอร์</span></a></li><li class="devsite-nav-item"><a href="/admob/android/ad-inspector/test-ad-units"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ทดสอบหน่วยโฆษณา</span></a></li><li class="devsite-nav-item"><a href="/admob/android/ad-inspector/troubleshoot-ad-units"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>แก้ปัญหาเกี่ยวกับหน่วยโฆษณา</span></a></li><li class="devsite-nav-item"><a href="/admob/android/ad-inspector/troubleshoot-privacy-settings"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>แก้ปัญหาการตั้งค่าความเป็นส่วนตัว</span></a></li><li class="devsite-nav-item"><a href="/admob/android/ad-inspector/copy-troubleshooting-output"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>คัดลอกเอาต์พุตการแก้ปัญหา</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item"><a href="/admob/android/test-creative-types"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ทดสอบประเภทครีเอทีฟโฆษณา</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/admob/android/ad-load-errors"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ข้อผิดพลาดในการโหลดโฆษณา</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/admob/android/response-info"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ข้อมูลการตอบกลับ</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/admob/android/crashlytics"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>บันทึกรหัสการตอบสนองของโฆษณาไปยัง Crashlytics</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/admob/android/charles"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>พร็อกซี Charles</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/admob/android/network-tracing"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>การติดตามเครือข่าย</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-external"><a href="//support.google.com/admob/answer/9469204"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>แก้ปัญหาโฆษณาไม่แสดง</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="ภายนอก"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>เพิ่มประสิทธิภาพ</span>
+      </div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-beta"><a href="/admob/android/ad-preloading"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>การโหลดโฆษณาล่วงหน้า</span><span class="devsite-nav-icon material-icons"
+        data-icon="beta"
+        data-title="เบต้า"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item"><a href="/admob/android/app-ads"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ผู้ขายที่ได้รับอนุญาตสำหรับแอป</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/admob/android/global-settings"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>การตั้งค่าส่วนกลาง</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/admob/android/impression-level-ad-revenue"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>รายได้จากโฆษณาระดับการแสดงผล</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-external"><a href="/admob/android/reporting"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>การรายงาน</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="ภายนอก"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item"><a href="/admob/android/ssv"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>การยืนยันฝั่งเซิร์ฟเวอร์</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/admob/android/targeting"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>การกำหนดเป้าหมาย</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/admob/android/open-measurement"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ตั้งค่าการวัดแบบเปิด</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>เบราว์เซอร์ในแอป</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/admob/android/browser"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ดูข้อมูลเกี่ยวกับเบราว์เซอร์ในแอป</span></a></li><li class="devsite-nav-item
+           devsite-nav-beta"><a href="/admob/android/browser/custom-tabs"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>เพิ่มประสิทธิภาพแท็บที่กำหนดเอง</span><span class="devsite-nav-icon material-icons"
+        data-icon="beta"
+        data-title="เบต้า"
+        aria-hidden="true"></span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>เพิ่มประสิทธิภาพการดูเว็บ</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/admob/android/browser/webview"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ตั้งค่ามุมมองเว็บ</span></a></li><li class="devsite-nav-item"><a href="/admob/android/browser/webview/api-for-ads"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ผสานรวม WebView API สำหรับโฆษณา</span></a></li><li class="devsite-nav-item"><a href="/admob/android/browser/webview/click-behavior"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>เพิ่มประสิทธิภาพลักษณะการคลิก</span></a></li></ul></div></li></ul></div></li>
+          </ul>
+        
+        
+          
+    
+      
+      <ul class="devsite-nav-list" menu="เอกสารประกอบ"
+          aria-label="เมนูด้านข้าง" hidden>
+        
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/admob/android/next-gen/quick-start"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: GMA Next-Gen SDK สำหรับ Android"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      GMA Next-Gen SDK สำหรับ Android
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/admob/ios/quick-start"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: SDK โฆษณาบนอุปกรณ์เคลื่อนที่สำหรับ iOS"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      SDK โฆษณาบนอุปกรณ์เคลื่อนที่สำหรับ iOS
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/admob/unity/quick-start"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: ปลั๊กอิน Unity สำหรับโฆษณาบนอุปกรณ์เคลื่อนที่"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      ปลั๊กอิน Unity สำหรับโฆษณาบนอุปกรณ์เคลื่อนที่
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/admob/flutter/quick-start"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: ปลั๊กอิน Flutter สำหรับโฆษณาบนอุปกรณ์เคลื่อนที่"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      ปลั๊กอิน Flutter สำหรับโฆษณาบนอุปกรณ์เคลื่อนที่
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/admob/android/quick-start"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: SDK โฆษณาบนอุปกรณ์เคลื่อนที่สำหรับ Android (เดิม)"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      SDK โฆษณาบนอุปกรณ์เคลื่อนที่สำหรับ Android (เดิม)
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/admob/api"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: AdMob API"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      AdMob API
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+    
+      
+      <ul class="devsite-nav-list" menu="ตัวอย่าง"
+          aria-label="เมนูด้านข้าง" hidden>
+        
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="//github.com/googleads/gma-next-gen-sdk-android-examples"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: GMA Next-Gen SDK สำหรับ Android"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      GMA Next-Gen SDK สำหรับ Android
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="//github.com/googleads/googleads-mobile-ios-examples"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: SDK โฆษณาบนอุปกรณ์เคลื่อนที่สำหรับ iOS"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      SDK โฆษณาบนอุปกรณ์เคลื่อนที่สำหรับ iOS
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="//github.com/googleads/googleads-mobile-unity/tree/main/samples"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: ปลั๊กอิน Unity สำหรับโฆษณาบนอุปกรณ์เคลื่อนที่"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      ปลั๊กอิน Unity สำหรับโฆษณาบนอุปกรณ์เคลื่อนที่
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="//github.com/googleads/googleads-mobile-flutter/tree/main/samples/admob"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: ปลั๊กอิน Flutter สำหรับโฆษณาบนอุปกรณ์เคลื่อนที่"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      ปลั๊กอิน Flutter สำหรับโฆษณาบนอุปกรณ์เคลื่อนที่
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="//github.com/googleads/googleads-mobile-android-examples"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: SDK โฆษณาบนอุปกรณ์เคลื่อนที่สำหรับ Android (เดิม)"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      SDK โฆษณาบนอุปกรณ์เคลื่อนที่สำหรับ Android (เดิม)
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="//github.com/googleads/googleads-admob-api-samples"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: AdMob API"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      AdMob API
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+    
+      
+      <ul class="devsite-nav-list" menu="ความช่วยเหลือและชุมชน"
+          aria-label="เมนูด้านข้าง" hidden>
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      การสนับสนุน
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="//support.google.com/admob/contact/contact_us_gma_sdk"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: การสนับสนุน Google Mobile Ads SDK"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      การสนับสนุน Google Mobile Ads SDK
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="//support.google.com/admob/gethelp"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: การสนับสนุนของ AdMob"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      การสนับสนุนของ AdMob
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      ศูนย์ช่วยเหลือ
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="//support.google.com/admob"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: ศูนย์ช่วยเหลือของ AdMob"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      ศูนย์ช่วยเหลือของ AdMob
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="//support.google.com/admob/community"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: ชุมชนความช่วยเหลือของ AdMob"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      ชุมชนความช่วยเหลือของ AdMob
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      ชุมชน
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="//goo.gle/google-admob-discord"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Discord"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Discord
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="//ads-developers.googleblog.com/search/label/mobile_ads_sdk"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: บล็อกนักพัฒนาโฆษณา"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      บล็อกนักพัฒนาโฆษณา
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="//youtube.com/@AdMob"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: YouTube"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      YouTube
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/ads"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: โฆษณาและการวัดผลของ Google"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      โฆษณาและการวัดผลของ Google
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+        
+        
+          
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+        
+      </div>
+    
+  </div>
+</nav>
+          
+        </devsite-book-nav>
+      
+      <section id="gc-wrapper">
+        <main role="main" id="main-content" class="devsite-main-content"
+            
+              has-book-nav
+              has-sidebar
+            >
+          <div class="devsite-sidebar">
+            <div class="devsite-sidebar-content">
+                
+                <devsite-toc class="devsite-nav"
+                            role="navigation"
+                            aria-label="ในหน้านี้"
+                            depth="2"
+                            scrollbars
+                            data-nosnippet
+                  ></devsite-toc>
+                <devsite-recommendations-sidebar class="nocontent devsite-nav" data-nosnippet>
+                </devsite-recommendations-sidebar>
+            </div>
+          </div>
+          <devsite-content>
+            
+              
+
+
+
+
+
+
+
+
+
+
+<article class="devsite-article">
+  
+  
+  
+    <div class="devsite-banner devsite-banner-announcement nocontent" data-nosnippet
+      
+        
+    background="google-yellow"
+  
+      >
+      <div class="devsite-banner-message">
+        <div class="devsite-banner-message-text">
+          
+    Google Mobile Ads SDK อยู่ในโหมดการบำรุงรักษา หากต้องการทราบข้อมูลอัปเดตและฟีเจอร์ล่าสุด โปรด<a href="https://developers.google.com/admob/android/next-gen/migration?hl=th">migrate</a>และ<a href="https://developers.google.com/admob/android/next-gen/quick-start?hl=th">ตั้งค่า GMA Next-Gen SDK</a>
+
+  
+        </div>
+      </div>
+    </div>
+  
+  
+  
+    <div class="devsite-banner devsite-banner-translated nocontent">
+      <div class="devsite-banner-message">
+        <div class="devsite-banner-message-text">
+          <img src="https://developers.google.com/_static/images/translated.svg?hl=th"
+               class="devsite-banner-translated-image invert"
+               alt="">
+          <span class="devsite-banner-translated-text">
+            
+            Google ใช้เทคโนโลยี AI เพื่อแปลเนื้อหาเป็นภาษาที่คุณต้องการ การแปลโดย AI อาจมีข้อผิดพลาด
+          </span>
+        </div>
+        <devsite-switch-to-english-button></devsite-switch-to-english-button>
+      </div>
+    </div>
+  
+
+  <div class="devsite-article-meta nocontent" role="navigation" data-nosnippet>
+    
+    
+    <ul class="devsite-breadcrumb-list"
+  
+    aria-label="เบรดครัมบ์">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/?hl=th"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          หน้าแรก
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/products?hl=th"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          ผลิตภัณฑ์
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/admob?hl=th"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="3"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="3"
+      
+        track-metadata-eventdetail="Google AdMob"
+      
+    >
+    
+          AdMob
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/admob/android/deprecation?hl=th"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="4"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="4"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          ความช่วยเหลือและชุมชน
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/admob/android/quick-start?hl=th"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="5"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="5"
+      
+        track-metadata-eventdetail="Google Mobile Ads SDK (Legacy) for Android"
+      
+    >
+    
+          Mobile Ads SDK (Legacy) for Android
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+    
+      
+    <devsite-thumb-rating position="header">
+    </devsite-thumb-rating>
+  
+    
+  </div>
+  
+    <devsite-feedback
+  position="header"
+  project-name="Android"
+  product-id="82128"
+  bucket="MobileAdsSDK"
+  context="Docs feedback for Google Mobile Ads SDK (Legacy) for Android"
+  version="t-devsite-webserver-20260901-r00-rc00.480082941541264604"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="header"
+  class="nocontent"
+  data-nosnippet
+  
+  
+    project-feedback-url="//support.google.com/admob/gethelp"
+  
+  
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/touchicon-180-new.png"
+  
+  
+    project-support-url="//support.google.com/admob/contact/contact_us_gma_sdk?hl=th"
+  
+  
+  >
+
+  <button>
+  
+    
+    ส่งความคิดเห็น
+  
+  </button>
+</devsite-feedback>
+  
+    <h1 class="devsite-page-title" tabindex="-1">
+      ตั้งค่า UMP SDK<devsite-actions hidden data-nosnippet><devsite-feature-tooltip
+      ack-key="AckCollectionsBookmarkTooltipDismiss"
+      analytics-category="Site-Wide Custom Events"
+      analytics-action-show="Callout Profile displayed"
+      analytics-action-close="Callout Profile dismissed"
+      analytics-label="Create Collection Callout"
+      class="devsite-page-bookmark-tooltip nocontent"
+      data-nosnippet
+      dismiss-button="true"
+      id="devsite-collections-dropdown"
+      
+      dismiss-button-text="ปิด"
+
+      
+      close-button-text="รับทราบ">
+
+    
+    
+      <devsite-bookmark></devsite-bookmark>
+    
+
+    <span slot="popout-heading">
+      
+      จัดทุกอย่างให้เป็นระเบียบอยู่เสมอด้วยคอลเล็กชัน
+    </span>
+    <span slot="popout-contents">
+      
+      บันทึกและจัดหมวดหมู่เนื้อหาตามค่ากำหนดของคุณ
+    </span>
+  </devsite-feature-tooltip>
+    <devsite-llm-tools></devsite-llm-tools></devsite-actions>
+  
+      
+    </h1>
+  <div class="devsite-page-title-meta"><devsite-view-release-notes></devsite-view-release-notes></div>
+  
+
+  <devsite-toc class="devsite-nav"
+    depth="2"
+    devsite-toc-embedded
+    >
+  </devsite-toc>
+  
+    
+    <devsite-recommendations-dropdown class="nocontent" data-nosnippet>
+    </devsite-recommendations-dropdown>
+    
+  <div class="devsite-article-body clearfix
+  ">
+
+  
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <style>
+    .page_switcher {
+      margin: 16px -40px;
+      border-top: 1px solid #dadce0;
+      border-bottom: 1px solid #dadce0;
+      padding: 16px 40px;
+      background-color: rgb(241, 243, 244);
+    }
+  </style>
+  
+
+  
+  
+  
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+
+  <div class="page_switcher">
+    <span style="margin-right:16px;font-weight:bold">เลือกแพลตฟอร์ม:</span>
+    
+      <a class="button" data-category="mad-platform-button" data-label="AdMob_privacy_Android"         href="https://developers.google.com/admob/android/next-gen/privacy?hl=th"style="border-radius: 16px;height: 32px; line-height:30px;
+         display: inline-flex; align-items: center;" title="ดูเอกสารประกอบเกี่ยวกับแพลตฟอร์ม Android ได้ที่หน้านี้">
+         Android</a>
+    
+      <a class="button" data-category="mad-platform-button" data-label="AdMob_privacy_iOS"         href="https://developers.google.com/admob/ios/privacy?hl=th"style="border-radius: 16px;height: 32px; line-height:30px;
+         display: inline-flex; align-items: center;" title="ดูเอกสารประกอบเกี่ยวกับแพลตฟอร์ม iOS ได้ที่หน้านี้">
+         iOS</a>
+    
+      <a class="button" data-category="mad-platform-button" data-label="AdMob_privacy_Unity"         href="https://developers.google.com/admob/unity/privacy?hl=th"style="border-radius: 16px;height: 32px; line-height:30px;
+         display: inline-flex; align-items: center;" title="ดูเอกสารประกอบเกี่ยวกับแพลตฟอร์ม Unity ได้ที่หน้านี้">
+         Unity</a>
+    
+      <a class="button" data-category="mad-platform-button" data-label="AdMob_privacy_Flutter"         href="https://developers.google.com/admob/flutter/privacy?hl=th"style="border-radius: 16px;height: 32px; line-height:30px;
+         display: inline-flex; align-items: center;" title="ดูเอกสารประกอบเกี่ยวกับแพลตฟอร์ม Flutter ได้ที่หน้านี้">
+         Flutter</a>
+    
+      <a class="button button-primary" data-category="mad-platform-button" data-label="AdMob_privacy_AndroidLegacy"         href="https://developers.google.com/admob/android/privacy?hl=th"style="border-radius: 16px;height: 32px; line-height:30px;
+         display: inline-flex; align-items: center;" title="ดูเอกสารประกอบเกี่ยวกับแพลตฟอร์ม Android (เดิม) ได้ที่หน้านี้">
+         Android (เดิม)</a>
+    
+  </div>
+
+
+
+<div class="video-wrapper">
+  <iframe allow="fullscreen" class="devsite-embedded-youtube-video" data-autohide="1" data-showinfo="0" data-video-id="SysASyh9XKo" frameborder="0">
+  </iframe>
+</div>
+
+
+
+<p>SDK สำหรับ User Messaging Platform (UMP) ของ Google เป็นเครื่องมือด้านความเป็นส่วนตัวและการแสดงข้อความแจ้งผู้ใช้ที่ช่วยคุณจัดการตัวเลือกความเป็นส่วนตัว
+ ดูข้อมูลเพิ่มเติมได้ที่
+
+<a href="https://support.google.com/admob/answer/10107561?hl=th">เกี่ยวกับความเป็นส่วนตัวและการแสดงข้อความแจ้งผู้ใช้</a>
+
+
+
+
+
+
+
+</p><h2 data-text="ข้อกำหนดเบื้องต้น" id="prerequisites" tabindex="-1">ข้อกำหนดเบื้องต้น</h2>
+
+<ul>
+<li>API ระดับ 21 ขึ้นไปของ Android
+</li>
+</ul>
+
+<p> 
+ </p>
+
+<h2 data-text="สร้างประเภทข้อความ" id="create_a_message_type" tabindex="-1">สร้างประเภทข้อความ</h2>
+
+<p>สร้างข้อความสำหรับผู้ใช้ด้วย<a href="//support.google.com/admob/answer/10114020?hl=th">ประเภทข้อความสำหรับผู้ใช้ที่ใช้ได้</a>
+
+ในแท็บ<strong>ความเป็นส่วนตัวและการแสดงข้อความแจ้งผู้ใช้</strong>ของบัญชี
+
+AdMob UMP SDK พยายามแสดง
+ข้อความแสดงความยินยอมให้ใช้คุกกี้ทางการตลาดที่สร้างจากรหัสแอปพลิเคชัน AdMob
+ที่ตั้งค่าไว้ในโปรเจ็กต์</p>
+
+<p>ดูรายละเอียดเพิ่มเติมได้ที่
+
+<a href="//support.google.com/admob/answer/10107561?hl=th">เกี่ยวกับความเป็นส่วนตัวและการรับส่งข้อความ</a>
+
+
+
+
+</p><h2 data-text="ติดตั้งด้วย Gradle" id="install_with_gradle" tabindex="-1">ติดตั้งด้วย Gradle</h2>
+
+<p>เพิ่มทรัพยากร Dependency สำหรับ SDK สำหรับ User Messaging Platform ของ Google ลงในไฟล์ <a href="//gradle.org">Gradle</a> ระดับแอปของโมดูล โดยปกติจะเป็น <code dir="ltr" translate="no">app/build.gradle</code></p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Carbon" syntax-guessed><code translate="no" dir="ltr"><span class="devsite-syntax-nx">dependencies</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">implementation</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"com.google.android.ump:user-messaging-platform:4.0.0"</span><span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-p">}</span>
+</code></pre></devsite-code>
+<p>หลังจากทำการเปลี่ยนแปลงใน <code dir="ltr" translate="no">build.gradle</code> ของแอปแล้ว อย่าลืมซิงค์โปรเจ็กต์กับไฟล์ Gradle
+
+
+ </p>
+
+<p> </p>
+
+<h2 data-text="เพิ่มรหัสแอปพลิเคชัน" id="add_the_application_id" tabindex="-1">เพิ่มรหัสแอปพลิเคชัน</h2>
+
+<p>คุณดูรหัสแอปพลิเคชันได้ใน
+
+<a href="//support.google.com/admob/answer/7356431?hl=th#find-an-app-id">UI ของ AdMob</a>
+
+เพิ่มรหัสลงใน
+
+<code dir="ltr" translate="no">AndroidManifest.xml</code>
+
+ด้วยข้อมูลโค้ดต่อไปนี้</p>
+
+<p> </p>
+<div></div><devsite-code><pre class="devsite-click-to-copy devsite-code-highlight" translate="no" dir="ltr" is-upgraded syntax="XML"><code translate="no" dir="ltr">&lt;manifest&gt;
+<span class="devsite-syntax-w">  </span>&lt;application&gt;
+<span class="devsite-syntax-w">    </span><strong>&lt;meta-data
+<span class="devsite-syntax-w">        </span>android:name="com.google.android.gms.ads.APPLICATION_ID"
+<span class="devsite-syntax-w">        </span>android:value="ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy"/&gt;</strong>
+<span class="devsite-syntax-w">  </span>&lt;/application&gt;
+&lt;/manifest&gt;
+</code></pre></devsite-code>
+<p> </p>
+
+ <p></p>
+
+<p> </p>
+
+<h2 data-text="รับข้อมูลความยินยอมของผู้ใช้" id="get_the_users_consent_information" tabindex="-1">รับข้อมูลความยินยอมของผู้ใช้</h2>
+
+
+
+<p>หากต้องการรับข้อมูลความยินยอมของผู้ใช้ ให้ทำดังนี้</p>
+
+<p>ประกาศอินสแตนซ์ของ <code dir="ltr" translate="no">ConsentInformation</code></p>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 data-text="Java" id="java" tabindex="-1">Java</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Java"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">private</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kd">final</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">ConsentInformation</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">consentInformation</span><span class="devsite-syntax-p">;</span>
+</code></pre></devsite-code></section>
+<section><h3 data-text="Kotlin" id="kotlin" tabindex="-1">Kotlin</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Kotlin"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">private</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kd">lateinit</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kd">var</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nv">consentInformation</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">ConsentInformation</span>
+</code></pre></devsite-code></section>
+</devsite-selector></div>
+<p>เริ่มต้นอินสแตนซ์ <code dir="ltr" translate="no">ConsentInformation</code></p>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 data-text="Java" id="java_1" tabindex="-1">Java</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Java"><code translate="no" dir="ltr"><span class="devsite-syntax-n">consentInformation</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">UserMessagingPlatform</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">getConsentInformation</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">context</span><span class="devsite-syntax-p">);</span>
+</code></pre></devsite-code></section>
+<section><h3 data-text="Kotlin" id="kotlin_1" tabindex="-1">Kotlin</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Kotlin"><code translate="no" dir="ltr"><span class="devsite-syntax-n">consentInformation</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">UserMessagingPlatform</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">getConsentInformation</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">context</span><span class="devsite-syntax-p">)</span>
+</code></pre></devsite-code></section>
+</devsite-selector></div>
+
+
+<p>คุณควรร้องขอการอัปเดตข้อมูลความยินยอมของผู้ใช้ทุกครั้งที่เปิดแอป
+โดยใช้ <code dir="ltr" translate="no">
+<a href="https://developers.google.com/admob/android/privacy/api/reference/com/google/android/ump/ConsentInformation?hl=th#requestConsentInfoUpdate(android.app.Activity,com.google.android.ump.ConsentRequestParameters,com.google.android.ump.ConsentInformation.OnConsentInfoUpdateSuccessListener,com.google.android.ump.ConsentInformation.OnConsentInfoUpdateFailureListener)">requestConsentInfoUpdate()</a></code> คำขอนี้จะตรวจสอบสิ่งต่อไปนี้</p>
+
+<ul>
+<li><strong>ต้องได้รับความยินยอมหรือไม่</strong> เช่น ต้องได้รับความยินยอมเป็นครั้งแรก หรือการตัดสินใจเกี่ยวกับความยินยอมครั้งก่อนหมดอายุแล้ว</li>
+<li><strong>ต้องมีจุดแรกเข้าของตัวเลือกความเป็นส่วนตัวหรือไม่</strong> ข้อความด้านความเป็นส่วนตัวบางข้อความ
+กำหนดให้แอปต้องอนุญาตให้ผู้ใช้แก้ไขตัวเลือกความเป็นส่วนตัวได้ทุกเมื่อ</li>
+</ul>
+
+
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 data-text="Java" id="java_2" tabindex="-1">Java</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Java"><code translate="no" dir="ltr">
+<span class="devsite-syntax-c1">// Requesting an update to consent information should be called on every app launch.</span>
+<span class="devsite-syntax-n">consentInformation</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">requestConsentInfoUpdate</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">activity</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">params</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">-</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-c1">// Called when consent information is successfully updated.</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">requestConsentError</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">-</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-c1">// Called when there's an error updating consent information.<div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/googleads/googleads-mobile-android-examples/blob/1b640d2d465a86958f634cf3b4c5d09c19d9c115/java/admob/BannerExample/app/src/main/java/com/google/android/gms/example/bannerexample/GoogleMobileAdsConsentManager.java#L88-L99" class="gc-analytics-event" data-category="github_link" data-label="googleads/googleads-mobile-android-examples/java/admob/BannerExample/app/src/main/java/com/google/android/gms/example/bannerexample/GoogleMobileAdsConsentManager.java#request_consent_info_update" data-code-snippet="true" data-github-path="googleads/googleads-mobile-android-examples/java/admob/BannerExample/app/src/main/java/com/google/android/gms/example/bannerexample/GoogleMobileAdsConsentManager.java" data-region-tag="request_consent_info_update">GoogleMobileAdsConsentManager.java</span></a></div>
+</code></pre></devsite-code></section>
+<section><h3 data-text="Kotlin" id="kotlin_2" tabindex="-1">Kotlin</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Kotlin"><code translate="no" dir="ltr">
+<span class="devsite-syntax-c1">// Requesting an update to consent information should be called on every app launch.</span>
+<span class="devsite-syntax-n">consentInformation</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">requestConsentInfoUpdate</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-n">activity</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-n">params</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-c1">// Called when consent information is successfully updated.</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">requestConsentError</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">-</span>&gt;
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-c1">// Called when there's an error updating consent information.</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-p">)</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/googleads/googleads-mobile-android-examples/blob/1b640d2d465a86958f634cf3b4c5d09c19d9c115/kotlin/admob/BannerExample/app/src/main/java/com/google/android/gms/example/bannerexample/GoogleMobileAdsConsentManager.kt#L73-L89" class="gc-analytics-event" data-category="github_link" data-label="googleads/googleads-mobile-android-examples/kotlin/admob/BannerExample/app/src/main/java/com/google/android/gms/example/bannerexample/GoogleMobileAdsConsentManager.kt#request_consent_info_update" data-code-snippet="true" data-github-path="googleads/googleads-mobile-android-examples/kotlin/admob/BannerExample/app/src/main/java/com/google/android/gms/example/bannerexample/GoogleMobileAdsConsentManager.kt" data-region-tag="request_consent_info_update"><span class="devsite-syntax-n">GoogleMobileAdsConsentManager</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">kt</span></a></div>
+</code></pre></devsite-code></section>
+</devsite-selector></div>
+
+<aside class="warning"><strong>คำเตือน:</strong><span> การใช้การตรวจสอบสถานะความยินยอมวิธีอื่นๆ เช่น แคชในแอปหรือสตริงความยินยอมที่บันทึกไว้ก่อนหน้านี้ อาจทำให้เกิด<a href="//support.google.com/admanager/answer/9999955?hl=th">ข้อผิดพลาด TCF 3.3</a> หากความยินยอมหมดอายุ</span></aside>
+<h2 data-text="โหลดและแสดงแบบฟอร์มประกาศเกี่ยวกับความเป็นส่วนตัว" id="load-present-form" tabindex="-1">โหลดและแสดงแบบฟอร์มประกาศเกี่ยวกับความเป็นส่วนตัว</h2>
+
+<p>หลังจากได้รับสถานะความยินยอมล่าสุดแล้ว ให้เรียกใช้
+<code dir="ltr" translate="no">
+<a href="https://developers.google.com/admob/android/privacy/api/reference/com/google/android/ump/UserMessagingPlatform?hl=th#loadAndShowConsentFormIfRequired(android.app.Activity,%20com.google.android.ump.ConsentForm.OnConsentFormDismissedListener)">loadAndShowConsentFormIfRequired()</a></code>เพื่อโหลดแบบฟอร์มที่จำเป็นต่อการ
+รวบรวมความยินยอมของผู้ใช้ หลังจากโหลดแล้ว แบบฟอร์มจะปรากฏขึ้นทันที</p>
+<aside class="key-point"><strong>ประเด็นสำคัญ:</strong><span> หากไม่มีแบบฟอร์มข้อความแสดงความยินยอมให้ใช้คุกกี้ทางการตลาดที่กำหนดให้รวบรวมความยินยอมจากผู้ใช้ก่อนที่จะขอโฆษณา ระบบจะเรียกใช้การเรียกกลับทันที</span></aside>
+
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 data-text="Java" id="java_3" tabindex="-1">Java</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Java"><code translate="no" dir="ltr">
+<span class="devsite-syntax-n">UserMessagingPlatform</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">loadAndShowConsentFormIfRequired</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">activity</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">formError</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">-</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-c1">// Consent gathering process is complete.</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">});</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/googleads/googleads-mobile-android-examples/blob/1b640d2d465a86958f634cf3b4c5d09c19d9c115/java/admob/BannerExample/app/src/main/java/com/google/android/gms/example/bannerexample/GoogleMobileAdsConsentManager.java#L106-L113" class="gc-analytics-event" data-category="github_link" data-label="googleads/googleads-mobile-android-examples/java/admob/BannerExample/app/src/main/java/com/google/android/gms/example/bannerexample/GoogleMobileAdsConsentManager.java#load_and_show_consent_form" data-code-snippet="true" data-github-path="googleads/googleads-mobile-android-examples/java/admob/BannerExample/app/src/main/java/com/google/android/gms/example/bannerexample/GoogleMobileAdsConsentManager.java" data-region-tag="load_and_show_consent_form"><span class="devsite-syntax-n">GoogleMobileAdsConsentManager</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">java</span></a></div>
+</code></pre></devsite-code></section>
+<section><h3 data-text="Kotlin" id="kotlin_3" tabindex="-1">Kotlin</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Kotlin"><code translate="no" dir="ltr">
+<span class="devsite-syntax-n">UserMessagingPlatform</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">loadAndShowConsentFormIfRequired</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">activity</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">formError</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">-</span>&gt;
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// Consent gathering process is complete.</span>
+<span class="devsite-syntax-p">}</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/googleads/googleads-mobile-android-examples/blob/1b640d2d465a86958f634cf3b4c5d09c19d9c115/kotlin/admob/BannerExample/app/src/main/java/com/google/android/gms/example/bannerexample/GoogleMobileAdsConsentManager.kt#L98-L103" class="gc-analytics-event" data-category="github_link" data-label="googleads/googleads-mobile-android-examples/kotlin/admob/BannerExample/app/src/main/java/com/google/android/gms/example/bannerexample/GoogleMobileAdsConsentManager.kt#load_and_show_consent_form" data-code-snippet="true" data-github-path="googleads/googleads-mobile-android-examples/kotlin/admob/BannerExample/app/src/main/java/com/google/android/gms/example/bannerexample/GoogleMobileAdsConsentManager.kt" data-region-tag="load_and_show_consent_form"><span class="devsite-syntax-n">GoogleMobileAdsConsentManager</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">kt</span></a></div>
+</code></pre></devsite-code></section>
+</devsite-selector></div>
+
+
+<h2 data-text="ตัวเลือกความเป็นส่วนตัว" id="privacy_options" tabindex="-1">ตัวเลือกความเป็นส่วนตัว</h2>
+
+<p>แบบฟอร์มข้อความด้านความเป็นส่วนตัวบางแบบจะแสดงจากจุดแรกเข้าของตัวเลือกความเป็นส่วนตัวที่ผู้เผยแพร่โฆษณาแสดงผล ซึ่งช่วยให้ผู้ใช้จัดการตัวเลือกความเป็นส่วนตัวได้ทุกเมื่อ
+
+ดูข้อมูลเพิ่มเติมเกี่ยวกับข้อความที่ผู้ใช้เห็นที่จุดแรกเข้าของตัวเลือกความเป็นส่วนตัวได้ที่
+
+<a href="//support.google.com/admob/answer/10114020?hl=th">ประเภทข้อความผู้ใช้ที่ใช้ได้</a>
+
+
+
+
+</p><h3 data-text="ตรวจสอบว่าต้องมีจุดแรกเข้าของตัวเลือกความเป็นส่วนตัวหรือไม่" id="check-privacy-options" tabindex="-1">ตรวจสอบว่าต้องมีจุดแรกเข้าของตัวเลือกความเป็นส่วนตัวหรือไม่</h3>
+
+<p>หลังจากเรียกใช้ <code dir="ltr" translate="no">
+<a href="https://developers.google.com/admob/android/privacy/api/reference/com/google/android/ump/ConsentInformation?hl=th#requestConsentInfoUpdate(android.app.Activity,com.google.android.ump.ConsentRequestParameters,com.google.android.ump.ConsentInformation.OnConsentInfoUpdateSuccessListener,com.google.android.ump.ConsentInformation.OnConsentInfoUpdateFailureListener)">requestConsentInfoUpdate()</a></code> แล้ว ให้ตรวจสอบ <code dir="ltr" translate="no">
+<a href="https://developers.google.com/admob/android/privacy/api/reference/com/google/android/ump/ConsentInformation?hl=th#getPrivacyOptionsRequirementStatus()">getPrivacyOptionsRequirementStatus()</a></code> เพื่อ
+ดูว่าแอปของคุณต้องมีจุดแรกเข้าของตัวเลือกความเป็นส่วนตัวหรือไม่ หากต้องมีจุดแรกเข้า
+ ให้เพิ่มองค์ประกอบ UI ที่มองเห็นได้และโต้ตอบได้ลงในแอป ซึ่งจะแสดง
+แบบฟอร์มตัวเลือกความเป็นส่วนตัว หากไม่จำเป็นต้องมีจุดแรกเข้าด้านความเป็นส่วนตัว
+ให้กำหนดค่าองค์ประกอบ UI ไม่ให้แสดงและโต้ตอบไม่ได้</p>
+
+
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 data-text="Java" id="java_4" tabindex="-1">Java</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Java"><code translate="no" dir="ltr">
+<span class="devsite-syntax-cm">/** Helper variable to determine if the privacy options form is required. */</span>
+<span class="devsite-syntax-kd">public</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kt">boolean</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nf">isPrivacyOptionsRequired</span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">return</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">consentInformation</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">getPrivacyOptionsRequirementStatus</span><span class="devsite-syntax-p">()</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-o">==</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">PrivacyOptionsRequirementStatus</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">REQUIRED</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-p">}</span>
+<div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/googleads/googleads-mobile-android-examples/blob/1b640d2d465a86958f634cf3b4c5d09c19d9c115/java/admob/BannerExample/app/src/main/java/com/google/android/gms/example/bannerexample/GoogleMobileAdsConsentManager.java#L63-L68" class="gc-analytics-event" data-category="github_link" data-label="googleads/googleads-mobile-android-examples/java/admob/BannerExample/app/src/main/java/com/google/android/gms/example/bannerexample/GoogleMobileAdsConsentManager.java#is_privacy_options_required" data-code-snippet="true" data-github-path="googleads/googleads-mobile-android-examples/java/admob/BannerExample/app/src/main/java/com/google/android/gms/example/bannerexample/GoogleMobileAdsConsentManager.java" data-region-tag="is_privacy_options_required"><span class="devsite-syntax-n">GoogleMobileAdsConsentManager</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">java</span></a></div>
+</code></pre></devsite-code></section>
+<section><h3 data-text="Kotlin" id="kotlin_4" tabindex="-1">Kotlin</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Kotlin"><code translate="no" dir="ltr">
+<span class="devsite-syntax-cm">/** Helper variable to determine if the privacy options form is required. */</span>
+<span class="devsite-syntax-kd">val</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nv">isPrivacyOptionsRequired</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kt">Boolean</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">get</span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">consentInformation</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">privacyOptionsRequirementStatus</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">==</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-n">ConsentInformation</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">PrivacyOptionsRequirementStatus</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">REQUIRED</span>
+<div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/googleads/googleads-mobile-android-examples/blob/1b640d2d465a86958f634cf3b4c5d09c19d9c115/kotlin/admob/BannerExample/app/src/main/java/com/google/android/gms/example/bannerexample/GoogleMobileAdsConsentManager.kt#L47-L52" class="gc-analytics-event" data-category="github_link" data-label="googleads/googleads-mobile-android-examples/kotlin/admob/BannerExample/app/src/main/java/com/google/android/gms/example/bannerexample/GoogleMobileAdsConsentManager.kt#is_privacy_options_required" data-code-snippet="true" data-github-path="googleads/googleads-mobile-android-examples/kotlin/admob/BannerExample/app/src/main/java/com/google/android/gms/example/bannerexample/GoogleMobileAdsConsentManager.kt" data-region-tag="is_privacy_options_required"><span class="devsite-syntax-n">GoogleMobileAdsConsentManager</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">kt</span></a></div>
+</code></pre></devsite-code></section>
+</devsite-selector></div>
+
+
+<p>ดูรายการสถานะข้อกำหนดของตัวเลือกความเป็นส่วนตัวทั้งหมดได้ที่
+<code dir="ltr" translate="no">
+<a href="https://developers.google.com/admob/android/privacy/api/reference/com/google/android/ump/ConsentInformation.PrivacyOptionsRequirementStatus?hl=th">
+ConsentInformation.PrivacyOptionsRequirementStatus</a></code></p>
+
+<h3 data-text="แสดงแบบฟอร์มตัวเลือกความเป็นส่วนตัว" id="present-privacy-options-form" tabindex="-1">แสดงแบบฟอร์มตัวเลือกความเป็นส่วนตัว</h3>
+
+<p>เมื่อผู้ใช้โต้ตอบกับองค์ประกอบ ให้แสดงแบบฟอร์มตัวเลือกความเป็นส่วนตัว</p>
+
+
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 data-text="Java" id="java_5" tabindex="-1">Java</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Java"><code translate="no" dir="ltr">
+<span class="devsite-syntax-n">UserMessagingPlatform</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">showPrivacyOptionsForm</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">activity</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">onConsentFormDismissedListener</span><span class="devsite-syntax-p">);</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/googleads/googleads-mobile-android-examples/blob/1b640d2d465a86958f634cf3b4c5d09c19d9c115/java/admob/BannerExample/app/src/main/java/com/google/android/gms/example/bannerexample/GoogleMobileAdsConsentManager.java#L121-L121" class="gc-analytics-event" data-category="github_link" data-label="googleads/googleads-mobile-android-examples/java/admob/BannerExample/app/src/main/java/com/google/android/gms/example/bannerexample/GoogleMobileAdsConsentManager.java#present_privacy_options_form" data-code-snippet="true" data-github-path="googleads/googleads-mobile-android-examples/java/admob/BannerExample/app/src/main/java/com/google/android/gms/example/bannerexample/GoogleMobileAdsConsentManager.java" data-region-tag="present_privacy_options_form"><span class="devsite-syntax-n">GoogleMobileAdsConsentManager</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">java</span></a></div>
+</code></pre></devsite-code></section>
+<section><h3 data-text="Kotlin" id="kotlin_5" tabindex="-1">Kotlin</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Kotlin"><code translate="no" dir="ltr">
+<span class="devsite-syntax-n">UserMessagingPlatform</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">showPrivacyOptionsForm</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">activity</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">onConsentFormDismissedListener</span><span class="devsite-syntax-p">)</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/googleads/googleads-mobile-android-examples/blob/1b640d2d465a86958f634cf3b4c5d09c19d9c115/kotlin/admob/BannerExample/app/src/main/java/com/google/android/gms/example/bannerexample/GoogleMobileAdsConsentManager.kt#L113-L113" class="gc-analytics-event" data-category="github_link" data-label="googleads/googleads-mobile-android-examples/kotlin/admob/BannerExample/app/src/main/java/com/google/android/gms/example/bannerexample/GoogleMobileAdsConsentManager.kt#present_privacy_options_form" data-code-snippet="true" data-github-path="googleads/googleads-mobile-android-examples/kotlin/admob/BannerExample/app/src/main/java/com/google/android/gms/example/bannerexample/GoogleMobileAdsConsentManager.kt" data-region-tag="present_privacy_options_form"><span class="devsite-syntax-n">GoogleMobileAdsConsentManager</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">kt</span></a></div>
+</code></pre></devsite-code></section>
+</devsite-selector></div>
+ 
+ <p></p>
+
+<h2 data-text="ขอโฆษณาโดยได้รับความยินยอมของผู้ใช้" id="request-ads" tabindex="-1">ขอโฆษณาโดยได้รับความยินยอมของผู้ใช้</h2>
+
+<p>ก่อนขอโฆษณา ให้ใช้ <code dir="ltr" translate="no">
+<a href="https://developers.google.com/admob/android/privacy/api/reference/com/google/android/ump/ConsentInformation?hl=th#canRequestAds()">canRequestAds()</a></code> เพื่อตรวจสอบว่าคุณได้รับความยินยอมจากผู้ใช้หรือไม่
+</p>
+
+
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 data-text="Java" id="java_6" tabindex="-1">Java</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Java"><code translate="no" dir="ltr"><span class="devsite-syntax-n">consentInformation</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">canRequestAds</span><span class="devsite-syntax-p">();</span>
+</code></pre></devsite-code></section>
+<section><h3 data-text="Kotlin" id="kotlin_6" tabindex="-1">Kotlin</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Kotlin"><code translate="no" dir="ltr"><span class="devsite-syntax-n">consentInformation</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">canRequestAds</span><span class="devsite-syntax-p">()</span>
+</code></pre></devsite-code></section>
+</devsite-selector></div>
+
+
+<p>คุณสามารถตรวจสอบว่าขอโฆษณาได้ขณะรวบรวมความยินยอมหรือไม่ในที่ต่อไปนี้
+</p>
+
+<ul>
+<li>หลังจาก UMP SDK รวบรวมความยินยอมในเซสชันปัจจุบัน</li>
+<li>ทันทีหลังจากที่คุณโทรหา <code dir="ltr" translate="no">
+<a href="https://developers.google.com/admob/android/privacy/api/reference/com/google/android/ump/ConsentInformation?hl=th#requestConsentInfoUpdate(android.app.Activity,com.google.android.ump.ConsentRequestParameters,com.google.android.ump.ConsentInformation.OnConsentInfoUpdateSuccessListener,com.google.android.ump.ConsentInformation.OnConsentInfoUpdateFailureListener)">requestConsentInfoUpdate()</a></code> UMP SDK อาจ
+ได้รับความยินยอมในเซสชันแอปก่อนหน้า</li>
+</ul>
+<aside class="special"><strong>สำคัญ:</strong><span> <code dir="ltr" translate="no">
+<a href="https://developers.google.com/admob/android/privacy/api/reference/com/google/android/ump/ConsentInformation?hl=th#canRequestAds()">canRequestAds()</a></code> จะแสดง <code dir="ltr" translate="no">false</code> เสมอจนกว่าคุณจะโทรหา
+<code dir="ltr" translate="no">
+<a href="https://developers.google.com/admob/android/privacy/api/reference/com/google/android/ump/ConsentInformation?hl=th#requestConsentInfoUpdate(android.app.Activity,com.google.android.ump.ConsentRequestParameters,com.google.android.ump.ConsentInformation.OnConsentInfoUpdateSuccessListener,com.google.android.ump.ConsentInformation.OnConsentInfoUpdateFailureListener)">requestConsentInfoUpdate()</a></code></span></aside>
+<p>หากเกิดข้อผิดพลาดในระหว่างกระบวนการรวบรวมความยินยอม ให้ตรวจสอบว่าคุณขอโฆษณาได้หรือไม่ UMP SDK ใช้สถานะความยินยอมจากเซสชันแอปก่อนหน้า</p>
+
+
+
+<h4 data-text="ป้องกันไม่ให้คำขอโฆษณาซ้ำซ้อน" id="prevent_redundant_ad_request_work" tabindex="-1">ป้องกันไม่ให้คำขอโฆษณาซ้ำซ้อน</h4>
+
+<p>ขณะตรวจสอบ <code dir="ltr" translate="no">
+<a href="https://developers.google.com/admob/android/privacy/api/reference/com/google/android/ump/ConsentInformation?hl=th#canRequestAds()">canRequestAds()</a></code> หลังจากรวบรวมความยินยอมและหลังจากเรียกใช้
+<code dir="ltr" translate="no">
+<a href="https://developers.google.com/admob/android/privacy/api/reference/com/google/android/ump/ConsentInformation?hl=th#requestConsentInfoUpdate(android.app.Activity,com.google.android.ump.ConsentRequestParameters,com.google.android.ump.ConsentInformation.OnConsentInfoUpdateSuccessListener,com.google.android.ump.ConsentInformation.OnConsentInfoUpdateFailureListener)">requestConsentInfoUpdate()</a></code> โปรดตรวจสอบว่าตรรกะของคุณป้องกันไม่ให้มีการส่งคำขอโฆษณาที่ซ้ำซ้อน ซึ่งอาจส่งผลให้การตรวจสอบทั้ง 2 รายการแสดงผลเป็น <code dir="ltr" translate="no">true</code> เช่น ตัวแปรบูลีน
+</p>
+
+
+
+ <p></p>
+
+<h2 data-text="การทดสอบ" id="testing" tabindex="-1">การทดสอบ</h2>
+
+<p>หากต้องการทดสอบการผสานรวมในแอปขณะที่พัฒนา ให้ทำตามขั้นตอนเหล่านี้เพื่อลงทะเบียนอุปกรณ์ทดสอบโดยอัตโนมัติ อย่าลืมนำ
+โค้ดที่ตั้งค่ารหัสอุปกรณ์ทดสอบเหล่านี้ออกก่อนเผยแพร่แอป</p>
+
+
+<aside class="note"><strong>หมายเหตุ:</strong><span>
+
+ตั้งแต่เวอร์ชัน 2.2.0 เป็นต้นไป คุณไม่จำเป็นต้องเพิ่มโปรแกรมจำลอง
+
+ลงในรายการรหัสอุปกรณ์ เนื่องจากโปรแกรมจำลองเป็นอุปกรณ์ทดสอบ
+โดยค่าเริ่มต้น
+ </span></aside><ol>
+<li>โทรมาที่ <code dir="ltr" translate="no">
+<a href="https://developers.google.com/admob/android/privacy/api/reference/com/google/android/ump/ConsentInformation?hl=th#requestConsentInfoUpdate(android.app.Activity,com.google.android.ump.ConsentRequestParameters,com.google.android.ump.ConsentInformation.OnConsentInfoUpdateSuccessListener,com.google.android.ump.ConsentInformation.OnConsentInfoUpdateFailureListener)">requestConsentInfoUpdate()</a></code></li>
+<li><p>ตรวจสอบเอาต์พุตของบันทึกเพื่อหาข้อความที่คล้ายกับตัวอย่างต่อไปนี้ ซึ่ง
+แสดงรหัสอุปกรณ์และวิธีเพิ่มเป็นอุปกรณ์ทดสอบ</p>
+
+
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded><code translate="no" dir="ltr">Use new ConsentDebugSettings.Builder().addTestDeviceHashedId("33BE2250B43518CCDA7DE426D04EE231") to set this as a debug device.
+</code></pre></devsite-code>
+</li>
+<li><p>คัดลอกรหัสอุปกรณ์ทดสอบไปยังคลิปบอร์ด</p></li>
+<li><p>แก้ไขโค้ดเพื่อเรียกใช้
+<code dir="ltr" translate="no">ConsentDebugSettings.Builder().TestDeviceHashedIds</code>และส่ง
+รายการรหัสอุปกรณ์ทดสอบ</p>
+
+
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 data-text="Java" id="java_7" tabindex="-1">Java</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Java"><code translate="no" dir="ltr"><span class="devsite-syntax-n">ConsentDebugSettings</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">debugSettings</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">ConsentDebugSettings</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">Builder</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-k">this</span><span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">addTestDeviceHashedId</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"TEST-DEVICE-HASHED-ID"</span><span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">build</span><span class="devsite-syntax-p">();</span>
+
+<span class="devsite-syntax-n">ConsentRequestParameters</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">params</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">ConsentRequestParameters</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">Builder</span><span class="devsite-syntax-p">()</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">setConsentDebugSettings</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">debugSettings</span><span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">build</span><span class="devsite-syntax-p">();</span>
+
+<span class="devsite-syntax-n">consentInformation</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">UserMessagingPlatform</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">getConsentInformation</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-k">this</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-c1">// Include the ConsentRequestParameters in your consent request.</span>
+<span class="devsite-syntax-n">consentInformation</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">requestConsentInfoUpdate</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-k">this</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">params</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-c1">// ...</span>
+<span class="devsite-syntax-p">);</span>
+</code></pre></devsite-code></section>
+<section><h3 data-text="Kotlin" id="kotlin_7" tabindex="-1">Kotlin</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Kotlin"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">val</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nv">debugSettings</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">ConsentDebugSettings</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">Builder</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-k">this</span><span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">addTestDeviceHashedId</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"TEST-DEVICE-HASHED-ID"</span><span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">build</span><span class="devsite-syntax-p">()</span>
+
+<span class="devsite-syntax-kd">val</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nv">params</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">ConsentRequestParameters</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">Builder</span><span class="devsite-syntax-p">()</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">setConsentDebugSettings</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">debugSettings</span><span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">build</span><span class="devsite-syntax-p">()</span>
+
+<span class="devsite-syntax-n">consentInformation</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">UserMessagingPlatform</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">getConsentInformation</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-k">this</span><span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-c1">// Include the ConsentRequestParameters in your consent request.</span>
+<span class="devsite-syntax-n">consentInformation</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">requestConsentInfoUpdate</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-k">this</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">params</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-c1">// ...</span>
+<span class="devsite-syntax-p">)</span>
+</code></pre></devsite-code></section>
+</devsite-selector></div>
+</li>
+</ol>
+<h3 data-text="บังคับใช้ภูมิศาสตร์" id="force_a_geography" tabindex="-1">บังคับใช้ภูมิศาสตร์</h3>
+
+<p>UMP SDK มีวิธีทดสอบลักษณะการทำงานของแอปเสมือนว่าอุปกรณ์
+อยู่ในภูมิภาคต่างๆ เช่น เขตเศรษฐกิจยุโรป (EEA), สหราชอาณาจักร (UK) และสวิตเซอร์แลนด์ โดยใช้ 
+<a href="//developers.google.com/admob/android/privacy/api/reference/com/google/android/ump/ConsentDebugSettings.Builder.html?hl=th#setDebugGeography(int)"><code dir="ltr" translate="no">setDebugGeography()</code></a> โปรดทราบว่า
+การตั้งค่าการแก้ไขข้อบกพร่องจะใช้ได้ในอุปกรณ์ทดสอบเท่านั้น</p>
+
+
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 data-text="Java" id="java_8" tabindex="-1">Java</h3><div></div><devsite-code><pre class="devsite-click-to-copy devsite-code-highlight" translate="no" dir="ltr" is-upgraded syntax="Java"><code translate="no" dir="ltr"><span class="devsite-syntax-n">ConsentDebugSettings</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">debugSettings</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">ConsentDebugSettings</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">Builder</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-k">this</span><span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-w">    </span><strong><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">setDebugGeography</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">ConsentDebugSettings</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">DebugGeography</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">DEBUG_GEOGRAPHY_EEA</span><span class="devsite-syntax-p">)</span></strong>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">addTestDeviceHashedId</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"TEST-DEVICE-HASHED-ID"</span><span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">build</span><span class="devsite-syntax-p">();</span>
+
+<span class="devsite-syntax-n">ConsentRequestParameters</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">params</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">ConsentRequestParameters</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">Builder</span><span class="devsite-syntax-p">()</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">setConsentDebugSettings</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">debugSettings</span><span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">build</span><span class="devsite-syntax-p">();</span>
+
+<span class="devsite-syntax-n">consentInformation</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">UserMessagingPlatform</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">getConsentInformation</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-k">this</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-c1">// Include the ConsentRequestParameters in your consent request.</span>
+<span class="devsite-syntax-n">consentInformation</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">requestConsentInfoUpdate</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-k">this</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">params</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">...</span>
+<span class="devsite-syntax-p">);</span>
+</code></pre></devsite-code></section>
+<section><h3 data-text="Kotlin" id="kotlin_8" tabindex="-1">Kotlin</h3><div></div><devsite-code><pre class="devsite-click-to-copy devsite-code-highlight" translate="no" dir="ltr" is-upgraded syntax="Kotlin"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">val</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nv">debugSettings</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">ConsentDebugSettings</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">Builder</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-k">this</span><span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-w">    </span><strong><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">setDebugGeography</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">ConsentDebugSettings</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">DebugGeography</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">DEBUG_GEOGRAPHY_EEA</span><span class="devsite-syntax-p">)</span></strong>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">addTestDeviceHashedId</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"TEST-DEVICE-HASHED-ID"</span><span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">build</span><span class="devsite-syntax-p">()</span>
+
+<span class="devsite-syntax-kd">val</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nv">params</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">ConsentRequestParameters</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">Builder</span><span class="devsite-syntax-p">()</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">setConsentDebugSettings</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">debugSettings</span><span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">build</span><span class="devsite-syntax-p">()</span>
+
+<span class="devsite-syntax-n">consentInformation</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">UserMessagingPlatform</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">getConsentInformation</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-k">this</span><span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-c1">// Include the ConsentRequestParameters in your consent request.</span>
+<span class="devsite-syntax-n">consentInformation</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">requestConsentInfoUpdate</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-k">this</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">params</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">...</span>
+<span class="devsite-syntax-p">)</span>
+</code></pre></devsite-code></section>
+</devsite-selector></div>
+
+
+<h3 data-text="รีเซ็ตสถานะความยินยอม" id="reset_consent_state" tabindex="-1">รีเซ็ตสถานะความยินยอม</h3>
+
+<p>เมื่อทดสอบแอปด้วย UMP SDK คุณอาจเห็นว่าการรีเซ็ต
+สถานะของ SDK มีประโยชน์เพื่อให้คุณจำลองประสบการณ์การติดตั้งครั้งแรกของผู้ใช้ได้
+SDK มี<code dir="ltr" translate="no">reset()</code>เมธอดสำหรับดำเนินการนี้</p>
+
+
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 data-text="Java" id="java_9" tabindex="-1">Java</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Java"><code translate="no" dir="ltr"><span class="devsite-syntax-n">consentInformation</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">reset</span><span class="devsite-syntax-p">();</span>
+</code></pre></devsite-code></section>
+<section><h3 data-text="Kotlin" id="kotlin_9" tabindex="-1">Kotlin</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Kotlin"><code translate="no" dir="ltr"><span class="devsite-syntax-n">consentInformation</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">reset</span><span class="devsite-syntax-p">()</span>
+</code></pre></devsite-code></section>
+</devsite-selector></div>
+
+<aside class="caution"><strong>ข้อควรระวัง:</strong><span> วิธีนี้มีไว้เพื่อใช้ในการทดสอบเท่านั้น คุณไม่ควรเรียกใช้ <code dir="ltr" translate="no">reset()</code> ในโค้ดที่ใช้งานจริง</span></aside>
+
+
+
+<h2 data-text="ตัวอย่างใน GitHub" id="examples_on_github" tabindex="-1">ตัวอย่างใน GitHub</h2>
+
+<p>ดูตัวอย่างการผสานรวม UMP SDK ทั้งหมดที่กล่าวถึงในหน้านี้ได้ที่
+
+
+
+<a href="//github.com/googleads/googleads-mobile-android-examples/tree/main/java/admob/BannerExample">Java BannerExample</a> และ 
+<a href="//github.com/googleads/googleads-mobile-android-examples/tree/main/kotlin/admob/BannerExample">Kotlin BannerExample</a>
+ 
+ 
+
+
+</p><p> 
+ </p>
+
+  
+  
+
+  
+    <devsite-hats-survey class="nocontent" data-nosnippet
+      hats-id="JW4a8xsy0LHkahqinNfT0T2FBE8s"
+      listnr-id="82128"></devsite-hats-survey>
+  
+</div>
+
+  
+    
+      <devsite-recommendations display="in-page" hidden yield>
+      </devsite-recommendations>
+    
+    
+      
+    <devsite-thumb-rating position="footer">
+    </devsite-thumb-rating>
+  
+       
+         <devsite-feedback
+  position="footer"
+  project-name="Android"
+  product-id="82128"
+  bucket="MobileAdsSDK"
+  context="Docs feedback for Google Mobile Ads SDK (Legacy) for Android"
+  version="t-devsite-webserver-20260901-r00-rc00.480082941541264604"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="footer"
+  class="nocontent"
+  data-nosnippet
+  
+  
+    project-feedback-url="//support.google.com/admob/gethelp"
+  
+  
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/touchicon-180-new.png"
+  
+  
+    project-support-url="//support.google.com/admob/contact/contact_us_gma_sdk?hl=th"
+  
+  
+  >
+
+  <button>
+  
+    
+    ส่งความคิดเห็น
+  
+  </button>
+</devsite-feedback>
+       
+    
+    
+      <devsite-recommendations id="recommendations-link" yield></devsite-recommendations>
+    
+  
+
+  <div class="devsite-floating-action-buttons"></div></article>
+
+
+<devsite-content-footer class="nocontent" data-nosnippet>
+  <p>เนื้อหาของหน้าเว็บนี้ได้รับอนุญาตภายใต้<a href="https://creativecommons.org/licenses/by/4.0/">ใบอนุญาตที่ต้องระบุที่มาของครีเอทีฟคอมมอนส์ 4.0</a> และตัวอย่างโค้ดได้รับอนุญาตภายใต้<a href="https://www.apache.org/licenses/LICENSE-2.0">ใบอนุญาต Apache 2.0</a> เว้นแต่จะระบุไว้เป็นอย่างอื่น โปรดดูรายละเอียดที่<a href="https://developers.google.com/site-policies?hl=th">นโยบายเว็บไซต์ Google Developers</a> Java เป็นเครื่องหมายการค้าจดทะเบียนของ Oracle และ/หรือบริษัทในเครือ</p>
+  <p>อัปเดตล่าสุด 2026-07-19 UTC</p>
+</devsite-content-footer>
+
+
+<devsite-notification
+>
+</devsite-notification>
+
+
+  
+<div class="devsite-content-data">
+  
+    
+    
+    <template class="devsite-thumb-rating-feedback">
+      <devsite-feedback
+  position="thumb-rating"
+  project-name="Android"
+  product-id="82128"
+  bucket="MobileAdsSDK"
+  context="Docs feedback for Google Mobile Ads SDK (Legacy) for Android"
+  version="t-devsite-webserver-20260901-r00-rc00.480082941541264604"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="thumb-rating"
+  class="nocontent"
+  data-nosnippet
+  
+  
+    project-feedback-url="//support.google.com/admob/gethelp"
+  
+  
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/touchicon-180-new.png"
+  
+  
+    project-support-url="//support.google.com/admob/contact/contact_us_gma_sdk?hl=th"
+  
+  
+  >
+
+  <button>
+  
+    หากต้องการบอกให้เราทราบเพิ่มเติม
+  
+  </button>
+</devsite-feedback>
+    </template>
+  
+  
+    <template class="devsite-content-data-template">
+      [[["เข้าใจง่าย","easyToUnderstand","thumb-up"],["แก้ปัญหาของฉันได้","solvedMyProblem","thumb-up"],["อื่นๆ","otherUp","thumb-up"]],[["ไม่มีข้อมูลที่ฉันต้องการ","missingTheInformationINeed","thumb-down"],["ซับซ้อนเกินไป/มีหลายขั้นตอนมากเกินไป","tooComplicatedTooManySteps","thumb-down"],["ล้าสมัย","outOfDate","thumb-down"],["ปัญหาเกี่ยวกับการแปล","translationIssue","thumb-down"],["ตัวอย่าง/ปัญหาเกี่ยวกับโค้ด","samplesCodeIssue","thumb-down"],["อื่นๆ","otherDown","thumb-down"]],["อัปเดตล่าสุด 2026-07-19 UTC"],[],["The Google UMP SDK manages user privacy choices. Key actions include: installing the SDK via Gradle, adding the AdMob application ID to `AndroidManifest.xml`, and initializing `ConsentInformation`. At each app launch, update user consent via `requestConsentInfoUpdate()`. Load and show consent forms using `loadAndShowConsentFormIfRequired()`, or present privacy options via `showPrivacyOptionsForm()` if needed. Check `canRequestAds()` before ad requests. For testing, add device IDs and set debug geography; `reset()` the consent state when testing.\n"]]
+    </template>
+  
+</div>
+            
+          </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+          
+            
+          
+        </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+          
+            
+<nav class="devsite-footer-linkboxes nocontent"
+     aria-label="ลิงก์ส่วนท้าย"
+     data-nosnippet>
+  
+  <ul class="devsite-footer-linkboxes-list">
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">เข้าร่วม</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developers.google.com/program?hl=th"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Google Developer Program
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developers.google.com/community?hl=th"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Google Developer Groups
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developers.google.com/community/experts?hl=th"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Google Developer Experts
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developers.google.com/community/accelerators?hl=th"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+          
+            Accelerators
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developers.google.com/community/nvidia?hl=th"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+            
+              
+              
+            
+          
+            Google Cloud & NVIDIA
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">เชื่อมต่อ</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//googledevelopers.blogspot.com"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            บล็อก
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://bsky.app/profile/developers.google.com"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Bluesky
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.instagram.com/googlefordevs/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Instagram
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.linkedin.com/showcase/googledevelopers/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+          
+            LinkedIn
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//twitter.com/googledevs"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+            
+          
+            X (Twitter)
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//www.youtube.com/user/GoogleDevelopers?hl=th"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 6)"
+            >
+            
+              
+              
+            
+          
+            YouTube
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">บิวด์</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developer.android.com/?hl=th"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Android
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developer.chrome.com/?hl=th"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Chrome
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://firebase.google.com/?hl=th"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Firebase
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://aistudio.google.com/?hl=th"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+          
+            Google AI Studio
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://antigravity.google/?hl=th"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+            
+          
+            Google Antigravity
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://cloud.google.com/?hl=th"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 6)"
+            >
+            
+          
+            Google Cloud
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://play.google.com/console/about/?hl=th"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 7)"
+            >
+            
+          
+            Google Play
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developers.google.com/products?hl=th"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 8)"
+            >
+            
+              
+              
+            
+          
+            View all
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+  
+</nav>
+          
+        </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+          
+            
+
+<div class="devsite-footer-utility nocontent" data-nosnippet>
+  
+  
+  <nav class="devsite-footer-sites" aria-label="เว็บไซต์ Google Developers อื่นๆ">
+    <a href="https://developers.google.com/?hl=th"
+       class="devsite-footer-sites-logo-link gc-analytics-event"
+       data-category="Site-Wide Custom Events"
+       data-label="Footer Google Developers Link">
+      <picture>
+        
+        <img class="devsite-footer-sites-logo"
+             src="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/lockup-google-for-developers.svg"
+             loading="lazy"
+             alt="Google Developers">
+      </picture>
+    </a>
+    <ul class="devsite-footer-sites-list">
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//developer.android.com?hl=th"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Android Link"
+         
+         >
+          Android
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//developer.chrome.com/home?hl=th"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Chrome Link"
+         
+         >
+          Chrome
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//firebase.google.com?hl=th"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Firebase Link"
+         
+         >
+          Firebase
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//cloud.google.com?hl=th"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Google Cloud Platform Link"
+         
+         >
+          Google Cloud Platform
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//ai.google.dev/?hl=th"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Google AI Link"
+         
+         >
+          Google AI
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="https://developers.google.com/products?hl=th"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer All products Link"
+         
+         >
+          ผลิตภัณฑ์ทั้งหมด
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+  
+
+  
+  <nav class="devsite-footer-utility-links" aria-label="ลิงก์ยูทิลิตี">
+    
+    <ul class="devsite-footer-utility-list">
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="https://developers.google.com/terms/site-terms?hl=th"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          ข้อกำหนด
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/privacy?hl=th"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          ความเป็นส่วนตัว
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 glue-cookie-notification-bar-control">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="#"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Manage cookies link"
+         
+           aria-hidden="true"
+         >
+          Manage cookies
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+    
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es"
+        >Español</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+  </nav>
+</div>
+          
+        </devsite-footer-utility>
+        <devsite-panel>
+          
+        </devsite-panel>
+        
+      </section>
+      </section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar></devsite-snackbar>
+    <devsite-tooltip ></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics>
+      
+        <script type="application/json" analytics>[{&#34;dimensions&#34;: {&#34;dimension3&#34;: false, &#34;dimension5&#34;: &#34;th&#34;, &#34;dimension4&#34;: &#34;Android&#34;, &#34;dimension11&#34;: true, &#34;dimension1&#34;: &#34;Signed out&#34;, &#34;dimension6&#34;: &#34;th&#34;}, &#34;gaid&#34;: &#34;UA-24532603-1&#34;, &#34;metrics&#34;: {&#34;ratings_value&#34;: &#34;metric1&#34;, &#34;ratings_count&#34;: &#34;metric2&#34;}, &#34;purpose&#34;: 1}]</script>
+<script type="application/json" tag-management>{&#34;at&#34;: &#34;True&#34;, &#34;ga4&#34;: [{&#34;id&#34;: &#34;G-272J68FCRF&#34;, &#34;purpose&#34;: 1}, {&#34;id&#34;: &#34;G-LK8Q4VGKYR&#34;, &#34;purpose&#34;: 0}], &#34;ga4p&#34;: [{&#34;id&#34;: &#34;G-272J68FCRF&#34;, &#34;purpose&#34;: 1}], &#34;gtm&#34;: [{&#34;id&#34;: &#34;GTM-T98GCPGN&#34;, &#34;purpose&#34;: 1}], &#34;parameters&#34;: {&#34;internalUser&#34;: &#34;False&#34;, &#34;language&#34;: {&#34;machineTranslated&#34;: &#34;True&#34;, &#34;requested&#34;: &#34;th&#34;, &#34;served&#34;: &#34;th&#34;}, &#34;pageType&#34;: &#34;article&#34;, &#34;projectName&#34;: &#34;Android&#34;, &#34;signedIn&#34;: &#34;False&#34;, &#34;tenant&#34;: &#34;developers&#34;, &#34;recommendations&#34;: {&#34;sourcePage&#34;: &#34;&#34;, &#34;sourceType&#34;: 0, &#34;sourceRank&#34;: 0, &#34;sourceIdenticalDescriptions&#34;: 0, &#34;sourceTitleWords&#34;: 0, &#34;sourceDescriptionWords&#34;: 0, &#34;experiment&#34;: &#34;&#34;}, &#34;experiment&#34;: {&#34;ids&#34;: &#34;&#34;}}}</script>
+      
+    </devsite-analytics>
+    
+      <devsite-badger></devsite-badger>
+    
+    
+    
+    
+<script nonce="implaocVKTW25CM5Nx9wJdTnXI9Bhl">
+  
+  (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/js/app_loader.js', '[1,"th",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037","https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers","https://developers-dot-devsite-v2-prod.appspot.com",1,null,["/_pwa/developers/manifest.json","https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/favicon-new.png","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap"],1,null,[1,6,8,12,14,17,21,25,50,52,63,70,75,76,80,87,91,92,93,97,98,100,101,102,103,104,105,107,108,109,110,112,113,116,117,118,120,122,124,125,126,127,129,130,131,132,133,134,135,136,138,140,141,147,148,149,151,152,156,157,158,159,161,163,164,168,169,170,179,180,182,183,186,191,193,196],"AIzaSyAP-jjEJBzmIyKR4F-3XITp8yM9T1gEEI8","AIzaSyB6xiKGDR5O3Ak2okS4rLkauxGUG7XP0hg","developers.google.com","AIzaSyAQk0fBONSGUqCNznf6Krs82Ap1-NV6J4o","AIzaSyCCxcqdrZ_7QMeLCRY20bh_SXdAYqy70KY",null,null,null,["Profiles__enable_release_notes_notifications","Profiles__enable_profile_collections","MiscFeatureFlags__enable_appearance_cookies","Cloud__enable_cloudx_experiment_ids","AIStudioInteractionsToggle__interactions_are_default","DevPro__enable_enterprise","DevPro__enable_embed_profile_creation","Profiles__enable_join_program_group_endpoint","Profiles__enable_targeted_hero","DevPro__enable_developer_subscriptions","DevPro__enable_g1_ineligible_redirect","MiscFeatureFlags__enable_explicit_template_dependencies","Concierge__enable_concierge","DevPro__remove_eu_tax_intake_form","CloudShell__cloud_shell_button","MiscFeatureFlags__enable_project_variables","Profiles__enable_developer_profiles_callout","Profiles__enable_awarding_url","DevPro__enable_firebase_workspaces_card","MiscFeatureFlags__remove_cross_domain_tracking_params","DevPro__enable_devpro_offers","Search__enable_ai_search_summaries_restricted","Cloud__enable_cloud_dlp_service","CloudShell__cloud_code_overflow_menu","MiscFeatureFlags__enable_explain_this_code","Profiles__enable_public_developer_profiles","Profiles__enable_developer_profile_pages_as_content","Search__enable_ai_search_summaries","DevPro__enable_cloud_innovators_plus","Profiles__enable_completecodelab_endpoint","TpcFeatures__enable_unmirrored_page_left_nav","MiscFeatureFlags__developers_footer_dark_image","Cloud__fast_free_trial","Profiles__enable_dashboard_curated_recommendations","Profiles__enable_playlist_community_acl","MiscFeatureFlags__developers_footer_image","Concierge__enable_key_takeaways","Search__enable_dynamic_content_confidential_banner","Profiles__enable_completequiz_endpoint","Concierge__enable_key_takeaways_new_ui","Concierge__enable_remove_info_panel_tags","MiscFeatureFlags__enable_variable_operator_index_yaml","Concierge__enable_actions_menu","Profiles__enable_purchase_prompts","DevPro__enable_devsite_captcha","DevPro__enable_google_one_card","DevPro__enable_google_payments_buyflow","MiscFeatureFlags__fix_lower_breadcrumbs","SignIn__enable_l1_signup_flow","MiscFeatureFlags__gdp_dashboard_reskin_enabled","Concierge__enable_pushui","Analytics__enable_devpro_interaction_logging","Search__enable_ai_eligibility_checks","DevPro__enable_code_assist","Search__enable_suggestions_from_borg","MiscFeatureFlags__enable_framebox_badge_methods","Concierge__enable_devsite_llm_tools","Profiles__enable_auto_apply_credits","Concierge__enable_concierge_restricted","Cloud__enable_cloud_shell","MiscFeatureFlags__enable_variable_operator","DevPro__enable_credits_banner","Profiles__enable_callout_notifications","Search__enable_ai_search_summaries_for_all","DevPro__enable_vertex_credit_card","MiscFeatureFlags__enable_view_transitions","Profiles__enable_developer_profile_benefits_ui_redesign","BookNav__enable_tenant_cache_key","Cloud__enable_legacy_calculator_redirect","Profiles__enable_recognition_badges","DevPro__enable_g1_integration","Cloud__cache_serialized_dynamic_content","Profiles__enable_stripe_subscription_management","DevPro__enable_free_benefits","EngEduTelemetry__enable_engedu_telemetry","MiscFeatureFlags__enable_firebase_utm","Analytics__enable_clearcut_logging","Profiles__require_profile_eligibility_for_signin","DevPro__enable_nvidia_credits_card","Significatio__enable_by_tenant","Cloud__enable_cloud_shell_fte_user_flow","Profiles__enable_complete_playlist_endpoint","Profiles__enable_user_type","TpcFeatures__proxy_prod_host","Cloud__enable_free_trial_server_call","Profiles__enable_page_saving","Search__enable_page_map","Experiments__reqs_query_experiments"],null,null,"AIzaSyBLEMok-5suZ67qRPzx0qUtbnLmyT_kCVE","https://developerscontentserving-pa.clients6.google.com","AIzaSyCM4QpTRSqP5qI4Dvjt4OAScIN8sOUlO-k","https://developerscontentsearch-pa.clients6.google.com",1,4,null,"https://developerprofiles-pa.clients6.google.com",[1,"developers","Google for Developers","developers.google.com",null,"developers-dot-devsite-v2-prod.appspot.com",null,null,[1,1,[1],null,null,null,null,null,null,null,null,[1],null,null,null,null,null,null,[1],[1,null,null,[1,20],"/recommendations/information"],null,null,null,[1,1,1],[1,1,null,1,1,null,null,["/meridian"]],[1,null,null,null,null,null,null,["/admob","/ad-manager/mobile-ads-sdk","/ml-kit"]],null,[null,["/meridian","/youtube/devices/"]],1,null,[1]],null,[null,null,null,null,null,null,"/images/lockup-new.svg","/images/touchicon-180-new.png",null,null,null,null,1,null,null,null,null,null,null,null,null,1,null,null,null,"/images/lockup-dark-theme-new.svg",[]],[],null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[6,1,14,15,20,22,23,29,32,36],null,[[null,null,null,[3,7,10,2,39,17,4,32,24,11,12,13,34,15,25],null,null,[1,[["docType","Choose a content type",[["Tutorial",null,null,null,null,null,null,null,null,"Tutorial"],["Guide",null,null,null,null,null,null,null,null,"Guide"],["Sample",null,null,null,null,null,null,null,null,"Sample"]]],["product","Choose a product",[["Android",null,null,null,null,null,null,null,null,"Android"],["ARCore",null,null,null,null,null,null,null,null,"ARCore"],["ChromeOS",null,null,null,null,null,null,null,null,"ChromeOS"],["Firebase",null,null,null,null,null,null,null,null,"Firebase"],["Flutter",null,null,null,null,null,null,null,null,"Flutter"],["Assistant",null,null,null,null,null,null,null,null,"Google Assistant"],["GoogleCloud",null,null,null,null,null,null,null,null,"Google Cloud"],["GoogleMapsPlatform",null,null,null,null,null,null,null,null,"Google Maps Platform"],["GooglePay",null,null,null,null,null,null,null,null,"Google Pay & Google Wallet"],["GooglePlay",null,null,null,null,null,null,null,null,"Google Play"],["Tensorflow",null,null,null,null,null,null,null,null,"TensorFlow"]]],["category","Choose a topic",[["AiAndMachineLearning",null,null,null,null,null,null,null,null,"AI and Machine Learning"],["Data",null,null,null,null,null,null,null,null,"Data"],["Enterprise",null,null,null,null,null,null,null,null,"Enterprise"],["Gaming",null,null,null,null,null,null,null,null,"Gaming"],["Mobile",null,null,null,null,null,null,null,null,"Mobile"],["Web",null,null,null,null,null,null,null,null,"Web"]]]]]],[1,1],null,1],[[["UA-24532603-1"],["UA-22084204-5"],null,null,["UA-24532603-5"],["GTM-T98GCPGN"],null,[["G-272J68FCRF"],null,null,[["G-272J68FCRF",2]]],[["UA-24532603-1",2]],null,[["UA-24532603-5",2]],[["GTM-T98GCPGN",2]],1],[[5,4],[13,10],[15,12],[3,2],[11,8],[4,3],[6,5],[1,1],[16,13],[12,9],[14,11]],[[1,1],[2,2]]],null,4,null,null,null,null,null,null,null,null,null,null,null,null,null,"developers.devsite.google",null,null,null,null,null,[]],null,"pk_live_5170syrHvgGVmSx9sBrnWtA5luvk9BwnVcvIi7HizpwauFG96WedXsuXh790rtij9AmGllqPtMLfhe2RSwD6Pn38V00uBCydV4m",null,null,"https://developerscontentinsights-pa.clients6.google.com","AIzaSyCg-ZUslalsEbXMfIo9ZP8qufZgo3LSBDU","AIzaSyDxT0vkxnY_KeINtA4LSePJO-4MAZPMRsE","https://developers.clients6.google.com",["https://codeassist.google.com","https://code-assist-free-tier.corp.google.com"],null,"AIzaSyBQom12tzI-rybN7Sf-KfeL4nwm-Rf7PmI\n",null,null,"https://developers.googleapis.com"]')
+  
+</script>
+
+    <devsite-a11y-announce></devsite-a11y-announce>
+  </body>
+</html>

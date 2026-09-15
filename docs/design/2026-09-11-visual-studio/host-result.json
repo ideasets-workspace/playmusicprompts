@@ -1,0 +1,29 @@
+{
+  "scope": "Current host function, real bundled Three scene/geometry/material/camera/Reflector, actual collection/assets/features/settings. Renderer, composer passes, controls and DOM are explicit boundaries. No GPU, visual or audible playback claim.",
+  "threeRevision": "185",
+  "hostSHA256": "99c3bc4ce37939c4ddf83cc048eecc1ddee7b9fcd11f8940134c199e48d99dc2",
+  "passed": 21,
+  "results": [
+    "Host constructs actual Three geometry/material/camera and uses identity grade by default",
+    "Exposure, bloom radius and strength alter actual renderer/pass state with safe defaults restored",
+    "Color richness and edge shade enable real grade uniforms; original bypasses the pass",
+    "Record dust density changes actual draw range and glow changes PointsMaterial opacity",
+    "Record reflection scales actual Reflector radiance and fog remains Record-only across scene switches",
+    "Record spectrum height changes actual instance matrices and stays editable with motion frozen",
+    "Record spectrum height also changes actual Wave geometry with a frozen clock",
+    "All 29 sanitized settings reach the real collection frame without rewriting source settings",
+    "Real host routes scene-specific settings to Neural, Horizon and Prism after switching",
+    "World tempo scales choreography once while real feature timing and real audio smoothing remain independent",
+    "Smoothing changes actual band and spectrum attack at equal real audio inputs",
+    "Bass, midrange and treble gains independently scale actual three bands and 64 spectral bins",
+    "Zero gains remove Record spectrum response without changing the supplied audio data",
+    "Real detector transients are scaled and zero pulse suppresses existing real Prism fronts immediately",
+    "Muted or inactive analyser input does not produce forwarded onset events",
+    "Motion off freezes Record matrices/rotation/light and real Prism pose despite incoming audio changes",
+    "Framing changes real camera distance, unrelated edits preserve it and reset restores intended composition",
+    "Resize fits actual camera to preview aspect without clearing advanced settings",
+    "Orbit speed reaches controls and only enabled compatible scenes auto-orbit during playback",
+    "Low quality preserves explicit look values and intentionally disables costly bloom/reflection",
+    "Disposed host stops scheduling/renders and disposes its explicit boundaries"
+  ]
+}

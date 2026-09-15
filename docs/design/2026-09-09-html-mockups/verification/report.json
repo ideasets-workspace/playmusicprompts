@@ -1,0 +1,186 @@
+{
+  "generatedAt": "2026-09-09T08:04:04.489Z",
+  "base": "http://127.0.0.1:4173",
+  "report": [
+    {
+      "page": "index.html",
+      "width": 375,
+      "status": 200,
+      "horizontalOverflowPx": 0,
+      "smallTargets": 0,
+      "smallTargetSamples": [],
+      "consoleErrors": [],
+      "screenshot": "verification/index-375.png"
+    },
+    {
+      "page": "index.html",
+      "width": 768,
+      "status": 200,
+      "horizontalOverflowPx": 0,
+      "smallTargets": 0,
+      "smallTargetSamples": [],
+      "consoleErrors": [],
+      "screenshot": "verification/index-768.png"
+    },
+    {
+      "page": "index.html",
+      "width": 1440,
+      "status": 200,
+      "horizontalOverflowPx": 0,
+      "smallTargets": 0,
+      "smallTargetSamples": [],
+      "consoleErrors": [],
+      "screenshot": "verification/index-1440.png"
+    },
+    {
+      "page": "musics.html",
+      "width": 375,
+      "status": 200,
+      "horizontalOverflowPx": 0,
+      "smallTargets": 0,
+      "smallTargetSamples": [],
+      "consoleErrors": [],
+      "screenshot": "verification/musics-375.png"
+    },
+    {
+      "page": "musics.html",
+      "width": 768,
+      "status": 200,
+      "horizontalOverflowPx": 0,
+      "smallTargets": 0,
+      "smallTargetSamples": [],
+      "consoleErrors": [],
+      "screenshot": "verification/musics-768.png"
+    },
+    {
+      "page": "musics.html",
+      "width": 1440,
+      "status": 200,
+      "horizontalOverflowPx": 0,
+      "smallTargets": 0,
+      "smallTargetSamples": [],
+      "consoleErrors": [],
+      "screenshot": "verification/musics-1440.png"
+    },
+    {
+      "page": "track.html",
+      "width": 375,
+      "status": 200,
+      "horizontalOverflowPx": 0,
+      "smallTargets": 0,
+      "smallTargetSamples": [],
+      "consoleErrors": [],
+      "screenshot": "verification/track-375.png"
+    },
+    {
+      "page": "track.html",
+      "width": 768,
+      "status": 200,
+      "horizontalOverflowPx": 0,
+      "smallTargets": 0,
+      "smallTargetSamples": [],
+      "consoleErrors": [],
+      "screenshot": "verification/track-768.png"
+    },
+    {
+      "page": "track.html",
+      "width": 1440,
+      "status": 200,
+      "horizontalOverflowPx": 0,
+      "smallTargets": 0,
+      "smallTargetSamples": [],
+      "consoleErrors": [],
+      "screenshot": "verification/track-1440.png"
+    },
+    {
+      "page": "login.html",
+      "width": 375,
+      "status": 200,
+      "horizontalOverflowPx": 0,
+      "smallTargets": 0,
+      "smallTargetSamples": [],
+      "consoleErrors": [],
+      "screenshot": "verification/login-375.png"
+    },
+    {
+      "page": "login.html",
+      "width": 768,
+      "status": 200,
+      "horizontalOverflowPx": 0,
+      "smallTargets": 0,
+      "smallTargetSamples": [],
+      "consoleErrors": [],
+      "screenshot": "verification/login-768.png"
+    },
+    {
+      "page": "login.html",
+      "width": 1440,
+      "status": 200,
+      "horizontalOverflowPx": 0,
+      "smallTargets": 0,
+      "smallTargetSamples": [],
+      "consoleErrors": [],
+      "screenshot": "verification/login-1440.png"
+    },
+    {
+      "page": "signup.html",
+      "width": 375,
+      "status": 200,
+      "horizontalOverflowPx": 0,
+      "smallTargets": 0,
+      "smallTargetSamples": [],
+      "consoleErrors": [],
+      "screenshot": "verification/signup-375.png"
+    },
+    {
+      "page": "signup.html",
+      "width": 768,
+      "status": 200,
+      "horizontalOverflowPx": 0,
+      "smallTargets": 0,
+      "smallTargetSamples": [],
+      "consoleErrors": [],
+      "screenshot": "verification/signup-768.png"
+    },
+    {
+      "page": "signup.html",
+      "width": 1440,
+      "status": 200,
+      "horizontalOverflowPx": 0,
+      "smallTargets": 0,
+      "smallTargetSamples": [],
+      "consoleErrors": [],
+      "screenshot": "verification/signup-1440.png"
+    },
+    {
+      "page": "legal.html",
+      "width": 375,
+      "status": 200,
+      "horizontalOverflowPx": 0,
+      "smallTargets": 0,
+      "smallTargetSamples": [],
+      "consoleErrors": [],
+      "screenshot": "verification/legal-375.png"
+    },
+    {
+      "page": "legal.html",
+      "width": 768,
+      "status": 200,
+      "horizontalOverflowPx": 0,
+      "smallTargets": 0,
+      "smallTargetSamples": [],
+      "consoleErrors": [],
+      "screenshot": "verification/legal-768.png"
+    },
+    {
+      "page": "legal.html",
+      "width": 1440,
+      "status": 200,
+      "horizontalOverflowPx": 0,
+      "smallTargets": 0,
+      "smallTargetSamples": [],
+      "consoleErrors": [],
+      "screenshot": "verification/legal-1440.png"
+    }
+  ]
+}

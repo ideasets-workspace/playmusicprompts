@@ -1,0 +1,48 @@
+/* =====================================================================================
+   css/auth.css — login / signup: a two-pane surface. Left: the 3D sound field (the brand
+   moment), right: a focused card. Below 1024 px the field becomes a short header band.
+   Password rule text states the real policy (NIST SP 800-63B-4: >= 15 characters, no
+   composition rules, blocklist) — the same policy the backend enforces.
+   ===================================================================================== */
+
+.auth { min-height: 100dvh; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(420px, .9fr); }
+.auth-field { position: relative; overflow: hidden; background: #000; }
+.auth-field .still { position: absolute; inset: 0; background: center / cover no-repeat; opacity: .9; }
+.auth-field .scene { position: absolute; inset: 0; }
+.auth-field .copy { position: absolute; left: clamp(24px, 5vw, 72px); bottom: clamp(24px, 6vh, 72px); right: clamp(24px, 5vw, 72px); z-index: 1; }
+.auth-field .copy h2 { font-size: clamp(1.8rem, 2.6vw + .5rem, 3rem); font-weight: 800; letter-spacing: -.02em; line-height: 1.08; max-width: 18ch; }
+.auth-field .copy p { margin-top: var(--sp-3); color: var(--ink-dim); max-width: 48ch; }
+.auth-field .brand { position: absolute; top: var(--sp-6); left: clamp(24px, 5vw, 72px); z-index: 1; }
+
+.auth-pane { display: grid; place-items: center; padding: clamp(24px, 5vw, 64px); background: var(--bg-1); border-left: 1px solid var(--line); }
+.auth-card { width: min(100%, 440px); }
+.auth-card h1 { font-size: var(--fs-3xl); font-weight: 800; letter-spacing: -.02em; }
+.auth-card .sub { margin-top: var(--sp-2); color: var(--ink-dim); }
+.field { display: grid; gap: var(--sp-2); margin-top: var(--sp-5); }
+.field label { font-size: var(--fs-sm); font-weight: 700; }
+.field .hint { font-size: var(--fs-xs); color: var(--ink-faint); }
+.input { display: flex; align-items: center; gap: var(--sp-2); min-height: 52px; padding: 0 var(--sp-2) 0 var(--sp-4); border-radius: var(--r-md); background: var(--bg-2); border: 1px solid var(--line-strong); transition: border-color var(--dur-fast), box-shadow var(--dur-fast); }
+.input:focus-within { border-color: var(--accent); box-shadow: var(--glow-accent); }
+.input input { flex: 1; min-width: 0; background: none; border: 0; outline: 0; color: var(--ink); font-size: var(--fs-md); }
+.input input::placeholder { color: var(--ink-faint); }
+.strength { display: flex; gap: 4px; margin-top: var(--sp-1); }
+.strength i { flex: 1; height: 4px; border-radius: 2px; background: var(--bg-3); }
+.strength i.on { background: var(--brand-gradient); }
+.btn-primary { width: 100%; justify-content: center; margin-top: var(--sp-6); }
+.divider { display: flex; align-items: center; gap: var(--sp-3); margin: var(--sp-6) 0; color: var(--ink-faint); font-size: var(--fs-xs); }
+.divider::before, .divider::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.providers { display: grid; gap: var(--sp-2); }
+.provider { display: flex; align-items: center; justify-content: center; gap: var(--sp-3); min-height: 48px; border-radius: var(--r-md); border: 1px solid var(--line-strong); font-weight: 700; font-size: var(--fs-sm); }
+.provider:hover { background: var(--bg-3); }
+.provider svg { width: 20px; height: 20px; }
+.auth-foot { margin-top: var(--sp-6); font-size: var(--fs-sm); color: var(--ink-dim); text-align: center; }
+.auth-foot a { color: var(--accent-2); text-decoration: underline; text-underline-offset: 3px; display: inline-block; min-height: var(--target-min); line-height: var(--target-min); }
+.legal-note { margin-top: var(--sp-4); font-size: var(--fs-2xs); color: var(--ink-faint); text-align: center; }
+.legal-note a { text-decoration: underline; display: inline-block; min-height: var(--target-min); line-height: var(--target-min); }
+
+@media (max-width: 1023.98px) {
+  .auth { grid-template-columns: 1fr; grid-template-rows: 38vh minmax(0, 1fr); }
+  .auth-field .copy h2 { font-size: var(--fs-2xl); }
+  .auth-field .copy p { display: none; }
+  .auth-pane { border-left: 0; border-top: 1px solid var(--line); align-items: start; }
+}

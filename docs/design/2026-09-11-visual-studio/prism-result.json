@@ -1,0 +1,25 @@
+{
+  "scope": "Real Three construction and source/control state checks. GPU compilation and rendered appearance require parent browser verification.",
+  "threeRevision": "185",
+  "passed": 18,
+  "results": [
+    "Accepted baseline hash is the exact source preserved before Studio changes",
+    "Actual Three geometry, five draws and fixed camera profile remain identical to accepted source",
+    "Absent look and explicit defaults preserve accepted audio, phase, travel and front values exactly",
+    "Static controls clamp to specified minima and maxima with motion frozen",
+    "Invalid look inputs resolve to finite defaults",
+    "Width and twist uniforms feed common architecture and peripheral placement shaders",
+    "Gloss applies to both dark wall and rib reflection bands, preserving accepted negative-Z support",
+    "Flight zero freezes travel only: real audio, bends and onset fronts remain active",
+    "Twice flight speed produces twice actual travel without changing front propagation",
+    "Host-scaled motion delta is accepted through 0.125 seconds without truncation or a second speed multiply",
+    "Particle density reduces actual whole-line draw count in both quality modes; structural draws are preserved",
+    "Particle glow changes filament light only and remains editable while frozen",
+    "Motion off freezes phase, real audio and fronts exactly while explicit look remains editable",
+    "Zero pulse gain immediately clears existing fronts while frozen and prevents new fronts while moving",
+    "Idle and inactive frames do not fabricate onset waves even at extreme flight speed",
+    "All nine palettes remain directly editable during a frozen pose",
+    "Long extreme flight remains finite and bounded",
+    "Every owned resource is disposed exactly once; later changes are inert"
+  ]
+}

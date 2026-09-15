@@ -1,0 +1,3 @@
+const {chromium}=require('../../docs/design/2026-09-09-html-mockups/tools/node_modules/playwright');
+const path=require('node:path');
+(async()=>{const browser=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});const page=await browser.newPage({viewport:{width:1504,height:1048},deviceScaleFactor:1});for(const name of ['index','login','explore','radio','library']){await page.goto('http://127.0.0.1:4173/'+name+'.html');await page.evaluate(()=>document.fonts.ready);await page.screenshot({path:path.resolve(__dirname,`../verification/${name}-desktop.png`),fullPage:true});console.log(await page.title());}await browser.close();})();

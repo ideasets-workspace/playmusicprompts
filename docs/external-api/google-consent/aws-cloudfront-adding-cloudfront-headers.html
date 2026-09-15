@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+    <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Add CloudFront request headers - Amazon CloudFront</title><meta name="viewport" content="width=device-width,initial-scale=1" /><meta name="assets_root" content="/assets" /><meta name="target_state" content="adding-cloudfront-headers" /><meta name="default_state" content="adding-cloudfront-headers" /><link rel="icon" type="image/ico" href="/assets/images/favicon.ico" /><link rel="shortcut icon" type="image/ico" href="/assets/images/favicon.ico" /><link rel="canonical" href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/adding-cloudfront-headers.html" /><meta name="description" content="Add CloudFront HTTP request headers to determine the viewer's device type, IP address, geographic location, request protocol (HTTP or HTTPS), HTTP version, TLS connection details, and JA4 fingerprint." /><meta name="deployment_region" content="IAD" /><meta name="product" content="Amazon CloudFront" /><meta name="guide" content="Developer Guide" /><meta name="abstract" content="Provides a conceptual overview of and instructions for configuring features for Amazon CloudFront, a web service that speeds up distribution of your static and dynamic web content to end users." /><meta name="guide-locale" content="en_us" /><meta name="tocs" content="toc-contents.json" /><link rel="canonical" href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/adding-cloudfront-headers.html" /><link rel="alternate" href="https://docs.aws.amazon.com/id_id/AmazonCloudFront/latest/DeveloperGuide/adding-cloudfront-headers.html" hreflang="id-id" /><link rel="alternate" href="https://docs.aws.amazon.com/id_id/AmazonCloudFront/latest/DeveloperGuide/adding-cloudfront-headers.html" hreflang="id" /><link rel="alternate" href="https://docs.aws.amazon.com/de_de/AmazonCloudFront/latest/DeveloperGuide/adding-cloudfront-headers.html" hreflang="de-de" /><link rel="alternate" href="https://docs.aws.amazon.com/de_de/AmazonCloudFront/latest/DeveloperGuide/adding-cloudfront-headers.html" hreflang="de" /><link rel="alternate" href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/adding-cloudfront-headers.html" hreflang="en-us" /><link rel="alternate" href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/adding-cloudfront-headers.html" hreflang="en" /><link rel="alternate" href="https://docs.aws.amazon.com/es_es/AmazonCloudFront/latest/DeveloperGuide/adding-cloudfront-headers.html" hreflang="es-es" /><link rel="alternate" href="https://docs.aws.amazon.com/es_es/AmazonCloudFront/latest/DeveloperGuide/adding-cloudfront-headers.html" hreflang="es" /><link rel="alternate" href="https://docs.aws.amazon.com/fr_fr/AmazonCloudFront/latest/DeveloperGuide/adding-cloudfront-headers.html" hreflang="fr-fr" /><link rel="alternate" href="https://docs.aws.amazon.com/fr_fr/AmazonCloudFront/latest/DeveloperGuide/adding-cloudfront-headers.html" hreflang="fr" /><link rel="alternate" href="https://docs.aws.amazon.com/it_it/AmazonCloudFront/latest/DeveloperGuide/adding-cloudfront-headers.html" hreflang="it-it" /><link rel="alternate" href="https://docs.aws.amazon.com/it_it/AmazonCloudFront/latest/DeveloperGuide/adding-cloudfront-headers.html" hreflang="it" /><link rel="alternate" href="https://docs.aws.amazon.com/ja_jp/AmazonCloudFront/latest/DeveloperGuide/adding-cloudfront-headers.html" hreflang="ja-jp" /><link rel="alternate" href="https://docs.aws.amazon.com/ja_jp/AmazonCloudFront/latest/DeveloperGuide/adding-cloudfront-headers.html" hreflang="ja" /><link rel="alternate" href="https://docs.aws.amazon.com/ko_kr/AmazonCloudFront/latest/DeveloperGuide/adding-cloudfront-headers.html" hreflang="ko-kr" /><link rel="alternate" href="https://docs.aws.amazon.com/ko_kr/AmazonCloudFront/latest/DeveloperGuide/adding-cloudfront-headers.html" hreflang="ko" /><link rel="alternate" href="https://docs.aws.amazon.com/pt_br/AmazonCloudFront/latest/DeveloperGuide/adding-cloudfront-headers.html" hreflang="pt-br" /><link rel="alternate" href="https://docs.aws.amazon.com/pt_br/AmazonCloudFront/latest/DeveloperGuide/adding-cloudfront-headers.html" hreflang="pt" /><link rel="alternate" href="https://docs.aws.amazon.com/zh_cn/AmazonCloudFront/latest/DeveloperGuide/adding-cloudfront-headers.html" hreflang="zh-cn" /><link rel="alternate" href="https://docs.aws.amazon.com/zh_tw/AmazonCloudFront/latest/DeveloperGuide/adding-cloudfront-headers.html" hreflang="zh-tw" /><link rel="alternate" href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/adding-cloudfront-headers.html" hreflang="x-default" /><meta name="feedback-item" content="CloudFront" /><meta name="this_doc_product" content="Amazon CloudFront" /><meta name="this_doc_guide" content="Developer Guide" /><head xmlns="http://www.w3.org/1999/xhtml"> <script defer="" src="/assets/r/awsdocs-doc-page.2.0.0.js"></script><link href="/assets/r/awsdocs-doc-page.2.0.0.css" rel="stylesheet"/></head>
+<script defer="" id="awsc-panorama-bundle" type="text/javascript" src="https://prod.pa.cdn.uis.awsstatic.com/panorama-nav-init.js" data-config="{'appEntity':'aws-documentation','region':'us-east-1','service':'cloudfront'}"></script><meta id="panorama-serviceSubSection" value="Developer Guide" /><meta id="panorama-serviceConsolePage" value="Add CloudFront request headers" /></head><body class="awsdocs awsui"><div class="awsdocs-container"><p><a href="adding-cloudfront-headers.md">View a markdown version of this page</a></p><awsdocs-header></awsdocs-header><awsui-app-layout id="app-layout" class="awsui-util-no-gutters" ng-controller="ContentController as $ctrl" header-selector="awsdocs-header" navigation-hide="false" navigation-width="$ctrl.navWidth" navigation-open="$ctrl.navOpen" navigation-change="$ctrl.onNavChange($event)" tools-hide="$ctrl.hideTools" tools-width="$ctrl.toolsWidth" tools-open="$ctrl.toolsOpen" tools-change="$ctrl.onToolsChange($event)"><div id="guide-toc" dom-region="navigation"><awsdocs-toc></awsdocs-toc></div><div id="main-column" dom-region="content" tabindex="-1"><awsdocs-view class="awsdocs-view"><div id="awsdocs-content"><head><title>Add CloudFront request headers - Amazon CloudFront</title><meta name="pdf" content="/pdfs/AmazonCloudFront/latest/DeveloperGuide/AmazonCloudFront_DevGuide.pdf#adding-cloudfront-headers" /><meta name="rss" content="amazon-cf-doc-releases.rss" /><meta name="forums" content="https://repost.aws/tags/TA8pHF0m5aQdawzT2gwPcVYQ" /><meta name="feedback" content="https://docs.aws.amazon.com/forms/aws-doc-feedback?hidden_service_name=CloudFront&amp;topic_url=https://docs.aws.amazon.com/en_us/AmazonCloudFront/latest/DeveloperGuide/adding-cloudfront-headers.html" /><meta name="feedback-yes" content="feedbackyes.html?topic_url=https://docs.aws.amazon.com/en_us/AmazonCloudFront/latest/DeveloperGuide/adding-cloudfront-headers.html" /><meta name="feedback-no" content="feedbackno.html?topic_url=https://docs.aws.amazon.com/en_us/AmazonCloudFront/latest/DeveloperGuide/adding-cloudfront-headers.html" /><meta name="keywords" content="Amazon CloudFront,CloudFront,cache,distribution,edge,HTTP,HTTPS,media,origin,streaming,request headers,viewer devices,viewer location,header structure" /><link rel="alternate" type="text/markdown" href="adding-cloudfront-headers.md" title="Markdown version" /><script type="application/ld+json">
+{
+    "@context" : "https://schema.org",
+    "@type" : "BreadcrumbList",
+    "itemListElement" : [
+      {
+        "@type" : "ListItem",
+        "position" : 1,
+        "name" : "AWS",
+        "item" : "https://aws.amazon.com"
+      },
+      {
+        "@type" : "ListItem",
+        "position" : 2,
+        "name" : "Amazon CloudFront",
+        "item" : "https://docs.aws.amazon.com/cloudfront/index.html"
+      },
+      {
+        "@type" : "ListItem",
+        "position" : 3,
+        "name" : "Developer Guide",
+        "item" : "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide"
+      },
+      {
+        "@type" : "ListItem",
+        "position" : 4,
+        "name" : "Control origin requests with a policy",
+        "item" : "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-origin-requests.html"
+      },
+      {
+        "@type" : "ListItem",
+        "position" : 5,
+        "name" : "Add CloudFront request headers",
+        "item" : "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-origin-requests.html"
+      }
+    ]
+}
+</script></head><body><div id="main"><div style="display: none"><a href="/pdfs/AmazonCloudFront/latest/DeveloperGuide/AmazonCloudFront_DevGuide.pdf#adding-cloudfront-headers" target="_blank" rel="noopener noreferrer" title="Open PDF"></a></div><div id="breadcrumbs" class="breadcrumb"><a href="/index.html">Documentation</a><a href="/cloudfront/index.html">Amazon CloudFront</a><a href="Introduction.html">Developer Guide</a></div><div id="page-toc-src"><a href="#cloudfront-headers-device-type">Device type headers</a><a href="#cloudfront-headers-viewer-location">Viewer location headers</a><a href="#cloudfront-headers-viewer-headers">Headers to determine the viewer's header structure</a><a href="#tls-related-versions">TLS-related headers</a><a href="#cloudfront-headers-other">Other CloudFront headers</a></div><div id="main-content" class="awsui-util-container"><div id="main-col-body"><awsdocs-language-banner data-service="$ctrl.pageService"></awsdocs-language-banner><h1 class="topictitle" id="adding-cloudfront-headers">Add CloudFront request headers</h1><div class="awsdocs-page-header-container"><awsdocs-page-header></awsdocs-page-header><awsdocs-filter-selector id="awsdocs-filter-selector"></awsdocs-filter-selector></div><p>You can configure CloudFront to add specific HTTP headers to the requests that CloudFront receives
+        from viewers and forwards on to your origin or <a href="./edge-functions.html">edge
+            function</a>. The values of these HTTP headers are based on characteristics of the
+        viewer or the viewer request. The headers provide information about the viewer's device
+        type, IP address, geographic location, request protocol (HTTP or HTTPS), HTTP version, TLS
+        connection details, <a href="https://github.com/salesforce/ja3" rel="noopener noreferrer" target="_blank"><span>JA3 fingerprint</span><awsui-icon class="awsdocs-link-icon" name="external"></awsui-icon></a>,
+        and JA4 fingerprint. You can also configure your distribution's cache behavior to forward
+        WebSocket headers. For more information, see <a href="./distribution-working-with.websockets.html">Use WebSockets with CloudFront distributions</a>.</p><p>With these headers, your origin or your edge function can receive information about the
+        viewer without the need for you to write your own code to determine this information. If
+        your origin returns different responses based on the information in these headers, you can
+        include them in the <em>cache key</em> so that CloudFront caches the
+        responses separately. For example, your origin might respond with content in a specific
+        language based on the country that the viewer is in, or with content tailored to a specific
+        device type. Your origin might also write these headers to log files, which you can use to
+        determine information about where your viewers are, which device types they're on, and
+        more.</p><p>To include these headers in the cache key, use a <em>cache
+            policy</em>. For more information, see <a href="./controlling-the-cache-key.html">Control the cache key with a policy</a>
+        and <a href="./understanding-the-cache-key.html">Understand the cache key</a>.</p><p>To receive these headers at your origin but not include them in the cache key, use an
+            <em>origin request policy</em>. For more information, see
+            <a href="./controlling-origin-requests.html">Control origin requests with a policy</a>.</p><div class="highlights" id="inline-topiclist"><h6>Topics</h6><ul><li><p><a href="#cloudfront-headers-device-type">Device type headers</a></p></li><li><p><a href="#cloudfront-headers-viewer-location">Viewer location headers</a></p></li><li><p><a href="#cloudfront-headers-viewer-headers">Headers to determine the viewer's header structure</a></p></li><li><p><a href="#tls-related-versions">TLS-related headers</a></p></li><li><p><a href="#cloudfront-headers-other">Other CloudFront headers</a></p></li></ul></div>
+        <h2 id="cloudfront-headers-device-type">Device type headers</h2>
+        <p>You can add the following headers to determine the viewer's device type. Based on the
+            value of the <code class="code">User-Agent</code> header, CloudFront sets the value of these headers to
+                <code class="code">true</code> or <code class="code">false</code>. If a device falls into more than one
+            category, more than one value can be <code class="code">true</code>. For example, for some tablet
+            devices, CloudFront sets both <code class="code">CloudFront-Is-Mobile-Viewer</code> and
+                <code class="code">CloudFront-Is-Tablet-Viewer</code> to <code class="code">true</code>.</p>
+        <div class="itemizedlist">
+             
+             
+             
+             
+             
+             
+        <ul class="itemizedlist"><li class="listitem">
+                <p><code class="code">CloudFront-Is-Android-Viewer</code> – Set to <code class="code">true</code> when CloudFront
+                    determines that the viewer is a device with the Android operating system.</p>
+            </li><li class="listitem">
+                <p><code class="code">CloudFront-Is-Desktop-Viewer</code> – Set to <code class="code">true</code> when CloudFront
+                    determines that the viewer is a desktop device.</p>
+            </li><li class="listitem">
+                <p><code class="code">CloudFront-Is-IOS-Viewer</code> – Set to <code class="code">true</code> when CloudFront
+                    determines that the viewer is a device with an Apple mobile operating system,
+                    such as iPhone, iPod touch, and some iPad devices.</p>
+            </li><li class="listitem">
+                <p><code class="code">CloudFront-Is-Mobile-Viewer</code> – Set to <code class="code">true</code> when CloudFront
+                    determines that the viewer is a mobile device.</p>
+            </li><li class="listitem">
+                <p><code class="code">CloudFront-Is-SmartTV-Viewer</code> – Set to <code class="code">true</code> when CloudFront
+                    determines that the viewer is a smart TV.</p>
+            </li><li class="listitem">
+                <p><code class="code">CloudFront-Is-Tablet-Viewer</code> – Set to <code class="code">true</code> when CloudFront
+                    determines that the viewer is a tablet.</p>
+            </li></ul></div>
+     
+        <h2 id="cloudfront-headers-viewer-location">Viewer location headers</h2>
+        <p>You can add the following headers to determine the viewer's location. CloudFront determines
+            the values for these headers based on the viewer's IP address. For non-ASCII characters
+            in these headers' values, CloudFront percent-encodes the character according to <a href="https://tools.ietf.org/html/rfc3986#section-2.1" rel="noopener noreferrer" target="_blank"><span>section 1.2 of RFC
+                3986</span><awsui-icon class="awsdocs-link-icon" name="external"></awsui-icon></a>.</p>
+        <div class="itemizedlist">
+             
+             
+             
+             
+        <ul class="itemizedlist"><li class="listitem">
+                <p><code class="code">CloudFront-Viewer-Address</code> – Contains the IP address of the viewer
+                    and the source port of the request. For example, a header value of
+                        <code class="code">198.51.100.10:46532</code> means the viewer's IP address is
+                    198.51.100.10 and the request source port is 46532.</p>
+            </li><li class="listitem">
+                <p><code class="code">CloudFront-Viewer-ASN</code> – Contains the autonomous system number
+                    (ASN) of the viewer.</p>
+                <div class="awsdocs-note"><div class="awsdocs-note-title"><awsui-icon name="status-info" variant="link"></awsui-icon><h6>Note</h6></div><div class="awsdocs-note-text"><p><code class="code">CloudFront-Viewer-Address</code> and
+                            <code class="code">CloudFront-Viewer-ASN</code> can be added in an origin request
+                        policy, but not in a cache policy.</p></div></div>
+            </li><li class="listitem">
+                <p><code class="code">CloudFront-Viewer-Country</code> – Contains the two-letter country code
+                    for the viewer's country. For a list of country codes, see <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2" rel="noopener noreferrer" target="_blank"><span>ISO 3166-1
+                        alpha-2</span><awsui-icon class="awsdocs-link-icon" name="external"></awsui-icon></a>.</p>
+            </li><li class="listitem">
+                <p><code class="code">CloudFront-Viewer-City</code> – Contains the name of the viewer's
+                    city.</p>
+            </li></ul></div>
+        <p>When you add the following headers, CloudFront applies them to all requests <em>except</em> those that originate from the AWS network:</p>
+        <div class="itemizedlist">
+             
+             
+             
+             
+             
+             
+             
+             
+        <ul class="itemizedlist"><li class="listitem">
+                <p><code class="code">CloudFront-Viewer-Country-Name</code> – Contains the name of the
+                    viewer's country.</p>
+            </li><li class="listitem">
+                <p><code class="code">CloudFront-Viewer-Country-Region</code> – Contains a code (up to three
+                    characters) that represent the viewer's region. The region is the first-level
+                    subdivision (the broadest or least specific) of the <a href="https://en.wikipedia.org/wiki/ISO_3166-2" rel="noopener noreferrer" target="_blank"><span>ISO 3166-2</span><awsui-icon class="awsdocs-link-icon" name="external"></awsui-icon></a>
+                    code.</p>
+            </li><li class="listitem">
+                <p><code class="code">CloudFront-Viewer-Country-Region-Name</code> – Contains the name of the
+                    viewer's region. The region is the first-level subdivision (the broadest or
+                    least specific) of the <a href="https://en.wikipedia.org/wiki/ISO_3166-2" rel="noopener noreferrer" target="_blank"><span>ISO
+                        3166-2</span><awsui-icon class="awsdocs-link-icon" name="external"></awsui-icon></a> code.</p>
+            </li><li class="listitem">
+                <p><code class="code">CloudFront-Viewer-Latitude</code> – Contains the viewer's approximate
+                    latitude.</p>
+            </li><li class="listitem">
+                <p><code class="code">CloudFront-Viewer-Longitude</code> – Contains the viewer's approximate
+                    longitude.</p>
+            </li><li class="listitem">
+                <p><code class="code">CloudFront-Viewer-Metro-Code</code> – Contains the viewer's metro code.
+                    This is present only when the viewer is in the United States.</p>
+            </li><li class="listitem">
+                <p><code class="code">CloudFront-Viewer-Postal-Code</code> – Contains the viewer's postal
+                    code.</p>
+            </li><li class="listitem">
+                <p><code class="code">CloudFront-Viewer-Time-Zone</code> Contains the viewer's time zone, in
+                        <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" rel="noopener noreferrer" target="_blank"><span>IANA time zone database format</span><awsui-icon class="awsdocs-link-icon" name="external"></awsui-icon></a> (for example,
+                        <code class="code">America/Los_Angeles</code>).</p>
+            </li></ul></div>
+        <div class="awsdocs-note"><div class="awsdocs-note-title"><awsui-icon name="status-info" variant="link"></awsui-icon><h6>Note</h6></div><div class="awsdocs-note-text"><p><code class="code">CloudFront-Viewer-City</code>, <code class="code">CloudFront-Viewer-Metro-Code</code>,
+                and <code class="code">CloudFront-Viewer-Postal-Code</code> might not be available for every IP
+                address. Some IP addresses can't be geolocated with enough specificity to get that
+                information.</p></div></div>
+     
+        <h2 id="cloudfront-headers-viewer-headers">Headers to determine the viewer's header structure</h2>
+        <p>You can add the following headers to help identify the viewer based on the headers
+            that it sends. For example, different browsers may send HTTP headers in a certain order.
+            If the browser specified in the <code class="code">User-Agent</code> header doesn’t match that
+            browser’s expected header order, you can deny the request. Additionally, if the
+                <code class="code">CloudFront-Viewer-Header-Count</code> value does not match the number of
+            headers in <code class="code">CloudFront-Viewer-Header-Order</code>, you can deny the request.</p>
+        <div class="itemizedlist">
+             
+             
+        <ul class="itemizedlist"><li class="listitem">
+                <p><code class="code">CloudFront-Viewer-Header-Order</code> – Contains the viewer's header
+                    names in the order requested, separated by a colon. For example:
+                        <code class="code">CloudFront-Viewer-Header-Order:
+                        Host:User-Agent:Accept:Accept-Encoding</code>. Headers beyond the character
+                    limit of 7,680 are truncated.</p>
+            </li><li class="listitem">
+                <p><code class="code">CloudFront-Viewer-Header-Count</code> – Contains the total number of the
+                    viewer's headers.</p>
+            </li></ul></div>
+     
+        <h2 id="tls-related-versions">TLS-related headers</h2>
+        <p>You can add the following headers to determine the viewer's JA3 fingerprint, JA4
+            fingerprint, and TLS connection details:</p>
+        <div class="itemizedlist">
+             
+             
+             
+        <ul class="itemizedlist"><li class="listitem">
+                <p><code class="code">CloudFront-Viewer-JA3-Fingerprint</code> – Contains the <a href="https://github.com/salesforce/ja3" rel="noopener noreferrer" target="_blank"><span>JA3 fingerprint</span><awsui-icon class="awsdocs-link-icon" name="external"></awsui-icon></a> of the
+                    viewer. The JA3 fingerprint can help you determine whether the request comes
+                    from a known client, whether that's malware or a malicious bot, or an expected
+                    (allow-listed) application. </p>
+            </li><li class="listitem">
+                <p><code class="code">CloudFront-Viewer-JA4-Fingerprint</code> – Contains the JA4
+                    fingerprint of the viewer. Similar to the JA3 fingerprint, the <a href="https://github.com/FoxIO-LLC/ja4" rel="noopener noreferrer" target="_blank"><span>JA4 fingerprint</span><awsui-icon class="awsdocs-link-icon" name="external"></awsui-icon></a> can help you
+                    determine whether the request comes from a known client, whether that's malware
+                    or a malicious bot, or an expected (allow-listed) application. You can use the
+                    fingerprint to build a database of known good and bad actors to apply when
+                    inspecting HTTP requests. You can then inspect the header value on your
+                    application web servers or in your <a href="./lambda-at-the-edge.html">Lambda@Edge</a> and <a href="./cloudfront-functions.html">CloudFront Functions</a> to compare the header value against a list of known
+                    malware fingerprints to block malicious clients.</p>
+            </li><li class="listitem">
+                <p><code class="code">CloudFront-Viewer-TLS</code> – Contains the SSL/TLS version, the cipher,
+                    and information about the SSL/TLS handshake that was used for the connection
+                    between the viewer and CloudFront. The header value is in the following format:</p>
+                <pre class="programlisting"><div class="code-btn-container"></div><!--DEBUG: cli (none)--><code class="nohighlight"><code class="replaceable">SSL/TLS_version</code>:<code class="replaceable">cipher</code>:<code class="replaceable">handshake_information</code></code></pre>
+                <p>For <code class="code"><code class="replaceable">handshake_information</code></code>, the header
+                    can contain the following values:</p>
+                <div class="itemizedlist">
+                     
+                     
+                     
+                <ul class="itemizedlist"><li class="listitem">
+                        <p><code class="code">fullHandshake</code> – A full handshake was performed for the
+                            SSL/TLS session.</p>
+                    </li><li class="listitem">
+                        <p><code class="code">sessionResumed</code> – A previous SSL/TLS session was
+                            resumed.</p>
+                    </li><li class="listitem">
+                        <p><code class="code">connectionReused</code> – A previous SSL/TLS connection was
+                            reused.</p>
+                    </li></ul></div>
+                <p>The following are some example values for this header:</p>
+                <pre class="programlisting"><div class="code-btn-container"></div><!--DEBUG: cli (none)--><code class="nohighlight">TLSv1.3:TLS_AES_128_GCM_SHA256:sessionResumed</code></pre>
+                <pre class="programlisting"><div class="code-btn-container"></div><!--DEBUG: cli (none)--><code class="nohighlight">TLSv1.2:ECDHE-ECDSA-AES128-GCM-SHA256:connectionReused</code></pre>
+                <pre class="programlisting"><div class="code-btn-container"></div><!--DEBUG: cli (none)--><code class="nohighlight">TLSv1.1:ECDHE-RSA-AES128-SHA256:fullHandshake</code></pre>
+                <pre class="programlisting"><div class="code-btn-container"></div><!--DEBUG: cli (none)--><code class="nohighlight">TLSv1:ECDHE-RSA-AES256-SHA:fullHandshake</code></pre>
+                <p>For the full list of possible SSL/TLS versions and ciphers that can be in this
+                    header value, see <a href="./secure-connections-supported-viewer-protocols-ciphers.html">Supported protocols and ciphers between viewers and CloudFront</a>.</p>
+            </li></ul></div>
+        <div class="awsdocs-note"><div class="awsdocs-note-title"><awsui-icon name="status-info" variant="link"></awsui-icon><h6>Notes</h6></div><div class="awsdocs-note-text"><div class="itemizedlist">
+                 
+                 
+            <ul class="itemizedlist"><li class="listitem">
+                    <p>The JA3 and JA4 fingerprints are derived from the SSL/TLS <code class="code">Client
+                            Hello</code> packet. They are only present for HTTPS requests.</p>
+                </li><li class="listitem">
+                    <p>For these TLS-related headers, you can add them to a <a href="./controlling-origin-requests.html">origin request policy</a>, but
+                        not in a <a href="./controlling-the-cache-key.html">cache
+                        policy</a>.</p>
+                </li></ul></div></div></div>
+     
+        <h2 id="cloudfront-headers-other">Other CloudFront headers</h2>
+        <p>You can add the following headers to determine the viewer's original request URI,
+            original request query string parameters and values, protocol, and version:</p>
+        <div class="itemizedlist">
+             
+             
+             
+             
+        <ul class="itemizedlist"><li class="listitem">
+                <p><code class="code">CloudFront-Error-Uri</code> – Contains the original request URI
+                    that was received from the viewer.</p>
+            </li><li class="listitem">
+                <p><code class="code">CloudFront-Error-Args</code> – Contains the original request
+                    query string parameters and values.</p>
+            </li><li class="listitem">
+                <p><code class="code">CloudFront-Forwarded-Proto</code> – Contains the protocol of the
+                    viewer's request (HTTP or HTTPS).</p>
+            </li><li class="listitem">
+                <p><code class="code">CloudFront-Viewer-Http-Version</code> – Contains the HTTP version of the
+                    viewer's request.</p>
+            </li></ul></div>
+    <awsdocs-copyright class="copyright-print"></awsdocs-copyright><awsdocs-thumb-feedback right-edge="{{$ctrl.thumbFeedbackRightEdge}}"></awsdocs-thumb-feedback></div><noscript><div><div><div><div id="js_error_message"><p><img src="https://d1ge0kk1l5kms0.cloudfront.net/images/G/01/webservices/console/warning.png" alt="Warning" /> <strong>Javascript is disabled or is unavailable in your browser.</strong></p><p>To use the Amazon Web Services Documentation, Javascript must be enabled. Please refer to your browser's Help pages for instructions.</p></div></div></div></div></noscript><div id="main-col-footer" class="awsui-util-font-size-0"><div id="doc-conventions"><a target="_top" href="/general/latest/gr/docconventions.html">Document Conventions</a></div><div class="prev-next"><div id="previous" class="prev-link" accesskey="p" href="./using-managed-origin-request-policies.html">Use managed origin request policies</div><div id="next" class="next-link" accesskey="n" href="./understanding-how-origin-request-policies-and-cache-policies-work-together.html">Understand how origin request policies and cache policies work together</div></div></div><awsdocs-page-utilities></awsdocs-page-utilities></div><div id="quick-feedback-yes" style="display: none;"><div class="title">Did this page help you? - Yes</div><div class="content"><p>Thanks for letting us know we're doing a good job!</p><p>If you've got a moment, please tell us what we did right so we can do more of it.</p><p><awsui-button id="fblink" rel="noopener noreferrer" target="_blank" text="Feedback" click="linkClick($event)" href="https://docs.aws.amazon.com/forms/aws-doc-feedback?hidden_service_name=CloudFront&amp;topic_url=https://docs.aws.amazon.com/en_us/AmazonCloudFront/latest/DeveloperGuide/adding-cloudfront-headers.html"></awsui-button></p></div></div><div id="quick-feedback-no" style="display: none;"><div class="title">Did this page help you? - No</div><div class="content"><p>Thanks for letting us know this page needs work. We're sorry we let you down.</p><p>If you've got a moment, please tell us how we can make the documentation better.</p><p><awsui-button id="fblink" rel="noopener noreferrer" target="_blank" text="Feedback" click="linkClick($event)" href="https://docs.aws.amazon.com/forms/aws-doc-feedback?hidden_service_name=CloudFront&amp;topic_url=https://docs.aws.amazon.com/en_us/AmazonCloudFront/latest/DeveloperGuide/adding-cloudfront-headers.html"></awsui-button></p></div></div></div></body></div></awsdocs-view><div class="page-loading-indicator" id="page-loading-indicator"><awsui-spinner size="large"></awsui-spinner></div></div><div id="tools-panel" dom-region="tools"><awsdocs-tools-panel id="awsdocs-tools-panel"></awsdocs-tools-panel></div></awsui-app-layout><awsdocs-cookie-banner class="doc-cookie-banner"></awsdocs-cookie-banner></div></body></html>

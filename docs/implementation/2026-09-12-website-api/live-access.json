@@ -1,0 +1,97 @@
+{
+  "at": "2026-09-12T14:31:58.1570274Z",
+  "base": "https://music-api-636636169989.us-central1.run.app",
+  "identity": "current gcloud developer identity",
+  "token": true,
+  "probes": [
+    {
+      "name": "health",
+      "status": 200,
+      "bytes": 1223,
+      "body": {
+        "ok": true,
+        "params": 103,
+        "ffmpeg": true,
+        "version": "2.1-cloudrun",
+        "storage": {
+          "data_file": "storage_layout.json",
+          "buckets": {
+            "service": "playmusicprompts-music-studio",
+            "research": "playmusicprompts-music-research",
+            "keys": "playmusicprompts-apikeys"
+          },
+          "readable_buckets": [
+            "playmusicprompts-music-studio",
+            "playmusicprompts-content"
+          ],
+          "prefixes": {
+            "deliveries_masters": "deliveries/masters/",
+            "deliveries_takes": "deliveries/takes/",
+            "analysis_stems": "analysis/stems/",
+            "analysis_segments": "analysis/segments/",
+            "provenance_watermark": "provenance/watermark/",
+            "state_jobs": "state/jobs/",
+            "state_originality": "state/originality/",
+            "state_apikey_usage": "state/apikey-usage/",
+            "keys_records": "apikeys/",
+            "research_calibration": "calibration/",
+            "research_probes": "probes/"
+          },
+          "dated_prefixes": [
+            "analysis_stems",
+            "deliveries_masters",
+            "deliveries_takes"
+          ],
+          "env_overrides_in_effect": {
+            "service_bucket": "playmusicprompts-music-studio",
+            "key_bucket": "playmusicprompts-apikeys"
+          },
+          "retention_status": "OWNER-DECISION — NOT SET"
+        },
+        "service": {
+          "platform": "cloud-run",
+          "service": "music-api",
+          "revision": "music-api-00105-2qz",
+          "configuration": "music-api",
+          "api_version": "2.1-cloudrun",
+          "revision_known": true,
+          "runtime": {
+            "python": "3.12.14",
+            "fastapi": "0.115.6",
+            "uvicorn": "0.52.4"
+          }
+        }
+      }
+    },
+    {
+      "name": "capabilities",
+      "status": 200,
+      "bytes": 1316899,
+      "success": true,
+      "parameterCount": 103,
+      "topLevel": [
+        "service",
+        "success",
+        "request_id",
+        "endpoint",
+        "schema_id",
+        "bindings_legend",
+        "parameters",
+        "languages",
+        "routes",
+        "honesty",
+        "auth"
+      ],
+      "auth": {
+        "account_id": "website",
+        "key_id": "566237c82a5c",
+        "limit": {
+          "rate_per_min": 60,
+          "daily_quota": 100,
+          "used_today": 2
+        }
+      }
+    }
+  ],
+  "keyId": "566237c82a5c"
+}

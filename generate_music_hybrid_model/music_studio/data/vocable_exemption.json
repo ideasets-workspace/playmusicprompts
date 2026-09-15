@@ -1,0 +1,63 @@
+{
+ "$schema_id": "berk.music-studio.vocable-exemption/v1",
+ "purpose": "Research item A10, control 4 — non-lexical vocables and backing vocals must NOT count as lyric failure. This file is the evidence layer: which reference words are exempt, by what convention, on whose authority. music_studio/per_gate.py consumes it and holds no word list of its own.",
+ "authority": "docs/research/2026-08-14-cross-lingual-singing-voice-synthesis-frontier.md item A10 · arXiv:2506.15514 (S17) read [FULL] this session · .claude/rules/movie-maker-unit-mandate.md CLAUSE 7",
+
+ "the_measured_reason_this_exists": {
+  "verbatim_S17": "Non-lexical vocables and backing vocals constitute a high proportion of total deletions... over half of both are deleted in both datasets, revealing a shortcoming in Whisper... The high values observed even with vocal stems indicate that this issue cannot be resolved by improved source separation.",
+  "consequence": "an ASR deletes these words whatever we do, so counting them as lyric errors measures the ASR's shortcoming and calls it bad singing. A song full of 'ooh's would score as unintelligible while being sung exactly as written.",
+  "what_S17_does_instead_verbatim": "Counting the number of deletions where the reference words are nonlexical vocables D_NL and backing vocals D_BV, we define DR_NL = D_NL/N and DR_BV = D_BV/N to disaggregate the deletion rate by reference word type.",
+  "our_rule": "DISAGGREGATE, never delete. The exempt words are reported with their own rates (DR_NL, DR_BV) and are excluded from the PASS/FAIL decision only. Removing them from the report would hide how much of the song is vocables."
+ },
+
+ "backing_vocals": {
+  "detection": "PARENTHESES in the reference lyric",
+  "state": "SOURCED",
+  "verbatim_S17": "It is common practice to transcribe these, as they may contribute to the lyrical content of the song, and to enclose them in parentheses to distinguish them from the lead vocals",
+  "verbatim_S17_datasets": "In both datasets backing vocals are identifiable as they are within parentheses.",
+  "why_this_is_lawful_for_us": "it is an industry lyrics-transcription convention, not a heuristic we invented, and it is what Jam-ALT and MUSDB-ALT both use. The user writes the parentheses; nothing is inferred.",
+  "measured_caveat": "an ASR does not emit parentheses, so a backing-vocal word can only ever appear as a DELETION or a substitution in the hypothesis. That is the same asymmetry S17 reports and it is why the rate is disaggregated rather than compared."
+ },
+
+ "non_lexical_vocables": {
+  "detection": "a per-language lexicon, plus an explicit tag the user may write",
+  "explicit_tag": {
+   "form": "[v]word[/v]",
+   "why_a_tag_exists_at_all": "S17's own datasets required MANUAL annotation of which words are vocables ('We manually produced extra annotations of which words are non-lexical vocables'), because no lexicon can be complete. The tag is how a user states it for their own lyric instead of relying on our list.",
+   "state": "SOURCED as a NEED; the bracket form is OUR convention and is labelled as ours, not attributed to anyone."
+  },
+  "per_language": {
+   "en": {
+    "state": "SOURCED",
+    "words": ["ooh", "oooh", "ah", "aah", "la", "na", "oh", "hey", "yeah", "mmm", "hmm", "whoa", "woo"],
+    "sourced_subset": ["ooh", "ah", "la"],
+    "sourced_subset_evidence": "S17 verbatim: 'Song lyrics also contain non-lexical vocables [9] such as ooh, ah, and la.' Reference [9] is C. K. Chambers, 'Non-lexical vocables in scottish traditional music', PhD thesis, University of Edinburgh, 1980.",
+    "unsourced_extension_honesty": "the remaining words (oooh, aah, na, oh, hey, yeah, mmm, hmm, whoa, woo) are COMMON ENGLISH SPELLING VARIANTS of the same three classes and are NOT individually attested by a source read this session. They are marked here rather than presented as measured. Chambers 1980 was NOT opened this session."
+   },
+   "tr": {
+    "state": "NOT_SOURCED",
+    "words": [],
+    "why_empty": "No source for Turkish non-lexical vocables was found in this project's corpus (the 102,700 B Turkish singing-phonology report contains no mention of vocables, interjections or 'aman' — grepped this session) and none was researched. Writing a Turkish list from my own knowledge would be exactly the invented-vocabulary class this project forbids: Turkish folk and arabesk vocables ('aman', 'of', 'hey', 'ay') are things I BELIEVE, not things I have measured or read.",
+   "consequence": "for Turkish the vocable exemption reports UNAVAILABLE. A Turkish lyric's vocables therefore still count as errors, which makes the Turkish PER PESSIMISTIC — stated so no one reads a Turkish PER as final.",
+    "how_to_close_it": "either a source on Turkish non-lexical vocables read at the required depth, or Berk's own list (he is a native speaker and his list would be authority, not a guess)."
+   }
+  },
+  "normalisation": {
+   "case": "case-insensitive, matching alt-eval's case-insensitive WER convention (S14/S16)",
+   "elongation": "repeated vowels are collapsed before lookup, because S17 records that vocables are 'often inconsistently annotated, using variable numbers of vowels to emphasize syllable length'. So 'ooooh' and 'ooh' are the same vocable.",
+   "elongation_evidence": "S17 verbatim: 'non-lexical vocables are often inconsistently annotated, using variable numbers of vowels to emphasize syllable length or with inconsistent numbers of syllables of multi-syllable vocalizations.'"
+  }
+ },
+
+ "the_four_negative_controls": [
+  {"id": "C1_human_passes", "requirement": "a real human recording of the lyric must PASS", "buildable_at_zero_cost": false, "why": "it needs real sung audio, which is A12's corpus and does not exist. What IS testable at $0 is the SCORER: an exact transcript must score PER 0. That tests the instrument, NOT the human floor, and is labelled as such."},
+  {"id": "C2_instrumental_no_words", "requirement": "an instrumental take must yield NO WORDS and must not be scored as a lyric failure", "buildable_at_zero_cost": true, "implemented_by": "music_studio/vocal_activity.py — assert_transcribable() refuses with NO_VOCAL_ACTIVITY rather than returning PER 1.0"},
+  {"id": "C3_wrong_lyric_fails", "requirement": "a DIFFERENT lyric must produce a high error rate", "buildable_at_zero_cost": true, "implemented_by": "music_studio/per_gate.py — the alignment charges substitutions across the whole line"},
+  {"id": "C4_vocables_not_failure", "requirement": "non-lexical vocables and backing vocals must not count as lyric failure", "buildable_at_zero_cost": true, "implemented_by": "this file plus per_gate's exemption pass"}
+ ],
+
+ "what_this_cannot_do": [
+  "It cannot make a Turkish PER trustworthy: with tr NOT_SOURCED the Turkish exemption is unavailable and the Turkish number is pessimistic by an unmeasured amount.",
+  "It cannot decide PASS or FAIL. A9's calibrated per-language bar does not exist, so the verdict stays NOT_CALIBRATED regardless of how clean the exemption is."
+ ]
+}

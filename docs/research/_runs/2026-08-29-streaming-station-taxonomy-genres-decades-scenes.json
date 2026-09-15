@@ -1,0 +1,59 @@
+{
+  "schema": "berk.deep-research/v1",
+  "status": "complete",
+  "date": "2026-08-29",
+  "mode": "MODE-B-delegated-slice",
+  "topic": "streaming-station-taxonomy-genres-decades-scenes",
+  "main_report": "docs/research/2026-08-29-streaming-station-taxonomy-genres-decades-scenes.md",
+  "index": "ABSENT — docs/README.md does not exist in this project (measured); recorded in report Known gaps #7 for the parent to decide",
+  "source_counts": {
+    "authoritative": 34,
+    "academic": 1,
+    "academic_full": 0,
+    "primary_full": 9,
+    "note": "Slice floor from parent brief was >=8 independent authoritative sources (parent allocates the overall >=20/>=5-academic floors across orthogonal slices per R12.3 CONTEXT-12). Slice floor MET."
+  },
+  "claim_counts": {
+    "verified_3plus": 8,
+    "single_source": 2,
+    "unverified": 1
+  },
+  "planned_artifacts": 2,
+  "artifacts": [
+    {
+      "path": "docs/research/2026-08-29-streaming-station-taxonomy-genres-decades-scenes.md",
+      "role": "main report (per-platform taxonomies, demand-ranked genre table, scene/station vocabulary, decade packaging, ledgers)",
+      "sha256": "445D6E086287E9B2F66C66E6617E9A6393AE5C9053ED05E122D7C2B7EF5AF018",
+      "bytes": 42861,
+      "lines": 321,
+      "read_back": true
+    },
+    {
+      "path": "docs/research/_runs/2026-08-29-streaming-station-taxonomy-genres-decades-scenes.json",
+      "role": "completion manifest (this file)",
+      "sha256": "SELF",
+      "read_back": true
+    }
+  ],
+  "standards_ledger": true,
+  "scope_plan": true,
+  "source_register": true,
+  "query_ledger": true,
+  "claim_ledger": true,
+  "contradiction_ledger": true,
+  "preservation_matrix": false,
+  "english_artifacts": true,
+  "indexed": false,
+  "delegations": [],
+  "known_gaps": [
+    "Every Noise popularity-sorted list JS-rendered, not extracted",
+    "Apple Music mood-ten only 4/10 enumerated",
+    "Spotify grid is one logged-out en-US snapshot; API removed Feb 2026",
+    "city-night 24/7 stream audiences UNVERIFIED",
+    "IFPI EWM genre top-10 newest public edition is 2023",
+    "S-33 academic full text paywalled (abstract/findings only)",
+    "docs/README.md index absent in project",
+    "follower counts are save-count proxies, not listening-hours"
+  ],
+  "completed_at": "2026-08-29T14:20:00+03:00"
+}

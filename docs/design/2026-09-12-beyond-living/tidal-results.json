@@ -1,0 +1,50 @@
+{
+  "name": "tidal",
+  "expectedChecks": 19,
+  "passedChecks": 19,
+  "passed": true,
+  "problems": [],
+  "script": "docs/design/2026-09-12-beyond-living/tidal-check.mjs",
+  "scriptSHA256": "c35cab306f4145383dcd0fe64ab413ea7e108fb1d7db712cdd43564f30f57bf4",
+  "args": [
+    "C:\\Berk\\PlayMusicPrompts\\docs\\design\\2026-09-12-beyond-living\\tidal-check.mjs",
+    "C:\\Berk\\PlayMusicPrompts\\website_html_templates_beyond\\lab-tidal.js"
+  ],
+  "productionAsset": "lab-tidal.js",
+  "report": {
+    "module": "file:///C:/Berk/PlayMusicPrompts/website_html_templates_beyond/lab-tidal.js",
+    "sha256": "6e38566ae8c529cc4d2f0c245806a7727f36468bcc7ff0e22f526c5d5aa865d1",
+    "passed": 19,
+    "checks": [
+      "Pinned Three constructs a full ocean and inside sky, without renderer, loader or timer ownership",
+      "Three separate depth layers are real finite indexed coastal meshes with usable face normals",
+      "Composed camera remains above the maximum analytic crest throughout allowed dolly range",
+      "Local camera uniform respects the host group translation and complete parent transform",
+      "Audio uniforms respond to actual gated bands and decay after playback stops",
+      "Onsets create bounded ring slots only while the actual track is active",
+      "Pointer serials create their own bounded water fronts while paused without inventing audio events",
+      "Released strength follows host decay; missing touch is neutral and stale serials cannot replay",
+      "Motion off retains the complete touch and ripple state without a reset jump or delayed synthetic onset",
+      "Malformed touch coordinates, strength and serial cannot enter shader storage",
+      "Motion off freezes a partial form transition, shader clocks, event ages and all audio response",
+      "Explicit controls still work while frozen and a static form edit applies without advancing time",
+      "Zero flow holds the current advection phase while the independent real onset clock can advance",
+      "Low quality reduces real triangles, wave components and noise octaves without resources per update",
+      "Nonfinite and out-of-range input cannot enter shader scalars or event powers",
+      "Palette changes the reflected and visible sky through shared finite linear color uniforms",
+      "Shader helper names are isolated from Three injected GLSL identifiers and derivative normals share displacement",
+      "Footprint filtering is fragment-only and the reported reserved-word GPU failure cannot recur",
+      "All owned geometry and material resources dispose exactly once and updates become inert"
+    ],
+    "limits": "Real Three construction, numeric state and resource checks. This is not GPU compilation, actual rendered art quality or frame-rate evidence."
+  },
+  "execution": {
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "error": null,
+    "elapsedMs": 137,
+    "stdout": "{\n  \"module\": \"file:///C:/Berk/PlayMusicPrompts/website_html_templates_beyond/lab-tidal.js\",\n  \"sha256\": \"6e38566ae8c529cc4d2f0c245806a7727f36468bcc7ff0e22f526c5d5aa865d1\",\n  \"passed\": 19,\n  \"checks\": [\n    \"Pinned Three constructs a full ocean and inside sky, without renderer, loader or timer ownership\",\n    \"Three separate depth layers are real finite indexed coastal meshes with usable face normals\",\n    \"Composed camera remains above the maximum analytic crest throughout allowed dolly range\",\n    \"Local camera uniform respects the host group translation and complete parent transform\",\n    \"Audio uniforms respond to actual gated bands and decay after playback stops\",\n    \"Onsets create bounded ring slots only while the actual track is active\",\n    \"Pointer serials create their own bounded water fronts while paused without inventing audio events\",\n    \"Released strength follows host decay; missing touch is neutral and stale serials cannot replay\",\n    \"Motion off retains the complete touch and ripple state without a reset jump or delayed synthetic onset\",\n    \"Malformed touch coordinates, strength and serial cannot enter shader storage\",\n    \"Motion off freezes a partial form transition, shader clocks, event ages and all audio response\",\n    \"Explicit controls still work while frozen and a static form edit applies without advancing time\",\n    \"Zero flow holds the current advection phase while the independent real onset clock can advance\",\n    \"Low quality reduces real triangles, wave components and noise octaves without resources per update\",\n    \"Nonfinite and out-of-range input cannot enter shader scalars or event powers\",\n    \"Palette changes the reflected and visible sky through shared finite linear color uniforms\",\n    \"Shader helper names are isolated from Three injected GLSL identifiers and derivative normals share displacement\",\n    \"Footprint filtering is fragment-only and the reported reserved-word GPU failure cannot recur\",\n    \"All owned geometry and material resources dispose exactly once and updates become inert\"\n  ],\n  \"limits\": \"Real Three construction, numeric state and resource checks. This is not GPU compilation, actual rendered art quality or frame-rate evidence.\"\n}\n",
+    "stderr": ""
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "url": "https://www.playmusicprompts.com/stream",
+  "at": "2026-09-06T14:08:24.819Z",
+  "title": "PlayMusicPrompts — a stream that grows from your words",
+  "lang": "en",
+  "landmarks": {
+    "header": 1,
+    "nav": 0,
+    "main": 1,
+    "footer": 1
+  },
+  "headingCount": 6,
+  "headingSequence": [
+    "h1",
+    "h2",
+    "h2",
+    "h2",
+    "h2",
+    "h2"
+  ],
+  "skippedHeadingLevels": [],
+  "interactiveCount": 210,
+  "unnamedInteractive": [],
+  "unnamedInteractiveCount": 0,
+  "liveRegions": [
+    {
+      "tag": "SECTION",
+      "cls": "st-horizon",
+      "ariaLive": "polite",
+      "text": "Horizonwhat is being preparedAd breaks are off on this site "
+    }
+  ],
+  "liveRegionCount": 1,
+  "canvases": [],
+  "imgsMissingAlt": 0
+}

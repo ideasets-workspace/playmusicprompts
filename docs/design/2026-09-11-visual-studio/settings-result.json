@@ -1,0 +1,182 @@
+{
+  "source": "file:///C:/Berk/PlayMusicPrompts/website_html_templates/player-three-visual-settings.js",
+  "passed": 44,
+  "checks": [
+    {
+      "name": "Schema has exactly 29 contracted settings, 15 shared and 14 scene-specific",
+      "pass": true
+    },
+    {
+      "name": "exposure: finite bounds, invalid input, absent defaults and legitimate zero preserved",
+      "pass": true
+    },
+    {
+      "name": "bloom: finite bounds, invalid input, absent defaults and legitimate zero preserved",
+      "pass": true
+    },
+    {
+      "name": "bloomRadius: finite bounds, invalid input, absent defaults and legitimate zero preserved",
+      "pass": true
+    },
+    {
+      "name": "saturation: finite bounds, invalid input, absent defaults and legitimate zero preserved",
+      "pass": true
+    },
+    {
+      "name": "vignette: finite bounds, invalid input, absent defaults and legitimate zero preserved",
+      "pass": true
+    },
+    {
+      "name": "particles: finite bounds, invalid input, absent defaults and legitimate zero preserved",
+      "pass": true
+    },
+    {
+      "name": "particleGlow: finite bounds, invalid input, absent defaults and legitimate zero preserved",
+      "pass": true
+    },
+    {
+      "name": "motionSpeed: finite bounds, invalid input, absent defaults and legitimate zero preserved",
+      "pass": true
+    },
+    {
+      "name": "bassGain: finite bounds, invalid input, absent defaults and legitimate zero preserved",
+      "pass": true
+    },
+    {
+      "name": "midGain: finite bounds, invalid input, absent defaults and legitimate zero preserved",
+      "pass": true
+    },
+    {
+      "name": "trebleGain: finite bounds, invalid input, absent defaults and legitimate zero preserved",
+      "pass": true
+    },
+    {
+      "name": "pulseGain: finite bounds, invalid input, absent defaults and legitimate zero preserved",
+      "pass": true
+    },
+    {
+      "name": "smoothing: finite bounds, invalid input, absent defaults and legitimate zero preserved",
+      "pass": true
+    },
+    {
+      "name": "framing: finite bounds, invalid input, absent defaults and legitimate zero preserved",
+      "pass": true
+    },
+    {
+      "name": "orbitSpeed: finite bounds, invalid input, absent defaults and legitimate zero preserved",
+      "pass": true
+    },
+    {
+      "name": "recordSpectrum: finite bounds, invalid input, absent defaults and legitimate zero preserved",
+      "pass": true
+    },
+    {
+      "name": "recordReflect: finite bounds, invalid input, absent defaults and legitimate zero preserved",
+      "pass": true
+    },
+    {
+      "name": "recordFog: finite bounds, invalid input, absent defaults and legitimate zero preserved",
+      "pass": true
+    },
+    {
+      "name": "neuralSpread: finite bounds, invalid input, absent defaults and legitimate zero preserved",
+      "pass": true
+    },
+    {
+      "name": "neuralSway: finite bounds, invalid input, absent defaults and legitimate zero preserved",
+      "pass": true
+    },
+    {
+      "name": "neuralTrail: finite bounds, invalid input, absent defaults and legitimate zero preserved",
+      "pass": true
+    },
+    {
+      "name": "horizonGravity: finite bounds, invalid input, absent defaults and legitimate zero preserved",
+      "pass": true
+    },
+    {
+      "name": "horizonFlow: finite bounds, invalid input, absent defaults and legitimate zero preserved",
+      "pass": true
+    },
+    {
+      "name": "horizonDetail: finite bounds, invalid input, absent defaults and legitimate zero preserved",
+      "pass": true
+    },
+    {
+      "name": "horizonTilt: finite bounds, invalid input, absent defaults and legitimate zero preserved",
+      "pass": true
+    },
+    {
+      "name": "prismWidth: finite bounds, invalid input, absent defaults and legitimate zero preserved",
+      "pass": true
+    },
+    {
+      "name": "prismTwist: finite bounds, invalid input, absent defaults and legitimate zero preserved",
+      "pass": true
+    },
+    {
+      "name": "prismSpeed: finite bounds, invalid input, absent defaults and legitimate zero preserved",
+      "pass": true
+    },
+    {
+      "name": "prismGloss: finite bounds, invalid input, absent defaults and legitimate zero preserved",
+      "pass": true
+    },
+    {
+      "name": "Sanitizer ignores inherited and unsafe keys, never invokes getters, and returns fresh state",
+      "pass": true
+    },
+    {
+      "name": "Five complete frozen built-in looks include exact Original and distinct coherent balances",
+      "pass": true
+    },
+    {
+      "name": "Initialization and reads never write, and snapshots cannot mutate stored values",
+      "pass": true
+    },
+    {
+      "name": "Each field patches the latest state, clamps, and preserves all other fields and custom looks",
+      "pass": true
+    },
+    {
+      "name": "Replace resets unspecified settings deliberately and preserves latest saved looks",
+      "pass": true
+    },
+    {
+      "name": "Preset save normalizes names, upserts case-insensitively, preserves current appearance, and rejects invalid input",
+      "pass": true
+    },
+    {
+      "name": "20-look limit permits updates and atomic import rejects overflow without partial changes",
+      "pass": true
+    },
+    {
+      "name": "Export/import roundtrip retains IDs, names and exact settings; reimport has no duplicates",
+      "pass": true
+    },
+    {
+      "name": "Import validates bytes, format/version, count, names, settings, IDs and prototype keys atomically",
+      "pass": true
+    },
+    {
+      "name": "Import resolves colliding safe IDs and retains target IDs for name updates",
+      "pass": true
+    },
+    {
+      "name": "Delete reads latest state, preserves other settings/looks, and rejects missing or unsafe IDs",
+      "pass": true
+    },
+    {
+      "name": "Corrupt persisted state recovers bounded safe snapshots without writing",
+      "pass": true
+    },
+    {
+      "name": "False, thrown and truthy non-boolean writes never report persistence; transient candidate remains available",
+      "pass": true
+    },
+    {
+      "name": "Unreadable storage never receives a partial write and exposes an honest temporary candidate",
+      "pass": true
+    }
+  ]
+}

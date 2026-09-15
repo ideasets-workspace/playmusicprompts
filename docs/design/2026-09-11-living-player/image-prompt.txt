@@ -1,0 +1,42 @@
+Use case: ui-mockup, precise edit of an approved website design.
+Asset: ONE polished desktop PlayMusicPrompts page mockup. This is a design preview, not a marketing poster or presentation.
+Input image 1 is the APPROVED EDIT TARGET. Preserve its exact artistic composition: black cinematic architectural music gallery, huge violet/magenta/cyan luminous glass portals on round turntable plinths, wet reflections, distant city-at-night, left rail, original PlayMusicPrompts logo and wordmark, floating left composer, coherent five-cover row, and persistent full-width bottom waveform player. The user explicitly approved THIS design and rejected an overpacked chips/dashboard redesign. Preserve its expensive 3D realism, deep black contrast, generous controls, strong large type and dominant violet CTA. Keep the original logo identity exactly. Do not change the art direction, remove the energy slider, flatten the portals, add pricing or decorate with extra widgets.
+
+Revise all visible wording into native English and make the living music experience clear. Allow a little extra vertical breathing room for the supporting sentence and secondary listening action; landscape desktop approximately 1920x1280. Keep the entire page, rail and full player visible without cropping. No external device frame. Beautiful crisp Inter-style typography, large legible white heading and luminous violet CTA. Text belongs naturally inside the UI; do not add explanatory design annotations.
+
+EXACT COPY AND LAYOUT:
+Header: original logo "PlayMusicPrompts"; search field "Search songs, stations, and moods"; right account "Sign in".
+Left rail, with existing icons: "Create" (selected), "Explore", "Radio", "Library".
+Above heading keep the small widely tracked brand signature "CREATE  •  CONTROL  •  FEEL".
+Large confident two-line headline, left aligned:
+"Create your music."
+"Shape what’s next."
+Keep the headline LARGE and give it enough width. Under it put the following supporting sentence in quiet but readable white-gray, two balanced lines:
+"Describe a sound. Create a song."
+"Let your listening shape what comes next."
+
+Below is the same gorgeous generous translucent dark composer, not a densely packed form:
+Prompt text: "A peaceful night drive. Warm ’80s synths. No vocals."
+Right inside the prompt field: wand icon and "Enhance".
+Six CLOSED selector cards, identical two-row/three-column layout with icons and chevrons:
+row 1: "Genre" / "Electronic"; "Mood" / "Peaceful"; "Instrument" / "Synth".
+row 2: "Scene" / "Night drive"; "Era" / "1980s"; "Vocals" / "Instrumental".
+Keep the continuous violet energy slider, label "Energy", endpoints "Calm" and "Intense".
+Primary large vibrant purple gradient button with original spark icon: "Create & Play".
+Adjacent smaller action with sliders icon: "All controls".
+Under these actions, a single clean understated secondary action with small play icon: "Play something for me". This must be readable and clickable-looking, but the primary creation button must remain visually dominant. No additional explanatory paragraph in the panel. No expanded chips or value lists.
+
+World controls upper right: segmented "Classic" and "World" (World selected), two closed filters "Genre" and "Era".
+Large active glass portal title: "Night Drive", with waveform icon and "Now playing".
+Two smaller portals: "Deep Focus" and "Afterglow", with their original circular play buttons.
+Retain the original three portal artworks, environment, depth, reflections and materials. World hint near right lower edge: hand icon and "Drag to explore".
+
+Below the main composer/gallery, keep the beautiful FIVE wide artwork covers from the approved reference, same art and palette. Row heading "Find your next mood", quiet right link "Explore all". Titles in original order: "After Hours", "Violet Hour", "Coastline", "Distant Lights", "Last Ferry".
+
+Full-width bottom player, same premium three-region layout and waveform:
+Left: original Night Drive cover, title "Night Drive", subtitle "Made for you", heart icon.
+Center: shuffle, previous, LARGE luminous circular PAUSE button (two vertical bars, because the song is playing), next, repeat. Real-looking purple waveform scrubber below, elapsed "01:24" and total "03:48". Keep generous clear spacing.
+Right: a compact toggle labelled "Keep it going", visibly switched ON in violet. Beneath it, a small green status dot and "Next song ready". Include the queue icon, volume icon and slider, expand icon. Group and align these elegantly, do not squeeze into an unreadable pile. This is ONE coherent playing state: music is playing, the listener has opted into continued generation, and the next song is ready. Do not add creating/loading statuses simultaneously.
+The continuation label must read exactly "Keep it going" and the readiness label exactly "Next song ready".
+
+No Turkish anywhere. No invented numbers or world-first claims. No people added, no badge clouds, no marketing feature checklist, no pricing cards, no modal over the page. Maintain the approved design's rich spatial identity and calm spacious hierarchy while presenting the complete English page. Render spelling accurately and all text clearly.

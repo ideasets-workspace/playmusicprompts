@@ -1,0 +1,68 @@
+{
+  "scope": "Asset-only delegation for the approved PlayMusicPrompts HTML page suite; parent owns website checkout and asset integration.",
+  "mode": "Built-in imagegen; exactly two calls, no variants or retries.",
+  "reference": "C:\\Berk\\PlayMusicPrompts\\docs\\design\\2026-09-11-living-player\\page-desktop-prompt-expanded.png",
+  "assets": [
+    {
+      "id": "architecture-background",
+      "path": "C:\\Users\\berke\\.codex\\generated_images\\01a08fdd-9bac-7f90-adf0-8a15a2e11775\\exec-e990daff-1872-49eb-a8e7-68619cd5aa73.png",
+      "requestedDimensions": [
+        1920,
+        1200
+      ],
+      "actualDimensions": [
+        1586,
+        992
+      ],
+      "prompt": "Use case: precise-object-edit.\nAsset type: production background plate for an HTML music website, clean scene with absolutely no interface.\nInput image: the provided approved website design is the EDIT TARGET and visual reference.\nPrimary request: reconstruct and output ONLY its underlying cinematic architecture and environment. Deliver one wide landscape 1920 x 1200 image (8:5 composition).\nKeep its exquisite dark monumental arched interior, wet black mirror-reflective stone floor, violet/cyan/magenta embedded light lines, rich believable materials, warm tiny architectural lights and distant blue-purple night city visible through the arches. Preserve the reference's expensive photorealistic 3D environment, moody dark lighting, camera height, perspective, reflections and purple/cyan palette.\nRemove absolutely ALL UI and foreground product objects: every letter, every logo, navigation, search bar, text, headline, form, rectangular panel, button, album art card, glass portal screen, display, plinth, record turntable, player, waveform, icon and cursor. Reconstruct the actual architecture and flooring behind those removed items. NO text or symbols anywhere. NO floating cards or screens, NO pedestal display objects, NO interface.\nComposition: left 45 percent must remain very dark with subtle architectural depth and ample uncluttered negative space, allowing genuine HTML headline and form to be placed there later. Center and right reveal open arched architecture and polished floor with gently curving cyan-violet embedded light lines, without hero objects. Beautiful breathable scene, understated environment background rather than a bright focal poster. Continue the architecture naturally edge to edge, no border.\nOnly deliver the clean environmental image, not a website screenshot or mockup.",
+      "verification": {
+        "visual": "Inspected displayed output: no visible text, logo, cards, form, UI, player or portals. Dark left negative space, coherent black arches, rainy reflective floor, violet cyan light curves and distant Istanbul night present.",
+        "path": "C:\\Users\\berke\\.codex\\generated_images\\01a08fdd-9bac-7f90-adf0-8a15a2e11775\\exec-e990daff-1872-49eb-a8e7-68619cd5aa73.png"
+      }
+    },
+    {
+      "id": "three-worlds-atlas",
+      "path": "C:\\Users\\berke\\.codex\\generated_images\\01a08fdd-9bac-7f90-adf0-8a15a2e11775\\exec-756295b1-aa1d-4d71-be7b-68cf8148de17.png",
+      "requestedDimensions": [
+        3072,
+        1024
+      ],
+      "actualDimensions": [
+        2172,
+        724
+      ],
+      "panels": [
+        {
+          "subject": "Night Drive",
+          "x": 0,
+          "width": 724,
+          "height": 724
+        },
+        {
+          "subject": "Deep Focus",
+          "x": 724,
+          "width": 724,
+          "height": 724
+        },
+        {
+          "subject": "Afterglow",
+          "x": 1448,
+          "width": 724,
+          "height": 724
+        }
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: production artwork texture ATLAS, three equal square music cover illustrations for an HTML music website.\nInput image: approved music website screenshot is STYLE AND SUBJECT REFERENCE ONLY. Do not reproduce any screenshot, UI, room, glass display or label.\nPrimary request: output exactly ONE image with an overall 3:1 aspect ratio: 3072 pixels wide by 1024 high. It must contain THREE PERFECTLY EQUAL SQUARE ART PANELS arranged side by side in one horizontal row. Each panel occupies exactly one third of the total width and the entire height, with straight vertical cut boundaries at 33.333% and 66.667%. No margins, no gaps, no gutters, no borders. This image will be cropped into three square artwork images by HTML/CSS, so each subject must be entirely within its own third.\nLEFT THIRD: richly atmospheric rainy Istanbul skyline at night, illuminated Galata-like tower, historic roofs and minarets in distance, purple-magenta twilight and blue-black rain, reflected city lights on water. Match the pure artwork inside the large Night Drive portal in the reference, expanded to a complete square full-bleed scene.\nCENTER THIRD: serene, luminous deep cyan-blue underwater scene. A small graceful free-diver silhouette swimming diagonally toward pale cyan light rays from the surface, soft underwater plants and haze in the deep background. Match the pure artwork inside Deep Focus in the reference, full-bleed square.\nRIGHT THIRD: violet, lavender, peach and coral ocean sunset. Low horizon, still rippling water, softly layered clouds glowing peach near the horizon and violet overhead, dreamy luminous atmosphere. Match the pure artwork inside Afterglow in the reference, full-bleed square.\nStyle: exquisite cinematic digital realism, polished photographic detail, rich atmospheric depth, beautiful balanced premium album artwork. Coherent luxurious purple/cyan/violet palette across all three scenes but maintain their separate subjects and colors.\nAbsolute constraints: PURE ARTWORK ONLY. No text, typography, numbers, symbols, logo, watermark, labels, song names, cards, glass frames, portal frames, plinths, turntables, buttons, interface, collage gaps or external room. Keep the three rectangular panels identical in size and exactly aligned to the pixel grid. Do not place objects across panel boundaries. The output is a flat 3-column texture atlas, not three art objects photographed in a room.",
+      "verification": {
+        "visual": "Inspected output: pure three aligned art panels, no UI/text/logos/borders/gaps. Rainy purple Istanbul, cyan freediver, violet-peach sunset, coherent cinematic style.",
+        "path": "C:\\Users\\berke\\.codex\\generated_images\\01a08fdd-9bac-7f90-adf0-8a15a2e11775\\exec-756295b1-aa1d-4d71-be7b-68cf8148de17.png"
+      },
+      "boundaryCheck": "Largest adjacent-column RGB discontinuities within expected boundary +/-5 pixels occur at x=724 and x=1448, matching exact square thirds."
+    }
+  ],
+  "limitations": [
+    "Background tool output is 1586x992 rather than requested 1920x1200.",
+    "Final project asset copies, CSS consumption and in-browser rendered verification are assigned to parent; neither website checkout nor shared ledger modified by asset agent."
+  ],
+  "sourceInspection": "Reference and both outputs visually inspected in this run. Project law reread before reporting.",
+  "finishedScope": "Two generated assets and their image-level verification. Integration remains with parent."
+}

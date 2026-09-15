@@ -1,0 +1,270 @@
+{
+  "date": "2026-09-11T11:31:55.419Z",
+  "checks": [
+    {
+      "name": "Actual WebGL renderer and idle silence",
+      "pass": true
+    },
+    {
+      "name": "Real audio playing with measured spectrum",
+      "pass": true,
+      "details": {
+        "state": {
+          "current": "9b212d7f-d9ef-4809-a9d2-a6d7a1dc1f8d",
+          "queue": [
+            {
+              "id": "9b212d7f-d9ef-4809-a9d2-a6d7a1dc1f8d",
+              "title": "Audio verification — low",
+              "local": true
+            },
+            {
+              "id": "72d9263d-604b-4a2f-80ab-2172e0801b5d",
+              "title": "Audio verification — high",
+              "local": true
+            }
+          ],
+          "paused": false,
+          "time": 3.001179,
+          "duration": 16,
+          "volume": 0.7,
+          "muted": false,
+          "repeat": 0,
+          "shuffle": false,
+          "eq": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "loopA": null,
+          "loopB": null,
+          "waveform": 320,
+          "context": "running",
+          "restoring": false,
+          "visual": {
+            "world": "night",
+            "form": "halo",
+            "intensity": 0.65,
+            "motion": true,
+            "quality": "auto"
+          }
+        },
+        "scene": {
+          "ready": true,
+          "frames": 232,
+          "energy": 0.15938642067014552,
+          "peak": 0.7568627450980392,
+          "quality": "auto",
+          "form": "halo",
+          "motion": true,
+          "webgl": true,
+          "revision": "185",
+          "drawCalls": 1
+        }
+      }
+    },
+    {
+      "name": "Waveform decoded from actual audio file",
+      "pass": true
+    },
+    {
+      "name": "Pause stops audio and reactive energy settles",
+      "pass": true
+    },
+    {
+      "name": "Seek changes media time",
+      "pass": true
+    },
+    {
+      "name": "Favorite shared with main library",
+      "pass": true
+    },
+    {
+      "name": "Volume control applies",
+      "pass": true
+    },
+    {
+      "name": "Mute state applies",
+      "pass": true
+    },
+    {
+      "name": "Shuffle enables",
+      "pass": true
+    },
+    {
+      "name": "Repeat song mode",
+      "pass": true
+    },
+    {
+      "name": "Five-band EQ profile",
+      "pass": true
+    },
+    {
+      "name": "Custom EQ band and profile",
+      "pass": true
+    },
+    {
+      "name": "Playback rate and pitch preservation",
+      "pass": true
+    },
+    {
+      "name": "A–B passage loop set",
+      "pass": true
+    },
+    {
+      "name": "A–B loop clears",
+      "pass": true
+    },
+    {
+      "name": "Drawer returns focus",
+      "pass": true
+    },
+    {
+      "name": "Queue reorders real tracks",
+      "pass": true
+    },
+    {
+      "name": "Sculpture mode orbit",
+      "pass": true
+    },
+    {
+      "name": "Sculpture mode wave",
+      "pass": true
+    },
+    {
+      "name": "Sculpture mode halo",
+      "pass": true
+    },
+    {
+      "name": "Atmosphere deep",
+      "pass": true
+    },
+    {
+      "name": "Atmosphere glow",
+      "pass": true
+    },
+    {
+      "name": "Atmosphere night",
+      "pass": true
+    },
+    {
+      "name": "Motion and quality settings",
+      "pass": true
+    },
+    {
+      "name": "Cinema expands scene",
+      "pass": true
+    },
+    {
+      "name": "Escape exits cinema",
+      "pass": true
+    },
+    {
+      "name": "Fullscreen enters",
+      "pass": true
+    },
+    {
+      "name": "Fullscreen exits",
+      "pass": true
+    },
+    {
+      "name": "Space shortcut controls playback",
+      "pass": true
+    },
+    {
+      "name": "Queue keyboard shortcut",
+      "pass": true
+    },
+    {
+      "name": "Real local files and queue order restored without autoplay",
+      "pass": true
+    },
+    {
+      "name": "Restored Blob audio plays",
+      "pass": true
+    },
+    {
+      "name": "Unsupported file rejected",
+      "pass": true
+    },
+    {
+      "name": "Current queue removal selects remaining track",
+      "pass": true
+    },
+    {
+      "name": "Clear queue resets all transport state",
+      "pass": true
+    },
+    {
+      "name": "Responsive layout 320",
+      "pass": true,
+      "details": {
+        "width": 320,
+        "scroll": 320,
+        "buttons": true
+      }
+    },
+    {
+      "name": "Responsive layout 390",
+      "pass": true,
+      "details": {
+        "width": 390,
+        "scroll": 390,
+        "buttons": true
+      }
+    },
+    {
+      "name": "Responsive layout 600",
+      "pass": true,
+      "details": {
+        "width": 600,
+        "scroll": 600,
+        "buttons": true
+      }
+    },
+    {
+      "name": "Responsive layout 820",
+      "pass": true,
+      "details": {
+        "width": 820,
+        "scroll": 820,
+        "buttons": true
+      }
+    },
+    {
+      "name": "Responsive layout 1280",
+      "pass": true,
+      "details": {
+        "width": 1280,
+        "scroll": 1280,
+        "buttons": true
+      }
+    },
+    {
+      "name": "Responsive layout 1920",
+      "pass": true,
+      "details": {
+        "width": 1920,
+        "scroll": 1920,
+        "buttons": true
+      }
+    },
+    {
+      "name": "No runtime or console errors",
+      "pass": true,
+      "details": []
+    },
+    {
+      "name": "System reduced motion respected",
+      "pass": true
+    },
+    {
+      "name": "Audio and controls work without WebGL",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "pass": true,
+  "note": "Test WAV data generated in memory only for actual audio QA; no demo music shipped."
+}

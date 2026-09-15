@@ -1,0 +1,7 @@
+.workflow-activity{display:flex;flex-wrap:wrap;gap:8px 20px;padding:10px 0 0;border-top:1px solid var(--line);margin-top:14px}
+.workflow-activity[hidden]{display:none}
+.workflow-activity button{font-size:12px;text-align:left;min-height:36px}
+.selected-settings{display:block;text-align:left;font-size:12px;color:#c4b6da;margin:8px 0 14px;padding:0;min-height:24px}
+#energy-value{display:block;color:#aa99bf;font-size:11px;font-weight:400;white-space:nowrap}
+#energy[data-auto="true"]{opacity:.48}
+#composer[inert]{opacity:.65}

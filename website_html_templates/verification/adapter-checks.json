@@ -1,0 +1,30 @@
+{
+  "checks": [
+    {
+      "name": "Generate adapter receives typed request and inserts result next without interrupting current audio",
+      "passed": true
+    },
+    {
+      "name": "Next advances to the actual returned audio URL",
+      "passed": true
+    },
+    {
+      "name": "AbortSignal cancels creation and preserves current audio and draft",
+      "passed": true
+    },
+    {
+      "name": "Opt-in continuation queues playable output; disabling it preserves manually queued songs",
+      "passed": true
+    },
+    {
+      "name": "Radio starts a configured playable station and prepares its catalog queue",
+      "passed": true
+    },
+    {
+      "name": "Successful auth callback preserves the same player and returns to Library",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "scope": "Isolated browser-injected adapter fixtures using actual audio decoding; no live authentication or generation API was called."
+}

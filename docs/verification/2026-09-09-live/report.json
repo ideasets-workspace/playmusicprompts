@@ -1,0 +1,220 @@
+[
+  {
+    "route": "/",
+    "width": 375,
+    "status": 200,
+    "loadMs": 2507,
+    "overflowPx": 0,
+    "canvases": 3,
+    "h1": "Say what you hear.We compose it.",
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "route": "/",
+    "width": 768,
+    "status": 200,
+    "loadMs": 2965,
+    "overflowPx": 0,
+    "canvases": 3,
+    "h1": "Say what you hear.We compose it.",
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "route": "/",
+    "width": 1440,
+    "status": 200,
+    "loadMs": 3881,
+    "overflowPx": 0,
+    "canvases": 3,
+    "h1": "Say what you hear.We compose it.",
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "route": "/musics",
+    "width": 375,
+    "status": 200,
+    "loadMs": 1246,
+    "overflowPx": 0,
+    "canvases": 1,
+    "h1": "Every track, one stream.",
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "route": "/musics",
+    "width": 768,
+    "status": 200,
+    "loadMs": 1181,
+    "overflowPx": 0,
+    "canvases": 1,
+    "h1": "Every track, one stream.",
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "route": "/musics",
+    "width": 1440,
+    "status": 200,
+    "loadMs": 1237,
+    "overflowPx": 0,
+    "canvases": 1,
+    "h1": "Every track, one stream.",
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "route": "/world",
+    "width": 375,
+    "status": 200,
+    "loadMs": 2988,
+    "overflowPx": 0,
+    "canvases": 2,
+    "h1": "Say what you hear.The world composes it.",
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "route": "/world",
+    "width": 768,
+    "status": 200,
+    "loadMs": 3180,
+    "overflowPx": 0,
+    "canvases": 2,
+    "h1": "Say what you hear.The world composes it.",
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "route": "/world",
+    "width": 1440,
+    "status": 200,
+    "loadMs": 4132,
+    "overflowPx": 0,
+    "canvases": 2,
+    "h1": "Say what you hear.The world composes it.",
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "route": "/legal",
+    "width": 375,
+    "status": 200,
+    "loadMs": 1076,
+    "overflowPx": 0,
+    "canvases": 1,
+    "h1": "Privacy",
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "route": "/legal",
+    "width": 768,
+    "status": 200,
+    "loadMs": 1165,
+    "overflowPx": 0,
+    "canvases": 1,
+    "h1": "Privacy",
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "route": "/legal",
+    "width": 1440,
+    "status": 200,
+    "loadMs": 1207,
+    "overflowPx": 0,
+    "canvases": 1,
+    "h1": "Privacy",
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "route": "/login",
+    "width": 375,
+    "status": 200,
+    "loadMs": 1031,
+    "overflowPx": 0,
+    "canvases": 2,
+    "h1": "Welcome back.",
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "route": "/login",
+    "width": 768,
+    "status": 200,
+    "loadMs": 1117,
+    "overflowPx": 0,
+    "canvases": 2,
+    "h1": "Welcome back.",
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "route": "/login",
+    "width": 1440,
+    "status": 200,
+    "loadMs": 1006,
+    "overflowPx": 0,
+    "canvases": 2,
+    "h1": "Welcome back.",
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "route": "/t/94712a1e-7621-4ba4-9287-652986876e75",
+    "width": 1440,
+    "status": 200,
+    "jsonLd": "{\"@context\":\"https://schema.org\",\"@type\":\"MusicRecording\",\"name\":\"A joyful\",\"url\":\"https://www.playmusicprompts.com/t/94712a1e-7621-4ba4-9287-652986876e75\",\"dur",
+    "pageErrors": []
+  },
+  {
+    "api": {
+      "tracks": 3,
+      "firstKeys": [
+        "id",
+        "title",
+        "prompt",
+        "promptSent",
+        "genres",
+        "moods",
+        "eras",
+        "negativePrompt",
+        "vocalMode",
+        "language",
+        "lyricsMode",
+        "lyricsTheme",
+        "lyricsText",
+        "targetSeconds",
+        "durationSeconds",
+        "outputPackage",
+        "modelDisplayName",
+        "codec",
+        "sampleRate",
+        "channels",
+        "lyricsVerified",
+        "originalityVerdict",
+        "audioUrl",
+        "audioUrlKind",
+        "audioUrlExpiresAt",
+        "playCount",
+        "likeCount",
+        "liked",
+        "createdAt",
+        "requestId",
+        "take"
+      ],
+      "facetKeys": [
+        "genre",
+        "mood",
+        "vocal_mode",
+        "language"
+      ],
+      "capParameters": 103,
+      "capSuccess": true
+    }
+  }
+]

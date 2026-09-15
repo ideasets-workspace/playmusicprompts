@@ -1,0 +1,28 @@
+{
+  "scope": "Prism source and real Three structure only; parent browser compilation/render review still required",
+  "threeRevision": "185",
+  "passed": 10,
+  "results": [
+    "Real Three factory creates bounded architecture",
+    "Initial still pose has visible palette and proper fixed tunnel view",
+    "Motion-off is an exact uniform freeze including actual audio inputs",
+    "Idle advances flight without inventing audio events",
+    "Actual audio and onset drive envelopes and travelling fronts",
+    "Live pose/audio fronts remain frozen when motion is disabled",
+    "All nine palettes update explicitly with motion frozen",
+    "Explicit intensity and quality remain adjustable when frozen",
+    "Finite bounded state after long flight and malformed numeric inputs",
+    "Every owned resource is disposed once and later updates are inert"
+  ],
+  "geometry": {
+    "name": "Prism Passage",
+    "drawCalls": 5,
+    "triangles": 42112,
+    "vertices": 22892,
+    "updates": 20121,
+    "onsets": 168,
+    "phase": 335.408333333357,
+    "travel": 30.546759870986694,
+    "quality": "auto"
+  }
+}

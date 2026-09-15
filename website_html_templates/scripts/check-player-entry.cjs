@@ -1,0 +1,35 @@
+const {readFileSync, writeFileSync} = require('node:fs');
+const {join} = require('node:path');
+const {runInNewContext} = require('node:vm');
+const assert = require('node:assert/strict');
+const root = join(__dirname, '..');
+const source = readFileSync(join(root, 'player-three-entry.js'), 'utf8');
+const checks = [];
+function run(href) {
+  const scripts = [], redirects = [];
+  const location = {href, protocol:new URL(href).protocol, replace:url=>redirects.push(url)};
+  const document = {createElement:()=>({events:{},addEventListener(name,fn){this.events[name]=fn}}),head:{append:script=>scripts.push(script)}};
+  runInNewContext(source,{location,document,URL});
+  return {scripts,redirects};
+}
+const file = run('file:///C:/Berk/PlayMusicPrompts/website_html_templates/player-three.html');
+assert.equal(file.scripts.length,0);
+assert.deepEqual(file.redirects,['file:///C:/Berk/PlayMusicPrompts/website_html_templates/player-launch.html']);
+checks.push('File entry redirects to its sibling launch guide without attempting the blocked module graph.');
+const local = run('http://127.0.0.1:4173/player-three.html');
+assert.equal(local.redirects.length,0);
+assert.equal(local.scripts.length,1);
+assert.equal(local.scripts[0].type,'module');
+assert.equal(local.scripts[0].src,'player-three.js');
+checks.push('HTTP entry loads the existing player module exactly once.');
+local.scripts[0].events.error();
+assert.deepEqual(local.redirects,['http://127.0.0.1:4173/player-launch.html']);
+checks.push('Module loading failure leads to the explicit launch guide.');
+const nested = run('https://example.test/room/player-three.html');
+assert.equal(nested.redirects.length,0);
+nested.scripts[0].events.error();
+assert.equal(nested.redirects[0],'https://example.test/room/player-launch.html');
+checks.push('Hosted entry and failure path retain the current subfolder and origin.');
+const result = {scope:'Production bootstrap control flow in Node VM; not a browser file-protocol rendering test.',passed:checks.length,checks};
+writeFileSync(join(root,'verification','player-entry-checks.json'),JSON.stringify(result,null,2)+'\n');
+console.log(JSON.stringify(result,null,2));

@@ -1,0 +1,167 @@
+{
+  "checkedAt": "2026-09-12T16:36:24.090Z",
+  "scope": "Read-only stored production-result and owner-filesystem verification; no generation, cloud or application HTTP calls",
+  "databaseAccess": "node:sqlite DatabaseSync readOnly:true; no Store constructor",
+  "tools": {
+    "ffmpeg": "ffmpeg version 9.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+    "ffprobe": "ffprobe version 9.0.1-essentials_build-www.gyan.dev Copyright (c) 2007-2026 the FFmpeg developers"
+  },
+  "jobCount": 2,
+  "trackCount": 2,
+  "jobs": [
+    {
+      "jobId": "a3efb073-46aa-4805-a445-256d92b504d4",
+      "status": "ready",
+      "upstreamSuccess": true,
+      "requestedTakeCount": 1,
+      "deliveredTakeCount": 1,
+      "generationShortfall": false,
+      "requestedDurationSeconds": 15,
+      "requestedToleranceSeconds": 2,
+      "upstreamDurationSeconds": 14,
+      "lyrics": null,
+      "tracks": [
+        {
+          "trackId": "de2db094e444b0d4a509e240241587091572bde49028e79f097949c56135a91a",
+          "take": 1,
+          "publicRoute": "/api/listen/de2db094e444b0d4a509e240241587091572bde49028e79f097949c56135a91a",
+          "deliveryStatus": "ready",
+          "unsafePublicFieldCount": 0,
+          "master": {
+            "id": "c420b51d537896ec7f8b870ed89e6b2eae51746823bb9c14063a7a62103c70c0",
+            "kind": "master",
+            "exists": true,
+            "sha256": "415ebf53d1b8e1485659c380b10e6241c8f7e4a9cf299d165e8b6ff2b8bab590",
+            "sizeBytes": 4046288,
+            "probe": {
+              "durationSeconds": 14,
+              "codec": "pcm_s24le",
+              "sampleRate": 48000,
+              "channels": 2
+            },
+            "fullyDecoded": true
+          },
+          "listening": {
+            "id": "2a5bdaa89d1b68ab1f0398d4e4e53aed9450cb6ff69edd0ac3587c5b1f8d63e9",
+            "kind": "listening",
+            "exists": true,
+            "sha256": "89bf6a526a18384304a899a620d65f8edf573675b1654a2bb5c2a1ddd1591911",
+            "sizeBytes": 337580,
+            "probe": {
+              "durationSeconds": 14,
+              "codec": "mp3",
+              "sampleRate": 48000,
+              "channels": 2
+            },
+            "fullyDecoded": true
+          },
+          "source": {
+            "id": "2543a5f8ea3968da3f04347076454bc7b2dab8b344d5be7c3064d5c6e742e48c",
+            "kind": "source",
+            "exists": true,
+            "sha256": "74dc195fa8ac76c27d91f78a36ab8008cc9b5351598a78c2ecbd1ea8df80bf13",
+            "sizeBytes": 1380663,
+            "probe": {
+              "durationSeconds": 57.208125,
+              "codec": "mp3",
+              "sampleRate": 44100,
+              "channels": 2
+            },
+            "fullyDecoded": true
+          },
+          "stemRecordCount": 0
+        }
+      ]
+    },
+    {
+      "jobId": "ab78de48-1222-4b47-96ab-62dedf7a354d",
+      "status": "ready",
+      "upstreamSuccess": true,
+      "requestedTakeCount": 1,
+      "deliveredTakeCount": 1,
+      "generationShortfall": false,
+      "requestedDurationSeconds": 30,
+      "requestedToleranceSeconds": 2,
+      "upstreamDurationSeconds": 30,
+      "lyrics": {
+        "source": "stored upstream measurement, not independently recomputed",
+        "requestedMode": "custom",
+        "requestedDomain": "stem",
+        "measured": true,
+        "language": "en",
+        "measuredDomain": "separated vocal stem",
+        "verdict": "PASS",
+        "metric": "per",
+        "value": 0.2469,
+        "threshold": 0.418776,
+        "asrCalls": 1,
+        "referenceLineCount": 3,
+        "transcriptLineCount": 5,
+        "wordPerfectClaim": false
+      },
+      "tracks": [
+        {
+          "trackId": "4baa46b295ad54071a0775715de318daacd8bf1bf6ea161b7a9ee3e2c71dc88a",
+          "take": 1,
+          "publicRoute": "/api/listen/4baa46b295ad54071a0775715de318daacd8bf1bf6ea161b7a9ee3e2c71dc88a",
+          "deliveryStatus": "ready",
+          "unsafePublicFieldCount": 0,
+          "master": {
+            "id": "763bc3f1e01ca0f0911f42fb409c526c11b84a2aa9ed84e207689e5c862f430a",
+            "kind": "master",
+            "exists": true,
+            "sha256": "5bc8502424c44fb4241787525a05a82a8a63cb3fbbcc14d15427fde981c13708",
+            "sizeBytes": 8655036,
+            "probe": {
+              "durationSeconds": 30,
+              "codec": "pcm_s24le",
+              "sampleRate": 48000,
+              "channels": 2
+            },
+            "fullyDecoded": true
+          },
+          "listening": {
+            "id": "e6d8a65f155fd570d7a9ae7ba0053637f9c78a192cfb3d2ff07464f59b879dcf",
+            "kind": "listening",
+            "exists": true,
+            "sha256": "68c7580f97fd20413b9f2faa5f01baf53db43dcd229d5c57297a7cb05763ba92",
+            "sizeBytes": 721196,
+            "probe": {
+              "durationSeconds": 30,
+              "codec": "mp3",
+              "sampleRate": 48000,
+              "channels": 2
+            },
+            "fullyDecoded": true
+          },
+          "source": {
+            "id": "64456665dd6f007c6fcfe042cced3063a6c9b9418c32eca998a02110dec7c8e1",
+            "kind": "source",
+            "exists": true,
+            "sha256": "f60c56593270003b9396d8ed21d8d09b79d891bc6a9e4b6c61e74105aa36d62b",
+            "sizeBytes": 1771872,
+            "probe": {
+              "durationSeconds": 73.5085,
+              "codec": "mp3",
+              "sampleRate": 44100,
+              "channels": 2
+            },
+            "fullyDecoded": true
+          },
+          "stemRecordCount": 0
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "count": 64,
+    "passed": 64,
+    "failures": []
+  },
+  "limitations": [
+    "Lyric gate values are upstream-reported; no independent ASR or word-perfect claim.",
+    "This verifies database mapping and private media bytes, not HTTP route authorization, browser playback, listening quality, native/TV behavior or production deployment.",
+    "Hash equality proves current files agree with persisted integrity records; no separate origin-side checksum was provided.",
+    "Only the two existing authorized local job records were read. No additional generation or quota-changing action was made."
+  ]
+}

@@ -1,0 +1,435 @@
+{
+ "$schema_id": "berk.music-studio-language-registry/v1",
+ "authority": "D-SSM-17 (registry-validated language parameter) + D-SSM-19 (Turkish path) in .claude/memory/DECISIONS.md; architecture s2b. The API enum is GENERATED from this file - adding a language by editing an enum elsewhere is a violation of D-SSM-17.",
+ "states_legend": {
+  "SINGING_PROVEN": "we generated singing on OUR route and the PER gate passed on >=3 songs (accepted for vocal.mode=sung)",
+  "ENGINEERING_PATH_ESTABLISHED": "mechanism + evidence exist (phoneme table, G2P tiers, ASR leg, metric); MEASUREMENT is the only remaining step; refused for sung with this named unlock",
+  "DOCUMENTED_CONVERGENT": ">=2 independent primary sources enumerate it for singing; unmeasured by us",
+  "DOCUMENTED_SINGLE": "one source enumerates it",
+  "UNDOCUMENTED": "no primary source enumerates it for singing",
+  "SPEECH_PROVEN": "per-language speech measured on our TTS route (accepted for vocal.mode=spoken)",
+  "PENDING_MEASUREMENT": "the route is generation-proven but the per-language measurement has not been run"
+ },
+ "measured_truth_date": "2026-08-24",
+ "zero_singing_proven_note": "en became the FIRST SINGING_PROVEN language on 2026-08-24 (bar n=14 vocadito + 3/3 passing sung takes; artefacts named in the en entry). Every other language still needs its own calibrated bar and >=3 passing songs (D-SSM-17) - tr is next (corpus licence-blocked, see data/calibration_corpus.json).",
+ "languages": [
+  {
+   "code": "en",
+   "label": "English",
+   "singing": "SINGING_PROVEN",
+   "speech": "PENDING_MEASUREMENT",
+   "evidence": "SINGING_PROVEN 2026-08-24: bar calibrated from n=14 vocadito EN human recordings (CC BY 4.0; artifacts/song-rnd/en-bar/en_bar_calibration.json, one-sided upper tolerance limit, exact noncentral-t k=2.1088, p=0.9, gamma=0.95) AND 3/3 generated sung takes passed the PER gate against that bar (artifacts/song-rnd/en-proof/report.json: PER 0.0, 0.0, 0.3294 vs bar 0.654862; full-mix measurement, a HARDER condition than the solo-vocal corpus - conservative evidence). Earlier trail preserved: GTSinger (NeurIPS 2024) + Mureka FAQ both enumerate English for singing; EN G2P path deployed 2026-08-17; ground-truth control on disk.",
+   "coverage_score": {
+    "value": "NOT_MEASURED",
+    "reason": "no extracted phoneme inventory for this language in this repository; A2 needs one, and inventing phone lists is what research item A1's source data exists to prevent"
+   },
+   "measured_per": {
+    "value": [
+     0.0,
+     0.0,
+     0.3294
+    ],
+    "measured_on": "FULL MIX (no stem separation), stt_vertex ASR, per_gate stage-6 chain",
+    "date": "2026-08-24",
+    "artefact": "artifacts/song-rnd/en-proof/report.json"
+   },
+   "bar": {
+    "value": 0.654862,
+    "method": "one-sided-upper-tolerance-limit.logit-normal.noncentral-t.v1",
+    "n_recordings": 14,
+    "corpus_genre": "unaccompanied solo singing (vocadito)",
+    "provenance": "docs/research/2026-08-15-small-sample-one-sided-tolerance-limits-for-quality-gate-thresholds.md",
+    "warnings": [],
+    "artefact": "artifacts/song-rnd/en-bar/en_bar_calibration.json",
+    "date": "2026-08-24"
+   },
+   "protocol": "stage6-per-v1",
+   "established": "2026-08-15"
+  },
+  {
+   "code": "tr",
+   "label": "Türkçe",
+   "singing": "ENGINEERING_PATH_ESTABLISHED",
+   "speech": "PENDING_MEASUREMENT",
+   "evidence": "D-SSM-19: zero absent articulations vs the 9 covered languages (74-phone MFA table); R1 phoneme drive committed (MFA dict v3.0.0 + rules + learned OOV); Lyria 3 measured 7/8 dictated words; bar must be calibrated on Turkish sung material",
+   "coverage_score": {
+    "value": 0.6232,
+    "best_reference_language": "RU",
+    "method": "PhonemeInventory.coverage_for() — A2, three unblended numbers per reference language; `value` is the highest INCLUSIVE ratio and the reference that achieved it",
+    "per_reference_language": {
+     "ZH": {
+      "present_ratio": 0.2319,
+      "inclusive_ratio": 0.2319,
+      "present": 16,
+      "partial": 0,
+      "absent": 53,
+      "total_phones": 69
+     },
+     "EN": {
+      "present_ratio": 0.3913,
+      "inclusive_ratio": 0.3913,
+      "present": 27,
+      "partial": 0,
+      "absent": 42,
+      "total_phones": 69
+     },
+     "JA": {
+      "present_ratio": 0.4783,
+      "inclusive_ratio": 0.4928,
+      "present": 33,
+      "partial": 1,
+      "absent": 35,
+      "total_phones": 69
+     },
+     "KO": {
+      "present_ratio": 0.4203,
+      "inclusive_ratio": 0.4348,
+      "present": 29,
+      "partial": 1,
+      "absent": 39,
+      "total_phones": 69
+     },
+     "RU": {
+      "present_ratio": 0.5942,
+      "inclusive_ratio": 0.6232,
+      "present": 41,
+      "partial": 2,
+      "absent": 26,
+      "total_phones": 69
+     },
+     "ES": {
+      "present_ratio": 0.3478,
+      "inclusive_ratio": 0.3478,
+      "present": 24,
+      "partial": 0,
+      "absent": 45,
+      "total_phones": 69
+     },
+     "FR": {
+      "present_ratio": 0.3768,
+      "inclusive_ratio": 0.3768,
+      "present": 26,
+      "partial": 0,
+      "absent": 43,
+      "total_phones": 69
+     },
+     "DE": {
+      "present_ratio": 0.4203,
+      "inclusive_ratio": 0.4203,
+      "present": 29,
+      "partial": 0,
+      "absent": 40,
+      "total_phones": 69
+     },
+     "IT": {
+      "present_ratio": 0.4058,
+      "inclusive_ratio": 0.4783,
+      "present": 28,
+      "partial": 5,
+      "absent": 36,
+      "total_phones": 69
+     }
+    },
+    "what_it_is_not": "a coverage score PREDICTS expected quality from inventory overlap; it is NEVER a measured intelligibility result. A9's calibrated PER is the only verdict.",
+    "source": "music_studio/data/phoible_segment_features.json (PHOIBLE 2.0, CC BY-SA 3.0) + music_studio/data/turkish_phoneme_inventory.json"
+   },
+   "measured_per": {
+    "value": "NOT_MEASURED",
+    "reason": "requires a real sung take put through the Stage-6 chain; no language has one yet",
+    "blocked_by": [
+     "A7 (bed/vocal routing)",
+     "A8 (the gate itself)"
+    ]
+   },
+   "bar": {
+    "value": "NOT_MEASURED",
+    "reason": "A9 requires calibration from >=5 real human sung recordings in this language; the corpus does not exist (A12 ABSENT). A guessed threshold is forbidden by name (MANDATE Clause 7).",
+    "blocked_by": [
+     "A9 (calibration)",
+     "A12 (corpus)"
+    ]
+   },
+   "protocol": "stage6-per-v1",
+   "established": "2026-08-15"
+  },
+  {
+   "code": "zh",
+   "label": "中文 (Mandarin)",
+   "singing": "DOCUMENTED_CONVERGENT",
+   "speech": "PENDING_MEASUREMENT",
+   "evidence": "GTSinger + Mureka",
+   "coverage_score": {
+    "value": "NOT_MEASURED",
+    "reason": "no extracted phoneme inventory for this language in this repository; A2 needs one, and inventing phone lists is what research item A1's source data exists to prevent"
+   },
+   "measured_per": {
+    "value": "NOT_MEASURED",
+    "reason": "requires a real sung take put through the Stage-6 chain; no language has one yet",
+    "blocked_by": [
+     "A7 (bed/vocal routing)",
+     "A8 (the gate itself)"
+    ]
+   },
+   "bar": {
+    "value": "NOT_MEASURED",
+    "reason": "A9 requires calibration from >=5 real human sung recordings in this language. CORPUS VERDICT (D-SSM-34 research, docs/research/2026-08-17-multilingual-sung-calibration-corpora.md, parent-verified 2026-08-17): NONE MEETS FLOOR: every lyric-bearing zh corpus is NC-family (OpenCpop CC BY-NC-ND, PopCS NC-SA+EULA, KiSing NC-ND, ACE-* NC+synthesizer-generated, M4Singer/OpenSinger/GTSinger NC, SingStyle111 research-only). Lawful pool: vocadito Mandarin n=2 < 5 — 1-3 commissioned recordings would close the gap (owner decision). A guessed threshold is forbidden by name (MANDATE Clause 7).",
+    "blocked_by": [
+     "A12 (no lawful corpus meets the >=5 floor)"
+    ]
+   },
+   "protocol": "stage6-per-v1",
+   "established": "2026-08-15"
+  },
+  {
+   "code": "ja",
+   "label": "日本語",
+   "singing": "DOCUMENTED_CONVERGENT",
+   "speech": "PENDING_MEASUREMENT",
+   "evidence": "GTSinger + Mureka",
+   "coverage_score": {
+    "value": "NOT_MEASURED",
+    "reason": "no extracted phoneme inventory for this language in this repository; A2 needs one, and inventing phone lists is what research item A1's source data exists to prevent"
+   },
+   "measured_per": {
+    "value": "NOT_MEASURED",
+    "reason": "requires a real sung take put through the Stage-6 chain; no language has one yet",
+    "blocked_by": [
+     "A7 (bed/vocal routing)",
+     "A8 (the gate itself)"
+    ]
+   },
+   "bar": {
+    "value": "NOT_MEASURED",
+    "reason": "A9 requires calibration from >=5 real human sung recordings in this language. CORPUS VERDICT (D-SSM-34 research, docs/research/2026-08-17-multilingual-sung-calibration-corpora.md, parent-verified 2026-08-17): LAWFUL CORPUS NAMED, NOT DOWNLOADED: PJS corpus (CC BY-SA 4.0, n=100, free for commercial use — project page + APSIPA 2020 read [FULL]). Honest caveats for Berk before the ja bar is called pop-representative: 1 male singer; composed-sentence songs, not commercial pop. A guessed threshold is forbidden by name (MANDATE Clause 7).",
+    "blocked_by": [
+     "A12 (download decision)",
+     "A9 (calibration)",
+     "ja phonemiser"
+    ]
+   },
+   "protocol": "stage6-per-v1",
+   "established": "2026-08-15"
+  },
+  {
+   "code": "ko",
+   "label": "한국어",
+   "singing": "DOCUMENTED_CONVERGENT",
+   "speech": "PENDING_MEASUREMENT",
+   "evidence": "GTSinger + Mureka",
+   "coverage_score": {
+    "value": "NOT_MEASURED",
+    "reason": "no extracted phoneme inventory for this language in this repository; A2 needs one, and inventing phone lists is what research item A1's source data exists to prevent"
+   },
+   "measured_per": {
+    "value": "NOT_MEASURED",
+    "reason": "requires a real sung take put through the Stage-6 chain; no language has one yet",
+    "blocked_by": [
+     "A7 (bed/vocal routing)",
+     "A8 (the gate itself)"
+    ]
+   },
+   "bar": {
+    "value": "NOT_MEASURED",
+    "reason": "A9 requires calibration from >=5 real human sung recordings in this language. CORPUS VERDICT (D-SSM-34 research, docs/research/2026-08-17-multilingual-sung-calibration-corpora.md, parent-verified 2026-08-17): NONE EXISTS in the searched scope (CSD NC, GTSinger-KO NC, AI-Hub gated [PARTIAL], ACV-001 ~4 non-native cover entries). Bounded absence claim, never a non-existence proof. Commissioned-recording brief is the named route (TR precedent). A guessed threshold is forbidden by name (MANDATE Clause 7).",
+    "blocked_by": [
+     "A12 (no lawful corpus found in searched scope)"
+    ]
+   },
+   "protocol": "stage6-per-v1",
+   "established": "2026-08-15"
+  },
+  {
+   "code": "ru",
+   "label": "Русский",
+   "singing": "DOCUMENTED_CONVERGENT",
+   "speech": "PENDING_MEASUREMENT",
+   "evidence": "GTSinger + Mureka",
+   "coverage_score": {
+    "value": "NOT_MEASURED",
+    "reason": "no extracted phoneme inventory for this language in this repository; A2 needs one, and inventing phone lists is what research item A1's source data exists to prevent"
+   },
+   "measured_per": {
+    "value": "NOT_MEASURED",
+    "reason": "requires a real sung take put through the Stage-6 chain; no language has one yet",
+    "blocked_by": [
+     "A7 (bed/vocal routing)",
+     "A8 (the gate itself)"
+    ]
+   },
+   "bar": {
+    "value": "NOT_MEASURED",
+    "reason": "A9 requires calibration from >=5 real human sung recordings in this language. CORPUS VERDICT (D-SSM-34 research, docs/research/2026-08-17-multilingual-sung-calibration-corpora.md, parent-verified 2026-08-17): NONE EXISTS in the searched scope (GTSinger RU NC single-singer; licence-less community NNSVS voicebanks only). Bounded absence claim; national archives without machine-readable licence surfaces not exhausted. A guessed threshold is forbidden by name (MANDATE Clause 7).",
+    "blocked_by": [
+     "A12 (no lawful corpus found in searched scope)"
+    ]
+   },
+   "protocol": "stage6-per-v1",
+   "established": "2026-08-15"
+  },
+  {
+   "code": "es",
+   "label": "Español",
+   "singing": "DOCUMENTED_CONVERGENT",
+   "speech": "PENDING_MEASUREMENT",
+   "evidence": "GTSinger + Mureka",
+   "coverage_score": {
+    "value": "NOT_MEASURED",
+    "reason": "no extracted phoneme inventory for this language in this repository; A2 needs one, and inventing phone lists is what research item A1's source data exists to prevent"
+   },
+   "measured_per": {
+    "value": "NOT_MEASURED",
+    "reason": "requires a real sung take put through the Stage-6 chain; no language has one yet",
+    "blocked_by": [
+     "A7 (bed/vocal routing)",
+     "A8 (the gate itself)"
+    ]
+   },
+   "bar": {
+    "value": "NOT_MEASURED",
+    "reason": "A9 requires calibration from >=5 real human sung recordings in this language. CORPUS VERDICT (D-SSM-34 research, docs/research/2026-08-17-multilingual-sung-calibration-corpora.md, parent-verified 2026-08-17): NONE MEETS FLOOR: lawful pool n=4 (JamendoLyrics BY-SA x3 + vocadito ES x1) < 5. Cantoría is genuinely CC BY 4.0 (Zenodo API — overturns the prior [UNVERIFIED] NC guess) but genre-blocked (Golden Age choral polyphony). One commissioned recording closes the gap (owner decision). A guessed threshold is forbidden by name (MANDATE Clause 7).",
+    "blocked_by": [
+     "A12 (lawful pool n=4 < 5)"
+    ]
+   },
+   "protocol": "stage6-per-v1",
+   "established": "2026-08-15"
+  },
+  {
+   "code": "fr",
+   "label": "Français",
+   "singing": "DOCUMENTED_CONVERGENT",
+   "speech": "PENDING_MEASUREMENT",
+   "evidence": "GTSinger + Mureka",
+   "coverage_score": {
+    "value": "NOT_MEASURED",
+    "reason": "no extracted phoneme inventory for this language in this repository; A2 needs one, and inventing phone lists is what research item A1's source data exists to prevent"
+   },
+   "measured_per": {
+    "value": "NOT_MEASURED",
+    "reason": "requires a real sung take put through the Stage-6 chain; no language has one yet",
+    "blocked_by": [
+     "A7 (bed/vocal routing)",
+     "A8 (the gate itself)"
+    ]
+   },
+   "bar": {
+    "value": "NOT_MEASURED",
+    "reason": "A9 requires calibration from >=5 real human sung recordings in this language. CORPUS VERDICT (D-SSM-34 research, docs/research/2026-08-17-multilingual-sung-calibration-corpora.md, parent-verified 2026-08-17): LAWFUL CORPUS ON DISK: vocadito FR leg (CC BY 4.0) — paper Fig. 1 counts 10 tracks; on-disk metadata counts 9 pure-French + 1 French+English (parent measurement 2026-08-17); n>=5 either way. Supplement: 5 lawful JamendoLyrics FR songs (full mixes, need separation). Remaining blocker: the STT budget declaration (fail-closed), and a sourced FR phonemiser (per_gate supports tr+en today). A guessed threshold is forbidden by name (MANDATE Clause 7).",
+    "blocked_by": [
+     "A9 (calibration run — awaits STT budget + FR phonemiser)"
+    ]
+   },
+   "protocol": "stage6-per-v1",
+   "established": "2026-08-15"
+  },
+  {
+   "code": "de",
+   "label": "Deutsch",
+   "singing": "DOCUMENTED_CONVERGENT",
+   "speech": "PENDING_MEASUREMENT",
+   "evidence": "GTSinger + Mureka",
+   "coverage_score": {
+    "value": "NOT_MEASURED",
+    "reason": "no extracted phoneme inventory for this language in this repository; A2 needs one, and inventing phone lists is what research item A1's source data exists to prevent"
+   },
+   "measured_per": {
+    "value": "NOT_MEASURED",
+    "reason": "requires a real sung take put through the Stage-6 chain; no language has one yet",
+    "blocked_by": [
+     "A7 (bed/vocal routing)",
+     "A8 (the gate itself)"
+    ]
+   },
+   "bar": {
+    "value": "NOT_MEASURED",
+    "reason": "A9 requires calibration from >=5 real human sung recordings in this language. CORPUS VERDICT (D-SSM-34 research, docs/research/2026-08-17-multilingual-sung-calibration-corpora.md, parent-verified 2026-08-17): NONE MEETS FLOOR: lawful pool n=4 (LM-SSD German-lyrics takes x2 CC BY with cover-composition caveat + JamendoLyrics BY-SA x2) < 5. Wagner Ring / JKU Zauberflöte are lawful-licence but opera (genre-blocked). One commissioned recording closes the gap (owner decision). A guessed threshold is forbidden by name (MANDATE Clause 7).",
+    "blocked_by": [
+     "A12 (lawful pool n=4 < 5)"
+    ]
+   },
+   "protocol": "stage6-per-v1",
+   "established": "2026-08-15"
+  },
+  {
+   "code": "it",
+   "label": "Italiano",
+   "singing": "DOCUMENTED_CONVERGENT",
+   "speech": "PENDING_MEASUREMENT",
+   "evidence": "GTSinger + Mureka",
+   "coverage_score": {
+    "value": "NOT_MEASURED",
+    "reason": "no extracted phoneme inventory for this language in this repository; A2 needs one, and inventing phone lists is what research item A1's source data exists to prevent"
+   },
+   "measured_per": {
+    "value": "NOT_MEASURED",
+    "reason": "requires a real sung take put through the Stage-6 chain; no language has one yet",
+    "blocked_by": [
+     "A7 (bed/vocal routing)",
+     "A8 (the gate itself)"
+    ]
+   },
+   "bar": {
+    "value": "NOT_MEASURED",
+    "reason": "A9 requires calibration from >=5 real human sung recordings in this language. CORPUS VERDICT (D-SSM-34 research, docs/research/2026-08-17-multilingual-sung-calibration-corpora.md, parent-verified 2026-08-17): NONE EXISTS: SingStyle111's IT leg is research-only by the paper's own words (read [FULL] twice); GTSinger-IT NC; opera sets genre-blocked. A guessed threshold is forbidden by name (MANDATE Clause 7).",
+    "blocked_by": [
+     "A12 (no lawful corpus found in searched scope)"
+    ]
+   },
+   "protocol": "stage6-per-v1",
+   "established": "2026-08-15"
+  },
+  {
+   "code": "pt",
+   "label": "Português",
+   "singing": "DOCUMENTED_SINGLE",
+   "speech": "PENDING_MEASUREMENT",
+   "evidence": "Mureka only (not in GTSinger)",
+   "coverage_score": {
+    "value": "NOT_MEASURED",
+    "reason": "no extracted phoneme inventory for this language in this repository; A2 needs one, and inventing phone lists is what research item A1's source data exists to prevent"
+   },
+   "measured_per": {
+    "value": "NOT_MEASURED",
+    "reason": "requires a real sung take put through the Stage-6 chain; no language has one yet",
+    "blocked_by": [
+     "A7 (bed/vocal routing)",
+     "A8 (the gate itself)"
+    ]
+   },
+   "bar": {
+    "value": "NOT_MEASURED",
+    "reason": "A9 requires calibration from >=5 real human sung recordings in this language. CORPUS VERDICT (D-SSM-34 research, docs/research/2026-08-17-multilingual-sung-calibration-corpora.md, parent-verified 2026-08-17): NONE EXISTS: the fado archive is symbolic-only (PDF/MIDI, no vocal audio, NC article); DAMP research-EULA transfers; no lawful pt channel surfaced. A guessed threshold is forbidden by name (MANDATE Clause 7).",
+    "blocked_by": [
+     "A12 (no lawful corpus found in searched scope)"
+    ]
+   },
+   "protocol": "stage6-per-v1",
+   "established": "2026-08-15"
+  }
+ ],
+ "protocols": {
+  "stage6-per-v1": {
+   "id": "stage6-per-v1",
+   "separator": "SCNet XL IHF, 4-stem — music_studio/data/separators.json (chosen on SDR, MIT licence)",
+   "vocal_stem": "the separated VOCAL stem, never the mix — the mix leaks accompaniment into the ASR",
+   "asr": "stt_vertex (Chirp / video-speech-transcription), language-specific model",
+   "g2p": "music_studio/g2p_tr.py three tiers (MFA lexicon -> sourced rules -> phonetisaurus), per language",
+   "scorer": "music_studio/per_gate.py, line-aware, over a REFERENCE LATTICE of pronunciation variants",
+   "allophone_folding": "music_studio/g2p_tr.py ALLOPHONE_FOLD — collapses alphabet differences only",
+   "what_it_cannot_do": "it measures INTELLIGIBILITY, not whether the singing is good; that verdict is Berk's (MANDATE Clause 19) and the gate never claims it"
+  }
+ },
+ "a14_contract": {
+  "requires": [
+   "coverage_score",
+   "measured_per",
+   "bar",
+   "protocol",
+   "established"
+  ],
+  "enum_generation": "the API's language enum is GENERATED from this file by import (music_studio/models.py reads it); it is never hand-listed in param_spec.json",
+  "honesty_rule": "a field whose value is NOT_MEASURED carries the REASON and the items that block it. A number printed beside a verified one reads as verified, so no field is ever filled with a plausible figure.",
+  "written_by": "scripts/enrich_language_registry.py",
+  "written_at_utc": "2026-08-15T12:38:16+00:00"
+ }
+}

@@ -1,0 +1,49 @@
+{
+  "name": "atmosphere",
+  "expectedChecks": 16,
+  "passedChecks": 16,
+  "passed": true,
+  "problems": [],
+  "script": "docs/design/2026-09-12-beyond-living/atmosphere-check.mjs",
+  "scriptSHA256": "4cf7541685103fb5f0a5f59b70b8e54522ddf1b9da4b95c7a4e9b568f1b72210",
+  "args": [
+    "C:\\Berk\\PlayMusicPrompts\\docs\\design\\2026-09-12-beyond-living\\atmosphere-check.mjs",
+    "C:\\Berk\\PlayMusicPrompts\\website_html_templates_beyond\\lab-aether-atmosphere.js"
+  ],
+  "productionAsset": "lab-aether-atmosphere.js",
+  "report": {
+    "passed": 16,
+    "checks": [
+      "Pinned Three constructs a single bounded transparent medium with additive RGB and unchanged destination alpha",
+      "Cloud detail is a fixed, deterministic filtered 3D texture with a bounded local budget",
+      "Camera uniform applies the complete translated, rotated and nonuniformly scaled parent transform",
+      "Three injected shader helpers cannot collide with av-prefixed custom helpers",
+      "Ray-box arithmetic matches an independent reference outside, inside and parallel to the box",
+      "Each quality level changes the actual bounded shader ray loop",
+      "Continuous form morph is convex and does not advance under Motion off",
+      "Explicit form, depth, spread, focus and finish edits remain effective while frozen",
+      "Invalid controls and enormous elapsed gaps remain finite and inside their declared budgets",
+      "Audio responds to actual active input and settles on pause; zero flow stops ambient phase",
+      "The medium has true depth integration, stable sample positions and a hard radiance ceiling",
+      "Environment box includes the camera, all near banks and the full distant field",
+      "Particle and volume clocks, envelopes and form weights match through pause and frozen edits",
+      "Palette inputs reach actual shader colours",
+      "Particle and medium share camera-relative touch while frozen input is ignored",
+      "Owned geometry and material dispose once and disposed assets cannot resume updates"
+    ],
+    "module": "/C:/Berk/PlayMusicPrompts/website_html_templates_beyond/lab-aether-atmosphere.js",
+    "moduleSHA256": "6368af266ecab0f881ee6d01fc48481309215d09f1be4995f657498f57028015",
+    "particleModule": "/C:/Berk/PlayMusicPrompts/website_html_templates_beyond/lab-aether.js",
+    "particleSHA256": "38ce2e47a86122156a649fcc7b2fd34891090ca82322953f26802a9b895373f4",
+    "scope": "Pinned Three construction, real scene/camera matrices, input and lifecycle behavior, independent slab-reference comparison, bounded compositing math and shader namespace/source guards. These checks do not compile GLSL or establish actual GPU rendering, performance or visual acceptance."
+  },
+  "execution": {
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "error": null,
+    "elapsedMs": 161,
+    "stdout": "{\n  \"passed\": 16,\n  \"checks\": [\n    \"Pinned Three constructs a single bounded transparent medium with additive RGB and unchanged destination alpha\",\n    \"Cloud detail is a fixed, deterministic filtered 3D texture with a bounded local budget\",\n    \"Camera uniform applies the complete translated, rotated and nonuniformly scaled parent transform\",\n    \"Three injected shader helpers cannot collide with av-prefixed custom helpers\",\n    \"Ray-box arithmetic matches an independent reference outside, inside and parallel to the box\",\n    \"Each quality level changes the actual bounded shader ray loop\",\n    \"Continuous form morph is convex and does not advance under Motion off\",\n    \"Explicit form, depth, spread, focus and finish edits remain effective while frozen\",\n    \"Invalid controls and enormous elapsed gaps remain finite and inside their declared budgets\",\n    \"Audio responds to actual active input and settles on pause; zero flow stops ambient phase\",\n    \"The medium has true depth integration, stable sample positions and a hard radiance ceiling\",\n    \"Environment box includes the camera, all near banks and the full distant field\",\n    \"Particle and volume clocks, envelopes and form weights match through pause and frozen edits\",\n    \"Palette inputs reach actual shader colours\",\n    \"Particle and medium share camera-relative touch while frozen input is ignored\",\n    \"Owned geometry and material dispose once and disposed assets cannot resume updates\"\n  ],\n  \"module\": \"/C:/Berk/PlayMusicPrompts/website_html_templates_beyond/lab-aether-atmosphere.js\",\n  \"moduleSHA256\": \"6368af266ecab0f881ee6d01fc48481309215d09f1be4995f657498f57028015\",\n  \"particleModule\": \"/C:/Berk/PlayMusicPrompts/website_html_templates_beyond/lab-aether.js\",\n  \"particleSHA256\": \"38ce2e47a86122156a649fcc7b2fd34891090ca82322953f26802a9b895373f4\",\n  \"scope\": \"Pinned Three construction, real scene/camera matrices, input and lifecycle behavior, independent slab-reference comparison, bounded compositing math and shader namespace/source guards. These checks do not compile GLSL or establish actual GPU rendering, performance or visual acceptance.\"\n}\n",
+    "stderr": ""
+  }
+}

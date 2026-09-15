@@ -1,0 +1,54 @@
+{
+ "schema": "berk.deep-research-preflight/v1",
+ "status": "complete",
+ "date": "2026-08-17",
+ "created_at": "2026-08-17T07:20:27+00:00",
+ "topic": "app-surface-technology-runtime-auth-pricing",
+ "cwd": "c:/Berk/SsmContentAssetCreator",
+ "governing_files": [
+  {
+   "path": "AGENTS.md",
+   "sha256": "f4f0e5c9845ba5ae481ebe03f7fb3b5ab8b550b75287474921b146fd968e67e9",
+   "read_back": true
+  },
+  {
+   "path": ".claude/memory/DECISIONS.md",
+   "sha256": "14e37aaeeb5091eb392ff948f63b4ba968183be91fced79fd218eaf39e98948a",
+   "read_back": true
+  },
+  {
+   "path": "docs/moviemaker/2026-08-15-app-creative-brief.md",
+   "sha256": "3de5e661efc3967f2eae289d0cacd69654490310dbae8dd5b99a6f74d8b463b7",
+   "read_back": true
+  }
+ ],
+ "code_files": [
+  {
+   "path": "artifacts/deploy-2026-08-15/_live_caps_after_dssm30.json",
+   "sha256": "e4853b8b4f0bbd3c205371834933deca4521b429257e7a4312e9a9528f4b46aa",
+   "read_back": true
+  }
+ ],
+ "project_documents": [
+  {
+   "path": "docs/moviemaker/2026-08-15-app-engine-contract.md",
+   "sha256": "bc0970ad6ccfb281c362be258a4bcba824f1b4251f192d8057a52334f29a7a67",
+   "read_back": true
+  }
+ ],
+ "code_absence_search": {
+  "performed": true,
+  "roots": [
+   "c:/Berk/SsmContentAssetCreator (repo root, recursive)"
+  ],
+  "queries": [
+   "Get-ChildItem -Directory match web|ui|app|front|studio|client|desktop",
+   "Get-ChildItem -Recurse -Include package.json,index.html (excl node_modules)"
+  ],
+  "reason": "MEASURED this session: no user-surface code exists anywhere in the repo — 0 UI directories at root, exactly 1 package.json and it lives in a test artifact (artifacts/holivuud/package.json). The four Clause-24 surfaces are therefore greenfield."
+ },
+ "uncertainty": "Which application technology serves all four user surfaces (web, Android/iOS, Windows, macOS) at the never-before-achieved bar under the D-SSM-30 Google-only constraint; which Google runtime serves the app tier; which Google auth surface carries futuremovies.ai login; which pricing/credits models the frontier uses. Local evidence names the constraints and the seven-surface IA but the brief itself marks these four as OPEN DECISIONS, so local intake cannot close them.",
+ "local_conclusion": "Local evidence is complete on constraints (Google-only, light UI, Clause 23/24, serving line Cloud Run+GCS+CDN, domain decision) and empty on the four open decisions; external frontier evidence is required to build the D1-D10 owner brief.",
+ "external_research_needed": true,
+ "scope_plan": "docs/research/2026-08-17-app-surface-technology-runtime-auth-pricing.md"
+}

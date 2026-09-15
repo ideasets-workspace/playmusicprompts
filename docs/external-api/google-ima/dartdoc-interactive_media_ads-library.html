@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en"><head><script type="text/javascript" src="https://www.googletagmanager.com/gtm.js?id=GTM-MX6DBN9" async="async"></script><script type="text/javascript" src="/static/hash-atjdgfma/js/gtm.js"></script><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/><meta name="generator" content="made with love by dartdoc"/><meta name="description" content="interactive_media_ads library API docs, for the Dart programming language."/><title>interactive_media_ads library - Dart API</title><link rel="canonical" href="https://pub.dev/documentation/interactive_media_ads/latest/interactive_media_ads"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/><link rel="stylesheet" href="/static/hash-atjdgfma/css/dartdoc.css"/><link rel="icon" href="/favicon.ico?hash=nk4nss8c7444fg0chird9erqef2vkhb8"/></head><body class="light-theme" data-base-href="../" data-using-base-href="false"><noscript><iframe class="-gtm-iframe" src="https://www.googletagmanager.com/ns.html?id=GTM-MX6DBN9" height="0" width="0"></iframe></noscript><script src="/static/hash-atjdgfma/js/dark-init.js"></script><div id="overlay-under-drawer"></div><header id="title"><span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span><a class="hidden-xs" href="/"><img class="-dart-logo-img" src="/static/hash-atjdgfma/img/dart-logo.svg" alt="" width="30" height="30" role="presentation" aria-label="Go to the landing page of pub.dev"/></a><ol class="breadcrumbs gt-separated dark hidden-xs"><li><a href="/packages/interactive_media_ads">interactive_media_ads package</a></li><li><a href="../index.html">documentation</a></li><li class="self-crumb">interactive_media_ads.dart</li></ol><div class="self-name">interactive_media_ads.dart</div><form class="search navbar-right" role="search"><input id="search-box" class="form-control typeahead" type="text" placeholder="Loading search..." autocomplete="off"/></form><button id="theme-button" class="toggle" aria-label="Light and dark mode toggle" title="Toggle between light and dark mode"><span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">dark_mode</span><span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">light_mode</span></button></header><main><div id="dartdoc-main-content" class="main-content" data-above-sidebar="" data-below-sidebar="interactive_media_ads/interactive_media_ads-library-sidebar.html">
+  
+    <div>
+      
+
+      <h1>
+        <span class="kind-library">interactive_media_ads</span>
+        library 
+ 
+
+      </h1>
+    </div>
+
+    
+
+
+    <div class="summary offset-anchor" id="classes">
+      <h2>Classes</h2>
+      <dl>
+          <dt id="Ad">
+  <span class="name "><a href="../interactive_media_ads/Ad-class.html">Ad</a></span> 
+
+</dt>
+<dd>
+  Data object representing a single ad.
+</dd>
+
+          <dt id="AdDisplayContainer">
+  <span class="name "><a href="../interactive_media_ads/AdDisplayContainer-class.html">AdDisplayContainer</a></span> 
+
+</dt>
+<dd>
+  A <a href="https://api.flutter.dev/flutter/widgets/Widget-class.html">Widget</a> for displaying loaded ads.
+</dd>
+
+          <dt id="AdError">
+  <span class="name "><a href="../interactive_media_ads/AdError-class.html">AdError</a></span> 
+
+</dt>
+<dd>
+  Surfaces an error that occurred during ad loading or playing.
+</dd>
+
+          <dt id="AdErrorEvent">
+  <span class="name "><a href="../interactive_media_ads/AdErrorEvent-class.html">AdErrorEvent</a></span> 
+
+</dt>
+<dd>
+  An event raised when there is an error loading or playing ads.
+</dd>
+
+          <dt id="AdEvent">
+  <span class="name "><a href="../interactive_media_ads/AdEvent-class.html">AdEvent</a></span> 
+
+</dt>
+<dd>
+  Simple data class used to transport ad playback information.
+</dd>
+
+          <dt id="AdPodInfo">
+  <span class="name "><a href="../interactive_media_ads/AdPodInfo-class.html">AdPodInfo</a></span> 
+
+</dt>
+<dd>
+  Simple data object containing podding metadata.
+</dd>
+
+          <dt id="AdsLoader">
+  <span class="name "><a href="../interactive_media_ads/AdsLoader-class.html">AdsLoader</a></span> 
+
+</dt>
+<dd>
+  Allows publishers to request ads from ad servers or a dynamic ad insertion
+stream.
+</dd>
+
+          <dt id="AdsLoadErrorData">
+  <span class="name "><a href="../interactive_media_ads/AdsLoadErrorData-class.html">AdsLoadErrorData</a></span> 
+
+</dt>
+<dd>
+  Ad error data that is returned when the ads loader fails to load the ad.
+</dd>
+
+          <dt id="AdsManager">
+  <span class="name "><a href="../interactive_media_ads/AdsManager-class.html">AdsManager</a></span> 
+
+</dt>
+<dd>
+  Handles playing ads after they've been received from the server.
+</dd>
+
+          <dt id="AdsManagerDelegate">
+  <span class="name "><a href="../interactive_media_ads/AdsManagerDelegate-class.html">AdsManagerDelegate</a></span> 
+
+</dt>
+<dd>
+  Delegate for ad events or errors that occur during ad or stream
+initialization and playback.
+</dd>
+
+          <dt id="AdsRenderingSettings">
+  <span class="name "><a href="../interactive_media_ads/AdsRenderingSettings-class.html">AdsRenderingSettings</a></span> 
+
+</dt>
+<dd>
+  Defines parameters that control the rendering of ads.
+</dd>
+
+          <dt id="AdsRequest">
+  <span class="name "><a href="../interactive_media_ads/AdsRequest-class.html">AdsRequest</a></span> 
+
+</dt>
+<dd>
+  An object containing the data used to request ads from the server.
+</dd>
+
+          <dt id="AndroidInteractiveMediaAds">
+  <span class="name "><a href="../interactive_media_ads/AndroidInteractiveMediaAds-class.html">AndroidInteractiveMediaAds</a></span> 
+
+</dt>
+<dd>
+  Android implementation of <code>InteractiveMediaAdsPlatform</code>.
+</dd>
+
+          <dt id="CompanionAd">
+  <span class="name "><a href="../interactive_media_ads/CompanionAd-class.html">CompanionAd</a></span> 
+
+</dt>
+<dd>
+  An object that holds data corresponding to the companion Ad.
+</dd>
+
+          <dt id="CompanionAdSlot">
+  <span class="name "><a href="../interactive_media_ads/CompanionAdSlot-class.html">CompanionAdSlot</a></span> 
+
+</dt>
+<dd>
+  Ad slot for companion ads.
+</dd>
+
+          <dt id="CompanionAdSlotSize">
+  <span class="name "><a href="../interactive_media_ads/CompanionAdSlotSize-class.html">CompanionAdSlotSize</a></span> 
+
+</dt>
+<dd>
+  The size of the slot for a companion ad.
+</dd>
+
+          <dt id="CompanionAdSlotSizeFixed">
+  <span class="name "><a href="../interactive_media_ads/CompanionAdSlotSizeFixed-class.html">CompanionAdSlotSizeFixed</a></span> 
+
+</dt>
+<dd>
+  A slot for a companion ad with a fixed with and height.
+</dd>
+
+          <dt id="CompanionAdSlotSizeFluid">
+  <span class="name "><a href="../interactive_media_ads/CompanionAdSlotSizeFluid-class.html">CompanionAdSlotSizeFluid</a></span> 
+
+</dt>
+<dd>
+  A slot for a companion had with no fixed size, but rather adapts to fit the
+creative content they display.
+</dd>
+
+          <dt id="ContentProgressProvider">
+  <span class="name "><a href="../interactive_media_ads/ContentProgressProvider-class.html">ContentProgressProvider</a></span> 
+
+</dt>
+<dd>
+  Allow the SDK to track progress of the content video.
+</dd>
+
+          <dt id="ImaSettings">
+  <span class="name "><a href="../interactive_media_ads/ImaSettings-class.html">ImaSettings</a></span> 
+
+</dt>
+<dd>
+  Defines general SDK settings that are used when creating an <a href="../interactive_media_ads/AdsLoader-class.html">AdsLoader</a>.
+</dd>
+
+          <dt id="IOSInteractiveMediaAds">
+  <span class="name "><a href="../interactive_media_ads/IOSInteractiveMediaAds-class.html">IOSInteractiveMediaAds</a></span> 
+
+</dt>
+<dd>
+  Implementation of <code>InteractiveMediaAdsPlatform</code> for iOS.
+</dd>
+
+          <dt id="OnAdsLoadedData">
+  <span class="name "><a href="../interactive_media_ads/OnAdsLoadedData-class.html">OnAdsLoadedData</a></span> 
+
+</dt>
+<dd>
+  Data when ads are successfully loaded from the ad server through an
+<a href="../interactive_media_ads/AdsLoader-class.html">AdsLoader</a>.
+</dd>
+
+          <dt id="UniversalAdId">
+  <span class="name "><a href="../interactive_media_ads/UniversalAdId-class.html">UniversalAdId</a></span> 
+
+</dt>
+<dd>
+  Simple data object containing universal ad ID information.
+</dd>
+
+      </dl>
+    </div>
+
+    <div class="summary offset-anchor" id="enums">
+      <h2>Enums</h2>
+      <dl>
+          <dt id="AdErrorCode">
+  <span class="name "><a href="../interactive_media_ads/AdErrorCode.html">AdErrorCode</a></span> 
+
+</dt>
+<dd>
+  The types of errors that can be encountered when loading an ad.
+</dd>
+
+          <dt id="AdErrorType">
+  <span class="name "><a href="../interactive_media_ads/AdErrorType.html">AdErrorType</a></span> 
+
+</dt>
+<dd>
+  Possible error types while loading or playing ads.
+</dd>
+
+          <dt id="AdEventType">
+  <span class="name "><a href="../interactive_media_ads/AdEventType.html">AdEventType</a></span> 
+
+</dt>
+<dd>
+  Types of events that can occur during ad playback.
+</dd>
+
+          <dt id="AdUIElement">
+  <span class="name "><a href="../interactive_media_ads/AdUIElement.html">AdUIElement</a></span> 
+
+</dt>
+<dd>
+  Describes an element of the ad UI, to be requested or rendered by the SDK.
+</dd>
+
+      </dl>
+    </div>
+
+
+
+
+
+
+
+
+  </div><div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left"><header id="header-search-sidebar" class="hidden-l"><form class="search-sidebar" role="search"><input id="search-sidebar" class="form-control typeahead" type="text" placeholder="Loading search..." autocomplete="off"/></form></header><ol id="sidebar-nav" class="breadcrumbs gt-separated dark hidden-l"><li><a href="/packages/interactive_media_ads">interactive_media_ads package</a></li><li><a href="../index.html">documentation</a></li><li class="self-crumb">interactive_media_ads.dart</li></ol>
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+
+
+
+    <h5><span class="package-name">interactive_media_ads</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="../interactive_media_ads/">interactive_media_ads</a></li>
+</ol>
+
+  </div><div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <h5>interactive_media_ads library</h5>
+  </div></main><footer><span class="no-break">interactive_media_ads 0.3.0+17</span></footer><script src="/static/hash-atjdgfma/dartdoc/resources/highlight.pack.js"></script><script src="/static/hash-atjdgfma/dartdoc/resources/docs.dart.js"></script></body></html>

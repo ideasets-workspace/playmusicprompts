@@ -1,0 +1,104 @@
+{
+  "url": "https://www.playmusicprompts.com/stream?take=cmtot1xnm0002mzxqeec3hsbk",
+  "jobId": "cmtot1xnm0002mzxqeec3hsbk",
+  "anonRestored": true,
+  "startedAt": "2026-09-06T09:20:32.545Z",
+  "restoredTitle": "Take 1 · a warm, hopeful indie-folk song about walking home at dawn, female voice, acoustic guitar and soft piano",
+  "briefRestored": {
+    "prompt": "a warm, hopeful indie-folk song about walking home at dawn, female voice, acoustic guitar and soft piano",
+    "vocal": "female"
+  },
+  "clock": "0:00 2:12",
+  "lockLine": "generated for you · visual pulses at 107.67 bpm (measured) · downbeat not measured",
+  "renderer": "webgl2",
+  "record": {
+    "requestId": "84c77502-d35e-441c-9430-b3f091f54d7f",
+    "status": "SUCCEEDED",
+    "leaves": 200,
+    "rendered": 207,
+    "missing": [],
+    "chapters": [
+      {
+        "id": "source",
+        "rows": 7,
+        "h": 535
+      },
+      {
+        "id": "pulse",
+        "rows": 17,
+        "h": 272
+      },
+      {
+        "id": "sound",
+        "rows": 20,
+        "h": 176
+      },
+      {
+        "id": "finish",
+        "rows": 43,
+        "h": 167
+      },
+      {
+        "id": "composition",
+        "rows": 21,
+        "h": 164
+      },
+      {
+        "id": "suggestions",
+        "rows": 44,
+        "h": 133
+      },
+      {
+        "id": "words",
+        "rows": 8,
+        "h": 177
+      },
+      {
+        "id": "files",
+        "rows": 32,
+        "h": 133
+      },
+      {
+        "id": "provenance",
+        "rows": 31,
+        "h": 211
+      },
+      {
+        "id": "quota",
+        "rows": 6,
+        "h": 134
+      }
+    ],
+    "rawJsonBlocks": 0,
+    "tempo": {
+      "state": "MEASURED",
+      "bpm": 107.67
+    },
+    "suggestions": 3,
+    "hearItButtons": 3,
+    "provenanceAttrs": {
+      "dst": "digsrctype:trainedAlgorithmicMedia",
+      "req": "84c77502-d35e-441c-9430-b3f091f54d7f"
+    }
+  },
+  "widths": [
+    {
+      "width": 375,
+      "recordHeight": 3192,
+      "horizontalOverflowPx": 0,
+      "smallTargets": 0
+    },
+    {
+      "width": 768,
+      "recordHeight": 2377,
+      "horizontalOverflowPx": 0,
+      "smallTargets": 0
+    },
+    {
+      "width": 1440,
+      "recordHeight": 1468,
+      "horizontalOverflowPx": 0,
+      "smallTargets": 0
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+Use case: ui-mockup. Create ONE separate LIBRARY page for PlayMusicPrompts, matching the APPROVED HOME in reference image 1. Keep the original recognizable exact logo/wordmark, luxury black architecture, violet/magenta/cyan glass lighting and realistic depth, shared header and left navigation, and full-width persistent waveform player. This is the user's music collection, not another landing page or prompt composer. Native English, large crisp type, generous artwork, full uncropped landscape desktop around 1584x1104, no device frame.
+
+Header: original PlayMusicPrompts logo left, same search "Search songs, stations, and moods". At upper right replace "Sign in" with a small neutral account/avatar button (simple human outline in a circle, no fabricated face or name). This is an illustrative SIGNED-IN library.
+Rail order "Create", "Explore", "Radio", "Library"; ONLY LIBRARY selected in violet.
+
+Main heading top left, bold and large: "Your library."
+Supporting sentence: "The songs you save. The music you create."
+Top right primary luminous violet play button "Play saved songs"; adjacent quieter outlined button with plus "New playlist". Keep them clear and not overlapping the title.
+Below introduction a polished toolbar: tabs "Saved songs" (selected in violet), "Your creations", "Playlists". To their right a local search field "Search saved songs" and a dropdown "Recently saved". Clearly distinguish this local search from the original header search.
+
+Main content: SIX generous song artwork cards in an elegant THREE-COLUMN, TWO-ROW grid. ALL SIX ARE SONGS under the selected Saved songs tab. Use wide, beautiful artwork with dark glass frames, subtle violet edges, clear titles, a filled saved heart and a small three-dot menu. Do not mix playlist cards or station-creation widgets into the song grid. Artwork themes and exact titles:
+Row 1:
+1. "Night Drive" — original rainy violet Istanbul night artwork matching the persistent player's cover. A small waveform and "Now playing" badge on the artwork, NO inactive play triangle. A subtly highlighted edge shows current selection.
+2. "After Hours" — original moonlit bridge and city artwork.
+3. "Violet Hour" — original magenta-lit woman's profile artwork.
+Row 2:
+4. "Coastline" — original violet seashore at dusk.
+5. "Distant Lights" — original cat at a sunset window.
+6. "Last Ferry" — original sunset ferry artwork.
+The five nonplaying cards have a discreet circular play icon. Keep saved-heart and menu controls aligned cleanly with each title. No invented dates, artist identities, counts or duration data on cards.
+
+The architectural background remains visible around the grid, slightly calmer and darker than Radio to put the personal collection first. Preserve genuine spatial materials, beautiful coherent cover art, breathing room and consistent card sizes. No giant decorative hero sculpture consuming collection space.
+
+Bottom player: EXACT SAME NIGHT DRIVE SESSION as reference: Night Drive artwork/title, "Made for you", heart FILLED to match this saved-library state. Shuffle, previous, large luminous PAUSE circle, next, repeat; violet waveform scrubber, "01:24" and "03:48"; queue, "Keep it going" toggle ON, green dot "Next song ready", volume slider and expand. Navigation to Library has not started another song. Only Night Drive is marked Now playing, and the card state and player state agree.
+No home composer, no pricing, credits, fake personal statistics or popularity counters, no Turkish, no extra annotations. Include the complete player and all six cards inside the frame; extend vertical space if necessary rather than making controls illegible.

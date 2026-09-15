@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "name": "Composer and all application modules initialized",
+      "passed": true
+    },
+    {
+      "name": "100 controls rendered, searched, edited and applied",
+      "passed": true
+    },
+    {
+      "name": "Genre vocabulary search, selection and editable prompt integration",
+      "passed": true
+    },
+    {
+      "name": "Enhancement review and apply",
+      "passed": true
+    },
+    {
+      "name": "Unavailable creation is honest and preserves music brief",
+      "passed": true
+    },
+    {
+      "name": "Explore tabs and category results",
+      "passed": true
+    },
+    {
+      "name": "Saving six real UI selections populates Library",
+      "passed": true
+    },
+    {
+      "name": "Playlist creation, adding a song, opening and renaming",
+      "passed": true
+    },
+    {
+      "name": "Library search, remove and undo",
+      "passed": true
+    },
+    {
+      "name": "Radio filtering",
+      "passed": true
+    },
+    {
+      "name": "Login visibility toggle, validation and truthful recovery state",
+      "passed": true
+    },
+    {
+      "name": "Real HTMLAudioElement playback survives route navigation",
+      "passed": true,
+      "details": {
+        "before": 0.383798,
+        "after": 0.410803
+      }
+    },
+    {
+      "name": "Real pause, seeking and volume",
+      "passed": true
+    },
+    {
+      "name": "Expanded player and unavailable continuation state",
+      "passed": true
+    },
+    {
+      "name": "Favorites, playlists and imported audio survive reload in IndexedDB",
+      "passed": true
+    },
+    {
+      "name": "All five desktop routes render without horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "All five tablet routes render without horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "All five mobile routes render without horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "No browser JavaScript errors or failed HTTP requests",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "note": "QA audio is a short generated test tone supplied only to the isolated browser, not shipped as music."
+}

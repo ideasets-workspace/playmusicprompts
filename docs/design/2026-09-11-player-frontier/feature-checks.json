@@ -1,0 +1,15 @@
+{
+  "passed": 9,
+  "checks": [
+    "True silence has no invented pulse or spectrum",
+    "A sustained signal has no recurring fake beat",
+    "Separated real spectral attacks produce separate pulses",
+    "Rapid fluctuation respects transient refractory interval",
+    "Pause and mute remove pulse and cannot generate new onset",
+    "Response zero disables spectral excitation and pulse",
+    "High frequencies map to a brighter spectral centroid than bass",
+    "Silent spectrum decays rather than retaining a frozen signal",
+    "Bad inputs and format changes stay bounded with a stable output buffer"
+  ],
+  "scope": "Pure analyser-feature behavior; synthetic inputs are test fixtures, not product music or visual QA."
+}

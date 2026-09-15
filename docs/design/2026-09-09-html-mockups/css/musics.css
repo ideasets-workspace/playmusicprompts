@@ -1,0 +1,40 @@
+/* =====================================================================================
+   css/musics.css — the catalogue page: a cinematic header (blurred cover as backdrop — the
+   Dawn FM reference Berk liked), a sticky filter strip fed by the live facets in production,
+   and ONE continuous stream of rows (his explicit correction: never a card grid).
+   ===================================================================================== */
+
+.cat-head { position: relative; padding: var(--sp-12) 0 var(--sp-8); overflow: hidden; }
+.cat-backdrop { position: absolute; inset: -40px; background: center / cover no-repeat; filter: blur(48px) saturate(1.4) brightness(.55); opacity: .7; }
+.cat-head::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(5,3,8,.2), var(--bg-0)); }
+.cat-head .container { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--sp-8); align-items: end; }
+.cat-title { max-width: 20ch; }
+.cat-stats { display: flex; gap: var(--sp-6); flex-wrap: wrap; margin-top: var(--sp-4); color: var(--ink-dim); font-size: var(--fs-sm); }
+.cat-stats b { color: var(--ink); font-family: var(--font-mono); font-weight: 600; }
+.cat-actions { display: flex; gap: var(--sp-3); }
+
+.filters {
+  position: sticky; top: var(--topbar-h); z-index: 5; display: flex; gap: var(--sp-2); align-items: center; flex-wrap: wrap;
+  padding: var(--sp-3) 0; background: linear-gradient(to bottom, var(--bg-0) 70%, transparent); 
+}
+.filters .sep { width: 1px; height: 24px; background: var(--line-strong); margin-inline: var(--sp-1); }
+.filters .spacer { flex: 1; }
+.sort { display: inline-flex; align-items: center; gap: var(--sp-2); min-height: 36px; padding: 0 var(--sp-3); border-radius: var(--r-pill); background: var(--bg-2); border: 1px solid var(--line-strong); font-size: var(--fs-xs); font-weight: 600; color: var(--ink-dim); }
+.sort b { color: var(--ink); }
+.range { display: inline-flex; align-items: center; gap: var(--sp-2); font-size: var(--fs-xs); color: var(--ink-dim); }
+.range input { width: 120px; accent-color: var(--accent); height: var(--target-min); }
+
+.stream-head { display: grid; grid-template-columns: 44px 56px minmax(0, 1fr) auto auto; gap: var(--sp-4); padding: 0 var(--sp-3) var(--sp-2); color: var(--ink-faint); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; border-bottom: 1px solid var(--line); margin-bottom: var(--sp-2); }
+.stream-head span:nth-child(2) { grid-column: span 2; }
+.row .r-title a { display: inline-block; min-height: var(--target-min); line-height: var(--target-min); }
+.row .r-title a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.row .r-meta { display: flex; gap: var(--sp-3); align-items: center; font-size: var(--fs-xs); color: var(--ink-faint); font-family: var(--font-mono); }
+.row .r-meta svg { width: 12px; height: 12px; }
+.load-more { display: flex; justify-content: center; padding: var(--sp-8) 0; }
+
+@media (max-width: 767.98px) {
+  .cat-head .container { grid-template-columns: 1fr; }
+  .stream-head { display: none; }
+  .filters { top: var(--topbar-h); }
+  .range { display: none; }
+}

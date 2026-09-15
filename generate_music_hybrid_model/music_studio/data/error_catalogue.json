@@ -1,0 +1,68 @@
+{
+  "$schema_id": "berk.music-studio-error-catalogue/v1",
+  "endpoint": "generate-music-hybrid-model",
+  "purpose": "THE ERROR SURFACE AS DATA. Berk's order, 2026-08-15, verbatim: 'kafana göre hiçbir variable a değişkene sen değer veremezsin, kodun içinde değer veremezsin' — no value may be assigned inside the code. Until this file existed, every one of these codes carried its explanatory prose INSIDE generate_music_hybrid_model/models.py lines 31-42, which he named as the defect. The code now imports this catalogue and its Enum members are GENERATED against it by a control, so the two cannot drift.",
+  "consumers_by_import": [
+    "generate_music_hybrid_model/models.py (ErrorCode enum members are asserted against this file at import time)",
+    "generate_music_hybrid_model/lambda_function.py (envelope construction)",
+    "scripts/test_generate_music_hybrid_model.py (the offline control)",
+    "the generated v5 API doc section"
+  ],
+  "http_status_rule": "A caller-fixable problem is 4xx; a problem on our side is 5xx. The status lives HERE, beside the code, because a status typed at each raise site is the copy-paste class.",
+  "codes": [
+    {
+      "code": "INVALID_REQUEST",
+      "http_status": 400,
+      "class": "caller_fixable",
+      "meaning": "the request failed validation against param_spec.json",
+      "caller_action": "read the `refused` array: it names every violated field with the allowed values for that field",
+      "raised_by": "music_studio.models.validate_request",
+      "law": "MANDATE CLAUSE 7 — a validator that cannot refuse is not a validator; the refusal is proven live"
+    },
+    {
+      "code": "LANGUAGE_NOT_PROVEN",
+      "http_status": 422,
+      "class": "caller_fixable",
+      "meaning": "vocal.language exists in the registry but its measured singing/speech state does not meet the evidence level this request requires",
+      "caller_action": "either choose a language whose state satisfies the request, or set vocal.language_policy to prefer_proven and accept the reported fallback",
+      "raised_by": "music_studio.models._check_language",
+      "law": "D-SSM-17 — a language enters ONLY with evidence; a silent substitution is the deception class"
+    },
+    {
+      "code": "GENERATION_FAILED",
+      "http_status": 502,
+      "class": "upstream",
+      "meaning": "the delegated Lyria worker returned success=false",
+      "caller_action": "the delegate's own error is passed through verbatim in `error`; a model refusal is terminal and is not retried",
+      "raised_by": "generate_music_hybrid_model.lambda_function delegation step",
+      "law": "MANDATE CLAUSE 22 — a model refusal is terminal; hidden retries are banned"
+    },
+    {
+      "code": "MEASUREMENT_FAILED",
+      "http_status": 502,
+      "class": "upstream",
+      "meaning": "audio was returned but could not be measured",
+      "caller_action": "treat as no delivery; nothing is charged as delivered",
+      "raised_by": "generate_music_hybrid_model.lambda_function measurement step",
+      "law": "MANDATE CLAUSE 16 — a delivery claim without a measurement is refused rather than reported"
+    },
+    {
+      "code": "CONFIG_ERROR",
+      "http_status": 500,
+      "class": "ours",
+      "meaning": "a deploy-time environment variable is absent",
+      "caller_action": "none — this is our deployment defect and is reported as such",
+      "raised_by": "generate_music_hybrid_model.config at import time",
+      "law": "fail loud, never fail open — an absent config that defaults silently is the amateurish-construction class"
+    },
+    {
+      "code": "INTERNAL_ERROR",
+      "http_status": 500,
+      "class": "ours",
+      "meaning": "an unexpected exception reached the handler boundary",
+      "caller_action": "none — retry is safe only if the caller's request was idempotent; the traceback is logged, never returned",
+      "raised_by": "generate_music_hybrid_model.lambda_function outermost handler",
+      "law": "error handling at a system boundary is mandatory (SUPREME LAW prohibition 6, named by name)"
+    }
+  ]
+}

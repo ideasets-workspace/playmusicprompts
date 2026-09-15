@@ -1,0 +1,39 @@
+{
+  "checks": [
+    "Host Three namespace and finite geometry",
+    "Resource budget and structured tree",
+    "No fabricated onset in idle or active silence",
+    "Actual onset and spectrum routed into shader uniforms",
+    "Motion off freezes pose and all animated uniforms",
+    "No phase jump after re-enable; bounded hostile inputs",
+    "Nine palettes produce distinct finite primary colors",
+    "Low quality lowers atmosphere count and leaves structure",
+    "Complete, idempotent disposal"
+  ],
+  "passed": 9,
+  "source": "Actual pinned local Three 0.185.1, structural only; no browser shader/render claim",
+  "scene": {
+    "name": "Neural Bloom",
+    "branches": 198,
+    "strands": 381,
+    "cells": 198,
+    "particles": 1050,
+    "triangles": 77616,
+    "draws": 3,
+    "elapsed": 7.066666666666647,
+    "eventCount": 1,
+    "bounds": {
+      "min": [
+        -4.126171398162842,
+        -3.257897424697876,
+        -3.3194718837738035
+      ],
+      "max": [
+        3.9160016059875487,
+        3.695264387130737,
+        3.664664077758789
+      ]
+    },
+    "disposed": false
+  }
+}

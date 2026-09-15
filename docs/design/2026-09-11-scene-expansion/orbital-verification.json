@@ -1,0 +1,51 @@
+{
+  "threeRevision": "185",
+  "checks": [
+    {
+      "name": "Geometry uses 18 draw calls with finite buffer attributes",
+      "passed": true,
+      "evidence": {
+        "drawCalls": 18,
+        "triangleCount": 22316
+      }
+    },
+    {
+      "name": "Metal band outer normals face outward",
+      "passed": true,
+      "evidence": 0.9797483333536823
+    },
+    {
+      "name": "Maximum audio and fast motion fit the integration envelope",
+      "passed": true,
+      "evidence": {
+        "min": [
+          -2.1939582121923853,
+          -2.089384470226291,
+          -1.8453815496167807
+        ],
+        "max": [
+          2.0284819763422686,
+          2.003118540087879,
+          1.9417908032511046
+        ]
+      }
+    },
+    {
+      "name": "Motion off freezes all transforms, instances and reactive materials",
+      "passed": true,
+      "evidence": "90 changing input frames; exact numeric state unchanged"
+    },
+    {
+      "name": "Palette changes the luminous/core materials and preserves neutral chrome",
+      "passed": true,
+      "evidence": "Ember palette applied"
+    },
+    {
+      "name": "Motion resumes after a full freeze",
+      "passed": true,
+      "evidence": "Numeric transforms and instances change"
+    }
+  ],
+  "passed": 6,
+  "limitations": "Geometry and update contract verified in actual local Three.js. Parent must assess rendered appearance in the integrated player."
+}

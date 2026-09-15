@@ -1,0 +1,50 @@
+{
+  "date": "2026-09-11T12:32:48.341Z",
+  "checks": [
+    {
+      "name": "Fresh reduced-motion default is still",
+      "pass": true
+    },
+    {
+      "name": "Fresh ordinary default animates",
+      "pass": true
+    },
+    {
+      "name": "Explicit on survives system preference true",
+      "pass": true
+    },
+    {
+      "name": "Explicit off survives system preference true",
+      "pass": true
+    },
+    {
+      "name": "Explicit on survives system preference false",
+      "pass": true
+    },
+    {
+      "name": "Explicit off survives system preference false",
+      "pass": true
+    },
+    {
+      "name": "Legacy computed false cannot become sticky after device setting changes",
+      "pass": true
+    },
+    {
+      "name": "Legacy computed true does not bypass device reduced motion",
+      "pass": true
+    },
+    {
+      "name": "Malformed preference defaults to system",
+      "pass": true
+    },
+    {
+      "name": "System-following preference disables when system changes",
+      "pass": true
+    },
+    {
+      "name": "System-following preference enables when system changes back",
+      "pass": true
+    }
+  ],
+  "pass": true
+}

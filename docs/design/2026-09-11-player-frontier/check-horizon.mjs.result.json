@@ -1,0 +1,27 @@
+{
+  "threeRevision": "185",
+  "checks": [
+    "Uses host Three namespace and bounded two-pass structure",
+    "All declared geometry bounds and vertex coordinates are finite",
+    "Nine world palettes mutate existing shared colors",
+    "Real audio values affect uniforms while moving",
+    "Exact material and pose freeze across changing audio while Motion is off",
+    "Quality and explicit intensity remain operable while frozen",
+    "Onset fronts are never synthesized during inactive playback",
+    "Time and input clamps prevent malformed feature explosions",
+    "Four bounded wave slots handle sustained transient inputs",
+    "All shader chunk names exist in the bundled Three revision",
+    "Every owned GPU resource disposes exactly once; update after disposal is inert",
+    "Ray model contains a central shadow, broad disk and secondary path crossings"
+  ],
+  "pass": 12,
+  "rayModel": {
+    "capturedCount": 3125,
+    "diskCount": 6693,
+    "multipleImages": 550
+  },
+  "limitations": [
+    "Shader not compiled by this Node test.",
+    "No GPU timing or rendered visual quality inferred. Parent browser review required."
+  ]
+}

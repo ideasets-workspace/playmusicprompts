@@ -1,0 +1,99 @@
+{
+  "schema": "berk.deep-research-completion/v1",
+  "topic": "app-surface-technology-runtime-auth-pricing",
+  "date": "2026-08-17",
+  "generated_utc": "2026-08-17T08:08:29.804518+00:00",
+  "decisions_served": [
+    "per-surface app technology (web / Android-iOS / Windows / macOS) under D-SSM-30 Google-only",
+    "runtime for the application tier: the platform-established AWS front door + WIF + Google Cloud engine pattern (owner corrected the earlier AWS-vs-GCP framing, 2026-08-17); Cloud Run evidence retained on file",
+    "auth provider (Identity Platform vs Firebase Auth)",
+    "pricing/credits model evidence pack (owner decision, never the agent's)"
+  ],
+  "artifacts": {
+    "main_report": {
+      "path": "docs/research/2026-08-17-app-surface-technology-runtime-auth-pricing.md",
+      "sha256": "347E9F2BE60D6BBFAA989DA89B0DE2CD9475E7CEBE6552594A857C16AFF8211C"
+    },
+    "slice_a_report": {
+      "path": "docs/research/2026-08-17-app-surface-technology-and-runtime-slice.md",
+      "sha256": "A298676FD89E48297BC02C75E2F71CCD086EE20FC4EB83284FB509FDA9603070"
+    },
+    "slice_b_report": {
+      "path": "docs/research/2026-08-17-app-auth-and-pricing-slice.md",
+      "sha256": "67BCB1865D81B25D3EFF5FEBEAF878AC8A3B9F472652F51E16653037CA51D9A1"
+    },
+    "preflight": {
+      "path": "docs/research/_runs/2026-08-17-app-surface-technology.preflight.json",
+      "sha256": "FA86A845E6853D62483BCE3C87751893ADDDA6829A55212BFD2EB6F0B920A9D3"
+    },
+    "index_rows": "docs/README.md (3 rows: main + slice A + slice B, verified this run)",
+    "source_captures": {
+      "count": 25,
+      "paths": [
+        "docs/research/_sources/2026-08-17-ai-video-tools-2026-surfaces-deep-dive.txt",
+        "docs/research/_sources/2026-08-17-aiarty-kling-pricing-teardown.txt",
+        "docs/research/_sources/2026-08-17-angular-v22-announcement-blog.txt",
+        "docs/research/_sources/2026-08-17-arxiv-2502-07736-menu-pricing-of-llms.txt",
+        "docs/research/_sources/2026-08-17-arxiv-2510-09859v4-token-is-all-you-price.txt",
+        "docs/research/_sources/2026-08-17-checkthat-capcut-pricing-teardown.txt",
+        "docs/research/_sources/2026-08-17-cloud-run-pricing-page.txt",
+        "docs/research/_sources/2026-08-17-cross-platform-desktop-2026-deep-dive.txt",
+        "docs/research/_sources/2026-08-17-eesel-pika-pricing-teardown.txt",
+        "docs/research/_sources/2026-08-17-flutter-changelog-stable.txt",
+        "docs/research/_sources/2026-08-17-flutter-issue-37673-video-player-windows.txt",
+        "docs/research/_sources/2026-08-17-google-identity-platform-blocking-functions.txt",
+        "docs/research/_sources/2026-08-17-google-identity-platform-pricing.txt",
+        "docs/research/_sources/2026-08-17-google-migrate-from-google-signin-authentication.txt",
+        "docs/research/_sources/2026-08-17-google-migrate-to-gis-authorization.txt",
+        "docs/research/_sources/2026-08-17-ios-web-push-integration-guide.txt",
+        "docs/research/_sources/2026-08-17-kling-payment-policy.txt",
+        "docs/research/_sources/2026-08-17-official-docs-inline-captures.md",
+        "docs/research/_sources/2026-08-17-paper-ijddt-2026-wasm-vs-js.txt",
+        "docs/research/_sources/2026-08-17-paper-venkatram-2020-assemblyscript-benchmarks.txt",
+        "docs/research/_sources/2026-08-17-pwa-on-ios-2026-guide-mobiloud.txt",
+        "docs/research/_sources/2026-08-17-saascrmreview-runway-pricing-teardown.txt",
+        "docs/research/_sources/2026-08-17-thesis-boyraz-taltech-2025-flutter-vs-native.txt",
+        "docs/research/_sources/2026-08-17-thesis-favaron-unipd-2025-energy-frameworks.txt",
+        "docs/research/_sources/2026-08-17-tse-wp1670-menu-pricing-of-llms.txt"
+      ]
+    }
+  },
+  "planned_vs_produced": {
+    "planned": 6,
+    "produced": 6,
+    "note": "slice B filename deviates from the scope plan name (2026-08-17-app-auth-and-pricing-slice.md, not ...-app-surface-auth-and-pricing.md); same artifact, deviation recorded in the main report's artifact index"
+  },
+  "floors": {
+    "authoritative_sources": 52,
+    "academic": 8,
+    "academic_full": 6,
+    "primary_full": 22,
+    "floor_20_5_met": true
+  },
+  "claims": {
+    "three_plus_verified": 22,
+    "single_source_official_disclosed": 17,
+    "unverified_flagged": 6,
+    "contradictions_preserved": [
+      "Luma mid-repricing",
+      "Kling first-party price page HTTP 446 (access failure, not absence)",
+      "Flutter jank studies vs Impeller-era claims (resolved operationally: prototype gate)",
+      "EU-iOS-push claim [UNVERIFIED]"
+    ]
+  },
+  "parent_reverification": [
+    "slice A report SHA-256 recomputed and MATCHED the subagent's stated hash; flutter/flutter#37673 Windows video_player absence re-checked against the raw capture (46 hits)",
+    "slice B report SHA-256 recomputed (67BCB1865D81B25D...); Identity Platform 50,000 / 0.0055 / 0.0025 figures re-checked against the raw pricing capture (7/3/1 hits)"
+  ],
+  "open_owner_inputs": [
+    "Windows video layer: in-house Media Foundation via dart:ffi vs open-source media_kit (Google-only tension, flutter/flutter#37673)"
+  ],
+  "withdrawn_inputs": [
+    "AWS-vs-GCP placement of the app backend: WITHDRAWN 2026-08-17 as the agent's own error after the owner's correction — the architecture is already established and measured on disk: AWS API Gateway + Lambda front door integrated to Google Cloud via Workload Identity Federation (15 variant config.py files carry WORKLOAD_IDENTITY, counted this session, including music_lyria / voice_vertex_tts / stt_vertex / audio_live_gemini; generate_music_hybrid_model delegates to the WIF-integrated Lyria and STT workers). The film contract's GCP-native clause binds job execution, not the API front door."
+  ],
+  "known_gaps": [
+    "no hands-on performance measurement (no build exists) — the frame-gated real-device prototype is the next verification step and the technology recommendation is conditional on it",
+    "not read this session: macOS notarized-DMG doc page, Apple web codec table, gRPC-web depth, first-party Descript/CapCut stack evidence (named in slice A with why they do not block the decisions)"
+  ],
+  "spend_usd": 0.0
+}

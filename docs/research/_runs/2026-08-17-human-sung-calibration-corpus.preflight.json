@@ -1,0 +1,23 @@
+{
+  "schema": "berk.deep-research-preflight/v1",
+  "status": "external_research_needed",
+  "date": "2026-08-17",
+  "topic": "human-sung-calibration-corpus-licence-clean",
+  "cwd": "c:\\Berk\\SsmContentAssetCreator",
+  "decision_served": "A9 per-language PER bar calibration input: which HUMAN sung-vocal corpora (Turkish first, English second) are lawful under (a) D-SSM-30 absolute Google-only + no-new-paid-service, (b) commercial product use, (c) no NC/ND licence class — so the intelligibility gate can be calibrated and the language registry can reach SINGING_PROVEN, which is the single blocker on vocal.mode=sung (measured this session: two $0 planner dry runs refused tr and en).",
+  "governing_files_read_this_session": [
+    {"path": ".claude/memory/DECISIONS.md", "note": "D-SSM-30 (no paid services, Makam corpus REFUSED, CharsiuG2P REFUSED) + D-SSM-31 (Berk verdict FAILED + presentation ban) read/appended this turn"},
+    {"path": "generate_music_hybrid_model/music_studio/bar_calibration.py", "note": "read in full this turn; the sampling unit is HUMAN sung recordings (>=5), logit + exact noncentral-t upper tolerance limit"},
+    {"path": "generate_music_hybrid_model/music_studio/data/language_registry.json", "note": "states legend read this turn: SINGING_PROVEN requires our-route generation + PER gate PASS on >=3 songs"},
+    {"path": "scripts/fetch_calibration_corpus.py", "note": "read this turn: existing fetch is licence-gated to the REFUSED CC BY-NC-ND Makam corpus; gate stays closed"}
+  ],
+  "local_conclusion": {
+    "finding_1": "The 15 complete take quads on disk (artifacts/deploy-2026-08-12/lyria-lyrics, counted 15/15 this turn) are OUR OWN ENGINE'S outputs. Calibrating the human-population tolerance bar on the engine's own generations would make the gate grade the engine against its own typical output — a control that cannot fail, forbidden by name (Supreme Law prohibition 6). They remain valid as GATE-EXERCISE material (the >=3 songs leg), never as the bar's calibration sample.",
+    "finding_2": "No human sung recording set exists anywhere in this repository (absence search this turn: artifacts/ scanned for audio with human/reference labels via the r0r1/stems/per-live report inventory; every audio artefact traces to Lyria requests).",
+    "finding_3": "The only corpus already researched (Turkish Makam Acapella, Zenodo 1287656) is CC BY-NC-ND 4.0 and REFUSED by D-SSM-30. The fetch gate stays closed permanently."
+  },
+  "external_research_needed": true,
+  "uncertainty": "Which human sung-vocal datasets with per-song lyrics/phoneme references exist for Turkish (and English) under commercial-compatible licences (CC BY, CC BY-SA, CC0, public domain, or Google-hosted with usable terms), reachable at $0, sufficient for >=5 recordings per language in the pop/ballad genre class the engine actually generates — OR the proof that none exists, which routes A9 to the owner's commissioned-recordings alternative with a concrete brief.",
+  "scope_plan": "docs/research/2026-08-17-human-sung-calibration-corpus.md (R3 section at its head)",
+  "read_back": true
+}

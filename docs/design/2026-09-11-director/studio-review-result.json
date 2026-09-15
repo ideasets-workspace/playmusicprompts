@@ -1,0 +1,46 @@
+{
+  "scope": "Installed source controller and camera invariants; not actual DOM or WebGL verification",
+  "files": {
+    "player-three-visual-studio.js": "3a594a2e2f90c3bec127683dbf1d0cbcdb654d1d135aa830f4a7ddde5f29f3f8",
+    "player-three-scene.js": "29549923ac59250ab6981f31b67cfcc50667b79bcd943538190b41fa6d64f67f"
+  },
+  "passed": 9,
+  "checks": [
+    {
+      "name": "Original-equivalent custom look stays explicitly selected and can be deleted",
+      "pass": true
+    },
+    {
+      "name": "Two identical custom looks remain independently selectable and deletable",
+      "pass": true
+    },
+    {
+      "name": "Consecutive failed setting changes remain live and recover alongside latest other-tab fields",
+      "pass": true
+    },
+    {
+      "name": "Failed custom save creates no ghost saved look and leaves live temporary settings intact",
+      "pass": true
+    },
+    {
+      "name": "Compare is temporary and reset selects exact Original without deleting custom looks",
+      "pass": true
+    },
+    {
+      "name": "Prism framing covers both endpoints while retaining its safe camera position and exact default",
+      "pass": true
+    },
+    {
+      "name": "Reflection strength multiplies radiance and defaults to1 instead of recoloring the reflector",
+      "pass": true
+    },
+    {
+      "name": "Transient impact is explicitly unavailable for Record and orbit speed for composed views",
+      "pass": true
+    },
+    {
+      "name": "Actual Studio edits notify manual bypass and close temporary Compare before changing saved settings",
+      "pass": true
+    }
+  ]
+}

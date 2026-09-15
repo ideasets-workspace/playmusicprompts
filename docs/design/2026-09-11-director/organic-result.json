@@ -1,0 +1,26 @@
+{
+  "passed": 16,
+  "checks": [
+    "Neural: missing look and explicit defaults preserve original animation, geometry, palette and view",
+    "Neural: density changes actual draw count, respects low quality, and restores defaults",
+    "Neural: static tuning and pulse suppression work while animated uniforms stay frozen",
+    "Neural: no invented or zero-gain fronts and bounded scaled time",
+    "Neural: full pose freeze and idempotent disposal",
+    "Horizon: missing look and explicit defaults preserve original animation, geometry, palette and view",
+    "Horizon: density changes actual draw count, respects low quality, and restores defaults",
+    "Horizon: static tuning and pulse suppression work while animated uniforms stay frozen",
+    "Horizon: no invented or zero-gain fronts and bounded scaled time",
+    "Horizon: full pose freeze and idempotent disposal",
+    "Neural: width scales joined fibers and cells together, preserving host placement and dust",
+    "Neural: sway and trail extremes reach shader and retained audio pose; malformed settings use safe defaults",
+    "Neural: CPU culling bounds cover the full sound deformation at maximum sway",
+    "Horizon: flow stops only disk drift, changes speed continuously, and does not freeze other clocks",
+    "Horizon: gravity, detail, tilt and glow reach shared materials with safe bounds and unchanged low step budget",
+    "Horizon: extreme gravity/tilt combinations retain a finite, visible disk and central dark capture at 32/56 steps"
+  ],
+  "threeRevision": "185",
+  "limitations": [
+    "Node checks use actual Three geometry, uniforms and exact CPU ray equations. No shader compilation or pixel-quality claim.",
+    "Parent must integrate modules and inspect actual rendered defaults, changed controls and live preview."
+  ]
+}

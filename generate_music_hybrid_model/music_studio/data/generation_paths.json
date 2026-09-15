@@ -1,0 +1,85 @@
+{
+ "$schema_id": "berk.music-studio.generation-paths/v1",
+ "purpose": "Research item A7 — 'route the instrumental BED and the VOCAL separately, then mix'. This file is the EVIDENCE LAYER for which layers can be generated as separate paths, which cannot, and why. music_studio/routing.py reads it; it holds no capability literal of its own.",
+ "authority": "docs/research/2026-08-14-cross-lingual-singing-voice-synthesis-frontier.md item A7 · docs/music-studio-single-endpoint-architecture.md 2c.3 · .claude/rules/movie-maker-unit-mandate.md CLAUSE 15 · .claude/memory/DECISIONS.md D-SSM-24",
+ "the_constraint_chain_that_shapes_this_file": [
+  "A7 as WRITTEN gives the vocal note-level control, which in the research meant SoulX-Singer.",
+  "D-SSM-24 (his order 2026-08-14, 'herşey kesinlikle vertex ve google ın kendi servisleir ile olmalı') removes SoulX-Singer as a third-party MODEL wherever it runs. Architecture 2c.3 states the consequence plainly: 'note-level vocal timing has NO Google path today, and that is stated, not hidden.'",
+  "The only Google sung surface is lyria-3-pro-preview, and it returns a MIXED song — vocal together with its own accompaniment. There is no Google vocal-only generator.",
+  "Obtaining a vocal-only signal therefore requires SEPARATION of that mix. MANDATE CLAUSE 15, verbatim: 'A separated stem is analysis-grade and may never be shipped.'",
+  "CONCLUSION, derived and not chosen: layering a separated vocal over an independently generated bed would SHIP a separated stem and is refused. The lawful two-path form uses layers that are each ENGINE-GENERATED WHOLE."
+ ],
+ "delivery_class_rule": {
+  "ENGINE_GENERATED": "SHIPPABLE — the engine produced this audio as a whole signal.",
+  "SEPARATED_STEM": "ANALYSIS_ONLY — CLAUSE 15. Lawful for measurement (the A8 intelligibility gate reads the separated vocal), never for delivery.",
+  "why_derived_not_settable": "A field a caller can set to SHIPPABLE would let a stem be shipped by writing one word. The class is computed from the origin so the guard cannot be bypassed by data."
+ },
+ "layers": [
+  {
+   "role": "MUSIC_BED",
+   "available": true,
+   "origin": "ENGINE_GENERATED",
+   "engine_candidates": ["lyria-3-pro-preview", "lyria-002"],
+   "control_surface": "the full typed stack stays authoritative: structure -> [mm:ss] section prose, tempo_bpm, key, time_signature, instruments, mood_orbit, energy_curve",
+   "evidence": "A7: 'the existing typed controls stay authoritative for the bed'. Generation-proven on this project: the intro package produced its score bed on Lyria (docs/moviemaker/INTRO_ENGINE.md).",
+   "measured_caveat": "duration is NOT requestable on lyria-002 — measured 139.26 / 146.73 / 159.63 s unasked, which is why duration.on_miss exists."
+  },
+  {
+   "role": "FX_BED",
+   "available": true,
+   "origin": "ENGINE_GENERATED",
+   "engine_candidates": ["lyria-3-pro-preview", "lyria-002"],
+   "control_surface": "its own prompt, separate from the music bed's — this is what makes it a second PATH rather than a tag on the first",
+   "evidence": "Architecture 2c.3: 'FX/Ambience stem GENERATION moves from the ElevenLabs/fal SFX routes (already credit-ineligible) to Lyria prompt-directed beds — the intro package already produced its score bed on Lyria, so this path is generation-proven in kind.' The stems parameter already exposes fx and ambience.",
+   "measured_caveat": "'generation-proven in kind' is NOT the same as generation-proven for FX specifically. No FX-only Lyria take has been measured on this project, so this layer is available in PLAN and UNMEASURED in delivery until one is run."
+  },
+  {
+   "role": "AMBIENCE_BED",
+   "available": true,
+   "origin": "ENGINE_GENERATED",
+   "engine_candidates": ["lyria-3-pro-preview", "lyria-002"],
+   "control_surface": "its own prompt; longer, flatter energy than the FX bed",
+   "evidence": "same clause as FX_BED; the stems parameter lists ambience as its own stem.",
+   "measured_caveat": "same as FX_BED — unmeasured for this specific use."
+  },
+  {
+   "role": "LEAD_VOCAL",
+   "available": false,
+   "origin": "SEPARATED_STEM",
+   "engine_candidates": [],
+   "refusal": {
+    "reason": "No Google service generates a vocal-only signal. The only Google sung surface (lyria-3-pro-preview) returns a MIXED song, so an isolated vocal can only be obtained by separating that mix — and CLAUSE 15 forbids shipping a separated stem.",
+    "law": "MANDATE CLAUSE 15 ('A separated stem is analysis-grade and may never be shipped') + D-SSM-24 (Google-only, which removed SoulX-Singer)",
+    "what_is_still_lawful": "The sung take is delivered AS A WHOLE by lyria-3-pro-preview (single-path), and its separated vocal is used for MEASUREMENT only — which is exactly what the A8 intelligibility gate needs.",
+    "what_would_unblock_it": [
+     "a Google/Vertex surface that generates a vocal-only take (none known; would need a capability probe, and a printed enum is never capability evidence — MANDATE CLAUSE 6)",
+     "his explicit suspension of CLAUSE 15 for this case, which is his decision and not mine"
+    ],
+    "not_a_workaround": "Turning the TTS route into the delivered vocal was the OLD fallback and the research itself calls it a downgrade ('upgrades it from \"align TTS onto a bed\"'). It is not offered here as a substitute."
+   }
+  },
+  {
+   "role": "STS_VOCAL",
+   "available": false,
+   "origin": "ENGINE_GENERATED",
+   "engine_candidates": [],
+   "refusal": {
+    "reason": "Research item A6: the fallback voice-identity path is speech prompt -> SPEECH-TO-SINGING style transfer, with voice_vertex_tts (Turkish, generation-proven, on disk at voice_vertex_tts/lambda_function.py - verified 2026-08-16) as the PROMPT source, never the final vocal. The PROMPT half is Google and lawful. The STS STAGE half has NO Google path: the research's measured STS engines (TCSinger 2: FFE 0.24 / Cos 0.89 / MOS-S 3.96; SVPT: LSD 4.750, language-agnostic) are third-party MODELS - exactly the class D-SSM-24 removed when it superseded A5's SoulX-Singer - and no Vertex/Google speech-to-singing surface is known.",
+    "law": "D-SSM-24 ('hersey kesinlikle vertex ve google in kendi servisleir ile olmali') - the same ground as A5 SUPERSEDED and the Phonsa/STARS blocks in data/aligners.json",
+    "what_is_still_lawful": "voice_vertex_tts remains live for SPOKEN deliverables, and the registry's speech axis tracks it (SPEECH_PROVEN is its unlock path). Nothing about A6's prompt half is wasted: the moment an STS stage exists, the prompt source is already generation-proven.",
+    "what_would_unblock_it": [
+     "a Google/Vertex speech-to-singing surface (none known; a printed enum would not count - MANDATE CLAUSE 6 requires a completed generation)",
+     "Berk explicitly widening D-SSM-24 to admit a third-party STS model - his decision, the same open question already queued for CharsiuG2P (TR-G2P3)"
+    ],
+    "not_a_workaround": "Aligning raw TTS onto a bed as the delivered vocal is NOT offered as a substitute: the research itself calls A6 an UPGRADE from exactly that ('upgrades it from align TTS onto a bed to a 2026-measured capability'), so shipping the un-styled TTS would be the downgrade class."
+   }
+  }
+ ],
+ "mix_stage": {
+  "id": "stage5b-mix",
+  "position": "between Stage 4 (measure) and Stage 5 (conform), because conform trims the ASSEMBLED programme",
+  "rule": "every source layer must be SHIPPABLE. A MixPlan containing any ANALYSIS_ONLY layer is refused at plan time, before a single billable call.",
+  "reuses": "music_studio/mastering.py for loudness and true-peak; the mix stage never re-implements normalisation (single source of truth).",
+  "unmeasured": "no multi-layer mix has been rendered on this project yet. The plan is buildable and control-testable at $0; the DELIVERED mix is unmeasured and is labelled so."
+ }
+}

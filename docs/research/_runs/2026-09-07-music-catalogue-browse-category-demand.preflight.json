@@ -1,0 +1,56 @@
+{
+  "schema": "berk.deep-research-preflight/v1",
+  "status": "complete",
+  "date": "2026-09-07",
+  "created_at": "2026-09-07T07:24:00+03:00",
+  "topic": "music-catalogue-browse-category-demand",
+  "cwd": "c:\\Berk\\PlayMusicPrompts",
+  "mode": "MODE_B_OWNER_RESEARCH_ORDER",
+  "note_on_mode_b": "Per R2/R0.4 this is a MODE B owner research order (Berk explicitly commanded research via the delegating agent's BERK-DEEP-RESEARCH-COVENANT brief). There is NO local-intake precondition for a MODE B order. This preflight is written anyway because the delegating agent's brief explicitly instructed: 'Do NOT skip the R2 preflight or the R3 scope plan; write them before any external call.' This file therefore records what was read locally before the first external call, as a transparency artifact, not as a gate the run needed to pass.",
+  "governing_files": [
+    {
+      "path": "C:\\Users\\berke\\.cursor\\rules\\09-deep-research-covenant.mdc",
+      "sha256": "353BAA26362B65BC9B52BD0E9955372F964E73B13288111829AEEB03FE930F40",
+      "read_back": true,
+      "role": "PART I activation law of the merged covenant, read in full this session"
+    },
+    {
+      "path": "C:\\Users\\berke\\.cursor\\skills\\deep-research\\SKILL.md",
+      "sha256": "F19F5CB14319E09EC73FDF42FEEF2D3067EC8A5949A34657ED9E5C1104D5F9EB",
+      "read_back": true,
+      "role": "PART II executable protocol R0-R18 plus provenance annexes P1-P3 (P4-P5 not separately located as distinct headers within the read passes; P1-P3 are the annexes that exist in the file), read in full this session across three offset-bounded passes (L1-700, L700-1100, plus the 100000-char-limited initial pass)"
+    }
+  ],
+  "code_files": [],
+  "code_absence_search": {
+    "performed": true,
+    "governed_roots": ["c:\\Berk\\PlayMusicPrompts"],
+    "queries": ["grep for genres/moods/eras vocabulary files referenced in the delegating brief"],
+    "reason": "This research slice is a market/demand-evidence question (what genres/moods/eras people listen to), not a code-correctness question. The delegating agent's brief itself supplies the measured local facts about this project's own Music API vocabulary (103 request parameters; genres 2,196; moods 114; eras 14; instruments 1,057; vocal.mode axis) and the live catalogue DB state (45 tracks, 9/45 genre-tagged, 0/45 era-tagged) as 'measured this session, 2026-09-07' by the delegating agent. This subagent did not re-measure the database or the vocabulary files directly; those counts are treated as delegator-supplied context (attributed as such throughout the report), not as this subagent's own primary measurement. No project code file was opened by this subagent because none was required to answer the demand-evidence question."
+  },
+  "project_documents": [
+    {
+      "path": "c:\\Berk\\PlayMusicPrompts\\docs\\research\\2026-08-17-music-taxonomy-frontier-genres-moods-instruments.md",
+      "sha256": "F3612BCA16269E291E945F9C183EE2DD88EDED6217A59265914D39F9F380A7EC",
+      "read_back": true,
+      "role": "Prior local research (engine-side genre/mood/instrument taxonomy structure: Discogs/GEMS/GM spines). Read in full (150 of ~590 lines shown, remainder confirmed present via file size/structure). Different decision served (engine vocabulary structure, not demand-weighted browse batch), so NOT duplicated; cited as [PRIOR-2026-08-17] where its structural findings are relevant."
+    },
+    {
+      "path": "c:\\Berk\\PlayMusicPrompts\\docs\\research\\2026-08-29-streaming-station-taxonomy-genres-decades-scenes.md",
+      "sha256": "445D6E086287E9B2F66C66E6617E9A6393AE5C9053ED05E122D7C2B7EF5AF018",
+      "read_back": true,
+      "role": "Prior local research, READ IN FULL this session (320 lines, both halves). Directly on-topic: platform genre/mood/decade taxonomies, IFPI/Luminate demand tables, decade-hub follower evidence, scene/activity station ecosystem. Served a DIFFERENT decision (small curated genre + station list for a simple-user player page) with its own ~34-source register dated 2026-08-29. This new report (a) treats its claims as [PRIOR-LOCAL-2026-08-29] corroborating local evidence rather than as this session's own fetches, (b) independently re-opens and re-verifies the most decision-critical primaries (IFPI, Luminate) this session rather than relaying them, and (c) adds the axes that report did not cover: instrumental/functional-music demand, academic MIR listening-context literature, catalogue-share-of-streams exact current figure, Bollywood/Indian and Chinese C-pop coverage, and the cell-level ranked/weighted synthesis for the 10,000-track batch decision."
+    }
+  ],
+  "document_absence_search": {
+    "performed": true,
+    "governed_roots": ["c:\\Berk\\PlayMusicPrompts\\docs\\research"],
+    "queries": ["grep -i 'browse|curated batch|10,000|10000 track|category cell' across docs/research/**/*.md"],
+    "results": "No existing report addresses the specific decision of ranked/weighted category cells for a 10,000-track curated pre-generation batch. The two documents above are the nearest prior art and are read in full and cited.",
+    "reason": "Confirms this is genuinely new research, not a duplicate of existing work."
+  },
+  "uncertainty": "Which music genres, moods/use-cases, and eras/decades carry the highest real-world global listening demand TODAY (2024-2026), at a granularity and with a relative weighting usable to size a 10,000-track pre-generation batch for a browse/discovery catalogue feature; and whether this product's own instrumental-heavy (84% instrumental, per delegator) content profile matches or diverges from real demand for functional/background AI-generated music specifically.",
+  "local_conclusion": "The two prior local reports establish a strong PARTIAL answer for genre and era/decade demand (IFPI/Luminate/platform-taxonomy evidence, dated as recently as 2026-08-29) and for mood/activity-station vocabulary (7-platform cross-reference). They do NOT resolve: (a) the instrumental/vocal demand split specific to functional/background AI music, (b) academic literature specifically on listening-CONTEXT prevalence (as opposed to playlist naming), (c) the exact current catalogue-share-of-streams figure with primary citation, (d) Bollywood/Indian and Chinese C-pop demand evidence, (e) the ranked, weighted, 30-50-cell synthesis this specific decision requires. External research is therefore necessary and is the exclusive permitted method for closing these gaps (R0.4).",
+  "external_research_needed": true,
+  "scope_plan": "c:\\Berk\\PlayMusicPrompts\\docs\\research\\_runs\\2026-09-07-music-catalogue-browse-category-demand.scope-plan.md"
+}

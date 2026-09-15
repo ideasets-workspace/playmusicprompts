@@ -1,0 +1,75 @@
+{
+  "generatedAt": "2026-09-09T08:38:41.640Z",
+  "report": [
+    {
+      "width": 1440,
+      "station": 0,
+      "activeStation": "0",
+      "screenshot": "verification/world-s0-1440.png"
+    },
+    {
+      "width": 1440,
+      "station": 1,
+      "activeStation": "1",
+      "screenshot": "verification/world-s1-1440.png"
+    },
+    {
+      "width": 1440,
+      "station": 2,
+      "activeStation": "2",
+      "screenshot": "verification/world-s2-1440.png"
+    },
+    {
+      "width": 1440,
+      "station": 3,
+      "activeStation": "3",
+      "screenshot": "verification/world-s3-1440.png"
+    },
+    {
+      "width": 1440,
+      "station": 4,
+      "activeStation": "4",
+      "screenshot": "verification/world-s4-1440.png"
+    },
+    {
+      "width": 1440,
+      "consoleErrors": [],
+      "webgl": "ok"
+    },
+    {
+      "width": 375,
+      "station": 0,
+      "activeStation": "0",
+      "screenshot": "verification/world-s0-375.png"
+    },
+    {
+      "width": 375,
+      "station": 1,
+      "activeStation": "1",
+      "screenshot": "verification/world-s1-375.png"
+    },
+    {
+      "width": 375,
+      "station": 2,
+      "activeStation": "2",
+      "screenshot": "verification/world-s2-375.png"
+    },
+    {
+      "width": 375,
+      "station": 3,
+      "activeStation": "3",
+      "screenshot": "verification/world-s3-375.png"
+    },
+    {
+      "width": 375,
+      "station": 4,
+      "activeStation": "4",
+      "screenshot": "verification/world-s4-375.png"
+    },
+    {
+      "width": 375,
+      "consoleErrors": [],
+      "webgl": "ok"
+    }
+  ]
+}

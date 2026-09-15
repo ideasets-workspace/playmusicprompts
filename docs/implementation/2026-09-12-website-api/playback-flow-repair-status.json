@@ -1,0 +1,81 @@
+{
+  "checkedAt": "2026-09-12T19:30:19.424Z",
+  "application": "http://127.0.0.1:4177/index.html",
+  "serverPid": 45044,
+  "overallComplete": false,
+  "actualVerification": {
+    "generatedPlayback": "memory/lanes/website-api-20260912/evidence/PLAYBACK-01/current.json",
+    "enhance": {
+      "id": "4f5a8f3f-8c6a-4967-abcc-46b21d3ee336",
+      "status": "complete",
+      "selectedContext": [
+        "electronic",
+        "peaceful",
+        "synthesizer",
+        "1980s",
+        "female",
+        "en",
+        "30 seconds"
+      ],
+      "browserApply": true,
+      "browserUndo": true,
+      "restoredPrompt": "make a music of happiness",
+      "restoredSelectedControls": 6,
+      "musicJobsBefore": 4,
+      "musicJobsAfter": 4,
+      "earlierRejectedOperation": "4cbed0ab-d16b-4c6e-a1c2-e52ee053d8c8",
+      "rejectedResultNeverApplied": true
+    },
+    "lyrics": {
+      "mainComposerVisible": true,
+      "customTextareaHeight": 174,
+      "measuredViewportWidth": 851,
+      "roomViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "draftModeRestored": "omitted",
+      "mobileMain390Verified": false
+    },
+    "listening": {
+      "mainPausedToggle": true,
+      "roomPausedToggle": true,
+      "newSessionsAfterPausedToggle": 0,
+      "creationJobsUnchanged": 4,
+      "roomActualOwnedPlayback": true,
+      "realAdaptiveGenerationTriggered": false
+    }
+  },
+  "localChecks": {
+    "testsPassed": 476,
+    "testsFailed": 0,
+    "syntaxModules": 112,
+    "connectedPages": 6,
+    "log": "website/.state/full-verification.log",
+    "protectedTrees": {
+      "files": 717,
+      "changed": 0,
+      "evidence": "docs/implementation/2026-09-12-website-api/protected-tree-verification.json"
+    }
+  },
+  "implementedButNotLiveMusicProven": [
+    "Initial website Create uses one native variations3 job when output fields omitted; explicit package/count preserved.",
+    "Initial original intent stored atomically separately from actual wire.",
+    "Actual delivered siblings enter player queue and continuous session reuses them.",
+    "Same durable common controller drives main and room, with prepared dismissal receipts and stopped completion events.",
+    "All100-field shared serializer used by main and room fallback."
+  ],
+  "remaining": [
+    "Native3 actual delivery and subsequent adaptive live sequence not run: two intentional billable music smoke requests already exhausted.",
+    "Three deliberately distinct musical directions are not established by native same-prompt variations; exact proposed adaptation coefficients remain unapproved.",
+    "Full audio/MIDI reference import contract and real configured inbound webhook still missing.",
+    "Complete remaining owner-safe result interpretation and opted-in completed originality live proof remain open.",
+    "Advertising/account/device deployment scope remains separate and incomplete."
+  ],
+  "scopeClaims": {
+    "fullAPI": false,
+    "fullProduct": false,
+    "actualThreeDistinctMusic": false,
+    "productionDeployment": false
+  }
+}

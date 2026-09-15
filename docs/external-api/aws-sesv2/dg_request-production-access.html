@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+    <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Request production access (Moving out of the Amazon SES sandbox) - Amazon Simple Email Service</title><meta name="viewport" content="width=device-width,initial-scale=1" /><meta name="assets_root" content="/assets" /><meta name="target_state" content="request-production-access" /><meta name="default_state" content="request-production-access" /><link rel="icon" type="image/ico" href="/assets/images/favicon.ico" /><link rel="shortcut icon" type="image/ico" href="/assets/images/favicon.ico" /><link rel="canonical" href="https://docs.aws.amazon.com/ses/latest/dg/request-production-access.html" /><meta name="description" content="Request production access by moving your account out of the Amazon SES sandbox and raise your sending quotas." /><meta name="deployment_region" content="IAD" /><meta name="product" content="Amazon Simple Email Service" /><meta name="guide" content="Developer Guide" /><meta name="abstract" content="Create a highly-scalable and flexible email sending and receiving platform using Amazon SES. This Developer Guide provides information and procedures for configuring your Amazon SES account to send and receive email." /><meta name="guide-locale" content="en_us" /><meta name="tocs" content="toc-contents.json" /><link rel="canonical" href="https://docs.aws.amazon.com/ses/latest/dg/request-production-access.html" /><link rel="alternate" href="https://docs.aws.amazon.com/id_id/ses/latest/dg/request-production-access.html" hreflang="id-id" /><link rel="alternate" href="https://docs.aws.amazon.com/id_id/ses/latest/dg/request-production-access.html" hreflang="id" /><link rel="alternate" href="https://docs.aws.amazon.com/de_de/ses/latest/dg/request-production-access.html" hreflang="de-de" /><link rel="alternate" href="https://docs.aws.amazon.com/de_de/ses/latest/dg/request-production-access.html" hreflang="de" /><link rel="alternate" href="https://docs.aws.amazon.com/ses/latest/dg/request-production-access.html" hreflang="en-us" /><link rel="alternate" href="https://docs.aws.amazon.com/ses/latest/dg/request-production-access.html" hreflang="en" /><link rel="alternate" href="https://docs.aws.amazon.com/es_es/ses/latest/dg/request-production-access.html" hreflang="es-es" /><link rel="alternate" href="https://docs.aws.amazon.com/es_es/ses/latest/dg/request-production-access.html" hreflang="es" /><link rel="alternate" href="https://docs.aws.amazon.com/fr_fr/ses/latest/dg/request-production-access.html" hreflang="fr-fr" /><link rel="alternate" href="https://docs.aws.amazon.com/fr_fr/ses/latest/dg/request-production-access.html" hreflang="fr" /><link rel="alternate" href="https://docs.aws.amazon.com/it_it/ses/latest/dg/request-production-access.html" hreflang="it-it" /><link rel="alternate" href="https://docs.aws.amazon.com/it_it/ses/latest/dg/request-production-access.html" hreflang="it" /><link rel="alternate" href="https://docs.aws.amazon.com/ja_jp/ses/latest/dg/request-production-access.html" hreflang="ja-jp" /><link rel="alternate" href="https://docs.aws.amazon.com/ja_jp/ses/latest/dg/request-production-access.html" hreflang="ja" /><link rel="alternate" href="https://docs.aws.amazon.com/ko_kr/ses/latest/dg/request-production-access.html" hreflang="ko-kr" /><link rel="alternate" href="https://docs.aws.amazon.com/ko_kr/ses/latest/dg/request-production-access.html" hreflang="ko" /><link rel="alternate" href="https://docs.aws.amazon.com/pt_br/ses/latest/dg/request-production-access.html" hreflang="pt-br" /><link rel="alternate" href="https://docs.aws.amazon.com/pt_br/ses/latest/dg/request-production-access.html" hreflang="pt" /><link rel="alternate" href="https://docs.aws.amazon.com/zh_cn/ses/latest/dg/request-production-access.html" hreflang="zh-cn" /><link rel="alternate" href="https://docs.aws.amazon.com/zh_tw/ses/latest/dg/request-production-access.html" hreflang="zh-tw" /><link rel="alternate" href="https://docs.aws.amazon.com/ses/latest/dg/request-production-access.html" hreflang="x-default" /><meta name="feedback-item" content="SES" /><meta name="this_doc_product" content="Amazon Simple Email Service" /><meta name="this_doc_guide" content="Developer Guide" /><head xmlns="http://www.w3.org/1999/xhtml"> <script defer="" src="/assets/r/awsdocs-doc-page.2.0.0.js"></script><link href="/assets/r/awsdocs-doc-page.2.0.0.css" rel="stylesheet"/></head>
+<script defer="" id="awsc-panorama-bundle" type="text/javascript" src="https://prod.pa.cdn.uis.awsstatic.com/panorama-nav-init.js" data-config="{'appEntity':'aws-documentation','region':'us-east-1','service':'ses'}"></script><meta id="panorama-serviceSubSection" value="Developer Guide" /><meta id="panorama-serviceConsolePage" value="Request production access (Moving out of the Amazon SES sandbox)" /></head><body class="awsdocs awsui"><div class="awsdocs-container"><p><a href="request-production-access.md">View a markdown version of this page</a></p><awsdocs-header></awsdocs-header><awsui-app-layout id="app-layout" class="awsui-util-no-gutters" ng-controller="ContentController as $ctrl" header-selector="awsdocs-header" navigation-hide="false" navigation-width="$ctrl.navWidth" navigation-open="$ctrl.navOpen" navigation-change="$ctrl.onNavChange($event)" tools-hide="$ctrl.hideTools" tools-width="$ctrl.toolsWidth" tools-open="$ctrl.toolsOpen" tools-change="$ctrl.onToolsChange($event)"><div id="guide-toc" dom-region="navigation"><awsdocs-toc></awsdocs-toc></div><div id="main-column" dom-region="content" tabindex="-1"><awsdocs-view class="awsdocs-view"><div id="awsdocs-content"><head><title>Request production access (Moving out of the Amazon SES sandbox) - Amazon Simple Email Service</title><meta name="pdf" content="/pdfs/ses/latest/dg/ses-dg.pdf#request-production-access" /><meta name="forums" content="https://repost.aws/tags/TAAR3LByLsRUCXpQk5biG7FQ" /><meta name="feedback" content="https://docs.aws.amazon.com/forms/aws-doc-feedback?hidden_service_name=SES&amp;topic_url=https://docs.aws.amazon.com/en_us/ses/latest/dg/request-production-access.html" /><meta name="feedback-yes" content="feedbackyes.html?topic_url=https://docs.aws.amazon.com/en_us/ses/latest/dg/request-production-access.html" /><meta name="feedback-no" content="feedbackno.html?topic_url=https://docs.aws.amazon.com/en_us/ses/latest/dg/request-production-access.html" /><meta name="keywords" content="SES,Amazon SES,SES v2,Amazon Simple Email Service,email" /><link rel="alternate" type="text/markdown" href="request-production-access.md" title="Markdown version" /><script type="application/ld+json">
+{
+    "@context" : "https://schema.org",
+    "@type" : "BreadcrumbList",
+    "itemListElement" : [
+      {
+        "@type" : "ListItem",
+        "position" : 1,
+        "name" : "AWS",
+        "item" : "https://aws.amazon.com"
+      },
+      {
+        "@type" : "ListItem",
+        "position" : 2,
+        "name" : "Amazon Simple Email Service",
+        "item" : "https://docs.aws.amazon.com/ses/index.html"
+      },
+      {
+        "@type" : "ListItem",
+        "position" : 3,
+        "name" : "Developer Guide",
+        "item" : "https://docs.aws.amazon.com/ses/latest/dg"
+      },
+      {
+        "@type" : "ListItem",
+        "position" : 4,
+        "name" : "Getting started with Amazon Simple Email Service",
+        "item" : "https://docs.aws.amazon.com/ses/latest/dg/getting-started.html"
+      },
+      {
+        "@type" : "ListItem",
+        "position" : 5,
+        "name" : "Request production access (Moving out of the Amazon SES sandbox)",
+        "item" : "https://docs.aws.amazon.com/ses/latest/dg/getting-started.html"
+      }
+    ]
+}
+</script></head><body><div id="main"><div style="display: none"><a href="/pdfs/ses/latest/dg/ses-dg.pdf#request-production-access" target="_blank" rel="noopener noreferrer" title="Open PDF"></a></div><div id="breadcrumbs" class="breadcrumb"><a href="/index.html">Documentation</a><a href="/ses/index.html">Amazon Simple Email Service</a><a href="Welcome.html">Developer Guide</a></div><div id="main-content" class="awsui-util-container"><div id="main-col-body"><awsdocs-language-banner data-service="$ctrl.pageService"></awsdocs-language-banner><h1 class="topictitle" id="request-production-access">Request production access (Moving out of the Amazon SES sandbox)</h1><div class="awsdocs-page-header-container"><awsdocs-page-header></awsdocs-page-header><awsdocs-filter-selector id="awsdocs-filter-selector"></awsdocs-filter-selector></div><p>To help prevent fraud and abuse, and to help protect your reputation as a sender, we apply
+        certain restrictions to new Amazon SES accounts. </p><p>We place all new accounts in the Amazon SES <em>sandbox</em>. The sandbox status
+        for your account is unique per each AWS Region. While your account is in the sandbox, you
+        can use all of the features of Amazon SES. However, when your account is in the sandbox, we apply
+        the following restrictions to your account:</p><div class="itemizedlist">
+         
+        
+         
+         
+         
+         
+    <ul class="itemizedlist"><li class="listitem">
+            <p>You can only send mail <b>to</b> verified email
+                addresses and domains, or to <a href="./send-an-email-from-console.html#send-email-simulator">the Amazon SES mailbox
+                    simulator</a>.</p>
+        </li><li class="listitem">
+            <p>You can send a maximum of 200 messages per 24-hour period.</p>
+        </li><li class="listitem">
+            <p>You can send a maximum of 1 message per second.</p>
+        </li><li class="listitem">
+            <p>For sending authorization, neither you nor the delegate sender can send email to
+                non-verified email addresses.</p>
+        </li><li class="listitem">
+            <p>For account-level suppression, bulk actions and SES API calls related to
+                suppression list management are disabled.</p>
+        </li></ul></div><p>When your account has moved out of the sandbox and into production, you can send email to
+        any recipient, regardless of whether the recipient's address or domain is verified. However,
+        you still have to verify all identities that you use as "From", "Source", "Sender", or
+        "Return-Path" addresses.</p><p>Complete the procedures in this section to request that your account be removed from the
+        sandbox and placed into production.</p><div class="awsdocs-note awsdocs-tip"><div class="awsdocs-note-title"><awsui-icon name="status-info" variant="link"></awsui-icon><h6>Tip</h6></div><div class="awsdocs-note-text"><div class="itemizedlist">
+             
+             
+        <ul class="itemizedlist"><li class="listitem">
+                <p>If you’re a new customer and haven’t created any identities yet, then the
+                    SES account set up wizard in the console will be enabled to help you get
+                    started. See <a href="./setting-up.html#quick-start-verify-email-addresses">Set up your SES
+                        account</a> for instructions on how to access the wizard.</p>
+            </li><li class="listitem">
+                <p>If you’ve already created one or more identities, you’ll see the <b>Get
+                        set up</b> page instead of the account set up wizard.</p>
+                <div class="itemizedlist">
+                     
+                <ul class="itemizedlist"><li class="listitem">
+                        <p>If one of your identities is a verified domain, you’ll be able to
+                            request production access directly from the <b>Get set
+                                up</b> page as well. This is because verifying your domain
+                            with SES before requesting production access is a best practice
+                            that helps to get your production access request approved faster so you
+                            can start sending email right away. </p>
+                    </li></ul></div>
+            </li></ul></div></div></div><div class="awsdocs-note"><div class="awsdocs-note-title"><awsui-icon name="status-info" variant="link"></awsui-icon><h6>Note</h6></div><div class="awsdocs-note-text"><div class="itemizedlist">
+             
+        <ul class="itemizedlist"><li class="listitem">
+                <p>If you're using Amazon SES to send email from an Amazon EC2 instance, you might also
+                    need to request that the throttle be removed from port 25 on your Amazon EC2
+                    instance. For more information, see <a href="https://aws.amazon.com/premiumsupport/knowledge-center/ec2-port-25-throttle/" rel="noopener noreferrer" target="_blank"><span>How do I remove the throttle on port 25 from my EC2 instance?</span><awsui-icon class="awsdocs-link-icon" name="external"></awsui-icon></a> in
+                    the AWS Knowledge Center.</p>
+            </li></ul></div></div></div><div class="procedure"><h6>To request production access (remove your account from the sandbox) using the AWS Management Console</h6><ol><li><p>Open the Amazon SES console at <a href="https://console.aws.amazon.com/ses/" rel="noopener noreferrer" target="_blank"><span>https://console.aws.amazon.com/ses/</span><awsui-icon class="awsdocs-link-icon" name="external"></awsui-icon></a>.</p></li><li>
+            <p>In the navigation panel, choose <b>Account
+                dashboard</b>.</p>
+        </li><li>
+            <p>In the warning box at the top of the console that says, "Your Amazon SES account
+                is in the sandbox", on the right-hand side, choose <b>View Get set up
+                    page</b> followed by <b>Request production
+                access</b>.</p>
+        </li><li>
+            <p>In the account details modal, select either the <b>Marketing</b> or
+                    <b>Transactional</b> radio button that best describes the majority
+                of mail you'll be sending.</p>
+            <div class="itemizedlist">
+                 
+                 
+            <ul class="itemizedlist"><li class="listitem">
+                    <p><em>Marketing email</em> - Sent on a one-to-many basis to a
+                        targeted list of prospects or customers containing marketing and promotional
+                        content such as to make a purchase, download information, etc.</p>
+                </li><li class="listitem">
+                    <p><em>Transactional email</em> - Sent on a one-to-one basis
+                        unique to each recipient usually triggered by a user action such as a
+                        website purchase, a password reset request, etc.</p>
+                </li></ul></div>
+        </li><li>
+            <p>In <b>Website URL</b>, enter the URL of your website to help us
+                better understand the kind of content you plan on sending.</p>
+        </li><li>
+            <p>In <b>Additional contacts</b>, tell us where you want to receive
+                communications about your account. This can be a comma-separated list of up to 4
+                email addresses.</p>
+        </li><li>
+            <p>In <b>Preferred contact language</b>, choose whether you want to
+                receive communications in <b>English</b> or
+                    <b>Japanese</b>.</p>
+        </li><li>
+            <p>In <b>Acknowledgement</b>, check the box that you agree to only send
+                email to individuals who've explicitly requested it and confirm that you have a
+                process in place for handling bounce and complaint notifications.</p>
+        </li><li>
+            <p>Choose the <b>Submit request</b> button - a banner will display to
+                confirm your request was submitted and is currently under review.</p>
+        </li></ol></div><p>Once you submit a review of your account details, you can’t edit your details until the
+        review is complete. The AWS Support team provides an initial response to your request within
+        24 hours.</p><p>In order to prevent our systems from being used to send unsolicited or malicious content,
+        we have to consider each request carefully. If we're able to do so, we'll grant your request
+        within this 24-hour period. However, if we need to obtain additional information from you,
+        it might take longer to resolve your request.
+        </p><p>Optionally, you can also submit your request for production access using the AWS CLI.
+        Submitting your request using the AWS CLI is helpful when you want to request production
+        access for a large number of identities, or when you want to automate the process of setting
+        up Amazon SES.</p><div class="procedure"><h6>To request that your account be removed from the Amazon SES sandbox using the AWS CLI</h6><ol><li>
+            <p><b>Prerequisite</b>: you have to install and configure the AWS CLI.
+                For more information, see the <a href="https://docs.aws.amazon.com/cli/latest/userguide/">AWS Command Line Interface User Guide</a>.</p>
+        </li><li>
+            <p>At the command line, enter the following command:</p>
+            <pre class="programlisting"><div class="code-btn-container"><div class="btn-copy-code" title="Copy"><awsui-icon name="copy"></awsui-icon></div></div><!--DEBUG: cli (none)--><code class="nohighlight">aws sesv2 put-account-details \
+--production-access-enabled \
+--mail-type <code class="replaceable">TRANSACTIONAL</code> \
+--website-url <code class="replaceable">https://example.com</code> \
+--additional-contact-email-addresses <code class="replaceable">info@example.com</code> \
+--contact-language <code class="replaceable">EN</code> </code></pre>
+            <p>In the preceding command, do the following:</p>
+            <ol><li>
+                    <p>Replace <code class="replaceable">TRANSACTIONAL</code> with the type of email
+                        that you plan to send through Amazon SES. You can specify either
+                            <code class="code">TRANSACTIONAL</code> or <code class="code">MARKETING</code>. If more than one
+                        value applies, specify the option that applies to the majority of the email
+                        that you plan to send.</p>
+                </li><li>
+                    <p>Replace <code class="replaceable">https://example.com</code> with the URL of
+                        your website. Providing this information helps us better understand the type
+                        of content that you plan to send.</p>
+                </li><li>
+                    <p>Replace <code class="replaceable">info@example.com</code> with the email
+                        addresses where you want to receive communications about your account. This
+                        can be a comma-separated list of up to 4 email addresses.</p>
+                </li><li>
+                    <p>Replace <code class="replaceable">EN</code> with your preferred language. You
+                        can specify <code class="code">EN</code> for English or <code class="code">JA</code> for
+                        Japanese.</p>
+                </li></ol>
+        </li></ol></div><p>Once you submit a review of your account details, you can’t edit your details until the
+        review is complete. The AWS Support team provides an initial response to your request within
+        24 hours.</p><p>In order to prevent our systems from being used to send unsolicited or malicious content,
+        we have to consider each request carefully. If we're able to do so, we'll grant your request
+        within this 24-hour period. However, if we need to obtain additional information from you,
+        it might take longer to resolve your request.
+        </p><awsdocs-copyright class="copyright-print"></awsdocs-copyright><awsdocs-thumb-feedback right-edge="{{$ctrl.thumbFeedbackRightEdge}}"></awsdocs-thumb-feedback></div><noscript><div><div><div><div id="js_error_message"><p><img src="https://d1ge0kk1l5kms0.cloudfront.net/images/G/01/webservices/console/warning.png" alt="Warning" /> <strong>Javascript is disabled or is unavailable in your browser.</strong></p><p>To use the Amazon Web Services Documentation, Javascript must be enabled. Please refer to your browser's Help pages for instructions.</p></div></div></div></div></noscript><div id="main-col-footer" class="awsui-util-font-size-0"><div id="doc-conventions"><a target="_top" href="/general/latest/gr/docconventions.html">Document Conventions</a></div><div class="prev-next"><div id="previous" class="prev-link" accesskey="p" href="./send-email-getting-started-migrate.html">Migrating to Amazon SES</div><div id="next" class="next-link" accesskey="n" href="./manage-sending-quotas.html">Sending limits</div></div></div><awsdocs-page-utilities></awsdocs-page-utilities></div><div id="quick-feedback-yes" style="display: none;"><div class="title">Did this page help you? - Yes</div><div class="content"><p>Thanks for letting us know we're doing a good job!</p><p>If you've got a moment, please tell us what we did right so we can do more of it.</p><p><awsui-button id="fblink" rel="noopener noreferrer" target="_blank" text="Feedback" click="linkClick($event)" href="https://docs.aws.amazon.com/forms/aws-doc-feedback?hidden_service_name=SES&amp;topic_url=https://docs.aws.amazon.com/en_us/ses/latest/dg/request-production-access.html"></awsui-button></p></div></div><div id="quick-feedback-no" style="display: none;"><div class="title">Did this page help you? - No</div><div class="content"><p>Thanks for letting us know this page needs work. We're sorry we let you down.</p><p>If you've got a moment, please tell us how we can make the documentation better.</p><p><awsui-button id="fblink" rel="noopener noreferrer" target="_blank" text="Feedback" click="linkClick($event)" href="https://docs.aws.amazon.com/forms/aws-doc-feedback?hidden_service_name=SES&amp;topic_url=https://docs.aws.amazon.com/en_us/ses/latest/dg/request-production-access.html"></awsui-button></p></div></div></div></body></div></awsdocs-view><div class="page-loading-indicator" id="page-loading-indicator"><awsui-spinner size="large"></awsui-spinner></div></div><div id="tools-panel" dom-region="tools"><awsdocs-tools-panel id="awsdocs-tools-panel"></awsdocs-tools-panel></div></awsui-app-layout><awsdocs-cookie-banner class="doc-cookie-banner"></awsdocs-cookie-banner></div></body></html>

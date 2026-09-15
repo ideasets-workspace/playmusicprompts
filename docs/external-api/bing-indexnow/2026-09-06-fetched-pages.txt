@@ -1,0 +1,168 @@
+=== FETCH 1 of 2 — https://www.bing.com/indexnow/getstarted — fetched 2026-09-06 via WebFetch tool ===
+
+# Content from https://www.bing.com/indexnow/getstarted
+
+How to add IndexNow to your website | Bing Webmaster Tools
+
+# Take control of your SEO game with real-time indexing
+
+Don't wait for crawlers! Elevate your website's performance and visibility with immediate content updates in multiple search engines.
+
+Why IndexNow?
+
+### GET STARTED
+
+# How to add IndexNow to your website
+
+Adopting IndexNow is fast and easy and you may already have IndexNow. To check if your website is already publishing your latest URLs (added, modified, deleted) via IndexNow to search engines, connect to the Bing Webmaster Tools Portal. If not, follow the steps below.
+
+# IndexNow is built into the following Content Management Solutions.
+
+No setup needed. You're already using IndexNow.
+
+# IndexNow can be enabled in minutes by installing the following third-party plugins*
+
+(WordPress / Shopify / Joomla! / Bitrix24 / Drupal / PrestaShop / MODX / Shopware / Opencart / Typo3 / Umbraco plugin lists — not applicable, this project is a custom Next.js app, not any of these CMS platforms)
+
+# IndexNow is supported by the following Content Delivery Networks:
+Enable Crawler Hints in your Cloudflare account (not applicable — this project is on CloudFront, not Cloudflare)
+
+# If your website is not currently supported with any of the above systems, follow the simple, four-step process to integrate IndexNow in your website.
+
+1. Generate API Key — An API key is needed to match the ownership of the domain with submitted URLs.
+2. Host your API key — Host your UTF-8 key file in either the root of your website or other location within your host
+3. Submit URLs — Submit individual or bulk URLs with your key location as your URL parameter.
+4. Verify URLs — Use Bing Webmaster Tools to verify if your URLs are received by search engines.
+
+Option 1: Host your UTF-8 key file at the root of your website: https://www.example.com/{key}.txt This file must contain the key
+Option 2: Host one to many UTF-8 encoded text key files in other locations within the same host. Note: If you submit a URL, you must specify the key file location as keyLocation URLs parameter value: https://<searchengine>/indexnow?url=http://www.example.com/product.html&key={key}&keyLocation=http://www.example.com/myIndexNowKey63638.txt
+
+Send one URL via an HTTP request: https://<searchengine>/indexnow?url=url-changed&key=your-key
+
+Submitting a set of URL via an HTTP request:
+Request
+POST /IndexNow HTTP/1.1
+Content-Type: application/json; charset=utf-8
+Host: api.indexnow.org
+{
+  "host": "www.example.org",
+  "key": "<key>",
+  "keyLocation": "https://www.example.org/<key>.txt",
+  "urlList": [
+      "https://www.example.org/url1",
+      "https://www.example.org/folder/url2",
+      "https://www.example.org/url3"
+      ]
+}
+
+Response codes:
+200 Ok — URL submitted successfully
+400 Bad request — Invalid format
+403 Forbidden — In case of key not valid (e.g. key not found, file found but key not in the file)
+422 Unprocessable Entity — In case of URLs don't belong to the host or the key is not matching the schema in the protocol
+429 Too Many Requests — Too Many Requests (potential Spam)
+
+## FAQs
+- I submitted a URL, but I don't see the URL indexed? Using IndexNow ensures that search engines are aware of your website changes. Using IndexNow does not guarantee that web pages will be crawled or indexed by search engines. It may take time for the change to reflect in search engines.
+- I just started using IndexNow, should I publish URLs changed last year? No, you should publish only URLs changing (added, updated, or deleted) since the time you start to use IndexNow.
+- Does the URLs submitted count on my crawl quota? Yes, every crawl counts towards your crawl quota. By publishing them to INDEXNOW, you notify search engines that you care about these URLs, search engines will generally prioritize crawling these URLs versus other URLs they know.
+
+=== END FETCH 1 ===
+
+=== FETCH 2 of 2 — https://www.indexnow.org/documentation — fetched 2026-09-06 via WebFetch tool ===
+
+# Content from https://www.indexnow.org/documentation
+
+Documentation | IndexNow.org
+
+# Documentation
+
+## Submitting One URL
+
+To submit a URL using an HTTP request (replace {key} with the URL provided by the search engine), issue your request to the following URL:
+
+https://<searchengine>/indexnow?url=url-changed&key=your-key
+
+- url-changed is a URL of your website which has been added, updated, or deleted. URL must be URL-escaped and encoded and please make sure that your URLs follow the RFC-3986 standard for URIs.
+- Your-key should have a minimum of 8 and a maximum of 128 hexadecimal characters. The key can contain only the following characters: lowercase characters (a-z), uppercase characters (A-Z), numbers (0-9), and dashes (-).
+
+For example, if you want to notify search engines that https://www.example.com/product.html has been updated, and you want to use this key {12345678-1234-1234-1234-123456789012} your URL will be:
+
+https://<searchengine>/indexnow?url=https://www.example.com/product.html&key=12345678-1234-1234-1234-123456789012
+
+You can issue the HTTP request using your browser, wget, curl, or any other mechanism of your choosing. A successful request will return an HTTP 200 response code; if you receive a different response, verify that you don't submit too often, that the key and URL are valid and resubmit the request. The HTTP 200 response code only indicates that the search engine has received your URL.
+
+## Submitting set of URLs
+
+To submit a set of URLs using an HTTP request issue your POST JSON request to the URL provided by Search Engines. Replace <searchengine> by the host name of the search engine.
+
+POST /indexnow HTTP/1.1
+Content-Type: application/json; charset=utf-8
+Host: <searchengine>
+{
+  "host": "www.example.com",
+  "key": "<key>",
+  "urlList": [
+      "https://www.example.com/url1",
+      "https://www.example.com/folder/url2",
+      "https://www.example.com/url3"
+      ]
+}
+
+You can submit up to 10,000 URLs per post, mixing http and https URLs if needed.
+
+You can issue the HTTP request using wget, curl, or another mechanism of your choosing. A successful request will return an HTTP 200 response code; if you receive a different response, you should verify your request and if everything looks fine, resubmit your request. The HTTP 200 response code only indicates that the search engine has received your set of URLs.
+
+The recommended way is to automate submission of URLs as soon as the content is added, updated, or deleted up to some limit; see best practices for user generated content in the Frequently Asked Questions.
+
+## Verifying ownership via the key
+
+To submit URLs, you must "prove" ownership of the host for which URLs are being submitted by hosting at least one text file within the host. Once you submit your URLs to search engines, search engines will crawl the key file to verify ownership and use the key until you change the key. Only you and the search engines should know the key and your file key location.
+
+We offer two ways to verify ownership.
+
+### Option 1
+Hosting a text key file at the root directory of your host.
+You must host a UTF-8 encoded text key file {your-key}.txt listing the key in the file at the root directory of your website.
+For instance for the previous examples, you will need to host your UTF-8 key file at https://www.example.com/{key}.txt and this file must contain the key {key}
+
+### Option 2
+Hosting a text key file within your host.
+You can also host one to many UTF-8 encoded text key files in other locations within the same host and you must tell search engines the location of this text key file in each IndexNow notification by specifying the location using the keyLocation variable.
+
+If you submit an URL, specify the key file location as keyLocation URLs parameter value:
+https://<searchengine>/indexnow?url=http://www.example.com/product.html&key={key}&keyLocation=http://www.example.com/myIndexNowKey63638.txt
+
+If you submit a set of URLs, specify the key file location as keyLocation variable in the JSON content:
+POST /indexnow HTTP/1.1
+Content-Type: application/json; charset=utf-8
+Host: <searchengine>
+{
+  "host": "www.example.com",
+  "key": "<key>",
+  "keyLocation": "https://www.example.com/myIndexNowKey63638.txt",
+  "urlList": [
+      "https://www.example.com/url1",
+      "https://www.example.com/folder/url2",
+      "https://www.example.com/url3"
+      ]
+}
+
+In this option 2, the location of a key file determines the set of URLs that can be included with this key. A key file located at http://example.com/catalog/key12457EDd.txt can include any URLs starting with http://example.com/catalog/ but cannot include URLs starting with http://example.com/help/.
+
+URLs that are not considered valid in option 2 may not be considered for indexing. It is strongly recommended that you use Option 1 and place your file key at the root directory of your web server.
+
+## Response format
+
+200 OK — URL submitted successfully
+202 Accepted — URL received. IndexNow key validation pending.
+400 Bad request — Invalid format
+403 Forbidden — In case of key not valid (e.g. key not found, file found but key not in the file)
+422 Unprocessable Entity — In case of URLs which don't belong to the host or the key is not matching the schema in the protocol
+429 Too Many Requests — Too Many Requests (potential Spam)
+
+## Requirement for search engines
+
+Search engines adopting the IndexNow protocol agree that submitted URLs will be automatically shared with all other participating search engines. To participate, search engines must have a noticeable presence in at least one market or be closely linked to the search market and make a significant contribution to the number of url submissions.
+
+=== END FETCH 2 ===

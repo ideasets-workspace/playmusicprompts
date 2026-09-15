@@ -1,0 +1,4512 @@
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html 
+      lang="en"
+      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="721724668570-nbkv1cfusk7kk4eni4pjvepaus73b13t.apps.googleusercontent.com"><meta name="google-signin-scope"
+          content="profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award https://www.googleapis.com/auth/devprofiles.full_control.firstparty"><meta property="og:site_name" content="Google for Developers">
+    <meta property="og:type" content="website"><meta name="theme-color" content="#1e8e3e"><meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel="manifest" href="/_pwa/developers/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap">
+      <link rel="stylesheet"
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/css/app.css">
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/favicon-new.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/touchicon-180-new.png"><link rel="canonical" href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started"><link rel="search" type="application/opensearchdescription+xml"
+            title="Google for Developers" href="https://developers.google.com/s/opensearch.xml">
+      <link rel="alternate" hreflang="en"
+          href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started" /><link rel="alternate" hreflang="x-default" href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started" /><link rel="alternate" hreflang="ar"
+          href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started?hl=ar" /><link rel="alternate" hreflang="bn"
+          href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started?hl=bn" /><link rel="alternate" hreflang="zh-Hans"
+          href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant"
+          href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started?hl=zh-tw" /><link rel="alternate" hreflang="fa"
+          href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started?hl=fa" /><link rel="alternate" hreflang="fr"
+          href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started?hl=fr" /><link rel="alternate" hreflang="de"
+          href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started?hl=de" /><link rel="alternate" hreflang="he"
+          href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started?hl=he" /><link rel="alternate" hreflang="hi"
+          href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started?hl=hi" /><link rel="alternate" hreflang="id"
+          href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started?hl=id" /><link rel="alternate" hreflang="it"
+          href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started?hl=it" /><link rel="alternate" hreflang="ja"
+          href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started?hl=ja" /><link rel="alternate" hreflang="ko"
+          href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started?hl=ko" /><link rel="alternate" hreflang="pl"
+          href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started?hl=pl" /><link rel="alternate" hreflang="pt-BR"
+          href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started?hl=pt-br" /><link rel="alternate" hreflang="ru"
+          href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started?hl=ru" /><link rel="alternate" hreflang="es-419"
+          href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started?hl=es-419" /><link rel="alternate" hreflang="th"
+          href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started?hl=th" /><link rel="alternate" hreflang="tr"
+          href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started?hl=tr" /><link rel="alternate" hreflang="vi"
+          href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started?hl=vi" /><title>Set up the IMA SDK &nbsp;|&nbsp; IMA SDK for HTML5 &nbsp;|&nbsp; Google for Developers</title>
+
+<meta property="og:title" content="Set up the IMA SDK &nbsp;|&nbsp; IMA SDK for HTML5 &nbsp;|&nbsp; Google for Developers"><meta name="description" content="Set up the Google Interactive Media Ads (IMA) SDK for HTML5 to get started monetizing your video content with client-side ads.">
+  <meta property="og:description" content="Set up the Google Interactive Media Ads (IMA) SDK for HTML5 to get started monetizing your video content with client-side ads."><meta property="og:url" content="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started"><meta property="og:image" content="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/opengraph/google-green.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675"><meta property="og:locale" content="en"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    
+    "headline": "Set up the IMA SDK"
+  }
+</script><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Interactive Media Ads SDKs",
+      "item": "https://developers.google.com/interactive-media-ads"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "IMA SDK for HTML5",
+      "item": "https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started"
+    }]
+  }
+  </script>
+  
+    
+    
+    
+    
+  
+
+    </head>
+  <body class="color-scheme--light"
+        template="page"
+        theme="google-green"
+        type="article"
+        
+        
+        
+        layout="docs"
+        
+        
+        
+        
+        
+        display-toc
+        pending>
+  
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+  
+  
+    <a href="#main-content" class="skip-link button">
+      
+      Skip to main content
+    </a>
+    <section class="devsite-wrapper">
+      <devsite-cookie-notification-bar></devsite-cookie-notification-bar>
+        <devsite-header role="banner">
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner" data-nosnippet>
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        
+<div class="devsite-product-name-wrapper">
+
+  
+    
+  
+
+
+
+  
+  
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list"
+  
+    aria-label="Product breadcrumb">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+        
+  <a href="https://developers.google.com/interactive-media-ads"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Upper Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Interactive Media Ads SDKs"
+      
+    >
+    
+          Interactive Media Ads SDKs
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Upper Header"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail="IMA SDK for HTML5"
+      
+    >
+    
+          IMA SDK for HTML5
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+  </span>
+
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+            
+           </div>
+          
+<devsite-search
+    enable-signin
+    enable-search
+    enable-suggestions
+      enable-query-completion
+    
+    enable-search-summaries
+    project-name="IMA SDK for HTML5"
+    tenant-name="Google for Developers"
+    project-scope="/interactive-media-ads/docs/sdks/html5/client-side/get-started"
+    url-scoped="https://developers.google.com/s/results/interactive-media-ads/docs/sdks/html5/client-side/get-started"
+    
+    
+    
+    >
+  <form class="devsite-search-form" action="https://developers.google.com/s/results" method="GET">
+    <div class="devsite-search-container">
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              
+              aria-label="Open search"></button>
+      <div class="devsite-searchbox">
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          
+          aria-label="Search"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          autocomplete="off"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          
+          placeholder="Search"
+          role="combobox"
+          type="text"
+          value=""
+          >
+          <div class="devsite-search-image material-icons" aria-hidden="true">
+            
+              <svg class="devsite-search-ai-image" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_6641_386)">
+                    <path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14167 15.375 4.875 14.125C3.625 12.8583 3 11.3167 3 9.5C3 7.68333 3.625 6.15 4.875 4.9C6.14167 3.63333 7.68333 3 9.5 3C10.0167 3 10.5167 3.05833 11 3.175C11.4833 3.275 11.9417 3.43333 12.375 3.65L10.825 5.2C10.6083 5.13333 10.3917 5.08333 10.175 5.05C9.95833 5.01667 9.73333 5 9.5 5C8.25 5 7.18333 5.44167 6.3 6.325C5.43333 7.19167 5 8.25 5 9.5C5 10.75 5.43333 11.8167 6.3 12.7C7.18333 13.5667 8.25 14 9.5 14C10.6667 14 11.6667 13.625 12.5 12.875C13.35 12.1083 13.8417 11.15 13.975 10H15.975C15.925 10.6333 15.7833 11.2333 15.55 11.8C15.3333 12.3667 15.05 12.8667 14.7 13.3L21 19.6L19.6 21ZM17.5 12C17.5 10.4667 16.9667 9.16667 15.9 8.1C14.8333 7.03333 13.5333 6.5 12 6.5C13.5333 6.5 14.8333 5.96667 15.9 4.9C16.9667 3.83333 17.5 2.53333 17.5 0.999999C17.5 2.53333 18.0333 3.83333 19.1 4.9C20.1667 5.96667 21.4667 6.5 23 6.5C21.4667 6.5 20.1667 7.03333 19.1 8.1C18.0333 9.16667 17.5 10.4667 17.5 12Z" fill="#5F6368"/>
+                  </g>
+                <defs>
+                <clipPath id="clip0_6641_386">
+                <rect width="24" height="24" fill="white"/>
+                </clipPath>
+                </defs>
+              </svg>
+            
+          </div>
+          <div class="devsite-search-shortcut-icon-container" aria-hidden="true">
+            <kbd class="devsite-search-shortcut-icon">/</kbd>
+          </div>
+      </div>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          
+          aria-label="Close search"></button>
+</devsite-search>
+
+        </div>
+
+        
+
+          
+
+          
+
+          
+
+          
+
+          
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es"
+        >Español</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+
+          
+
+        
+
+        
+          <devsite-user 
+                        
+                        
+                          enable-profiles
+                        
+                        
+                          fp-auth
+                        
+                        id="devsite-user">
+            
+              
+              <span class="button devsite-top-button" aria-hidden="true" visually-hidden>Sign in</span>
+            
+          </devsite-user>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="devsite-collapsible-section
+    ">
+    <div class="devsite-header-background">
+      
+        
+      
+      
+        <div class="devsite-doc-set-nav-row">
+          
+          
+            
+            
+  <devsite-tabs class="lower-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Lower tabs">
+      
+        
+          <tab  class="devsite-active">
+            
+    <a href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started"
+    
+       track-type="nav"
+       track-metadata-position="nav - guides"
+       track-metadata-module="primary nav"
+       aria-label="Guides, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Guides"
+         
+           track-name="guides"
+         
+       >
+    Guides
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima"
+    
+       track-type="nav"
+       track-metadata-position="nav - reference"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Reference"
+         
+           track-name="reference"
+         
+       >
+    Reference
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/resources"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/resources"
+    
+       track-type="nav"
+       track-metadata-position="nav - resources"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Resources"
+         
+           track-name="resources"
+         
+       >
+    Resources
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/download"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/download"
+    
+       track-type="nav"
+       track-metadata-position="nav - download"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Download"
+         
+           track-name="download"
+         
+       >
+    Download
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+          
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+  
+</devsite-header>
+        <devsite-book-nav scrollbars >
+          
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-book-nav-filter"
+     >
+  <span class="filter-list-icon material-icons" aria-hidden="true"></span>
+  <input type="text"
+         placeholder="Filter"
+         
+         aria-label="Type to filter"
+         role="searchbox">
+  
+  <span class="filter-clear-button hidden"
+        data-title="Clear filter"
+        aria-label="Clear filter"
+        role="button"
+        tabindex="0"></span>
+</div>
+
+<nav class="devsite-book-nav devsite-nav nocontent" data-nosnippet
+     aria-label="Side menu">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+
+  
+    
+  
+
+
+  
+      <span class="devsite-product-name">
+        
+        
+        <ul class="devsite-breadcrumb-list"
+  
+    aria-label="Upper header breadcrumb">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+        
+  <a href="https://developers.google.com/interactive-media-ads"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Upper Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Interactive Media Ads SDKs"
+      
+    >
+    
+          Interactive Media Ads SDKs
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Upper Header"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail="IMA SDK for HTML5"
+      
+    >
+    
+          IMA SDK for HTML5
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+      </span>
+    
+
+</div>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+      
+        <ul class="devsite-nav-list">
+          
+            
+<li class="devsite-nav-item">
+
+  
+  <a href="/interactive-media-ads/docs/sdks/html5/client-side/get-started"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Guides"
+      
+        track-name="guides"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Guides"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Guides
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+</li>
+
+          
+            
+<li class="devsite-nav-item">
+
+  
+  <a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Reference"
+      
+        track-name="reference"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Reference"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Reference
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+</li>
+
+          
+            
+<li class="devsite-nav-item">
+
+  
+  <a href="/interactive-media-ads/docs/sdks/html5/client-side/resources"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Resources"
+      
+        track-name="resources"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Resources"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Resources
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+</li>
+
+          
+            
+<li class="devsite-nav-item">
+
+  
+  <a href="/interactive-media-ads/docs/sdks/html5/client-side/download"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Download"
+      
+        track-name="download"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Download"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Download
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+</li>
+
+          
+          
+          
+        </ul>
+      
+    </div>
+    
+      <div class="devsite-mobile-nav-bottom">
+        
+          
+          <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/get-started"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Set up the IMA SDK</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Discover</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/architecture"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Learn the SDK architecture</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/compatibility"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Review SDK support and compatibility</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/simid-support"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Review SIMID support</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Develop</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/countdown-timer"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Create an ad countdown timer</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/autoplay"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Manage Autoplay</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/companions"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Add companion ads support</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/vpaid2js"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Enable VPAID 2 JS creatives</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/tracking_clicks"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Track mouse clicks</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/skippable-ads"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Enable skippable ads on mobile</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/localization"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Localize the ad UI</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/use-typescript"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Use TypeScript with IMA</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Optimize</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/multiple-requests"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Handle multiple ad requests</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/preload"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Preload media</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/live-stream"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Preload ad breaks for streams</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/audio"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Request ads on audio-only content</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/audio-poster"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Display poster image for audio ads</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/bitrates-formats"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Specify bitrate and media format</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Integrate</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/omsdk"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Enable Open Measurement</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/viewability"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Verify Active View</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/ad-rules"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Automate ad playlists</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/secure-signals"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Integrate secure signals adapters</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-beta"><a href="/interactive-media-ads/docs/sdks/html5/client-side/pps"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Improve ad campaigns with PPS</span><span class="devsite-nav-icon material-icons"
+        data-icon="beta"
+        data-title="Beta"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/cors"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Configure CORS for VAST servers</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/continuous-playback"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Report continuous play</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Control privacy</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/consent"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Request consent from EU users</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/ccpa"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Enable restricted data processing</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/privacy-and-messaging"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Integrate Privacy &amp; messaging</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/limited-ads"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Serve users with Limited Ads</span></a></li>
+          </ul>
+        
+        
+        
+          
+    
+  
+    
+  
+    
+  
+    
+  
+        
+      </div>
+    
+  </div>
+</nav>
+          
+        </devsite-book-nav>
+      
+      <section id="gc-wrapper">
+        <main role="main" id="main-content" class="devsite-main-content"
+            
+              has-book-nav
+              has-sidebar
+            >
+          <div class="devsite-sidebar">
+            <div class="devsite-sidebar-content">
+                
+                <devsite-toc class="devsite-nav"
+                            role="navigation"
+                            aria-label="On this page"
+                            depth="2"
+                            scrollbars
+                            data-nosnippet
+                  ></devsite-toc>
+                <devsite-recommendations-sidebar class="nocontent devsite-nav" data-nosnippet>
+                </devsite-recommendations-sidebar>
+            </div>
+          </div>
+          <devsite-content>
+            
+              
+
+
+
+
+
+
+
+
+
+
+<article class="devsite-article">
+  
+  
+  
+    <div class="devsite-banner devsite-banner-announcement nocontent" data-nosnippet
+      
+        
+    background="google-yellow"
+  
+      >
+      <div class="devsite-banner-message">
+        <div class="devsite-banner-message-text">
+          To discuss and provide feedback on our products, join the official Ad Manager Discord channel in the <a href="//goo.gle/google-ad-manager-discord">Google Advertising and Measurement Community</a> server.
+        </div>
+      </div>
+    </div>
+  
+  
+  
+
+  <div class="devsite-article-meta nocontent" role="navigation" data-nosnippet>
+    
+    
+    <ul class="devsite-breadcrumb-list"
+  
+    aria-label="Breadcrumb">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          Home
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/products"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          Products
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/interactive-media-ads"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="3"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="3"
+      
+        track-metadata-eventdetail="Interactive Media Ads SDKs"
+      
+    >
+    
+          Interactive Media Ads SDKs
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="4"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="4"
+      
+        track-metadata-eventdetail="IMA SDK for HTML5"
+      
+    >
+    
+          IMA SDK for HTML5
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+    
+      
+    <devsite-thumb-rating position="header">
+    </devsite-thumb-rating>
+  
+    
+  </div>
+  
+    <devsite-feedback
+  position="header"
+  project-name="IMA SDK for HTML5"
+  product-id="82128"
+  bucket="InteractiveMediaAds"
+  context=""
+  version="t-devsite-webserver-20260901-r00-rc00.480082941541264604"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="header"
+  class="nocontent"
+  data-nosnippet
+  
+  
+    project-feedback-url="//groups.google.com/forum/?fromgroups#!forum/ima-sdk"
+  
+  
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/touchicon-180-new.png"
+  
+  
+    project-support-url="//groups.google.com/forum/?fromgroups#!forum/ima-sdk"
+  
+  
+  >
+
+  <button>
+  
+    
+    Send feedback
+  
+  </button>
+</devsite-feedback>
+  
+    <h1 class="devsite-page-title" tabindex="-1">
+      Set up the IMA SDK<devsite-actions hidden data-nosnippet><devsite-feature-tooltip
+      ack-key="AckCollectionsBookmarkTooltipDismiss"
+      analytics-category="Site-Wide Custom Events"
+      analytics-action-show="Callout Profile displayed"
+      analytics-action-close="Callout Profile dismissed"
+      analytics-label="Create Collection Callout"
+      class="devsite-page-bookmark-tooltip nocontent"
+      data-nosnippet
+      dismiss-button="true"
+      id="devsite-collections-dropdown"
+      
+      dismiss-button-text="Dismiss"
+
+      
+      close-button-text="Got it">
+
+    
+    
+      <devsite-bookmark></devsite-bookmark>
+    
+
+    <span slot="popout-heading">
+      
+      Stay organized with collections
+    </span>
+    <span slot="popout-contents">
+      
+      Save and categorize content based on your preferences.
+    </span>
+  </devsite-feature-tooltip>
+    <devsite-llm-tools></devsite-llm-tools></devsite-actions>
+  
+      
+    </h1>
+  <div class="devsite-page-title-meta"><devsite-view-release-notes></devsite-view-release-notes></div>
+  
+
+  <devsite-toc class="devsite-nav"
+    depth="2"
+    devsite-toc-embedded
+    >
+  </devsite-toc>
+  
+    
+    <devsite-recommendations-dropdown class="nocontent" data-nosnippet>
+    </devsite-recommendations-dropdown>
+    
+  <div class="devsite-article-body clearfix
+  ">
+
+  
+    
+      <devsite-key-takeaways-panel role="region" aria-labelledby="key-takeaways-panel-title">
+  <div class="devsite-key-takeaways-panel-header" aria-labelledby="key-takeaways-panel-title" aria-expanded="false" role="button" tabindex="0">
+    
+    <img src="/_static/images/icons/spark.svg" alt="Spark icon" />
+    <div class="devsite-key-takeaways-panel-title">
+      
+      <h2 class="no-link hide-from-toc" id="key-takeaways-panel-title" data-tooltip="Generated with AI">Page Summary</h2>
+    </div>
+    <span
+      class="material-icons devsite-key-takeaways-panel-toggle-button" aria-hidden="true"></span>
+  </div>
+  <div class="devsite-key-takeaways-panel-content">
+    <devsite-feedback
+      product-id="5123748"
+      bucket="8963846920012181156"
+      disable-product-feedback>
+      <button
+        class="button-flat button-primary devsite-key-takeaways-report-button"
+        
+        data-title="Report Key Takeaways!"
+        
+        aria-label="Report Key Takeaways!">
+        <span
+          class="material-icons"
+          
+          aria-label="Report Key Takeaways!"
+          >outlined_flag</span
+        >
+      </button>
+    </devsite-feedback>
+    <ul class="devsite-key-takeaways-panel-list">
+      
+        <li>
+          <p>IMA SDKs help integrate multimedia ads into websites and apps and manage ad playback from VAST-compliant ad servers.</p>
+
+        </li>
+      
+        <li>
+          <p>With IMA client-side SDKs, the SDK manages ad playback while you control content video playback.</p>
+
+        </li>
+      
+        <li>
+          <p>Implementing IMA client-side involves four main components: AdDisplayContainer, AdsLoader, AdsRequest, and AdsManager.</p>
+
+        </li>
+      
+        <li>
+          <p>To test your app, you need a development server because the IMA SDK loads dependencies using the same protocol as the page from which it&#39;s loaded.</p>
+
+        </li>
+      
+        <li>
+          <p>You need to initialize and start the AdsManager to begin ad playback, which should be triggered by user interaction on mobile devices.</p>
+
+        </li>
+      
+    </ul>
+  </div>
+</devsite-key-takeaways-panel>
+    
+    
+
+
+
+  <style>
+    .page_switcher {
+      margin: 16px -40px;
+      border-top: 1px solid #dadce0;
+      border-bottom: 1px solid #dadce0;
+      padding: 16px 40px;
+      background-color: rgb(241, 243, 244);
+    }
+  </style>
+  
+  
+  
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+
+  <div class="page_switcher">
+    <span style="margin-right:16px;font-weight:bold">Select platform:</span>
+    
+      <a class="button button-primary"
+        class="gc-analytics-event"
+        data-category="ima-platform-button"
+        data-label="Interactive Media Ads_client-side/get-started_HTML5"
+        
+         style="border-radius: 16px;height: 32px; line-height:30px;"
+         title="View this page for the HTML5 platform docs."
+         href="/interactive-media-ads/docs/sdks/html5/client-side/get-started">HTML5</a>
+    
+      <a class="button"
+        class="gc-analytics-event"
+        data-category="ima-platform-button"
+        data-label="Interactive Media Ads_client-side/get-started_Android"
+        
+         style="border-radius: 16px;height: 32px; line-height:30px;"
+         title="View this page for the Android platform docs."
+         href="/interactive-media-ads/docs/sdks/android/client-side/get-started">Android</a>
+    
+      <a class="button"
+        class="gc-analytics-event"
+        data-category="ima-platform-button"
+        data-label="Interactive Media Ads_client-side/get-started_iOS"
+        
+         style="border-radius: 16px;height: 32px; line-height:30px;"
+         title="View this page for the iOS platform docs."
+         href="/interactive-media-ads/docs/sdks/ios/client-side/get-started">iOS</a>
+    
+      <a class="button"
+        class="gc-analytics-event"
+        data-category="ima-platform-button"
+        data-label="Interactive Media Ads_client-side/get-started_tvOS"
+        
+         style="border-radius: 16px;height: 32px; line-height:30px;"
+         title="View this page for the tvOS platform docs."
+         href="/interactive-media-ads/docs/sdks/tvos/client-side/get-started">tvOS</a>
+    
+  </div>
+
+
+
+<p>IMA SDKs make it easy to integrate multimedia ads into your websites and apps. IMA SDKs can
+  request ads from any
+  <a href="//www.iab.com/guidelines/digital-video-ad-serving-template-vast/" class="external">
+    VAST-compliant</a> ad server and manage ad playback in your apps. With IMA client-side SDKs,
+  you maintain control of content video playback, while the SDK handles ad playback. Ads play in a
+  separate video player positioned on top of the app's content video player.</p>
+
+
+<p>
+This guide demonstrates how to integrate the IMA SDK into a simple video player app. If you would
+like to view or follow along with a completed sample integration, download the
+<a href="//github.com/googleads/googleads-ima-html5">simple example</a> from GitHub. If you're
+  interested in an HTML5 player with the SDK pre-integrated, check out the
+  <a href="//github.com/googleads/videojs-ima">IMA SDK Plugin for Video.js</a>.
+</p>
+
+
+<aside><b>Note:</b> For information on integrating with other platforms, or on using
+the IMA DAI SDKs, see
+  <a href="/interactive-media-ads"
+     class="gc-analytics-event"
+     data-category="IMA"
+     data-label="Landing page"
+     data-action="In-page click">
+Interactive Media Ads SDKs</a>.
+</aside>
+
+
+<h2 id="ima-client-side-overview" data-text="IMA client-side overview" tabindex="-1">IMA client-side overview</h2>
+
+<p>Implementing IMA client-side involves four main SDK components, which are demonstrated in this
+guide:
+</p>
+
+<ul>
+  <li><code translate="no" dir="ltr">
+    <a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/class/google.ima.AdDisplayContainer"
+       class="gc-analytics-event"
+       data-category="IMA"
+       data-label="AdDisplayContainer reference"
+       data-action="In-page click">
+      AdDisplayContainer</a></code>: 
+A container object that specifies where IMA renders ad UI elements and measures viewability,
+including <a href="/interactive-media-ads/docs/sdks/html5/client-side/viewability">Active View</a> and
+<a href="/interactive-media-ads/docs/sdks/html5/client-side/omsdk">Open Measurement</a>.
+
+  </li>
+  <li><code translate="no" dir="ltr"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/class/google.ima.AdsLoader"
+       class="gc-analytics-event"
+       data-category="IMA"
+       data-label="AdsLoader reference"
+       data-action="In-page click">
+    AdsLoader</a></code>: 
+An object that requests ads and handles events from ads request responses. You should only
+instantiate one ads loader, which can be reused throughout the life of the application.
+
+  </li>
+  <li><code translate="no" dir="ltr"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/class/google.ima.AdsRequest"
+       class="gc-analytics-event"
+       data-category="IMA"
+       data-label="AdsRequest reference"
+       data-action="In-page click">
+    AdsRequest</a></code>: 
+An object that defines an ads request. Ads requests specify the URL for the VAST ad tag, as well as
+additional parameters, such as ad dimensions.
+
+  </li>
+  <li><code translate="no" dir="ltr"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.AdsManager"
+       class="gc-analytics-event"
+       data-category="IMA"
+       data-label="AdsManager reference"
+       data-action="In-page click">
+    AdsManager</a></code>: 
+An object that contains the response to the ads request, controls ad playback, and listens for ad
+events fired by the SDK.
+
+  </li>
+</ul>
+
+<h2 id="prerequisites" data-text="Prerequisites" tabindex="-1">Prerequisites</h2>
+
+<p>Before you begin, you'll need the following:</p>
+<ul>
+  <li>Three empty files:
+    <ul>
+      <li><b>index.html</b></li>
+      <li><b>style.css</b></li>
+      <li><b>ads.js</b></li>
+    </ul>
+  </li>
+  <li>Python installed on your computer, or a web server to use for testing</li>
+</ul>
+
+<h2 id="1.-start-a-development-server" data-text="1. Start a development server" tabindex="-1">1. Start a development server</h2>
+<p>
+  Since the IMA SDK loads dependencies using the same protocol as the page from which it's loaded,
+  you need to use a web server to test your app. The simplest way to start a local development
+  server is to use Python's built-in server.
+</p>
+<ol>
+<li>Using a command line, from the directory that contains
+  your index.html file run:
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Text only" syntax-guessed>  python -m http.server 8000</pre></devsite-code>
+<aside class="note"><b>Note:</b> <code translate="no" dir="ltr">http.server</code> is only available in Python 3.x.</aside>
+</li>
+<li>In a web browser, go to <code translate="no" dir="ltr">http://localhost:8000/</code></li>
+</ol>
+<p>
+  You can also use any other web server, such as the
+  <a href="https://httpd.apache.org/">Apache HTTP Server</a>.
+</p>
+
+<h2 id="2.-create-a-simple-video-player" data-text="2. Create a simple video player" tabindex="-1">2. Create a simple video player</h2>
+
+<p>
+  First, modify <b>index.html</b> to create a simple HTML5 video element, contained in a wrapping
+  element, and a button to trigger playback. The following example imports the IMA SDK and sets up
+  the <code translate="no" dir="ltr">AdDisplayContainer</code> container element. For more details, see the
+  <a href="/interactive-media-ads/docs/sdks/html5/client-side/get-started#3.-import-the-ima-sdk">
+    Import the IMA SDK
+  </a> and
+  <a href="/interactive-media-ads/docs/sdks/html5/client-side/get-started#4.-create-the-ad-container">
+    Create the ad container
+  </a> steps respectively.
+</p>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+<div class="github-docwidget-gitinclude-code">
+
+  
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <div></div><devsite-code><pre suppresswarning="suppresswarning" translate="no" class="devsite-click-to-copy" track-metadata-position="googleads/googleads-ima-html5/simple/index.html/HEAD/" data-code-snippet="true" data-github-includecode-link="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/index.html" track-metadata-snippet-file-url="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/index.html" data-github-path="googleads/googleads-ima-html5/simple/index.html" data-git-revision="HEAD" dir="ltr" is-upgraded syntax="HTML"><code translate="no" dir="ltr">&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;IMA HTML5 Simple Demo&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;div id="mainContainer"&gt;
+      &lt;div id="content"&gt;
+        &lt;video id="contentElement"&gt;
+          &lt;source src="https://storage.googleapis.com/gvabox/media/samples/stock.mp4"&gt;&lt;/source&gt;
+        &lt;/video&gt;
+      &lt;/div&gt;
+      &lt;div id="adContainer"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button id="playButton"&gt;Play&lt;/button&gt;
+    &lt;script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"&gt;&lt;/script&gt;
+    &lt;script src="ads.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+<div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/googleads/googleads-ima-html5/blob/65b0e2f88a7decea45d930b3808d544ba0e517f7/simple/index.html" class="gc-analytics-event" data-category="github_link" data-label="googleads/googleads-ima-html5/simple/index.html" data-code-snippet="true" data-git-revision="HEAD" data-github-path="googleads/googleads-ima-html5/simple/index.html" data-indented-block="" data-regexp="" data-region-tag="">index.html</a></div></code></pre></devsite-code>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+<div class="github-docwidget-gitinclude-code">
+
+  
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <div></div><devsite-code><pre suppresswarning="suppresswarning" translate="no" class="devsite-click-to-copy" track-metadata-position="googleads/googleads-ima-html5/simple/style.css/HEAD/player_css" data-code-snippet="true" data-github-includecode-link="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/style.css" track-metadata-snippet-file-url="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/style.css" data-github-path="googleads/googleads-ima-html5/simple/style.css" data-git-revision="HEAD" data-region-tag="player_css" track-metadata-region-tag="player_css" dir="ltr" is-upgraded syntax="CSS"><code translate="no" dir="ltr"><span class="devsite-syntax-p">#</span><span class="devsite-syntax-nn">mainContainer</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">position</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">relative</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">width</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">640</span><span class="devsite-syntax-kt">px</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">height</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">360</span><span class="devsite-syntax-kt">px</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-p">}</span>
+
+<span class="devsite-syntax-p">#</span><span class="devsite-syntax-nn">content</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">position</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">absolute</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">top</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">0</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">left</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">0</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">width</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">640</span><span class="devsite-syntax-kt">px</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">height</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">360</span><span class="devsite-syntax-kt">px</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-p">}</span>
+
+<span class="devsite-syntax-p">#</span><span class="devsite-syntax-nn">contentElement</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">width</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">640</span><span class="devsite-syntax-kt">px</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">height</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">360</span><span class="devsite-syntax-kt">px</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">overflow</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">hidden</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-p">}</span>
+
+<span class="devsite-syntax-p">#</span><span class="devsite-syntax-nn">playButton</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">margin-top</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-mi">10</span><span class="devsite-syntax-kt">px</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">vertical-align</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">top</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">width</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">350</span><span class="devsite-syntax-kt">px</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">height</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">60</span><span class="devsite-syntax-kt">px</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">padding</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">0</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">font-size</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">22</span><span class="devsite-syntax-kt">px</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">color</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">white</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">text-align</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">center</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">text-shadow</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">0</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">1</span><span class="devsite-syntax-kt">px</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">2</span><span class="devsite-syntax-kt">px</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nb">rgba</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-mi">0</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">0</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">0</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">0.25</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">background</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mh">#2c3e50</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">border</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">0</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">border-bottom</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">2</span><span class="devsite-syntax-kt">px</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">solid</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mh">#22303f</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">cursor</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">pointer</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-kp">-webkit-</span><span class="devsite-syntax-k">box-shadow</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">inset</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">0</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">-2</span><span class="devsite-syntax-kt">px</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mh">#22303f</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">box-shadow</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">inset</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">0</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">-2</span><span class="devsite-syntax-kt">px</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mh">#22303f</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-p">}</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/googleads/googleads-ima-html5/blob/65b0e2f88a7decea45d930b3808d544ba0e517f7/simple/style.css#L2-L38" class="gc-analytics-event" data-category="github_link" data-label="googleads/googleads-ima-html5/simple/style.css#player_css" data-code-snippet="true" data-git-revision="HEAD" data-github-path="googleads/googleads-ima-html5/simple/style.css" data-indented-block="" data-regexp="" data-region-tag="player_css"><span class="devsite-syntax-nt">style</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nc">css</span></a></div></code></pre></devsite-code>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+<div class="github-docwidget-gitinclude-code">
+
+  
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+  <div></div><devsite-code><pre suppresswarning="suppresswarning" translate="no" class="devsite-click-to-copy" track-metadata-position="googleads/googleads-ima-html5/simple/ads.js/HEAD/init_player" data-code-snippet="true" data-github-includecode-link="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/ads.js" track-metadata-snippet-file-url="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/ads.js" data-github-path="googleads/googleads-ima-html5/simple/ads.js" data-git-revision="HEAD" data-region-tag="init_player" track-metadata-region-tag="init_player" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">let</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">adsManager</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-kd">let</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">adsLoader</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-kd">let</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">adDisplayContainer</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-kd">let</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">isAdPlaying</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-kd">let</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">isContentFinished</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-kd">let</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">playButton</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-kd">let</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">videoContent</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-kd">let</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">adContainer</span><span class="devsite-syntax-p">;</span>
+
+<span class="devsite-syntax-c1">// On window load, attach an event to the play button click</span>
+<span class="devsite-syntax-c1">// that triggers playback of the video element.</span>
+<span class="devsite-syntax-nb">window</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addEventListener</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'load'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kd">function</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">event</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">videoContent</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nb">document</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getElementById</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'contentElement'</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">adContainer</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nb">document</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getElementById</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'adContainer'</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">adContainer</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addEventListener</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'click'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">adContainerClick</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">playButton</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nb">document</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getElementById</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'playButton'</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">playButton</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addEventListener</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'click'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">playAds</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">setUpIMA</span><span class="devsite-syntax-p">();</span>
+<span class="devsite-syntax-p">});</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/googleads/googleads-ima-html5/blob/65b0e2f88a7decea45d930b3808d544ba0e517f7/simple/ads.js#L7-L25" class="gc-analytics-event" data-category="github_link" data-label="googleads/googleads-ima-html5/simple/ads.js#init_player" data-code-snippet="true" data-git-revision="HEAD" data-github-path="googleads/googleads-ima-html5/simple/ads.js" data-indented-block="" data-regexp="" data-region-tag="init_player"><span class="devsite-syntax-nx">ads</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">js</span></a></div></code></pre></devsite-code>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>
+  Add the necessary tags to load the <b>style.css</b> and <b>ads.js</b> files. Then, modify
+  <b>styles.css</b> to make the video player responsive for mobile devices. Finally, in
+  <b>ads.js</b>, declare your variables and trigger video playback when you click the play button.
+</p>
+<p>
+  Note that the <b>ads.js</b> code snippet contains a call to <code translate="no" dir="ltr">setUpIMA()</code>, which is
+  defined in the
+  <a href="/interactive-media-ads/docs/sdks/html5/client-side/get-started#5.-initialize-the-adsloader-and-make-an-ads-request">
+    Initialize the AdsLoader and make an ads request
+  </a>
+  section.
+</p>
+
+<h2 id="3.-import-the-ima-sdk" data-text="3. Import the IMA SDK" tabindex="-1">3. Import the IMA SDK</h2>
+
+<p>
+  Next, add the IMA framework using a script tag in <b>index.html</b>, before the tag for
+  <code translate="no" dir="ltr">ads.js</code>.
+</p>
+
+<aside class="note">
+  <b>Note:</b> To receive verbose console logs, you can replace <code translate="no" dir="ltr">ima3.js</code> with
+  <code translate="no" dir="ltr">ima3_debug.js</code>. However, <code translate="no" dir="ltr">ima3_debug.js</code> shouldn't be used in production
+  apps.
+</aside>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+<div class="github-docwidget-gitinclude-code">
+
+  
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <div></div><devsite-code><pre suppresswarning="suppresswarning" translate="no" class="devsite-click-to-copy" track-metadata-position="googleads/googleads-ima-html5/simple/index.html/HEAD/ima_import" data-code-snippet="true" data-github-includecode-link="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/index.html" track-metadata-snippet-file-url="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/index.html" data-github-path="googleads/googleads-ima-html5/simple/index.html" data-git-revision="HEAD" data-region-tag="ima_import" track-metadata-region-tag="ima_import" dir="ltr" is-upgraded syntax="HTML"><code translate="no" dir="ltr">&lt;script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"&gt;&lt;/script&gt;<div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/googleads/googleads-ima-html5/blob/65b0e2f88a7decea45d930b3808d544ba0e517f7/simple/index.html#L20-L20" class="gc-analytics-event" data-category="github_link" data-label="googleads/googleads-ima-html5/simple/index.html#ima_import" data-code-snippet="true" data-git-revision="HEAD" data-github-path="googleads/googleads-ima-html5/simple/index.html" data-indented-block="" data-regexp="" data-region-tag="ima_import">index.html</a></div></code></pre></devsite-code>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="4.-create-the-ad-container" data-text="4. Create the ad container" tabindex="-1">4. Create the ad container</h2>
+
+<p>
+  In most browsers, the IMA SDK uses a dedicated ad container element for displaying both ads and
+  ad-related UI elements. This container must be sized to overlay the video element from the
+  top-left corner. The height and width of the ads placed in this container are set by the
+  <code translate="no" dir="ltr">adsManager</code> object, so you don't need to set these values manually.
+</p>
+
+<aside class="note">
+  <b>Note:</b> On desktop environments, in order to prevent accidental clicks, the IMA SDK won't
+  open the click-through URL in the first 2 seconds of the ad playback.
+</aside>
+
+<p>
+  To implement this ad container element, first create a new <code translate="no" dir="ltr">div</code> within the
+  <code translate="no" dir="ltr">video-container</code> element. Then, update the CSS to position the element at the top-left
+  corner of the <code translate="no" dir="ltr">video-element</code>. Finally, add the <code translate="no" dir="ltr">createAdDisplayContainer()</code>
+  function to create the
+  <code translate="no" dir="ltr"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/class/google.ima.AdDisplayContainer">AdDisplayContainer</a></code> object using the new ad container
+  <code translate="no" dir="ltr">div</code>.
+</p>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+<div class="github-docwidget-gitinclude-code">
+
+  
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <div></div><devsite-code><pre suppresswarning="suppresswarning" translate="no" class="devsite-click-to-copy" track-metadata-position="googleads/googleads-ima-html5/simple/index.html/HEAD/ad_container" data-code-snippet="true" data-github-includecode-link="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/index.html" track-metadata-snippet-file-url="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/index.html" data-github-path="googleads/googleads-ima-html5/simple/index.html" data-git-revision="HEAD" data-region-tag="ad_container" track-metadata-region-tag="ad_container" dir="ltr" is-upgraded syntax="HTML"><code translate="no" dir="ltr">&lt;div id="adContainer"&gt;&lt;/div&gt;<div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/googleads/googleads-ima-html5/blob/65b0e2f88a7decea45d930b3808d544ba0e517f7/simple/index.html#L15-L15" class="gc-analytics-event" data-category="github_link" data-label="googleads/googleads-ima-html5/simple/index.html#ad_container" data-code-snippet="true" data-git-revision="HEAD" data-github-path="googleads/googleads-ima-html5/simple/index.html" data-indented-block="" data-regexp="" data-region-tag="ad_container">index.html</a></div></code></pre></devsite-code>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+<div class="github-docwidget-gitinclude-code">
+
+  
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <div></div><devsite-code><pre suppresswarning="suppresswarning" translate="no" class="devsite-click-to-copy" track-metadata-position="googleads/googleads-ima-html5/simple/style.css/HEAD/ad_container_css" data-code-snippet="true" data-github-includecode-link="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/style.css" track-metadata-snippet-file-url="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/style.css" data-github-path="googleads/googleads-ima-html5/simple/style.css" data-git-revision="HEAD" data-region-tag="ad_container_css" track-metadata-region-tag="ad_container_css" dir="ltr" is-upgraded syntax="CSS"><code translate="no" dir="ltr"><span class="devsite-syntax-p">#</span><span class="devsite-syntax-nn">adContainer</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">position</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">absolute</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">top</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">0</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">left</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">0</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">width</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">640</span><span class="devsite-syntax-kt">px</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">height</span><span class="devsite-syntax-p">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mi">360</span><span class="devsite-syntax-kt">px</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-p">}</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/googleads/googleads-ima-html5/blob/65b0e2f88a7decea45d930b3808d544ba0e517f7/simple/style.css#L42-L48" class="gc-analytics-event" data-category="github_link" data-label="googleads/googleads-ima-html5/simple/style.css#ad_container_css" data-code-snippet="true" data-git-revision="HEAD" data-github-path="googleads/googleads-ima-html5/simple/style.css" data-indented-block="" data-regexp="" data-region-tag="ad_container_css"><span class="devsite-syntax-nt">style</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nc">css</span></a></div></code></pre></devsite-code>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+<div class="github-docwidget-gitinclude-code">
+
+  
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+  <div></div><devsite-code><pre suppresswarning="suppresswarning" translate="no" class="devsite-click-to-copy" track-metadata-position="googleads/googleads-ima-html5/simple/ads.js/HEAD/create_ad_display_container" data-code-snippet="true" data-github-includecode-link="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/ads.js" track-metadata-snippet-file-url="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/ads.js" data-github-path="googleads/googleads-ima-html5/simple/ads.js" data-git-revision="HEAD" data-region-tag="create_ad_display_container" track-metadata-region-tag="create_ad_display_container" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-cm">/**</span>
+<span class="devsite-syntax-cm"> * Sets the 'adContainer' div as the IMA ad display container.</span>
+<span class="devsite-syntax-cm"> */</span>
+<span class="devsite-syntax-kd">function</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">createAdDisplayContainer</span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">adDisplayContainer</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-ow">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">google</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ima</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">AdDisplayContainer</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nb">document</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getElementById</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'adContainer'</span><span class="devsite-syntax-p">),</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">videoContent</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-p">}</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/googleads/googleads-ima-html5/blob/65b0e2f88a7decea45d930b3808d544ba0e517f7/simple/ads.js#L75-L81" class="gc-analytics-event" data-category="github_link" data-label="googleads/googleads-ima-html5/simple/ads.js#create_ad_display_container" data-code-snippet="true" data-git-revision="HEAD" data-github-path="googleads/googleads-ima-html5/simple/ads.js" data-indented-block="" data-regexp="" data-region-tag="create_ad_display_container"><span class="devsite-syntax-nx">ads</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">js</span></a></div></code></pre></devsite-code>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="5.-initialize-the-adsloader-and-make-an-ads-request" data-text="5. Initialize the AdsLoader and make an ads request" tabindex="-1">5. Initialize the AdsLoader and make an ads request</h2>
+
+<p>
+  In order to request ads, create an
+  <code translate="no" dir="ltr"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/class/google.ima.AdsLoader">AdsLoader</a></code>
+  instance. The <code translate="no" dir="ltr">AdsLoader</code> constructor takes an
+  <code translate="no" dir="ltr"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/class/google.ima.AdDisplayContainer">AdDisplayContainer</a></code>
+  object as an input and can be used to process
+  <code translate="no" dir="ltr"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/class/google.ima.AdsRequest">AdsRequest</a></code>
+  objects associated with a specified ad tag URL. The ad tag used in this example contains a
+  10-second pre-roll ad. You can test this, or any, ad tag URL using the
+  <a href="//googleads.github.io/googleads-ima-html5/vsi/">IMA Video Suite Inspector</a>.
+</p>
+<p>
+  As a best practice, only maintain one instance of <code translate="no" dir="ltr">AdsLoader</code> for the entire
+  lifecycle of a page. To make additional ad requests, create a new <code translate="no" dir="ltr">AdsRequest</code>
+  object, but re-use the same <code translate="no" dir="ltr">AdsLoader</code>. For more information, see the
+  <a href="/interactive-media-ads/docs/sdks/html5/faq#8">IMA SDK FAQ</a>.
+</p>
+<p>
+  Listen and respond to ads loaded and error events using <code translate="no" dir="ltr">AdsLoader.addEventListener</code>.
+  Listen to the following events:
+</p>
+<ul>
+  <li><code translate="no" dir="ltr">ADS_MANAGER_LOADED</code></li>
+  <li><code translate="no" dir="ltr">AD_ERROR</code></li>
+</ul>
+<p>
+  To create the <code translate="no" dir="ltr">onAdsManagerLoaded()</code> and <code translate="no" dir="ltr">onAdError()</code> listeners, see the
+  following example:
+</p>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+<div class="github-docwidget-gitinclude-code">
+
+  
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+  <div></div><devsite-code><pre suppresswarning="suppresswarning" translate="no" class="devsite-click-to-copy" track-metadata-position="googleads/googleads-ima-html5/simple/ads.js/HEAD/ima_setup" data-code-snippet="true" data-github-includecode-link="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/ads.js" track-metadata-snippet-file-url="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/ads.js" data-github-path="googleads/googleads-ima-html5/simple/ads.js" data-git-revision="HEAD" data-region-tag="ima_setup" track-metadata-region-tag="ima_setup" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-cm">/**</span>
+<span class="devsite-syntax-cm"> * Sets up IMA ad display container, ads loader, and makes an ad request.</span>
+<span class="devsite-syntax-cm"> */</span>
+<span class="devsite-syntax-kd">function</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">setUpIMA</span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// Create the ad display container.</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">createAdDisplayContainer</span><span class="devsite-syntax-p">();</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// Create ads loader.</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">adsLoader</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-ow">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">google</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ima</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">AdsLoader</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">adDisplayContainer</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// Listen and respond to ads loaded and error events.</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">adsLoader</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addEventListener</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">google</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ima</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">AdsManagerLoadedEvent</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Type</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ADS_MANAGER_LOADED</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">onAdsManagerLoaded</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">adsLoader</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addEventListener</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">google</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ima</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">AdErrorEvent</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Type</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">AD_ERROR</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">onAdError</span><span class="devsite-syntax-p">);</span>
+
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// An event listener to tell the SDK that our content video</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// is completed so the SDK can play any post-roll ads.</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">contentEndedListener</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kd">function</span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-c1">// An ad might have been playing in the content element, in which case the</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-c1">// content has not actually ended.</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-k">if</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">isAdPlaying</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">return</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">isContentFinished</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">true</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">adsLoader</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">contentComplete</span><span class="devsite-syntax-p">();</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">};</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">videoContent</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">onended</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">contentEndedListener</span><span class="devsite-syntax-p">;</span>
+
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// Request video ads.</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">adsRequest</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-ow">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">google</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ima</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">AdsRequest</span><span class="devsite-syntax-p">();</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">adsRequest</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">adTagUrl</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'https://pubads.g.doubleclick.net/gampad/ads?'</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-s1">'iu=/21775744923/external/single_ad_samples&amp;sz=640x480&amp;'</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-s1">'cust_params=sample_ct%3Dlinear&amp;ciu_szs=300x250%2C728x90&amp;gdfp_req=1&amp;'</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-s1">'output=vast&amp;unviewed_position_start=1&amp;env=vp&amp;correlator='</span><span class="devsite-syntax-p">;</span>
+
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// Specify the linear and nonlinear slot sizes. This helps the SDK to</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// select the correct creative if multiple are returned.</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">adsRequest</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">linearAdSlotWidth</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">640</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">adsRequest</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">linearAdSlotHeight</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">400</span><span class="devsite-syntax-p">;</span>
+
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">adsRequest</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">nonLinearAdSlotWidth</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">640</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">adsRequest</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">nonLinearAdSlotHeight</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">150</span><span class="devsite-syntax-p">;</span>
+
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">adsLoader</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">requestAds</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">adsRequest</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-p">}</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/googleads/googleads-ima-html5/blob/65b0e2f88a7decea45d930b3808d544ba0e517f7/simple/ads.js#L29-L71" class="gc-analytics-event" data-category="github_link" data-label="googleads/googleads-ima-html5/simple/ads.js#ima_setup" data-code-snippet="true" data-git-revision="HEAD" data-github-path="googleads/googleads-ima-html5/simple/ads.js" data-indented-block="" data-regexp="" data-region-tag="ima_setup"><span class="devsite-syntax-nx">ads</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">js</span></a></div></code></pre></devsite-code>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="6.-respond-to-adsloader-events" data-text="6. Respond to AdsLoader events" tabindex="-1">6. Respond to AdsLoader events</h2>
+
+<p>
+  When the <code translate="no" dir="ltr">AdsLoader</code> successfully loads ads, it emits an
+  <code translate="no" dir="ltr">ADS_MANAGER_LOADED</code> event. Parse the event passed to the callback to initialize the
+  <code translate="no" dir="ltr">AdsManager</code> object. The <code translate="no" dir="ltr">AdsManager</code> loads the individual ads as defined by
+  the response to the ad tag URL.
+</p>
+<p>
+  Ensure you handle any errors that occur during the loading process. If ads don't
+  load, make sure that media playback continues without ads to avoid interfering with the user
+  viewing the content.
+</p>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+<div class="github-docwidget-gitinclude-code">
+
+  
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+  <div></div><devsite-code><pre suppresswarning="suppresswarning" translate="no" class="devsite-click-to-copy" track-metadata-position="googleads/googleads-ima-html5/simple/ads.js/HEAD/ads_loader_events" data-code-snippet="true" data-github-includecode-link="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/ads.js" track-metadata-snippet-file-url="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/ads.js" data-github-path="googleads/googleads-ima-html5/simple/ads.js" data-git-revision="HEAD" data-region-tag="ads_loader_events" track-metadata-region-tag="ads_loader_events" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-cm">/**</span>
+<span class="devsite-syntax-cm"> * Handles the ad manager loading and sets ad event listeners.</span>
+<span class="devsite-syntax-cm"> * @param {!google.ima.AdsManagerLoadedEvent} adsManagerLoadedEvent</span>
+<span class="devsite-syntax-cm"> */</span>
+<span class="devsite-syntax-kd">function</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">onAdsManagerLoaded</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">adsManagerLoadedEvent</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// Get the ads manager.</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-kd">const</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">adsRenderingSettings</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-ow">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">google</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ima</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">AdsRenderingSettings</span><span class="devsite-syntax-p">();</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">adsRenderingSettings</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">restoreCustomPlaybackStateOnAdBreakComplete</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">true</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// videoContent should be set to the content video element.</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">adsManager</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">adsManagerLoadedEvent</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getAdsManager</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">videoContent</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">adsRenderingSettings</span><span class="devsite-syntax-p">);</span>
+
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// Add listeners to the required events.</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">adsManager</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addEventListener</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">google</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ima</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">AdErrorEvent</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Type</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">AD_ERROR</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">onAdError</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">adsManager</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addEventListener</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">google</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ima</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">AdEvent</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Type</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">CONTENT_PAUSE_REQUESTED</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">onContentPauseRequested</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">adsManager</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addEventListener</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">google</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ima</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">AdEvent</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Type</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">CONTENT_RESUME_REQUESTED</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">      </span><span class="devsite-syntax-nx">onContentResumeRequested</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">adsManager</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addEventListener</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">google</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ima</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">AdEvent</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Type</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">LOADED</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">onAdLoaded</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-p">}</span>
+
+<span class="devsite-syntax-cm">/**</span>
+<span class="devsite-syntax-cm"> * Handles ad errors.</span>
+<span class="devsite-syntax-cm"> * @param {!google.ima.AdErrorEvent} adErrorEvent</span>
+<span class="devsite-syntax-cm"> */</span>
+<span class="devsite-syntax-kd">function</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">onAdError</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">adErrorEvent</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// Handle the error logging.</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">adErrorEvent</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getError</span><span class="devsite-syntax-p">());</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">adsManager</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">destroy</span><span class="devsite-syntax-p">();</span>
+<span class="devsite-syntax-p">}</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/googleads/googleads-ima-html5/blob/65b0e2f88a7decea45d930b3808d544ba0e517f7/simple/ads.js#L108-L144" class="gc-analytics-event" data-category="github_link" data-label="googleads/googleads-ima-html5/simple/ads.js#ads_loader_events" data-code-snippet="true" data-git-revision="HEAD" data-github-path="googleads/googleads-ima-html5/simple/ads.js" data-indented-block="" data-regexp="" data-region-tag="ads_loader_events"><span class="devsite-syntax-nx">ads</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">js</span></a></div></code></pre></devsite-code>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>
+  For more details about the listeners set in the <code translate="no" dir="ltr">onAdsManagerLoaded()</code> function, see
+  the following sub-sections:
+</p>
+
+<h3 id="handle-adsmanager-errors" data-text="Handle AdsManager errors" tabindex="-1">Handle <code translate="no" dir="ltr">AdsManager</code> errors</h3>
+
+<p>
+  The error handler created for the <code translate="no" dir="ltr">AdsLoader</code> can also serve as the error handler for
+  the <code translate="no" dir="ltr">AdsManager</code>. See the event handler reusing the <code translate="no" dir="ltr">onAdError()</code> function.
+</p>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+<div class="github-docwidget-gitinclude-code">
+
+  
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+  <div></div><devsite-code><pre suppresswarning="suppresswarning" translate="no" class="devsite-click-to-copy" track-metadata-position="googleads/googleads-ima-html5/simple/ads.js/HEAD/ads_manager_error_handler" data-code-snippet="true" data-github-includecode-link="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/ads.js" track-metadata-snippet-file-url="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/ads.js" data-github-path="googleads/googleads-ima-html5/simple/ads.js" data-git-revision="HEAD" data-region-tag="ads_manager_error_handler" track-metadata-region-tag="ads_manager_error_handler" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-nx">adsManager</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addEventListener</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">google</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ima</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">AdErrorEvent</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Type</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">AD_ERROR</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">onAdError</span><span class="devsite-syntax-p">);</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/googleads/googleads-ima-html5/blob/65b0e2f88a7decea45d930b3808d544ba0e517f7/simple/ads.js#L122-L122" class="gc-analytics-event" data-category="github_link" data-label="googleads/googleads-ima-html5/simple/ads.js#ads_manager_error_handler" data-code-snippet="true" data-git-revision="HEAD" data-github-path="googleads/googleads-ima-html5/simple/ads.js" data-indented-block="" data-regexp="" data-region-tag="ads_manager_error_handler"><span class="devsite-syntax-nx">ads</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">js</span></a></div></code></pre></devsite-code>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 id="handle-play-and-pause-events" data-text="Handle play and pause events" tabindex="-1">Handle play and pause events</h3>
+
+<p>
+  When the <code translate="no" dir="ltr">AdsManager</code> is ready to insert an ad for display, it fires the
+  <code translate="no" dir="ltr">CONTENT_PAUSE_REQUESTED</code> event. Handle this event by triggering a pause on the
+  underlying video player. Similarly, when an ad completes, the <code translate="no" dir="ltr">AdsManager</code> fires the
+  <code translate="no" dir="ltr">CONTENT_RESUME_REQUESTED</code> event. Handle this event by restarting playback on the
+  underlying content video.
+</p>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+<div class="github-docwidget-gitinclude-code">
+
+  
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+  <div></div><devsite-code><pre suppresswarning="suppresswarning" translate="no" class="devsite-click-to-copy" track-metadata-position="googleads/googleads-ima-html5/simple/ads.js/HEAD/ads_manager_play_pause_handlers" data-code-snippet="true" data-github-includecode-link="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/ads.js" track-metadata-snippet-file-url="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/ads.js" data-github-path="googleads/googleads-ima-html5/simple/ads.js" data-git-revision="HEAD" data-region-tag="ads_manager_play_pause_handlers" track-metadata-region-tag="ads_manager_play_pause_handlers" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-nx">adsManager</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addEventListener</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">google</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ima</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">AdEvent</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Type</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">CONTENT_PAUSE_REQUESTED</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">onContentPauseRequested</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-nx">adsManager</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addEventListener</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">google</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ima</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">AdEvent</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Type</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">CONTENT_RESUME_REQUESTED</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">onContentResumeRequested</span><span class="devsite-syntax-p">);</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/googleads/googleads-ima-html5/blob/65b0e2f88a7decea45d930b3808d544ba0e517f7/simple/ads.js#L125-L129" class="gc-analytics-event" data-category="github_link" data-label="googleads/googleads-ima-html5/simple/ads.js#ads_manager_play_pause_handlers" data-code-snippet="true" data-git-revision="HEAD" data-github-path="googleads/googleads-ima-html5/simple/ads.js" data-indented-block="" data-regexp="" data-region-tag="ads_manager_play_pause_handlers"><span class="devsite-syntax-nx">ads</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">js</span></a></div></code></pre></devsite-code>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>
+  For definitions of the <code translate="no" dir="ltr">onContentPauseRequested()</code> and
+  <code translate="no" dir="ltr">onContentResumeRequested()</code> functions, see the following example:
+</p>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+<div class="github-docwidget-gitinclude-code">
+
+  
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+  <div></div><devsite-code><pre suppresswarning="suppresswarning" translate="no" class="devsite-click-to-copy" track-metadata-position="googleads/googleads-ima-html5/simple/ads.js/HEAD/play_pause_responses" data-code-snippet="true" data-github-includecode-link="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/ads.js" track-metadata-snippet-file-url="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/ads.js" data-github-path="googleads/googleads-ima-html5/simple/ads.js" data-git-revision="HEAD" data-region-tag="play_pause_responses" track-metadata-region-tag="play_pause_responses" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-cm">/**</span>
+<span class="devsite-syntax-cm"> * Pauses video content and sets up ad UI.</span>
+<span class="devsite-syntax-cm"> */</span>
+<span class="devsite-syntax-kd">function</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">onContentPauseRequested</span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">isAdPlaying</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">true</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">videoContent</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">pause</span><span class="devsite-syntax-p">();</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// This function is where you should setup UI for showing ads (for example,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// display ad timer countdown, disable seeking and more.)</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// setupUIForAds();</span>
+<span class="devsite-syntax-p">}</span>
+
+<span class="devsite-syntax-cm">/**</span>
+<span class="devsite-syntax-cm"> * Resumes video content and removes ad UI.</span>
+<span class="devsite-syntax-cm"> */</span>
+<span class="devsite-syntax-kd">function</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">onContentResumeRequested</span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">isAdPlaying</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">false</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">if</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-o">!</span><span class="devsite-syntax-nx">isContentFinished</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">videoContent</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">play</span><span class="devsite-syntax-p">();</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// This function is where you should ensure that your UI is ready</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// to play content. It is the responsibility of the Publisher to</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// implement this function when necessary.</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// setupUIForContent();</span>
+<span class="devsite-syntax-p">}</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/googleads/googleads-ima-html5/blob/65b0e2f88a7decea45d930b3808d544ba0e517f7/simple/ads.js#L164-L187" class="gc-analytics-event" data-category="github_link" data-label="googleads/googleads-ima-html5/simple/ads.js#play_pause_responses" data-code-snippet="true" data-git-revision="HEAD" data-github-path="googleads/googleads-ima-html5/simple/ads.js" data-indented-block="" data-regexp="" data-region-tag="play_pause_responses"><span class="devsite-syntax-nx">ads</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">js</span></a></div></code></pre></devsite-code>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 id="handle-content-playback-during-non-linear-ads" data-text="Handle content playback during non-linear ads" tabindex="-1">Handle content playback during non-linear ads</h3>
+
+<p>
+  The <code translate="no" dir="ltr">AdsManager</code> pauses the content video when an ad is ready to play, but this
+  behavior doesn't account for non-linear ads, where the content continues to play while the ad is
+  displayed.
+</p>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+<div class="github-docwidget-gitinclude-code">
+
+  
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+  <div></div><devsite-code><pre suppresswarning="suppresswarning" translate="no" class="devsite-click-to-copy" track-metadata-position="googleads/googleads-ima-html5/simple/ads.js/HEAD/ads_manager_loaded_handler" data-code-snippet="true" data-github-includecode-link="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/ads.js" track-metadata-snippet-file-url="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/ads.js" data-github-path="googleads/googleads-ima-html5/simple/ads.js" data-git-revision="HEAD" data-region-tag="ads_manager_loaded_handler" track-metadata-region-tag="ads_manager_loaded_handler" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-nx">adsManager</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addEventListener</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">google</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ima</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">AdEvent</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">Type</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">LOADED</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">onAdLoaded</span><span class="devsite-syntax-p">);</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/googleads/googleads-ima-html5/blob/65b0e2f88a7decea45d930b3808d544ba0e517f7/simple/ads.js#L132-L132" class="gc-analytics-event" data-category="github_link" data-label="googleads/googleads-ima-html5/simple/ads.js#ads_manager_loaded_handler" data-code-snippet="true" data-git-revision="HEAD" data-github-path="googleads/googleads-ima-html5/simple/ads.js" data-indented-block="" data-regexp="" data-region-tag="ads_manager_loaded_handler"><span class="devsite-syntax-nx">ads</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">js</span></a></div></code></pre></devsite-code>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>
+  To support non-linear ads, listen for the <code translate="no" dir="ltr">AdsManager</code> to emit the
+  <code translate="no" dir="ltr">LOADED</code> event. Check if the ad is linear, and if not, resume playback on the
+  video element.
+</p>
+<p>
+  For the definition of the <code translate="no" dir="ltr">onAdLoaded()</code> function, see the following example.
+</p>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+<div class="github-docwidget-gitinclude-code">
+
+  
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+  <div></div><devsite-code><pre suppresswarning="suppresswarning" translate="no" class="devsite-click-to-copy" track-metadata-position="googleads/googleads-ima-html5/simple/ads.js/HEAD/ad_loaded_handler" data-code-snippet="true" data-github-includecode-link="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/ads.js" track-metadata-snippet-file-url="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/ads.js" data-github-path="googleads/googleads-ima-html5/simple/ads.js" data-git-revision="HEAD" data-region-tag="ad_loaded_handler" track-metadata-region-tag="ad_loaded_handler" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-cm">/**</span>
+<span class="devsite-syntax-cm"> * Handles ad loaded event to support non-linear ads. Continues content playback</span>
+<span class="devsite-syntax-cm"> * if the ad is not linear.</span>
+<span class="devsite-syntax-cm"> * @param {!google.ima.AdEvent} adEvent</span>
+<span class="devsite-syntax-cm"> */</span>
+<span class="devsite-syntax-kd">function</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">onAdLoaded</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">adEvent</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-kd">let</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">ad</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">adEvent</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">getAd</span><span class="devsite-syntax-p">();</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">if</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-o">!</span><span class="devsite-syntax-nx">ad</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">isLinear</span><span class="devsite-syntax-p">())</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">videoContent</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">play</span><span class="devsite-syntax-p">();</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-p">}</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/googleads/googleads-ima-html5/blob/65b0e2f88a7decea45d930b3808d544ba0e517f7/simple/ads.js#L191-L201" class="gc-analytics-event" data-category="github_link" data-label="googleads/googleads-ima-html5/simple/ads.js#ad_loaded_handler" data-code-snippet="true" data-git-revision="HEAD" data-github-path="googleads/googleads-ima-html5/simple/ads.js" data-indented-block="" data-regexp="" data-region-tag="ad_loaded_handler"><span class="devsite-syntax-nx">ads</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">js</span></a></div></code></pre></devsite-code>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="7.-trigger-click-to-pause-on-mobile-devices" data-text="7. Trigger click-to-pause on mobile devices" tabindex="-1">7. Trigger click-to-pause on mobile devices</h2>
+
+<p>
+  Since the <code translate="no" dir="ltr">AdContainer</code> overlays the video element, users cannot interact directly with
+  the underlying player. This can confuse users on mobile devices, who expect to be able to tap a
+  video player to pause playback. To address this issue, the IMA SDK passes any clicks that are not
+  handled by IMA from the ad overlay to the <code translate="no" dir="ltr">AdContainer</code> element, where they can be
+  handled. This does not apply to linear ads on non-mobile browsers, as clicking the ad opens the
+  clickthrough link.
+</p>
+<p>
+  To implement click-to-pause, add the <code translate="no" dir="ltr">adContainerClick()</code> click handler function called
+  in the on window load listener.
+</p>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+<div class="github-docwidget-gitinclude-code">
+
+  
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+  <div></div><devsite-code><pre suppresswarning="suppresswarning" translate="no" class="devsite-click-to-copy" track-metadata-position="googleads/googleads-ima-html5/simple/ads.js/HEAD/ad_container_click" data-code-snippet="true" data-github-includecode-link="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/ads.js" track-metadata-snippet-file-url="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/ads.js" data-github-path="googleads/googleads-ima-html5/simple/ads.js" data-git-revision="HEAD" data-region-tag="ad_container_click" track-metadata-region-tag="ad_container_click" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-cm">/**</span>
+<span class="devsite-syntax-cm"> * Handles clicks on the ad container to support expected play and pause</span>
+<span class="devsite-syntax-cm"> * behavior on mobile devices.</span>
+<span class="devsite-syntax-cm"> * @param {!Event} event</span>
+<span class="devsite-syntax-cm"> */</span>
+<span class="devsite-syntax-kd">function</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">adContainerClick</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">event</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s2">"ad container clicked"</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">if</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">videoContent</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">paused</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">videoContent</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">play</span><span class="devsite-syntax-p">();</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">}</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">else</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">videoContent</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">pause</span><span class="devsite-syntax-p">();</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-p">}</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/googleads/googleads-ima-html5/blob/65b0e2f88a7decea45d930b3808d544ba0e517f7/simple/ads.js#L148-L160" class="gc-analytics-event" data-category="github_link" data-label="googleads/googleads-ima-html5/simple/ads.js#ad_container_click" data-code-snippet="true" data-git-revision="HEAD" data-github-path="googleads/googleads-ima-html5/simple/ads.js" data-indented-block="" data-regexp="" data-region-tag="ad_container_click"><span class="devsite-syntax-nx">ads</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">js</span></a></div></code></pre></devsite-code>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="8.-start-the-adsmanager" data-text="8. Start the AdsManager" tabindex="-1">8. Start the AdsManager</h2>
+
+<p>
+  To start ad playback, initiate and start the <code translate="no" dir="ltr">AdsManager</code>. To fully support mobile
+  browsers, where you cannot automatically play ads, trigger ad playback from user interactions
+  with the page, like clicking the play button.
+</p>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+<div class="github-docwidget-gitinclude-code">
+
+  
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+  <div></div><devsite-code><pre suppresswarning="suppresswarning" translate="no" class="devsite-click-to-copy" track-metadata-position="googleads/googleads-ima-html5/simple/ads.js/HEAD/play_ads" data-code-snippet="true" data-github-includecode-link="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/ads.js" track-metadata-snippet-file-url="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/ads.js" data-github-path="googleads/googleads-ima-html5/simple/ads.js" data-git-revision="HEAD" data-region-tag="play_ads" track-metadata-region-tag="play_ads" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-cm">/**</span>
+<span class="devsite-syntax-cm"> * Loads the video content and initializes IMA ad playback.</span>
+<span class="devsite-syntax-cm"> */</span>
+<span class="devsite-syntax-kd">function</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">playAds</span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// Initialize the container. Must be done through a user action on mobile</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-c1">// devices.</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">videoContent</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">load</span><span class="devsite-syntax-p">();</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">adDisplayContainer</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">initialize</span><span class="devsite-syntax-p">();</span>
+
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">try</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-c1">// Initialize the ads manager. This call starts ad playback for VMAP ads.</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">adsManager</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">init</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-mf">640</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">360</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-c1">// Call play to start showing the ad. Single video and overlay ads will</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-c1">// start at this time; the call will be ignored for VMAP ads.</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">adsManager</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">start</span><span class="devsite-syntax-p">();</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">}</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">catch</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">adError</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-c1">// An error may be thrown if there was a problem with the VAST response.</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">videoContent</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">play</span><span class="devsite-syntax-p">();</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-p">}</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/googleads/googleads-ima-html5/blob/65b0e2f88a7decea45d930b3808d544ba0e517f7/simple/ads.js#L85-L104" class="gc-analytics-event" data-category="github_link" data-label="googleads/googleads-ima-html5/simple/ads.js#play_ads" data-code-snippet="true" data-git-revision="HEAD" data-github-path="googleads/googleads-ima-html5/simple/ads.js" data-indented-block="" data-regexp="" data-region-tag="play_ads"><span class="devsite-syntax-nx">ads</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">js</span></a></div></code></pre></devsite-code>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="9.-support-player-resizing" data-text="9. Support player resizing" tabindex="-1">9. Support player resizing</h2>
+
+<p>
+  For ads to dynamically resize and match a video player's size, or to match changes to the screen
+  orientation, call <code translate="no" dir="ltr">adsManager.resize()</code> in response to window resize events.
+</p>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+<div class="github-docwidget-gitinclude-code">
+
+  
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+  <div></div><devsite-code><pre suppresswarning="suppresswarning" translate="no" class="devsite-click-to-copy" track-metadata-position="googleads/googleads-ima-html5/simple/ads.js/HEAD/resize_handler" data-code-snippet="true" data-github-includecode-link="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/ads.js" track-metadata-snippet-file-url="https://github.com/googleads/googleads-ima-html5/blob/HEAD/simple/ads.js" data-github-path="googleads/googleads-ima-html5/simple/ads.js" data-git-revision="HEAD" data-region-tag="resize_handler" track-metadata-region-tag="resize_handler" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-nb">window</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">addEventListener</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'resize'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kd">function</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">event</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">console</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">log</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s2">"window resized"</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">if</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">adsManager</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-kd">let</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">width</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">videoContent</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">clientWidth</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-kd">let</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">height</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">videoContent</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">clientHeight</span><span class="devsite-syntax-p">;</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nx">adsManager</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">resize</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">width</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">height</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">google</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ima</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">ViewMode</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">NORMAL</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-p">});</span><div class="devsite-github-link nocode no-select nocontent"><a target="_top" href="https://github.com/googleads/googleads-ima-html5/blob/65b0e2f88a7decea45d930b3808d544ba0e517f7/simple/ads.js#L205-L212" class="gc-analytics-event" data-category="github_link" data-label="googleads/googleads-ima-html5/simple/ads.js#resize_handler" data-code-snippet="true" data-git-revision="HEAD" data-github-path="googleads/googleads-ima-html5/simple/ads.js" data-indented-block="" data-regexp="" data-region-tag="resize_handler"><span class="devsite-syntax-nx">ads</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">js</span></a></div></code></pre></devsite-code>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>That's it! You're now requesting and displaying ads with the IMA SDK. To learn about more
+  advanced SDK features, see the other guides or the
+  <a href="//github.com/googleads/googleads-ima-html5">samples on GitHub</a>.</p>
+
+
+  
+
+  
+    <devsite-hats-survey class="nocontent" data-nosnippet
+      hats-id="ig2XXape0LHkahqinNfT0Z1Hi3i9"
+      listnr-id="82128"></devsite-hats-survey>
+  
+</div>
+
+  
+    
+      <devsite-recommendations display="in-page" hidden yield>
+      </devsite-recommendations>
+    
+    
+      
+    <devsite-thumb-rating position="footer">
+    </devsite-thumb-rating>
+  
+       
+         <devsite-feedback
+  position="footer"
+  project-name="IMA SDK for HTML5"
+  product-id="82128"
+  bucket="InteractiveMediaAds"
+  context=""
+  version="t-devsite-webserver-20260901-r00-rc00.480082941541264604"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="footer"
+  class="nocontent"
+  data-nosnippet
+  
+  
+    project-feedback-url="//groups.google.com/forum/?fromgroups#!forum/ima-sdk"
+  
+  
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/touchicon-180-new.png"
+  
+  
+    project-support-url="//groups.google.com/forum/?fromgroups#!forum/ima-sdk"
+  
+  
+  >
+
+  <button>
+  
+    
+    Send feedback
+  
+  </button>
+</devsite-feedback>
+       
+    
+    
+      <devsite-recommendations id="recommendations-link" yield></devsite-recommendations>
+    
+  
+
+  <div class="devsite-floating-action-buttons"></div></article>
+
+
+<devsite-content-footer class="nocontent" data-nosnippet>
+  <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
+  <p>Last updated 2026-09-01 UTC.</p>
+</devsite-content-footer>
+
+
+<devsite-notification
+>
+</devsite-notification>
+
+
+  
+<div class="devsite-content-data">
+  
+    
+    
+    <template class="devsite-thumb-rating-feedback">
+      <devsite-feedback
+  position="thumb-rating"
+  project-name="IMA SDK for HTML5"
+  product-id="82128"
+  bucket="InteractiveMediaAds"
+  context=""
+  version="t-devsite-webserver-20260901-r00-rc00.480082941541264604"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="thumb-rating"
+  class="nocontent"
+  data-nosnippet
+  
+  
+    project-feedback-url="//groups.google.com/forum/?fromgroups#!forum/ima-sdk"
+  
+  
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/touchicon-180-new.png"
+  
+  
+    project-support-url="//groups.google.com/forum/?fromgroups#!forum/ima-sdk"
+  
+  
+  >
+
+  <button>
+  
+    Need to tell us more?
+  
+  </button>
+</devsite-feedback>
+    </template>
+  
+  
+    <template class="devsite-content-data-template">
+      [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Missing the information I need","missingTheInformationINeed","thumb-down"],["Too complicated / too many steps","tooComplicatedTooManySteps","thumb-down"],["Out of date","outOfDate","thumb-down"],["Samples / code issue","samplesCodeIssue","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-09-01 UTC."],[],[]]
+    </template>
+  
+</div>
+            
+          </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+          
+            
+          
+        </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+          
+            
+<nav class="devsite-footer-linkboxes nocontent"
+     aria-label="Footer links"
+     data-nosnippet>
+  
+  <ul class="devsite-footer-linkboxes-list">
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Engage</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/program"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Google Developer Program
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/community"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Google Developer Groups
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/community/experts"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Google Developer Experts
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/community/accelerators"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+          
+            Accelerators
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/community/nvidia"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+            
+              
+              
+            
+          
+            Google Cloud & NVIDIA
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Connect</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//googledevelopers.blogspot.com"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Blog
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://bsky.app/profile/developers.google.com"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Bluesky
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.instagram.com/googlefordevs/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Instagram
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.linkedin.com/showcase/googledevelopers/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+          
+            LinkedIn
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//twitter.com/googledevs"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+            
+          
+            X (Twitter)
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//www.youtube.com/user/GoogleDevelopers"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 6)"
+            >
+            
+              
+              
+            
+          
+            YouTube
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Build</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developer.android.com/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Android
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developer.chrome.com/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Chrome
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://firebase.google.com/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Firebase
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://aistudio.google.com/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+          
+            Google AI Studio
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://antigravity.google/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+            
+          
+            Google Antigravity
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://cloud.google.com/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 6)"
+            >
+            
+          
+            Google Cloud
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://play.google.com/console/about/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 7)"
+            >
+            
+          
+            Google Play
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/products"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 8)"
+            >
+            
+              
+              
+            
+          
+            View all
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+  
+</nav>
+          
+        </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+          
+            
+
+<div class="devsite-footer-utility nocontent" data-nosnippet>
+  
+  
+  <nav class="devsite-footer-sites" aria-label="Other Google Developers websites">
+    <a href="https://developers.google.com/"
+       class="devsite-footer-sites-logo-link gc-analytics-event"
+       data-category="Site-Wide Custom Events"
+       data-label="Footer Google Developers Link">
+      <picture>
+        
+        <img class="devsite-footer-sites-logo"
+             src="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/lockup-google-for-developers.svg"
+             loading="lazy"
+             alt="Google Developers">
+      </picture>
+    </a>
+    <ul class="devsite-footer-sites-list">
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//developer.android.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Android Link"
+         
+         >
+          Android
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//developer.chrome.com/home"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Chrome Link"
+         
+         >
+          Chrome
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//firebase.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Firebase Link"
+         
+         >
+          Firebase
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//cloud.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Google Cloud Platform Link"
+         
+         >
+          Google Cloud Platform
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//ai.google.dev/"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Google AI Link"
+         
+         >
+          Google AI
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="/products"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer All products Link"
+         
+         >
+          All products
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+  
+
+  
+  <nav class="devsite-footer-utility-links" aria-label="Utility links">
+    
+    <ul class="devsite-footer-utility-list">
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/terms/site-terms"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          Terms
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          Privacy
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 glue-cookie-notification-bar-control">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="#"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Manage cookies link"
+         
+           aria-hidden="true"
+         >
+          Manage cookies
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+    
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es"
+        >Español</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+  </nav>
+</div>
+          
+        </devsite-footer-utility>
+        <devsite-panel>
+          
+        </devsite-panel>
+        
+      </section>
+      </section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar></devsite-snackbar>
+    <devsite-tooltip ></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics>
+      
+        <script type="application/json" analytics>[{&#34;dimensions&#34;: {&#34;dimension11&#34;: false, &#34;dimension4&#34;: &#34;IMA SDK for HTML5&#34;, &#34;dimension5&#34;: &#34;en&#34;, &#34;dimension1&#34;: &#34;Signed out&#34;, &#34;dimension3&#34;: false, &#34;dimension6&#34;: &#34;en&#34;}, &#34;gaid&#34;: &#34;UA-24532603-1&#34;, &#34;metrics&#34;: {&#34;ratings_count&#34;: &#34;metric2&#34;, &#34;ratings_value&#34;: &#34;metric1&#34;}, &#34;purpose&#34;: 1}]</script>
+<script type="application/json" tag-management>{&#34;at&#34;: &#34;True&#34;, &#34;ga4&#34;: [{&#34;id&#34;: &#34;G-21YFS95G19&#34;, &#34;purpose&#34;: 0}, {&#34;id&#34;: &#34;G-272J68FCRF&#34;, &#34;purpose&#34;: 1}], &#34;ga4p&#34;: [{&#34;id&#34;: &#34;G-272J68FCRF&#34;, &#34;purpose&#34;: 1}], &#34;gtm&#34;: [{&#34;id&#34;: &#34;GTM-T98GCPGN&#34;, &#34;purpose&#34;: 1}], &#34;parameters&#34;: {&#34;internalUser&#34;: &#34;False&#34;, &#34;language&#34;: {&#34;machineTranslated&#34;: &#34;False&#34;, &#34;requested&#34;: &#34;en&#34;, &#34;served&#34;: &#34;en&#34;}, &#34;pageType&#34;: &#34;article&#34;, &#34;projectName&#34;: &#34;IMA SDK for HTML5&#34;, &#34;signedIn&#34;: &#34;False&#34;, &#34;tenant&#34;: &#34;developers&#34;, &#34;recommendations&#34;: {&#34;sourcePage&#34;: &#34;&#34;, &#34;sourceType&#34;: 0, &#34;sourceRank&#34;: 0, &#34;sourceIdenticalDescriptions&#34;: 0, &#34;sourceTitleWords&#34;: 0, &#34;sourceDescriptionWords&#34;: 0, &#34;experiment&#34;: &#34;&#34;}, &#34;experiment&#34;: {&#34;ids&#34;: &#34;&#34;}}}</script>
+      
+    </devsite-analytics>
+    
+      <devsite-badger></devsite-badger>
+    
+    
+    
+    
+<script nonce="oHdpJs9sKmV7lmyNPdFJdsiRtex4uT">
+  
+  (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/js/app_loader.js', '[1,"en",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037","https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers","https://developers-dot-devsite-v2-prod.appspot.com",1,null,["/_pwa/developers/manifest.json","https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/favicon-new.png","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap"],1,null,[1,6,8,12,14,17,21,25,50,52,63,70,75,76,80,87,91,92,93,97,98,100,101,102,103,104,105,107,108,109,110,112,113,116,117,118,120,122,124,125,126,127,129,130,131,132,133,134,135,136,138,140,141,147,148,149,151,152,156,157,158,159,161,163,164,168,169,170,179,180,182,183,186,191,193,196],"AIzaSyAP-jjEJBzmIyKR4F-3XITp8yM9T1gEEI8","AIzaSyB6xiKGDR5O3Ak2okS4rLkauxGUG7XP0hg","developers.google.com","AIzaSyAQk0fBONSGUqCNznf6Krs82Ap1-NV6J4o","AIzaSyCCxcqdrZ_7QMeLCRY20bh_SXdAYqy70KY",null,null,null,["DevPro__enable_cloud_innovators_plus","DevPro__enable_developer_subscriptions","CloudShell__cloud_shell_button","Concierge__enable_remove_info_panel_tags","Profiles__enable_developer_profiles_callout","DevPro__enable_nvidia_credits_card","Cloud__enable_cloud_dlp_service","Cloud__enable_legacy_calculator_redirect","Search__enable_ai_search_summaries_for_all","DevPro__enable_enterprise","Search__enable_ai_search_summaries","Cloud__enable_free_trial_server_call","Cloud__fast_free_trial","DevPro__enable_google_one_card","Concierge__enable_concierge","Profiles__enable_page_saving","Cloud__enable_cloudx_experiment_ids","MiscFeatureFlags__enable_project_variables","Analytics__enable_clearcut_logging","DevPro__enable_google_payments_buyflow","Cloud__enable_cloud_shell_fte_user_flow","MiscFeatureFlags__fix_lower_breadcrumbs","Significatio__enable_by_tenant","Profiles__enable_dashboard_curated_recommendations","Profiles__enable_developer_profile_benefits_ui_redesign","Profiles__enable_developer_profile_pages_as_content","DevPro__enable_vertex_credit_card","SignIn__enable_l1_signup_flow","Profiles__enable_recognition_badges","AIStudioInteractionsToggle__interactions_are_default","MiscFeatureFlags__enable_view_transitions","Concierge__enable_key_takeaways_new_ui","Profiles__enable_auto_apply_credits","DevPro__enable_credits_banner","Cloud__cache_serialized_dynamic_content","DevPro__enable_devpro_offers","Profiles__enable_stripe_subscription_management","Analytics__enable_devpro_interaction_logging","MiscFeatureFlags__enable_variable_operator_index_yaml","MiscFeatureFlags__enable_appearance_cookies","Profiles__enable_join_program_group_endpoint","Profiles__enable_targeted_hero","Search__enable_suggestions_from_borg","Search__enable_dynamic_content_confidential_banner","DevPro__enable_code_assist","Concierge__enable_key_takeaways","DevPro__enable_devsite_captcha","DevPro__enable_firebase_workspaces_card","Search__enable_ai_search_summaries_restricted","DevPro__enable_g1_integration","Profiles__enable_completequiz_endpoint","MiscFeatureFlags__enable_framebox_badge_methods","Profiles__require_profile_eligibility_for_signin","MiscFeatureFlags__developers_footer_dark_image","EngEduTelemetry__enable_engedu_telemetry","Profiles__enable_user_type","Cloud__enable_cloud_shell","MiscFeatureFlags__enable_explicit_template_dependencies","Profiles__enable_completecodelab_endpoint","Concierge__enable_actions_menu","TpcFeatures__proxy_prod_host","Search__enable_ai_eligibility_checks","Profiles__enable_public_developer_profiles","TpcFeatures__enable_unmirrored_page_left_nav","MiscFeatureFlags__gdp_dashboard_reskin_enabled","DevPro__remove_eu_tax_intake_form","DevPro__enable_free_benefits","Profiles__enable_purchase_prompts","Search__enable_page_map","Profiles__enable_playlist_community_acl","DevPro__enable_g1_ineligible_redirect","Profiles__enable_complete_playlist_endpoint","Profiles__enable_release_notes_notifications","Profiles__enable_awarding_url","DevPro__enable_embed_profile_creation","Concierge__enable_concierge_restricted","MiscFeatureFlags__enable_variable_operator","Profiles__enable_profile_collections","MiscFeatureFlags__developers_footer_image","Experiments__reqs_query_experiments","MiscFeatureFlags__enable_explain_this_code","MiscFeatureFlags__remove_cross_domain_tracking_params","Profiles__enable_callout_notifications","MiscFeatureFlags__enable_firebase_utm","CloudShell__cloud_code_overflow_menu","Concierge__enable_pushui","BookNav__enable_tenant_cache_key","Concierge__enable_devsite_llm_tools"],null,null,"AIzaSyBLEMok-5suZ67qRPzx0qUtbnLmyT_kCVE","https://developerscontentserving-pa.clients6.google.com","AIzaSyCM4QpTRSqP5qI4Dvjt4OAScIN8sOUlO-k","https://developerscontentsearch-pa.clients6.google.com",1,4,null,"https://developerprofiles-pa.clients6.google.com",[1,"developers","Google for Developers","developers.google.com",null,"developers-dot-devsite-v2-prod.appspot.com",null,null,[1,1,[1],null,null,null,null,null,null,null,null,[1],null,null,null,null,null,null,[1],[1,null,null,[1,20],"/recommendations/information"],null,null,null,[1,1,1],[1,1,null,1,1,null,null,["/meridian"]],[1,null,null,null,null,null,null,["/admob","/ad-manager/mobile-ads-sdk","/ml-kit"]],null,[null,["/meridian","/youtube/devices/"]],1,null,[1]],null,[null,null,null,null,null,null,"/images/lockup-new.svg","/images/touchicon-180-new.png",null,null,null,null,1,null,null,null,null,null,null,null,null,1,null,null,null,"/images/lockup-dark-theme-new.svg",[]],[],null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[6,1,14,15,20,22,23,29,32,36],null,[[null,null,null,[3,7,10,2,39,17,4,32,24,11,12,13,34,15,25],null,null,[1,[["docType","Choose a content type",[["Tutorial",null,null,null,null,null,null,null,null,"Tutorial"],["Guide",null,null,null,null,null,null,null,null,"Guide"],["Sample",null,null,null,null,null,null,null,null,"Sample"]]],["product","Choose a product",[["Android",null,null,null,null,null,null,null,null,"Android"],["ARCore",null,null,null,null,null,null,null,null,"ARCore"],["ChromeOS",null,null,null,null,null,null,null,null,"ChromeOS"],["Firebase",null,null,null,null,null,null,null,null,"Firebase"],["Flutter",null,null,null,null,null,null,null,null,"Flutter"],["Assistant",null,null,null,null,null,null,null,null,"Google Assistant"],["GoogleCloud",null,null,null,null,null,null,null,null,"Google Cloud"],["GoogleMapsPlatform",null,null,null,null,null,null,null,null,"Google Maps Platform"],["GooglePay",null,null,null,null,null,null,null,null,"Google Pay & Google Wallet"],["GooglePlay",null,null,null,null,null,null,null,null,"Google Play"],["Tensorflow",null,null,null,null,null,null,null,null,"TensorFlow"]]],["category","Choose a topic",[["AiAndMachineLearning",null,null,null,null,null,null,null,null,"AI and Machine Learning"],["Data",null,null,null,null,null,null,null,null,"Data"],["Enterprise",null,null,null,null,null,null,null,null,"Enterprise"],["Gaming",null,null,null,null,null,null,null,null,"Gaming"],["Mobile",null,null,null,null,null,null,null,null,"Mobile"],["Web",null,null,null,null,null,null,null,null,"Web"]]]]]],[1,1],null,1],[[["UA-24532603-1"],["UA-22084204-5"],null,null,["UA-24532603-5"],["GTM-T98GCPGN"],null,[["G-272J68FCRF"],null,null,[["G-272J68FCRF",2]]],[["UA-24532603-1",2]],null,[["UA-24532603-5",2]],[["GTM-T98GCPGN",2]],1],[[4,3],[12,9],[15,12],[5,4],[6,5],[14,11],[13,10],[11,8],[16,13],[3,2],[1,1]],[[1,1],[2,2]]],null,4,null,null,null,null,null,null,null,null,null,null,null,null,null,"developers.devsite.google",null,null,null,null,null,[]],null,"pk_live_5170syrHvgGVmSx9sBrnWtA5luvk9BwnVcvIi7HizpwauFG96WedXsuXh790rtij9AmGllqPtMLfhe2RSwD6Pn38V00uBCydV4m",null,null,"https://developerscontentinsights-pa.clients6.google.com","AIzaSyCg-ZUslalsEbXMfIo9ZP8qufZgo3LSBDU","AIzaSyDxT0vkxnY_KeINtA4LSePJO-4MAZPMRsE","https://developers.clients6.google.com",["https://codeassist.google.com","https://code-assist-free-tier.corp.google.com"],null,"AIzaSyBQom12tzI-rybN7Sf-KfeL4nwm-Rf7PmI\n",null,null,"https://developers.googleapis.com"]')
+  
+</script>
+
+    <devsite-a11y-announce></devsite-a11y-announce>
+  </body>
+</html>

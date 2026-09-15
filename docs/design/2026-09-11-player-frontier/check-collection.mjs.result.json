@@ -1,0 +1,11 @@
+{
+  "passed": 5,
+  "checks": [
+    "Accepted Record creates no alternative geometry",
+    "All three production assets lazily instantiate with camera profiles and a single visible world",
+    "Repeated selection reuses GPU assets rather than accumulating worlds",
+    "Returning to Record hides every alternative and clears bespoke camera profile",
+    "Collection disposal removes all lazily loaded worlds and is idempotent"
+  ],
+  "scope": "Actual production collection and Three classes; module resolution alone adapted for Node. Browser rendering separately inspected."
+}

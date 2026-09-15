@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+    <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>GetEmailIdentity - Amazon Simple Email Service</title><meta name="viewport" content="width=device-width,initial-scale=1" /><meta name="assets_root" content="/assets" /><meta name="target_state" content="API_GetEmailIdentity" /><meta name="default_state" content="API_GetEmailIdentity" /><link rel="icon" type="image/ico" href="/assets/images/favicon.ico" /><link rel="shortcut icon" type="image/ico" href="/assets/images/favicon.ico" /><link rel="canonical" href="https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_GetEmailIdentity.html" /><meta name="description" content="Provides information about a specific identity, including the identity's verification status, sending authorization policies, its DKIM authentication status, and its custom Mail-From settings." /><meta name="deployment_region" content="IAD" /><meta name="product" content="Amazon Simple Email Service" /><meta name="guide" content="API v2 Reference" /><meta name="abstract" content="Welcome to the Amazon SES API v2 Reference. This guide provides information about the Amazon SES API v2, including supported operations, data types, parameters, and schemas." /><meta name="guide-locale" content="en_us" /><meta name="tocs" content="toc-contents.json" /><link rel="canonical" href="https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_GetEmailIdentity.html" /><link rel="alternate" href="https://docs.aws.amazon.com/id_id/ses/latest/APIReference-V2/API_GetEmailIdentity.html" hreflang="id-id" /><link rel="alternate" href="https://docs.aws.amazon.com/id_id/ses/latest/APIReference-V2/API_GetEmailIdentity.html" hreflang="id" /><link rel="alternate" href="https://docs.aws.amazon.com/de_de/ses/latest/APIReference-V2/API_GetEmailIdentity.html" hreflang="de-de" /><link rel="alternate" href="https://docs.aws.amazon.com/de_de/ses/latest/APIReference-V2/API_GetEmailIdentity.html" hreflang="de" /><link rel="alternate" href="https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_GetEmailIdentity.html" hreflang="en-us" /><link rel="alternate" href="https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_GetEmailIdentity.html" hreflang="en" /><link rel="alternate" href="https://docs.aws.amazon.com/es_es/ses/latest/APIReference-V2/API_GetEmailIdentity.html" hreflang="es-es" /><link rel="alternate" href="https://docs.aws.amazon.com/es_es/ses/latest/APIReference-V2/API_GetEmailIdentity.html" hreflang="es" /><link rel="alternate" href="https://docs.aws.amazon.com/fr_fr/ses/latest/APIReference-V2/API_GetEmailIdentity.html" hreflang="fr-fr" /><link rel="alternate" href="https://docs.aws.amazon.com/fr_fr/ses/latest/APIReference-V2/API_GetEmailIdentity.html" hreflang="fr" /><link rel="alternate" href="https://docs.aws.amazon.com/it_it/ses/latest/APIReference-V2/API_GetEmailIdentity.html" hreflang="it-it" /><link rel="alternate" href="https://docs.aws.amazon.com/it_it/ses/latest/APIReference-V2/API_GetEmailIdentity.html" hreflang="it" /><link rel="alternate" href="https://docs.aws.amazon.com/ja_jp/ses/latest/APIReference-V2/API_GetEmailIdentity.html" hreflang="ja-jp" /><link rel="alternate" href="https://docs.aws.amazon.com/ja_jp/ses/latest/APIReference-V2/API_GetEmailIdentity.html" hreflang="ja" /><link rel="alternate" href="https://docs.aws.amazon.com/ko_kr/ses/latest/APIReference-V2/API_GetEmailIdentity.html" hreflang="ko-kr" /><link rel="alternate" href="https://docs.aws.amazon.com/ko_kr/ses/latest/APIReference-V2/API_GetEmailIdentity.html" hreflang="ko" /><link rel="alternate" href="https://docs.aws.amazon.com/pt_br/ses/latest/APIReference-V2/API_GetEmailIdentity.html" hreflang="pt-br" /><link rel="alternate" href="https://docs.aws.amazon.com/pt_br/ses/latest/APIReference-V2/API_GetEmailIdentity.html" hreflang="pt" /><link rel="alternate" href="https://docs.aws.amazon.com/zh_cn/ses/latest/APIReference-V2/API_GetEmailIdentity.html" hreflang="zh-cn" /><link rel="alternate" href="https://docs.aws.amazon.com/zh_tw/ses/latest/APIReference-V2/API_GetEmailIdentity.html" hreflang="zh-tw" /><link rel="alternate" href="https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_GetEmailIdentity.html" hreflang="x-default" /><meta name="feedback-item" content="SES" /><meta name="this_doc_product" content="Amazon Simple Email Service" /><meta name="this_doc_guide" content="API v2 Reference" /><head xmlns="http://www.w3.org/1999/xhtml"> <script defer="" src="/assets/r/awsdocs-doc-page.2.0.0.js"></script><link href="/assets/r/awsdocs-doc-page.2.0.0.css" rel="stylesheet"/></head>
+<script defer="" id="awsc-panorama-bundle" type="text/javascript" src="https://prod.pa.cdn.uis.awsstatic.com/panorama-nav-init.js" data-config="{'appEntity':'aws-documentation','region':'us-east-1','service':'ses'}"></script><meta id="panorama-serviceSubSection" value="API v2 Reference" /><meta id="panorama-serviceConsolePage" value="GetEmailIdentity" /></head><body class="awsdocs awsui"><div class="awsdocs-container"><p><a href="API_GetEmailIdentity.md">View a markdown version of this page</a></p><awsdocs-header></awsdocs-header><awsui-app-layout id="app-layout" class="awsui-util-no-gutters" ng-controller="ContentController as $ctrl" header-selector="awsdocs-header" navigation-hide="false" navigation-width="$ctrl.navWidth" navigation-open="$ctrl.navOpen" navigation-change="$ctrl.onNavChange($event)" tools-hide="$ctrl.hideTools" tools-width="$ctrl.toolsWidth" tools-open="$ctrl.toolsOpen" tools-change="$ctrl.onToolsChange($event)"><div id="guide-toc" dom-region="navigation"><awsdocs-toc></awsdocs-toc></div><div id="main-column" dom-region="content" tabindex="-1"><awsdocs-view class="awsdocs-view"><div id="awsdocs-content"><head><title>GetEmailIdentity - Amazon Simple Email Service</title><meta name="pdf" content="/pdfs/ses/latest/APIReference-V2/ses-apiv2.pdf#API_GetEmailIdentity" /><meta name="forums" content="https://repost.aws/tags/TAAR3LByLsRUCXpQk5biG7FQ" /><meta name="feedback" content="https://docs.aws.amazon.com/forms/aws-doc-feedback?hidden_service_name=SES&amp;topic_url=https://docs.aws.amazon.com/en_us/ses/latest/APIReference-V2/API_GetEmailIdentity.html" /><meta name="feedback-yes" content="feedbackyes.html?topic_url=https://docs.aws.amazon.com/en_us/ses/latest/APIReference-V2/API_GetEmailIdentity.html" /><meta name="feedback-no" content="feedbackno.html?topic_url=https://docs.aws.amazon.com/en_us/ses/latest/APIReference-V2/API_GetEmailIdentity.html" /><meta name="keywords" content="API,requests,GetEmailIdentity" /><link rel="alternate" type="text/markdown" href="API_GetEmailIdentity.md" title="Markdown version" /><script type="application/ld+json">
+{
+    "@context" : "https://schema.org",
+    "@type" : "BreadcrumbList",
+    "itemListElement" : [
+      {
+        "@type" : "ListItem",
+        "position" : 1,
+        "name" : "AWS",
+        "item" : "https://aws.amazon.com"
+      },
+      {
+        "@type" : "ListItem",
+        "position" : 2,
+        "name" : "Amazon SES Documentation",
+        "item" : "https://docs.aws.amazon.com/ses/index.html"
+      },
+      {
+        "@type" : "ListItem",
+        "position" : 3,
+        "name" : "API v2 Reference",
+        "item" : "https://docs.aws.amazon.com/ses/latest/APIReference-V2"
+      },
+      {
+        "@type" : "ListItem",
+        "position" : 4,
+        "name" : "Actions",
+        "item" : "https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_Operations.html"
+      },
+      {
+        "@type" : "ListItem",
+        "position" : 5,
+        "name" : "GetEmailIdentity",
+        "item" : "https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_Operations.html"
+      }
+    ]
+}
+</script></head><body><div id="main"><div style="display: none"><a href="/pdfs/ses/latest/APIReference-V2/ses-apiv2.pdf#API_GetEmailIdentity" target="_blank" rel="noopener noreferrer" title="Open PDF"></a></div><div id="breadcrumbs" class="breadcrumb"><a href="/index.html">Documentation</a><a href="/ses/index.html">Amazon SES Documentation</a><a href="Welcome.html">API v2 Reference</a></div><div id="page-toc-src"><a href="#API_GetEmailIdentity_RequestSyntax">Request Syntax</a><a href="#API_GetEmailIdentity_RequestParameters">URI Request Parameters</a><a href="#API_GetEmailIdentity_RequestBody">Request Body</a><a href="#API_GetEmailIdentity_ResponseSyntax">Response Syntax</a><a href="#API_GetEmailIdentity_ResponseElements">Response Elements</a><a href="#API_GetEmailIdentity_Errors">Errors</a><a href="#API_GetEmailIdentity_SeeAlso">See Also</a></div><div id="main-content" class="awsui-util-container"><div id="main-col-body"><awsdocs-language-banner data-service="$ctrl.pageService"></awsdocs-language-banner><h1 class="topictitle" id="API_GetEmailIdentity">GetEmailIdentity</h1><div class="awsdocs-page-header-container"><awsdocs-page-header></awsdocs-page-header><awsdocs-filter-selector id="awsdocs-filter-selector"></awsdocs-filter-selector></div><p>Provides information about a specific identity, including the identity's verification
+            status, sending authorization policies, its DKIM authentication status, and its custom
+            Mail-From settings.</p>
+      <h2 id="API_GetEmailIdentity_RequestSyntax">Request Syntax</h2>
+      <pre class="programlisting"><div class="code-btn-container"></div><!--DEBUG: cli ()--><code class="nohighlight">GET /v2/email/identities/<code class="replaceable">EmailIdentity</code> HTTP/1.1
+</code></pre>
+    
+      <h2 id="API_GetEmailIdentity_RequestParameters">URI Request Parameters</h2>
+      <p>The request uses the following URI parameters.</p>
+      <div class="variablelist">
+          
+      <dl>
+            <dt id="SES-GetEmailIdentity-request-uri-EmailIdentity"><span class="term">
+               <b>
+                  <a href="#API_GetEmailIdentity_RequestSyntax">EmailIdentity</a>
+               </b>
+            </span></dt>
+            <dd>
+               <p>The email identity.</p>
+               <p>Length Constraints: Minimum length of 1.</p>
+               <p>Required: Yes</p>
+            </dd>
+         </dl></div>
+    
+      <h2 id="API_GetEmailIdentity_RequestBody">Request Body</h2>
+      <p>The request does not have a request body.</p>
+    
+      <h2 id="API_GetEmailIdentity_ResponseSyntax">Response Syntax</h2>
+      <pre class="programlisting"><div class="code-btn-container"></div><!--DEBUG: cli ()--><code class="nohighlight">HTTP/1.1 200
+Content-type: application/json
+
+<span>{</span>
+   "<a href="#SES-GetEmailIdentity-response-ConfigurationSetName">ConfigurationSetName</a>": "<b><em>string</em></b>",
+   "<a href="#SES-GetEmailIdentity-response-DkimAttributes">DkimAttributes</a>": <span>{</span> 
+      "<a href="./API_DkimAttributes.html#SES-Type-DkimAttributes-CurrentSigningKeyLength">CurrentSigningKeyLength</a>": "<b><em>string</em></b>",
+      "<a href="./API_DkimAttributes.html#SES-Type-DkimAttributes-LastKeyGenerationTimestamp">LastKeyGenerationTimestamp</a>": <b><em>number</em></b>,
+      "<a href="./API_DkimAttributes.html#SES-Type-DkimAttributes-NextSigningKeyLength">NextSigningKeyLength</a>": "<b><em>string</em></b>",
+      "<a href="./API_DkimAttributes.html#SES-Type-DkimAttributes-SigningAttributesOrigin">SigningAttributesOrigin</a>": "<b><em>string</em></b>",
+      "<a href="./API_DkimAttributes.html#SES-Type-DkimAttributes-SigningEnabled">SigningEnabled</a>": <b><em>boolean</em></b>,
+      "<a href="./API_DkimAttributes.html#SES-Type-DkimAttributes-SigningHostedZone">SigningHostedZone</a>": "<b><em>string</em></b>",
+      "<a href="./API_DkimAttributes.html#SES-Type-DkimAttributes-Status">Status</a>": "<b><em>string</em></b>",
+      "<a href="./API_DkimAttributes.html#SES-Type-DkimAttributes-Tokens">Tokens</a>": [ "<b><em>string</em></b>" ]
+   },
+   "<a href="#SES-GetEmailIdentity-response-FeedbackForwardingStatus">FeedbackForwardingStatus</a>": <b><em>boolean</em></b>,
+   "<a href="#SES-GetEmailIdentity-response-IdentityType">IdentityType</a>": "<b><em>string</em></b>",
+   "<a href="#SES-GetEmailIdentity-response-MailFromAttributes">MailFromAttributes</a>": <span>{</span> 
+      "<a href="./API_MailFromAttributes.html#SES-Type-MailFromAttributes-BehaviorOnMxFailure">BehaviorOnMxFailure</a>": "<b><em>string</em></b>",
+      "<a href="./API_MailFromAttributes.html#SES-Type-MailFromAttributes-MailFromDomain">MailFromDomain</a>": "<b><em>string</em></b>",
+      "<a href="./API_MailFromAttributes.html#SES-Type-MailFromAttributes-MailFromDomainStatus">MailFromDomainStatus</a>": "<b><em>string</em></b>"
+   },
+   "<a href="#SES-GetEmailIdentity-response-Policies">Policies</a>": <span>{</span> 
+      "<b><em>string</em></b>" : "<b><em>string</em></b>" 
+   },
+   "<a href="#SES-GetEmailIdentity-response-Tags">Tags</a>": [ 
+      <span>{</span> 
+         "<a href="./API_Tag.html#SES-Type-Tag-Key">Key</a>": "<b><em>string</em></b>",
+         "<a href="./API_Tag.html#SES-Type-Tag-Value">Value</a>": "<b><em>string</em></b>"
+      }
+   ],
+   "<a href="#SES-GetEmailIdentity-response-VerificationInfo">VerificationInfo</a>": <span>{</span> 
+      "<a href="./API_VerificationInfo.html#SES-Type-VerificationInfo-ErrorType">ErrorType</a>": "<b><em>string</em></b>",
+      "<a href="./API_VerificationInfo.html#SES-Type-VerificationInfo-LastCheckedTimestamp">LastCheckedTimestamp</a>": <b><em>number</em></b>,
+      "<a href="./API_VerificationInfo.html#SES-Type-VerificationInfo-LastSuccessTimestamp">LastSuccessTimestamp</a>": <b><em>number</em></b>,
+      "<a href="./API_VerificationInfo.html#SES-Type-VerificationInfo-SOARecord">SOARecord</a>": <span>{</span> 
+         "<a href="./API_SOARecord.html#SES-Type-SOARecord-AdminEmail">AdminEmail</a>": "<b><em>string</em></b>",
+         "<a href="./API_SOARecord.html#SES-Type-SOARecord-PrimaryNameServer">PrimaryNameServer</a>": "<b><em>string</em></b>",
+         "<a href="./API_SOARecord.html#SES-Type-SOARecord-SerialNumber">SerialNumber</a>": <b><em>number</em></b>
+      }
+   },
+   "<a href="#SES-GetEmailIdentity-response-VerificationStatus">VerificationStatus</a>": "<b><em>string</em></b>",
+   "<a href="#SES-GetEmailIdentity-response-VerifiedForSendingStatus">VerifiedForSendingStatus</a>": <b><em>boolean</em></b>
+}</code></pre>
+    
+      <h2 id="API_GetEmailIdentity_ResponseElements">Response Elements</h2>
+      <p>If the action is successful, the service sends back an HTTP 200 response.</p>
+      <p>The following data is returned in JSON format by the service.</p>
+      <div class="variablelist">
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+      <dl>
+            <dt id="SES-GetEmailIdentity-response-ConfigurationSetName"><span class="term">
+               <b>
+                  <a href="#API_GetEmailIdentity_ResponseSyntax">ConfigurationSetName</a>
+               </b>
+            </span></dt>
+            <dd>
+               <p>The configuration set used by default when sending from this identity.</p>
+               <p>Type: String</p>
+            </dd>
+          
+            <dt id="SES-GetEmailIdentity-response-DkimAttributes"><span class="term">
+               <b>
+                  <a href="#API_GetEmailIdentity_ResponseSyntax">DkimAttributes</a>
+               </b>
+            </span></dt>
+            <dd>
+               <p>An object that contains information about the DKIM attributes for the identity.</p>
+               <p>Type: <a href="./API_DkimAttributes.html">DkimAttributes</a> object</p>
+            </dd>
+          
+            <dt id="SES-GetEmailIdentity-response-FeedbackForwardingStatus"><span class="term">
+               <b>
+                  <a href="#API_GetEmailIdentity_ResponseSyntax">FeedbackForwardingStatus</a>
+               </b>
+            </span></dt>
+            <dd>
+               <p>The feedback forwarding configuration for the identity.</p>
+               <p>If the value is <code class="code">true</code>, you receive email notifications when bounce or
+            complaint events occur. These notifications are sent to the address that you specified
+            in the <code class="code">Return-Path</code> header of the original email.</p>
+               <p>You're required to have a method of tracking bounces and complaints. If you haven't
+            set up another mechanism for receiving bounce or complaint notifications (for example,
+            by setting up an event destination), you receive an email notification when these events
+            occur (even if this setting is disabled).</p>
+               <p>Type: Boolean</p>
+            </dd>
+          
+            <dt id="SES-GetEmailIdentity-response-IdentityType"><span class="term">
+               <b>
+                  <a href="#API_GetEmailIdentity_ResponseSyntax">IdentityType</a>
+               </b>
+            </span></dt>
+            <dd>
+               <p>The email identity type. Note: the <code class="code">MANAGED_DOMAIN</code> identity type is not
+            supported.</p>
+               <p>Type: String</p>
+               <p>Valid Values: <code class="code">EMAIL_ADDRESS | DOMAIN | MANAGED_DOMAIN</code>
+               </p>
+            </dd>
+          
+            <dt id="SES-GetEmailIdentity-response-MailFromAttributes"><span class="term">
+               <b>
+                  <a href="#API_GetEmailIdentity_ResponseSyntax">MailFromAttributes</a>
+               </b>
+            </span></dt>
+            <dd>
+               <p>An object that contains information about the Mail-From attributes for the email
+            identity.</p>
+               <p>Type: <a href="./API_MailFromAttributes.html">MailFromAttributes</a> object</p>
+            </dd>
+          
+            <dt id="SES-GetEmailIdentity-response-Policies"><span class="term">
+               <b>
+                  <a href="#API_GetEmailIdentity_ResponseSyntax">Policies</a>
+               </b>
+            </span></dt>
+            <dd>
+               <p>A map of policy names to policies.</p>
+               <p>Type: String to string map</p>
+               <p>Key Length Constraints: Minimum length of 1. Maximum length of 64.</p>
+               <p>Value Length Constraints: Minimum length of 1.</p>
+            </dd>
+          
+            <dt id="SES-GetEmailIdentity-response-Tags"><span class="term">
+               <b>
+                  <a href="#API_GetEmailIdentity_ResponseSyntax">Tags</a>
+               </b>
+            </span></dt>
+            <dd>
+               <p>An array of objects that define the tags (keys and values) that are associated with
+            the email identity.</p>
+               <p>Type: Array of <a href="./API_Tag.html">Tag</a> objects</p>
+            </dd>
+          
+            <dt id="SES-GetEmailIdentity-response-VerificationInfo"><span class="term">
+               <b>
+                  <a href="#API_GetEmailIdentity_ResponseSyntax">VerificationInfo</a>
+               </b>
+            </span></dt>
+            <dd>
+               <p>An object that contains additional information about the verification status for the
+            identity.</p>
+               <p>Type: <a href="./API_VerificationInfo.html">VerificationInfo</a> object</p>
+            </dd>
+          
+            <dt id="SES-GetEmailIdentity-response-VerificationStatus"><span class="term">
+               <b>
+                  <a href="#API_GetEmailIdentity_ResponseSyntax">VerificationStatus</a>
+               </b>
+            </span></dt>
+            <dd>
+               <p>The verification status of the identity. The status can be one of the following:</p>
+               <div class="itemizedlist">
+                   
+                   
+                   
+                   
+                   
+               <ul class="itemizedlist"><li class="listitem">
+                     <p>
+                        <code class="code">PENDING</code> – The verification process was initiated, but Amazon SES
+                    hasn't yet been able to verify the identity.</p>
+                  </li><li class="listitem">
+                     <p>
+                        <code class="code">SUCCESS</code> – The verification process completed
+                    successfully.</p>
+                  </li><li class="listitem">
+                     <p>
+                        <code class="code">FAILED</code> – The verification process failed.</p>
+                  </li><li class="listitem">
+                     <p>
+                        <code class="code">TEMPORARY_FAILURE</code> – A temporary issue is preventing Amazon SES
+                    from determining the verification status of the identity.</p>
+                  </li><li class="listitem">
+                     <p>
+                        <code class="code">NOT_STARTED</code> – The verification process hasn't been
+                    initiated for the identity.</p>
+                  </li></ul></div>
+               <p>Type: String</p>
+               <p>Valid Values: <code class="code">PENDING | SUCCESS | FAILED | TEMPORARY_FAILURE | NOT_STARTED</code>
+               </p>
+            </dd>
+          
+            <dt id="SES-GetEmailIdentity-response-VerifiedForSendingStatus"><span class="term">
+               <b>
+                  <a href="#API_GetEmailIdentity_ResponseSyntax">VerifiedForSendingStatus</a>
+               </b>
+            </span></dt>
+            <dd>
+               <p>Specifies whether or not the identity is verified. You can only send email from
+            verified email addresses or domains. For more information about verifying identities,
+            see the <a href="https://docs.aws.amazon.com/pinpoint/latest/userguide/channels-email-manage-verify.html">Amazon Pinpoint User Guide</a>.</p>
+               <p>Type: Boolean</p>
+            </dd>
+         </dl></div>
+    
+      <h2 id="API_GetEmailIdentity_Errors">Errors</h2>
+      <p>For information about the errors that are common to all actions, see <a href="./CommonErrors.html">Common Error Types</a>.</p>
+      <div class="variablelist">
+          
+          
+          
+      <dl>
+            <dt><span class="term">
+               <b>
+                  BadRequestException
+               </b>
+            </span></dt>
+            <dd>
+               <p>The input you provided is invalid.</p>
+               <p>HTTP Status Code: 400</p>
+            </dd>
+          
+            <dt><span class="term">
+               <b>
+                  NotFoundException
+               </b>
+            </span></dt>
+            <dd>
+               <p>The resource you attempted to access doesn't exist.</p>
+               <p>HTTP Status Code: 404</p>
+            </dd>
+          
+            <dt><span class="term">
+               <b>
+                  TooManyRequestsException
+               </b>
+            </span></dt>
+            <dd>
+               <p>Too many requests have been made to the operation.</p>
+               <p>HTTP Status Code: 429</p>
+            </dd>
+         </dl></div>
+    
+      <h2 id="API_GetEmailIdentity_SeeAlso">See Also</h2>
+      <p>For more information about using this API in one of the language-specific AWS SDKs, see the following:</p>
+      <div class="itemizedlist">
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+      <ul class="itemizedlist"><li class="listitem">
+            <p>
+               <a href="https://docs.aws.amazon.com/goto/cli2/sesv2-2019-09-27/GetEmailIdentity">AWS Command Line Interface V2</a>
+            </p>
+         </li><li class="listitem">
+            <p>
+               <a href="https://docs.aws.amazon.com/goto/DotNetSDKV4/sesv2-2019-09-27/GetEmailIdentity">AWS SDK for .NET V4</a>
+            </p>
+         </li><li class="listitem">
+            <p>
+               <a href="https://docs.aws.amazon.com/goto/SdkForCpp/sesv2-2019-09-27/GetEmailIdentity">AWS SDK for C++</a>
+            </p>
+         </li><li class="listitem">
+            <p>
+               <a href="https://docs.aws.amazon.com/goto/SdkForGoV2/sesv2-2019-09-27/GetEmailIdentity">AWS SDK for Go v2</a>
+            </p>
+         </li><li class="listitem">
+            <p>
+               <a href="https://docs.aws.amazon.com/goto/SdkForJavaV2/sesv2-2019-09-27/GetEmailIdentity">AWS SDK for Java V2</a>
+            </p>
+         </li><li class="listitem">
+            <p>
+               <a href="https://docs.aws.amazon.com/goto/SdkForJavaScriptV3/sesv2-2019-09-27/GetEmailIdentity">AWS SDK for JavaScript V3</a>
+            </p>
+         </li><li class="listitem">
+            <p>
+               <a href="https://docs.aws.amazon.com/goto/SdkForKotlin/sesv2-2019-09-27/GetEmailIdentity">AWS SDK for Kotlin</a>
+            </p>
+         </li><li class="listitem">
+            <p>
+               <a href="https://docs.aws.amazon.com/goto/SdkForPHPV3/sesv2-2019-09-27/GetEmailIdentity">AWS SDK for PHP V3</a>
+            </p>
+         </li><li class="listitem">
+            <p>
+               <a href="https://docs.aws.amazon.com/goto/boto3/sesv2-2019-09-27/GetEmailIdentity">AWS SDK for Python (Boto3)</a>
+            </p>
+         </li><li class="listitem">
+            <p>
+               <a href="https://docs.aws.amazon.com/goto/SdkForRubyV3/sesv2-2019-09-27/GetEmailIdentity">AWS SDK for Ruby V3</a>
+            </p>
+         </li></ul></div>
+   <awsdocs-copyright class="copyright-print"></awsdocs-copyright><awsdocs-thumb-feedback right-edge="{{$ctrl.thumbFeedbackRightEdge}}"></awsdocs-thumb-feedback></div><noscript><div><div><div><div id="js_error_message"><p><img src="https://d1ge0kk1l5kms0.cloudfront.net/images/G/01/webservices/console/warning.png" alt="Warning" /> <strong>Javascript is disabled or is unavailable in your browser.</strong></p><p>To use the Amazon Web Services Documentation, Javascript must be enabled. Please refer to your browser's Help pages for instructions.</p></div></div></div></div></noscript><div id="main-col-footer" class="awsui-util-font-size-0"><div id="doc-conventions"><a target="_top" href="/general/latest/gr/docconventions.html">Document Conventions</a></div><div class="prev-next"><div id="previous" class="prev-link" accesskey="p" href="./API_GetEmailAddressInsights.html">GetEmailAddressInsights</div><div id="next" class="next-link" accesskey="n" href="./API_GetEmailIdentityPolicies.html">GetEmailIdentityPolicies</div></div></div><awsdocs-page-utilities></awsdocs-page-utilities></div><div id="quick-feedback-yes" style="display: none;"><div class="title">Did this page help you? - Yes</div><div class="content"><p>Thanks for letting us know we're doing a good job!</p><p>If you've got a moment, please tell us what we did right so we can do more of it.</p><p><awsui-button id="fblink" rel="noopener noreferrer" target="_blank" text="Feedback" click="linkClick($event)" href="https://docs.aws.amazon.com/forms/aws-doc-feedback?hidden_service_name=SES&amp;topic_url=https://docs.aws.amazon.com/en_us/ses/latest/APIReference-V2/API_GetEmailIdentity.html"></awsui-button></p></div></div><div id="quick-feedback-no" style="display: none;"><div class="title">Did this page help you? - No</div><div class="content"><p>Thanks for letting us know this page needs work. We're sorry we let you down.</p><p>If you've got a moment, please tell us how we can make the documentation better.</p><p><awsui-button id="fblink" rel="noopener noreferrer" target="_blank" text="Feedback" click="linkClick($event)" href="https://docs.aws.amazon.com/forms/aws-doc-feedback?hidden_service_name=SES&amp;topic_url=https://docs.aws.amazon.com/en_us/ses/latest/APIReference-V2/API_GetEmailIdentity.html"></awsui-button></p></div></div></div></body></div></awsdocs-view><div class="page-loading-indicator" id="page-loading-indicator"><awsui-spinner size="large"></awsui-spinner></div></div><div id="tools-panel" dom-region="tools"><awsdocs-tools-panel id="awsdocs-tools-panel"></awsdocs-tools-panel></div></awsui-app-layout><awsdocs-cookie-banner class="doc-cookie-banner"></awsdocs-cookie-banner></div></body></html>

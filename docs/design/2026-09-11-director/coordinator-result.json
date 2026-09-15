@@ -1,0 +1,80 @@
+{
+  "passed": 18,
+  "failed": 0,
+  "results": [
+    {
+      "name": "Initialization and neutral ticks only read Director storage; all29 saved settings remain exact",
+      "passed": true
+    },
+    {
+      "name": "Audio modulation is ephemeral and paused/ended/unready audio cannot inject new sound",
+      "passed": true
+    },
+    {
+      "name": "Latest peer top-level settings survive a local explicit change and no other store is written",
+      "passed": true
+    },
+    {
+      "name": "Failed writes retain previous unsaved edits, then merge latest peer fields on successful retry",
+      "passed": true
+    },
+    {
+      "name": "Storage events merge dirty fields without writes and ignore unrelated playback/session events",
+      "passed": true
+    },
+    {
+      "name": "Rejected invalid patch cannot poison future valid changes or dirty merge",
+      "passed": true
+    },
+    {
+      "name": "Rejected input preserves existing transient accepted edits before the next valid retry",
+      "passed": true
+    },
+    {
+      "name": "Manual bypass disables active performance without changing saved base, track or scene preference",
+      "passed": true
+    },
+    {
+      "name": "Compare holds engine and neutralizes lens; snapshot is true Original; activation exits Compare",
+      "passed": true
+    },
+    {
+      "name": "Score receives absolute seek time while leaving manual scene preference and playback untouched",
+      "passed": true
+    },
+    {
+      "name": "UI seek delegates to the provided intentional session seek boundary",
+      "passed": true
+    },
+    {
+      "name": "Track mismatch and bypass return to independent manual scene without storing cue scene choices",
+      "passed": true
+    },
+    {
+      "name": "Motion-off score is held by genuine host diagnostics and static optics edits remain applicable",
+      "passed": true
+    },
+    {
+      "name": "UI receives effective cue snapshot rather than saved base and updates are limited to ~10Hz",
+      "passed": true
+    },
+    {
+      "name": "Unavailable room safely defers ticks and gives a truthful capture error",
+      "passed": true
+    },
+    {
+      "name": "Capture delegates to the live room Blob and local download boundary without changing audio/storage",
+      "passed": true
+    },
+    {
+      "name": "Disposal removes the storage listener and disposes UI boundary",
+      "passed": true
+    },
+    {
+      "name": "Actual main wiring keeps manual scene separate and persists only explicit scene selection",
+      "passed": true
+    }
+  ],
+  "coordinatorSha256": "8568026daa8c91370c59472d9efd625cb4f8c2eb7e22ab9665565b7e9fb10952",
+  "evidenceBoundary": "Executes actual coordinator and production engine/store/schema. UI, room and browser download are explicit host boundaries, not actual renderer or DOM verification."
+}

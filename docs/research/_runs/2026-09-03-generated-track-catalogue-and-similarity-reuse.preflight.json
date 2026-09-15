@@ -1,0 +1,41 @@
+{
+  "schema": "berk.deep-research-preflight/v1",
+  "status": "complete",
+  "date": "2026-09-03",
+  "created_at": "2026-09-03T05:50:00Z",
+  "topic": "generated-track-catalogue-and-similarity-reuse",
+  "mode": "B",
+  "cwd": "c:\\Berk\\PlayMusicPrompts",
+  "owner_order_verbatim_tr": "selam yeni bir gün iş listesini şunu da ekler misin? şarkı üretimi oldukça şarkıları playmusicpromts da bir tabloda tutalım şarkının promptu ve tüm detayları ile . ayrıca dosyayı da sunucuya alalım üretim sonrası. \n\nDaha sonrasında da bunları şu şekilde kullanacağız, bir kullanıcı bir şarı üretip playlist mantığına döndüğünde eğer elimizde benzer bir şarkı varsa üretmek yerine kullanıcıya o şarkıyı ekleyeceğiz next track olarak. \n\nbu şekilde hem üretim süresi hem de maliyetinden tasarruf ederiz ne dersin, bunu bir düşünüp analiz eder misin en ileri seviyede. ve elimzideki şarkılardan benzerlerinin bulunması ve buna bağlı algoritma da lazım.\n\nBunu düşün analiz et araştır ve bana öneride bulun.",
+  "owner_approval_tr": "başla (2026-09-03 08:35)",
+  "governing_files": [
+    { "path": "CLAUDE.md", "sha256": "CF806E4F5146FAD20A180F071FD95E6D3F897C72314A9353F4809FE001C5E6F2", "bytes": 2254, "read_back": true },
+    { "path": "AGENTS.md", "sha256": "9457273A25DE634D859F1CB08699F4C579A3B9147D1CF5CD89470BDDB4A3BD2A", "bytes": 2576, "read_back": true },
+    { "path": ".claude/memory/STATE.md", "sha256": "6960832D3A556F3DDD39EEA8926D357DE16DB2F02BA7E4E9D9E058A3198C03DE", "bytes": 57783, "read_back": true },
+    { "path": "C:\\Users\\berke\\.claude\\skills\\deep-research\\SKILL.md", "sha256": "F19F5CB14319E09EC73FDF42FEEF2D3067EC8A5949A34657ED9E5C1104D5F9EB", "bytes": 117893, "read_back": true, "note": "covenant; sections read this session: Part I, R2, R3, R12, R15, R17" },
+    { "path": "C:\\Users\\berke\\.claude\\skills\\subagent-task-definition\\SKILL.md", "sha256": "901779806E3FA37F4B0D5D72F37D300F43B05F84A0B2D67CE791A8A7E3086FDF", "bytes": 8514, "read_back": true }
+  ],
+  "code_files": [
+    { "path": "deploy/payload/prisma/schema.prisma", "sha256": "5DE0A49E71339DD55F50343E277A5A578B59117799C91E33534D23E5F21C7E79", "bytes": 7326, "read_back": true },
+    { "path": "deploy/payload/lib/music/spend-guard.ts", "sha256": "40EA5018BAE0C3902002EA937E6884A5943FC4779E3E3977E5071E15A2A891B1", "bytes": 4137, "read_back": true },
+    { "path": "deploy/payload/lib/music/jobs.ts", "sha256": "65F675A4A1DE109AE78B7E29AC9A9A07ED13F078C74CA088A3807517D07E8FC8", "bytes": 4777, "read_back": true },
+    { "path": "deploy/payload/public/site/session.js", "sha256": "877BCD4B986CBD88AD4BBC345294366ADE3E0CE2783379B1DEDAA8B579351129", "bytes": 6484, "read_back": true },
+    { "path": "app/lib/src/state/listening_session.dart", "sha256": "07DD31B09CD861939350089619FE991D8C63A7B7BF3E2925D8986843D004F85B", "bytes": 8734, "read_back": true },
+    { "path": "deploy/payload/app/api/music/delivery-url/[jobId]/route.ts", "sha256": "33C04AA94B1F77D0272C51A29BFE81D89B9652626D037C6A85C2D575171AD9AA", "bytes": 3082, "read_back": true }
+  ],
+  "project_documents": [
+    { "path": "docs/api/12-originality-gate.md", "sha256": "8E5E98E80601B4195AC012E47B17C7B9F41EC162D96336F9E3FD6FFF23F8C27F", "bytes": 6912, "read_back": true },
+    { "path": "docs/api/06-response-envelope.md", "sha256": "86E0C62224CF9D9AC29026FE93F252B469E997268E6857E409D3F0725D1560DC", "bytes": 17256, "read_back": true },
+    { "path": "docs/api/09-limits-and-timeouts.md", "sha256": "DCD00C01ABDD56D361BD6F6EE731E6D9EF58CB4D29757BC1B4768C5529C30716", "bytes": 8547, "read_back": true },
+    { "path": "docs/research/2026-08-17-rhythmic-monotony-and-take-similarity-gate.md", "sha256": "3C9264B65802315F2183ADB5790DB966837797946A5525B0BD77DF3D58D4E1C9", "bytes": 31210, "read_back": true },
+    { "path": "docs/research/_runs/2026-08-17-rhythmic-monotony-and-take-similarity-gate.completion.json", "sha256": "889A79725AE856FD4FA770218D66CFAC5BC48DE358A34F1C1B250B7124B6FAD8", "bytes": 5955, "read_back": true },
+    { "path": "artifacts/song-rnd/spend_ledger.json", "sha256": "B8565448213572A82B483566A669FFBB811572039C46D9B485E4D1DBDDD59733", "bytes": 17615, "read_back": true }
+  ],
+  "uncertainty": "Whether persisting every generated track (prompt + full detail), copying audio to our own storage after generation, and serving an existing SIMILAR track instead of regenerating when a listener enters playlist mode is (1) lawful under the engine provider's output terms, (2) economical against the measured $0.08 per take and 25-145 s generation time, (3) acceptable to listeners (repeat/novelty research), and (4) which similarity method, decision policy and storage design to adopt. Local evidence: the engine computes similarity only WITHIN one request (docs/api/12: Serra Qmax, Haitsma-Kalker BER, Vendi); no cross-request catalogue or index exists; music_jobs stores requestBody + verbatim responseBody (gcs_uri, 7-day V4 signed URL, free refresh) but no per-take catalogue row and no copy of the audio; prior research (2026-08-17) gives lawful instruments (Serra Qmax, HK BER, CLAP laion/larger_clap_music Apache-2.0) and forbids MERT (CC-BY-NC-4.0) for this commercial product.",
+  "local_conclusion": "Local evidence answers the current-state questions (what is stored, measured cost and time, the buffer algorithm, lawful instruments) but NOT the vendor output/redistribution terms, the cross-request text+audio retrieval method, pgvector operating characteristics on Postgres 16, recommender and repeat-consumption evidence, or storage/egress pricing. External research is needed on all four slices (A storage/schema, B retrieval, C policy/economics/listener, D rights/policy/privacy).",
+  "external_research_needed": true,
+  "scope_plan": "docs/research/_runs/2026-09-03-generated-track-catalogue-and-similarity-reuse.scope-plan.md",
+  "scope_plan_sha256": "9AF689BB789AFB90B2A483AD74F34D61767BE49613859E2D3409C321E6B65DA7",
+  "covenant_sha256_file": "F19F5CB14319E09EC73FDF42FEEF2D3067EC8A5949A34657ED9E5C1104D5F9EB",
+  "index_absence_search": { "performed": true, "roots": ["c:\\Berk\\PlayMusicPrompts\\docs"], "queries": ["Test-Path docs\\README.md", "Test-Path docs\\research\\README.md"], "result": "both ABSENT (measured 2026-09-03); the 2026-08-17 manifest points to docs/README.md which is absent", "consequence": "docs/research/README.md will be created as the scoped index (R15.2)" }
+}

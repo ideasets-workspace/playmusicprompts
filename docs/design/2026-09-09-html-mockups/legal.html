@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy, Terms, Cookies &amp; ads — PlayMusicPrompts design mockup</title>
+<!-- LEGAL — the three documents on one reading surface with a sticky table of contents.
+     Section headings mirror the live pages' own structure (privacy 8 / terms 9 / cookies 6 h2s,
+     measured 2026-09-04). Body copy is OWNER-DECISION (rule 14): the paragraphs below are the
+     live pages' own approved copy positions, not new legal text written by an agent. -->
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/player.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/motion.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.185.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.185.1/examples/jsm/"}}</script>
+<style>
+  .legal { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: var(--sp-12); padding-block: var(--sp-12); }
+  .toc { position: sticky; top: calc(var(--topbar-h) + var(--sp-6)); align-self: start; display: grid; gap: 2px; }
+  .toc a { display: flex; align-items: center; min-height: 40px; padding: 0 var(--sp-3); border-radius: var(--r-md); color: var(--ink-dim); font-size: var(--fs-sm); font-weight: 600; }
+  .toc a:hover, .toc a[aria-current] { background: var(--bg-2); color: var(--ink); }
+  .toc .eyebrow { padding: var(--sp-2) var(--sp-3) var(--sp-1); }
+  .doc { max-width: 72ch; }
+  .doc h1 { font-size: var(--fs-3xl); font-weight: 800; letter-spacing: -.02em; }
+  .doc h2 { font-size: var(--fs-xl); font-weight: 800; margin-top: var(--sp-10); padding-top: var(--sp-6); border-top: 1px solid var(--line); }
+  .doc h3 { font-size: var(--fs-md); font-weight: 700; margin-top: var(--sp-6); }
+  .doc p, .doc li { color: var(--ink-dim); font-size: var(--fs-md); margin-top: var(--sp-3); }
+  .doc ul { list-style: disc; padding-left: 1.2em; }
+  .meta { margin-top: var(--sp-3); font-size: var(--fs-xs); color: var(--ink-faint); }
+  .review { margin-top: var(--sp-4); padding: var(--sp-3) var(--sp-4); border-radius: var(--r-md); border: 1px dashed rgba(230,43,164,.4); color: var(--ink-dim); font-size: var(--fs-sm); }
+  @media (max-width: 1023.98px) { .legal { grid-template-columns: 1fr; gap: var(--sp-6); } .toc { position: static; grid-auto-flow: column; overflow-x: auto; } .toc .eyebrow { display: none; } }
+</style>
+</head>
+<body>
+<div class="app" data-rail="expanded" data-drawer="closed">
+  <aside class="rail" id="rail" aria-label="Navigation"></aside>
+  <header class="topbar"></header>
+  <main class="main" id="main">
+    <div class="container legal">
+      <nav class="toc" aria-label="Contents">
+        <span class="eyebrow">Documents</span>
+        <a href="#privacy" aria-current="true">Privacy</a><a href="#terms">Terms</a><a href="#cookies">Cookies &amp; ads</a>
+      </nav>
+      <article class="doc">
+        <h1 id="privacy">Privacy</h1>
+        <p class="meta">Controller: <b>OWNER-HELD</b> · Contact: <b>privacy@playmusicprompts.com</b> (pending Berk's confirmation) · Last updated 2026-09-04</p>
+        <div class="review">Copy positions below mirror the live page's approved structure; wording is reviewed by Berk before integration.</div>
+        <h2>What we collect</h2><p>An anonymous listener id (a cookie), the prompts you type, the tracks you play, like and share, and technical logs needed to run the service.</p>
+        <h2>Why we collect it</h2><p>To compose and deliver your music, to keep one listening queue across pages, to measure what works, and to show ads that fund the free service.</p>
+        <h2>Ads and consent</h2><p>Consent is asked region by region: opt-in where the law requires it (Türkiye, EEA, UK, Switzerland), default-on with a one-tap opt-out elsewhere. Your choice is remembered and changeable at any time from “Cookies &amp; ads”.</p>
+        <h2>Your rights</h2><p>Access, correction, deletion, portability and objection — write to the contact address above.</p>
+
+        <h1 id="terms" style="margin-top:var(--sp-16)">Terms</h1>
+        <p class="meta">Last updated 2026-09-04</p>
+        <h2>The service</h2><p>PlayMusicPrompts composes music from your description and lets you listen, save and share. It is free and has no credits or paid tiers.</p>
+        <h2>Generated music and rights</h2><p>Tracks are generated. Commercial use and sync are permitted; copyright is not warranted. Each track carries a machine-readable provenance mark (EU AI Act Art. 50).</p>
+        <h2>Acceptable use</h2><p>Prompts are content-checked before anything is composed; requests that fail the policy are refused with the reason shown.</p>
+
+        <h1 id="cookies" style="margin-top:var(--sp-16)">Cookies &amp; ads</h1>
+        <p class="meta">Last updated 2026-09-04</p>
+        <h2>Strictly necessary</h2><p>The listener id and your consent choice. Always on.</p>
+        <h2>Analytics</h2><p>GA4 with Consent Mode v2 — regional defaults are set on the server before any tag runs.</p>
+        <h2>Advertising</h2><p>Audio ad breaks between tracks (never inside one) and one banner slot above the player. Every ad is marked as an ad, with who paid for it (DSA Art. 26).</p>
+        <p style="margin-top:var(--sp-6)"><button class="btn-ghost" type="button">Change my choices</button></p>
+      </article>
+    </div>
+    <div class="container"><footer class="footer"><span>© 2026 PlayMusicPrompts · Ideasets</span><a href="#privacy">Privacy</a><a href="#terms">Terms</a><a href="#cookies">Cookies &amp; ads</a></footer></div>
+  </main>
+</div>
+<script type="module">
+  import { AppShell } from "./js/shell.js";
+  import { SAMPLE_TRACKS } from "./js/constants.js";
+  new AppShell({ current: "legal.html", nowPlaying: SAMPLE_TRACKS[2] });
+</script>
+</body>
+</html>

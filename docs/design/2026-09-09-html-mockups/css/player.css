@@ -1,0 +1,82 @@
+/* =====================================================================================
+   css/player.css — the persistent bottom player bar with a REAL waveform scrubber.
+   Skeleton (measured across both of Berk's reference images, 2026-09-09):
+     [ cover + title/artist ]  [ shuffle prev PLAY next repeat ]  [ time | waveform | time ]  [ like queue volume expand ]
+   The waveform is a <canvas> painted by js/player-bar.js. In production it is fed by the
+   Web Audio AnalyserNode / the server beat grid; in this mockup a deterministic seeded
+   shape stands in (stated in the README — Berk's order: design first, no backend).
+   ===================================================================================== */
+
+.player {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: var(--z-player);
+  height: var(--player-h);
+  display: grid; grid-template-columns: minmax(200px, 300px) auto minmax(0, 1fr) auto;
+  align-items: center; gap: var(--sp-6); padding-inline: var(--sp-5);
+  background: rgba(11, 7, 18, .86); backdrop-filter: blur(18px) saturate(140%);
+  border-top: 1px solid var(--line);
+}
+.player::before { /* brand hairline — the gradient strip both references carry */
+  content: ""; position: absolute; left: 0; right: 0; top: -1px; height: 2px; background: var(--brand-gradient); opacity: .9;
+}
+
+.p-now { display: flex; align-items: center; gap: var(--sp-3); min-width: 0; }
+.p-cover { width: 56px; height: 56px; border-radius: var(--r-md); object-fit: cover; flex: none; box-shadow: var(--shadow-card); }
+.p-meta { min-width: 0; }
+.p-title { font-weight: 700; font-size: var(--fs-sm); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.p-sub { font-size: var(--fs-xs); color: var(--ink-faint); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.p-sub .live { color: var(--accent-2); }
+
+.p-transport { display: flex; align-items: center; gap: var(--sp-1); }
+.p-transport .icon-btn { width: 40px; height: 40px; }
+.p-play {
+  width: 48px; height: 48px; border-radius: var(--r-pill); display: grid; place-items: center;
+  background: #fff; color: #0b0712; margin-inline: var(--sp-1);
+  box-shadow: 0 0 0 1px rgba(255,255,255,.2), 0 8px 24px -8px rgba(255,255,255,.5);
+  transition: transform var(--dur-fast), box-shadow var(--dur-fast);
+}
+.p-play:hover { transform: scale(1.06); }
+.p-play:active { transform: scale(.96); }
+.p-play svg { width: 22px; height: 22px; }
+.p-play [data-icon="pause"] { display: none; }
+.player[data-playing="true"] .p-play [data-icon="play"] { display: none; }
+.player[data-playing="true"] .p-play [data-icon="pause"] { display: block; }
+
+.p-scrub { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: var(--sp-3); min-width: 0; }
+.p-time { font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--ink-dim); font-variant-numeric: tabular-nums; }
+.p-wave { position: relative; height: 44px; min-width: 0; }
+.p-wave canvas { width: 100%; height: 100%; }
+/* the keyboard/pointer-accessible control UNDER the canvas (SC 2.5.7 non-drag alternative:
+   arrow keys step 5 s; click seeks; the canvas is decoration over a real range input) */
+.p-wave input[type="range"] {
+  position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer;
+}
+.p-wave input[type="range"]:focus-visible + .p-focus { opacity: 1; }
+.p-focus { position: absolute; inset: -3px; border-radius: var(--r-sm); pointer-events: none; opacity: 0; box-shadow: 0 0 0 2px var(--accent-2); }
+
+.p-actions { display: flex; align-items: center; gap: var(--sp-1); }
+.p-vol { display: flex; align-items: center; gap: var(--sp-2); }
+.p-vol input[type="range"] { width: 96px; accent-color: var(--accent); height: 24px; }
+
+/* ---- Tablet: fold the action cluster; ---- Phone: two-row compact bar ---------------- */
+@media (max-width: 1023.98px) {
+  .player { grid-template-columns: minmax(160px, 240px) auto minmax(0, 1fr) auto; gap: var(--sp-4); }
+  .p-vol { display: none; }
+}
+@media (max-width: 767.98px) {
+  .player {
+    height: var(--player-h-mobile);
+    grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: 1fr; gap: var(--sp-3); padding-inline: var(--sp-3);
+  }
+  .p-cover { width: 44px; height: 44px; }
+  .p-scrub { position: absolute; left: 0; right: 0; top: 0; height: 3px; display: block; }
+  .p-time { display: none; }
+  .p-wave { height: 3px; }
+  /* the visual is 3 px, the hit area stays 24 px (SC 2.5.8): the range is taller than its bar */
+  .p-wave input[type="range"] { height: var(--target-min); top: -10px; }
+  .p-wave canvas { display: none; }
+  .p-wave::before { content: ""; position: absolute; inset: 0; background: var(--line-strong); }
+  .p-wave::after { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: var(--progress, 35%); background: var(--brand-gradient); }
+  .p-transport .icon-btn:not(.p-play):not([data-action="next"]) { display: none; }
+  .p-play { width: 44px; height: 44px; }
+  .p-actions > :not([data-action="like"]) { display: none; }
+}

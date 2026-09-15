@@ -1,0 +1,19 @@
+{
+  "$schema_id": "berk.music-studio-vocabulary/v1",
+  "vocabulary": "creative_goal_lexicon",
+  "consumed_by": "music_studio/planner.py (creative_goal -> a fixed prose clause; deterministic, versioned)",
+  "provenance_rule": "clauses follow the register the project MEASURED to work: plain, concrete, present-tense description with direct action verbs (the only public measurement naming both engines: improving mutations move toward 'semantic simplification ... direct action verbs'). Structure follows Google's own Lyria prompt formula (archived guide L1002-1008, read 2026-08-14).",
+  "version": 1,
+  "clauses": {
+    "epic_cinematic_uplifting": "Epic cinematic orchestral music that rises from quiet to a huge uplifting peak.",
+    "dark_tense_driving": "Dark tense music with a driving relentless pulse.",
+    "warm_intimate_acoustic": "Warm intimate acoustic music, close and gentle.",
+    "playful_light_quirky": "Playful light music with quirky bouncing rhythms.",
+    "melancholic_reflective": "Melancholic reflective music, slow and full of longing.",
+    "heroic_triumphant": "Heroic triumphant music with bold rising themes.",
+    "mysterious_atmospheric": "Mysterious atmospheric music with soft shifting textures.",
+    "romantic_sweeping": "Romantic sweeping music with long singing melodic lines.",
+    "energetic_upbeat_pop": "Energetic upbeat pop music with a bright driving beat.",
+    "calm_ambient_meditative": "Calm ambient meditative music, slow and weightless."
+  }
+}

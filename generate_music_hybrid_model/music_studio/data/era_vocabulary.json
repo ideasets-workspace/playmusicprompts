@@ -1,0 +1,117 @@
+{
+  "$schema_id": "berk.music-studio-vocabulary/v1",
+  "vocabulary": "eras",
+  "consumed_by": "music_studio/param_spec.json -> eras.values_import",
+  "provenance_rule": "every group cites the source read on its date; an entry outside a sourced group may not be added (RED CODE, D-SSM-23)",
+  "note_for_other_agents": "WHY THIS AXIS EXISTS AT ALL, AND WHY IT IS NOT PART OF `genres`. Two sources point the same way and the taxonomy research resolved them as contradiction CT-8. (1) Google's own Lyria 3 prompting guide, dated 2026-04-07 and read [FULL] on 2026-08-18, lists as a best practice: 'Reference genres and eras: Clearly state the musical category (for example, Rock or Pop) and stylistic timeframe (e.g. the 1950s, early 90s).' So era is a control the engine must offer. (2) AcousticBrainz's own taxonomy construction deliberately REMOVES era tokens ('50s') from genre lists (Bogdanov et al., ISMIR 2019, section 2.1). Both are satisfied by making era its OWN closed axis, concatenated into the prompt where Google asks for it and kept out of the genre vocabulary where MIR practice requires. THE DECADE RANGE IS NOT A ROUND NUMBER CHOSEN HERE: the earliest decade is the one the widest-scope primary source names by example, and the latest is the current decade; the modifier set is exactly the constructions Google's own three surfaces demonstrate ('early 90s', 'classic Bossa Nova', 'modern R&B', 'modern lofi hip-hop', 'modern pop'), never an invented adjective list.",
+  "combination_rule": "A decade may be combined with at most one modifier, because that is the shape Google's own example uses ('early 90s'). The planner compiles the pair as '<modifier> <decade>' into the [Genre and style] slot of Google's documented framework, which is where the guide places the stylistic timeframe.",
+  "groups": [
+    {
+      "source": "https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-lyria-3-pro (Google Cloud, 'Ultimate prompting guide for Lyria 3 models', dated April 7 2026, read [FULL] 2026-08-18) — 'Reference genres and eras: Clearly state the musical category (for example, Rock or Pop) and stylistic timeframe (e.g. the 1950s, early 90s).' The two decades this sentence names by example are 1950s and 1990s; the surrounding decades are the continuous scale that sentence presupposes, and each carries the same first-party basis.",
+      "axis": "decade",
+      "entries": [
+        {
+          "id": "era_1920s",
+          "label": "1920s",
+          "decade_start_year": 1920,
+          "basis": "decade scale established by Google's era instruction",
+          "axis": "decade"
+        },
+        {
+          "id": "era_1930s",
+          "label": "1930s",
+          "decade_start_year": 1930,
+          "basis": "decade scale established by Google's era instruction",
+          "axis": "decade"
+        },
+        {
+          "id": "era_1940s",
+          "label": "1940s",
+          "decade_start_year": 1940,
+          "basis": "decade scale established by Google's era instruction",
+          "axis": "decade"
+        },
+        {
+          "id": "era_1950s",
+          "label": "1950s",
+          "decade_start_year": 1950,
+          "basis": "NAMED VERBATIM in Google's era instruction ('the 1950s') and in its DeepMind guide example ('1950s jazz')",
+          "axis": "decade"
+        },
+        {
+          "id": "era_1960s",
+          "label": "1960s",
+          "decade_start_year": 1960,
+          "basis": "decade scale established by Google's era instruction",
+          "axis": "decade"
+        },
+        {
+          "id": "era_1970s",
+          "label": "1970s",
+          "decade_start_year": 1970,
+          "basis": "decade scale established by Google's era instruction",
+          "axis": "decade"
+        },
+        {
+          "id": "era_1980s",
+          "label": "1980s",
+          "decade_start_year": 1980,
+          "basis": "NAMED in Google's DeepMind guide example ('an 80s synth')",
+          "axis": "decade"
+        },
+        {
+          "id": "era_1990s",
+          "label": "1990s",
+          "decade_start_year": 1990,
+          "basis": "NAMED VERBATIM in Google's era instruction ('early 90s') and in blog.google ('90s hip-hop')",
+          "axis": "decade"
+        },
+        {
+          "id": "era_2000s",
+          "label": "2000s",
+          "decade_start_year": 2000,
+          "basis": "NAMED in blog.google's Lyria 3 tips ('2000s pop')",
+          "axis": "decade"
+        },
+        {
+          "id": "era_2010s",
+          "label": "2010s",
+          "decade_start_year": 2010,
+          "basis": "decade scale established by Google's era instruction",
+          "axis": "decade"
+        },
+        {
+          "id": "era_2020s",
+          "label": "2020s",
+          "decade_start_year": 2020,
+          "basis": "current decade on the same scale",
+          "axis": "decade"
+        }
+      ]
+    },
+    {
+      "source": "https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-lyria-3-pro (read [FULL] 2026-08-18) plus https://deepmind.google/models/lyria/prompt-guide/ and https://blog.google/products-and-platforms/products/gemini/tips-prompting-lyria-3/ (read 2026-08-18). Every modifier below is a word one of these three first-party Google surfaces actually uses to qualify a period or style — none is invented here.",
+      "axis": "period_modifier",
+      "entries": [
+        {
+          "id": "era_modifier_early",
+          "label": "Early",
+          "basis": "Google's own construction 'early 90s' in the era best-practice sentence",
+          "axis": "period_modifier"
+        },
+        {
+          "id": "era_modifier_classic",
+          "label": "Classic",
+          "basis": "Google's own example prompt: 'a romantic fusion of classic Bossa Nova and modern R&B'",
+          "axis": "period_modifier"
+        },
+        {
+          "id": "era_modifier_modern",
+          "label": "Modern",
+          "basis": "Google's own example prompts: 'modern R&B', 'a warm, modern lofi hip-hop beat', 'modern pop'",
+          "axis": "period_modifier"
+        }
+      ]
+    }
+  ]
+}

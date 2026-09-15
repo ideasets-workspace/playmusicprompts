@@ -1,0 +1,130 @@
+{
+  "schema": "berk.deep-research-completion/v1",
+  "status": "complete",
+  "date": "2026-08-17",
+  "mode": "MODE B (owner research order, delegated worker slice)",
+  "topic": "multilingual-sung-calibration-corpora",
+  "decisions_served": [
+    "D-SSM-34: sung lane targets ALL registry languages - calibration order for the nine remaining languages (zh, ja, ko, ru, es, fr, de, it, pt)",
+    "D-SSM-30: $0 / no paid services - NC/ND/research-only licences are fatal for every candidate"
+  ],
+  "main_report": "docs/research/2026-08-17-multilingual-sung-calibration-corpora.md",
+  "index": "docs/README.md",
+  "verdicts": {
+    "zh": "NONE MEETS FLOOR (lawful pool n=2: vocadito Mandarin leg)",
+    "ja": "LAWFUL CANDIDATE NAMED: PJS corpus, CC BY-SA 4.0, n=100 (composed-sentence genre caveat)",
+    "ko": "NONE EXISTS (searched scope; AI-Hub gated [PARTIAL])",
+    "ru": "NONE EXISTS (searched scope)",
+    "es": "NONE MEETS FLOOR (lawful pool n=4: 3 JamendoLyrics BY-SA + 1 vocadito; Cantoria CC BY 4.0 but genre-blocked)",
+    "fr": "LAWFUL CANDIDATE NAMED: vocadito FR leg, CC BY 4.0, n=10 (+5 JamendoLyrics BY/BY-SA supplement)",
+    "de": "NONE MEETS FLOOR (lawful pool n=4: 2 LM-SSD German takes + 2 JamendoLyrics BY-SA; opera sets genre-blocked)",
+    "it": "NONE EXISTS (searched scope; SingStyle111 research-only)",
+    "pt": "NONE EXISTS (searched scope; fado archive symbolic-only + NC)"
+  },
+  "source_counts": {
+    "authoritative": 34,
+    "academic": 10,
+    "academic_full": 6,
+    "primary_full": 6
+  },
+  "claim_counts": {
+    "verified_3plus": 10,
+    "single_source": 2,
+    "unverified": 0,
+    "bounded_absence_claims": 1
+  },
+  "planned_artifacts": 5,
+  "produced_artifact_classes": 5,
+  "artifacts": [
+    {
+      "path": "docs/research/2026-08-17-multilingual-sung-calibration-corpora.md",
+      "role": "main_report",
+      "sha256": "7a9fad3282373b261ef6d4bb0a3222b83ef1935cd40809240ad42c50ec509af1",
+      "bytes": 25287,
+      "read_back": true
+    },
+    {
+      "path": "docs/research/_sources/2026-08-17-nine-language-licence-page-captures.txt",
+      "role": "licence_page_captures",
+      "sha256": "237a011c1f48994c8cd55b35924242a2c14c7c0005afa14d5db41796ad275772",
+      "bytes": 10538,
+      "read_back": true
+    },
+    {
+      "path": "docs/research/_sources/2026-08-17-zenodo-api-nine-language-singing-sweep.txt",
+      "role": "zenodo_api_query_ledger",
+      "sha256": "6319c3301e0b5706e6284ff4a6088b91c0dea7fe1f7cf442d4389ac29236ab92",
+      "bytes": 27435,
+      "read_back": true
+    },
+    {
+      "path": "docs/research/_sources/2026-08-17-acv-001-readme-and-song-lists.txt",
+      "role": "source_capture",
+      "sha256": "feed15d024473ff6ef46f21f6cc14dbb7b1b72e3af7a6ec9db51d6bf81c63a61",
+      "bytes": 4678,
+      "read_back": true
+    },
+    {
+      "path": "docs/research/_sources/2026-08-17-pjs-corpus-apsipa2020-paper.txt",
+      "role": "academic_full_capture",
+      "sha256": "7a902022fb598620c465dcb38a9318d1eb0b099d8b594c22e41eb8d8c60116cc",
+      "bytes": 22709,
+      "read_back": true
+    },
+    {
+      "path": "docs/research/_sources/2026-08-17-ace-opencpop-ace-kising-interspeech2024-paper.txt",
+      "role": "academic_full_capture",
+      "sha256": "42640c919bff5328f3284c375c291e5405eaa712b1fcc3b70ebed84923867619",
+      "bytes": 30790,
+      "read_back": true
+    },
+    {
+      "path": "docs/research/_sources/2026-08-17-singstyle111-ismir2023-paper.txt",
+      "role": "academic_full_capture",
+      "sha256": "571ed427502f2c68254a6928c9f8b6dd94448e2859de55ba1fefcb8142871bbb",
+      "bytes": 42668,
+      "read_back": true
+    },
+    {
+      "path": "docs/research/_sources/2026-08-17-idolsongsjp-arxiv-2507-01349-paper.txt",
+      "role": "academic_full_capture",
+      "sha256": "eb5ffce9fd88251942d6320f2510348c8b5b043740ab3fd79c959c7e8496c44a",
+      "bytes": 38592,
+      "read_back": true
+    },
+    {
+      "path": "docs/research/_sources/2026-08-17-kiritan-jstage-ast-e2074-paper.txt",
+      "role": "academic_full_capture",
+      "sha256": "bbd8a8f475012be154be2ac6fb319d8c80a6d9c6cc28dca6d51d4a5f27141759",
+      "bytes": 27705,
+      "read_back": true
+    },
+    {
+      "path": "docs/README.md",
+      "role": "index",
+      "sha256": "32406d6878fadc319b1c498a1d64e339bfaf220b77ae383f495575b6119a75dc",
+      "bytes": 74259,
+      "read_back": true
+    }
+  ],
+  "standards_ledger": true,
+  "scope_plan": true,
+  "source_register": true,
+  "query_ledger": true,
+  "claim_ledger": true,
+  "contradiction_ledger": true,
+  "preservation_matrix": true,
+  "english_artifacts": true,
+  "indexed": true,
+  "delegations": [],
+  "known_gaps": [
+    "Jamendo per-song licences verified from the dataset CSV only; per-track jamendo.com pages not fetched (URLs archived for parent re-verification)",
+    "AI-Hub (ko) terms unreadable beyond the gated portal this session [PARTIAL]",
+    "NONE EXISTS verdicts are R18.11-bounded (NOT FOUND IN THE SEARCHED SCOPE); ru/pt national archives without machine-readable licence surfaces not exhausted",
+    "ACV-001 cover-composition exclusion is a labelled legal inference, not a licence string",
+    "HF search API licence filter observed non-functional (returned NC/other rows under license=cc-by-4.0); no verdict rests on it"
+  ],
+  "spend_usd": 0,
+  "covenant_sha256_marked_block_lf_inclusive": "07727f0a5b69946f9de18936a4f217fe256f52c5e3e10f364141d215970acbb8",
+  "completed_at": "2026-08-17T17:16:01.725216+03:00"
+}

@@ -1,0 +1,240 @@
+{
+  "schema": "playmusicprompts.research-decision-audit/v1",
+  "as_of": "2026-09-12",
+  "lane": "website-api-20260912",
+  "task": "API-01-CLOUD",
+  "status": "BOUNDED_RECOMMENDATION_ISSUED_FULL_STANDARD_OPEN",
+  "owner_provider_decision": "UNDECIDED",
+  "deployment_authorized_by_this_research": false,
+  "recommendation": "GCP-first core with replaceable CDN; AWS delivery/hybrid has a material flat-price countercase. Personalized owned track sessions + IMA proposed; synchronized live stations separate.",
+  "governing_covenant": {
+    "path": "C:/Users/berke/.claude/skills/deep-research/SKILL.md",
+    "sha256": "F19F5CB14319E09EC73FDF42FEEF2D3067EC8A5949A34657ED9E5C1104D5F9EB",
+    "mode": "B"
+  },
+  "canonical_artifacts_planned": 6,
+  "canonical_artifacts": [
+    "docs/research/2026-09-12-audio-cloud-platform-decision.md",
+    "docs/research/2026-09-12-audio-cloud-source-ledger.md",
+    "docs/research/2026-09-12-audio-cloud-qoe-evidence.md",
+    "docs/research/2026-09-12-owned-radio-alternative.md",
+    "docs/research/_sources/2026-09-12-audio-cloud-cost-model.json",
+    "docs/research/_runs/2026-09-12-audio-cloud-platform-decision.json"
+  ],
+  "index": "docs/research/README.md",
+  "readback": {
+    "parent_main_report": "complete substantive artifact reread after edits",
+    "parent_workers": "all three current research slice reports read; parent directly opened listed decisive primaries",
+    "academic_worker": "five PDFs,77pages full read recorded by assigned researcher; hashes rechecked by parent; no parent full-paper-read assertion",
+    "source_raw_capture": "Academic PDF/text/pages captured. Web product sources preserve exact metadata/read boundaries and session retrievals, not falsely hashed full raw web bodies."
+  },
+  "source_counts": {
+    "parent_opened_primary_documents": 23,
+    "parent_provenance": "two vendors plus separately authoredHLSRFC; source documents not independent corroboration",
+    "owned_radio_primary_pages": 29,
+    "owned_radio_project_families": 5,
+    "ads_slice_primary_pages": 19,
+    "academic_authoritative_records": 7,
+    "academic_works": 5,
+    "academic_full": 5,
+    "academic_full_pages": 77,
+    "independent_authoritative_floor20": "NOT ESTABLISHED; no URL-count substitution",
+    "overall_unique_independent_works": null,
+    "claim_crossverification": "Vendor-specific facts single-source official; proposals/inferences explicitly labeled; no fabricated3-source vendor-performance verification"
+  },
+  "verification": {
+    "as_of": "2026-09-12",
+    "revision": 3,
+    "status": "PASS_ARITHMETIC_ONLY",
+    "rows": 9,
+    "assertions": 63,
+    "tolerance": 1E-06,
+    "method": "Parent read final JSON from disk; rebuilt seven values per row using saved numeric tariffs and explicit VOD/live formulas; compared to all nine saved rows.",
+    "independent_review": "streaming_architecture separately reported63 arithmetic checks before revision3; no incorrect prices. Requested explicit VOD formula and numeric tariff inputs; both added and read back.",
+    "not_proven": [
+      "actual billing",
+      "CloudFront display-unit definition",
+      "production workload",
+      "vendor performance",
+      "plan/account eligibility",
+      "total deployment cost"
+    ]
+  },
+  "delegation": [
+    {
+      "agent": "api_contract",
+      "scope": "API contract audit then five academic primaries; separate exact files",
+      "result": "five-part records/capture manifest read and hashes checked"
+    },
+    {
+      "agent": "website_client_audit",
+      "scope": "Google ads/auth/surfaces then owned radio alternative",
+      "result": "report read, decisive Google primaries reopened by parent"
+    },
+    {
+      "agent": "streaming_architecture",
+      "scope": "AWS/GCPmedia then adversarialpricing and independentmodelreview",
+      "result": "price counters incorporated; requested model tariff/formula correction implemented and all63 assertions rerun by parent"
+    }
+  ],
+  "known_gaps": [
+    "Full independent-source/research-standard closure remains open; no exhaustive claim",
+    "CloudFrontGB/TB interpretation; actual invoices/quote/flat-plan eligibility/realtraffic",
+    "Fresh AWS operational inventory and current identity deployment",
+    "GCP org-policy approval for public guestwebsite and CDNfill identity; no policychanges",
+    "Pure-audio end-to-end managedchannel/adstitching validation",
+    "Google publisheraccount/audiofill/consent configuration",
+    "Portable music-download reward eligibility and webreward authentication model",
+    "Actual owned storage/playback/ad/downloadintegration; no paidgeneration in thisresearch",
+    "Named native/TV compatibility, actual GPU/audio/backgroundbehavior",
+    "Recent academic fulltexts/version reconciliation as named in academicreport"
+  ],
+  "preservation": {
+    "accepted_frontend_trees": "outside all write scopes; no edits made by research",
+    "cloud_mutations": 0,
+    "ad_requests": 0,
+    "paid_generations": 0,
+    "secret_operations": "none during providerresearch"
+  },
+  "files": [
+    {
+      "path": "docs/research/2026-09-12-audio-cloud-platform-decision.md",
+      "bytes": 25586,
+      "sha256": "DA48AD1A013CD9A9A8CC42E522CA509C0E7B30A489DA883C03CF8267E7A7C8DC"
+    },
+    {
+      "path": "docs/research/2026-09-12-audio-cloud-source-ledger.md",
+      "bytes": 16175,
+      "sha256": "8B2092E84E8123F4298D8E37943AB82BF37BAE8981190743B468424C7DE6F9C9"
+    },
+    {
+      "path": "docs/research/2026-09-12-audio-cloud-qoe-evidence.md",
+      "bytes": 28421,
+      "sha256": "C3D5C45A1D652D6F6F1F2DBDB1AAEB8179DC8DB3BC37907499367D9AF8CFA047"
+    },
+    {
+      "path": "docs/research/2026-09-12-owned-radio-alternative.md",
+      "bytes": 35506,
+      "sha256": "7B479032279456907A33D7920AF8CC9D91E50796C52208417F6B9216313E41EB"
+    },
+    {
+      "path": "docs/research/_sources/2026-09-12-audio-cloud-cost-model.json",
+      "bytes": 11860,
+      "sha256": "6285D31B57B048C66AFE41F09F52BD87BAEFAD21CF5558E88589742A7A5834E4"
+    },
+    {
+      "path": "docs/research/_sources/2026-09-12-audio-cloud-cost-check.json",
+      "bytes": 723,
+      "sha256": "79CE162EEFCC224FF48849601FB4A479CDBFCC2A113624027D29175684360321"
+    },
+    {
+      "path": "docs/research/README.md",
+      "bytes": 7998,
+      "sha256": "A376051E975B3A5386E08F572D7B81358A3FB802B7889C36519E403AD84080C2"
+    },
+    {
+      "path": "docs/implementation/2026-09-12-website-api/streaming-architecture.md",
+      "bytes": 52191,
+      "sha256": "E2D2E2BCD85E18511D6335F594CC2F4BB331A4D218432EEF107D7CEB663A0978"
+    },
+    {
+      "path": "docs/implementation/2026-09-12-website-api/ads-auth-platforms.md",
+      "bytes": 25832,
+      "sha256": "10609BACD8594C459A1EBF254BCAC540A7370A7EEB7F3325E6BCDAB61F5DF354"
+    },
+    {
+      "path": "docs/implementation/2026-09-12-website-api/contract-audit.md",
+      "bytes": 34806,
+      "sha256": "CFA04453E1C0DBA4C2932FC6EC2EFB07B059015867FD131F3BE7F5F54742C595"
+    },
+    {
+      "path": "docs/research/_sources/2026-09-12-qoe-asqm-p5.png",
+      "bytes": 290631,
+      "sha256": "6FD7AA027118C0D39A554EAEC5CC78D4744185D215671BD61D41E031D16570BF"
+    },
+    {
+      "path": "docs/research/_sources/2026-09-12-qoe-asqm.pdf",
+      "bytes": 1645007,
+      "sha256": "30EDDA113412BB1BEF2355D9A4ABC0523393FC4FFF4AA20B4B773C54F8249DEB"
+    },
+    {
+      "path": "docs/research/_sources/2026-09-12-qoe-asqm.txt",
+      "bytes": 60779,
+      "sha256": "4103300C883147282667F6AADB046B0A488682F88CA69C190F070144DE368B34"
+    },
+    {
+      "path": "docs/research/_sources/2026-09-12-qoe-benchmark-p6.png",
+      "bytes": 310562,
+      "sha256": "EC43F98659C0839984A099DA196A295D35CB6A9E7CAC60E48ABB445DC813679F"
+    },
+    {
+      "path": "docs/research/_sources/2026-09-12-qoe-benchmark-repository.html",
+      "bytes": 477112,
+      "sha256": "528C49544A1D00E8C8FCF1FB2F0C349B7096AB1E75A66DF10476AB67DC05998A"
+    },
+    {
+      "path": "docs/research/_sources/2026-09-12-qoe-benchmark.pdf",
+      "bytes": 2818644,
+      "sha256": "76C5073D40F781BB45700798E15DD48B519450C8E8A4CA66DF98F871B21FEEBF"
+    },
+    {
+      "path": "docs/research/_sources/2026-09-12-qoe-benchmark.txt",
+      "bytes": 37612,
+      "sha256": "EC8C32A32795145FAC499464D3FAE3BDA7BD1E3EB8B5FC2A637FAAE4C1E9E3E0"
+    },
+    {
+      "path": "docs/research/_sources/2026-09-12-qoe-browsing-p5.png",
+      "bytes": 328772,
+      "sha256": "7E197568980728E56E7BDB691EDB04CD0C231A0F96A3D9D62612362A4C82DE2F"
+    },
+    {
+      "path": "docs/research/_sources/2026-09-12-qoe-browsing.pdf",
+      "bytes": 421669,
+      "sha256": "833AE78B9AF2D2AF7B4D85D6DEF1183AC4361B6255D49E832C5D50999FFFD3C4"
+    },
+    {
+      "path": "docs/research/_sources/2026-09-12-qoe-browsing.txt",
+      "bytes": 36880,
+      "sha256": "EF73CFB2340345577A6C5A346F12AB3B96ED0B163218B0A2372EABA5005B09DD"
+    },
+    {
+      "path": "docs/research/_sources/2026-09-12-qoe-manifest.json",
+      "bytes": 9761,
+      "sha256": "02278332DCDDF7CD84F4EB5A37DB365A2C01EAB456DB4AD0FDBF57C5F4DFAEF8"
+    },
+    {
+      "path": "docs/research/_sources/2026-09-12-qoe-pandora-p31.png",
+      "bytes": 155659,
+      "sha256": "BD9DAB78E3E281230F90703CAB7F45EF2B89160D63DB2F570E032F5380CE65E2"
+    },
+    {
+      "path": "docs/research/_sources/2026-09-12-qoe-pandora.pdf",
+      "bytes": 593431,
+      "sha256": "17CDCA3F9913E8480C0B9F15B7AA02E99C952D05AEDA4B92DACC93B76982A9E8"
+    },
+    {
+      "path": "docs/research/_sources/2026-09-12-qoe-pandora.txt",
+      "bytes": 108416,
+      "sha256": "350D5925F3D329DE38DFA64529D2D10BD285E2FB8310C38707259898C4A5C8F3"
+    },
+    {
+      "path": "docs/research/_sources/2026-09-12-qoe-spotify.pdf",
+      "bytes": 642395,
+      "sha256": "D2F3B9EAD03A2C9133B732DE10EC299ABA58B70B9FBE9D35BED4CFBD8D0F6E67"
+    },
+    {
+      "path": "docs/research/_sources/2026-09-12-qoe-spotify.txt",
+      "bytes": 32268,
+      "sha256": "610FBE2CF47A3A7C6589929293EA3A9815383D60522306881EDB78062B2489F8"
+    }
+  ],
+  "self_hash": "Excluded to avoid recursive hash; final tool readback supplies manifest digest.",
+  "subsequent_owner_direction": {
+    "as_of": "2026-09-12",
+    "document": "docs/implementation/2026-09-12-website-api/ec2-platform-direction.md",
+    "decision": "AWS EC2 required; cost not selection criterion",
+    "prior_owner_field_scope": "owner_provider_decision and recommendation above describe the earlier research snapshot, not the current owner instruction",
+    "prior_index_sha256": "6DA4D72C0F1ACE025F3C070188BFB896B5A6FA55CD9597A75EFAC9AD1A3C5470",
+    "amendment": "Research sources, main report and calculations unchanged; index now identifies later EC2 direction"
+  }
+}

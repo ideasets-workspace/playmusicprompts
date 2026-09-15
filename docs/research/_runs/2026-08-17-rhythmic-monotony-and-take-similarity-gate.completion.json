@@ -1,0 +1,100 @@
+{
+  "schema": "berk.deep-research-completion/v1",
+  "status": "complete",
+  "date": "2026-08-17",
+  "mode": "MODE B (owner research order, delegated worker slice)",
+  "topic": "rhythmic-monotony-and-take-similarity-gate",
+  "decisions_served": [
+    "D-SSM-31 presentation ban: which frontier MIR methods implement the WITHIN-take rhythmic-monotony gate and the BETWEEN-take near-duplicate gate, and how each threshold is lawfully calibrated (never guessed)"
+  ],
+  "main_report": "docs/research/2026-08-17-rhythmic-monotony-and-take-similarity-gate.md",
+  "index": "docs/README.md",
+  "covenant_sha256_verified": "69d557a1ab2b80027be1815c4fc07c37f5bd2c310448d48a6dce64617c14aa17",
+  "source_counts": {
+    "authoritative": 27,
+    "academic": 20,
+    "academic_full": 5,
+    "primary_full": 5
+  },
+  "claim_counts": {
+    "verified_3plus": 11,
+    "single_source": 3,
+    "unverified": 0
+  },
+  "planned_artifacts": 5,
+  "produced_artifacts": 5,
+  "artifacts": [
+    {
+      "path": "docs/research/2026-08-17-rhythmic-monotony-and-take-similarity-gate.md",
+      "role": "main report (Standards ledger + R3 scope plan head preserved; findings appended after '# Outcome first')",
+      "sha256": "3c9264b65802315f2183adb5790db966837797946a5525b0bd77df3d58d4e1c9",
+      "read_back": true
+    },
+    {
+      "path": "docs/research/_sources/ (22 captures written by this run, each named 2026-08-17-<source>.txt)",
+      "role": "raw source archive",
+      "sha256_list": {
+        "2026-08-17-foote-cooper-2002-media-segmentation-self-similarity-spie.txt": "41a59899cbad48aa",
+        "2026-08-17-survey-evaluation-metrics-music-generation-arxiv-2509-00051.txt": "2c3e034c25f68714",
+        "2026-08-17-mad-aligning-text-to-music-evaluation-arxiv-2503-16669.txt": "d70b49f3ee8e15a8",
+        "2026-08-17-per-song-fad-generative-music-arxiv-2311-01616.txt": "1a252bb0831a6543",
+        "2026-08-17-aesthetics-human-preferences-ttm-arxiv-2504-21815.txt": "1585b095fa63ce85",
+        "2026-08-17-grosche-mueller-kurth-2010-cyclic-tempogram-icassp.txt": "a51c5033b7b406ec",
+        "2026-08-17-fmp-c6s2-cyclic-tempogram-audiolabs.txt": "a8b546e64a5db720",
+        "2026-08-17-serra-serra-andrzejak-2009-qmax-cross-recurrence-njp.txt": "a89659890bba5e28",
+        "2026-08-17-friedman-dieng-vendi-score-arxiv-2210-02410.txt": "5e4930271435f135",
+        "2026-08-17-pasarkar-dieng-2024-cousins-vendi-score-aistats.txt": "4d29ba7fc13f8063",
+        "2026-08-17-wu-yang-2023-compose-and-embellish-structureness-arxiv-2209-08212.txt": "d3e997db11d00e58",
+        "2026-08-17-mueller-jiang-2012-fitness-scape-plot-ismir.txt": "58d47718c59b7236",
+        "2026-08-17-grosche-mueller-sapp-2010-beat-tracking-difficult-ismir.txt": "265a29bb860066d7",
+        "2026-08-17-chiu-2023-plpdp-beat-tracking-expressive-piano-taslp.txt": "ab68244ccb35a955",
+        "2026-08-17-davies-2004-causal-tempo-tracking-ismir.txt": "a939dfcb167d18a7",
+        "2026-08-17-haitsma-kalker-2002-robust-audio-fingerprinting-ismir.txt": "6736d9904734606d",
+        "2026-08-17-schreiber-2011-fast-hk-fingerprint-search-ismir.txt": "83a7a6fd3fc61e4c",
+        "2026-08-17-cc-by-nc-4-0-spdx-license-text.txt": "04e36351fd7091c8",
+        "2026-08-17-madmom-pypi-dual-license-bsd-cc-by-nc-sa.txt": "57162542dbe0bc97",
+        "2026-08-17-musiclm-memorization-analysis-arxiv-2301-11325.txt": "b716256f45c99079",
+        "2026-08-17-musicgen-simple-controllable-music-generation-arxiv-2306-05284.txt": "2c570b9483d048d8",
+        "2026-08-17-nieto-bello-2016-msaf-ismir.txt": "9626014521e88214"
+      },
+      "read_back": true,
+      "note": "hashes truncated to 16 hex chars in this list; full-file SHA-256 recomputable from disk; licence facts for Chromaprint/AcoustID/librosa/CLAP were read from primary pages whose text is quoted in the report (search-result page text; LICENSE.md quoted verbatim in the session record)"
+    },
+    {
+      "path": "docs/research/_runs/2026-08-17-rhythmic-monotony-and-take-similarity-gate.preflight.json",
+      "role": "R2 preflight (written by the parent before dispatch)",
+      "read_back": false,
+      "note": "pre-existing parent artifact, not modified by this worker"
+    },
+    {
+      "path": "docs/research/_runs/2026-08-17-rhythmic-monotony-and-take-similarity-gate.completion.json",
+      "role": "this completion manifest",
+      "read_back": true
+    },
+    {
+      "path": "docs/README.md",
+      "role": "index row appended to the research index table",
+      "read_back": true
+    }
+  ],
+  "standards_ledger": true,
+  "scope_plan": true,
+  "source_register": true,
+  "query_ledger": "queries recorded in-session: 10 WebSearch discovery rounds (Foote/SSM-novelty; generated-music diversity metrics 2024-2026; cyclic tempogram; Serra Qmax; Vendi score; structureness/scape plot; Chromaprint licence; MERT/CLAP licences; CLAP/librosa/madmom licences; beat-weak failure + MSAF; Haitsma BER threshold; MusicLM/MusicGen memorization)",
+  "claim_ledger": true,
+  "contradiction_ledger": true,
+  "preservation_matrix": true,
+  "english_artifacts": true,
+  "indexed": true,
+  "delegations": [],
+  "frontier_axes": null,
+  "known_gaps": [
+    "SI separation numbers are from symbolic-origin piano/pop audio, not Lyria output — absolute band values do not transfer; local calibration mandatory",
+    "No published pass/fail threshold exists for Qmax on same-engine regenerations; null-distribution calibration (MusicLM negatives-first pattern) is the substitute",
+    "MAD/Vendi/MusicLM/MusicGen/MSAF/scape-plot primaries read [PARTIAL] (key sections + tables from archived captures), not cover-to-cover",
+    "GS groove-similarity exact published values not printed in the ICASSP 2023 text — direction only",
+    "No audio was processed in this run (methods research only per execution limits); every instrument still needs its Clause 7 pass/fail control on real material"
+  ],
+  "spend_usd": 0,
+  "completed_at": "2026-08-17T13:05:00+03:00"
+}

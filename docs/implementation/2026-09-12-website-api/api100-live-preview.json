@@ -1,0 +1,844 @@
+{
+  "verifiedAt": "2026-09-12T17:23:02.153Z",
+  "kind": "actual-api-compile-only",
+  "httpStatus": 200,
+  "parameterCount": 100,
+  "receivedCount": 99,
+  "dryRunConfirmed": true,
+  "bindingCount": 100,
+  "perParameter": [
+    {
+      "parameter": "project",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "creative_goal",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "prompt",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "prompt_enhance",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "negative_prompt",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "genres",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "eras",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "moods",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "prompt_blocks",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "tempo_bpm",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "key",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "time_signature",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "duration",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "structure",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "arrangement_ai",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "energy_curve",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "instruments",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "sonic_tags",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "mood_orbit",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "vocal",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "lyrics",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "references",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "output_package",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "variation_count",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "labels",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "route",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "quality",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "controls",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "mastering",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "export",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "stems",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "seed",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "webhook_url",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "async",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "dry_run",
+      "sent": true,
+      "listedAsReceived": false,
+      "modeConfirmed": true,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "capabilities",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "client_side_echo",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "vocal_style",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "vocal_register",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "vocal_effects",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "backing_vocals",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "adlibs",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "lyrics_structure",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "lyrics_language_per_line",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "lyrics_orthography_route",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "lyrics_verify_metric",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "lyrics_threshold_override",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "lyrics_measurement_domain",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "vocal_intensity",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "vocal_emotion",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "vocal_accent",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "mix_stereo_width",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "mix_dynamic_range",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "mix_low_end",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "mix_brightness",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "mix_vocal_prominence",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "master_style",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "arrangement_density",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "dynamics_shape",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "transitions",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "groove_feel",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "harmonic_palette",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "melodic_character",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "rhythmic_feel",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "percussion_style",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "bass_style",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "texture_layers",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "sound_fx",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "production_era",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "spatial_ambience",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "intro_style",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "outro_style",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "tempo_feel",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "solo_instrument",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "chord_progression",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "cultural_style",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "reference_artist_style",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "instrumentation_notes",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "mood_progression",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "target_use",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "reference_tempo_source",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "mix_compression",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "mix_saturation",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "fade_in_seconds",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "fade_out_seconds",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "normalize_output",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "run_originality_gate",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "channel_layout",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "loop_ready",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "click_track",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "key_change",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "hook_placement",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "tension_curve",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "vocal_layering",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "vocal_pronunciation",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "syllable_stress",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "melisma",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "vibrato",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "song_title_in_lyrics",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    },
+    {
+      "parameter": "countin",
+      "sent": true,
+      "listedAsReceived": true,
+      "modeConfirmed": null,
+      "bindingRecorded": true
+    }
+  ],
+  "plan": {
+    "model": "lyria-3-pro-preview",
+    "takes": 2,
+    "instrumentalOnly": false,
+    "quality": "balanced",
+    "targetSeconds": 30,
+    "toleranceSeconds": 2,
+    "onMiss": "trim",
+    "loudnessTargetLufs": -14,
+    "truePeakTargetDb": -1,
+    "dynamicRangeRequestedLu": 7,
+    "export": "wav24_48k",
+    "fadeInSeconds": 1,
+    "fadeOutSeconds": 2,
+    "channelLayout": "stereo",
+    "requestedStems": [
+      "master"
+    ]
+  },
+  "bindingKinds": {
+    "project": "other",
+    "creative_goal": "prose",
+    "prompt": "typed",
+    "prompt_enhance": "other",
+    "negative_prompt": "prose",
+    "genres": "prose",
+    "eras": "prose",
+    "moods": "prose",
+    "prompt_blocks": "prose",
+    "tempo_bpm": "prose",
+    "key": "prose",
+    "time_signature": "prose",
+    "duration": "other",
+    "structure": "compiled",
+    "arrangement_ai": "our_stage",
+    "energy_curve": "other",
+    "instruments": "prose",
+    "sonic_tags": "prose",
+    "mood_orbit": "compiled",
+    "vocal": "prose",
+    "lyrics": "typed",
+    "references": "compiled",
+    "output_package": "our_stage",
+    "variation_count": "our_stage",
+    "labels": "our_stage",
+    "route": "typed",
+    "quality": "our_stage",
+    "controls": "compiled",
+    "mastering": "other",
+    "export": "other",
+    "stems": "our_stage",
+    "seed": "typed",
+    "webhook_url": "our_stage",
+    "async": "our_stage",
+    "dry_run": "our_stage",
+    "capabilities": "our_stage",
+    "client_side_echo": "other",
+    "vocal_style": "prose",
+    "vocal_register": "prose",
+    "vocal_effects": "prose",
+    "backing_vocals": "prose",
+    "adlibs": "prose",
+    "lyrics_structure": "prose",
+    "lyrics_language_per_line": "prose",
+    "lyrics_orthography_route": "our_stage",
+    "lyrics_verify_metric": "our_stage",
+    "lyrics_threshold_override": "our_stage",
+    "lyrics_measurement_domain": "our_stage",
+    "vocal_intensity": "prose",
+    "vocal_emotion": "prose",
+    "vocal_accent": "prose",
+    "mix_stereo_width": "prose",
+    "mix_dynamic_range": "other",
+    "mix_low_end": "prose",
+    "mix_brightness": "prose",
+    "mix_vocal_prominence": "prose",
+    "master_style": "prose",
+    "arrangement_density": "prose",
+    "dynamics_shape": "prose",
+    "transitions": "prose",
+    "groove_feel": "prose",
+    "harmonic_palette": "prose",
+    "melodic_character": "prose",
+    "rhythmic_feel": "prose",
+    "percussion_style": "prose",
+    "bass_style": "prose",
+    "texture_layers": "prose",
+    "sound_fx": "prose",
+    "production_era": "prose",
+    "spatial_ambience": "prose",
+    "intro_style": "prose",
+    "outro_style": "prose",
+    "tempo_feel": "prose",
+    "solo_instrument": "prose",
+    "chord_progression": "prose",
+    "cultural_style": "prose",
+    "reference_artist_style": "prose",
+    "instrumentation_notes": "prose",
+    "mood_progression": "prose",
+    "target_use": "prose",
+    "reference_tempo_source": "prose",
+    "mix_compression": "prose",
+    "mix_saturation": "prose",
+    "fade_in_seconds": "other",
+    "fade_out_seconds": "other",
+    "normalize_output": "other",
+    "run_originality_gate": "our_stage",
+    "channel_layout": "other",
+    "loop_ready": "prose",
+    "click_track": "prose",
+    "key_change": "prose",
+    "hook_placement": "prose",
+    "tension_curve": "prose",
+    "vocal_layering": "prose",
+    "vocal_pronunciation": "prose",
+    "syllable_stress": "prose",
+    "melisma": "prose",
+    "vibrato": "prose",
+    "song_title_in_lyrics": "prose",
+    "countin": "prose"
+  },
+  "exactPayloadPreserved": true,
+  "noDeliveredAudioEnvelope": true,
+  "intentionalMusicGenerations": 0,
+  "upstreamRequestId": "644b4c4c-e8d7-401f-b3b0-638af8e9d0da",
+  "serviceRevision": "music-api-00105-2qz",
+  "payloadSha256": "bca31af52572bd98e32dff25d648f2dafe5ceede4b75eca0fd19f0fa607ebf5b",
+  "limitations": [
+    "Compilation and acceptance are measured. This does not prove every musical choice was audibly realized.",
+    "The received-parameter list contains99 keys and omits dry_run; that mode is confirmed separately by the response. docs/api/06 currently describes this list as every sent key.",
+    "The one preview consumes API request quota; it is not an additional music-generation smoke.",
+    "This request exercises descriptor references, not audio/MIDI reference import or a real webhook receiver."
+  ]
+}

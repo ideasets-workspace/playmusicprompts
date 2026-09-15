@@ -1,0 +1,52 @@
+{
+ "$schema_id": "berk.music-studio.respelling-selection/v1",
+ "purpose": "The criterion R1 uses to pick a target-orthography spelling for a phone. It lives in DATA because it is a MEASURED choice, not a coding preference.",
+ "selected": "joint_identity_guarded",
+ "definition": "joint, except a grapheme the two alphabets SHARE wins when it is itself read as this phone",
+ "measured_by": "scripts/measure_respelling_criterion.py",
+ "measurement_artifact": "artifacts/music-studio/respelling_criterion.json",
+ "measured_at_utc": "2026-08-15T11:32:53+00:00",
+ "evidence": {
+  "phones_measured": 27,
+  "reads_back_correctly": {
+   "forward": 16,
+   "reverse": 22,
+   "joint": 18,
+   "joint_identity_guarded": 19
+  },
+  "control_A_must_survive": {
+   "phones": 13,
+   "preserved": {
+    "forward": 11,
+    "reverse": 2,
+    "joint": 11,
+    "joint_identity_guarded": 13
+   }
+  },
+  "control_B_must_change": {
+   "phones": 2,
+   "changed": {
+    "forward": 1,
+    "reverse": 2,
+    "joint": 1,
+    "joint_identity_guarded": 1
+   }
+  },
+  "why_the_others_were_rejected": {
+   "forward": "produced 'bekliyor'->'beclyyod' and 'bizi'->'bysy' because English spells the flap /ɾ/ as 'd' at 0.871 and /i/ as 'y' at 0.639",
+   "reverse": "keeps only 2/13 shared letters that are already read correctly, and picks rare context-bound digraphs ('tʃ'->'tu' at 1.000, 'k'->'cc', 'ʒ'->'su')",
+   "joint": "keeps 11/13 instead of 13/13 — the guard is what closes that gap"
+  }
+ },
+ "unreachable_phones": [
+  "ɫ",
+  "ɟ",
+  "c",
+  "ɾ",
+  "ʎ",
+  "ɲ",
+  "d̪",
+  "t̪"
+ ],
+ "unreachable_meaning": "English orthography carries no string a tokeniser reads as these phones. A FINDING about the TARGET orthography, not a defect to patch: A2 measured Italian at 55.1 % feature coverage for Turkish against English 39.1 %, so the respelling target is itself a measurable choice and stays open work."
+}

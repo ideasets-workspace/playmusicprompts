@@ -1,0 +1,93 @@
+{
+  "url": "http://localhost:3411/stream",
+  "at": "2026-09-06T13:46:30.144Z",
+  "initial": {
+    "innerWidth": 1410,
+    "scrollWidth": 1410,
+    "overflowPx": 0,
+    "rootPresent": true,
+    "state": "error",
+    "headerMeta": [
+      "0 stops · 0 ahead · buffer target 2"
+    ],
+    "regions": [],
+    "sections": 0,
+    "selectCounts": [],
+    "ctaDisabled": null,
+    "smallTargets": [],
+    "smallTargetCount": 0,
+    "overflowing": [],
+    "gridColumns": "none",
+    "fontFamily": "Manrope, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-",
+    "bg": "rgb(0, 0, 0)",
+    "title": "PlayMusicPrompts — a stream that grows from your words"
+  },
+  "widths": {
+    "375": {
+      "innerWidth": 375,
+      "scrollWidth": 375,
+      "overflowPx": 0,
+      "rootPresent": true,
+      "state": "error",
+      "headerMeta": [
+        "0 stops · 0 ahead · buffer target 2"
+      ],
+      "regions": [],
+      "sections": 0,
+      "selectCounts": [],
+      "ctaDisabled": null,
+      "smallTargets": [],
+      "smallTargetCount": 0,
+      "overflowing": [],
+      "gridColumns": "none",
+      "fontFamily": "Manrope, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-",
+      "bg": "rgb(0, 0, 0)",
+      "title": "PlayMusicPrompts — a stream that grows from your words"
+    },
+    "768": {
+      "innerWidth": 768,
+      "scrollWidth": 768,
+      "overflowPx": 0,
+      "rootPresent": true,
+      "state": "error",
+      "headerMeta": [
+        "0 stops · 0 ahead · buffer target 2"
+      ],
+      "regions": [],
+      "sections": 0,
+      "selectCounts": [],
+      "ctaDisabled": null,
+      "smallTargets": [],
+      "smallTargetCount": 0,
+      "overflowing": [],
+      "gridColumns": "none",
+      "fontFamily": "Manrope, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-",
+      "bg": "rgb(0, 0, 0)",
+      "title": "PlayMusicPrompts — a stream that grows from your words"
+    },
+    "1440": {
+      "innerWidth": 1440,
+      "scrollWidth": 1440,
+      "overflowPx": 0,
+      "rootPresent": true,
+      "state": "error",
+      "headerMeta": [
+        "0 stops · 0 ahead · buffer target 2"
+      ],
+      "regions": [],
+      "sections": 0,
+      "selectCounts": [],
+      "ctaDisabled": null,
+      "smallTargets": [],
+      "smallTargetCount": 0,
+      "overflowing": [],
+      "gridColumns": "none",
+      "fontFamily": "Manrope, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-",
+      "bg": "rgb(0, 0, 0)",
+      "title": "PlayMusicPrompts — a stream that grows from your words"
+    }
+  },
+  "reducedMotion": {
+    "pulseAnimationName": "no-pulse-element"
+  }
+}

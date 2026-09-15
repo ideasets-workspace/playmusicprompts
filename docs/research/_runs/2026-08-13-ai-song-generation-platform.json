@@ -1,0 +1,301 @@
+{
+  "schema": "berk.deep-research/v1",
+  "status": "complete",
+  "date": "2026-08-13",
+  "mode": "B — owner research order; R0.2 frontier trigger engaged",
+  "topic": "ai-song-generation-platform",
+  "owner_order_verbatim": "peki biz suno gibi bu müzik ve ses layer ı kullanarak en ileri sveiyed ekendi müzik üretim api mizi yapamaz mıyız ? araştırır mısın || evet ve suno daki gibi en advanced settimngs ayarlar melodiler vs. vs.",
+  "main_report": "docs/research/2026-08-13-ai-song-generation-platform-frontier.md",
+  "index": "docs/README.md",
+  "covenant": {
+    "path": "C:/Users/berke/.claude/skills/deep-research/SKILL.md",
+    "sha256": "35DE1E582310915D42386C177348FA1B39D949D4D207FED37463D43C3581398E",
+    "bytes": 117261,
+    "read_in_full_by_parent": true,
+    "installs_hashed_identical": 4
+  },
+  "planned_artifacts": 14,
+  "produced_artifacts": 14,
+  "missing_artifacts": [],
+  "artifacts": [
+    {
+      "path": "docs/research/2026-08-13-ai-song-generation-platform-frontier.md",
+      "sha256": "6CBDD766CDBC3D6E14BEAEC06305B86BB4B436757D9AD4CB603ED10698B77463",
+      "bytes": 11858,
+      "lines": 156,
+      "read_back": true,
+      "role": "main report"
+    },
+    {
+      "path": "docs/research/competitors/2026-08-13-ai-song-generation-pricing.md",
+      "sha256": "E715A42EF91A4AD18DB404CB71EB48DC6448B91AFB98B8C8CBB498D7B27AF4F6",
+      "bytes": 57131,
+      "lines": 428,
+      "read_back": true,
+      "role": "axis1 pricing"
+    },
+    {
+      "path": "docs/research/competitors/2026-08-13-ai-song-generation-functions-and-services.md",
+      "sha256": "9BC448CDA3EF13B709EE63B0278932D6EE08D2E40049FDFF2B4329B73A4B7DF3",
+      "bytes": 69183,
+      "lines": 444,
+      "read_back": true,
+      "role": "axis1 functions"
+    },
+    {
+      "path": "docs/research/competitors/2026-08-13-ai-song-generation-business-model.md",
+      "sha256": "C2BBBFD91327E664B84C83C8407F40B7C2A6A5435BE93BE9DB0249D5A6CA9F8E",
+      "bytes": 41397,
+      "lines": 254,
+      "read_back": true,
+      "role": "axis1 business model"
+    },
+    {
+      "path": "docs/research/competitors/2026-08-13-ai-song-generation-ui-and-menus.md",
+      "sha256": "E07A42A3B563EA993337EB7487F8B7F735111A46AA32098C4DE953547A9487FC",
+      "bytes": 35501,
+      "lines": 232,
+      "read_back": true,
+      "role": "axis1 UI"
+    },
+    {
+      "path": "docs/research/sota/2026-08-13-ai-song-generation.md",
+      "sha256": "B00481DD0DD640EB674A267DC2C2969592552EA0B9D64E9B7729E460C7B0696C",
+      "bytes": 170914,
+      "lines": 877,
+      "read_back": true,
+      "role": "axis2 sota"
+    },
+    {
+      "path": "docs/research/apis/2026-08-13-ai-song-generation.md",
+      "sha256": "F7E4D5B78E5C1764687EBD5B8D49111EA69D17FF713BBD049B969A21B0F0519C",
+      "bytes": 98029,
+      "lines": 811,
+      "read_back": true,
+      "role": "axis3 apis"
+    },
+    {
+      "path": "docs/research/customer-expectations/2026-08-13-ai-song-generation.md",
+      "sha256": "C1BF197FD7EC2AF390818F703F721DB368DA956B7E90E238ACB92CEE77D48D2F",
+      "bytes": 49642,
+      "lines": 287,
+      "read_back": true,
+      "role": "axis4 users"
+    },
+    {
+      "path": "docs/research/future-needs/2026-08-13-ai-song-generation.md",
+      "sha256": "FE32569E5F7B360A2549F44FC226BB50779F7A71E2F03492795007D55FE17883",
+      "bytes": 77959,
+      "lines": 400,
+      "read_back": true,
+      "role": "axis5 future/law"
+    },
+    {
+      "path": "docs/research/growth/2026-08-13-ai-song-generation.md",
+      "sha256": "D3EE3CDA5411D0D10DE4C36D7AD31AAB90720F534B8E56897052A594A61D3214",
+      "bytes": 39807,
+      "lines": 235,
+      "read_back": true,
+      "role": "axis6 growth"
+    },
+    {
+      "path": "docs/research/2026-08-13-ai-song-generation-architecture-on-our-own-layers.md",
+      "sha256": "B3725A3103F7BDCE6A70DBF45EF03DF4107DC501C83AF14CCD3D12060C70E760",
+      "bytes": 18252,
+      "lines": 241,
+      "read_back": true,
+      "role": "architecture"
+    },
+    {
+      "path": "docs/research/2026-08-13-ai-song-generation-source-register.md",
+      "sha256": "4CA099E45644B692AF262A773E27DA1BD9520E317C84B01C092FC185927A863E",
+      "bytes": 29810,
+      "lines": 339,
+      "read_back": true,
+      "role": "source register"
+    },
+    {
+      "path": "docs/research/_runs/2026-08-13-ai-song-generation-platform.preflight.json",
+      "sha256": "F200DF093A400D1BABD08C192635216573FF68F264EBA9439467E49F2C976EED",
+      "bytes": 8023,
+      "lines": 188,
+      "read_back": true,
+      "role": "R2 preflight"
+    },
+    {
+      "path": "docs/research/_runs/2026-08-13-ai-song-generation-platform.json",
+      "sha256": "FDDCE2F54A570980E57E50A5C9A1CD092A102685100FC9BCAC83460E392E9A4C",
+      "bytes": 12992,
+      "lines": 301,
+      "read_back": true,
+      "role": "R17 manifest (this file)"
+    }
+  ],
+  "measured_facts": {
+    "raw_captures": 172,
+    "raw_capture_bytes": 15441195,
+    "competitor_closing_block_present": {
+      "2026-08-13-ai-song-generation-business-model.md": true,
+      "2026-08-13-ai-song-generation-functions-and-services.md": true,
+      "2026-08-13-ai-song-generation-pricing.md": true,
+      "2026-08-13-ai-song-generation-ui-and-menus.md": true
+    },
+    "audio_workers_scanned_for_provenance_marking": 24,
+    "audio_workers_applying_marking": 0,
+    "audio_workers_refusing_fields_by_name": 4,
+    "audio_workers_measuring_own_delivered_file": 3,
+    "offline_contract_controls": "50/50 (scripts/test_vertex_audio_worker_contracts.py)",
+    "wave_duration_controls": "6/6 (scripts/test_wave_duration_measurement.py)"
+  },
+  "relayed_counts_per_slice": {
+    "axis1_competitors": {
+      "authoritative": 25,
+      "formal_full": 3,
+      "own_captures": 8,
+      "self_corrections": "two [FULL] marks downgraded to [ABS] during its own read-back"
+    },
+    "axis2_sota": {
+      "authoritative": 46,
+      "academic": 24,
+      "academic_full": 12,
+      "primary_full": 32,
+      "own_captures": 37,
+      "saturation_claimed": false
+    },
+    "axis3_apis": {
+      "authoritative": 67,
+      "provenance_families": 24,
+      "formal_primaries": 9,
+      "read_full": 41,
+      "own_captures": 93
+    },
+    "axis456_users_law_growth": {
+      "authoritative": 65,
+      "formal_full": 13,
+      "own_captures": 33
+    }
+  },
+  "parent_reverification": [
+    {
+      "claim": "Lyria 3 accepts dictated lyrics via a prompt convention, not a request field",
+      "primary": "docs/research/_sources/2026-08-13-vertex-lyria-prompt-guide.txt",
+      "locator": "L1023, L1008; plus a zero-result search for any `lyrics:` request key",
+      "verdict": "VERIFIED — convention exists, no typed field exists"
+    },
+    {
+      "claim": "Turkish is not among Lyria's documented vocal languages",
+      "primary": "docs/research/_sources/2026-08-13-vertex-lyria-prompt-guide.txt",
+      "locator": "L1034 lists eight languages; search for 'Turkish|Türkçe' returns ZERO matches",
+      "verdict": "VERIFIED as an absence of a documented guarantee, NOT as incapability"
+    },
+    {
+      "claim": "Suno's terms forbid resale, granting access and scraping",
+      "primary": "docs/research/_sources/2026-08-13-suno-terms-of-service-effective-2026-09-03.txt",
+      "locator": "L129 (Commercial Use Restriction), L85 (data mining/robots/scraping)",
+      "verdict": "VERIFIED"
+    },
+    {
+      "claim": "EU AI Act Article 50 applies from 2 August 2026; providers must add machine-readable marks to synthetic audio",
+      "primary": "docs/research/_sources/2026-08-13-european-commission-article-50-transparency-guidelines.txt",
+      "locator": "the Commission's own policy page, captured by the parent this session",
+      "verdict": "VERIFIED at the regulator's own page + 4 independent corroborations"
+    },
+    {
+      "claim": "A wholly AI-generated work has no US copyright",
+      "primary": "docs/research/_sources/2026-08-13-usco-copyright-and-ai-part2-copyrightability-report.txt + 2026-08-13-thaler-v-perlmutter-dc-circuit-opinion-findlaw.txt",
+      "locator": "USCO L632 ('prompts alone do not provide sufficient human control'); Thaler L23",
+      "verdict": "VERIFIED at two primaries"
+    },
+    {
+      "claim": "GTSinger is CC BY-NC-SA 4.0 and therefore unusable in a resale product",
+      "primary": "docs/research/_sources/2026-08-13-neurips-2024-gtsinger-multilingual-singing-corpus.md",
+      "locator": "L523 ('noncommercially used under license CC BY-NC-SA 4.0')",
+      "verdict": "VERIFIED"
+    },
+    {
+      "claim": "ASR error rate tracks perception while spectral distance does not (SVCC 2023)",
+      "primary": "docs/research/_sources/2026-08-13-arxiv-2306-14422-svcc2023-html-mirror.md",
+      "locator": "L131 states the Spearman analysis; L205-L207 carry Table 4 and the per-team table with CER(Conformer)/CER(Whisper) columns",
+      "verdict": "PARTIALLY VERIFIED — the analysis and columns exist; the specific -0.80/-0.73 cells were NOT located by the parent and remain RELAYED"
+    },
+    {
+      "claim": "LeVo 2 reports PER 8.55 %, a different system from the 'LeVo 7.2 %' figure",
+      "primary": "docs/research/_sources/2026-08-13-github-tencent-ailab-songgeneration-levo2-readme.md",
+      "locator": "L36",
+      "verdict": "VERIFIED — found by the parent while checking, and it corrects both slices' shorthand"
+    }
+  ],
+  "standards_ledger": true,
+  "scope_plan": true,
+  "source_register": true,
+  "query_ledger": "inside each axis document",
+  "claim_ledger": "inside each axis document",
+  "contradiction_ledger": true,
+  "preservation_matrix": false,
+  "english_artifacts": true,
+  "indexed": true,
+  "delegations": [
+    {
+      "slice": "axis1 competitors",
+      "files": 4,
+      "covenant_named": true,
+      "covenant_sha256_in_brief": true,
+      "context_labels": "01-18 all non-empty",
+      "parent_reopened_files": true
+    },
+    {
+      "slice": "axis2 sota",
+      "files": 1,
+      "covenant_named": true,
+      "covenant_sha256_in_brief": true,
+      "context_labels": "01-18 all non-empty",
+      "parent_reopened_files": true
+    },
+    {
+      "slice": "axis3 apis",
+      "files": 1,
+      "covenant_named": true,
+      "covenant_sha256_in_brief": true,
+      "context_labels": "01-18 all non-empty",
+      "parent_reopened_files": true
+    },
+    {
+      "slice": "axis4-6 users/law/growth",
+      "files": 3,
+      "covenant_named": true,
+      "covenant_sha256_in_brief": true,
+      "context_labels": "01-18 all non-empty",
+      "parent_reopened_files": true
+    }
+  ],
+  "frontier_axes": {
+    "competitors": true,
+    "sota": true,
+    "apis": true,
+    "customer_expectations": true,
+    "future_needs": true,
+    "growth": true
+  },
+  "spend_usd": 0.0,
+  "known_gaps": [
+    "EU and UK copyrightability of AI-generated works: NOT FOUND IN THE SEARCHED SCOPE — the largest legal hole, and our nearest market",
+    "Sung Turkish entirely unmeasured: no Turkish SVS system, no score-annotated Turkish singing corpus",
+    "Saturation NOT reached on the science axis (rounds 18-20 still yielded new work)",
+    "7 repository licences unread (UNVERIFIED-LICENCE) — gates any self-host path",
+    "No CN/JP/KR-language search lane: ByteDance and Alibaba are a real blind spot",
+    "No interface was ever seen — every visual claim in the UI document is UNVERIFIED",
+    "Never opened: the 143-page Munich judgment, the Commission Guidelines PDF, the Code of Practice, Stability's pricing page, the Eleven Music Model-Specific Terms, USCO Part 3",
+    "NO CAPABILITY PROBE RUN — nothing in this run is evidence about our own stack",
+    "78 of 172 captures are cited nowhere by filename (26 further are .html twins of cited files): a traceability weakness of this run, measured in the source register",
+    "The parent has NOT re-verified: all price figures, the ElevenLabs parameter surface, the Whisper sung-vs-spoken WER numbers, the Azure/Bedrock negative findings, the Munich judgment, the CourtListener docket dates, the professional-artist study numbers",
+    "preservation_matrix not produced: owner-atom mapping against P1-P4 was not run for this topical run",
+    "docs/README.md not yet updated — indexing is the parent's outstanding duty"
+  ],
+  "prerequisites_before_build": [
+    "≈$0.08 Lyria-3 Turkish lyric probe (needs Berk's spend approval)",
+    "a provenance instrument that opens a delivered file and reports manifest survival",
+    "the gate's calibration set: human recording / instrumental / wrong-lyric arms",
+    "legal answers only Berk can obtain (EU-UK copyrightability; Article 50 provider status; ToS language for selling generation without warranting copyright)"
+  ],
+  "completed_at": "2026-08-13T12:33:11.138943+00:00"
+}

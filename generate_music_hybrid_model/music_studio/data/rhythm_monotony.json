@@ -1,0 +1,55 @@
+{
+  "$schema_id": "berk.rhythm-monotony-parameters/v1",
+  "_purpose": "Every parameter of the within-take rhythmic-monotony gate (D-SSM-31 axis 1), each with its evidence. NO value in music_studio/rhythm_monotony.py is set by an agent's judgement: the module refuses to run if a key is missing here (CLAUSE 4 / the 2026-08-16 standing order: maximally parametric, no static values in code).",
+  "_provenance_report": "docs/research/2026-08-17-rhythmic-monotony-and-take-similarity-gate.md",
+  "chroma": {
+    "frame_seconds": {"value": 0.464,
+      "_evidence": "Shared with the axis-2 instrument (data/take_similarity.json chroma block, Serra NJP 2009 primary): one chroma geometry across both gates so their features are comparable — two lists that must agree, kept in agreement by a shared convention recorded in both files."},
+    "overlap_fraction": {"value": 0.5,
+      "_evidence": "Same shared convention (Serra NJP 2009: 50% overlap)."},
+    "bins": {"value": 12,
+      "_evidence": "Same shared convention (12-bin chroma)."}
+  },
+  "scape_plot": {
+    "feature_smoothing_length": {"value": 21,
+      "_evidence": "MEASURED this session from the installed reference implementation: libfmp 1.3.0 compute_sm_from_filename signature carries L=21 as the feature-smoothing default of the published SM pipeline. OMITTING this stage was a measured defect (2026-08-17 14:1x): without smoothing+downsampling a 270 s take produced a ~1150-frame scape-plot input and the first LM-SSD run sat >14 minutes on one take — the stage is part of the reference chain, not an optimisation."},
+    "feature_downsampling": {"value": 5,
+      "_evidence": "Same measured reference signature: H=5 (downsampling factor of the smoothed feature sequence). The SI band conversion accounts for the coarser frame period explicitly."},
+    "timescale_bands_seconds": {"value": {"short": [4, 12], "mid": [12, 32], "long": [32, null]},
+      "_evidence": "Wu & Yang ICASSP 2023 (arXiv:2209.08212, read [FULL] 2026-08-17, capture archived): their 2023 bands 4-12 / 12-32 / >32 s. Contradiction C3 in the research report records that the same authors used 3/8/15 s in 2020 — proof the bands are CORPUS-TUNED DATA. These values are therefore the CALIBRATION STARTING GRID, never the shipped constant; the calibrated bar artefact supersedes them per genre bucket (Clause 23)."},
+    "smoothing_filter_length": {"value": 16,
+      "_evidence": "MEASURED this session from the installed reference implementation itself: libfmp 1.3.0 (MIT, the method authors' own package) compute_sm_from_filename signature carries L_smooth=16 as its published pipeline default (inspect.signature output archived in the session log). The first parameter-file draft claimed 41 from a notebook recollection — corrected to the measured value the same turn."},
+    "tempo_relative_set": {"value": [1.0],
+      "_evidence": "Same measured reference signature: tempo_rel_set=array([1]) is the pipeline default. Widening the set is a calibration-time decision to make against labelled takes, never a shipped guess."},
+    "threshold": {"value": 0.15,
+      "_evidence": "Same measured reference signature: strategy='relative', thresh=0.15, scale=True."},
+    "threshold_strategy": {"value": "relative",
+      "_evidence": "Same measured reference signature."},
+    "penalty": {"value": 0.0,
+      "_evidence": "Same measured reference signature: penalty=0.0 is the reference pipeline default. The first draft claimed -2.0 from a notebook recollection — corrected to the measured value the same turn; a penalty sweep belongs to calibration, not to code."}
+  },
+  "tempogram": {
+    "bpm_min": {"value": 30,
+      "_evidence": "Grosche/Mueller/Kurth ICASSP 2010 (read [FULL] 2026-08-17, capture archived): tempo axis range 30-480 BPM for the Fourier tempogram before octave folding."},
+    "bpm_max": {"value": 480,
+      "_evidence": "Same primary: upper edge 480 BPM."},
+    "novelty_window_seconds": {"value": 6.0,
+      "_evidence": "Same primary: 6 s Hann window over the spectral-flux novelty curve."}
+  },
+    "tile_rule": {
+    "single_bar_consecutive_limit": {"value": 6,
+      "_evidence": "Wu & Yang (arXiv:2209.08212 section 5, read [FULL]): 'one bar of melody being exactly and consecutively repeated over 6 times' — measured 5.5% of their un-pretrained generations vs 0.5% of real data. The audio transfer defines 'exactly repeated' by the PUBLISHED Haitsma-Kalker near-exact criterion (BER below the 0.35 operating point), consumed BY IMPORT from take_similarity.near_copy_ber_threshold() — never retyped here (single source of truth). The first draft used a self-referencing similarity quantile invented by the agent; the control suite caught it degenerating on the all-identical case and it was replaced the same turn."},
+    "neighbour_pair_consecutive_limit": {"value": 4,
+      "_evidence": "Same primary, same sentence: 'or two neighboring bars repeated over 4 times'."}
+  },
+  "calibration": {
+    "bar_source": {"value": "bar_calibration.tolerance_limit",
+      "_evidence": "Research report axis-3 committed recommendation: SI band values from the primary are SYMBOLIC-origin and do not transfer to Lyria audio (Honest limits section) — the SI fail bar and the tempogram-stability bar are calibrated locally on labelled monotone/varied takes via music_studio/bar_calibration.py (logit + exact noncentral-t upper tolerance limit)."},
+    "status_until_calibrated": {"value": "NOT_CALIBRATED",
+      "_evidence": "MANDATE CLAUSE 7: a threshold is never guessed; the gate reports NOT_CALIBRATED with raw statistics until the bar artefact exists."}
+  },
+  "limits_read_this_first": {
+    "genre_constraint": "Beat-tracker-dependent statistics are pop-only (research F8: madmom-class baselines F1 0.473-0.595 on expressive material). This gate therefore uses FIXED-WINDOW chroma frames and the continuous Fourier tempogram — no beat decisions anywhere — so it stays valid on ballad/cinematic takes.",
+    "si_absolute_values": "The published SI numbers (83.6/43.8/32.5) prove the SEPARATION DIRECTION only; the absolute values come from symbolic-origin renditions and are never used as a bar."
+  }
+}

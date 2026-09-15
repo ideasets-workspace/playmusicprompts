@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Musics — catalogue · PlayMusicPrompts design mockup</title>
+<!--
+  MUSICS — the public catalogue as ONE continuous stream of rows (Berk's correction: never a
+  card grid). Header uses the currently playing cover, blurred, as backdrop (his Dawn FM
+  reference). Filter chips are fed by GET /api/musics?facets=1 in production; here they
+  show the same facet families the live API returns (genre, mood, vocal, language, duration).
+-->
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/player.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/musics.css">
+<link rel="stylesheet" href="css/motion.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.185.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.185.1/examples/jsm/"}}</script>
+</head>
+<body>
+<div class="app" data-rail="expanded" data-drawer="closed">
+  <aside class="rail" id="rail" aria-label="Navigation"></aside>
+  <header class="topbar"></header>
+
+  <main class="main" id="main">
+    <section class="cat-head" aria-labelledby="cat-h">
+      <div class="cat-backdrop" aria-hidden="true"></div>
+      <div class="container">
+        <div>
+          <span class="eyebrow">Catalogue · public</span>
+          <h1 class="display cat-title" id="cat-h">Every track, one stream.</h1>
+          <div class="cat-stats"><span><b>46</b> tracks</span><span><b>84 %</b> instrumental</span><span><b>2,196</b> genres in the vocabulary</span><span><b>−14 LUFS</b> streaming master</span></div>
+        </div>
+        <div class="cat-actions">
+          <button class="btn-go" type="button"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Play all</button>
+          <button class="btn-ghost" type="button">Shuffle</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="filters" role="group" aria-label="Filters">
+        <button class="chip" type="button" aria-pressed="true">All</button>
+        <button class="chip" type="button">Lo-fi <span class="val">9</span></button>
+        <button class="chip" type="button">Cinematic <span class="val">7</span></button>
+        <button class="chip" type="button">Ambient <span class="val">11</span></button>
+        <button class="chip" type="button">Jazz <span class="val">5</span></button>
+        <button class="chip" type="button">Synthwave <span class="val">4</span></button>
+        <span class="sep" aria-hidden="true"></span>
+        <button class="chip" type="button">Instrumental <span class="val">39</span></button>
+        <button class="chip" type="button">Vocal <span class="val">7</span></button>
+        <span class="sep" aria-hidden="true"></span>
+        <label class="range">Length <input type="range" min="10" max="180" value="180" aria-label="Maximum length in seconds"> <span class="mono">≤ 3:00</span></label>
+        <span class="spacer"></span>
+        <button class="sort" type="button" aria-haspopup="listbox">Sort <b>Most played</b> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button>
+      </div>
+
+      <div class="stream-head" aria-hidden="true"><span>#</span><span>Track</span><span>Tags</span><span>Length</span></div>
+      <ol class="stream" id="stream" aria-label="Tracks" data-reveal></ol>
+      <div class="load-more"><button class="btn-ghost" type="button">Show 20 more</button></div>
+
+      <footer class="footer">
+        <span>© 2026 PlayMusicPrompts · Ideasets</span>
+        <a href="legal.html#privacy">Privacy</a><a href="legal.html#terms">Terms</a><a href="legal.html#cookies">Cookies &amp; ads</a>
+        <span style="margin-left:auto">Design mockup — rows are review content; live rows replace them at integration.</span>
+      </footer>
+    </div>
+  </main>
+</div>
+
+<script type="module">
+  import { AppShell, ICONS, coverOf } from "./js/shell.js";
+  import { SAMPLE_TRACKS } from "./js/constants.js";
+  const shell = new AppShell({ current: "musics.html", nowPlaying: SAMPLE_TRACKS[5] });
+  document.querySelector(".cat-backdrop").style.backgroundImage = `url('${coverOf(SAMPLE_TRACKS[5], 512)}')`;
+
+  const fmt = (s) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+  const rows = [...SAMPLE_TRACKS, ...SAMPLE_TRACKS.slice(0, 4)].map((t, i) => ({ ...t, i: i + 1 }));
+  document.getElementById("stream").innerHTML = rows.map((t) => `
+    <li class="row" ${t.id === "t6" && t.i === 6 ? 'aria-current="true"' : ""}>
+      <span class="idx">${t.i === 6 ? '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>' : String(t.i).padStart(2, "0")}</span>
+      <img src="${coverOf(t, 128)}" alt="" loading="lazy">
+      <div class="r-main">
+        <div class="r-title"><a href="track.html">${t.title}</a></div>
+        <div class="r-sub">“${t.prompt}”</div>
+        <div class="r-meta"><span>${t.bpm} BPM</span><span>${t.lufs.toFixed(1)} LUFS</span><span>${t.plays.toLocaleString()} plays</span><span>${t.likes} likes</span></div>
+      </div>
+      <div class="r-tags"><span class="tag">${t.genres[0].replace(/_/g, " ")}</span><span class="tag">${t.moods[0]}</span><span class="tag">${t.vocal}</span></div>
+      <div style="display:flex;align-items:center;gap:var(--sp-3)">
+        <span class="r-dur">${fmt(t.seconds)}</span>
+        <div class="r-acts">
+          <button class="icon-btn" type="button" aria-label="Like">${ICONS.heart}</button>
+          <button class="icon-btn" type="button" aria-label="Add to playlist">${ICONS.plus}</button>
+          <button class="icon-btn" type="button" aria-label="Share">${ICONS.share}</button>
+          <button class="icon-btn" type="button" aria-label="More">${ICONS.more}</button>
+        </div>
+      </div>
+    </li>`).join("");
+  shell.reveal();
+</script>
+</body>
+</html>

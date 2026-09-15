@@ -1,0 +1,44 @@
+{
+  "$schema_id": "berk.music-studio-symbol-convention-map/v1",
+  "purpose": "MEASURED SYMBOL-CONVENTION BRIDGE between the research corpus's IPA and PHOIBLE 2.0's IPA. Research finding C-01 warns in its own words that a mixed symbol set silently inflates PER; this file is the countermeasure, and every mapping in it was MEASURED against the real PHOIBLE table this session, never assumed.",
+  "why_this_file_exists": "The A2 coverage score looks each Turkish phone up in PHOIBLE's feature table. Measured 2026-08-15: 4 of the 69 phones in the research inventory are ABSENT from PHOIBLE as written - all four affricates. Tie-bar normalisation (stripping U+0361 / U+035C) resolved 0 of the 4, so the difference is not a tie bar. Enumerating every PHOIBLE segment containing an esh or ezh after a stop showed PHOIBLE's actual convention: it writes the postalveolar affricate with an explicit RETRACTED diacritic on the stop - `d̠ʒ` = U+0064 U+0320 U+0292 - and carries 73 such segments. That is the bridge below.",
+  "measurement_commands": [
+    "the 4 absences and the failed tie-bar test: an inline scan of music_studio/data/phoible_segment_features.json against data/turkish_phoneme_inventory.json, 2026-08-15",
+    "PHOIBLE's affricate spelling: enumeration of every segment matching ('ʃ' or 'ʒ') AND a preceding stop - 73 segments, all using U+0320"
+  ],
+  "diacritics_referenced": {
+    "U+0320": "COMBINING MINUS SIGN BELOW - IPA 'retracted'. PHOIBLE places it on the stop portion of a postalveolar affricate.",
+    "U+02D0": "MODIFIER LETTER TRIANGULAR COLON - length. Carried through the mapping unchanged."
+  },
+  "research_to_phoible": [
+    {
+      "research": "dʒ",
+      "phoible": "d̠ʒ",
+      "codepoints": "U+0064 U+0320 U+0292",
+      "turkish_letter": "c",
+      "verified": "present in the PHOIBLE table, 2026-08-15"
+    },
+    {
+      "research": "dʒː",
+      "phoible": "d̠ʒː",
+      "codepoints": "U+0064 U+0320 U+0292 U+02D0",
+      "turkish_letter": "cc",
+      "verified": "present in the PHOIBLE table, 2026-08-15"
+    },
+    {
+      "research": "tʃ",
+      "phoible": "t̠ʃ",
+      "codepoints": "U+0074 U+0320 U+0283",
+      "turkish_letter": "ç",
+      "verified": "asserted by scripts/test_phonology_layer.py against the real table; the voiceless counterpart of the measured d̠ʒ pattern"
+    },
+    {
+      "research": "tʃː",
+      "phoible": "t̠ʃː",
+      "codepoints": "U+0074 U+0320 U+0283 U+02D0",
+      "turkish_letter": "çç",
+      "verified": "asserted by scripts/test_phonology_layer.py against the real table"
+    }
+  ],
+  "unmapped_policy": "A phone with no PHOIBLE counterpart is REPORTED as unmeasurable (FEATURES_UNAVAILABLE / unmeasurable in the coverage score) and is NEVER silently mapped onto a near symbol. An invented mapping would corrupt every distance computed from it, which is the defect class this project has paid for repeatedly."
+}

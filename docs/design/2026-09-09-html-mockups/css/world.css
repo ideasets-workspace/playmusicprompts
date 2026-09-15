@@ -1,0 +1,58 @@
+/* =====================================================================================
+   css/world.css — THE WORLD page set (world/): the page does not scroll; the camera does.
+   A fixed WebGL canvas fills the viewport, HTML "station" panels float over it and fade in when
+   the camera reaches their station; a vertical dot rail shows/controls progress; a hint line
+   teaches the two gestures (the overworldaudio pattern: "Drag or scroll to navigate").
+   ===================================================================================== */
+
+html, body { height: 100%; overflow: hidden; }
+.world { position: fixed; inset: 0; z-index: 0; cursor: grab; touch-action: none; }
+.world.is-dragging { cursor: grabbing; }
+.world canvas { width: 100%; height: 100%; display: block; }
+.world[data-webgl="unavailable"]::after { content: "WebGL is unavailable in this browser — the classic set at ../index.html shows the same content."; position: absolute; inset: auto 24px 120px 24px; color: var(--ink-dim); font-size: var(--fs-sm); text-align: center; }
+
+/* ---- chrome over the world ------------------------------------------------------------ */
+.w-top { position: fixed; inset: 0 0 auto 0; z-index: 3; display: flex; align-items: center; gap: var(--sp-4); padding: var(--sp-4) clamp(16px, 3vw, 40px); pointer-events: none; }
+.w-top > * { pointer-events: auto; }
+.w-top .brand { color: var(--ink); }
+.w-top .spacer { flex: 1; }
+.w-top .btn-ghost { background: rgba(11,7,18,.5); backdrop-filter: blur(12px); }
+.w-hint { position: fixed; left: 50%; bottom: calc(var(--player-h) + 18px); transform: translateX(-50%); z-index: 3; display: flex; gap: var(--sp-4); align-items: center; padding: 8px 14px; border-radius: var(--r-pill); background: rgba(11,7,18,.55); backdrop-filter: blur(12px); border: 1px solid var(--line); color: var(--ink-dim); font-size: var(--fs-xs); font-weight: 600; letter-spacing: .04em; pointer-events: none; transition: opacity .6s; }
+.w-hint kbd { font-family: var(--font-mono); font-size: 11px; color: var(--ink); border: 1px solid var(--line-strong); border-radius: 6px; padding: 1px 6px; }
+.world-page[data-station]:not([data-station="0"]) .w-hint { opacity: 0; }
+
+/* ---- station dots ------------------------------------------------------------------------ */
+.w-dots { position: fixed; right: clamp(16px, 2.5vw, 36px); top: 50%; transform: translateY(-50%); z-index: 3; display: grid; gap: 18px; }
+.w-dot { position: relative; width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%; }
+.w-dot i { width: 8px; height: 8px; border-radius: 50%; background: var(--ink-faint); transition: transform var(--dur-base), background var(--dur-base), box-shadow var(--dur-base); }
+.w-dot[aria-current="true"] i { background: var(--accent-2); transform: scale(1.6); box-shadow: var(--glow-cyan); }
+.w-dot span { position: absolute; right: 52px; top: 50%; transform: translateY(-50%); white-space: nowrap; font-size: var(--fs-2xs); font-weight: 700; letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--ink-dim); opacity: 0; transition: opacity var(--dur-base); pointer-events: none; }
+.w-dot:hover span, .w-dot[aria-current="true"] span { opacity: 1; }
+.w-progress { position: fixed; left: 0; right: 0; top: 0; height: 2px; z-index: 4; background: var(--brand-gradient); transform-origin: left; transform: scaleX(var(--progress, 0)); }
+
+/* ---- station panels ---------------------------------------------------------------------- */
+.station { position: fixed; inset: 0; z-index: 2; display: grid; align-items: center; padding: 0 clamp(16px, 5vw, 96px); pointer-events: none; opacity: 0; transform: translateY(30px) scale(.985); filter: blur(10px); transition: opacity .7s var(--ease-out), transform .7s var(--ease-out), filter .7s var(--ease-out); }
+.station.is-active { opacity: 1; transform: none; filter: none; }
+.station.is-active .panel { pointer-events: auto; }
+.panel { max-width: 640px; }
+.panel.right { margin-left: auto; }
+.panel.center { margin-inline: auto; text-align: center; }
+.panel .display { font-size: clamp(2.2rem, 4vw + .8rem, 4.4rem); }
+.panel .composer { background: rgba(18,12,29,.62); }
+.panel .glass { padding: var(--sp-6); border-radius: var(--r-xl); background: rgba(11,7,18,.55); backdrop-filter: blur(18px) saturate(140%); border: 1px solid var(--line-strong); box-shadow: var(--shadow-card), inset 0 1px 0 rgba(255,255,255,.06); }
+.panel .kv { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sp-3); margin-top: var(--sp-5); }
+.panel .kv .fact { background: rgba(5,3,8,.45); }
+.station-3 .panel { max-width: 520px; }
+.station-4 { align-items: end; padding-bottom: calc(var(--player-h) + 28px); }
+.station-4 .panel { max-width: 560px; }
+.w-selected { margin-top: var(--sp-4); display: flex; gap: var(--sp-3); align-items: center; min-height: 64px; }
+.w-selected img { width: 56px; height: 56px; border-radius: var(--r-md); }
+.w-selected .t { font-weight: 800; } .w-selected .s { font-size: var(--fs-xs); color: var(--ink-faint); }
+
+@media (max-width: 767.98px) {
+  .w-dots { right: 8px; gap: 8px; } .w-dot span { display: none; }
+  .station { align-items: end; padding-bottom: calc(var(--player-h-mobile) + 64px); }
+  .panel .display { font-size: var(--fs-3xl); }
+  .panel .kv { grid-template-columns: 1fr 1fr; }
+  .w-hint { bottom: calc(var(--player-h-mobile) + 12px); font-size: 11px; }
+}

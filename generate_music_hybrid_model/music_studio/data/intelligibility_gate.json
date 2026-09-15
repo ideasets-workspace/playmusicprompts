@@ -1,0 +1,90 @@
+{
+ "$schema_id": "berk.music-studio.intelligibility-gate/v1",
+ "purpose": "Research item A8 — the intelligibility gate: separate -> RMS-VAD vocal-activity segmentation -> per-language ASR -> BOTH softened PER and case-insensitive WER. Every parameter below carries the exact source it was read from. music_studio/vocal_activity.py and music_studio/per_gate.py consume this file; neither holds a threshold of its own.",
+ "why_this_file_exists": "A VAD threshold is exactly the class of value this project has paid for guessing once: a guessed motion floor of 0.08 rejected all seven correct shots where the calibrated value was 0.0007 (MANDATE CLAUSE 7). The local research corpus recorded S17's RESULTS (23.02 % -> 20.35 %) but not its PARAMETERS, so the primary was read this session.",
+
+ "primary_sources_read_this_session": {
+  "S17_paper": {
+   "citation": "Jaza Syed, Ivan Meresman-Higgs, Ondřej Cífka, Mark Sandler. 'Exploiting Music Source Separation for Automatic Lyrics Transcription with Whisper'. IEEE ICMEW 2025 (In press). arXiv:2506.15514, published 2025-06-18.",
+   "url": "https://arxiv.org/pdf/2506.15514",
+   "read_as": "[FULL] — fetched and read this session; the RMS-VAD method section, Cut & Merge parameters, Tables III/IV/V discussion and the deletions analysis were read directly.",
+   "verbatim_parameters": "For \"Cut & Merge\", we use onset and offset thresholds of 0.1, a minimum silence duration of 1 s and a maximum segment length of 30 s, matching Whisper's input duration.",
+   "verbatim_algorithm": "1) Obtain separated vocals with a source separation model 2) Compute VAD[n] for the separated vocals 3) Obtain boundaries from VAD[n] using \"Cut & Merge\"",
+   "verbatim_normalisation": "VAD[n] = RMS[n] / max_m RMS[m]",
+   "gap_in_the_paper": "the frame size N is defined SYMBOLICALLY in equation (2) and its numeric value is never stated in the text. That gap is why the authors' code was read as well."
+  },
+  "S17_code": {
+   "url": "https://raw.githubusercontent.com/jaza-syed/mss-alt/main/src/alt/infer.py",
+   "read_as": "[FULL] — fetched and read this session. The README names `get_speech_timestamps_rms` as the paper's VAD step, and the function's body supplies every value the paper left symbolic.",
+   "licence_note": "the repository's licence was NOT opened this session. Nothing is copied from it: the parameters are FACTS about a published method, and our implementation is our own code. Before any code-level reuse the licence must be read."
+  }
+ },
+
+ "stage_1_separation": {
+  "rule": "the vocal signal is obtained by separation, and it is used for MEASUREMENT ONLY (MANDATE CLAUSE 15 forbids shipping a separated stem).",
+  "our_separator": "SCNet XL IHF, 4-stem — music_studio/data/separators.json, chosen on SDR with an MIT licence, already run on the GPU instance",
+  "their_separator": "Hybrid Demucs mdx (vocals SDR 7.97 dB) and mdx_extra (8.76 dB); long-form experiments used mdx_extra only",
+  "measured_caveat_that_changes_expectations": "S17 line 129: 'RMS-VAD shows similar performance with original and separated audio, indicating that the improvement comes from better segment boundaries rather than improved vocal quality after separation.' So for Jam-ALT the gain is SEGMENTATION, not clarity. Our local claim C09 credits both; the primary credits boundaries. Recorded as a refinement of C09, not a contradiction of the outcome numbers."
+ },
+
+ "stage_2_rms_vad": {
+  "signal": {"sampling_rate_hz": 16000, "source": "S17 code: librosa.load(vad_audio_path, sr=16000)"},
+  "rms_frame_length_samples": {"value": 2048, "seconds": 0.128, "source": "S17 code: librosa.feature.rms(y=audio, frame_length=2048, hop_length=window_size_samples)"},
+  "rms_hop_samples": {"value": 512, "seconds": 0.032, "source": "S17 code: window_size_samples=512, documented as 'hop length of rms feature (frame length is fixed)'"},
+  "normalisation": {"formula": "probs = rms / max(rms)", "source": "S17 code, and paper equation (3) — PEAK normalisation, so the thresholds below are RELATIVE to the loudest frame of this signal and are therefore scale-free"},
+  "onset_threshold": {"value": 0.1, "source": "S17 paper, verbatim"},
+  "offset_threshold": {"value": 0.1, "source": "S17 paper, verbatim"},
+  "min_silence_duration_s": {"value": 1.0, "source": "S17 paper, verbatim"},
+  "max_segment_length_s": {"value": 30, "source": "S17 paper, verbatim — 'matching Whisper's input duration'"},
+  "min_silence_at_max_speech_ms": {"value": 98, "source": "S17 code: min_silence_samples_at_max_speech = sampling_rate * 98 / 1000"},
+  "min_cut_fallback": {
+   "rule": "when a segment would exceed the maximum and no prior silence is available, search only the SECOND HALF of the segment for the minimum VAD score and cut there; on ties take the LAST index.",
+   "source": "S17 code, the `else` branch of the max-duration switch-off"
+  },
+  "merge": {"rule": "consecutive activity segments are merged while the merged span stays under max_segment_length_s", "source": "S17 code: merge_segments(speech_segments, max_length_s=30, sampling_rate=16000)"},
+  "parameters_NOT_sourced": {
+   "min_speech_duration_ms": "read from VadOptions in their code; the value is faster-whisper's and was NOT verified this session",
+   "speech_pad_ms": "same — comes from VadOptions and is unverified here",
+   "consequence": "our implementation REQUIRES these two explicitly and has no default, because a silent default would be an unsourced threshold wearing a library's clothes."
+  }
+ },
+
+ "stage_3_asr": {
+  "their_asr": {"model": "Whisper large-v2 via faster-whisper", "beam_size": 5, "language": "provided at transcription time", "runs_averaged": 5, "why_averaged": "Whisper's decoding is stochastic; the paper averages error rates over 5 runs", "random_seed": 42, "seed_source": "S17 code: ctranslate2.set_random_seed(random_seed), random_seed=42"},
+  "our_asr": {"model": "stt_vertex (Chirp / video-speech-transcription)", "why": "D-SSM-24 — everything must be Vertex and Google's own services. Whisper is not a Google service.", "consequence_stated_not_hidden": "OUR NUMBERS WILL NOT BE COMPARABLE TO 20.35 %. That figure is Whisper-large-v2-on-Jam-ALT. Changing the ASR changes the instrument, so S17's WER is the METHOD's evidence, never our expected result. Any report that quotes 20.35 % as our target is wrong."},
+  "per_language_rule": "the ASR is named per language in the artefact — S17/S01 both select a language-appropriate model (Paraformer for Mandarin, Whisper for English). For Turkish the choice is open and must be made with a control (Axis 7 gap)."
+ },
+
+ "stage_4_metrics": {
+  "per": {
+   "primary": true,
+   "why": "PER is what the SVS literature reports for lyric intelligibility, and WER punishes Turkish for being agglutinative (S41 names Turkish in that argument).",
+   "softening_rule_verbatim": "S05 (Transinger): 'detections that match the correct word or its homophones were not counted as errors. Moreover, if only a subset of the phonemes in a word is correctly detected, those correctly identified phonemes are also considered accurate.'",
+   "implemented_by": "music_studio/per_gate.py — the existing lattice-based scorer already gives partial phoneme credit through alignment; the HOMOPHONE clause is the part A8 adds."
+  },
+  "wer": {
+   "primary": false,
+   "why": "comparability with the published frontier, which does not use PER at all.",
+   "convention": "case-insensitive WER as defined by alt-eval (S14/S16). For writing systems without spaces alt-eval treats each character as a word, making WER equivalent to CER.",
+   "must_be_reported_beside_per": true
+  },
+  "correction_carried_forward": "D-SSM-18: 16.14 % PER is NOT a human floor — it is VAE-reconstructed ground truth measured on a MIX. No threshold in this gate comes from it.",
+  "human_floors_measured_by_others": {
+   "S14_jam_alt_human_vs_human_wer": 0.111,
+   "S01_ground_truth_wer_chinese": "0.074-0.089",
+   "S01_ground_truth_wer_english": "0.197-0.208",
+   "why_recorded": "they show the floor is PER-LANGUAGE by a factor of about 2.7, which is A9's justification — they are NOT our bar."
+  }
+ },
+
+ "stage_5_the_vocable_exemption": {
+  "rule": "non-lexical vocables ('ooh', 'ah') and backing vocals must NOT count as lyric failure.",
+  "measured_reason_verbatim": "S17: 'over half of both are deleted in both datasets, revealing a shortcoming in Whisper... The high values observed even with vocal stems indicate that this issue cannot be resolved by improved source separation.'",
+  "consequence": "a song full of vocables would score as unintelligible when the singing is correct. This is A10's fourth negative control."
+ },
+
+ "what_this_gate_cannot_do": [
+  "It cannot say whether the singing is GOOD. It measures intelligibility only; the artistic verdict is Berk's (MANDATE CLAUSE 19).",
+  "It cannot produce a PASS/FAIL until A9's per-language bar is calibrated from >=5 real human sung recordings in that language. Until then every verdict is NOT_CALIBRATED and that is the honest state, not a placeholder."
+ ]
+}

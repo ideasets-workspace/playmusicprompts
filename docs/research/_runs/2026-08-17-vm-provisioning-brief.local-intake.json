@@ -1,0 +1,174 @@
+{
+ "schema": "berk.local-intake/v1",
+ "deliverable": "Clause 20/21 provisioning brief",
+ "generated": "2026-08-17",
+ "section_map": "artifacts/moviemaker/vm_provisioning_brief_sections.json",
+ "sections": {
+  "vpc-sc-perimeter": {
+   "sources": [
+    {
+     "path": "docs/moviemaker/research/_sources/2026-08-10-vpc-service-controls-supported-products.txt",
+     "sha256": "d9b626785b7af348e12427620360b4ad1e973219f95011502e80786b0a60e497",
+     "captured": "2026-08-10",
+     "size": 231618
+    }
+   ],
+   "external_research_needed": false,
+   "note": "231KB supported-products capture; per-API perimeter facts re-checked here first"
+  },
+  "network-and-psc": {
+   "sources": [
+    {
+     "path": "docs/moviemaker/research/_sources/2026-08-12-gcp-vpc-pricing-psc-endpoint.txt",
+     "sha256": "c6424c882f7a658668b55285c8f539c67763972bd8cf469f785419a8574e989b",
+     "captured": "2026-08-12",
+     "size": 48012
+    },
+    {
+     "path": "docs/moviemaker/research/_sources/2026-08-10-codelab-psc-google-apis-hybrid-gemini.txt",
+     "sha256": "c596a3ef94c509c55c5d15e1274bd7d4f3005d24e8f3c6adb1e131b221e15659",
+     "captured": "2026-08-10",
+     "size": 27206
+    },
+    {
+     "path": "docs/moviemaker/research/_sources/2026-08-10-psc-access-agent-platform-from-onpremises.txt",
+     "sha256": "c7600bbb00b892a1d1dbf7107f4b13cc0eccc7b7a9b3dde873c151416e17a1c2",
+     "captured": "2026-08-10",
+     "size": 30960
+    }
+   ],
+   "external_research_needed": false,
+   "note": "PSC pricing + two first-party codelabs"
+  },
+  "compliance-and-residency": {
+   "sources": [],
+   "external_research_needed": true,
+   "note": "NO local primary for EU Data Act clocks / Assured Workloads — external capture required"
+  },
+  "spot-and-scheduling": {
+   "sources": [
+    {
+     "path": "docs/moviemaker/research/_sources/2026-08-09-compute-engine-allocation-quotas.txt",
+     "sha256": "6bc1ca8f5cbde03cc01194976a301a7e7330798f0a94a2fa6bdcd23807a43446",
+     "captured": "2026-08-09",
+     "size": 24638
+    }
+   ],
+   "external_research_needed": true,
+   "note": "quotas held locally; NO Spot-pricing/preemption primary — external capture required"
+  },
+  "storage-and-disks": {
+   "sources": [
+    {
+     "path": "docs/moviemaker/research/_sources/2026-08-12-gcp-general-purpose-vm-pricing-us-central1.txt",
+     "sha256": "c395df17aade4dd0b41364fb7727d953dff65cf6a2a535b268e1f88afafaf06e",
+     "captured": "2026-08-12",
+     "size": 181517
+    }
+   ],
+   "external_research_needed": true,
+   "note": "PD rates appear in the VM pricing capture; a dedicated disks/pricing capture is missing"
+  },
+  "workbench-and-runtime-api": {
+   "sources": [
+    {
+     "path": "docs/moviemaker/research/_sources/2026-08-09-workbench-rest-v1-projects-locations-instances.txt",
+     "sha256": "f8d9d20e0353368b2a5d7c604d57e4d3ffa61ee4d705a2f7b4e5c15403fba021",
+     "captured": "2026-08-09",
+     "size": 22271
+    },
+    {
+     "path": "docs/moviemaker/research/_sources/2026-08-09-workbench-rest-v1-projects-locations-runtimes.txt",
+     "sha256": "91ce7910ab059c9fdac206d2b254fab4171c0600cafd70577ca280819d8ec257",
+     "captured": "2026-08-09",
+     "size": 31629
+    },
+    {
+     "path": "docs/moviemaker/research/_sources/2026-08-10-codelab-secure-workbench-notebook-root-access.txt",
+     "sha256": "250b0e198a5fd7b74aa161305f5a88f0aaeb5a7ff9bf4ff93db9ac381bd49050",
+     "captured": "2026-08-10",
+     "size": 21191
+    }
+   ],
+   "external_research_needed": false,
+   "note": "both REST references + hardening codelab held"
+  },
+  "vertex-managed-services": {
+   "sources": [
+    {
+     "path": "docs/moviemaker/research/_sources/2026-08-09-google-vertex-ai-generative-ai-pricing.txt",
+     "sha256": "ff6e3887205d93a7f6285066a521c55aa354b65acd7cf4863fb5eb8159c2ff8f",
+     "captured": "2026-08-09",
+     "size": 74714
+    },
+    {
+     "path": "docs/research/_sources/2026-08-12-vertex-ai-release-notes-full.txt",
+     "sha256": "08d61880862fd0094a3b9c9f89d93dc812e8831ba70df02ad7c4ccf71a4114ae",
+     "captured": "2026-08-12",
+     "size": 196207
+    },
+    {
+     "path": "docs/research/_sources/2026-08-17-cloud-run-pricing-page.txt",
+     "sha256": "0deb427262a342333299f15b0644d2c387ea99a0e64b3aca3232cf61a4f09773",
+     "captured": "2026-08-17",
+     "size": 23344
+    }
+   ],
+   "external_research_needed": false,
+   "note": "GenAI pricing + release notes + TODAY-fresh Cloud Run pricing"
+  },
+  "machine-types-and-accelerators": {
+   "sources": [
+    {
+     "path": "docs/moviemaker/research/_sources/2026-08-10-gcp-accelerator-optimized-machines-official.txt",
+     "sha256": "cffb921bb8f99d35d9c681ac23fcded6398588f8442561e4b1f77dbe6a84df41",
+     "captured": "2026-08-10",
+     "size": 71863
+    },
+    {
+     "path": "docs/moviemaker/research/_sources/2026-08-10-gcp-gpu-machine-types-official.txt",
+     "sha256": "372b667cba5c184f6a096c95be99986d31d047d256b6559d9533f3681bd04b6f",
+     "captured": "2026-08-10",
+     "size": 31487
+    },
+    {
+     "path": "docs/moviemaker/research/_sources/2026-08-10-compute-engine-regions-and-zones.txt",
+     "sha256": "25c6baf315b8ff8a45f5f5366e1e73e4715a46faca8b70a03f708d7b086aff43",
+     "captured": "2026-08-10",
+     "size": 50943
+    }
+   ],
+   "external_research_needed": false,
+   "note": "official machine-family + GPU-type + region availability captures"
+  },
+  "pricing-and-billing-protocol": {
+   "sources": [
+    {
+     "path": "docs/moviemaker/research/_sources/2026-08-10-accelerator-optimized-vm-pricing.txt",
+     "sha256": "02b3ecdc16c3082bc4df7a6291ded94a4f37ef85c69df0e002ffe2d8466d526d",
+     "captured": "2026-08-10",
+     "size": 38151
+    },
+    {
+     "path": "docs/moviemaker/research/_sources/2026-08-10-compute-engine-vm-instance-pricing.txt",
+     "sha256": "861a19bd2d2a9212843b3772fbcdbfa7f1f776458e775160cf70b78dacd3330d",
+     "captured": "2026-08-10",
+     "size": 21468
+    },
+    {
+     "path": "docs/moviemaker/research/_sources/2026-08-12-gcp-general-purpose-vm-pricing-us-central1.txt",
+     "sha256": "c395df17aade4dd0b41364fb7727d953dff65cf6a2a535b268e1f88afafaf06e",
+     "captured": "2026-08-12",
+     "size": 181517
+    }
+   ],
+   "external_research_needed": false,
+   "note": "held 5-7 days old — the brief PROTOCOL itself mandates live re-read before any paid step, so staleness is handled by design"
+  },
+  "os-images-and-software": {
+   "sources": [],
+   "external_research_needed": true,
+   "note": "NO local primary for premium-OS image billing (RHEL/SLES/Ubuntu Pro) — external capture required"
+  }
+ }
+}

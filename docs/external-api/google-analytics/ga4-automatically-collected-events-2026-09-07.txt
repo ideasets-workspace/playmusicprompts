@@ -1,0 +1,38 @@
+Automatically collected events - Analytics Help
+Source: https://support.google.com/analytics/answer/9234069
+Fetched: 2026-09-07
+
+Automatically collected events are triggered by basic interactions with your app and/or site. As long
+as you use the Google tag or the Google Analytics for Firebase SDK, you don't need to write any
+additional code to collect these events. THESE NAMES ARE RESERVED — a custom event using one of these
+names will collide with Google's own automatic collection and corrupt the corresponding report.
+
+RESERVED WEB EVENT NAMES (the ones relevant to a web-only property; app-only rows omitted):
+click, file_download, first_visit, form_start, form_submit, page_view, scroll, session_start,
+user_engagement, view_search_results, video_complete, video_progress, video_start.
+
+Full reserved list, both web and app (app-only rows kept for completeness since a Flutter/mobile
+surface of this same product exists): ad_click, ad_exposure, ad_impression, ad_query, ad_reward,
+adunit_exposure, app_clear_data, app_exception, app_remove, app_store_refund,
+app_store_subscription_cancel, app_store_subscription_convert, app_store_subscription_renew,
+app_update, click, dynamic_link_app_open, dynamic_link_app_update, dynamic_link_first_open, error,
+file_download, firebase_campaign, firebase_in_app_message_action/fiam_action,
+firebase_in_app_message_dismiss/fiam_dismiss, firebase_in_app_message_impression/fiam_impression,
+first_open, first_visit, form_start, form_submit, in_app_purchase, notification_dismiss,
+notification_foreground, notification_open, notification_receive, os_update, page_view, screen_view,
+scroll, session_start, user_engagement, view_search_results, video_complete, video_progress,
+video_start.
+
+Default parameters sent with every event, including custom events (web stream): language,
+page_location, page_referrer, page_title, screen_resolution.
+
+Parameter value length caps: event parameter values <= 100 characters; page_title <= 300 characters;
+page_referrer <= 420 characters; page_location <= 1,000 characters.
+
+AUDIT PERFORMED THIS SESSION (2026-09-07) against this reference: every custom event name emitted by
+this project's own tracker — analytics.js's select_option, reference_add, engine_ready,
+engine_unavailable, modal_play_now, modal_dismiss, enhance_open, enhance_start, enhance_complete,
+enhance_apply, enhance_undo, enhance_error, consent_update — was checked against the reserved list
+above. RESULT: 0 of 13 collide. No naming-collision defect exists; this hypothesis was raised, checked
+against the primary source, and found false — recorded here rather than reported as a finding it is
+not.

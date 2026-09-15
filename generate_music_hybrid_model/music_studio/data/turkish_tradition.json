@@ -1,0 +1,81 @@
+{
+  "$schema_id": "berk.music-studio-turkish-tradition/v1",
+  "purpose": "The Turkish-tradition facts the API must REFUSE on, and the usul->time_signature derivation. Research item TR-REFUSE. Every value here is quoted or derived from a primary source read 2026-08-15; nothing is reasoned into existence.",
+  "why_refusal_is_the_professional_answer": "docs/research/2026-08-14-turkish-singing-phonology-and-g2p-for-synthesis.md axis 7.4, verbatim: 'do not claim makam support; do not silently map a makam request onto a Western scale; refuse it by name with the reason, exactly as the architecture refuses named commercial reference tracks.' A silent mapping onto `aeolian` would be the accepted-and-ignored class: the request would appear to work and the output would not be the tradition.",
+  "sources": {
+    "S34": "Bozkurt, Ayangil & Holzapfel, Journal of New Music Research 43:1, 2014 — read [FULL] in the research session",
+    "S35": "Bozkurt, JNMR 37:1, 2008 — tonic detection by 1/3 Hc histogram shifting",
+    "S36": "nine maqams' automatically derived pitches vs competing theoretical models — models disagree with practice",
+    "S32": "CompMusic corpus — 111 makams enumerated"
+  },
+  "pitch": {
+    "octave_divisions_aeu": 24,
+    "octave_divisions_not_equal_tempered": true,
+    "comma_unit": "Holderian-Mercator comma (Hc)",
+    "commas_per_octave": 53,
+    "minimal_interval_sizes_hc": [1, 4, 5, 8, 9, 12],
+    "makam_count_in_corpus": 111,
+    "theory_disagrees_with_practice": true,
+    "quote_s34": "The AEU tuning theory is based on Pythagorean pitch ratios and divides an octave into 24 not equal-tempered notes.",
+    "quote_s34_insufficiency": "Its insufficiency to reflect music practice was documented and is well-known to the musicians.",
+    "consequence": "`key`/`scale` cannot express a makam. A makam is a tonic + an interval set in commas + a melodic-progression convention (seyir). A `scale` enum containing 'aeolian' is not a Turkish music control.",
+    "preserved_contradiction": "C-04 — even within Turkish theory there is no single agreed tuning (S36). This is preserved, not resolved."
+  },
+  "rhythm": {
+    "usul_is_additive": true,
+    "usul_length_range": [2, 120],
+    "quote_s34_aksak": "The aksak usul … has a length of nine, which results from summing up the notated durations, assuming long notes to be of length 2, and short notes to be of length 1. As Turkish makam music usually uses a Western staff notation, this usul is notated with a 9/8 time signature.",
+    "quote_s34_mertebe": "its slow version is called ağır aksak, and shown as a 9/4",
+    "mertebe_is_tempo_class": true,
+    "velveleli": "ornamented realisation — the basic strokes 'filled up with additional strokes'",
+    "accent_limit_quote": "the stroke syllable 'düm' is usually related to a stronger accent; however, no generally valid way to differentiate the strength of the accents exists",
+    "consequence": "`time_signature: 9/8` is NOTATION, not the control: the same 9/8 covers aksak and other nine-length usuls with different stroke patterns, and 9/4 is the SAME usul at a different tempo class. A Turkish rhythmic control names the USUL, and time_signature is DERIVED from it by import."
+  },
+  "usuls": [
+    {"id": "aksak", "length": 9, "pattern": [2, 2, 2, 3], "mertebe_default": 8, "notated_as": "9/8", "slow_variant": {"name": "ağır aksak", "mertebe": 4, "notated_as": "9/4"}, "source": "S34 [FULL]"},
+    {"id": "nim_sofyan", "length": 2, "pattern": [1, 1], "mertebe_default": 4, "notated_as": "2/4", "source": "S34 usul-length range 2..120; length-2 usul"},
+    {"id": "sofyan", "length": 4, "pattern": [2, 1, 1], "mertebe_default": 4, "notated_as": "4/4", "source": "S34"},
+    {"id": "turk_aksagi", "length": 5, "pattern": [2, 3], "mertebe_default": 8, "notated_as": "5/8", "source": "S34"},
+    {"id": "devr_i_hindi", "length": 7, "pattern": [2, 2, 3], "mertebe_default": 8, "notated_as": "7/8", "source": "S34"},
+    {"id": "devr_i_turan", "length": 7, "pattern": [3, 2, 2], "mertebe_default": 8, "notated_as": "7/8", "source": "S34 — SAME notation as devr_i_hindi with a DIFFERENT stroke pattern, which is exactly why time_signature cannot be the control"},
+    {"id": "curcuna", "length": 10, "pattern": [2, 3, 2, 3], "mertebe_default": 8, "notated_as": "10/8", "source": "S34"}
+  ],
+  "usul_note": "This list is the subset the research corpus names with their patterns; it is NOT the full inventory (S34 records usul lengths from 2 to 120 and the CompMusic usul annotation set covers 63 excerpts). An unlisted usul is REFUSED by name rather than approximated, and the list grows only from a source.",
+  "refusals": [
+    {
+      "id": "makam_via_key",
+      "trigger": "a makam name in `key`, `scale` or a free-text field where a Western key is expected",
+      "refuse": true,
+      "reason": "a makam is a tonic + an interval set in Holderian commas (24 unequal steps, quantised to 1/53-octave) + a seyir convention; 111 are enumerated in the CompMusic corpus and Turkish theory itself does not agree on the tuning (S34, S36, C-04). No field in this API can express it, and mapping it onto a Western mode would deliver something that is not the tradition.",
+      "what_to_offer_instead": "state the refusal, name the reason, and offer the fields that DO exist (prose describing the melodic character, the instrument palette including bağlama/ney, and the usul-derived meter)"
+    },
+    {
+      "id": "time_signature_as_turkish_rhythm",
+      "trigger": "a caller sending `time_signature: 9/8` (or 7/8, 10/8, 5/8) AND naming a Turkish style, without naming a usul",
+      "refuse": false,
+      "reason": "not a refusal but a CORRECTION with evidence: 9/8 is notation, and the same 9/8 covers aksak and devr-i hindi and devr-i turan with different stroke patterns. The response reports that the meter was accepted as notation only and names the usul field as the real control.",
+      "what_to_offer_instead": "the `usul` field, from which time_signature is DERIVED"
+    },
+    {
+      "id": "uncalibrated_turkish_per_threshold",
+      "trigger": "any request or config that would apply a PER threshold to Turkish before a Turkish calibration exists",
+      "refuse": true,
+      "reason": "research item A9 and the project's own measurement law: a guessed threshold is the 0.08-vs-0.0007 defect. Until a Turkish bar is calibrated on real sung material the gate reports NOT_CALIBRATED.",
+      "what_to_offer_instead": "the measured PER/CER/SER numbers WITHOUT a verdict, plus BERK'S VERDICT for whether it sounds Turkish"
+    },
+    {
+      "id": "turkish_singing_proven_claim",
+      "trigger": "any code path or response that would label Turkish SINGING_PROVEN",
+      "refuse": true,
+      "reason": "n=1 (7 of 8 words on one Lyria 3 take) proves the capability EXISTS, not its quality. The promotion protocol requires >=5 human recordings with ground truth, >=3 generated songs per route, and negative controls in both directions.",
+      "what_to_offer_instead": "the registry's honest state with its evidence and the exact protocol still outstanding"
+    },
+    {
+      "id": "turkish_singing_corpus_exists_claim",
+      "trigger": "any claim that a Turkish singing corpus of training scale exists",
+      "refuse": true,
+      "reason": "it does not, in the searched scope: the largest Turkish sung resource found is 12 performances, word-aligned, with a preserved contradiction about whether any phoneme tier exists at all (C-02).",
+      "what_to_offer_instead": "the MTG/UPF makam a cappella set as a CALIBRATION seed (~19 min, 732 words, 6 recordings with MIDI) — enough to calibrate a gate, never enough to train a model"
+    }
+  ]
+}

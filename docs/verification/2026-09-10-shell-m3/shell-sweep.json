@@ -1,0 +1,426 @@
+{
+  "date": "2026-09-10T09:06:43.209Z",
+  "widths": [
+    320,
+    375,
+    599,
+    600,
+    840,
+    1199,
+    1200,
+    1600
+  ],
+  "report": [
+    {
+      "width": 320,
+      "overflowPx": 0,
+      "railVisible": false,
+      "bottomNavVisible": true,
+      "controlsMeasured": 5,
+      "boxes": [
+        {
+          "w": 222,
+          "h": 44,
+          "tag": "INPUT",
+          "cls": "",
+          "text": ""
+        },
+        {
+          "w": 44,
+          "h": 44,
+          "tag": "A",
+          "cls": "bottom-link",
+          "text": "Home"
+        },
+        {
+          "w": 44,
+          "h": 44,
+          "tag": "A",
+          "cls": "bottom-link",
+          "text": "Musics"
+        },
+        {
+          "w": 59,
+          "h": 44,
+          "tag": "A",
+          "cls": "bottom-link",
+          "text": "The World"
+        },
+        {
+          "w": 44,
+          "h": 44,
+          "tag": "A",
+          "cls": "bottom-link",
+          "text": "Radios"
+        }
+      ],
+      "bodyFont": "InterVariable, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tooSmallCount": 0,
+      "failed": []
+    },
+    {
+      "width": 375,
+      "overflowPx": 0,
+      "railVisible": false,
+      "bottomNavVisible": true,
+      "controlsMeasured": 5,
+      "boxes": [
+        {
+          "w": 276,
+          "h": 44,
+          "tag": "INPUT",
+          "cls": "",
+          "text": ""
+        },
+        {
+          "w": 44,
+          "h": 44,
+          "tag": "A",
+          "cls": "bottom-link",
+          "text": "Home"
+        },
+        {
+          "w": 44,
+          "h": 44,
+          "tag": "A",
+          "cls": "bottom-link",
+          "text": "Musics"
+        },
+        {
+          "w": 59,
+          "h": 44,
+          "tag": "A",
+          "cls": "bottom-link",
+          "text": "The World"
+        },
+        {
+          "w": 44,
+          "h": 44,
+          "tag": "A",
+          "cls": "bottom-link",
+          "text": "Radios"
+        }
+      ],
+      "bodyFont": "InterVariable, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tooSmallCount": 0,
+      "failed": []
+    },
+    {
+      "width": 599,
+      "overflowPx": 0,
+      "railVisible": false,
+      "bottomNavVisible": true,
+      "controlsMeasured": 5,
+      "boxes": [
+        {
+          "w": 414,
+          "h": 44,
+          "tag": "INPUT",
+          "cls": "",
+          "text": ""
+        },
+        {
+          "w": 44,
+          "h": 44,
+          "tag": "A",
+          "cls": "bottom-link",
+          "text": "Home"
+        },
+        {
+          "w": 44,
+          "h": 44,
+          "tag": "A",
+          "cls": "bottom-link",
+          "text": "Musics"
+        },
+        {
+          "w": 60,
+          "h": 44,
+          "tag": "A",
+          "cls": "bottom-link",
+          "text": "The World"
+        },
+        {
+          "w": 44,
+          "h": 44,
+          "tag": "A",
+          "cls": "bottom-link",
+          "text": "Radios"
+        }
+      ],
+      "bodyFont": "InterVariable, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tooSmallCount": 0,
+      "failed": []
+    },
+    {
+      "width": 600,
+      "overflowPx": 0,
+      "railVisible": true,
+      "bottomNavVisible": false,
+      "controlsMeasured": 6,
+      "boxes": [
+        {
+          "w": 53,
+          "h": 44,
+          "tag": "A",
+          "cls": "nav-link",
+          "text": "Home"
+        },
+        {
+          "w": 53,
+          "h": 44,
+          "tag": "A",
+          "cls": "nav-link",
+          "text": "Musics"
+        },
+        {
+          "w": 53,
+          "h": 44,
+          "tag": "A",
+          "cls": "nav-link",
+          "text": "The World"
+        },
+        {
+          "w": 53,
+          "h": 44,
+          "tag": "A",
+          "cls": "nav-link",
+          "text": "Radios"
+        },
+        {
+          "w": 38,
+          "h": 44,
+          "tag": "BUTTON",
+          "cls": "nav-link rail-toggle",
+          "text": "Collapse navigation"
+        },
+        {
+          "w": 411,
+          "h": 25,
+          "tag": "INPUT",
+          "cls": "",
+          "text": ""
+        }
+      ],
+      "bodyFont": "InterVariable, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tooSmallCount": 0,
+      "failed": []
+    },
+    {
+      "width": 840,
+      "overflowPx": 0,
+      "railVisible": true,
+      "bottomNavVisible": false,
+      "controlsMeasured": 6,
+      "boxes": [
+        {
+          "w": 53,
+          "h": 44,
+          "tag": "A",
+          "cls": "nav-link",
+          "text": "Home"
+        },
+        {
+          "w": 53,
+          "h": 44,
+          "tag": "A",
+          "cls": "nav-link",
+          "text": "Musics"
+        },
+        {
+          "w": 53,
+          "h": 44,
+          "tag": "A",
+          "cls": "nav-link",
+          "text": "The World"
+        },
+        {
+          "w": 53,
+          "h": 44,
+          "tag": "A",
+          "cls": "nav-link",
+          "text": "Radios"
+        },
+        {
+          "w": 38,
+          "h": 44,
+          "tag": "BUTTON",
+          "cls": "nav-link rail-toggle",
+          "text": "Collapse navigation"
+        },
+        {
+          "w": 412,
+          "h": 25,
+          "tag": "INPUT",
+          "cls": "",
+          "text": ""
+        }
+      ],
+      "bodyFont": "InterVariable, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tooSmallCount": 0,
+      "failed": []
+    },
+    {
+      "width": 1199,
+      "overflowPx": 0,
+      "railVisible": true,
+      "bottomNavVisible": false,
+      "controlsMeasured": 6,
+      "boxes": [
+        {
+          "w": 52,
+          "h": 44,
+          "tag": "A",
+          "cls": "nav-link",
+          "text": "Home"
+        },
+        {
+          "w": 52,
+          "h": 44,
+          "tag": "A",
+          "cls": "nav-link",
+          "text": "Musics"
+        },
+        {
+          "w": 52,
+          "h": 44,
+          "tag": "A",
+          "cls": "nav-link",
+          "text": "The World"
+        },
+        {
+          "w": 52,
+          "h": 44,
+          "tag": "A",
+          "cls": "nav-link",
+          "text": "Radios"
+        },
+        {
+          "w": 39,
+          "h": 44,
+          "tag": "BUTTON",
+          "cls": "nav-link rail-toggle",
+          "text": "Collapse navigation"
+        },
+        {
+          "w": 410,
+          "h": 26,
+          "tag": "INPUT",
+          "cls": "",
+          "text": ""
+        }
+      ],
+      "bodyFont": "InterVariable, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tooSmallCount": 0,
+      "failed": []
+    },
+    {
+      "width": 1200,
+      "overflowPx": 0,
+      "railVisible": true,
+      "bottomNavVisible": false,
+      "controlsMeasured": 6,
+      "boxes": [
+        {
+          "w": 244,
+          "h": 44,
+          "tag": "A",
+          "cls": "nav-link",
+          "text": "Home"
+        },
+        {
+          "w": 244,
+          "h": 44,
+          "tag": "A",
+          "cls": "nav-link",
+          "text": "Musics"
+        },
+        {
+          "w": 244,
+          "h": 44,
+          "tag": "A",
+          "cls": "nav-link",
+          "text": "The World"
+        },
+        {
+          "w": 244,
+          "h": 44,
+          "tag": "A",
+          "cls": "nav-link",
+          "text": "Radios"
+        },
+        {
+          "w": 229,
+          "h": 44,
+          "tag": "BUTTON",
+          "cls": "nav-link rail-toggle",
+          "text": "Collapse navigation"
+        },
+        {
+          "w": 410,
+          "h": 26,
+          "tag": "INPUT",
+          "cls": "",
+          "text": ""
+        }
+      ],
+      "bodyFont": "InterVariable, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tooSmallCount": 0,
+      "failed": []
+    },
+    {
+      "width": 1600,
+      "overflowPx": 0,
+      "railVisible": true,
+      "bottomNavVisible": false,
+      "controlsMeasured": 6,
+      "boxes": [
+        {
+          "w": 243,
+          "h": 44,
+          "tag": "A",
+          "cls": "nav-link",
+          "text": "Home"
+        },
+        {
+          "w": 243,
+          "h": 44,
+          "tag": "A",
+          "cls": "nav-link",
+          "text": "Musics"
+        },
+        {
+          "w": 243,
+          "h": 44,
+          "tag": "A",
+          "cls": "nav-link",
+          "text": "The World"
+        },
+        {
+          "w": 243,
+          "h": 44,
+          "tag": "A",
+          "cls": "nav-link",
+          "text": "Radios"
+        },
+        {
+          "w": 235,
+          "h": 44,
+          "tag": "BUTTON",
+          "cls": "nav-link rail-toggle",
+          "text": "Collapse navigation"
+        },
+        {
+          "w": 408,
+          "h": 27,
+          "tag": "INPUT",
+          "cls": "",
+          "text": ""
+        }
+      ],
+      "bodyFont": "InterVariable, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "tooSmallCount": 0,
+      "failed": []
+    }
+  ]
+}

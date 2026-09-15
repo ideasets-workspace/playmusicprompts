@@ -1,0 +1,49 @@
+{
+  "schema": "berk.deep-research-completion/v1",
+  "date": "2026-08-12",
+  "topic": "vertex-image-endpoints-current-docs-and-migration",
+  "mode": "MODE B (owner research order)",
+  "report": "docs/research/2026-08-12-vertex-image-endpoints-current-docs-and-migration.md",
+  "indexed_in": "docs/README.md",
+  "sources_total": 25,
+  "sources_academic": 4,
+  "academic_full": 2,
+  "floors": {
+    "sources_20_met": true,
+    "academic_5_met": false,
+    "note": "Vendor-API migration topic; academic anchors cover only watermark and SR-vs-resynthesis claims. Gap recorded in report section 6, not narrated away. Companion run 2026-08-04 adds 15 further sources on the same topic."
+  },
+  "archived_sources": [
+    "docs/research/_sources/2026-08-12-gcloud-generate-images-with-gemini.txt",
+    "docs/research/_sources/2026-08-12-gcloud-agent-platform-image-generation.txt",
+    "docs/research/_sources/2026-08-12-firebase-ai-logic-supported-models.txt",
+    "docs/research/_sources/2026-08-12-firebase-ai-logic-models-lifecycle.txt",
+    "docs/research/_sources/2026-08-12-ai-google-dev-imagen-deprecation.txt",
+    "docs/research/_sources/2026-08-12-vertex-generative-ai-release-notes.txt",
+    "docs/research/_sources/2026-08-12-vertex-ai-release-notes-full.txt",
+    "docs/research/_sources/2026-08-12-ai-google-dev-image-generation-editing.txt",
+    "docs/research/_sources/2026-08-12-firebase-generate-images-gemini.txt",
+    "docs/research/_sources/2026-08-12-arxiv-2510-09263-synthid-image.txt",
+    "docs/research/_sources/2026-08-12-arxiv-2104-07636-sr3-super-resolution.txt"
+  ],
+  "applied_to_deliverable": {
+    "code": [
+      "presentation_vertex/lambda_function.py",
+      "inpaint_vertex/lambda_function.py",
+      "productphoto_vertex/lambda_function.py",
+      "upscale_vertex/lambda_function.py",
+      "scripts/build_vertex_migration_src_zip.py",
+      "scripts/test_vertex_image_endpoints.ps1",
+      "scripts/probe_vertex_image_models.py"
+    ],
+    "deploys": "10 Lambdas updated 2026-08-12 (6 Docker via CodeBuild ssm-content-vertex-gemini-migration build 98c2073a, ECR tag gemini-migration-20260812; 4 Zip via update-function-code)",
+    "verification": "13/13 endpoints COMPLETED in the final live sweep (per-endpoint jobIds in chat/STATE record)",
+    "docs": "docs/ssm-content-asset-generation-api_v5.md stale sections corrected; .claude/memory/infra.md fault entry superseded"
+  },
+  "known_gaps": [
+    "imagen-4.0-upscale-preview regional availability sweep not executed (local gcloud requires interactive reauth); settled at runtime by attempt-then-fallback with the producing model recorded in every response",
+    "mask-fidelity of the reference-image mask approximation unmeasured on real masks ([UNVERIFIED])",
+    "academic floor not met by this run alone (4/5)",
+    "STATE.md update blocked twice by the blind-mutation gate despite same-turn Read observations — incident report 2026-08-12-blocked-blind-mutation-gate-ignores-read-tool-observations.md; closure record carried by infra.md instead"
+  ]
+}

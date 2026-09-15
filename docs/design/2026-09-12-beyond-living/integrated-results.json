@@ -1,0 +1,1322 @@
+{
+  "startedAt": "2026-09-12T12:24:16.748Z",
+  "status": "passed",
+  "node": "v24.19.0",
+  "site": "website_html_templates_beyond",
+  "runnerSHA256": "474a30d89e110383ed929fd540c7439247f28db542f7fd09fd7eb62260d1e29d",
+  "baselineSHA256": "b2e6a32841e70ed3cf023ea9d7be7a204d5d71c3dc841456d4d4bfaa932b93ed",
+  "expectedAtmosphereSHA256": "6368af266ecab0f881ee6d01fc48481309215d09f1be4995f657498f57028015",
+  "atomicScope": [
+    "Run all seven existing suites against successor production modules",
+    "Syntax-check successor application JavaScript",
+    "Verify exact protected file sets and SHA256 hashes",
+    "Reject source or harness drift during verification",
+    "Write suite evidence and report verification limits"
+  ],
+  "limits": "Actual production source, numeric behavior and lifecycle evidence with the explicit renderer/DOM boundaries described by each suite. No GPU shader compilation, rendered artistic quality, browser-device behavior, audio output or performance claim. Actual browser QA is separate.",
+  "sourceManifestExclusions": [
+    "scripts",
+    "verification",
+    "captures"
+  ],
+  "syntaxExclusions": [
+    "scripts",
+    "verification",
+    "captures",
+    "vendor"
+  ],
+  "harnessCorrection": "atmosphere-check now resolves its particle dependency beside the selected volume module, so production cross-module checks cannot silently use the docs asset. Assertions are unchanged.",
+  "previousFailures": [
+    {
+      "startedAt": "2026-09-12T12:17:00.135Z",
+      "sourceManifestSHA256": "06e78a46f0e3452d627c84b01edfcf0b9d5d23b62f12da43d15c2aa7c387914a",
+      "errors": [
+        "Error: Invalid original baseline row\n    at C:\\Berk\\PlayMusicPrompts\\docs\\design\\2026-09-12-beyond-living\\verify-final.cjs:62:241\n    at Array.map (<anonymous>)\n    at protectedTrees (C:\\Berk\\PlayMusicPrompts\\docs\\design\\2026-09-12-beyond-living\\verify-final.cjs:57:105)\n    at main (C:\\Berk\\PlayMusicPrompts\\docs\\design\\2026-09-12-beyond-living\\verify-final.cjs:136:30)\n    at Object.<anonymous> (C:\\Berk\\PlayMusicPrompts\\docs\\design\\2026-09-12-beyond-living\\verify-final.cjs:168:1)\n    at Module._compile (node:internal/modules/cjs/loader:1872:14)\n    at Object..js (node:internal/modules/cjs/loader:2003:10)\n    at Module.load (node:internal/modules/cjs/loader:1594:32)\n    at Module._load (node:internal/modules/cjs/loader:1396:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)"
+      ]
+    }
+  ],
+  "errors": [],
+  "sourceManifest": [
+    {
+      "file": "AGENTS.md",
+      "sha256": "636e58635bb9fe2791b44c1875075380535ecb333faf5a52477f51e16ce9ef8a"
+    },
+    {
+      "file": "PLAYER-THREE-README.md",
+      "sha256": "6be03ce98f437dd566b6ef66a9ab7b4dc85eed5669fc7e9f2ec0e64e0e70de38"
+    },
+    {
+      "file": "README.md",
+      "sha256": "c61e770c5cdaf5eacfaead39ed168668adc4e19410b40a98f7a1ef14146acea0"
+    },
+    {
+      "file": "START-PLAYER.cmd",
+      "sha256": "6b16d8944f838a884791fdd7525851e7450ce18eab018bbbc53a38655d6d0e5b"
+    },
+    {
+      "file": "START.cmd",
+      "sha256": "c35bcb6928f00594e92f9310ffd5fdd97f26e0b7b1425824d193ea4650f746a6"
+    },
+    {
+      "file": "app.js",
+      "sha256": "862be3c8135504240282dea1a0e0bb1321e988e0a23629aa533c6a2b0a2d20c0"
+    },
+    {
+      "file": "assets/asset-manifest.json",
+      "sha256": "59347d7da3dd91a43e1a51eeb746768dba4f49106c3c663e191915d315c80259"
+    },
+    {
+      "file": "assets/control-schema.json",
+      "sha256": "29bbc78050ff5bdb4801bff3397edf24bbd591ea8e9237f4497fd66364dbf774"
+    },
+    {
+      "file": "assets/worlds-six-manifest.json",
+      "sha256": "9e3b3f7b377f12d144b2a9afdd37fef2620f75131b3e47763e4430977353e502"
+    },
+    {
+      "file": "collections.js",
+      "sha256": "2cc9c43711497682b34f35452c267335c6f3879dc7710f0a7a3b06b0c8c9a0fe"
+    },
+    {
+      "file": "config.js",
+      "sha256": "9db0832c3499fdc0123bb3246ee55eecc8df0992a3ca5adf0440ea492a851744"
+    },
+    {
+      "file": "controls.js",
+      "sha256": "f52e86eeeee07cb5abde51da885410b9303bd54cd7a7ee4cf36f5b8cea8ba139"
+    },
+    {
+      "file": "data.js",
+      "sha256": "67d55adf8ceaaa67a4da290e0a86ebcf0ddc9d6926c3c04c43737e01e3044504"
+    },
+    {
+      "file": "experience.js",
+      "sha256": "9ea41da0abdac68660421f325d82383ae57537080f93b9220258a71f1830be49"
+    },
+    {
+      "file": "explore.html",
+      "sha256": "d76e35ef41a1bc423ebf3ea47bbcfaf2f90d1673d8a94d1116115321bc00cf69"
+    },
+    {
+      "file": "index.html",
+      "sha256": "98e44fc79633671c8044c3ad98c9208a4a25f4a267a97ac355898836da94284c"
+    },
+    {
+      "file": "lab-aether-atmosphere.js",
+      "sha256": "6368af266ecab0f881ee6d01fc48481309215d09f1be4995f657498f57028015"
+    },
+    {
+      "file": "lab-aether-settings.js",
+      "sha256": "a1ab52925cf7c2d95c7fc6112d0b3c12efce4db7afbbdde4e1133f20b435a936"
+    },
+    {
+      "file": "lab-aether-ui.js",
+      "sha256": "f0d8267d005c92b5431e08659738d053186ff8044afc8ccda442da2b3cbea2f8"
+    },
+    {
+      "file": "lab-aether.css",
+      "sha256": "ff67eb51a9c7ea14fcefcab17c94ef711ea5a4368910e960d4d31d9df05181b5"
+    },
+    {
+      "file": "lab-aether.js",
+      "sha256": "38ce2e47a86122156a649fcc7b2fd34891090ca82322953f26802a9b895373f4"
+    },
+    {
+      "file": "lab-immersive.css",
+      "sha256": "adea940d33caeef98ac5a7b8eeb55df7a48f64fb1e054a064a4271afa85c29ab"
+    },
+    {
+      "file": "lab-monolith.js",
+      "sha256": "4b7dc9d222fb7809c86b03d60442cdaecddf66933d51d6018d39818eb4f5e22c"
+    },
+    {
+      "file": "lab-shell.js",
+      "sha256": "4213d8f9424d0c86b86be123385d3917bd75f69b0b335c60bf9921184dcf903a"
+    },
+    {
+      "file": "lab-tidal.js",
+      "sha256": "6e38566ae8c529cc4d2f0c245806a7727f36468bcc7ff0e22f526c5d5aa865d1"
+    },
+    {
+      "file": "library.html",
+      "sha256": "24e06c14f776fbfda02caa8cea6059e99aece2858cc407e392f27643b3833948"
+    },
+    {
+      "file": "login.html",
+      "sha256": "11ec21185297134bd819bfd57732c695af3adcf69db02c197a0f464d766fb80a"
+    },
+    {
+      "file": "player-launch.html",
+      "sha256": "fa017dd412660a504f912f0bfa021499d8b403d44e602c4247eb5282ed0221e4"
+    },
+    {
+      "file": "player-three-audio.js",
+      "sha256": "3cdf3111556e2fc46cad4ad9044ff756b1e6a8bc9873e9e8fd96409583f5a302"
+    },
+    {
+      "file": "player-three-aurora.js",
+      "sha256": "15c16d4970af10c4fd5a552dc996425a419b1109cd374772b931eec9838e5927"
+    },
+    {
+      "file": "player-three-collection.css",
+      "sha256": "7436b6bbcd7c415797fbba6e15e6de202e16ed9515b7a95060c92c11ba9625b1"
+    },
+    {
+      "file": "player-three-collection.js",
+      "sha256": "8d2c84930c66c23fbde593a6d0b5135add423158d6ee5795bf581760ed1252e3"
+    },
+    {
+      "file": "player-three-director-ui.js",
+      "sha256": "6ca440a350f76cef0497eae45066f9009b81dd3000596121e99752ee43aa4da0"
+    },
+    {
+      "file": "player-three-director.css",
+      "sha256": "72f25b13657cfd4e94856d1cd7b21a6800ebaf66932bd80e93193755974115a5"
+    },
+    {
+      "file": "player-three-director.js",
+      "sha256": "b171a2e7f97661fba6af321925b8f9411308cc52e4f4b5ba439957591565a040"
+    },
+    {
+      "file": "player-three-entry.js",
+      "sha256": "251a4f0482da9af5caf63b598032600354622c9a2bb9a154497def0b6fbf5fd1"
+    },
+    {
+      "file": "player-three-features.js",
+      "sha256": "a8688dc70a76e0f6d34fb47d83085750899107cf0ac9ea329cd2b1b94ed1c3c5"
+    },
+    {
+      "file": "player-three-layout.css",
+      "sha256": "5fc2e764376129c85a83a5f2a989c3e168bda49dbb00eb0faa404fc4d71f1931"
+    },
+    {
+      "file": "player-three-liquid.js",
+      "sha256": "017b84499e1a98e944a9b554eb699d4f6d7c3f3b6fa09993c3c4bb4546615132"
+    },
+    {
+      "file": "player-three-models.js",
+      "sha256": "bd23628b429f6882f4f0387807391ef5325a0946d536672eb17364f4380cf546"
+    },
+    {
+      "file": "player-three-motion.js",
+      "sha256": "8a8a41d85dd8aea082aa4e4ea2088c9b18331a7203442f509db1172759776bd2"
+    },
+    {
+      "file": "player-three-optics.js",
+      "sha256": "2aa3bfc0f4a9f555d4d2f27eebbd373c445a637a99fecb585f275ba614c3d806"
+    },
+    {
+      "file": "player-three-orbital.js",
+      "sha256": "41b0be7dfe8e3fe411d6e9e64926e118b6d08ca35c5958e042173f2b95f200e5"
+    },
+    {
+      "file": "player-three-performance.js",
+      "sha256": "6623cc966d193001de4674336b19a975c3aa9aef263297b6b3022ee1ee236441"
+    },
+    {
+      "file": "player-three-scene.js",
+      "sha256": "6a194d6b4449687ac66dff143660ae92b25f311c473d6a332b1c70b513f85e3a"
+    },
+    {
+      "file": "player-three-session.js",
+      "sha256": "b9c8b66a283041cd1226050561fc925d1fc7967d0be68547092e1c94f22f1278"
+    },
+    {
+      "file": "player-three-sound-ui.js",
+      "sha256": "187ceb98078c1c4c102bdfab4dfb73bc7baf203960d825a9b1162f8d459b3328"
+    },
+    {
+      "file": "player-three-store.js",
+      "sha256": "d44e3935b610f62c3d68c71d6788c20486977113fbb6fee26e0fe84e4aa12d1e"
+    },
+    {
+      "file": "player-three-ultra.css",
+      "sha256": "5d2ed26fc78fb060b09166925611ef07bc64bfcc17cc5936c99fbec5a1c1598d"
+    },
+    {
+      "file": "player-three-visual-settings.js",
+      "sha256": "327528687c17523c4cc326ae530f04e1c84fe84beb61b1f0a949f593ca1e7f44"
+    },
+    {
+      "file": "player-three-visual-studio.css",
+      "sha256": "22fd14cf7932a547adf44a5787959aff25897412882433441c99e928df80caa5"
+    },
+    {
+      "file": "player-three-visual-studio.js",
+      "sha256": "28bd8a8fc1830721e13fd7990cd8c1627429c2f71526724d97c5cc45bd3d3c64"
+    },
+    {
+      "file": "player-three-worlds.js",
+      "sha256": "0176067b6805bc573cf09b833400b0e606109acb2f488b4e19535f2c2367b89f"
+    },
+    {
+      "file": "player-three.css",
+      "sha256": "8abb0989b419db3b525de883312ff8dcab92b29c24bbc95099535f93fa8ee041"
+    },
+    {
+      "file": "player-three.html",
+      "sha256": "207d94a2fddeebddf28ee0148d8d9796e5905907cc622557122db9bc843ee898"
+    },
+    {
+      "file": "player-three.js",
+      "sha256": "b9754d7c156593859de4548e482f3c4cde5d66675d46db3b11c3b46a3c2ed7e5"
+    },
+    {
+      "file": "player.js",
+      "sha256": "41c2589217a06d7d07dc904d776c15231087e240999e242268b904924664e281"
+    },
+    {
+      "file": "radio.html",
+      "sha256": "b5a67b38fbfa7cfb354436b4197042e08435cc7583568d545b60131753c88f15"
+    },
+    {
+      "file": "schema.js",
+      "sha256": "0190ac11dfc5cb8aad17846a128111129b0061cd0ccc3025b5cf1ac93cf394cd"
+    },
+    {
+      "file": "server.mjs",
+      "sha256": "4aebbdcffa5822163cb9f44c3eb668094f5c1923ec61ec07b78eb06d041e5caa"
+    },
+    {
+      "file": "styles.css",
+      "sha256": "78e69443736b6b6fd62bd21935bde9d6b96cfafa9a995bc88a5e57330ae8e78c"
+    },
+    {
+      "file": "vendor/three/build/three.core.js",
+      "sha256": "3718df126d69c125362a03340913204470d8c50238605150e57f808840fb7759"
+    },
+    {
+      "file": "vendor/three/build/three.module.js",
+      "sha256": "bbf5ed13fe4373f5bd38b14ea8e62e9f157327da5638edc6d3863e08b167c9c7"
+    },
+    {
+      "file": "vendor/three/examples/jsm/controls/OrbitControls.js",
+      "sha256": "faabb4e8dfd9235ee4a9fd7c9a3d75f90f1689dbd4944bd6fd32117dacec5f93"
+    },
+    {
+      "file": "vendor/three/examples/jsm/environments/RoomEnvironment.js",
+      "sha256": "55f466192cc84298755a424c5e040345006b2ee1455589b3b54126c2ea4123f4"
+    },
+    {
+      "file": "vendor/three/examples/jsm/objects/Reflector.js",
+      "sha256": "57836df976f02a474b2dcfbb6609bca8bde0ccc6e77159ad8e418fa11c065d3b"
+    },
+    {
+      "file": "vendor/three/examples/jsm/postprocessing/EffectComposer.js",
+      "sha256": "4e079a5886152d7e529a59aef644e968ab4d32c6a33ce016b36bf29b2eac26f7"
+    },
+    {
+      "file": "vendor/three/examples/jsm/postprocessing/MaskPass.js",
+      "sha256": "7cd08eee9d5d6f5578beaddbdcbe9c384f6873810af27f22ab7db3ceeb127aa3"
+    },
+    {
+      "file": "vendor/three/examples/jsm/postprocessing/OutputPass.js",
+      "sha256": "02e4a261af34de71338185e9e87f0cbe5cba9115608d984363e1269dec1d2272"
+    },
+    {
+      "file": "vendor/three/examples/jsm/postprocessing/Pass.js",
+      "sha256": "444b409c235ead986893c472e720da1b779a56985c7d10b279c7944b52bd61c5"
+    },
+    {
+      "file": "vendor/three/examples/jsm/postprocessing/RenderPass.js",
+      "sha256": "817f6c3cdcd0fd41515d112359ea0532568eefb5aabd3b33903957ebca1b8a6a"
+    },
+    {
+      "file": "vendor/three/examples/jsm/postprocessing/ShaderPass.js",
+      "sha256": "e2500a5913b26bbf5148ceaae644c6edcff06a18b01494ee37bf856353d2ab9d"
+    },
+    {
+      "file": "vendor/three/examples/jsm/postprocessing/UnrealBloomPass.js",
+      "sha256": "1158bb02f6467889aba19c1a788b9107054d7f6a558498b5e2152db5873bb859"
+    },
+    {
+      "file": "vendor/three/examples/jsm/shaders/CopyShader.js",
+      "sha256": "a33057d5ac91c43304c186ac0e8816e62bb2ed471d3a00ff3018dfd5c0389718"
+    },
+    {
+      "file": "vendor/three/examples/jsm/shaders/LuminosityHighPassShader.js",
+      "sha256": "5044f780b6e6cf863947f64c36fe1587132f7fbe395ada863cd1e5f0388dcf1e"
+    },
+    {
+      "file": "vendor/three/examples/jsm/shaders/OutputShader.js",
+      "sha256": "353479f77a8d7e2629d49ccac9fc2f5dbfdda5442e0adf867b00377a2fcb0cb2"
+    },
+    {
+      "file": "vendor/three/manifest.json",
+      "sha256": "d2b4208dc8b066f346b1abd73e6a2e3f11197199a9ca297449b47d8714d91296"
+    },
+    {
+      "file": "world-touch.js",
+      "sha256": "c8d87d0fafd510be90515d7a26fcaa26e7c1410632a772fa3c0ed98060860316"
+    }
+  ],
+  "sourceManifestSHA256": "4b763e1d157f401e1003bd3ce8566115b0839b9c6bafb3d23d342c0c22b9063e",
+  "harnessManifest": [
+    {
+      "file": "host-check.mjs",
+      "sha256": "1f25ebd9af3670ecfa8b22b8de34cf6d609f6022691d7a64cedb4d0aaab833fb"
+    },
+    {
+      "file": "lab-controls-check.mjs",
+      "sha256": "bcd2a17499439179141e1c14eceeb9f6b1d954f2868c6a129aa8d46a10bf6b17"
+    },
+    {
+      "file": "touch-check.mjs",
+      "sha256": "1396fbcd7ec4cd30faa8519258ccef888293944c076f1500cf21a95dba9b75ed"
+    },
+    {
+      "file": "tidal-check.mjs",
+      "sha256": "c35cab306f4145383dcd0fe64ab413ea7e108fb1d7db712cdd43564f30f57bf4"
+    },
+    {
+      "file": "monolith-check.mjs",
+      "sha256": "99a4d24045ac24573839ae022a21cdf676ecc371d883c7c6f71d0bb2c9b7e358"
+    },
+    {
+      "file": "particle-check.mjs",
+      "sha256": "9337cd965e8a77546a7c41b8bfc5423af6a70e93f0ed5ba2f791294b6e714810"
+    },
+    {
+      "file": "atmosphere-check.mjs",
+      "sha256": "4cf7541685103fb5f0a5f59b70b8e54522ddf1b9da4b95c7a4e9b568f1b72210"
+    }
+  ],
+  "protectedBefore": [
+    {
+      "key": "original",
+      "folder": "website_html_templates",
+      "expectedFiles": 227,
+      "actualFiles": 227,
+      "unchanged": true,
+      "differences": {
+        "added": [],
+        "missing": [],
+        "changed": []
+      },
+      "manifestSHA256": "e8dd5e87aef66b4e829062e8488ac2025dd8da9166234c69ead733d28199d2d2"
+    },
+    {
+      "key": "accepted",
+      "folder": "website_html_templates_lab",
+      "expectedFiles": 242,
+      "actualFiles": 242,
+      "unchanged": true,
+      "differences": {
+        "added": [],
+        "missing": [],
+        "changed": []
+      },
+      "manifestSHA256": "95a2892f91e192786caa9347b2dcc1396efe81c02447b6e73796e86a2c082be8"
+    }
+  ],
+  "suites": [
+    {
+      "name": "host",
+      "expectedChecks": 81,
+      "passedChecks": 81,
+      "passed": true,
+      "problems": [],
+      "script": "docs/design/2026-09-12-beyond-living/host-check.mjs",
+      "scriptSHA256": "1f25ebd9af3670ecfa8b22b8de34cf6d609f6022691d7a64cedb4d0aaab833fb",
+      "args": [
+        "C:\\Berk\\PlayMusicPrompts\\docs\\design\\2026-09-12-beyond-living\\host-check.mjs"
+      ],
+      "productionAsset": null,
+      "report": {
+        "scope": "Unchanged current production host function; real bundled Three scene/geometry/material/camera/Reflector and OrbitControls math, actual collection/assets/features/settings and optics ShaderPass. Renderer, composer execution, DOM event surfaces and PNG encoder are explicit boundaries. No GPU, screenshot, visual or audible playback claim.",
+        "threeRevision": "185",
+        "hostSHA256": "6a194d6b4449687ac66dff143660ae92b25f311c473d6a332b1c70b513f85e3a",
+        "passed": 81,
+        "failed": 0,
+        "results": [
+          "Host constructs actual Three geometry/material/camera and uses identity grade by default",
+          "Exposure, bloom radius and strength alter actual renderer/pass state with safe defaults restored",
+          "Color richness and edge shade enable real grade uniforms; original bypasses the pass",
+          "Record dust density changes actual draw range and glow changes PointsMaterial opacity",
+          "Record reflection scales actual Reflector radiance and fog remains Record-only across scene switches",
+          "Record spectrum height changes actual instance matrices and stays editable with motion frozen",
+          "Record spectrum height also changes actual Wave geometry with a frozen clock",
+          "All 29 sanitized settings reach the real collection frame without rewriting source settings",
+          "Real host routes scene-specific settings to Neural, Horizon and Prism after switching",
+          "World tempo scales choreography once while real feature timing and real audio smoothing remain independent",
+          "Smoothing changes actual band and spectrum attack at equal real audio inputs",
+          "Bass, midrange and treble gains independently scale actual three bands and 64 spectral bins",
+          "Zero gains remove Record spectrum response without changing the supplied audio data",
+          "Real detector transients are scaled and zero pulse suppresses existing real Prism fronts immediately",
+          "Muted or inactive analyser input does not produce forwarded onset events",
+          "Motion off freezes Record matrices/rotation/light and real Prism pose despite incoming audio changes",
+          "Framing changes real camera distance, unrelated edits preserve it and reset restores intended composition",
+          "Resize fits actual camera to preview aspect without clearing advanced settings",
+          "Orbit speed reaches controls and only enabled compatible scenes auto-orbit during playback",
+          "Low quality preserves explicit look values and intentionally disables costly bloom/reflection",
+          "Disposed host stops scheduling/renders and disposes its explicit boundaries",
+          "Director optics is the actual production pass between grade and output, default camera remains neutral",
+          "setPerformance copies and bounds optics/camera without replacing the saved 29 look settings",
+          "Continuous framing preserves manual direction and target without invoking a control reset",
+          "Continuous framing clamps Horizon manual near/far distances to the actual composed profile",
+          "Prism continuous framing changes only lens zoom, preserving composed camera position",
+          "Breathe advances only during active playback and freezes its actual camera under pause and Motion off",
+          "Record arc moves the actual perspective camera and can freeze without accumulating drift",
+          "Composed Horizon and Prism arc uses bounded zoom/roll while preserving their camera positions",
+          "Manual camera gesture wins the hold period and remains stable indefinitely with Motion off",
+          "After gesture hold and handback, subsequent Motion off freezes the reacquired camera pose",
+          "Partially reacquired camera handback freezes its blend and resumes without a discontinuous jump",
+          "Repeated camera undo plus actual OrbitControls update does not drift framing, base settings or neutral pose",
+          "Raw Director bands stay real and independent of user bass/mid/treble visual gains",
+          "Low quality retains optics using the real lower sample budget and correct preview pixels",
+          "Aether uses the same host renderer, real collection asset and sanitized independent lab frame",
+          "Aether static form and appearance edits apply while its automatic state remains frozen",
+          "Aether receives genuine host band gating and drops transient response when playback is paused",
+          "Journey camera waits for playback, then moves and holds the exact pose during pause and Motion off",
+          "Turning Journey off restores the manual baseline without cumulative camera drift",
+          "Aether Journey yields to camera gestures for five seconds and reacquires smoothly from the manual baseline",
+          "Aether Journey gesture priority also holds when the separate Auto orbit setting is enabled",
+          "Journey is scoped to Aether; copied Record, Neural, Horizon and Prism retain their neutral camera behavior",
+          "Aether keeps explicit appearance through preview resize and really reduces submitted geometry in Low detail",
+          "tidal: actual collection receives independent controls and composed preview framing",
+          "tidal: Motion off freezes automatic uniforms and architecture while explicit edits still apply",
+          "tidal: active analyser bands settle after pause, without inventing new onsets",
+          "tidal: Low detail reduces actual scene work and returns to High without losing appearance",
+          "tidal: Journey stays bounded, pauses exactly and yields to a real OrbitControls wheel event",
+          "monolith: actual collection receives independent controls and composed preview framing",
+          "monolith: Motion off freezes automatic uniforms and architecture while explicit edits still apply",
+          "monolith: active analyser bands settle after pause, without inventing new onsets",
+          "monolith: Low detail reduces actual scene work and returns to High without losing appearance",
+          "monolith: Journey stays bounded, pauses exactly and yields to a real OrbitControls wheel event",
+          "aether: actual collection receives independent controls and composed preview framing",
+          "aether: Motion off freezes automatic uniforms and architecture while explicit edits still apply",
+          "aether: active analyser bands settle after pause, without inventing new onsets",
+          "aether: Low detail reduces actual scene work and returns to High without losing appearance",
+          "aether: Journey stays bounded, pauses exactly and yields to a real OrbitControls wheel event",
+          "Canvas boundary retains the actual touch capture listener before existing OrbitControls bubble listener",
+          "tidal: a paused-world gesture reaches the real asset without inventing music",
+          "tidal: touching owns the camera over Journey and Auto orbit, with no competing control gesture",
+          "tidal: Motion off cancels the held pointer, freezes the asset and resumes without reviving a contact",
+          "monolith: a paused-world gesture reaches the real asset without inventing music",
+          "monolith: touching owns the camera over Journey and Auto orbit, with no competing control gesture",
+          "monolith: Motion off cancels the held pointer, freezes the asset and resumes without reviving a contact",
+          "aether: a paused-world gesture reaches the real asset without inventing music",
+          "aether: touching owns the camera over Journey and Auto orbit, with no competing control gesture",
+          "aether: Motion off cancels the held pointer, freezes the asset and resumes without reviving a contact",
+          "Touch mode returns actual mouse drag and wheel navigation to OrbitControls when disabled",
+          "A second pointer never steals ownership, alters the serial, or ends the primary world gesture",
+          "Scene handoff releases contact and sends neutral touch before another world receives a new gesture",
+          "Global blur and pagehide release world capture without creating extra touch or musical events",
+          "Host disposal releases a held touch and removes actual touch/control event ownership",
+          "captureFrame waits for the next compositor render and encodes the actual renderer canvas as PNG",
+          "Null PNG encoder output and synchronous encoder errors reject honestly",
+          "Hidden-page capture times out without rendering or returning a fabricated image",
+          "Disposal rejects queued captures and new requests; a lost context rejects new captures",
+          "Disposal also rejects a capture already awaiting the asynchronous PNG callback",
+          "Capture timeout remains active while an asynchronous encoder callback is outstanding",
+          "An outstanding encoder request is captured once across subsequent live frames"
+        ],
+        "failures": []
+      },
+      "execution": {
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "error": null,
+        "elapsedMs": 1370,
+        "stdout": "{\n  \"scope\": \"Unchanged current production host function; real bundled Three scene/geometry/material/camera/Reflector and OrbitControls math, actual collection/assets/features/settings and optics ShaderPass. Renderer, composer execution, DOM event surfaces and PNG encoder are explicit boundaries. No GPU, screenshot, visual or audible playback claim.\",\n  \"threeRevision\": \"185\",\n  \"hostSHA256\": \"6a194d6b4449687ac66dff143660ae92b25f311c473d6a332b1c70b513f85e3a\",\n  \"passed\": 81,\n  \"failed\": 0,\n  \"results\": [\n    \"Host constructs actual Three geometry/material/camera and uses identity grade by default\",\n    \"Exposure, bloom radius and strength alter actual renderer/pass state with safe defaults restored\",\n    \"Color richness and edge shade enable real grade uniforms; original bypasses the pass\",\n    \"Record dust density changes actual draw range and glow changes PointsMaterial opacity\",\n    \"Record reflection scales actual Reflector radiance and fog remains Record-only across scene switches\",\n    \"Record spectrum height changes actual instance matrices and stays editable with motion frozen\",\n    \"Record spectrum height also changes actual Wave geometry with a frozen clock\",\n    \"All 29 sanitized settings reach the real collection frame without rewriting source settings\",\n    \"Real host routes scene-specific settings to Neural, Horizon and Prism after switching\",\n    \"World tempo scales choreography once while real feature timing and real audio smoothing remain independent\",\n    \"Smoothing changes actual band and spectrum attack at equal real audio inputs\",\n    \"Bass, midrange and treble gains independently scale actual three bands and 64 spectral bins\",\n    \"Zero gains remove Record spectrum response without changing the supplied audio data\",\n    \"Real detector transients are scaled and zero pulse suppresses existing real Prism fronts immediately\",\n    \"Muted or inactive analyser input does not produce forwarded onset events\",\n    \"Motion off freezes Record matrices/rotation/light and real Prism pose despite incoming audio changes\",\n    \"Framing changes real camera distance, unrelated edits preserve it and reset restores intended composition\",\n    \"Resize fits actual camera to preview aspect without clearing advanced settings\",\n    \"Orbit speed reaches controls and only enabled compatible scenes auto-orbit during playback\",\n    \"Low quality preserves explicit look values and intentionally disables costly bloom/reflection\",\n    \"Disposed host stops scheduling/renders and disposes its explicit boundaries\",\n    \"Director optics is the actual production pass between grade and output, default camera remains neutral\",\n    \"setPerformance copies and bounds optics/camera without replacing the saved 29 look settings\",\n    \"Continuous framing preserves manual direction and target without invoking a control reset\",\n    \"Continuous framing clamps Horizon manual near/far distances to the actual composed profile\",\n    \"Prism continuous framing changes only lens zoom, preserving composed camera position\",\n    \"Breathe advances only during active playback and freezes its actual camera under pause and Motion off\",\n    \"Record arc moves the actual perspective camera and can freeze without accumulating drift\",\n    \"Composed Horizon and Prism arc uses bounded zoom/roll while preserving their camera positions\",\n    \"Manual camera gesture wins the hold period and remains stable indefinitely with Motion off\",\n    \"After gesture hold and handback, subsequent Motion off freezes the reacquired camera pose\",\n    \"Partially reacquired camera handback freezes its blend and resumes without a discontinuous jump\",\n    \"Repeated camera undo plus actual OrbitControls update does not drift framing, base settings or neutral pose\",\n    \"Raw Director bands stay real and independent of user bass/mid/treble visual gains\",\n    \"Low quality retains optics using the real lower sample budget and correct preview pixels\",\n    \"Aether uses the same host renderer, real collection asset and sanitized independent lab frame\",\n    \"Aether static form and appearance edits apply while its automatic state remains frozen\",\n    \"Aether receives genuine host band gating and drops transient response when playback is paused\",\n    \"Journey camera waits for playback, then moves and holds the exact pose during pause and Motion off\",\n    \"Turning Journey off restores the manual baseline without cumulative camera drift\",\n    \"Aether Journey yields to camera gestures for five seconds and reacquires smoothly from the manual baseline\",\n    \"Aether Journey gesture priority also holds when the separate Auto orbit setting is enabled\",\n    \"Journey is scoped to Aether; copied Record, Neural, Horizon and Prism retain their neutral camera behavior\",\n    \"Aether keeps explicit appearance through preview resize and really reduces submitted geometry in Low detail\",\n    \"tidal: actual collection receives independent controls and composed preview framing\",\n    \"tidal: Motion off freezes automatic uniforms and architecture while explicit edits still apply\",\n    \"tidal: active analyser bands settle after pause, without inventing new onsets\",\n    \"tidal: Low detail reduces actual scene work and returns to High without losing appearance\",\n    \"tidal: Journey stays bounded, pauses exactly and yields to a real OrbitControls wheel event\",\n    \"monolith: actual collection receives independent controls and composed preview framing\",\n    \"monolith: Motion off freezes automatic uniforms and architecture while explicit edits still apply\",\n    \"monolith: active analyser bands settle after pause, without inventing new onsets\",\n    \"monolith: Low detail reduces actual scene work and returns to High without losing appearance\",\n    \"monolith: Journey stays bounded, pauses exactly and yields to a real OrbitControls wheel event\",\n    \"aether: actual collection receives independent controls and composed preview framing\",\n    \"aether: Motion off freezes automatic uniforms and architecture while explicit edits still apply\",\n    \"aether: active analyser bands settle after pause, without inventing new onsets\",\n    \"aether: Low detail reduces actual scene work and returns to High without losing appearance\",\n    \"aether: Journey stays bounded, pauses exactly and yields to a real OrbitControls wheel event\",\n    \"Canvas boundary retains the actual touch capture listener before existing OrbitControls bubble listener\",\n    \"tidal: a paused-world gesture reaches the real asset without inventing music\",\n    \"tidal: touching owns the camera over Journey and Auto orbit, with no competing control gesture\",\n    \"tidal: Motion off cancels the held pointer, freezes the asset and resumes without reviving a contact\",\n    \"monolith: a paused-world gesture reaches the real asset without inventing music\",\n    \"monolith: touching owns the camera over Journey and Auto orbit, with no competing control gesture\",\n    \"monolith: Motion off cancels the held pointer, freezes the asset and resumes without reviving a contact\",\n    \"aether: a paused-world gesture reaches the real asset without inventing music\",\n    \"aether: touching owns the camera over Journey and Auto orbit, with no competing control gesture\",\n    \"aether: Motion off cancels the held pointer, freezes the asset and resumes without reviving a contact\",\n    \"Touch mode returns actual mouse drag and wheel navigation to OrbitControls when disabled\",\n    \"A second pointer never steals ownership, alters the serial, or ends the primary world gesture\",\n    \"Scene handoff releases contact and sends neutral touch before another world receives a new gesture\",\n    \"Global blur and pagehide release world capture without creating extra touch or musical events\",\n    \"Host disposal releases a held touch and removes actual touch/control event ownership\",\n    \"captureFrame waits for the next compositor render and encodes the actual renderer canvas as PNG\",\n    \"Null PNG encoder output and synchronous encoder errors reject honestly\",\n    \"Hidden-page capture times out without rendering or returning a fabricated image\",\n    \"Disposal rejects queued captures and new requests; a lost context rejects new captures\",\n    \"Disposal also rejects a capture already awaiting the asynchronous PNG callback\",\n    \"Capture timeout remains active while an asynchronous encoder callback is outstanding\",\n    \"An outstanding encoder request is captured once across subsequent live frames\"\n  ],\n  \"failures\": []\n}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "lab-controls",
+      "expectedChecks": 45,
+      "passedChecks": 45,
+      "passed": true,
+      "problems": [],
+      "script": "docs/design/2026-09-12-beyond-living/lab-controls-check.mjs",
+      "scriptSHA256": "bcd2a17499439179141e1c14eceeb9f6b1d954f2868c6a129aa8d46a10bf6b17",
+      "args": [
+        "C:\\Berk\\PlayMusicPrompts\\docs\\design\\2026-09-12-beyond-living\\lab-controls-check.mjs"
+      ],
+      "productionAsset": null,
+      "report": {
+        "at": "2026-09-12T12:24:17.371Z",
+        "passed": 45,
+        "checks": [
+          "defaults are complete and independent",
+          "numeric boundaries clamp every parameter",
+          "invalid persisted values recover to defaults",
+          "init and repeated read never write storage",
+          "read storage failure recovers without side effects",
+          "stored settings are sanitized without initialization writes",
+          "patch merges against latest storage, preserving peer fields",
+          "same-field last successful patch wins",
+          "invalid patches reject atomically without writes",
+          "prototype-named fields cannot enter saved settings",
+          "patch bounds values and avoids mutating supplied object",
+          "failed save retains live choice but does not claim durability",
+          "transient fields merge with peer changes and retry durably",
+          "successful retry clears stale transient ownership",
+          "thrown saves retain transient edits and can recover",
+          "reset restores all fields durably",
+          "returned objects cannot mutate persisted or transient state",
+          "store writes only lab key and preserves original keys",
+          "Director persists complete Aether cue appearance under lab namespace",
+          "Director rejects malformed Aether cue field types without modifying a saved score",
+          "Director rejects every non-finite and non-number Aether scalar while preserving the entire saved score",
+          "Director accepts partial valid Aether appearances, bounds numbers and restores unspecified defaults",
+          "Director rejects accessor-bearing Aether patches without executing getters or overwriting the saved score",
+          "Director recovery never evaluates nested Aether accessors and retains valid own data fields",
+          "Director keeps Aether valid in manual mode",
+          "absolute cue seeking restores each Aether form and appearance",
+          "Motion off holds scored Aether shape through seeks",
+          "different song and manual bypass clear score-specific Aether override",
+          "legacy cues without lab data and returned scored values remain independent",
+          "entering Aether controls exits hidden Studio comparison",
+          "revision 2 has three new worlds, four preserved choices and a Tidal default",
+          "Director stores and restores all three environment cues, including captured shared controls",
+          "the actual cue capture constructor includes lab appearance for each new environment",
+          "manual world edits inherit the visible scored appearance before bypassing Director",
+          "main exposes scored world state only while Score mode owns it, preventing stale manual edits",
+          "main analyser loop updates both world controls and the revised shell after Director",
+          "actual coordinator captures and applies three-world cue state without per-frame storage writes",
+          "editing a scored world adopts its visible scene before bypass and persists only the intended appearance change",
+          "editing a Studio control keeps the visible scored world instead of returning to the previous manual scene",
+          "original 227 files match pre-copy SHA256 manifest",
+          "both accepted trees retain their exact complete file sets and source hashes",
+          "accepted alternative assets, audio DSP, features, motion and palettes are byte-identical",
+          "new copied runtime stores have no original namespace literals",
+          "independent port and launch routes remain configured",
+          "lab entry identity and local import map remain independent"
+        ],
+        "limits": "Production stores and coordinator, focused unchanged UI/main function fragments, source and immutability checks. DOM-heavy coordinator controls are an explicit boundary. Actual UI interaction, GPU rendering and audible playback verification belongs to parent browser QA."
+      },
+      "execution": {
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "error": null,
+        "elapsedMs": 402,
+        "stdout": "{\n  \"at\": \"2026-09-12T12:24:17.371Z\",\n  \"passed\": 45,\n  \"checks\": [\n    \"defaults are complete and independent\",\n    \"numeric boundaries clamp every parameter\",\n    \"invalid persisted values recover to defaults\",\n    \"init and repeated read never write storage\",\n    \"read storage failure recovers without side effects\",\n    \"stored settings are sanitized without initialization writes\",\n    \"patch merges against latest storage, preserving peer fields\",\n    \"same-field last successful patch wins\",\n    \"invalid patches reject atomically without writes\",\n    \"prototype-named fields cannot enter saved settings\",\n    \"patch bounds values and avoids mutating supplied object\",\n    \"failed save retains live choice but does not claim durability\",\n    \"transient fields merge with peer changes and retry durably\",\n    \"successful retry clears stale transient ownership\",\n    \"thrown saves retain transient edits and can recover\",\n    \"reset restores all fields durably\",\n    \"returned objects cannot mutate persisted or transient state\",\n    \"store writes only lab key and preserves original keys\",\n    \"Director persists complete Aether cue appearance under lab namespace\",\n    \"Director rejects malformed Aether cue field types without modifying a saved score\",\n    \"Director rejects every non-finite and non-number Aether scalar while preserving the entire saved score\",\n    \"Director accepts partial valid Aether appearances, bounds numbers and restores unspecified defaults\",\n    \"Director rejects accessor-bearing Aether patches without executing getters or overwriting the saved score\",\n    \"Director recovery never evaluates nested Aether accessors and retains valid own data fields\",\n    \"Director keeps Aether valid in manual mode\",\n    \"absolute cue seeking restores each Aether form and appearance\",\n    \"Motion off holds scored Aether shape through seeks\",\n    \"different song and manual bypass clear score-specific Aether override\",\n    \"legacy cues without lab data and returned scored values remain independent\",\n    \"entering Aether controls exits hidden Studio comparison\",\n    \"revision 2 has three new worlds, four preserved choices and a Tidal default\",\n    \"Director stores and restores all three environment cues, including captured shared controls\",\n    \"the actual cue capture constructor includes lab appearance for each new environment\",\n    \"manual world edits inherit the visible scored appearance before bypassing Director\",\n    \"main exposes scored world state only while Score mode owns it, preventing stale manual edits\",\n    \"main analyser loop updates both world controls and the revised shell after Director\",\n    \"actual coordinator captures and applies three-world cue state without per-frame storage writes\",\n    \"editing a scored world adopts its visible scene before bypass and persists only the intended appearance change\",\n    \"editing a Studio control keeps the visible scored world instead of returning to the previous manual scene\",\n    \"original 227 files match pre-copy SHA256 manifest\",\n    \"both accepted trees retain their exact complete file sets and source hashes\",\n    \"accepted alternative assets, audio DSP, features, motion and palettes are byte-identical\",\n    \"new copied runtime stores have no original namespace literals\",\n    \"independent port and launch routes remain configured\",\n    \"lab entry identity and local import map remain independent\"\n  ],\n  \"limits\": \"Production stores and coordinator, focused unchanged UI/main function fragments, source and immutability checks. DOM-heavy coordinator controls are an explicit boundary. Actual UI interaction, GPU rendering and audible playback verification belongs to parent browser QA.\"\n}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "touch",
+      "expectedChecks": 16,
+      "passedChecks": 16,
+      "passed": true,
+      "problems": [],
+      "script": "docs/design/2026-09-12-beyond-living/touch-check.mjs",
+      "scriptSHA256": "1396fbcd7ec4cd30faa8519258ccef888293944c076f1500cf21a95dba9b75ed",
+      "args": [
+        "C:\\Berk\\PlayMusicPrompts\\docs\\design\\2026-09-12-beyond-living\\touch-check.mjs"
+      ],
+      "productionAsset": null,
+      "report": {
+        "checks": 16,
+        "names": [
+          "initially inert without world and mode",
+          "availability alone does not intercept camera",
+          "primary held gesture uses actual canvas coordinates and capture",
+          "second pointer cannot steal a gesture or create a ripple",
+          "strength rises smoothly with finite bounded time",
+          "drag maps and clamps out of bounds",
+          "release gives camera priority and decays without new onset",
+          "right click and secondary pointer do not intercept",
+          "cancel releases exactly once",
+          "blur prevents stuck hold",
+          "Motion off gates pointer and preserves user mode choice",
+          "Motion resume requires a fresh intentional pointer",
+          "switching to original world releases pointer and removes touch cursor",
+          "reset clears transient force across scene switches",
+          "disabling returns pointer to camera and keeps serial monotonic",
+          "disposal is idempotent and removes event ownership"
+        ],
+        "scope": "Actual production pointer state with explicit EventTarget/canvas boundary; browser drag/render reviewed separately"
+      },
+      "execution": {
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "error": null,
+        "elapsedMs": 59,
+        "stdout": "{\n  \"checks\": 16,\n  \"names\": [\n    \"initially inert without world and mode\",\n    \"availability alone does not intercept camera\",\n    \"primary held gesture uses actual canvas coordinates and capture\",\n    \"second pointer cannot steal a gesture or create a ripple\",\n    \"strength rises smoothly with finite bounded time\",\n    \"drag maps and clamps out of bounds\",\n    \"release gives camera priority and decays without new onset\",\n    \"right click and secondary pointer do not intercept\",\n    \"cancel releases exactly once\",\n    \"blur prevents stuck hold\",\n    \"Motion off gates pointer and preserves user mode choice\",\n    \"Motion resume requires a fresh intentional pointer\",\n    \"switching to original world releases pointer and removes touch cursor\",\n    \"reset clears transient force across scene switches\",\n    \"disabling returns pointer to camera and keeps serial monotonic\",\n    \"disposal is idempotent and removes event ownership\"\n  ],\n  \"scope\": \"Actual production pointer state with explicit EventTarget/canvas boundary; browser drag/render reviewed separately\"\n}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "tidal",
+      "expectedChecks": 19,
+      "passedChecks": 19,
+      "passed": true,
+      "problems": [],
+      "script": "docs/design/2026-09-12-beyond-living/tidal-check.mjs",
+      "scriptSHA256": "c35cab306f4145383dcd0fe64ab413ea7e108fb1d7db712cdd43564f30f57bf4",
+      "args": [
+        "C:\\Berk\\PlayMusicPrompts\\docs\\design\\2026-09-12-beyond-living\\tidal-check.mjs",
+        "C:\\Berk\\PlayMusicPrompts\\website_html_templates_beyond\\lab-tidal.js"
+      ],
+      "productionAsset": "lab-tidal.js",
+      "report": {
+        "module": "file:///C:/Berk/PlayMusicPrompts/website_html_templates_beyond/lab-tidal.js",
+        "sha256": "6e38566ae8c529cc4d2f0c245806a7727f36468bcc7ff0e22f526c5d5aa865d1",
+        "passed": 19,
+        "checks": [
+          "Pinned Three constructs a full ocean and inside sky, without renderer, loader or timer ownership",
+          "Three separate depth layers are real finite indexed coastal meshes with usable face normals",
+          "Composed camera remains above the maximum analytic crest throughout allowed dolly range",
+          "Local camera uniform respects the host group translation and complete parent transform",
+          "Audio uniforms respond to actual gated bands and decay after playback stops",
+          "Onsets create bounded ring slots only while the actual track is active",
+          "Pointer serials create their own bounded water fronts while paused without inventing audio events",
+          "Released strength follows host decay; missing touch is neutral and stale serials cannot replay",
+          "Motion off retains the complete touch and ripple state without a reset jump or delayed synthetic onset",
+          "Malformed touch coordinates, strength and serial cannot enter shader storage",
+          "Motion off freezes a partial form transition, shader clocks, event ages and all audio response",
+          "Explicit controls still work while frozen and a static form edit applies without advancing time",
+          "Zero flow holds the current advection phase while the independent real onset clock can advance",
+          "Low quality reduces real triangles, wave components and noise octaves without resources per update",
+          "Nonfinite and out-of-range input cannot enter shader scalars or event powers",
+          "Palette changes the reflected and visible sky through shared finite linear color uniforms",
+          "Shader helper names are isolated from Three injected GLSL identifiers and derivative normals share displacement",
+          "Footprint filtering is fragment-only and the reported reserved-word GPU failure cannot recur",
+          "All owned geometry and material resources dispose exactly once and updates become inert"
+        ],
+        "limits": "Real Three construction, numeric state and resource checks. This is not GPU compilation, actual rendered art quality or frame-rate evidence."
+      },
+      "execution": {
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "error": null,
+        "elapsedMs": 137,
+        "stdout": "{\n  \"module\": \"file:///C:/Berk/PlayMusicPrompts/website_html_templates_beyond/lab-tidal.js\",\n  \"sha256\": \"6e38566ae8c529cc4d2f0c245806a7727f36468bcc7ff0e22f526c5d5aa865d1\",\n  \"passed\": 19,\n  \"checks\": [\n    \"Pinned Three constructs a full ocean and inside sky, without renderer, loader or timer ownership\",\n    \"Three separate depth layers are real finite indexed coastal meshes with usable face normals\",\n    \"Composed camera remains above the maximum analytic crest throughout allowed dolly range\",\n    \"Local camera uniform respects the host group translation and complete parent transform\",\n    \"Audio uniforms respond to actual gated bands and decay after playback stops\",\n    \"Onsets create bounded ring slots only while the actual track is active\",\n    \"Pointer serials create their own bounded water fronts while paused without inventing audio events\",\n    \"Released strength follows host decay; missing touch is neutral and stale serials cannot replay\",\n    \"Motion off retains the complete touch and ripple state without a reset jump or delayed synthetic onset\",\n    \"Malformed touch coordinates, strength and serial cannot enter shader storage\",\n    \"Motion off freezes a partial form transition, shader clocks, event ages and all audio response\",\n    \"Explicit controls still work while frozen and a static form edit applies without advancing time\",\n    \"Zero flow holds the current advection phase while the independent real onset clock can advance\",\n    \"Low quality reduces real triangles, wave components and noise octaves without resources per update\",\n    \"Nonfinite and out-of-range input cannot enter shader scalars or event powers\",\n    \"Palette changes the reflected and visible sky through shared finite linear color uniforms\",\n    \"Shader helper names are isolated from Three injected GLSL identifiers and derivative normals share displacement\",\n    \"Footprint filtering is fragment-only and the reported reserved-word GPU failure cannot recur\",\n    \"All owned geometry and material resources dispose exactly once and updates become inert\"\n  ],\n  \"limits\": \"Real Three construction, numeric state and resource checks. This is not GPU compilation, actual rendered art quality or frame-rate evidence.\"\n}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "monolith",
+      "expectedChecks": 22,
+      "passedChecks": 22,
+      "passed": true,
+      "problems": [],
+      "script": "docs/design/2026-09-12-beyond-living/monolith-check.mjs",
+      "scriptSHA256": "99a4d24045ac24573839ae022a21cdf676ecc371d883c7c6f71d0bb2c9b7e358",
+      "args": [
+        "C:\\Berk\\PlayMusicPrompts\\docs\\design\\2026-09-12-beyond-living\\monolith-check.mjs",
+        "C:\\Berk\\PlayMusicPrompts\\website_html_templates_beyond\\lab-monolith.js"
+      ],
+      "productionAsset": "lab-monolith.js",
+      "report": {
+        "passed": 22,
+        "checks": [
+          "The actual pinned Three builds a solid PBR environment with full ground surfaces, a far aperture and composed camera",
+          "Every actual instance transform is finite and the whole owned geometry remains within the host far plane budget",
+          "Actual material compilation callbacks add only namespaced shader inputs and preserve PBR light/reflection chunks",
+          "Bounded mineral highlights preserve channel ratios while the revised depth curve retains far-face shading",
+          "Real audio envelopes settle on pause and silence never creates onset events",
+          "An actual onset schedules one spatial front and propagation advances coherently through the environment",
+          "Motion off freezes all automatic phases, audio envelopes, wave fronts, form blend and actual instance transforms",
+          "Explicit held controls visibly change their actual instance data or shader uniforms without advancing time",
+          "Low quality actually reduces submitted geometry instances and points, with independent particle-density control",
+          "Form interpolation stays convex and continuous, while flow zero holds ambient phase without disabling real audio",
+          "Invalid scalar inputs and oversized frame gaps never poison transforms or clocks; accessors are not invoked",
+          "Palette edits affect actual light colors and shader finishes; pulse gain zero clears pending emission even when held",
+          "The central composition consists of actual articulated leaves, separate truss layers, pistons, pivots and fractured solids",
+          "Touch opens and orients real geometry during pause; it never fabricates a musical onset",
+          "Motion off holds the complete touched pose despite neutral incoming touch, serial changes and large time steps",
+          "Released touch respects residual host strength and missing touch smoothly returns the machinery to neutral",
+          "Rod and barrel matrices share the same actual start joint and stay finite across extreme valid forms and touch",
+          "The added machinery and medium genuinely reduce submitted work at Low quality",
+          "The medium camera transform respects the host offset, parent rotation and scale",
+          "Parallel and near-parallel shaft rays never produce a zero reciprocal divisor, and homogeneous integration is step-invariant",
+          "Invalid touch scalars and accessor fields cannot poison the mechanism or execute getters",
+          "All owned geometries, materials and instanced buffers dispose exactly once; held references cannot restart the asset"
+        ],
+        "module": "/C:/Berk/PlayMusicPrompts/website_html_templates_beyond/lab-monolith.js",
+        "moduleSHA256": "4b7dc9d222fb7809c86b03d60442cdaecddf66933d51d6018d39818eb4f5e22c",
+        "scope": "Pinned Three scene, geometry, actual PBR callback wiring, numeric transforms, finite controls, motion freeze, input-driven envelopes, front propagation, true instance/draw reduction and owned-resource lifecycle. No GLSL compilation, rendered quality, FPS, photographic realism or artistic acceptance is established by this check."
+      },
+      "execution": {
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "error": null,
+        "elapsedMs": 205,
+        "stdout": "{\n  \"passed\": 22,\n  \"checks\": [\n    \"The actual pinned Three builds a solid PBR environment with full ground surfaces, a far aperture and composed camera\",\n    \"Every actual instance transform is finite and the whole owned geometry remains within the host far plane budget\",\n    \"Actual material compilation callbacks add only namespaced shader inputs and preserve PBR light/reflection chunks\",\n    \"Bounded mineral highlights preserve channel ratios while the revised depth curve retains far-face shading\",\n    \"Real audio envelopes settle on pause and silence never creates onset events\",\n    \"An actual onset schedules one spatial front and propagation advances coherently through the environment\",\n    \"Motion off freezes all automatic phases, audio envelopes, wave fronts, form blend and actual instance transforms\",\n    \"Explicit held controls visibly change their actual instance data or shader uniforms without advancing time\",\n    \"Low quality actually reduces submitted geometry instances and points, with independent particle-density control\",\n    \"Form interpolation stays convex and continuous, while flow zero holds ambient phase without disabling real audio\",\n    \"Invalid scalar inputs and oversized frame gaps never poison transforms or clocks; accessors are not invoked\",\n    \"Palette edits affect actual light colors and shader finishes; pulse gain zero clears pending emission even when held\",\n    \"The central composition consists of actual articulated leaves, separate truss layers, pistons, pivots and fractured solids\",\n    \"Touch opens and orients real geometry during pause; it never fabricates a musical onset\",\n    \"Motion off holds the complete touched pose despite neutral incoming touch, serial changes and large time steps\",\n    \"Released touch respects residual host strength and missing touch smoothly returns the machinery to neutral\",\n    \"Rod and barrel matrices share the same actual start joint and stay finite across extreme valid forms and touch\",\n    \"The added machinery and medium genuinely reduce submitted work at Low quality\",\n    \"The medium camera transform respects the host offset, parent rotation and scale\",\n    \"Parallel and near-parallel shaft rays never produce a zero reciprocal divisor, and homogeneous integration is step-invariant\",\n    \"Invalid touch scalars and accessor fields cannot poison the mechanism or execute getters\",\n    \"All owned geometries, materials and instanced buffers dispose exactly once; held references cannot restart the asset\"\n  ],\n  \"module\": \"/C:/Berk/PlayMusicPrompts/website_html_templates_beyond/lab-monolith.js\",\n  \"moduleSHA256\": \"4b7dc9d222fb7809c86b03d60442cdaecddf66933d51d6018d39818eb4f5e22c\",\n  \"scope\": \"Pinned Three scene, geometry, actual PBR callback wiring, numeric transforms, finite controls, motion freeze, input-driven envelopes, front propagation, true instance/draw reduction and owned-resource lifecycle. No GLSL compilation, rendered quality, FPS, photographic realism or artistic acceptance is established by this check.\"\n}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "particle",
+      "expectedChecks": 30,
+      "passedChecks": 30,
+      "passed": true,
+      "problems": [],
+      "script": "docs/design/2026-09-12-beyond-living/particle-check.mjs",
+      "scriptSHA256": "9337cd965e8a77546a7c41b8bfc5423af6a70e93f0ed5ba2f791294b6e714810",
+      "args": [
+        "C:\\Berk\\PlayMusicPrompts\\docs\\design\\2026-09-12-beyond-living\\particle-check.mjs",
+        "C:\\Berk\\PlayMusicPrompts\\website_html_templates_beyond\\lab-aether.js"
+      ],
+      "productionAsset": "lab-aether.js",
+      "report": {
+        "checks": 30,
+        "scope": "actual asset behavior, real Three resources and renderer protocol; GPU pixels require browser verification"
+      },
+      "execution": {
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "error": null,
+        "elapsedMs": 164,
+        "stdout": "PASS The host receives an inside-environment view without object fitting\nPASS Unsupported device honestly selects analytical rendering\nPASS Initial authored topology is finite, coherent and bounded\nPASS Depth field and riders use fixed, finite, spatially varied seeds\nPASS Actual active bands feed retained visual signals and spectrum\nPASS Form transition is continuous, with normalized nonnegative weights\nPASS Motion off freezes an in-progress morph and all automatic clocks/signals\nPASS Explicit frozen form and spatial edits apply at the retained time\nPASS Onsets require actual active playback and enabled pulse response\nPASS Paused playback releases audio envelopes without invented new events\nPASS Low detail reduces real geometry draw counts and distributes all bundles\nPASS Particle density zero removes all structured, suspended and rider draws\nPASS Quality and density reductions also apply to both new detail layers\nPASS Detail attributes stay immutable while the shared audio and time change\nPASS Lab and global glow multiply, all numeric settings reject NaN and clamp\nPASS Ambient flow zero stops transport phase, dt is bounded\nPASS Palette follows the actual world colors\nPASS Direct touch is finite, independent of music, and keeps a released pressure tail\nPASS Motion off retains the touched shape and clocks until resume releases it\nPASS Touch force uses the actual camera ray in the transformed environment\nPASS Half-float path checks actual framebuffer completeness\nPASS Capability probing restores target, cube/mipmap, XR, viewport and scissor exactly\nPASS GPU update ping-pongs real target references and restores renderer state\nPASS Small-preview hairline coverage responds to the actual drawing buffer\nPASS Low quality actually lowers compute cadence to one pass per three calls\nPASS Frozen GPU performs no simulation passes except an explicit spatial edit\nPASS GPU and analytical paths receive the same touch target without generating audio events\nPASS Framebuffer failure selects a truthful fallback without losing renderer state\nPASS Render exception selects analytical fallback and restores host state\nPASS Disposal releases actual Three resources once and stops future work\n{\"checks\":30,\"scope\":\"actual asset behavior, real Three resources and renderer protocol; GPU pixels require browser verification\"}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "atmosphere",
+      "expectedChecks": 16,
+      "passedChecks": 16,
+      "passed": true,
+      "problems": [],
+      "script": "docs/design/2026-09-12-beyond-living/atmosphere-check.mjs",
+      "scriptSHA256": "4cf7541685103fb5f0a5f59b70b8e54522ddf1b9da4b95c7a4e9b568f1b72210",
+      "args": [
+        "C:\\Berk\\PlayMusicPrompts\\docs\\design\\2026-09-12-beyond-living\\atmosphere-check.mjs",
+        "C:\\Berk\\PlayMusicPrompts\\website_html_templates_beyond\\lab-aether-atmosphere.js"
+      ],
+      "productionAsset": "lab-aether-atmosphere.js",
+      "report": {
+        "passed": 16,
+        "checks": [
+          "Pinned Three constructs a single bounded transparent medium with additive RGB and unchanged destination alpha",
+          "Cloud detail is a fixed, deterministic filtered 3D texture with a bounded local budget",
+          "Camera uniform applies the complete translated, rotated and nonuniformly scaled parent transform",
+          "Three injected shader helpers cannot collide with av-prefixed custom helpers",
+          "Ray-box arithmetic matches an independent reference outside, inside and parallel to the box",
+          "Each quality level changes the actual bounded shader ray loop",
+          "Continuous form morph is convex and does not advance under Motion off",
+          "Explicit form, depth, spread, focus and finish edits remain effective while frozen",
+          "Invalid controls and enormous elapsed gaps remain finite and inside their declared budgets",
+          "Audio responds to actual active input and settles on pause; zero flow stops ambient phase",
+          "The medium has true depth integration, stable sample positions and a hard radiance ceiling",
+          "Environment box includes the camera, all near banks and the full distant field",
+          "Particle and volume clocks, envelopes and form weights match through pause and frozen edits",
+          "Palette inputs reach actual shader colours",
+          "Particle and medium share camera-relative touch while frozen input is ignored",
+          "Owned geometry and material dispose once and disposed assets cannot resume updates"
+        ],
+        "module": "/C:/Berk/PlayMusicPrompts/website_html_templates_beyond/lab-aether-atmosphere.js",
+        "moduleSHA256": "6368af266ecab0f881ee6d01fc48481309215d09f1be4995f657498f57028015",
+        "particleModule": "/C:/Berk/PlayMusicPrompts/website_html_templates_beyond/lab-aether.js",
+        "particleSHA256": "38ce2e47a86122156a649fcc7b2fd34891090ca82322953f26802a9b895373f4",
+        "scope": "Pinned Three construction, real scene/camera matrices, input and lifecycle behavior, independent slab-reference comparison, bounded compositing math and shader namespace/source guards. These checks do not compile GLSL or establish actual GPU rendering, performance or visual acceptance."
+      },
+      "execution": {
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "error": null,
+        "elapsedMs": 161,
+        "stdout": "{\n  \"passed\": 16,\n  \"checks\": [\n    \"Pinned Three constructs a single bounded transparent medium with additive RGB and unchanged destination alpha\",\n    \"Cloud detail is a fixed, deterministic filtered 3D texture with a bounded local budget\",\n    \"Camera uniform applies the complete translated, rotated and nonuniformly scaled parent transform\",\n    \"Three injected shader helpers cannot collide with av-prefixed custom helpers\",\n    \"Ray-box arithmetic matches an independent reference outside, inside and parallel to the box\",\n    \"Each quality level changes the actual bounded shader ray loop\",\n    \"Continuous form morph is convex and does not advance under Motion off\",\n    \"Explicit form, depth, spread, focus and finish edits remain effective while frozen\",\n    \"Invalid controls and enormous elapsed gaps remain finite and inside their declared budgets\",\n    \"Audio responds to actual active input and settles on pause; zero flow stops ambient phase\",\n    \"The medium has true depth integration, stable sample positions and a hard radiance ceiling\",\n    \"Environment box includes the camera, all near banks and the full distant field\",\n    \"Particle and volume clocks, envelopes and form weights match through pause and frozen edits\",\n    \"Palette inputs reach actual shader colours\",\n    \"Particle and medium share camera-relative touch while frozen input is ignored\",\n    \"Owned geometry and material dispose once and disposed assets cannot resume updates\"\n  ],\n  \"module\": \"/C:/Berk/PlayMusicPrompts/website_html_templates_beyond/lab-aether-atmosphere.js\",\n  \"moduleSHA256\": \"6368af266ecab0f881ee6d01fc48481309215d09f1be4995f657498f57028015\",\n  \"particleModule\": \"/C:/Berk/PlayMusicPrompts/website_html_templates_beyond/lab-aether.js\",\n  \"particleSHA256\": \"38ce2e47a86122156a649fcc7b2fd34891090ca82322953f26802a9b895373f4\",\n  \"scope\": \"Pinned Three construction, real scene/camera matrices, input and lifecycle behavior, independent slab-reference comparison, bounded compositing math and shader namespace/source guards. These checks do not compile GLSL or establish actual GPU rendering, performance or visual acceptance.\"\n}\n",
+        "stderr": ""
+      }
+    }
+  ],
+  "syntax": [
+    {
+      "file": "app.js",
+      "sha256": "862be3c8135504240282dea1a0e0bb1321e988e0a23629aa533c6a2b0a2d20c0",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 58,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "collections.js",
+      "sha256": "2cc9c43711497682b34f35452c267335c6f3879dc7710f0a7a3b06b0c8c9a0fe",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 63,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "config.js",
+      "sha256": "9db0832c3499fdc0123bb3246ee55eecc8df0992a3ca5adf0440ea492a851744",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 65,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "controls.js",
+      "sha256": "f52e86eeeee07cb5abde51da885410b9303bd54cd7a7ee4cf36f5b8cea8ba139",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 63,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "data.js",
+      "sha256": "67d55adf8ceaaa67a4da290e0a86ebcf0ddc9d6926c3c04c43737e01e3044504",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 66,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "experience.js",
+      "sha256": "9ea41da0abdac68660421f325d82383ae57537080f93b9220258a71f1830be49",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 66,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "lab-aether-atmosphere.js",
+      "sha256": "6368af266ecab0f881ee6d01fc48481309215d09f1be4995f657498f57028015",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 72,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "lab-aether-settings.js",
+      "sha256": "a1ab52925cf7c2d95c7fc6112d0b3c12efce4db7afbbdde4e1133f20b435a936",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 63,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "lab-aether-ui.js",
+      "sha256": "f0d8267d005c92b5431e08659738d053186ff8044afc8ccda442da2b3cbea2f8",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 61,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "lab-aether.js",
+      "sha256": "38ce2e47a86122156a649fcc7b2fd34891090ca82322953f26802a9b895373f4",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 62,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "lab-monolith.js",
+      "sha256": "4b7dc9d222fb7809c86b03d60442cdaecddf66933d51d6018d39818eb4f5e22c",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 65,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "lab-shell.js",
+      "sha256": "4213d8f9424d0c86b86be123385d3917bd75f69b0b335c60bf9921184dcf903a",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 60,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "lab-tidal.js",
+      "sha256": "6e38566ae8c529cc4d2f0c245806a7727f36468bcc7ff0e22f526c5d5aa865d1",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 50,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "player-three-audio.js",
+      "sha256": "3cdf3111556e2fc46cad4ad9044ff756b1e6a8bc9873e9e8fd96409583f5a302",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 73,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "player-three-aurora.js",
+      "sha256": "15c16d4970af10c4fd5a552dc996425a419b1109cd374772b931eec9838e5927",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 71,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "player-three-collection.js",
+      "sha256": "8d2c84930c66c23fbde593a6d0b5135add423158d6ee5795bf581760ed1252e3",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 55,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "player-three-director-ui.js",
+      "sha256": "6ca440a350f76cef0497eae45066f9009b81dd3000596121e99752ee43aa4da0",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 56,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "player-three-director.js",
+      "sha256": "b171a2e7f97661fba6af321925b8f9411308cc52e4f4b5ba439957591565a040",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 60,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "player-three-entry.js",
+      "sha256": "251a4f0482da9af5caf63b598032600354622c9a2bb9a154497def0b6fbf5fd1",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 55,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "player-three-features.js",
+      "sha256": "a8688dc70a76e0f6d34fb47d83085750899107cf0ac9ea329cd2b1b94ed1c3c5",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 60,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "player-three-liquid.js",
+      "sha256": "017b84499e1a98e944a9b554eb699d4f6d7c3f3b6fa09993c3c4bb4546615132",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 54,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "player-three-models.js",
+      "sha256": "bd23628b429f6882f4f0387807391ef5325a0946d536672eb17364f4380cf546",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 58,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "player-three-motion.js",
+      "sha256": "8a8a41d85dd8aea082aa4e4ea2088c9b18331a7203442f509db1172759776bd2",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 54,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "player-three-optics.js",
+      "sha256": "2aa3bfc0f4a9f555d4d2f27eebbd373c445a637a99fecb585f275ba614c3d806",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 59,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "player-three-orbital.js",
+      "sha256": "41b0be7dfe8e3fe411d6e9e64926e118b6d08ca35c5958e042173f2b95f200e5",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 68,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "player-three-performance.js",
+      "sha256": "6623cc966d193001de4674336b19a975c3aa9aef263297b6b3022ee1ee236441",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 68,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "player-three-scene.js",
+      "sha256": "6a194d6b4449687ac66dff143660ae92b25f311c473d6a332b1c70b513f85e3a",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 62,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "player-three-session.js",
+      "sha256": "b9c8b66a283041cd1226050561fc925d1fc7967d0be68547092e1c94f22f1278",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 65,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "player-three-sound-ui.js",
+      "sha256": "187ceb98078c1c4c102bdfab4dfb73bc7baf203960d825a9b1162f8d459b3328",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 50,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "player-three-store.js",
+      "sha256": "d44e3935b610f62c3d68c71d6788c20486977113fbb6fee26e0fe84e4aa12d1e",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 52,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "player-three-visual-settings.js",
+      "sha256": "327528687c17523c4cc326ae530f04e1c84fe84beb61b1f0a949f593ca1e7f44",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 76,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "player-three-visual-studio.js",
+      "sha256": "28bd8a8fc1830721e13fd7990cd8c1627429c2f71526724d97c5cc45bd3d3c64",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 75,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "player-three-worlds.js",
+      "sha256": "0176067b6805bc573cf09b833400b0e606109acb2f488b4e19535f2c2367b89f",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 52,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "player-three.js",
+      "sha256": "b9754d7c156593859de4548e482f3c4cde5d66675d46db3b11c3b46a3c2ed7e5",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 53,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "player.js",
+      "sha256": "41c2589217a06d7d07dc904d776c15231087e240999e242268b904924664e281",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 55,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "schema.js",
+      "sha256": "0190ac11dfc5cb8aad17846a128111129b0061cd0ccc3025b5cf1ac93cf394cd",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 61,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "server.mjs",
+      "sha256": "4aebbdcffa5822163cb9f44c3eb668094f5c1923ec61ec07b78eb06d041e5caa",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 51,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "world-touch.js",
+      "sha256": "c8d87d0fafd510be90515d7a26fcaa26e7c1410632a772fa3c0ed98060860316",
+      "passed": true,
+      "exitCode": 0,
+      "signal": null,
+      "timedOut": false,
+      "error": null,
+      "elapsedMs": 50,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "protectedAfter": [
+    {
+      "key": "original",
+      "folder": "website_html_templates",
+      "expectedFiles": 227,
+      "actualFiles": 227,
+      "unchanged": true,
+      "differences": {
+        "added": [],
+        "missing": [],
+        "changed": []
+      },
+      "manifestSHA256": "e8dd5e87aef66b4e829062e8488ac2025dd8da9166234c69ead733d28199d2d2"
+    },
+    {
+      "key": "accepted",
+      "folder": "website_html_templates_lab",
+      "expectedFiles": 242,
+      "actualFiles": 242,
+      "unchanged": true,
+      "differences": {
+        "added": [],
+        "missing": [],
+        "changed": []
+      },
+      "manifestSHA256": "95a2892f91e192786caa9347b2dcc1396efe81c02447b6e73796e86a2c082be8"
+    }
+  ],
+  "sourceDrift": {
+    "added": [],
+    "missing": [],
+    "changed": []
+  },
+  "harnessDrift": {
+    "added": [],
+    "missing": [],
+    "changed": []
+  },
+  "totalPassingChecks": 229,
+  "finishedAt": "2026-09-12T12:24:19.371Z"
+}

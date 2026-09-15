@@ -1,0 +1,53 @@
+{
+  "name": "monolith",
+  "expectedChecks": 22,
+  "passedChecks": 22,
+  "passed": true,
+  "problems": [],
+  "script": "docs/design/2026-09-12-beyond-living/monolith-check.mjs",
+  "scriptSHA256": "99a4d24045ac24573839ae022a21cdf676ecc371d883c7c6f71d0bb2c9b7e358",
+  "args": [
+    "C:\\Berk\\PlayMusicPrompts\\docs\\design\\2026-09-12-beyond-living\\monolith-check.mjs",
+    "C:\\Berk\\PlayMusicPrompts\\website_html_templates_beyond\\lab-monolith.js"
+  ],
+  "productionAsset": "lab-monolith.js",
+  "report": {
+    "passed": 22,
+    "checks": [
+      "The actual pinned Three builds a solid PBR environment with full ground surfaces, a far aperture and composed camera",
+      "Every actual instance transform is finite and the whole owned geometry remains within the host far plane budget",
+      "Actual material compilation callbacks add only namespaced shader inputs and preserve PBR light/reflection chunks",
+      "Bounded mineral highlights preserve channel ratios while the revised depth curve retains far-face shading",
+      "Real audio envelopes settle on pause and silence never creates onset events",
+      "An actual onset schedules one spatial front and propagation advances coherently through the environment",
+      "Motion off freezes all automatic phases, audio envelopes, wave fronts, form blend and actual instance transforms",
+      "Explicit held controls visibly change their actual instance data or shader uniforms without advancing time",
+      "Low quality actually reduces submitted geometry instances and points, with independent particle-density control",
+      "Form interpolation stays convex and continuous, while flow zero holds ambient phase without disabling real audio",
+      "Invalid scalar inputs and oversized frame gaps never poison transforms or clocks; accessors are not invoked",
+      "Palette edits affect actual light colors and shader finishes; pulse gain zero clears pending emission even when held",
+      "The central composition consists of actual articulated leaves, separate truss layers, pistons, pivots and fractured solids",
+      "Touch opens and orients real geometry during pause; it never fabricates a musical onset",
+      "Motion off holds the complete touched pose despite neutral incoming touch, serial changes and large time steps",
+      "Released touch respects residual host strength and missing touch smoothly returns the machinery to neutral",
+      "Rod and barrel matrices share the same actual start joint and stay finite across extreme valid forms and touch",
+      "The added machinery and medium genuinely reduce submitted work at Low quality",
+      "The medium camera transform respects the host offset, parent rotation and scale",
+      "Parallel and near-parallel shaft rays never produce a zero reciprocal divisor, and homogeneous integration is step-invariant",
+      "Invalid touch scalars and accessor fields cannot poison the mechanism or execute getters",
+      "All owned geometries, materials and instanced buffers dispose exactly once; held references cannot restart the asset"
+    ],
+    "module": "/C:/Berk/PlayMusicPrompts/website_html_templates_beyond/lab-monolith.js",
+    "moduleSHA256": "4b7dc9d222fb7809c86b03d60442cdaecddf66933d51d6018d39818eb4f5e22c",
+    "scope": "Pinned Three scene, geometry, actual PBR callback wiring, numeric transforms, finite controls, motion freeze, input-driven envelopes, front propagation, true instance/draw reduction and owned-resource lifecycle. No GLSL compilation, rendered quality, FPS, photographic realism or artistic acceptance is established by this check."
+  },
+  "execution": {
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "error": null,
+    "elapsedMs": 205,
+    "stdout": "{\n  \"passed\": 22,\n  \"checks\": [\n    \"The actual pinned Three builds a solid PBR environment with full ground surfaces, a far aperture and composed camera\",\n    \"Every actual instance transform is finite and the whole owned geometry remains within the host far plane budget\",\n    \"Actual material compilation callbacks add only namespaced shader inputs and preserve PBR light/reflection chunks\",\n    \"Bounded mineral highlights preserve channel ratios while the revised depth curve retains far-face shading\",\n    \"Real audio envelopes settle on pause and silence never creates onset events\",\n    \"An actual onset schedules one spatial front and propagation advances coherently through the environment\",\n    \"Motion off freezes all automatic phases, audio envelopes, wave fronts, form blend and actual instance transforms\",\n    \"Explicit held controls visibly change their actual instance data or shader uniforms without advancing time\",\n    \"Low quality actually reduces submitted geometry instances and points, with independent particle-density control\",\n    \"Form interpolation stays convex and continuous, while flow zero holds ambient phase without disabling real audio\",\n    \"Invalid scalar inputs and oversized frame gaps never poison transforms or clocks; accessors are not invoked\",\n    \"Palette edits affect actual light colors and shader finishes; pulse gain zero clears pending emission even when held\",\n    \"The central composition consists of actual articulated leaves, separate truss layers, pistons, pivots and fractured solids\",\n    \"Touch opens and orients real geometry during pause; it never fabricates a musical onset\",\n    \"Motion off holds the complete touched pose despite neutral incoming touch, serial changes and large time steps\",\n    \"Released touch respects residual host strength and missing touch smoothly returns the machinery to neutral\",\n    \"Rod and barrel matrices share the same actual start joint and stay finite across extreme valid forms and touch\",\n    \"The added machinery and medium genuinely reduce submitted work at Low quality\",\n    \"The medium camera transform respects the host offset, parent rotation and scale\",\n    \"Parallel and near-parallel shaft rays never produce a zero reciprocal divisor, and homogeneous integration is step-invariant\",\n    \"Invalid touch scalars and accessor fields cannot poison the mechanism or execute getters\",\n    \"All owned geometries, materials and instanced buffers dispose exactly once; held references cannot restart the asset\"\n  ],\n  \"module\": \"/C:/Berk/PlayMusicPrompts/website_html_templates_beyond/lab-monolith.js\",\n  \"moduleSHA256\": \"4b7dc9d222fb7809c86b03d60442cdaecddf66933d51d6018d39818eb4f5e22c\",\n  \"scope\": \"Pinned Three scene, geometry, actual PBR callback wiring, numeric transforms, finite controls, motion freeze, input-driven envelopes, front propagation, true instance/draw reduction and owned-resource lifecycle. No GLSL compilation, rendered quality, FPS, photographic realism or artistic acceptance is established by this check.\"\n}\n",
+    "stderr": ""
+  }
+}

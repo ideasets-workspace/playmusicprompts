@@ -1,0 +1,30 @@
+{
+  "schema": "berk.deep-research-preflight/v1",
+  "status": "complete",
+  "date": "2026-08-08",
+  "created_at": "2026-08-08T17:05:00+03:00",
+  "topic": "cursor-claude-code-current-agentic-surfaces-verification",
+  "cwd": "C:/Berk/SsmContentAssetCreator",
+  "governing_files": [
+    { "path": ".claude/rules/research-standard.md", "sha256": "E8E35C4C722F6829D018B6909A807C271430806E9DAB861B5D037B1E275E7CCA", "read_back": true },
+    { "path": ".claude/rules/research-delegation-mandate.mdc", "sha256": "FD8CC1A713258D84A696F0DDDF019EB6C8843D97EFC6D8EAEC083BEDF837D448", "read_back": true },
+    { "path": "AGENTS.md", "sha256": "413C821B6657E01197087FE2C5BAD098A42CF3131BB6AE8876DD0E3BD93AB0E0", "read_back": true },
+    { "path": ".claude/memory/STATE.md", "sha256": "3FED7F1EB97F5FD9CAB18ED0B07CC5D30B12FA00429DF3C5ED721C440E9FCECF", "read_back": true }
+  ],
+  "code_files": [
+    { "path": ".claude/settings.json", "sha256": "6F877CC115124F25EE3A1A924C12568B98A0184C198398B350620570B7FA336D", "read_back": true },
+    { "path": ".cursor/hooks.json", "sha256": "14B1B917EA5B0CBB2D9A1739AC86B95993DC7FC17FEBC9ABAC664A1085F069D2", "read_back": true },
+    { "path": ".claude/hooks/context-recovery-gate.cjs", "sha256": "B930456F8F8177926A153057AA385E8AA59CB0B9C210446047293E61BC19E11D", "read_back": true }
+  ],
+  "project_documents": [
+    { "path": "docs/research/context_compress_management/2026-08-08-cursor-compaction-protection-and-memory-management.md", "sha256": "7A3000596358955AC3437B6B57A7C40AA479AFF4922E1689563AFB7FB082933E", "read_back": true },
+    { "path": "docs/research/context_compress_management/2026-08-08-claude-code-compaction-protection-and-memory-management.md", "sha256": "B12BCF18E91FB8E3A9E825EAD098290B25DC1CDFD518F7F969A693C6A31A509D", "read_back": true },
+    { "path": "docs/README.md", "sha256": "73D95EBF65CF689866766A3F290412CBD80CD73829E949D7E0EFF6F11C394D46", "read_back": true }
+  ],
+  "code_absence_search": { "performed": true, "roots": ["C:/Berk/SsmContentAssetCreator"], "queries": ["preflight.json | local-intake | LOCAL-FIRST RESEARCH GATE (ripgrep, whole repo)"], "reason": "gate contract not found in project; located in global skill C:/Users/berke/.claude/skills/deep-research/SKILL.md and read in full" },
+  "document_absence_search": { "performed": true, "roots": ["C:/Berk/SsmContentAssetCreator/docs"], "queries": ["Glob docs/research/**; Get-ChildItem docs/research; Test-Path docs/README.md and docs/research/_sources"], "reason": "Round-1 docs and _sources exist; no prior Round-2 verification doc exists for this topic" },
+  "uncertainty": "Round-1 measured facts about Cursor 3.15.x and Claude Code 2.1.2xx hook events, injection channels, rules/skills/subagent/settings schemas may have drifted at the newest versions; local disk cannot answer current upstream doc/changelog state, so external verification is required.",
+  "local_conclusion": "Local evidence (Round-1 docs, live configs, hooks) establishes the claims to verify and the current wiring, but cannot confirm current upstream schemas; external research needed.",
+  "external_research_needed": true,
+  "scope_plan": "docs/research/_runs/2026-08-08-cursor-claude-code-current-agentic-surfaces-verification.scope-plan.md"
+}

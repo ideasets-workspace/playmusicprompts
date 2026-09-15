@@ -1,0 +1,23 @@
+{
+  "scope": "Exported storage module only; browser integration is not covered",
+  "source": "player-three-store.js",
+  "sourceSha256": "94bdd4b19800b1482ca2f0b852168bb0de0406ee7a0addd25eaf8c7cda472618",
+  "passed": 15,
+  "checks": [
+    "Legacy migration separates preferences and session without modifying legacy",
+    "Empty migration keeps preference defaults absent and uses null session order",
+    "Two tabs merge only changed preference fields into latest preferences",
+    "Stale empty pagehide cannot erase the owned song or position",
+    "Explicit user takeover and clear retain current:null and empty queue",
+    "Automatic next song saves for owner and cannot reclaim after takeover",
+    "Position writes require both owner and the selected song",
+    "Old legacy writers cannot affect v2 reads or a newly opened v2 tab",
+    "Existing v2 records are not migrated or overwritten on store creation",
+    "Partial migration preserves the existing v2 record",
+    "Returned session and preferences cannot mutate adapter data",
+    "Failed and thrown writes report false without granting ownership or changing saved values",
+    "Failed migration retains only its initial snapshot and never reports a successful save",
+    "Preference API rejects playback keys and legacy-only motion writes",
+    "Unknown existing v2 fields cannot enter a preference save"
+  ]
+}

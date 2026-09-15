@@ -1,0 +1,349 @@
+Disclose to US users | iOS | Google for Developers
+Skip to main content
+AdMob
+Documentation
+GMA Next-Gen SDK for Android
+Mobile Ads SDK for iOS
+Mobile Ads Unity Plugin
+Mobile Ads Flutter Plugin
+Mobile Ads SDK for Android (Legacy)
+AdMob API
+Samples
+GMA Next-Gen SDK for Android
+Mobile Ads SDK for iOS
+Mobile Ads Unity Plugin
+Mobile Ads Flutter Plugin
+Mobile Ads SDK for Android (Legacy)
+AdMob API
+Help and community
+Support
+Google Mobile Ads SDK support
+AdMob support
+Help Center
+AdMob Help Center
+AdMob Help Community
+Community
+Discord
+Ads Developer Blog
+YouTube
+Google Advertisement and Measurement
+/
+English
+Deutsch
+Español
+Español – América Latina
+Français
+Indonesia
+Italiano
+Polski
+Português – Brasil
+Tiếng Việt
+Türkçe
+Русский
+עברית
+العربيّة
+فارسی
+हिंदी
+বাংলা
+ภาษาไทย
+中文 – 简体
+中文 – 繁體
+日本語
+한국어
+Sign in
+Mobile Ads SDK for iOS
+Guides
+Reference
+Download
+Samples
+Support
+AdMob
+Documentation
+More
+Samples
+More
+Help and community
+More
+Guides
+Reference
+Download
+Samples
+Support
+Set up Google Mobile Ads SDK
+Release notes
+Deprecation and sunset
+Migrate SDK versions
+Enable test ads
+iPhone X ad rendering
+iPad multiple windows
+Use agent skills
+Choose an ad format
+App open
+Banner ads
+Set up banner ads
+Use inline adaptive for scrolling banners
+Use collapsible banners
+Set a fixed banner size
+Smart banners
+Interstitial
+Native
+Load a native ad
+Display native ads
+Display a full-screen native ad
+Style ad layouts with native templates
+Set advanced features
+Respond to video events
+Validate your native ads
+Rewarded
+Rewarded interstitial
+Integrate AdMob Mediation
+Set up AdMob Mediation
+Choose ad sources
+Integrate ad sources
+AdColony
+AppLovin
+BidMachine
+BIGO Ads SDK
+Chartboost
+DT Exchange
+i-mobile
+InMobi
+ironSource
+Liftoff Monetize
+LY Ads Network (previously Line Ads Network)
+maio
+Meta Audience Network
+Mintegral
+Moloco
+myTarget
+nend
+Pangle
+PubMatic OpenWrap
+Tapjoy
+Unity Ads
+Vpon
+Yahoo (previously Verizon Media)
+Zucks
+Troubleshoot bidding
+Create custom events
+Set up custom events
+Banner
+Interstitial
+Native
+Rewarded
+Control privacy
+Strategies
+Ad serving modes
+App Store data disclosure
+App Transport Security
+Precise location data policy
+US states privacy laws
+User Messaging Platform (UMP) SDK
+Set up UMP SDK
+Manage IAB support
+Disclose to EEA users
+Disclose to US users
+Interpret consent mode values
+Sync consent across apps
+Present IDFA message
+Release notes
+Troubleshoot ads
+Manage ad inspector
+Overview
+Launch ad inspector
+Verify adapter integrations
+Test ad units
+Troubleshoot ad units
+Troubleshoot privacy settings
+Disable ad inspector
+Copy troubleshooting output
+Test creative types
+Ad load errors
+Response info
+Log ad response ID to Crashlytics
+Troubleshoot ads not showing
+Optimize
+Ad preloading
+Authorized Sellers for Apps
+Global settings
+Impression-level ad revenue
+Reporting
+Server-side verification
+Targeting
+Set up Open Measurement
+In-app browsers
+Set up web view
+Integrate the WebView API for Ads
+Optimize click behavior
+GMA Next-Gen SDK for Android
+Mobile Ads SDK for iOS
+Mobile Ads Unity Plugin
+Mobile Ads Flutter Plugin
+Mobile Ads SDK for Android (Legacy)
+AdMob API
+GMA Next-Gen SDK for Android
+Mobile Ads SDK for iOS
+Mobile Ads Unity Plugin
+Mobile Ads Flutter Plugin
+Mobile Ads SDK for Android (Legacy)
+AdMob API
+Support
+Google Mobile Ads SDK support
+AdMob support
+Help Center
+AdMob Help Center
+AdMob Help Community
+Community
+Discord
+Ads Developer Blog
+YouTube
+Google Advertisement and Measurement
+Home
+Products
+AdMob
+Mobile Ads SDK for iOS
+Disclose to US users
+Stay organized with collections
+Save and categorize content based on your preferences.
+Select platform:
+Android
+iOS
+Unity
+Android (Legacy)
+This guide outlines the steps required to support the US states regulations
+message as part of the UMP SDK. Pair these instructions with
+Get started , which details how to get your app running
+with the UMP SDK and set up your message. The following guidance is specific to
+the US states regulations message.
+Prerequisites
+Before continuing, ensure you do the following:
+Update to the latest version of the
+UMP SDK.
+For US states regulations messaging support, we recommend you to use version
+2.1.0
+or higher.
+Set up UMP SDK .
+Be sure to implement a privacy options entrypoint and render it if
+required. By completing this guide, you have an entrypoint to serve your US
+states regulations message to your users.
+Create a US states regulations message
+for apps.
+If you're using the US states regulations message alongside other
+messages, consult
+Available user message types
+to understand when different messages are displayed to your users.
+Set the tag for under age of consent
+To indicate whether a user is under the age of consent, set
+tagForUnderAgeOfConsent (TFUA). When you set TFUA to true , the UMP SDK
+doesn't request consent from the user. If your app has a mixed audience, set
+this parameter for child users to ensure consent is not requested.
+It is your
+responsibility for setting this parameter where necessary to comply with COPPA
+and other relevant regulations.
+Important: The UMP SDK does not forward the TFUA tag set on consent requests to
+Google Mobile Ads SDK . You must explicitly set the
+tagForUnderAgeOfConsent
+or tagForChildDirectectedTreatment on ad
+requests. If you don't set the tagForUnderAgeOfConsent or
+tagForChildDirectectedTreatment on ad
+requests, the UMP SDK does not collect any information that allows Google to
+determine whether or not users under the age of consent use your app. For more
+information about data processing restrictions for these users, see
+Tag an ad request from an app for child-directed treatment .
+The following example sets TFUA to true on a UMP consent request:
+Swift
+// Create a UMPRequestParameters object.
+let parameters = RequestParameters ()
+// Indicate the user is under age of consent.
+parameters . isTaggedForUnderAgeOfConsent = true
+// Request an update for the consent information.
+ConsentInformation . shared . requestConsentInfoUpdate ( with : parameters ) {
+[ weak self ] requestConsentError in
+guard let self else { return }
+// ...
+}
+Objective-C
+// Create a UMPRequestParameters object.
+UMPRequestParameters * parameters = [[ UMPRequestParameters alloc ] init ];
+// Indicate the user is under age of consent.
+parameters . tagForUnderAgeOfConsent = YES ;
+// Request an update for the consent information.
+[ UMPConsentInformation . sharedInstance
+requestConsentInfoUpdateWithParameters : parameters
+completionHandler : ^ ( NSError * _Nullable requestConsentError ) {
+// ...
+}];
+Read consent choices
+After the user has made a US states regulations decision, you can read
+their choice from local storage following the Global Privacy Platform (GPP)
+spec. For more details see,
+In-App Details .
+Note that the UMP SDK only populates the IABGPP_GppSID and
+IABGPP_HDR_GppString keys.
+Test your US states regulations messaging
+To test your US states regulations messaging, use the
+UMPDebugGeographyRegulatedUSState debugGeography to force the UMP
+SDK to treat your test device as if the device were located in a regulated US
+state. You can also use UMPDebugGeographyOther to force suppression of US
+states regulations messages. For more details on debugGeography , see
+Force a geography .
+Note: UMPDebugGeographyRegulatedUSState is only available in
+UMP version
+2.7.0
+or higher.
+Except as otherwise noted, the content of this page is licensed under the Creative Commons Attribution 4.0 License , and code samples are licensed under the Apache 2.0 License . For details, see the Google Developers Site Policies . Java is a registered trademark of Oracle and/or its affiliates.
+Last updated 2026-09-03 UTC.
+[[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Missing the information I need","missingTheInformationINeed","thumb-down"],["Too complicated / too many steps","tooComplicatedTooManySteps","thumb-down"],["Out of date","outOfDate","thumb-down"],["Samples / code issue","samplesCodeIssue","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-09-03 UTC."],[],["To support US states regulations, update to UMP SDK 2.1.0+ and complete the \"Get Started\" guide. Create a US states regulations message, and implement a privacy options entry point. For users under the age of consent, set `tagForUnderAgeOfConsent` to `true` in `UMPRequestParameters`, noting that this tag needs to be set on ad requests as well. After a user's decision, read their choice via the Global Privacy Platform spec. Test using `UMPDebugGeographyRegulatedUSState` (v2.7.0+) to simulate a regulated US state.\n"]]
+Engage
+Google Developer Program
+Google Developer Groups
+Google Developer Experts
+Accelerators
+Google Cloud & NVIDIA
+Connect
+Blog
+Bluesky
+Instagram
+LinkedIn
+X (Twitter)
+YouTube
+Build
+Android
+Chrome
+Firebase
+Google AI Studio
+Google Antigravity
+Google Cloud
+Google Play
+View all
+Android
+Chrome
+Firebase
+Google Cloud Platform
+Google AI
+All products
+Terms
+Privacy
+Manage cookies
+English
+Deutsch
+Español
+Español – América Latina
+Français
+Indonesia
+Italiano
+Polski
+Português – Brasil
+Tiếng Việt
+Türkçe
+Русский
+עברית
+العربيّة
+فارسی
+हिंदी
+বাংলা
+ภาษาไทย
+中文 – 简体
+中文 – 繁體
+日本語
+한국어

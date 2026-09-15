@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PlayMusicPrompts — THE WORLD (3D set) · design mockup 2026-09-09</title>
+<!--
+  THE WORLD — separate page set (Berk 11:07: "şuankiler dursun, bunu ayrı olarak yap, ayrı bir sayfa
+  seti göreyim"). The homepage IS a 3D scene: scroll/drag/keys move the camera through four stations;
+  HTML panels float over the world; covers in the gallery are 3D objects you click to play.
+  The classic set (../index.html …) is untouched. Shared tokens/shell/player are reused.
+-->
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/nav.css">
+<link rel="stylesheet" href="../css/player.css">
+<link rel="stylesheet" href="../css/home.css">
+<link rel="stylesheet" href="../css/motion.css">
+<link rel="stylesheet" href="../css/world.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.185.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.185.1/examples/jsm/"}}</script>
+</head>
+<body class="world-page" data-station="0">
+<div class="world" id="world" aria-hidden="true"></div>
+<div class="w-progress" aria-hidden="true"></div>
+
+<header class="w-top">
+  <a class="brand" href="index.html" aria-label="PlayMusicPrompts"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name">PlayMusicPrompts<small>Music Creation OS</small></span></a>
+  <span class="spacer"></span>
+  <a class="btn-ghost" href="../index.html">Classic set</a>
+  <a class="avatar" href="../login.html" aria-label="Sign in">B</a>
+</header>
+
+<nav class="w-dots" aria-label="Stations">
+  <button class="w-dot" type="button" data-go="0" aria-current="true" aria-label="Source"><i></i><span>Source</span></button>
+  <button class="w-dot" type="button" data-go="1" aria-label="Composing"><i></i><span>Composing</span></button>
+  <button class="w-dot" type="button" data-go="2" aria-label="Now playing"><i></i><span>Now playing</span></button>
+  <button class="w-dot" type="button" data-go="3" aria-label="Catalogue"><i></i><span>Catalogue</span></button>
+  <button class="w-dot" type="button" data-go="4" aria-label="Radios"><i></i><span>Radios</span></button>
+</nav>
+
+<!-- STATION 0 — SOURCE -->
+<section class="station station-0 is-active" aria-label="Source">
+  <div class="panel">
+    <span class="eyebrow">Music Creation OS · free · no credits</span>
+    <h1 class="display" style="margin-top:var(--sp-3)">Say what you hear.<br><span class="gradient-text">We compose it.</span></h1>
+    <form class="composer" onsubmit="return false" aria-label="Describe your music" style="margin-top:var(--sp-6)">
+      <label class="visually-hidden" for="prompt">Describe the music you want</label>
+      <textarea id="prompt" maxlength="5000" placeholder="warm late-night jazz for a rainy balcony in Kadıköy, brushed drums, upright bass, no vocals…"></textarea>
+      <div class="composer-row">
+        <button class="chip" type="button" aria-pressed="true">Vocal <span class="val">instrumental</span></button>
+        <button class="chip" type="button">Length <span class="val">2:15</span></button>
+        <button class="chip" type="button">Genre <span class="val">jazz</span></button>
+        <button class="chip chip-more" type="button">All 103 parameters</button>
+        <button class="btn-go" type="submit" data-go="1"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.8 5.2L19 9l-5.2 1.8L12 16l-1.8-5.2L5 9l5.2-1.8L12 2z"/></svg>Compose</button>
+      </div>
+    </form>
+    <!-- no prompt? tune a radio: the world flies you to it and it plays at once -->
+    <div class="radio-chips" id="radio-chips" role="group" aria-label="Or tune a radio" style="margin-top:var(--sp-4);display:flex;gap:var(--sp-2);flex-wrap:wrap;align-items:center">
+      <span class="eyebrow" style="margin-right:var(--sp-2)">or tune a radio</span>
+    </div>
+  </div>
+</section>
+
+<!-- STATION 1 — COMPOSING (tunnel) -->
+<section class="station station-1" aria-label="Composing">
+  <div class="panel center">
+    <div class="glass">
+      <div class="horizon" style="background:none;border:0;padding:0"><span class="pulse" aria-hidden="true"></span><p class="h-text"><b>Composing your take</b> · 90–140 s for an instrumental</p></div>
+      <p class="muted" style="margin-top:var(--sp-4)">Safety → enhance → compile → <b style="color:var(--accent-warm)">generate</b> → master → deliver. Understood as <b>late-night small-combo jazz</b>, ~135 s, instrumental, −14 LUFS, route lyria-002.</p>
+      <p class="faint" style="margin-top:var(--sp-3);font-size:var(--fs-sm)">Meanwhile the catalogue plays — keep scrolling to hear what's on.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STATION 2 — NOW PLAYING (terrain) -->
+<section class="station station-2" aria-label="Now playing">
+  <div class="panel right">
+    <div class="glass">
+      <span class="eyebrow">Now playing · from the catalogue</span>
+      <h2 class="h2" id="now-title" style="margin-top:var(--sp-2)">Night Train Through Kadıköy</h2>
+      <p class="muted" style="font-size:var(--fs-sm)">Composed for you by Ideasets Hybrid Music Composer</p>
+      <div class="kv">
+        <div class="fact"><div class="k">Tempo</div><div class="v">84 BPM measured</div></div>
+        <div class="fact"><div class="k">Loudness</div><div class="v ok">−14.0 LUFS · −1.0 dBTP</div></div>
+        <div class="fact"><div class="k">Duration</div><div class="v">2:12</div></div>
+        <div class="fact"><div class="k">Provenance</div><div class="v ok">Art. 50 marked</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATION 3 — CATALOGUE (gallery) -->
+<section class="station station-3" aria-label="Catalogue">
+  <div class="panel">
+    <div class="glass">
+      <span class="eyebrow">Catalogue · 46 tracks</span>
+      <h2 class="h2" style="margin-top:var(--sp-2)">Click a cover to play it.</h2>
+      <p class="muted" style="font-size:var(--fs-sm)">Drag to turn the gallery. Every cover is that track's own sound field.</p>
+      <div class="w-selected" id="w-selected"><span class="faint" style="font-size:var(--fs-sm)">Nothing selected yet.</span></div>
+      <a class="btn-ghost" href="../musics.html" style="margin-top:var(--sp-3)">Open the full list</a>
+    </div>
+  </div>
+</section>
+
+<div class="w-hint" aria-hidden="true"><span>Scroll or drag to travel</span><kbd>↓</kbd><span>·</span><span>Click covers to play</span></div>
+
+<!-- STATION 4 — RADIOS (dial) -->
+<section class="station station-4" aria-label="Radios">
+  <div class="panel">
+    <div class="glass">
+      <span class="eyebrow">Radios · always on</span>
+      <h2 class="h2" style="margin-top:var(--sp-2)">Drag the dial. Tune in.</h2>
+      <p class="muted" style="font-size:var(--fs-sm)">Each radio is a place. Tuning shifts the world's colour and tempo; the queue never stops — catalogue takes and new ones composed for that radio's brief.</p>
+      <div class="w-selected" id="w-radio"><span class="faint" style="font-size:var(--fs-sm)">Turning the dial…</span></div>
+      <div id="radio-list" role="group" aria-label="Radios" style="display:flex;gap:var(--sp-2);flex-wrap:wrap;margin-top:var(--sp-3)"></div>
+    </div>
+  </div>
+</section>
+
+<script type="module">
+  import { ICONS, coverOf } from "../js/shell.js";
+  import { PlayerBar } from "../js/player-bar.js";
+  import { PlayerOrb } from "../js/fx/motion.js";
+  import { WorldScene } from "../js/world/world.js";
+  import { SAMPLE_TRACKS, RADIOS } from "../js/constants.js";
+
+  // player bar (same component as the classic set)
+  const bar = document.createElement("footer"); bar.className = "player"; bar.setAttribute("aria-label", "Player");
+  bar.innerHTML = `
+    <div class="p-now"><span class="p-cover-wrap"><img class="p-cover" alt=""></span><div class="p-meta"><div class="p-title"></div><div class="p-sub"></div></div></div>
+    <div class="p-transport" role="group" aria-label="Transport">
+      <button class="icon-btn" type="button" data-action="shuffle" aria-label="Shuffle">${ICONS.shuffle}</button>
+      <button class="icon-btn" type="button" data-action="prev" aria-label="Previous">${ICONS.prev}</button>
+      <button class="p-play" type="button" data-action="play" aria-label="Play"><span data-icon="play">${ICONS.play}</span><span data-icon="pause">${ICONS.pause}</span></button>
+      <button class="icon-btn" type="button" data-action="next" aria-label="Next">${ICONS.next}</button>
+      <button class="icon-btn" type="button" data-action="repeat" aria-label="Repeat">${ICONS.repeat}</button>
+    </div>
+    <div class="p-scrub"><span class="p-time" data-role="t-cur">0:00</span><div class="p-wave"><canvas aria-hidden="true"></canvas><input type="range" min="0" max="100" step="1" value="0" data-role="seek" aria-label="Seek"><span class="p-focus" aria-hidden="true"></span></div><span class="p-time" data-role="t-dur">0:00</span></div>
+    <div class="p-actions">
+      <button class="icon-btn" type="button" data-action="like" aria-label="Like" aria-pressed="false">${ICONS.heart}</button>
+      <button class="icon-btn" type="button" data-action="queue" aria-label="Queue">${ICONS.queue}</button>
+      <div class="p-vol"><button class="icon-btn" type="button" aria-label="Mute">${ICONS.volume}</button><input type="range" min="0" max="100" value="80" aria-label="Volume"></div>
+      <button class="icon-btn" type="button" data-action="expand" aria-label="Full player">${ICONS.expand}</button>
+    </div>`;
+  document.body.appendChild(bar);
+  let current = SAMPLE_TRACKS[0];
+  const player = new PlayerBar(bar, { ...current, cover: coverOf(current, 128) });
+  const orb = new PlayerOrb(bar.querySelector(".p-cover-wrap"), { bpm: current.bpm });
+  bar.querySelector("[data-action='play']").addEventListener("click", () => orb.setPlaying(player.clock.playing));
+
+  const playTrack = (track, sub) => {
+    current = track;
+    player.bindTrack({ ...track, cover: coverOf(track, 128) }); player.clock.duration = track.seconds; player.clock.seek(0); player.clock.play(); orb.setPlaying(true);
+    document.getElementById("now-title").textContent = track.title;
+    document.getElementById("w-selected").innerHTML = `<img src="${coverOf(track, 112)}" alt=""><div><div class="t">${track.title}</div><div class="s">${sub ?? `${track.bpm} BPM · ${track.plays.toLocaleString()} plays · playing now`}</div></div>`;
+  };
+  const world = new WorldScene(document.getElementById("world"), {
+    tracks: SAMPLE_TRACKS,
+    onPlay: (track) => playTrack(track),
+    onTune: (radio) => {
+      // the radio's queue: in production the station's continuous stream; here the catalogue track of that genre
+      const track = SAMPLE_TRACKS.find((t) => t.genres[0] === radio.genre) ?? SAMPLE_TRACKS[0];
+      playTrack(track, `${radio.name} · ${radio.bpm} BPM · always on`);
+      const hue = `#${radio.hue.toString(16).padStart(6, "0")}`;
+      document.getElementById("w-radio").innerHTML = `<span style="width:56px;height:56px;border-radius:50%;background:radial-gradient(circle at 35% 35%, #fff2, ${hue} 45%, transparent 75%);box-shadow:0 0 28px ${hue}"></span><div><div class="t">${radio.name}</div><div class="s">${radio.brief} · ${radio.bpm} BPM</div></div>`;
+      document.querySelectorAll("[data-radio]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.radio === radio.id)));
+    },
+  });
+  // radio chips (home) + radio list (dial station): both call the same tune
+  const chip = (r, i) => `<button class="chip" type="button" data-radio="${r.id}" data-radio-i="${i}" aria-pressed="false"><span style="width:8px;height:8px;border-radius:50%;background:#${r.hue.toString(16).padStart(6, "0")};box-shadow:0 0 8px #${r.hue.toString(16).padStart(6, "0")}"></span>${r.name}</button>`;
+  document.getElementById("radio-chips").insertAdjacentHTML("beforeend", RADIOS.map(chip).join(""));
+  document.getElementById("radio-list").innerHTML = RADIOS.map(chip).join("");
+  document.querySelectorAll("[data-radio-i]").forEach((b) => b.addEventListener("click", () => world.tuneRadio(Number(b.dataset.radioI))));
+  const stations = [...document.querySelectorAll(".station")], dots = [...document.querySelectorAll(".w-dot")];
+  world.onStation((i) => {
+    document.body.dataset.station = String(i);
+    stations.forEach((s, k) => s.classList.toggle("is-active", k === i));
+    dots.forEach((d, k) => { if (k === i) d.setAttribute("aria-current", "true"); else d.removeAttribute("aria-current"); });
+  });
+  document.querySelectorAll("[data-go]").forEach((b) => b.addEventListener("click", () => world.goTo(Number(b.dataset.go))));
+</script>
+</body>
+</html>

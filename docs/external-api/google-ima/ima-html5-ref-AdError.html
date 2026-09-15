@@ -1,0 +1,2820 @@
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html 
+      lang="en"
+      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="721724668570-nbkv1cfusk7kk4eni4pjvepaus73b13t.apps.googleusercontent.com"><meta name="google-signin-scope"
+          content="profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award https://www.googleapis.com/auth/devprofiles.full_control.firstparty"><meta property="og:site_name" content="Google for Developers">
+    <meta property="og:type" content="website"><meta name="theme-color" content="#1e8e3e"><meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel="manifest" href="/_pwa/developers/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap">
+      <link rel="stylesheet"
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/css/app.css">
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/favicon-new.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/touchicon-180-new.png"><link rel="canonical" href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima.AdError"><link rel="search" type="application/opensearchdescription+xml"
+            title="Google for Developers" href="https://developers.google.com/s/opensearch.xml">
+      <link rel="alternate" hreflang="en"
+          href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima.AdError" /><link rel="alternate" hreflang="x-default" href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima.AdError" /><title>Namespace AdError &nbsp;|&nbsp; IMA SDK for HTML5 &nbsp;|&nbsp; Google for Developers</title>
+
+<meta property="og:title" content="Namespace AdError &nbsp;|&nbsp; IMA SDK for HTML5 &nbsp;|&nbsp; Google for Developers"><meta name="description" content="Documentation for AdError">
+  <meta property="og:description" content="Documentation for AdError"><meta property="og:url" content="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima.AdError"><meta property="og:image" content="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/opengraph/google-green.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675"><meta property="og:locale" content="en"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    
+    "headline": "Namespace AdError"
+  }
+</script><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Interactive Media Ads SDKs",
+      "item": "https://developers.google.com/interactive-media-ads"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "IMA SDK for HTML5",
+      "item": "https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Namespace AdError",
+      "item": "https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima.AdError"
+    }]
+  }
+  </script>
+  
+    
+    
+    
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+
+    </head>
+  <body class="color-scheme--light"
+        template="page"
+        theme="google-green"
+        type="article"
+        
+        
+        
+        layout="docs"
+        
+        
+        
+        
+        
+        display-toc
+        pending>
+  
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+  
+  
+    <a href="#main-content" class="skip-link button">
+      
+      Skip to main content
+    </a>
+    <section class="devsite-wrapper">
+      <devsite-cookie-notification-bar></devsite-cookie-notification-bar>
+        <devsite-header role="banner">
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner" data-nosnippet>
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        
+<div class="devsite-product-name-wrapper">
+
+  
+    
+  
+
+
+
+  
+  
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list"
+  
+    aria-label="Product breadcrumb">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+        
+  <a href="https://developers.google.com/interactive-media-ads"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Upper Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Interactive Media Ads SDKs"
+      
+    >
+    
+          Interactive Media Ads SDKs
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Upper Header"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail="IMA SDK for HTML5"
+      
+    >
+    
+          IMA SDK for HTML5
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+  </span>
+
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+            
+           </div>
+          
+<devsite-search
+    enable-signin
+    enable-search
+    enable-suggestions
+      enable-query-completion
+    
+    enable-search-summaries
+    project-name="IMA SDK for HTML5"
+    tenant-name="Google for Developers"
+    project-scope="/interactive-media-ads/docs/sdks/html5/client-side/get-started"
+    url-scoped="https://developers.google.com/s/results/interactive-media-ads/docs/sdks/html5/client-side/get-started"
+    
+    
+    
+    >
+  <form class="devsite-search-form" action="https://developers.google.com/s/results" method="GET">
+    <div class="devsite-search-container">
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              
+              aria-label="Open search"></button>
+      <div class="devsite-searchbox">
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          
+          aria-label="Search"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          autocomplete="off"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          
+          placeholder="Search"
+          role="combobox"
+          type="text"
+          value=""
+          >
+          <div class="devsite-search-image material-icons" aria-hidden="true">
+            
+              <svg class="devsite-search-ai-image" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_6641_386)">
+                    <path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14167 15.375 4.875 14.125C3.625 12.8583 3 11.3167 3 9.5C3 7.68333 3.625 6.15 4.875 4.9C6.14167 3.63333 7.68333 3 9.5 3C10.0167 3 10.5167 3.05833 11 3.175C11.4833 3.275 11.9417 3.43333 12.375 3.65L10.825 5.2C10.6083 5.13333 10.3917 5.08333 10.175 5.05C9.95833 5.01667 9.73333 5 9.5 5C8.25 5 7.18333 5.44167 6.3 6.325C5.43333 7.19167 5 8.25 5 9.5C5 10.75 5.43333 11.8167 6.3 12.7C7.18333 13.5667 8.25 14 9.5 14C10.6667 14 11.6667 13.625 12.5 12.875C13.35 12.1083 13.8417 11.15 13.975 10H15.975C15.925 10.6333 15.7833 11.2333 15.55 11.8C15.3333 12.3667 15.05 12.8667 14.7 13.3L21 19.6L19.6 21ZM17.5 12C17.5 10.4667 16.9667 9.16667 15.9 8.1C14.8333 7.03333 13.5333 6.5 12 6.5C13.5333 6.5 14.8333 5.96667 15.9 4.9C16.9667 3.83333 17.5 2.53333 17.5 0.999999C17.5 2.53333 18.0333 3.83333 19.1 4.9C20.1667 5.96667 21.4667 6.5 23 6.5C21.4667 6.5 20.1667 7.03333 19.1 8.1C18.0333 9.16667 17.5 10.4667 17.5 12Z" fill="#5F6368"/>
+                  </g>
+                <defs>
+                <clipPath id="clip0_6641_386">
+                <rect width="24" height="24" fill="white"/>
+                </clipPath>
+                </defs>
+              </svg>
+            
+          </div>
+          <div class="devsite-search-shortcut-icon-container" aria-hidden="true">
+            <kbd class="devsite-search-shortcut-icon">/</kbd>
+          </div>
+      </div>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          
+          aria-label="Close search"></button>
+</devsite-search>
+
+        </div>
+
+        
+
+          
+
+          
+
+          
+
+          
+
+          
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es"
+        >Español</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+
+          
+
+        
+
+        
+          <devsite-user 
+                        
+                        
+                          enable-profiles
+                        
+                        
+                          fp-auth
+                        
+                        id="devsite-user">
+            
+              
+              <span class="button devsite-top-button" aria-hidden="true" visually-hidden>Sign in</span>
+            
+          </devsite-user>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="devsite-collapsible-section
+    ">
+    <div class="devsite-header-background">
+      
+        
+      
+      
+        <div class="devsite-doc-set-nav-row">
+          
+          
+            
+            
+  <devsite-tabs class="lower-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Lower tabs">
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started"
+    
+       track-type="nav"
+       track-metadata-position="nav - guides"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Guides"
+         
+           track-name="guides"
+         
+       >
+    Guides
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  class="devsite-active">
+            
+    <a href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima"
+    
+       track-type="nav"
+       track-metadata-position="nav - reference"
+       track-metadata-module="primary nav"
+       aria-label="Reference, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Reference"
+         
+           track-name="reference"
+         
+       >
+    Reference
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/resources"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/resources"
+    
+       track-type="nav"
+       track-metadata-position="nav - resources"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Resources"
+         
+           track-name="resources"
+         
+       >
+    Resources
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/download"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/download"
+    
+       track-type="nav"
+       track-metadata-position="nav - download"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Download"
+         
+           track-name="download"
+         
+       >
+    Download
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+          
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+  
+</devsite-header>
+        <devsite-book-nav scrollbars >
+          
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-book-nav-filter"
+     >
+  <span class="filter-list-icon material-icons" aria-hidden="true"></span>
+  <input type="text"
+         placeholder="Filter"
+         
+         aria-label="Type to filter"
+         role="searchbox">
+  
+  <span class="filter-clear-button hidden"
+        data-title="Clear filter"
+        aria-label="Clear filter"
+        role="button"
+        tabindex="0"></span>
+</div>
+
+<nav class="devsite-book-nav devsite-nav nocontent" data-nosnippet
+     aria-label="Side menu">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+
+  
+    
+  
+
+
+  
+      <span class="devsite-product-name">
+        
+        
+        <ul class="devsite-breadcrumb-list"
+  
+    aria-label="Upper header breadcrumb">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+        
+  <a href="https://developers.google.com/interactive-media-ads"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Upper Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Interactive Media Ads SDKs"
+      
+    >
+    
+          Interactive Media Ads SDKs
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Upper Header"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail="IMA SDK for HTML5"
+      
+    >
+    
+          IMA SDK for HTML5
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+      </span>
+    
+
+</div>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+      
+        <ul class="devsite-nav-list">
+          
+            
+<li class="devsite-nav-item">
+
+  
+  <a href="/interactive-media-ads/docs/sdks/html5/client-side/get-started"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Guides"
+      
+        track-name="guides"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Guides"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Guides
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+</li>
+
+          
+            
+<li class="devsite-nav-item">
+
+  
+  <a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Reference"
+      
+        track-name="reference"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Reference"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Reference
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+</li>
+
+          
+            
+<li class="devsite-nav-item">
+
+  
+  <a href="/interactive-media-ads/docs/sdks/html5/client-side/resources"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Resources"
+      
+        track-name="resources"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Resources"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Resources
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+</li>
+
+          
+            
+<li class="devsite-nav-item">
+
+  
+  <a href="/interactive-media-ads/docs/sdks/html5/client-side/download"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Download"
+      
+        track-name="download"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Download"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Download
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+</li>
+
+          
+          
+          
+        </ul>
+      
+    </div>
+    
+      <div class="devsite-mobile-nav-bottom">
+        
+          
+          <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>API reference</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>google.ima</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Classes</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/class/google.ima.AdDisplayContainer"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdDisplayContainer</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/class/google.ima.AdsLoader"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdsLoader</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/class/google.ima.AdsRenderingSettings"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdsRenderingSettings</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/class/google.ima.AdsRequest"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdsRequest</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/class/google.ima.CompanionAdSelectionSettings"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>CompanionAdSelectionSettings</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Interfaces</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.Ad"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Ad</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.AdCuePoints"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdCuePoints</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.AdError"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdError</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.AdErrorEvent"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdErrorEvent</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.AdEvent"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdEvent</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.AdPodInfo"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdPodInfo</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.AdProgressData"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdProgressData</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.AdsManager"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdsManager</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.AdsManagerLoadedEvent"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdsManagerLoadedEvent</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.AdsRenderingSettingsInterface"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdsRenderingSettingsInterface</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.AdsRequestInterface"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdsRequestInterface</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.CompanionAd"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>CompanionAd</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.CompanionAdSelectionSettingsInterface"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>CompanionAdSelectionSettingsInterface</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.ImaEvent"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ImaEvent</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.ImaSdkSettings"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ImaSdkSettings</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.UniversalAdIdInfo"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>UniversalAdIdInfo</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Namespaces</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima.AdCuePoints"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdCuePoints</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima.AdError"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdError</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima.AdErrorEvent"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdErrorEvent</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima.AdEvent"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdEvent</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima.AdsManagerLoadedEvent"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdsManagerLoadedEvent</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima.CompanionAdSelectionSettings"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>CompanionAdSelectionSettings</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima.ImaSdkSettings"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ImaSdkSettings</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima.secureSignals"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>secureSignals</span></a></li>
+          </ul>
+        
+        
+        
+          
+    
+  
+    
+  
+    
+  
+    
+  
+        
+      </div>
+    
+  </div>
+</nav>
+          
+        </devsite-book-nav>
+      
+      <section id="gc-wrapper">
+        <main role="main" id="main-content" class="devsite-main-content"
+            
+              has-book-nav
+              has-sidebar
+            >
+          <div class="devsite-sidebar">
+            <div class="devsite-sidebar-content">
+                
+                <devsite-toc class="devsite-nav"
+                            role="navigation"
+                            aria-label="On this page"
+                            depth="2"
+                            scrollbars
+                            data-nosnippet
+                  ></devsite-toc>
+                <devsite-recommendations-sidebar class="nocontent devsite-nav" data-nosnippet>
+                </devsite-recommendations-sidebar>
+            </div>
+          </div>
+          <devsite-content>
+            
+              
+
+
+
+
+
+
+
+
+
+
+<article class="devsite-article">
+  
+  
+  
+    <div class="devsite-banner devsite-banner-announcement nocontent" data-nosnippet
+      
+        
+    background="google-yellow"
+  
+      >
+      <div class="devsite-banner-message">
+        <div class="devsite-banner-message-text">
+          To discuss and provide feedback on our products, join the official Ad Manager Discord channel in the <a href="//goo.gle/google-ad-manager-discord">Google Advertising and Measurement Community</a> server.
+        </div>
+      </div>
+    </div>
+  
+  
+  
+
+  <div class="devsite-article-meta nocontent" role="navigation" data-nosnippet>
+    
+    
+    <ul class="devsite-breadcrumb-list"
+  
+    aria-label="Breadcrumb">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          Home
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/products"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          Products
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/interactive-media-ads"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="3"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="3"
+      
+        track-metadata-eventdetail="Interactive Media Ads SDKs"
+      
+    >
+    
+          Interactive Media Ads SDKs
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="4"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="4"
+      
+        track-metadata-eventdetail="IMA SDK for HTML5"
+      
+    >
+    
+          IMA SDK for HTML5
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="5"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="5"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          Reference
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+    
+      
+    <devsite-thumb-rating position="header">
+    </devsite-thumb-rating>
+  
+    
+  </div>
+  
+    <devsite-feedback
+  position="header"
+  project-name="IMA SDK for HTML5"
+  product-id="82128"
+  bucket="InteractiveMediaAds"
+  context=""
+  version="t-devsite-webserver-20260901-r00-rc00.480082941541264604"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="header"
+  class="nocontent"
+  data-nosnippet
+  
+  
+    project-feedback-url="//groups.google.com/forum/?fromgroups#!forum/ima-sdk"
+  
+  
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/touchicon-180-new.png"
+  
+  
+    project-support-url="//groups.google.com/forum/?fromgroups#!forum/ima-sdk"
+  
+  
+  >
+
+  <button>
+  
+    
+    Send feedback
+  
+  </button>
+</devsite-feedback>
+  
+    <h1 class="devsite-page-title" tabindex="-1">
+      Namespace AdError<devsite-actions hidden data-nosnippet><devsite-feature-tooltip
+      ack-key="AckCollectionsBookmarkTooltipDismiss"
+      analytics-category="Site-Wide Custom Events"
+      analytics-action-show="Callout Profile displayed"
+      analytics-action-close="Callout Profile dismissed"
+      analytics-label="Create Collection Callout"
+      class="devsite-page-bookmark-tooltip nocontent"
+      data-nosnippet
+      dismiss-button="true"
+      id="devsite-collections-dropdown"
+      
+      dismiss-button-text="Dismiss"
+
+      
+      close-button-text="Got it">
+
+    
+    
+      <devsite-bookmark></devsite-bookmark>
+    
+
+    <span slot="popout-heading">
+      
+      Stay organized with collections
+    </span>
+    <span slot="popout-contents">
+      
+      Save and categorize content based on your preferences.
+    </span>
+  </devsite-feature-tooltip>
+    <devsite-llm-tools></devsite-llm-tools></devsite-actions>
+  
+      
+    </h1>
+  <div class="devsite-page-title-meta"><devsite-view-release-notes></devsite-view-release-notes></div>
+  
+
+  <devsite-toc class="devsite-nav"
+    depth="2"
+    devsite-toc-embedded
+    >
+  </devsite-toc>
+  
+    
+    <devsite-recommendations-dropdown class="nocontent" data-nosnippet>
+    </devsite-recommendations-dropdown>
+    
+  <div class="devsite-article-body clearfix
+  ">
+
+  
+    
+      <devsite-key-takeaways-panel role="region" aria-labelledby="key-takeaways-panel-title">
+  <div class="devsite-key-takeaways-panel-header" aria-labelledby="key-takeaways-panel-title" aria-expanded="false" role="button" tabindex="0">
+    
+    <img src="/_static/images/icons/spark.svg" alt="Spark icon" />
+    <div class="devsite-key-takeaways-panel-title">
+      
+      <h2 class="no-link hide-from-toc" id="key-takeaways-panel-title" data-tooltip="Generated with AI">Page Summary</h2>
+    </div>
+    <span
+      class="material-icons devsite-key-takeaways-panel-toggle-button" aria-hidden="true"></span>
+  </div>
+  <div class="devsite-key-takeaways-panel-content">
+    <devsite-feedback
+      product-id="5123748"
+      bucket="8963846920012181156"
+      disable-product-feedback>
+      <button
+        class="button-flat button-primary devsite-key-takeaways-report-button"
+        
+        data-title="Report Key Takeaways!"
+        
+        aria-label="Report Key Takeaways!">
+        <span
+          class="material-icons"
+          
+          aria-label="Report Key Takeaways!"
+          >outlined_flag</span
+        >
+      </button>
+    </devsite-feedback>
+    <ul class="devsite-key-takeaways-panel-list">
+      
+        <li>
+          <p>ErrorCode and Type are enumerations related to ad errors.</p>
+
+        </li>
+      
+        <li>
+          <p>ErrorCode lists various error codes, ranging from standard VAST 3 to SDK-specific ranges, providing descriptions for issues encountered during ad loading or playback.</p>
+
+        </li>
+      
+        <li>
+          <p>Type indicates whether an error occurred during ad loading (AD_LOAD) or during ad playback after loading (AD_PLAY).</p>
+
+        </li>
+      
+    </ul>
+  </div>
+</devsite-key-takeaways-panel>
+    
+    
+    
+    <hr />
+    <section>
+      <a id="google.ima_AdError"></a>
+      <section>
+        <table class="properties responsive fixed">
+          <colgroup>
+            <col style="width: 33%" />
+            <col />
+          </colgroup>
+          <tr>
+            <th colspan="2">Enumerations</th>
+          </tr>
+          <tr>
+            <td>
+              <code
+                 translate="no" dir="ltr"><a
+                  href="/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima.AdError#google.ima.AdError.ErrorCode"
+                  ><span>Error<wbr />Code<wbr /></span><span></span></a
+              ></code>
+            </td>
+            <td><div>The possible error codes raised while loading or playing ads.</div></td>
+          </tr>
+          <tr>
+            <td>
+              <code
+                 translate="no" dir="ltr"><a
+                  href="/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima.AdError#google.ima.AdError.Type"
+                  ><span>Type<wbr /></span><span></span></a
+              ></code>
+            </td>
+            <td><div>The possible error types for ad loading and playing.</div></td>
+          </tr>
+        </table>
+      </section>
+      <section>
+        <h2 class="" id="google.ima.AdError_Enumerations" data-text="Enumerations" tabindex="-1">Enumerations</h2>
+        <section>
+          <hr />
+          <h3 id="google.ima.AdError.ErrorCode" data-text="             ErrorCode           " tabindex="-1">
+            <a id="google.ima.AdError_ErrorCode"></a><span>ErrorCode</span>
+          </h3>
+          <div>
+            <div>
+              <code translate="no" dir="ltr"><span>ErrorCode</span></code>
+            </div>
+            The possible error codes raised while loading or playing ads. The ErrorCodes are numeric
+            values and can be in one of the following ranges:
+            <ul>
+              <li>Standard VAST 3 compliant ad error codes use blocks below 1000.</li>
+              <li>
+                SDK specific error codes:
+                <ul>
+                  <li>1000-1099 for high level generic errors</li>
+                  <li>1100-1199 for low level generic errors</li>
+                  <li>1200-1299 for video playback specific errors</li>
+                </ul>
+              </li>
+            </ul>
+            <section>
+              <table class="properties responsive fixed">
+                <colgroup>
+                  <col style="width: 33%" />
+                  <col />
+                </colgroup>
+                <tr>
+                  <th colspan="2">Enumeration Members</th>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.ADS_REQUEST_NETWORK_ERROR"></a
+                    ><a id="google.ima.AdError.ErrorCode_ADS_REQUEST_NETWORK_ERROR"></a
+                    ><code
+                       translate="no" dir="ltr"><span>ADS_<wbr />REQUEST_<wbr />NETWORK_<wbr />ERROR<wbr /></span
+                      ><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div>
+                      There was a problem requesting ads from the server. IMA Error code 1012
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.ASSET_FALLBACK_FAILED"></a
+                    ><a id="google.ima.AdError.ErrorCode_ASSET_FALLBACK_FAILED"></a
+                    ><code
+                       translate="no" dir="ltr"><span>ASSET_<wbr />FALLBACK_<wbr />FAILED<wbr /></span><span></span
+                    ></code>
+                  </td>
+                  <td><div>There was an error with asset fallback. IMA Error code 1021</div></td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.AUTOPLAY_DISALLOWED"></a
+                    ><a id="google.ima.AdError.ErrorCode_AUTOPLAY_DISALLOWED"></a
+                    ><code
+                       translate="no" dir="ltr"><span>AUTOPLAY_<wbr />DISALLOWED<wbr /></span><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div>
+                      The browser prevented playback initiated without user interaction. IMA Error
+                      code 1205
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.COMPANION_AD_LOADING_FAILED"></a
+                    ><a id="google.ima.AdError.ErrorCode_COMPANION_AD_LOADING_FAILED"></a
+                    ><code
+                       translate="no" dir="ltr"><span>COMPANION_<wbr />AD_<wbr />LOADING_<wbr />FAILED<wbr /></span
+                      ><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div>
+                      <b>Deprecated. </b>A companion ad failed to load or render. VAST error code
+                      603
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.COMPANION_REQUIRED_ERROR"></a
+                    ><a id="google.ima.AdError.ErrorCode_COMPANION_REQUIRED_ERROR"></a
+                    ><code
+                       translate="no" dir="ltr"><span>COMPANION_<wbr />REQUIRED_<wbr />ERROR<wbr /></span><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div>
+                      Unable to display one or more required companions. The main ad is discarded
+                      since the required companions could not be displayed. VAST error code 602
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.CONSENT_MANAGEMENT_PROVIDER_NOT_READY"></a
+                    ><a id="google.ima.AdError.ErrorCode_CONSENT_MANAGEMENT_PROVIDER_NOT_READY"></a
+                    ><code
+                       translate="no" dir="ltr"><span
+                        >CONSENT_<wbr />MANAGEMENT_<wbr />PROVIDER_<wbr />NOT_<wbr />READY<wbr /></span
+                      ><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div>
+                      <b>Deprecated. </b>A Consent Management Provider was detected on the page, and
+                      it has indicated that consent is not yet known. IMA Error code 1300
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.FAILED_TO_REQUEST_ADS"></a
+                    ><a id="google.ima.AdError.ErrorCode_FAILED_TO_REQUEST_ADS"></a
+                    ><code
+                       translate="no" dir="ltr"><span>FAILED_<wbr />TO_<wbr />REQUEST_<wbr />ADS<wbr /></span><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div>
+                      There was a problem requesting ads from the server. IMA Error code 1005
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.INVALID_AD_TAG"></a
+                    ><a id="google.ima.AdError.ErrorCode_INVALID_AD_TAG"></a
+                    ><code
+                       translate="no" dir="ltr"><span>INVALID_<wbr />AD_<wbr />TAG<wbr /></span><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div>
+                      The ad tag url specified was invalid. It needs to be properly encoded. IMA
+                      Error code 1013
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.INVALID_ARGUMENTS"></a
+                    ><a id="google.ima.AdError.ErrorCode_INVALID_ARGUMENTS"></a
+                    ><code
+                       translate="no" dir="ltr"><span>INVALID_<wbr />ARGUMENTS<wbr /></span><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div>Invalid arguments were provided to SDK methods. IMA Error code 1101</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.NONLINEAR_DIMENSIONS_ERROR"></a
+                    ><a id="google.ima.AdError.ErrorCode_NONLINEAR_DIMENSIONS_ERROR"></a
+                    ><code
+                       translate="no" dir="ltr"><span>NONLINEAR_<wbr />DIMENSIONS_<wbr />ERROR<wbr /></span><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div>
+                      Unable to display NonLinear ad because creative dimensions do not align with
+                      creative display area (for example, creative dimension too large). VAST error
+                      code 501
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.OVERLAY_AD_LOADING_FAILED"></a
+                    ><a id="google.ima.AdError.ErrorCode_OVERLAY_AD_LOADING_FAILED"></a
+                    ><code
+                       translate="no" dir="ltr"><span>OVERLAY_<wbr />AD_<wbr />LOADING_<wbr />FAILED<wbr /></span
+                      ><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div><b>Deprecated. </b>An overlay ad failed to load. VAST error code 502</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.OVERLAY_AD_PLAYING_FAILED"></a
+                    ><a id="google.ima.AdError.ErrorCode_OVERLAY_AD_PLAYING_FAILED"></a
+                    ><code
+                       translate="no" dir="ltr"><span>OVERLAY_<wbr />AD_<wbr />PLAYING_<wbr />FAILED<wbr /></span
+                      ><span></span
+                    ></code>
+                  </td>
+                  <td><div>An overlay ad failed to render. VAST error code 500</div></td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.PROTECTED_AUDIENCE_API_ERROR"></a
+                    ><a id="google.ima.AdError.ErrorCode_PROTECTED_AUDIENCE_API_ERROR"></a
+                    ><code
+                       translate="no" dir="ltr"><span>PROTECTED_<wbr />AUDIENCE_<wbr />API_<wbr />ERROR<wbr /></span
+                      ><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div>
+                      A protected audience api error occurred. Refer to the inner error for more
+                      information. VAST error code 1014
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.STREAM_AUTHORIZATION_FAILED"></a
+                    ><a id="google.ima.AdError.ErrorCode_STREAM_AUTHORIZATION_FAILED"></a
+                    ><code
+                       translate="no" dir="ltr"><span>STREAM_<wbr />AUTHORIZATION_<wbr />FAILED<wbr /></span><span></span
+                    ></code>
+                  </td>
+                  <td><div>Stream authorization failed. IMA Error code 1024</div></td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.STREAM_INITIALIZATION_FAILED"></a
+                    ><a id="google.ima.AdError.ErrorCode_STREAM_INITIALIZATION_FAILED"></a
+                    ><code
+                       translate="no" dir="ltr"><span>STREAM_<wbr />INITIALIZATION_<wbr />FAILED<wbr /></span><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div>
+                      There was an error with stream initialization during server side ad insertion.
+                      IMA Error code 1020
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.STREAM_INITIALIZATION_TIMEOUT"></a
+                    ><a id="google.ima.AdError.ErrorCode_STREAM_INITIALIZATION_TIMEOUT"></a
+                    ><code
+                       translate="no" dir="ltr"><span>STREAM_<wbr />INITIALIZATION_<wbr />TIMEOUT<wbr /></span><span></span
+                    ></code>
+                  </td>
+                  <td><div>Stream initialization request timed out. IMA Error code 1023</div></td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.UNKNOWN_AD_RESPONSE"></a
+                    ><a id="google.ima.AdError.ErrorCode_UNKNOWN_AD_RESPONSE"></a
+                    ><code
+                       translate="no" dir="ltr"><span>UNKNOWN_<wbr />AD_<wbr />RESPONSE<wbr /></span><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div>
+                      The ad response was not understood and cannot be parsed. IMA Error code 1010
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.UNKNOWN_ERROR"></a
+                    ><a id="google.ima.AdError.ErrorCode_UNKNOWN_ERROR"></a
+                    ><code
+                       translate="no" dir="ltr"><span>UNKNOWN_<wbr />ERROR<wbr /></span><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div>
+                      An unexpected error occurred and the cause is not known. Refer to the inner
+                      error for more information. VAST error code 900
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.UNSUPPORTED_URL"></a
+                    ><a id="google.ima.AdError.ErrorCode_UNSUPPORTED_URL"></a
+                    ><code
+                       translate="no" dir="ltr"><span>UNSUPPORTED_<wbr />URL<wbr /></span><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div>
+                      The URL is invalid or is not supported by the current browser. IMA Error code
+                      1022
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.VAST_ASSET_NOT_FOUND"></a
+                    ><a id="google.ima.AdError.ErrorCode_VAST_ASSET_NOT_FOUND"></a
+                    ><code
+                       translate="no" dir="ltr"><span>VAST_<wbr />ASSET_<wbr />NOT_<wbr />FOUND<wbr /></span><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div>No assets were found in the VAST ad response. IMA Error code 1007</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.VAST_EMPTY_RESPONSE"></a
+                    ><a id="google.ima.AdError.ErrorCode_VAST_EMPTY_RESPONSE"></a
+                    ><code
+                       translate="no" dir="ltr"><span>VAST_<wbr />EMPTY_<wbr />RESPONSE<wbr /></span><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div>
+                      A VAST response containing a single <code translate="no" dir="ltr">&lt;VAST&gt;</code> tag with no
+                      child tags. IMA Error code 1009
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.VAST_LINEAR_ASSET_MISMATCH"></a
+                    ><a id="google.ima.AdError.ErrorCode_VAST_LINEAR_ASSET_MISMATCH"></a
+                    ><code
+                       translate="no" dir="ltr"><span>VAST_<wbr />LINEAR_<wbr />ASSET_<wbr />MISMATCH<wbr /></span
+                      ><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div>
+                      Assets were found in the VAST ad response for linear ad, but none of them
+                      matched the video player&#39;s capabilities. VAST error code 403
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.VAST_LOAD_TIMEOUT"></a
+                    ><a id="google.ima.AdError.ErrorCode_VAST_LOAD_TIMEOUT"></a
+                    ><code
+                       translate="no" dir="ltr"><span>VAST_<wbr />LOAD_<wbr />TIMEOUT<wbr /></span><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div>
+                      The VAST URI provided, or a VAST URI provided in a subsequent wrapper element,
+                      was either unavailable or reached a timeout, as defined by the video player.
+                      The timeout is 5 seconds for initial VAST requests and each subsequent
+                      wrapper. VAST error code 301
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.VAST_MALFORMED_RESPONSE"></a
+                    ><a id="google.ima.AdError.ErrorCode_VAST_MALFORMED_RESPONSE"></a
+                    ><code
+                       translate="no" dir="ltr"><span>VAST_<wbr />MALFORMED_<wbr />RESPONSE<wbr /></span><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div>
+                      The ad response was not recognized as a valid VAST ad. VAST error code 100
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.VAST_MEDIA_LOAD_TIMEOUT"></a
+                    ><a id="google.ima.AdError.ErrorCode_VAST_MEDIA_LOAD_TIMEOUT"></a
+                    ><code
+                       translate="no" dir="ltr"><span>VAST_<wbr />MEDIA_<wbr />LOAD_<wbr />TIMEOUT<wbr /></span><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div>
+                      Failed to load media assets from a VAST response. The default timeout for
+                      media loading is 8 seconds. VAST error code 402
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.VAST_NO_ADS_AFTER_WRAPPER"></a
+                    ><a id="google.ima.AdError.ErrorCode_VAST_NO_ADS_AFTER_WRAPPER"></a
+                    ><code
+                       translate="no" dir="ltr"><span>VAST_<wbr />NO_<wbr />ADS_<wbr />AFTER_<wbr />WRAPPER<wbr /></span
+                      ><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div>No Ads VAST response after one or more wrappers. VAST error code 303</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.VAST_NONLINEAR_ASSET_MISMATCH"></a
+                    ><a id="google.ima.AdError.ErrorCode_VAST_NONLINEAR_ASSET_MISMATCH"></a
+                    ><code
+                       translate="no" dir="ltr"><span>VAST_<wbr />NONLINEAR_<wbr />ASSET_<wbr />MISMATCH<wbr /></span
+                      ><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div>
+                      Assets were found in the VAST ad response for nonlinear ad, but none of them
+                      matched the video player&#39;s capabilities. VAST error code 503
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.VAST_PROBLEM_DISPLAYING_MEDIA_FILE"></a
+                    ><a id="google.ima.AdError.ErrorCode_VAST_PROBLEM_DISPLAYING_MEDIA_FILE"></a
+                    ><code
+                       translate="no" dir="ltr"><span
+                        >VAST_<wbr />PROBLEM_<wbr />DISPLAYING_<wbr />MEDIA_<wbr />FILE<wbr /></span
+                      ><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div>
+                      Problem displaying MediaFile. Currently used if video playback is stopped due
+                      to poor playback quality. VAST error code 405
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.VAST_SCHEMA_VALIDATION_ERROR"></a
+                    ><a id="google.ima.AdError.ErrorCode_VAST_SCHEMA_VALIDATION_ERROR"></a
+                    ><code
+                       translate="no" dir="ltr"><span>VAST_<wbr />SCHEMA_<wbr />VALIDATION_<wbr />ERROR<wbr /></span
+                      ><span></span
+                    ></code>
+                  </td>
+                  <td><div>VAST schema validation error. VAST error code 101</div></td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.VAST_TOO_MANY_REDIRECTS"></a
+                    ><a id="google.ima.AdError.ErrorCode_VAST_TOO_MANY_REDIRECTS"></a
+                    ><code
+                       translate="no" dir="ltr"><span>VAST_<wbr />TOO_<wbr />MANY_<wbr />REDIRECTS<wbr /></span><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div>
+                      The maximum number of VAST wrapper redirects has been reached. VAST error code
+                      302
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.VAST_TRAFFICKING_ERROR"></a
+                    ><a id="google.ima.AdError.ErrorCode_VAST_TRAFFICKING_ERROR"></a
+                    ><code
+                       translate="no" dir="ltr"><span>VAST_<wbr />TRAFFICKING_<wbr />ERROR<wbr /></span><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div>
+                      Trafficking error. Video player received an ad type that it was not expecting
+                      and/or cannot display. VAST error code 200
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.VAST_UNEXPECTED_DURATION_ERROR"></a
+                    ><a id="google.ima.AdError.ErrorCode_VAST_UNEXPECTED_DURATION_ERROR"></a
+                    ><code
+                       translate="no" dir="ltr"><span>VAST_<wbr />UNEXPECTED_<wbr />DURATION_<wbr />ERROR<wbr /></span
+                      ><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div>
+                      VAST duration is different from the actual media file duration. VAST error
+                      code 202
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.VAST_UNEXPECTED_LINEARITY"></a
+                    ><a id="google.ima.AdError.ErrorCode_VAST_UNEXPECTED_LINEARITY"></a
+                    ><code
+                       translate="no" dir="ltr"><span>VAST_<wbr />UNEXPECTED_<wbr />LINEARITY<wbr /></span><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div>
+                      Ad linearity is different from what the video player is expecting. VAST error
+                      code 201
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.VAST_UNSUPPORTED_VERSION"></a
+                    ><a id="google.ima.AdError.ErrorCode_VAST_UNSUPPORTED_VERSION"></a
+                    ><code
+                       translate="no" dir="ltr"><span>VAST_<wbr />UNSUPPORTED_<wbr />VERSION<wbr /></span><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div>
+                      The ad response contained an unsupported VAST version. VAST error code 102
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.VAST_WRAPPER_ERROR"></a
+                    ><a id="google.ima.AdError.ErrorCode_VAST_WRAPPER_ERROR"></a
+                    ><code
+                       translate="no" dir="ltr"><span>VAST_<wbr />WRAPPER_<wbr />ERROR<wbr /></span><span></span
+                    ></code>
+                  </td>
+                  <td><div>General VAST wrapper error. VAST error code 300</div></td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.VIDEO_PLAY_ERROR"></a
+                    ><a id="google.ima.AdError.ErrorCode_VIDEO_PLAY_ERROR"></a
+                    ><code
+                       translate="no" dir="ltr"><span>VIDEO_<wbr />PLAY_<wbr />ERROR<wbr /></span><span></span
+                    ></code>
+                  </td>
+                  <td><div>There was an error playing the video ad. VAST error code 400</div></td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.ErrorCode.VPAID_ERROR"></a
+                    ><a id="google.ima.AdError.ErrorCode_VPAID_ERROR"></a
+                    ><code
+                       translate="no" dir="ltr"><span>VPAID_<wbr />ERROR<wbr /></span><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div>
+                      A VPAID error occurred. Refer to the inner error for more information. VAST
+                      error code 901
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </section>
+          </div>
+        </section>
+        <section>
+          <hr />
+          <h3 id="google.ima.AdError.Type" data-text="             Type           " tabindex="-1">
+            <a id="google.ima.AdError_Type"></a><span>Type</span>
+          </h3>
+          <div>
+            <div>
+              <code translate="no" dir="ltr"><span>Type</span></code>
+            </div>
+            The possible error types for ad loading and playing.
+            <section>
+              <table class="properties responsive fixed">
+                <colgroup>
+                  <col style="width: 33%" />
+                  <col />
+                </colgroup>
+                <tr>
+                  <th colspan="2">Enumeration Members</th>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.Type.AD_LOAD"></a
+                    ><a id="google.ima.AdError.Type_AD_LOAD"></a
+                    ><code
+                       translate="no" dir="ltr"><span>AD_<wbr />LOAD<wbr /></span><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div>
+                      Indicates that the error was encountered when the ad was being loaded.
+                      Possible causes: there was no response from the ad server, malformed ad
+                      response was returned, or ad request parameters failed to pass validation.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="google.ima.AdError.Type.AD_PLAY"></a
+                    ><a id="google.ima.AdError.Type_AD_PLAY"></a
+                    ><code
+                       translate="no" dir="ltr"><span>AD_<wbr />PLAY<wbr /></span><span></span
+                    ></code>
+                  </td>
+                  <td>
+                    <div>
+                      Indicates that the error was encountered after the ad loaded, during ad play.
+                      Possible causes: ad assets could not be loaded, and more.
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </section>
+          </div>
+        </section>
+      </section>
+    </section>
+  
+  
+
+  
+    <devsite-hats-survey class="nocontent" data-nosnippet
+      hats-id="zs8vVTo60LHkahqinNfT0W3st7sv"
+      listnr-id="82128"></devsite-hats-survey>
+  
+</div>
+
+  
+    
+      <devsite-recommendations display="in-page" hidden yield>
+      </devsite-recommendations>
+    
+    
+      
+    <devsite-thumb-rating position="footer">
+    </devsite-thumb-rating>
+  
+       
+         <devsite-feedback
+  position="footer"
+  project-name="IMA SDK for HTML5"
+  product-id="82128"
+  bucket="InteractiveMediaAds"
+  context=""
+  version="t-devsite-webserver-20260901-r00-rc00.480082941541264604"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="footer"
+  class="nocontent"
+  data-nosnippet
+  
+  
+    project-feedback-url="//groups.google.com/forum/?fromgroups#!forum/ima-sdk"
+  
+  
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/touchicon-180-new.png"
+  
+  
+    project-support-url="//groups.google.com/forum/?fromgroups#!forum/ima-sdk"
+  
+  
+  >
+
+  <button>
+  
+    
+    Send feedback
+  
+  </button>
+</devsite-feedback>
+       
+    
+    
+      <devsite-recommendations id="recommendations-link" yield></devsite-recommendations>
+    
+  
+
+  <div class="devsite-floating-action-buttons"></div></article>
+
+
+<devsite-content-footer class="nocontent" data-nosnippet>
+  <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
+  <p>Last updated 2026-04-17 UTC.</p>
+</devsite-content-footer>
+
+
+<devsite-notification
+>
+</devsite-notification>
+
+
+  
+<div class="devsite-content-data">
+  
+    
+    
+    <template class="devsite-thumb-rating-feedback">
+      <devsite-feedback
+  position="thumb-rating"
+  project-name="IMA SDK for HTML5"
+  product-id="82128"
+  bucket="InteractiveMediaAds"
+  context=""
+  version="t-devsite-webserver-20260901-r00-rc00.480082941541264604"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="thumb-rating"
+  class="nocontent"
+  data-nosnippet
+  
+  
+    project-feedback-url="//groups.google.com/forum/?fromgroups#!forum/ima-sdk"
+  
+  
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/touchicon-180-new.png"
+  
+  
+    project-support-url="//groups.google.com/forum/?fromgroups#!forum/ima-sdk"
+  
+  
+  >
+
+  <button>
+  
+    Need to tell us more?
+  
+  </button>
+</devsite-feedback>
+    </template>
+  
+  
+    <template class="devsite-content-data-template">
+      [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Missing the information I need","missingTheInformationINeed","thumb-down"],["Too complicated / too many steps","tooComplicatedTooManySteps","thumb-down"],["Out of date","outOfDate","thumb-down"],["Samples / code issue","samplesCodeIssue","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-04-17 UTC."],[],[]]
+    </template>
+  
+</div>
+            
+          </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+          
+            
+          
+        </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+          
+            
+<nav class="devsite-footer-linkboxes nocontent"
+     aria-label="Footer links"
+     data-nosnippet>
+  
+  <ul class="devsite-footer-linkboxes-list">
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Engage</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/program"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Google Developer Program
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/community"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Google Developer Groups
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/community/experts"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Google Developer Experts
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/community/accelerators"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+          
+            Accelerators
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/community/nvidia"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+            
+              
+              
+            
+          
+            Google Cloud & NVIDIA
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Connect</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//googledevelopers.blogspot.com"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Blog
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://bsky.app/profile/developers.google.com"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Bluesky
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.instagram.com/googlefordevs/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Instagram
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.linkedin.com/showcase/googledevelopers/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+          
+            LinkedIn
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//twitter.com/googledevs"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+            
+          
+            X (Twitter)
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//www.youtube.com/user/GoogleDevelopers"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 6)"
+            >
+            
+              
+              
+            
+          
+            YouTube
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Build</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developer.android.com/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Android
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developer.chrome.com/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Chrome
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://firebase.google.com/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Firebase
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://aistudio.google.com/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+          
+            Google AI Studio
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://antigravity.google/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+            
+          
+            Google Antigravity
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://cloud.google.com/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 6)"
+            >
+            
+          
+            Google Cloud
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://play.google.com/console/about/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 7)"
+            >
+            
+          
+            Google Play
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/products"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 8)"
+            >
+            
+              
+              
+            
+          
+            View all
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+  
+</nav>
+          
+        </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+          
+            
+
+<div class="devsite-footer-utility nocontent" data-nosnippet>
+  
+  
+  <nav class="devsite-footer-sites" aria-label="Other Google Developers websites">
+    <a href="https://developers.google.com/"
+       class="devsite-footer-sites-logo-link gc-analytics-event"
+       data-category="Site-Wide Custom Events"
+       data-label="Footer Google Developers Link">
+      <picture>
+        
+        <img class="devsite-footer-sites-logo"
+             src="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/lockup-google-for-developers.svg"
+             loading="lazy"
+             alt="Google Developers">
+      </picture>
+    </a>
+    <ul class="devsite-footer-sites-list">
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//developer.android.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Android Link"
+         
+         >
+          Android
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//developer.chrome.com/home"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Chrome Link"
+         
+         >
+          Chrome
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//firebase.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Firebase Link"
+         
+         >
+          Firebase
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//cloud.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Google Cloud Platform Link"
+         
+         >
+          Google Cloud Platform
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//ai.google.dev/"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Google AI Link"
+         
+         >
+          Google AI
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="/products"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer All products Link"
+         
+         >
+          All products
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+  
+
+  
+  <nav class="devsite-footer-utility-links" aria-label="Utility links">
+    
+    <ul class="devsite-footer-utility-list">
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/terms/site-terms"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          Terms
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          Privacy
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 glue-cookie-notification-bar-control">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="#"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Manage cookies link"
+         
+           aria-hidden="true"
+         >
+          Manage cookies
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+    
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es"
+        >Español</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+  </nav>
+</div>
+          
+        </devsite-footer-utility>
+        <devsite-panel>
+          
+        </devsite-panel>
+        
+      </section>
+      </section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar></devsite-snackbar>
+    <devsite-tooltip ></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics>
+      
+        <script type="application/json" analytics>[{&#34;dimensions&#34;: {&#34;dimension6&#34;: &#34;en&#34;, &#34;dimension1&#34;: &#34;Signed out&#34;, &#34;dimension11&#34;: false, &#34;dimension3&#34;: false, &#34;dimension5&#34;: &#34;en&#34;, &#34;dimension4&#34;: &#34;IMA SDK for HTML5&#34;}, &#34;gaid&#34;: &#34;UA-24532603-1&#34;, &#34;metrics&#34;: {&#34;ratings_count&#34;: &#34;metric2&#34;, &#34;ratings_value&#34;: &#34;metric1&#34;}, &#34;purpose&#34;: 1}]</script>
+<script type="application/json" tag-management>{&#34;at&#34;: &#34;True&#34;, &#34;ga4&#34;: [{&#34;id&#34;: &#34;G-21YFS95G19&#34;, &#34;purpose&#34;: 0}, {&#34;id&#34;: &#34;G-272J68FCRF&#34;, &#34;purpose&#34;: 1}], &#34;ga4p&#34;: [{&#34;id&#34;: &#34;G-272J68FCRF&#34;, &#34;purpose&#34;: 1}], &#34;gtm&#34;: [{&#34;id&#34;: &#34;GTM-T98GCPGN&#34;, &#34;purpose&#34;: 1}], &#34;parameters&#34;: {&#34;internalUser&#34;: &#34;False&#34;, &#34;language&#34;: {&#34;machineTranslated&#34;: &#34;False&#34;, &#34;requested&#34;: &#34;en&#34;, &#34;served&#34;: &#34;en&#34;}, &#34;pageType&#34;: &#34;article&#34;, &#34;projectName&#34;: &#34;IMA SDK for HTML5&#34;, &#34;signedIn&#34;: &#34;False&#34;, &#34;tenant&#34;: &#34;developers&#34;, &#34;recommendations&#34;: {&#34;sourcePage&#34;: &#34;&#34;, &#34;sourceType&#34;: 0, &#34;sourceRank&#34;: 0, &#34;sourceIdenticalDescriptions&#34;: 0, &#34;sourceTitleWords&#34;: 0, &#34;sourceDescriptionWords&#34;: 0, &#34;experiment&#34;: &#34;&#34;}, &#34;experiment&#34;: {&#34;ids&#34;: &#34;&#34;}}}</script>
+      
+    </devsite-analytics>
+    
+      <devsite-badger></devsite-badger>
+    
+    
+    
+    
+<script nonce="MhupUThzJFtf/zH1+l8L9kWcHwJnx9">
+  
+  (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/js/app_loader.js', '[1,"en",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037","https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers","https://developers-dot-devsite-v2-prod.appspot.com",null,null,["/_pwa/developers/manifest.json","https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/favicon-new.png","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap"],1,null,[1,6,8,12,14,17,21,25,50,52,63,70,75,76,80,87,91,92,93,97,98,100,101,102,103,104,105,107,108,109,110,112,113,116,117,118,120,122,124,125,126,127,129,130,131,132,133,134,135,136,138,140,141,147,148,149,151,152,156,157,158,159,161,163,164,168,169,170,179,180,182,183,186,191,193,196],"AIzaSyAP-jjEJBzmIyKR4F-3XITp8yM9T1gEEI8","AIzaSyB6xiKGDR5O3Ak2okS4rLkauxGUG7XP0hg","developers.google.com","AIzaSyAQk0fBONSGUqCNznf6Krs82Ap1-NV6J4o","AIzaSyCCxcqdrZ_7QMeLCRY20bh_SXdAYqy70KY",null,null,null,["EngEduTelemetry__enable_engedu_telemetry","DevPro__enable_cloud_innovators_plus","MiscFeatureFlags__enable_explicit_template_dependencies","Cloud__enable_free_trial_server_call","Cloud__enable_cloud_shell","MiscFeatureFlags__enable_firebase_utm","DevPro__enable_g1_integration","TpcFeatures__enable_unmirrored_page_left_nav","DevPro__enable_devsite_captcha","MiscFeatureFlags__enable_explain_this_code","Concierge__enable_devsite_llm_tools","Profiles__enable_dashboard_curated_recommendations","Search__enable_dynamic_content_confidential_banner","Profiles__enable_developer_profile_benefits_ui_redesign","DevPro__enable_google_payments_buyflow","MiscFeatureFlags__developers_footer_image","DevPro__enable_embed_profile_creation","Search__enable_ai_search_summaries_for_all","Search__enable_ai_search_summaries_restricted","Concierge__enable_actions_menu","Profiles__enable_public_developer_profiles","MiscFeatureFlags__developers_footer_dark_image","Profiles__enable_join_program_group_endpoint","MiscFeatureFlags__enable_appearance_cookies","CloudShell__cloud_code_overflow_menu","Concierge__enable_key_takeaways","Search__enable_ai_eligibility_checks","MiscFeatureFlags__gdp_dashboard_reskin_enabled","BookNav__enable_tenant_cache_key","Cloud__cache_serialized_dynamic_content","Concierge__enable_remove_info_panel_tags","Cloud__enable_cloud_shell_fte_user_flow","Concierge__enable_key_takeaways_new_ui","Cloud__enable_legacy_calculator_redirect","DevPro__enable_nvidia_credits_card","Search__enable_page_map","CloudShell__cloud_shell_button","Search__enable_ai_search_summaries","Profiles__enable_stripe_subscription_management","Profiles__enable_profile_collections","MiscFeatureFlags__remove_cross_domain_tracking_params","Profiles__enable_recognition_badges","Analytics__enable_clearcut_logging","Concierge__enable_pushui","Profiles__enable_awarding_url","Profiles__enable_developer_profiles_callout","Profiles__enable_page_saving","DevPro__enable_enterprise","DevPro__enable_vertex_credit_card","Profiles__enable_purchase_prompts","Profiles__enable_user_type","Experiments__reqs_query_experiments","DevPro__enable_firebase_workspaces_card","Profiles__enable_playlist_community_acl","DevPro__enable_google_one_card","MiscFeatureFlags__fix_lower_breadcrumbs","Profiles__enable_completecodelab_endpoint","Concierge__enable_concierge_restricted","DevPro__enable_devpro_offers","AIStudioInteractionsToggle__interactions_are_default","DevPro__enable_code_assist","Profiles__enable_complete_playlist_endpoint","DevPro__enable_developer_subscriptions","TpcFeatures__proxy_prod_host","Profiles__enable_auto_apply_credits","Search__enable_suggestions_from_borg","MiscFeatureFlags__enable_project_variables","Profiles__enable_release_notes_notifications","Cloud__fast_free_trial","MiscFeatureFlags__enable_framebox_badge_methods","Profiles__enable_callout_notifications","SignIn__enable_l1_signup_flow","DevPro__remove_eu_tax_intake_form","Profiles__require_profile_eligibility_for_signin","DevPro__enable_credits_banner","DevPro__enable_free_benefits","Profiles__enable_completequiz_endpoint","Profiles__enable_targeted_hero","Concierge__enable_concierge","MiscFeatureFlags__enable_variable_operator_index_yaml","MiscFeatureFlags__enable_variable_operator","Analytics__enable_devpro_interaction_logging","Cloud__enable_cloudx_experiment_ids","MiscFeatureFlags__enable_view_transitions","Significatio__enable_by_tenant","Cloud__enable_cloud_dlp_service","DevPro__enable_g1_ineligible_redirect","Profiles__enable_developer_profile_pages_as_content"],null,null,"AIzaSyBLEMok-5suZ67qRPzx0qUtbnLmyT_kCVE","https://developerscontentserving-pa.clients6.google.com","AIzaSyCM4QpTRSqP5qI4Dvjt4OAScIN8sOUlO-k","https://developerscontentsearch-pa.clients6.google.com",1,4,null,"https://developerprofiles-pa.clients6.google.com",[1,"developers","Google for Developers","developers.google.com",null,"developers-dot-devsite-v2-prod.appspot.com",null,null,[1,1,[1],null,null,null,null,null,null,null,null,[1],null,null,null,null,null,null,[1],[1,null,null,[1,20],"/recommendations/information"],null,null,null,[1,1,1],[1,1,null,1,1,null,null,["/meridian"]],[1,null,null,null,null,null,null,["/admob","/ad-manager/mobile-ads-sdk","/ml-kit"]],null,[null,["/meridian","/youtube/devices/"]],1,null,[1]],null,[null,null,null,null,null,null,"/images/lockup-new.svg","/images/touchicon-180-new.png",null,null,null,null,1,null,null,null,null,null,null,null,null,1,null,null,null,"/images/lockup-dark-theme-new.svg",[]],[],null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[6,1,14,15,20,22,23,29,32,36],null,[[null,null,null,[3,7,10,2,39,17,4,32,24,11,12,13,34,15,25],null,null,[1,[["docType","Choose a content type",[["Tutorial",null,null,null,null,null,null,null,null,"Tutorial"],["Guide",null,null,null,null,null,null,null,null,"Guide"],["Sample",null,null,null,null,null,null,null,null,"Sample"]]],["product","Choose a product",[["Android",null,null,null,null,null,null,null,null,"Android"],["ARCore",null,null,null,null,null,null,null,null,"ARCore"],["ChromeOS",null,null,null,null,null,null,null,null,"ChromeOS"],["Firebase",null,null,null,null,null,null,null,null,"Firebase"],["Flutter",null,null,null,null,null,null,null,null,"Flutter"],["Assistant",null,null,null,null,null,null,null,null,"Google Assistant"],["GoogleCloud",null,null,null,null,null,null,null,null,"Google Cloud"],["GoogleMapsPlatform",null,null,null,null,null,null,null,null,"Google Maps Platform"],["GooglePay",null,null,null,null,null,null,null,null,"Google Pay & Google Wallet"],["GooglePlay",null,null,null,null,null,null,null,null,"Google Play"],["Tensorflow",null,null,null,null,null,null,null,null,"TensorFlow"]]],["category","Choose a topic",[["AiAndMachineLearning",null,null,null,null,null,null,null,null,"AI and Machine Learning"],["Data",null,null,null,null,null,null,null,null,"Data"],["Enterprise",null,null,null,null,null,null,null,null,"Enterprise"],["Gaming",null,null,null,null,null,null,null,null,"Gaming"],["Mobile",null,null,null,null,null,null,null,null,"Mobile"],["Web",null,null,null,null,null,null,null,null,"Web"]]]]]],[1,1],null,1],[[["UA-24532603-1"],["UA-22084204-5"],null,null,["UA-24532603-5"],["GTM-T98GCPGN"],null,[["G-272J68FCRF"],null,null,[["G-272J68FCRF",2]]],[["UA-24532603-1",2]],null,[["UA-24532603-5",2]],[["GTM-T98GCPGN",2]],1],[[1,1],[3,2],[11,8],[15,12],[16,13],[12,9],[13,10],[4,3],[14,11],[6,5],[5,4]],[[2,2],[1,1]]],null,4,null,null,null,null,null,null,null,null,null,null,null,null,null,"developers.devsite.google",null,null,null,null,null,[]],null,"pk_live_5170syrHvgGVmSx9sBrnWtA5luvk9BwnVcvIi7HizpwauFG96WedXsuXh790rtij9AmGllqPtMLfhe2RSwD6Pn38V00uBCydV4m",null,null,"https://developerscontentinsights-pa.clients6.google.com","AIzaSyCg-ZUslalsEbXMfIo9ZP8qufZgo3LSBDU","AIzaSyDxT0vkxnY_KeINtA4LSePJO-4MAZPMRsE","https://developers.clients6.google.com",["https://codeassist.google.com","https://code-assist-free-tier.corp.google.com"],null,"AIzaSyBQom12tzI-rybN7Sf-KfeL4nwm-Rf7PmI\n",null,null,"https://developers.googleapis.com"]')
+  
+</script>
+
+    <devsite-a11y-announce></devsite-a11y-announce>
+  </body>
+</html>

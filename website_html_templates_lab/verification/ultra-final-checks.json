@@ -1,0 +1,107 @@
+{
+  "checks": [
+    {
+      "name": "Clean 320px layout and actual scene",
+      "pass": true
+    },
+    {
+      "name": "320px tone panel fits",
+      "pass": true
+    },
+    {
+      "name": "320px space panel fits",
+      "pass": true
+    },
+    {
+      "name": "320px dynamics panel fits",
+      "pass": true
+    },
+    {
+      "name": "320px saved panel fits",
+      "pass": true
+    },
+    {
+      "name": "320px modal returns focus",
+      "pass": true
+    },
+    {
+      "name": "320px nine world choices",
+      "pass": true
+    },
+    {
+      "name": "Clean 390px layout and actual scene",
+      "pass": true
+    },
+    {
+      "name": "390px tone panel fits",
+      "pass": true
+    },
+    {
+      "name": "390px space panel fits",
+      "pass": true
+    },
+    {
+      "name": "390px dynamics panel fits",
+      "pass": true
+    },
+    {
+      "name": "390px saved panel fits",
+      "pass": true
+    },
+    {
+      "name": "390px modal returns focus",
+      "pass": true
+    },
+    {
+      "name": "390px nine world choices",
+      "pass": true
+    },
+    {
+      "name": "Clean 820px layout and actual scene",
+      "pass": true
+    },
+    {
+      "name": "Clean 1504px layout and actual scene",
+      "pass": true
+    },
+    {
+      "name": "1504px tone panel fits",
+      "pass": true
+    },
+    {
+      "name": "1504px space panel fits",
+      "pass": true
+    },
+    {
+      "name": "1504px dynamics panel fits",
+      "pass": true
+    },
+    {
+      "name": "1504px saved panel fits",
+      "pass": true
+    },
+    {
+      "name": "1504px modal returns focus",
+      "pass": true
+    },
+    {
+      "name": "1504px nine world choices",
+      "pass": true
+    },
+    {
+      "name": "Clean 1920px layout and actual scene",
+      "pass": true
+    },
+    {
+      "name": "Bundled Three.js hashes match",
+      "pass": true
+    },
+    {
+      "name": "Pinned official package integrity matches",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "pass": true,
+  "date": "2026-09-11T12:16:55.957Z"
+}

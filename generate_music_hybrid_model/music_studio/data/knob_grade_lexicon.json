@@ -1,0 +1,52 @@
+{
+  "$schema_id": "berk.music-studio-vocabulary/v1",
+  "vocabulary": "knob_grade_lexicon",
+  "consumed_by": "music_studio/planner.py (0-10 knob value -> deterministic graded prose clause; architecture s3.4) and music_studio/capabilities.py (the named presets the UI combos offer beside each slider)",
+  "provenance_rule": "THE TIER STRUCTURE IS IMPORTED IN SHAPE FROM data/mood_orbit_lexicon.json (same graded-language pattern, same determinism rule) so the two graded surfaces cannot drift apart by hand. THE ENDPOINT PHRASES ARE THE ARCHITECTURE'S OWN, quoted from docs/music-studio-single-endpoint-architecture.md s3.4 lines 718-721, read 2026-08-15: 'a graded prose clause from the same lexicon as 3.2 (\"sparse, patient percussion\" ... \"dense, driving sixteenth-note percussion\")'. The register is the measured one for these engines - plain concrete words, direct action verbs, no literary description, no equipment vocabulary. Identical knob values always produce an identical clause, and the clause is returned in bindings.controls.<knob>.sent so an accepted-and-ignored knob is impossible to mistake for a working one.",
+  "version": 1,
+  "why_five_tiers_and_not_eleven": "The UI slider keeps its full 0-10 integer range (constraints min/max/step are unchanged). These five NAMED presets are what his order requires beside it - 'tüm herşeyde maximum predefined değerlerimiz olmalı kullanıcının arayüzde combolarla seçimlerle seçebileceği', 2026-08-14 - exactly as tempo_bpm carries eight named BPM presets beside its 40-220 slider. Eleven distinct prose clauses per knob would assert a resolution nothing has measured: no A/B has yet shown these engines distinguish 6 from 7. Five tiers are the honest granularity, and the tier a raw value lands in is reported back.",
+  "tiers": [
+    {"id": "very_low", "min": 0, "max": 2, "label": "Very low (0-2)"},
+    {"id": "low", "min": 3, "max": 4, "label": "Low (3-4)"},
+    {"id": "medium", "min": 5, "max": 6, "label": "Medium (5-6)"},
+    {"id": "high", "min": 7, "max": 8, "label": "High (7-8)"},
+    {"id": "very_high", "min": 9, "max": 10, "label": "Very high (9-10)"}
+  ],
+  "knobs": {
+    "harmony_complexity": {
+      "binding": "prose_graded",
+      "measure_candidate": "granularity_scale (SCHEMA-present on one worker; NOT generation-proven as a harmony control, so it is not wired - build step 6b A/B is his decision)",
+      "clauses": {
+        "very_low": "harmony built on two or three plain chords that stay put",
+        "low": "simple diatonic harmony with one clear turnaround",
+        "medium": "diatonic harmony with a few borrowed chords and one modulation",
+        "high": "rich harmony with extended chords, secondary dominants and a key change",
+        "very_high": "dense chromatic harmony that shifts key more than once and leans on altered chords"
+      }
+    },
+    "rhythm_density": {
+      "binding": "prose_graded",
+      "measure_candidate": "NONE. Architecture s3.4 refuses to bind this slider to guidance_scale: 'That is an invented mapping presented as a control - the accepted-and-ignored class this project has paid for four times.' The honest mapping requires an A/B that measures ONSET DENSITY on delivered audio, which costs money and is therefore his decision.",
+      "clauses": {
+        "very_low": "sparse, patient percussion",
+        "low": "steady, unhurried percussion on the main beats",
+        "medium": "a full backbeat with regular eighth-note movement",
+        "high": "busy percussion with sixteenth-note movement and fills between phrases",
+        "very_high": "dense, driving sixteenth-note percussion"
+      },
+      "endpoint_phrases_are_verbatim_from": "architecture s3.4 line 720 - the very_low and very_high clauses are the architecture's own strings, reproduced CHARACTER-FOR-CHARACTER with nothing appended (a first draft of this file added tails such as 'that leaves long gaps', which scripts/test_knob_grade_lexicon.py caught and refused: a quotation with an addition is not a quotation, rules/01 s11). The three middle tiers are ours, written in the same register."
+    },
+    "sonic_polish": {
+      "binding": "prose_graded",
+      "measure_candidate": "the guidance_scale family / creativity (SCHEMA-present on several workers; not generation-proven as a polish control on the Google-only routes after D-SSM-24 removed the third-party carriers)",
+      "clauses": {
+        "very_low": "raw and unpolished, room sound left in",
+        "low": "lightly cleaned up, still natural and close",
+        "medium": "a clean balanced mix with even levels",
+        "high": "a polished mix with clear separation and controlled low end",
+        "very_high": "a fully finished master, wide and glossy, every part sitting in its own space"
+      }
+    }
+  },
+  "combination_rule": "each knob renders as its tier's clause; the clauses are joined with '; ' in the fixed order harmony_complexity, rhythm_density, sonic_polish so the prompt is byte-identical for identical input; a knob left at its default still renders (the default is a real request value, not an absence)"
+}

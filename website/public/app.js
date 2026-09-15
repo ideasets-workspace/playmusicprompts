@@ -1,0 +1,59 @@
+(() => {
+'use strict';
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const icon=n=>`<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-${esc(n)}"/></svg>`;
+const cfg=window.PMP_CONFIG,base=window.PMP_DATA,storage={get(k,f){try{return JSON.parse(localStorage.getItem('pmp.website.'+k))??f;}catch{return f;}},set(k,v){try{localStorage.setItem('pmp.website.'+k,JSON.stringify(v));return true;}catch{return false;}}};
+const state={songs:base.songs.map(s=>({...s,origin:'From the library',illustrative:true})),saved:[],playlists:[],draft:storage.get('draft',{prompt:'A peaceful night drive.\nWarm ’80s synths. No vocals.'}),current:null,queue:[],history:[],shuffle:false,repeat:false,continuation:false,keepGoingIntent:storage.get('keepGoingIntent',false),station:null,exploreTab:'genres',category:null,libraryTab:'saved',radioFilters:{},worldFilters:{},worldIndex:0,view:storage.get('view','world'),generating:false,autofilling:false,session:window.PMP_APP?.user||null};
+for(const entry of cfg.catalog||[]){if(!entry.id||!entry.title)continue;const i=state.songs.findIndex(x=>x.id===entry.id),r={art:'night',origin:'From the library',...entry,illustrative:false};if(i>=0)state.songs[i]={...state.songs[i],...r};else state.songs.push(r);}
+const modal=$('#modal');let toastTimer,navController;
+let draftBaseline=JSON.stringify(state.draft);
+function reconcileDraft(base,local,remote){
+  const result={};
+  for(const key of new Set([...Object.keys(base),...Object.keys(local),...Object.keys(remote)])){
+    const before=JSON.stringify(base[key]),mine=JSON.stringify(local[key]),other=JSON.stringify(remote[key]);
+    if(mine!==before&&other!==before&&mine!==other)throw Error('Your '+key.replaceAll('_',' ')+' changed in another tab. Reload this tab to use the latest draft; your current text has not been sent.');
+    const source=mine!==before?local:remote;if(Object.hasOwn(source,key))result[key]=source[key];
+  }
+  return result;
+}
+function draftVersion(){return draftBaseline;}
+function assertDraftVersion(version){if(version!==undefined&&(version!==draftBaseline||JSON.stringify(storage.get('draft',state.draft))!==draftBaseline))throw Error('Your draft changed while these controls were open. Reopen them to edit the latest version.');}
+function art(key,cls=''){const stations={night:0,focus:724,glow:1448},covers={hours:140,violet:404,coast:668,lights:930,ferry:1189};let src='stations.png',vb=`${stations[key]??0} 0 724 724`,w=2172,h=724;if(key in covers){src='approved-home.png';vb=`${covers[key]} 747 239 132`;w=1504;h=1048;}if(['morning','rest','energy'].includes(key)){src='approved-radio.png';vb=`${{morning:147,rest:588,energy:1023}[key]} 672 410 126`;w=1504;h=1048;}return `<svg class="art ${esc(cls)}" viewBox="${vb}" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><image href="assets/${src}" width="${w}" height="${h}"/></svg>`;}
+const song=id=>state.songs.find(s=>s.id===id),station=id=>base.stations.find(s=>s.id===id);
+function card(s,large=false){return `<article class="song-card ${large?'large':''}" data-song="${esc(s.id)}"><div class="cover"><button class="cover-play" data-action="track" data-id="${esc(s.id)}" aria-label="Play ${esc(s.title)}">${art(s.art)}<span class="cover-shade"></span><span class="round-play">${icon('play')}</span></button><button class="save-button icon-button" data-action="save" data-id="${esc(s.id)}" aria-label="Save ${esc(s.title)}" aria-pressed="false">${icon('heart')}</button><span class="playing-badge" hidden>${icon('wave')}Now playing</span></div><div class="song-caption"><div><button class="song-title" data-action="track" data-id="${esc(s.id)}">${esc(s.title)}</button>${large?`<small>${esc([s.genre,s.mood].filter(Boolean).join(' · ')||s.origin)}</small>`:''}</div><button class="icon-button song-more" data-action="song-menu" data-id="${esc(s.id)}" aria-label="More options for ${esc(s.title)}">${icon('more')}</button></div></article>`;}
+function toast(message,undo){clearTimeout(toastTimer);const el=$('#toast');el.replaceChildren(document.createTextNode(message));if(undo){const b=document.createElement('button');b.textContent='Undo';b.onclick=()=>{undo();el.hidden=true;};el.append(b);}el.hidden=false;toastTimer=setTimeout(()=>el.hidden=true,6500);}
+function dialog(title,body,footer='',wide=false,subtitle=''){modal.classList.toggle('wide',wide);modal.classList.remove('player-dialog');$('#modal-content').innerHTML=`<div class="dialog-head"><div><h2 id="dialog-title">${esc(title)}</h2>${subtitle?`<p>${esc(subtitle)}</p>`:''}</div><button class="icon-button" data-action="close" aria-label="Close">${icon('close')}</button></div><div class="dialog-body">${body}</div>${footer?`<div class="dialog-footer">${footer}</div>`:''}`;if(!modal.open)modal.showModal();modal.scrollTop=0;}
+function closeDialog(){if(modal.open)modal.close();modal.classList.remove('player-dialog');}
+modal.addEventListener('click',e=>{if(e.target===modal){const r=modal.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)closeDialog();}});
+function saveDraft(){
+  const local={...state.draft};if($('#prompt'))local.prompt=$('#prompt').value;
+  try{state.draft=reconcileDraft(JSON.parse(draftBaseline),local,storage.get('draft',JSON.parse(draftBaseline)));}
+  catch(error){toast(error.message);throw error;}
+  if(!storage.set('draft',state.draft)){toast('Your browser could not save this draft. Keep this tab open.');return;}
+  draftBaseline=JSON.stringify(state.draft);
+  if($('#prompt')&&$('#prompt').value!==state.draft.prompt)$('#prompt').value=state.draft.prompt||'';
+}
+function persist(){if(!storage.set('saved',state.saved)||!storage.set('playlists',state.playlists))toast('Browser storage is full. Recent changes may not be saved.');}
+function syncSaved(){for(const b of $$('[data-action="save"], [data-action="save-current"]')){const s=song(b.dataset.id)||state.current,yes=s&&state.saved.some(x=>x.id===s.id);b.setAttribute('aria-pressed',String(!!yes));b.setAttribute('aria-label',`${yes?'Remove':'Save'} ${s?.title||'song'}${yes?' from library':''}`);}for(const c of $$('[data-song]')){const b=$('.playing-badge',c);if(b)b.hidden=!(state.current?.id===c.dataset.song&&!$('#audio').paused);}}
+function toggleSave(id){const s=song(id);if(!s)return;const i=state.saved.findIndex(x=>x.id===id);if(i>=0){const r=state.saved.splice(i,1)[0];toast('Removed from your library',()=>{state.saved.splice(i,0,r);persist();P.renderLibrary();syncSaved();});}else{state.saved.unshift({id,savedAt:Date.now()});toast('Saved to your library');}persist();syncSaved();P.renderLibrary();}
+async function navigate(url,push=true){const next=new URL(url,location.href);if(next.origin!==location.origin){location.assign(next.href);return;}saveDraft();navController?.abort();navController=new AbortController();try{const r=await fetch(next.href,{signal:navController.signal});if(!r.ok)throw Error();const doc=new DOMParser().parseFromString(await r.text(),'text/html'),main=$('#main',doc);if(!main)throw Error();$('#main').replaceWith(main);document.body.dataset.page=main.dataset.page;document.title=doc.title;for(const a of $$('.rail a')){if(new URL(a.href).pathname===next.pathname||(main.dataset.page==='create'&&a.getAttribute('href')==='index.html'))a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');}if(push)history.pushState({},'',next);closeDialog();window.scrollTo(0,0);P.initPage();main.focus({preventScroll:true});}catch(err){if(err.name!=='AbortError'){if(location.protocol==='file:')location.assign(next.href);else toast('We couldn’t open that page. Try again.');}}}
+window.addEventListener('popstate',()=>navigate(location.href,false));
+function download(name,text,type='text/plain'){const url=URL.createObjectURL(new Blob([text],{type})),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+const P=window.PMP={$, $$,esc,icon,art,card,cfg,base,state,storage,song,station,dialog,closeDialog,toast,saveDraft,draftVersion,assertDraftVersion,persist,syncSaved,toggleSave,navigate,download,actions:{},onInput:[],onChange:[],onSubmit:[],pageHooks:[]};
+window.addEventListener('storage',event=>{
+  if(event.key!=='pmp.website.draft'||!event.newValue)return;
+  try{
+    const remote=JSON.parse(event.newValue),local={...state.draft};if($('#prompt'))local.prompt=$('#prompt').value;
+    state.draft=reconcileDraft(JSON.parse(draftBaseline),local,remote);draftBaseline=event.newValue;
+    if($('#prompt'))$('#prompt').value=state.draft.prompt||'';
+    P.autoSizePrompt?.();window.PMPControls?.syncQuick();window.PMPLyricsComposer?.sync();
+  }catch(error){toast(error.message||'Your draft changed in another tab. Reload to review it.');}
+});
+P.actions.close=closeDialog;P.actions.save=b=>toggleSave(b.dataset.id);P.actions['save-current']=()=>state.current?toggleSave(state.current.id):toast('Choose a song to save.');
+document.addEventListener('click',e=>{const route=e.target.closest('a[data-route]');if(route&&!e.ctrlKey&&!e.metaKey&&!e.shiftKey&&e.button===0){e.preventDefault();navigate(route.href);return;}const b=e.target.closest('[data-action]');if(b&&P.actions[b.dataset.action])P.actions[b.dataset.action](b,e);});
+document.addEventListener('input',e=>{const el=e.target;if(el.matches('input[type=range]'))el.style.setProperty('--fill',`${100*(el.value-el.min)/(el.max-el.min)}%`);P.onInput.forEach(fn=>fn(el));});
+document.addEventListener('change',e=>P.onChange.forEach(fn=>fn(e.target)));
+document.addEventListener('submit',e=>P.onSubmit.forEach(fn=>fn(e)));
+document.addEventListener('keydown',e=>{if(e.target.matches('[role=tab]')&&['ArrowRight','ArrowLeft','Home','End'].includes(e.key)){e.preventDefault();const siblings=$$('[role=tab]',e.target.parentElement);let i=siblings.indexOf(e.target);i=e.key==='Home'?0:e.key==='End'?siblings.length-1:(i+(e.key==='ArrowRight'?1:-1)+siblings.length)%siblings.length;siblings[i].focus();siblings[i].click();return;}if(e.target.closest('input,textarea,select,[contenteditable=true]'))return;if(e.key==='/'&&!modal.open){e.preventDefault();P.actions.search();}if(e.code==='Space'&&!modal.open&&!e.target.closest('button,a')){e.preventDefault();P.actions.play();}});
+})();

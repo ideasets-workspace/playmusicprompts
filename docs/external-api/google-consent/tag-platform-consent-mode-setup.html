@@ -1,0 +1,3292 @@
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html 
+      lang="en"
+      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="721724668570-nbkv1cfusk7kk4eni4pjvepaus73b13t.apps.googleusercontent.com"><meta name="google-signin-scope"
+          content="profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award https://www.googleapis.com/auth/devprofiles.full_control.firstparty"><meta property="og:site_name" content="Google for Developers">
+    <meta property="og:type" content="website"><meta name="theme-color" content="#1a73e8"><meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel="manifest" href="/_pwa/developers/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap">
+      <link rel="stylesheet"
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/css/app.css">
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/favicon-new.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/touchicon-180-new.png"><link rel="canonical" href="https://developers.google.com/tag-platform/security/guides/consent"><link rel="search" type="application/opensearchdescription+xml"
+            title="Google for Developers" href="https://developers.google.com/s/opensearch.xml">
+      <link rel="alternate" hreflang="en"
+          href="https://developers.google.com/tag-platform/security/guides/consent" /><link rel="alternate" hreflang="x-default" href="https://developers.google.com/tag-platform/security/guides/consent" /><link rel="alternate" hreflang="ar"
+          href="https://developers.google.com/tag-platform/security/guides/consent?hl=ar" /><link rel="alternate" hreflang="bn"
+          href="https://developers.google.com/tag-platform/security/guides/consent?hl=bn" /><link rel="alternate" hreflang="zh-Hans"
+          href="https://developers.google.com/tag-platform/security/guides/consent?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant"
+          href="https://developers.google.com/tag-platform/security/guides/consent?hl=zh-tw" /><link rel="alternate" hreflang="fa"
+          href="https://developers.google.com/tag-platform/security/guides/consent?hl=fa" /><link rel="alternate" hreflang="fr"
+          href="https://developers.google.com/tag-platform/security/guides/consent?hl=fr" /><link rel="alternate" hreflang="de"
+          href="https://developers.google.com/tag-platform/security/guides/consent?hl=de" /><link rel="alternate" hreflang="he"
+          href="https://developers.google.com/tag-platform/security/guides/consent?hl=he" /><link rel="alternate" hreflang="hi"
+          href="https://developers.google.com/tag-platform/security/guides/consent?hl=hi" /><link rel="alternate" hreflang="id"
+          href="https://developers.google.com/tag-platform/security/guides/consent?hl=id" /><link rel="alternate" hreflang="it"
+          href="https://developers.google.com/tag-platform/security/guides/consent?hl=it" /><link rel="alternate" hreflang="ja"
+          href="https://developers.google.com/tag-platform/security/guides/consent?hl=ja" /><link rel="alternate" hreflang="ko"
+          href="https://developers.google.com/tag-platform/security/guides/consent?hl=ko" /><link rel="alternate" hreflang="pl"
+          href="https://developers.google.com/tag-platform/security/guides/consent?hl=pl" /><link rel="alternate" hreflang="pt-BR"
+          href="https://developers.google.com/tag-platform/security/guides/consent?hl=pt-br" /><link rel="alternate" hreflang="ru"
+          href="https://developers.google.com/tag-platform/security/guides/consent?hl=ru" /><link rel="alternate" hreflang="es"
+          href="https://developers.google.com/tag-platform/security/guides/consent?hl=es" /><link rel="alternate" hreflang="es-419"
+          href="https://developers.google.com/tag-platform/security/guides/consent?hl=es-419" /><link rel="alternate" hreflang="th"
+          href="https://developers.google.com/tag-platform/security/guides/consent?hl=th" /><link rel="alternate" hreflang="tr"
+          href="https://developers.google.com/tag-platform/security/guides/consent?hl=tr" /><link rel="alternate" hreflang="vi"
+          href="https://developers.google.com/tag-platform/security/guides/consent?hl=vi" /><title>Set up consent mode on websites &nbsp;|&nbsp; Tag Platform &nbsp;|&nbsp; Google for Developers</title>
+
+<meta property="og:title" content="Set up consent mode on websites &nbsp;|&nbsp; Tag Platform &nbsp;|&nbsp; Google for Developers"><meta name="description" content="Learn how to send user consent signals with Google&amp;#39;s consent mode API">
+  <meta property="og:description" content="Learn how to send user consent signals with Google&amp;#39;s consent mode API"><meta property="og:url" content="https://developers.google.com/tag-platform/security/guides/consent"><meta property="og:image" content="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/opengraph/google-blue.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675"><meta property="og:locale" content="en"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    
+    "headline": "Set up consent mode on websites"
+  }
+</script><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Security &amp; Privacy",
+      "item": "https://developers.google.com/tag-platform/security"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Set up consent mode on websites",
+      "item": "https://developers.google.com/tag-platform/security/guides/consent"
+    }]
+  }
+  </script>
+  
+
+  
+
+  
+
+  
+
+
+    </head>
+  <body class="color-scheme--light"
+        template="page"
+        theme="google-blue"
+        type="article"
+        
+        
+        
+        layout="docs"
+        
+        
+        
+        
+        
+          
+            concierge='closed'
+          
+        
+        display-toc
+        pending>
+  
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+  
+  
+    <a href="#main-content" class="skip-link button">
+      
+      Skip to main content
+    </a>
+    <section class="devsite-wrapper">
+      <devsite-cookie-notification-bar></devsite-cookie-notification-bar>
+        <devsite-header role="banner">
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner" data-nosnippet>
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        
+<div class="devsite-product-name-wrapper">
+
+  
+    
+  
+
+
+
+  
+  
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+        
+  <a href="https://developers.google.com/tag-platform/security"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Upper Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Security and Privacy hub"
+      
+    >
+    
+          Security and Privacy hub
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+  </span>
+
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+            
+              
+              
+  <devsite-tabs class="upper-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Upper tabs">
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/tag-platform/devguides"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/tag-platform/devguides"
+    
+       track-type="nav"
+       track-metadata-position="nav - the google tag"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: The Google tag"
+         
+           track-name="the google tag"
+         
+       >
+    The Google tag
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/tag-platform/gtagjs"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/tag-platform/gtagjs"
+    
+       track-type="nav"
+       track-metadata-position="nav - gtag.js"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: gtag.js"
+         
+           track-name="gtag.js"
+         
+       >
+    gtag.js
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/tag-platform/tag-manager"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/tag-platform/tag-manager"
+    
+       track-type="nav"
+       track-metadata-position="nav - tag manager"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Tag Manager"
+         
+           track-name="tag manager"
+         
+       >
+    Tag Manager
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  class="devsite-active">
+            
+    <a href="https://developers.google.com/tag-platform/security"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/tag-platform/security"
+    
+       track-type="nav"
+       track-metadata-position="nav - security &amp; privacy"
+       track-metadata-module="primary nav"
+       aria-label="Security &amp; Privacy, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Security &amp; Privacy"
+         
+           track-name="security &amp; privacy"
+         
+       >
+    Security &amp; Privacy
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/tag-platform/learn"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/tag-platform/learn"
+    
+       track-type="nav"
+       track-metadata-position="nav - learn"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Learn"
+         
+           track-name="learn"
+         
+       >
+    Learn
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+            
+           </div>
+          
+<devsite-search
+    enable-signin
+    enable-search
+    enable-suggestions
+      enable-query-completion
+    
+    enable-search-summaries
+    project-name="Tag Platform"
+    tenant-name="Google for Developers"
+    project-scope="/tag-platform/security"
+    url-scoped="https://developers.google.com/s/results/tag-platform/security"
+    
+    
+    
+    >
+  <form class="devsite-search-form" action="https://developers.google.com/s/results" method="GET">
+    <div class="devsite-search-container">
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              
+              aria-label="Open search"></button>
+      <div class="devsite-searchbox">
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          
+          aria-label="Search"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          autocomplete="off"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          
+          placeholder="Search"
+          role="combobox"
+          type="text"
+          value=""
+          >
+          <div class="devsite-search-image material-icons" aria-hidden="true">
+            
+              <svg class="devsite-search-ai-image" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_6641_386)">
+                    <path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14167 15.375 4.875 14.125C3.625 12.8583 3 11.3167 3 9.5C3 7.68333 3.625 6.15 4.875 4.9C6.14167 3.63333 7.68333 3 9.5 3C10.0167 3 10.5167 3.05833 11 3.175C11.4833 3.275 11.9417 3.43333 12.375 3.65L10.825 5.2C10.6083 5.13333 10.3917 5.08333 10.175 5.05C9.95833 5.01667 9.73333 5 9.5 5C8.25 5 7.18333 5.44167 6.3 6.325C5.43333 7.19167 5 8.25 5 9.5C5 10.75 5.43333 11.8167 6.3 12.7C7.18333 13.5667 8.25 14 9.5 14C10.6667 14 11.6667 13.625 12.5 12.875C13.35 12.1083 13.8417 11.15 13.975 10H15.975C15.925 10.6333 15.7833 11.2333 15.55 11.8C15.3333 12.3667 15.05 12.8667 14.7 13.3L21 19.6L19.6 21ZM17.5 12C17.5 10.4667 16.9667 9.16667 15.9 8.1C14.8333 7.03333 13.5333 6.5 12 6.5C13.5333 6.5 14.8333 5.96667 15.9 4.9C16.9667 3.83333 17.5 2.53333 17.5 0.999999C17.5 2.53333 18.0333 3.83333 19.1 4.9C20.1667 5.96667 21.4667 6.5 23 6.5C21.4667 6.5 20.1667 7.03333 19.1 8.1C18.0333 9.16667 17.5 10.4667 17.5 12Z" fill="#5F6368"/>
+                  </g>
+                <defs>
+                <clipPath id="clip0_6641_386">
+                <rect width="24" height="24" fill="white"/>
+                </clipPath>
+                </defs>
+              </svg>
+            
+          </div>
+          <div class="devsite-search-shortcut-icon-container" aria-hidden="true">
+            <kbd class="devsite-search-shortcut-icon">/</kbd>
+          </div>
+      </div>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          
+          aria-label="Close search"></button>
+</devsite-search>
+
+        </div>
+
+        
+
+          
+
+          
+
+          
+
+          
+
+          
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es"
+        >Español</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+
+          
+
+        
+
+        
+          <devsite-user 
+                        
+                        
+                          enable-profiles
+                        
+                        
+                          fp-auth
+                        
+                        id="devsite-user">
+            
+              
+              <span class="button devsite-top-button" aria-hidden="true" visually-hidden>Sign in</span>
+            
+          </devsite-user>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="devsite-collapsible-section
+    ">
+    <div class="devsite-header-background">
+      
+        
+          <div class="devsite-product-id-row"
+           >
+            <div class="devsite-product-description-row">
+              
+                
+                <div class="devsite-product-id">
+                  
+                  
+                  
+                    <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/tag-platform/security"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Lower Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          Security &amp; Privacy
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+                </div>
+                
+              
+              
+            </div>
+            
+              <div class="devsite-product-button-row">
+  
+
+  
+  <a href="https://tagmanager.google.com/"
+  
+    
+      class="button
+             
+             "
+    
+    
+    >Open Google Tag Manager</a>
+
+</div>
+            
+          </div>
+          
+        
+      
+      
+        <div class="devsite-doc-set-nav-row">
+          
+          
+            
+            
+  <devsite-tabs class="lower-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Lower tabs">
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/tag-platform/security/concepts/privacy"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/tag-platform/security/concepts/privacy"
+    
+       track-type="nav"
+       track-metadata-position="nav - concepts and best practices"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Concepts and best practices"
+         
+           track-name="concepts and best practices"
+         
+       >
+    Concepts and best practices
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  class="devsite-active">
+            
+    <a href="https://developers.google.com/tag-platform/security/guides/consent"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/tag-platform/security/guides/consent"
+    
+       track-type="nav"
+       track-metadata-position="nav - guides"
+       track-metadata-module="primary nav"
+       aria-label="Guides, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Guides"
+         
+           track-name="guides"
+         
+       >
+    Guides
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab class="devsite-dropdown
+    
+    
+    
+    ">
+  
+    <button
+      class="devsite-tabs-content devsite-tabs-dropdown-only gc-analytics-event  devsite-icon devsite-icon-arrow-drop-down"
+  
+       track-type="nav"
+       track-metadata-position="nav - privacy policies"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Privacy Policies"
+         
+           track-name="privacy policies"
+         
+       >
+    Privacy Policies
+  
+  </button>
+  
+  <div class="devsite-tabs-dropdown" role="menu" aria-label="submenu" hidden>
+    <div class="devsite-tabs-dropdown-content">
+      
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://support.google.com/tagmanager/answer/9323295"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://support.google.com/tagmanager/answer/9323295"
+                     track-metadata-position="nav - privacy policies"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Data privacy and security <span class="devsite-nav-icon material-icons" data-icon="external" data-title="External" aria-hidden="true" translate="no"></span>
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://support.google.com/tagmanager/answer/9502761"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://support.google.com/tagmanager/answer/9502761"
+                     track-metadata-position="nav - privacy policies"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Community template policy <span class="devsite-nav-icon material-icons" data-icon="external" data-title="External" aria-hidden="true" translate="no"></span>
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://support.google.com/tagmanager/answer/7207086"
+                    
+                     track-type="nav"
+                     track-metadata-eventdetail="https://support.google.com/tagmanager/answer/7207086"
+                     track-metadata-position="nav - privacy policies"
+                     track-metadata-module="tertiary nav"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Data processing amendment <span class="devsite-nav-icon material-icons" data-icon="external" data-title="External" aria-hidden="true" translate="no"></span>
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+          
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+  
+
+  
+</devsite-header>
+        <devsite-book-nav scrollbars >
+          
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-book-nav-filter"
+     >
+  <span class="filter-list-icon material-icons" aria-hidden="true"></span>
+  <input type="text"
+         placeholder="Filter"
+         
+         aria-label="Type to filter"
+         role="searchbox">
+  
+  <span class="filter-clear-button hidden"
+        data-title="Clear filter"
+        aria-label="Clear filter"
+        role="button"
+        tabindex="0"></span>
+</div>
+
+<nav class="devsite-book-nav devsite-nav nocontent" data-nosnippet
+     aria-label="Side menu">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+
+  
+    
+  
+
+
+  
+      <span class="devsite-product-name">
+        
+        
+        <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+        
+  <a href="https://developers.google.com/tag-platform/security"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Upper Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Security and Privacy hub"
+      
+    >
+    
+          Security and Privacy hub
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+      </span>
+    
+
+</div>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+      
+        <ul class="devsite-nav-list">
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/tag-platform/devguides"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: The Google tag"
+      
+        track-name="the google tag"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: The Google tag"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      The Google tag
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/tag-platform/gtagjs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: gtag.js"
+      
+        track-name="gtag.js"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: gtag.js"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      gtag.js
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/tag-platform/tag-manager"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Tag Manager"
+      
+        track-name="tag manager"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Tag Manager"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Tag Manager
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/tag-platform/security"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Security &amp; Privacy"
+      
+        track-name="security &amp; privacy"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Security &amp; Privacy"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Security &amp; Privacy
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+                <ul class="devsite-nav-responsive-tabs">
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/tag-platform/security/concepts/privacy"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Concepts and best practices"
+      
+        track-name="concepts and best practices"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Concepts and best practices"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Concepts and best practices
+   </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/tag-platform/security/guides/consent"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Guides"
+      
+        track-name="guides"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Guides"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip menu="_book">
+      Guides
+   </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Privacy Policies"
+      
+        track-name="privacy policies"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Privacy Policies
+   </span>
+    
+  
+  </span>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+                devsite-lower-tab-item">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Privacy Policies"
+      
+        track-name="privacy policies"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="Privacy Policies">
+      More
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="Privacy Policies">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/tag-platform/learn"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Learn"
+      
+        track-name="learn"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Learn"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Learn
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+          
+          
+        </ul>
+      
+    </div>
+    
+      <div class="devsite-mobile-nav-bottom">
+        
+          
+          <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Implement consent mode</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/tag-platform/security/guides/consent"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Set up consent mode for websites</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/tag-platform/security/guides/app-consent"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Set up consent mode for apps</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/tag-platform/security/guides/amp-consent"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Set up consent mode for AMP pages</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/tag-platform/tag-manager/server-side/consent-mode"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Server-side tagging and consent mode</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/tag-platform/tag-manager/templates/consent-apis"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>CMP providers: Create a consent mode template</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/tag-platform/security/guides/implement-TCF-strings"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>CMP providers: Implement TCF</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Manage security</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/tag-platform/security/guides/privacy"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Manage privacy settings</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/tag-platform/security/guides/customize-cookies"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Configure and customize cookies</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/tag-platform/security/guides/csp"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Implement content security policies</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/tag-platform/tag-manager/templates/policies"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Implement a policy in a tag template</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/tag-platform/tag-manager/restrict"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Restrict tag deployment</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-external"><a href="https://support.google.com/tagmanager/answer/7647043"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Control and sandbox access using Zones</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="External"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-external"><a href="https://firebase.google.com/docs/analytics/configure-data-collection?platform=android"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Firebase Analytics: Configure data collection</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="External"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Manage Tag Manager accounts</span>
+      </div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-external"><a href="https://support.google.com/tagmanager/answer/6107011"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Manage users and permissions</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="External"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-external"><a href="https://support.google.com/tagmanager/answer/4525539"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Set up 2-factor verification</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="External"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Troubleshooting</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/tag-platform/security/guides/consent-debugging"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Troubleshoot consent mode with Tag Assistant</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-external"><a href="https://support.google.com/admanager/answer/9999955"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Troubleshoot TCF v2.0 implementations</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="External"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-external"><a href="https://support.google.com/tagmanager/answer/12962079"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Unblock Google tags</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="External"
+        aria-hidden="true"></span></a></li>
+          </ul>
+        
+        
+          
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+        
+        
+          
+    
+  
+    
+  
+    
+      
+      <ul class="devsite-nav-list" menu="Privacy Policies"
+          aria-label="Side menu" hidden>
+        
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://support.google.com/tagmanager/answer/9323295"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Data privacy and security &lt;span class=&#34;devsite-nav-icon material-icons&#34; data-icon=&#34;external&#34; data-title=&#34;External&#34; aria-hidden=&#34;true&#34; translate=&#34;no&#34;&gt;&lt;/span&gt;"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Data privacy and security &lt;span class=&#34;devsite-nav-icon material-icons&#34; data-icon=&#34;external&#34; data-title=&#34;External&#34; aria-hidden=&#34;true&#34; translate=&#34;no&#34;&gt;&lt;/span&gt;
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://support.google.com/tagmanager/answer/9502761"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Community template policy &lt;span class=&#34;devsite-nav-icon material-icons&#34; data-icon=&#34;external&#34; data-title=&#34;External&#34; aria-hidden=&#34;true&#34; translate=&#34;no&#34;&gt;&lt;/span&gt;"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Community template policy &lt;span class=&#34;devsite-nav-icon material-icons&#34; data-icon=&#34;external&#34; data-title=&#34;External&#34; aria-hidden=&#34;true&#34; translate=&#34;no&#34;&gt;&lt;/span&gt;
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://support.google.com/tagmanager/answer/7207086"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Data processing amendment &lt;span class=&#34;devsite-nav-icon material-icons&#34; data-icon=&#34;external&#34; data-title=&#34;External&#34; aria-hidden=&#34;true&#34; translate=&#34;no&#34;&gt;&lt;/span&gt;"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Data processing amendment &lt;span class=&#34;devsite-nav-icon material-icons&#34; data-icon=&#34;external&#34; data-title=&#34;External&#34; aria-hidden=&#34;true&#34; translate=&#34;no&#34;&gt;&lt;/span&gt;
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+        
+      </div>
+    
+  </div>
+</nav>
+          
+        </devsite-book-nav>
+      
+      <section id="gc-wrapper">
+        <main role="main" id="main-content" class="devsite-main-content"
+            
+              has-book-nav
+              has-sidebar
+            >
+          <div class="devsite-sidebar">
+            <div class="devsite-sidebar-content">
+                
+                <devsite-toc class="devsite-nav"
+                            role="navigation"
+                            aria-label="On this page"
+                            depth="2"
+                            scrollbars
+                            data-nosnippet
+                  ></devsite-toc>
+                <devsite-recommendations-sidebar class="nocontent devsite-nav" data-nosnippet>
+                </devsite-recommendations-sidebar>
+            </div>
+          </div>
+          <devsite-content>
+            
+              
+
+
+
+
+
+
+
+
+
+
+<article class="devsite-article">
+  
+  
+  
+  
+  
+
+  <div class="devsite-article-meta nocontent" role="navigation" data-nosnippet>
+    
+    
+    <ul class="devsite-breadcrumb-list"
+  
+    aria-label="Breadcrumb">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          Home
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/products"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          Products
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/tag-platform/security"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="3"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="3"
+      
+        track-metadata-eventdetail="Security and Privacy hub"
+      
+    >
+    
+          Security &amp; Privacy
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/tag-platform/security/guides/consent"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="4"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="4"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          Guides
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+    
+      
+    <devsite-thumb-rating position="header">
+    </devsite-thumb-rating>
+  
+    
+  </div>
+  
+    <devsite-feedback
+  position="header"
+  project-name="Tag Platform"
+  product-id="102259"
+  bucket="tag-platform"
+  context=""
+  version="t-devsite-webserver-20260901-r00-rc00.480082941541264604"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="header"
+  class="nocontent"
+  data-nosnippet
+  
+  
+  
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/touchicon-180-new.png"
+  
+  
+    project-support-url="https://developers.google.com/tag-platform/support"
+  
+  
+  >
+
+  <button>
+  
+    
+    Send feedback
+  
+  </button>
+</devsite-feedback>
+  
+    <h1 class="devsite-page-title" tabindex="-1">
+      Set up consent mode on websites<devsite-actions hidden data-nosnippet><devsite-feature-tooltip
+      ack-key="AckCollectionsBookmarkTooltipDismiss"
+      analytics-category="Site-Wide Custom Events"
+      analytics-action-show="Callout Profile displayed"
+      analytics-action-close="Callout Profile dismissed"
+      analytics-label="Create Collection Callout"
+      class="devsite-page-bookmark-tooltip nocontent"
+      data-nosnippet
+      dismiss-button="true"
+      id="devsite-collections-dropdown"
+      
+      dismiss-button-text="Dismiss"
+
+      
+      close-button-text="Got it">
+
+    
+    
+      <devsite-bookmark></devsite-bookmark>
+    
+
+    <span slot="popout-heading">
+      
+      Stay organized with collections
+    </span>
+    <span slot="popout-contents">
+      
+      Save and categorize content based on your preferences.
+    </span>
+  </devsite-feature-tooltip>
+    <devsite-llm-tools></devsite-llm-tools></devsite-actions>
+  
+      
+    </h1>
+  <div class="devsite-page-title-meta"><devsite-view-release-notes></devsite-view-release-notes></div>
+  
+
+  <devsite-toc class="devsite-nav"
+    depth="2"
+    devsite-toc-embedded
+    >
+  </devsite-toc>
+  <div class="devsite-article-body clearfix
+  ">
+
+  
+    
+    
+
+
+
+
+
+<blockquote>
+<p>This page is for developers who maintain their own consent solution on their
+website and want to integrate consent mode. For an introduction to consent mode,
+read <a href="/tag-platform/devguides/privacy#consent_mode_overview">Consent mode overview</a>. If you use a Consent Management Platform (CMP)
+to obtain user consent, learn more about
+<a href="//support.google.com/tagmanager/answer/14009343#web-consent">how to set up consent mode with a CMP</a>.</p>
+</blockquote>
+
+<p>You can implement consent mode in a basic or advanced way. Check your company&#39;s
+guidelines to pick an implementation method and which defaults to set. Learn
+more about <a href="/tag-platform/security/concepts/consent-mode#basic-vs-advanced">basic versus advanced consent mode</a>.</p>
+
+<aside class="caution">
+<p>
+  <strong>Important</strong>: Consent mode was updated in November, 2023 and
+  now contains two additional parameters. If you already use consent mode,
+  <a href="#upgrade-consent-v2">upgrade to consent mode v2</a>.
+  <br>
+  Learn more about <a href="//support.google.com/tagmanager/answer/13695607" target="_blank">Updates to consent mode for traffic in European Economic Area (EEA)</a>.
+</p>
+</aside>
+
+<div>
+  <devsite-nav-buttons name="consentmode" param="always" label="Pick your implementation">
+    <button value="advanced" default>Advanced consent mode</button>
+    <button value="basic">Basic consent mode</button>
+  </devsite-nav-buttons>
+</div>
+
+<h2 id="before_you_begin" data-text="Before you begin" tabindex="-1">Before you begin</h2>
+
+<p>Take the following into consideration before implementing consent mode:</p>
+
+<ul>
+<li><p>If you use Tag Manager and want to maintain your own banner, the recommended
+approach is loading your banner through the Tag Manager container. To do so,
+you need to <a href="/tag-platform/tag-manager/templates/consent-apis">create a consent mode template</a>. Alternatively, you can use a
+consent mode template from the <a href="//tagmanager.google.com/gallery/#/?filter=consent&amp;page=1">Community Template Gallery</a>.</p></li>
+<li><p>If you use gtag.js, make sure you have installed the Google tag on every
+page of your website. The consent mode code gets added to each page of your
+website.</p></li>
+</ul>
+
+<h2 id="set_up_consent_mode" data-text="Set up consent mode" tabindex="-1">Set up consent mode</h2>
+
+
+To set up consent mode, you need to:
+<ol>
+<li>Before a user grants consent: <a href="#default-consent">Set the default
+consent state</a>.</li>
+<li><a href="#update-consent">Update the consent state</a> based on the user
+interaction with your consent settings.</li>
+</ol></p>
+
+<aside class="caution">
+<p>
+  <strong>Important</strong>: Make sure that consent updates are tracked on the
+  page where they occur, before any page transition.
+  <br>
+  The Google tag takes actions, such as writing cookies or sending events, in
+  response to the command to ensure future events will include the full
+  measurement data.
+</p>
+</aside>
+
+
+
+
+
+
+
+<h3 id="default-consent" data-text="Set the default consent state" tabindex="-1">Set the default consent state</h3>
+
+<p>Set a default value for each <a href="/tag-platform/security/concepts/consent-mode#consent-types">consent type</a> you are using. By default, no
+consent mode values are set.</p>
+
+<p>It is best practice to scope the default consent settings to the regions where
+you are surfacing consent banners to your visitors. This helps with preserving
+measurement in regions where consent banners are required and Google tags adjust
+their behavior accordingly. You also prevent any loss of measurement where there
+are no consent banners or consent banners don&#39;t apply. See <a href="/tag-platform/tag-manager/templates/consent-apis#regional-behavior">Region-specific
+behavior</a>.</p>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 id="gtag.js_1" data-text="gtag.js" tabindex="-1">gtag.js</h3><p>To adjust the default measurement capabilities, call the <code translate="no" dir="ltr">gtag(&#39;consent&#39;,
+&#39;default&#39;, ...)</code> command on every page of your site before any commands that
+send measurement data (such as <code translate="no" dir="ltr">config</code> or <code translate="no" dir="ltr">event</code>).</p>
+
+<p>For example, to set deny consent for all parameters by default:</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-nx">gtag</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'consent'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'default'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-s1">'ad_storage'</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'denied'</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-s1">'ad_user_data'</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'denied'</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-s1">'ad_personalization'</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'denied'</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-s1">'analytics_storage'</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'denied'</span>
+<span class="devsite-syntax-p">});</span>
+</code></pre></devsite-code>
+<h3 id="async" data-text="Optional: Integrate with asynchronous consent management platforms" tabindex="-1">Optional: Integrate with asynchronous consent management platforms</h3>
+
+<p>If your banner loads asynchronously, it might not always run before your
+Google tags. To handle such situations, specify <code translate="no" dir="ltr">wait_for_update</code> along with
+a millisecond value to control how long to wait before data is sent.</p>
+
+<p>For example, to deny <code translate="no" dir="ltr">ad_storage</code> on a particular page by default, but to
+allow your CMP to update consent status, use <code translate="no" dir="ltr">wait_for_update</code>. In the
+following code, <code translate="no" dir="ltr">ad_storage</code> defaults to <code translate="no" dir="ltr">denied</code>, and the consent tool is
+given 500 milliseconds to call <code translate="no" dir="ltr">gtag(&#39;consent&#39;, &#39;update&#39;, ...)</code> before tags
+fire:</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">gtag</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'consent'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'default'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-s1">'ad_storage'</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'denied'</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-s1">'wait_for_update'</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-mf">500</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">});</span>
+</code></pre></devsite-code></section>
+<section><h3 id="tag-manager" data-text="Tag Manager" tabindex="-1">Tag Manager</h3><p>When you use Google Tag Manager, create your own template using the Tag
+Manager consent APIs. The following <a href="//github.com/googleanalytics/gtm-consent-mode-examples/tree/main/vendor-agnostic-google-template">example</a> is available to reference as a
+starting point.</p>
+
+<p>Use the Tag Manager-specific APIs for managing consent states
+<code translate="no" dir="ltr">setDefaultConsentState</code> and <code translate="no" dir="ltr">updateConsentState</code>. The <code translate="no" dir="ltr">gtagSet</code> API can be
+used to optionally set the <code translate="no" dir="ltr">ads_data_redaction</code> and URL passthrough settings
+as appropriate.</p>
+<aside class="special"><strong>Important:</strong><span> gtag commands are queued after all other pending messages and may
+not be processed before the next event begins. Don&#39;t use
+<code translate="no" dir="ltr">gtag(&#39;consent&#39;,&#39;update&#39;,...)</code> methods instead of <code translate="no" dir="ltr">updateConsentState</code>. For
+more information, see <a href="/tag-platform/tag-manager/datalayer#how_data_layer_information_is_processed">How data layer information is processed</a>.</span></aside></section>
+</devsite-selector></div>
+<h3 id="update-consent" data-text="Update consent state" tabindex="-1">Update consent state</h3>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 id="gtag.js_2" data-text="gtag.js" tabindex="-1">gtag.js</h3><p>To send the user&#39;s consent status, use the <code translate="no" dir="ltr">update</code> command. Since consent
+mode doesn&#39;t save consent choices, update the consent status as soon as a
+user interacts with your consent management solution. After a user grants
+consent, persist their choice and call the update command accordingly on
+subsequent pages.</p>
+
+<p>It is up to you to ensure the correct values are set for all consent types.
+For full details on supported types, read the <a href="/tag-platform/gtagjs/reference#consent">API reference</a>.</p>
+
+<p>The following code example shows how to update the consent status to
+<code translate="no" dir="ltr">granted</code> when user agrees to all options:</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="HTML"><code translate="no" dir="ltr">&lt;!-- Send consent updates when users interact with your consent banner --&gt;
+&lt;script&gt;
+function allConsentGranted() {
+  gtag('consent', 'update', {
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'ad_storage': 'granted',
+    'analytics_storage': 'granted'
+  });
+}
+&lt;/script&gt;
+&lt;!-- Invoke your consent function when a user interacts with your banner --&gt;
+&lt;body&gt;
+  ...
+  &lt;button onclick="allConsentGranted()"&gt;Accept all&lt;/button&gt;
+  ...
+&lt;/body&gt;
+</code></pre></devsite-code></section>
+<section><h3 id="tag-manager_1" data-text="Tag Manager" tabindex="-1">Tag Manager</h3><p>When you use a consent mode template, the user consent should automatically
+update when the user interacts with the banner.</p>
+
+<p>If you build a consent mode template yourself, use the Tag Manager-specific
+APIs for managing consent states <code translate="no" dir="ltr">setDefaultConsentState</code> and
+<code translate="no" dir="ltr">updateConsentState</code>. The <code translate="no" dir="ltr">gtagSet</code> API can be used to optionally set the
+<code translate="no" dir="ltr">ads_data_redaction</code> and URL passthrough settings as appropriate.</p>
+<aside class="special"><strong>Important:</strong><span> gtag commands are queued after all other pending messages and may
+not be processed before the next event begins. Don&#39;t use
+<code translate="no" dir="ltr">gtag(&#39;consent&#39;,&#39;update&#39;,...)</code> methods instead of <code translate="no" dir="ltr">updateConsentState</code>. For
+more information, see <a href="/tag-platform/tag-manager/datalayer#how_data_layer_information_is_processed">How data layer information is processed</a> and
+<a href="//support.google.com/tagmanager/answer/10718549">Tag Manager consent mode support</a>.</span></aside></section>
+</devsite-selector></div>
+<h3 id="change-consent" data-text="Change user consent choices" tabindex="-1">Change user consent choices</h3>
+
+<p>Users can change their consent preferences after their initial interaction. For
+example, a user who initially granted consent might later decide to revoke it
+through your website&#39;s settings panel.</p>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 id="gtag.js_3" data-text="gtag.js" tabindex="-1">gtag.js</h3><p>To update the consent state at any time, use the <code translate="no" dir="ltr">update</code> command. This
+command is used for any change in consent state, including changing from
+<code translate="no" dir="ltr">&#39;granted&#39;</code> to <code translate="no" dir="ltr">&#39;denied&#39;</code>.</p>
+
+<p><strong>Example: Revoking consent</strong></p>
+
+<p>If a user has previously granted consent for <code translate="no" dir="ltr">analytics_storage</code> and
+<code translate="no" dir="ltr">ad_storage</code>, but now wishes to deny consent, send an <code translate="no" dir="ltr">update</code> call
+reflecting their new choice:</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-c1">// User updates their settings to deny consent</span>
+<span class="devsite-syntax-nx">gtag</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'consent'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'update'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-s1">'analytics_storage'</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'denied'</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-s1">'ad_storage'</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'denied'</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-s1">'ad_user_data'</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'denied'</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-s1">'ad_personalization'</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'denied'</span>
+<span class="devsite-syntax-p">});</span>
+</code></pre></devsite-code></section>
+<section><h3 id="tag-manager_2" data-text="Tag Manager" tabindex="-1">Tag Manager</h3><p>If you use a consent mode template, the user&#39;s consent should update
+automatically when the user interacts with your banner or settings panel.</p>
+
+<p>If you build a consent mode template yourself, use the <code translate="no" dir="ltr">updateConsentState</code>
+API to update the consent state when a user confirms their new preferences.</p></section>
+</devsite-selector></div>
+<p><strong>Implementation considerations:</strong></p>
+
+<ol>
+<li><strong>Persistence:</strong> Ensure the user&#39;s updated consent choices are persisted,
+such as in a first-party cookie or local storage, so that the correct state
+is set on subsequent page loads.</li>
+<li><strong>Timing:</strong> Call the update command as soon as the user confirms their new
+preferences in your site&#39;s consent settings interface.</li>
+</ol>
+
+<h2 id="implementation_example" data-text="Implementation example" tabindex="-1">Implementation example</h2>
+
+<p>The following example sets multiple consent mode parameters to <code translate="no" dir="ltr">denied</code> by
+default. After a user indicates their consent choices, the relevant parameters
+are updated to <code translate="no" dir="ltr">granted</code>.</p>
+<aside class="note"><strong>Note:</strong><span> The consent states set in the following examples are not definitive. You
+are responsible for making sure that default consent mode is set for each of
+your measurement products to match your organization&#39;s policy.</span></aside><div><devsite-selector data-ds-scope="code-sample">
+<section><h3 id="gtag.js_4" data-text="gtag.js" tabindex="-1">gtag.js</h3><p>The order of the code here is vital. <strong>If your consent code is called out of
+order, consent defaults won&#39;t work</strong>. Depending on business requirements,
+specifics may vary, but in general, code should run in the following order:</p>
+
+<ol>
+<li><p>Load the Google tag. This is your default snippet code. The default
+snippet should be updated (see below) to include a call to
+<code translate="no" dir="ltr">gtag(&#39;consent&#39;, &#39;default&#39;, ...)</code>.</p></li>
+<li><p>Load your consent solution. If your consent solution loads
+asynchronously, see <a href="#async">Integrate with asynchronous consent management
+platforms</a> for how to make sure this happens in the correct order.</p></li>
+<li><p>If not handled by your consent solution, call <code translate="no" dir="ltr">gtag(&#39;consent&#39;, &#39;update&#39;,
+...)</code> after the user indicates consent.</p></li>
+</ol>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="HTML"><code translate="no" dir="ltr">&lt;script&gt;
+// Define dataLayer and the gtag function.
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
+// Set default consent to 'denied' as a placeholder
+// Determine actual values based on your own requirements
+gtag('consent', 'default', {
+  'ad_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied',
+  'analytics_storage': 'denied'
+});
+&lt;/script&gt;
+&lt;!-- Google tag (gtag.js) --&gt;
+&lt;script async src="//www.googletagmanager.com/gtag/js?id=<var translate="no">TAG_ID</var>"&gt;
+&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  gtag('js', new Date());
+  gtag('config', 'TAG_ID');
+&lt;/script&gt;
+
+&lt;!-- Send consent updates when users interact with your consent banner --&gt;
+&lt;script&gt;
+  function allConsentGranted() {
+    gtag('consent', 'update', {
+      'ad_user_data': 'granted',
+      'ad_personalization': 'granted',
+      'ad_storage': 'granted',
+      'analytics_storage': 'granted'
+    });
+  }
+&lt;/script&gt;
+&lt;!-- Invoke your consent function when a user interacts with your banner --&gt;
+&lt;body&gt;
+  ...
+  &lt;button onclick="allConsentGranted()"&gt;Accept all&lt;/button&gt;
+  ...
+&lt;/body&gt;
+</code></pre></devsite-code></section>
+<section><h3 id="tag-manager_3" data-text="Tag Manager" tabindex="-1">Tag Manager</h3><p>For sites using Tag Manager, we recommend using a CMP to handle updates of
+visitor consent choices. CMPs provide templates in the <a href="//tagmanager.google.com/gallery/#/?filter=consent&amp;page=1">Community Template
+Gallery</a> to create a tag for managing consent mode.</p>
+<aside class="note"><strong>Note:</strong><span> If you cannot use a provided template, you can create one yourself.
+See <a href="/tag-platform/tag-manager/templates/consent-apis">Create a consent mode template</a> for a full <a href="/tag-platform/tag-manager/templates/consent-apis#implementation_example">implementation example</a>
+using Tag Manager Consent APIs.</span></aside>
+<p>If using a template is not possible, you can instead update the code on your
+page as follows. The order of the code here is vital. <strong>If your consent code
+is called out of order, consent defaults won&#39;t work.</strong></p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="HTML"><code translate="no" dir="ltr">&lt;script&gt;
+  // Define dataLayer and the gtag function.
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Set default consent to 'denied' as a placeholder
+  // Determine actual values based on your own requirements
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+&lt;/script&gt;
+
+&lt;!-- Google Tag Manager --&gt;
+&lt;script&gt;(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-<var translate="no">XXXXXX</var>');&lt;/script&gt;
+&lt;!-- End Google Tag Manager --&gt;
+
+&lt;!-- Send consent updates when users interact with your consent banner --&gt;
+&lt;script&gt;
+  function allConsentGranted() {
+    gtag('consent', 'update', {
+      'ad_user_data': 'granted',
+      'ad_personalization': 'granted',
+      'ad_storage': 'granted',
+      'analytics_storage': 'granted'
+    });
+  }
+&lt;/script&gt;
+&lt;!-- Invoke your consent function when a user interacts with your banner --&gt;
+&lt;body&gt;
+  ...
+  &lt;button onclick="allConsentGranted()"&gt;Accept all&lt;/button&gt;
+  ...
+&lt;/body&gt;
+</code></pre></devsite-code></section>
+</devsite-selector></div>
+
+
+<h2 id="upgrade-consent-v2" data-text="Upgrade to consent mode v2" tabindex="-1">Upgrade to consent mode v2</h2>
+
+<p>As a part of Google&#39;s ongoing commitment to a privacy-centric digital
+advertising ecosystem, we are strengthening the enforcement of our <a href="//www.google.com/about/company/user-consent-policy/">EU user
+consent policy</a>.</p>
+
+<p>Learn more about Google&#39;s <a href="//support.google.com/tagmanager/answer/13695607">Updates to consent mode for traffic in European
+Economic Area (EEA)</a>.</p>
+
+<p>Consent mode users need to send two new parameters in addition to <code translate="no" dir="ltr">ad_storage</code>
+and <code translate="no" dir="ltr">analytics_storage</code>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field Name</th>
+      <th>Allowed Values</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code translate="no" dir="ltr">
+ad_user_data
+</code></td>
+      <td><code translate="no" dir="ltr">
+'granted' | 'denied'
+</code></td>
+      <td>Sets consent for sending user data related to advertising to
+Google.</td>
+    </tr>
+    <tr>
+      <td><code translate="no" dir="ltr">
+ad_personalization
+</code></td>
+      <td><code translate="no" dir="ltr">
+'granted' | 'denied'
+</code></td>
+      <td>Sets consent for personalized advertising.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<h2 id="more_consent_mode_features" data-text="More consent mode features" tabindex="-1">More consent mode features</h2>
+
+<p>Advanced consent features include the ability to:</p>
+
+<ul>
+<li><a href="//support.google.com/tagmanager/answer/12131703#CPS-selection&amp;zippy=%2Cmanage-data-use-across-google-services">Set which Google services you share data with</a> using the Google tag UI.</li>
+<li>Set behavior for a geographic region.</li>
+<li>Pass ad click, client ID, and session ID information in URLs when users have
+not granted consent for cookies.</li>
+<li>Fully redact (remove) ad information when users deny consent for ad cookies.</li>
+</ul>
+
+<h3 id="region-specific-behavior" data-text="Region-specific behavior" tabindex="-1">Region-specific behavior</h3>
+
+<p>To set default consent states that apply to visitors from particular areas,
+specify a region (according to <a href="//en.wikipedia.org/wiki/ISO_3166-2#current-codes">ISO 3166-2</a>) in your gtag consent default
+command. Using region values lets you to comply with regional regulations.</p>
+
+<p>You can set defaults for specific regions, and then set a different default for
+all other regions. A gtag consent default command without a region parameter
+sets the default for all visitors not covered by another region-specific
+command.</p>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 id="gtag.js_5" data-text="gtag.js" tabindex="-1">gtag.js</h3><p>The following example sets <code translate="no" dir="ltr">analytics_storage</code> to <code translate="no" dir="ltr">denied</code> for users from
+Spain and Alaska, and sets <code translate="no" dir="ltr">ad_storage</code> to <code translate="no" dir="ltr">denied</code> for all users.</p>
+<aside class="note"><strong>Note:</strong><span> This is an example. You are responsible for making sure that consent
+mode is set for each of your measurement products to match your
+organization&#39;s policy.</span></aside>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">gtag</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'consent'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'default'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-s1">'analytics_storage'</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'denied'</span><span class="devsite-syntax-p">,</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-s1">'region'</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[</span><span class="devsite-syntax-s1">'ES'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'US-AK'</span><span class="devsite-syntax-p">]</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">});</span>
+
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-nx">gtag</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'consent'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'default'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-s1">'ad_storage'</span><span class="devsite-syntax-o">:</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'denied'</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">});</span></pre></devsite-code></section>
+<section><h3 id="tag-manager_4" data-text="Tag Manager" tabindex="-1">Tag Manager</h3><p>If you are using a template to create your tag, it may have the controls to
+set region-specific behaviour. If you are building a template tag on your
+own, see <a href="/tag-platform/tag-manager/templates/consent-apis">Create a consent mode template</a> for more information on setting
+<a href="/tag-platform/tag-manager/templates/consent-apis#regional-behavior">region-specific behavior</a>.</p></section>
+</devsite-selector></div>
+<h4 id="most_specific_parameter_takes_precedence" data-text="Most specific parameter takes precedence" tabindex="-1">Most specific parameter takes precedence</h4>
+
+<p>If two default consent commands occur on the same page with values for a region
+and subregion, the one with a more specific region will take effect. For
+example, if you have <code translate="no" dir="ltr">ad_storage</code> set to <code translate="no" dir="ltr">granted</code> for the region US and
+<code translate="no" dir="ltr">ad_storage</code> set to <code translate="no" dir="ltr">denied</code> for the region US-CA, a visitor from California
+will have the more specific US-CA setting take effect. For this example, that
+would mean a visitor from US-CA would have <code translate="no" dir="ltr">ad_storage</code> set to <code translate="no" dir="ltr">denied</code>.
+<table>
+<tr>
+<th>Region</th>
+<th><code translate="no" dir="ltr">ad_storage</code></th>
+<th>Behavior</th>
+</tr>
+<tr>
+<td>US</td>
+<td><code translate="no" dir="ltr">&#39;granted&#39;</code></td>
+<td>Applies to users in the US that are <em>not</em> in CA</td>
+</tr>
+<tr>
+<td>US-CA</td>
+<td><code translate="no" dir="ltr">&#39;denied&#39;</code></td>
+<td>Applies to users US-CA</td>
+</tr>
+<tr>
+<td>Unspecified</td>
+<td><code translate="no" dir="ltr">&#39;granted&#39;</code></td>
+<td>
+ Uses the default value of <code translate="no" dir="ltr">&#39;granted&#39;</code>. In the example, applies to
+visitors that aren&#39;t in the US or in US-CA
+</td>
+</tr>
+</table></p>
+
+<h3 id="passthroughs" data-text="Pass through ad click, client ID, and session ID information in URLs" tabindex="-1">Pass through ad click, client ID, and session ID information in URLs</h3>
+
+<p>When a user lands on your website after clicking an ad, information about the ad
+may be appended to your landing page URLs as a query parameter. In order to
+improve key event accuracy, this information is usually stored in first-party
+cookies on your domain.</p>
+
+<p>However, if <code translate="no" dir="ltr">ad_storage</code> is set to <code translate="no" dir="ltr">denied</code>, this information won&#39;t be stored
+locally. To improve ad click measurement quality when <code translate="no" dir="ltr">ad_storage</code> is <code translate="no" dir="ltr">denied</code>,
+you can optionally elect to pass information about ad clicks through URL
+parameters across pages using URL passthrough.</p>
+
+<p>Similarly, if <code translate="no" dir="ltr">analytics_storage</code> is set to <code translate="no" dir="ltr">denied</code>, URL passthrough can be
+used to send event and session-based analytics (including key events) without
+cookies across pages.</p>
+
+<p>The following conditions must be met in order to use URL passthrough:</p>
+<ul>
+<li>Your Google tag is consent-aware and present on the page.</li>
+<li>The advertiser has enabled the URL passthrough feature.</li>
+<li>Consent mode is implemented on the page.</li>
+<li>The outgoing link refers to the same domain as the current page&#39;s domain.</li>
+<li><p>A GCLID or DCLID is present in the URL (Google Ads and Floodlight tags only)</p></li>
+</ul>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 id="gtag.js_6" data-text="gtag.js" tabindex="-1">gtag.js</h3><p>To enable this capability, set the <code translate="no" dir="ltr">url_passthrough</code> parameter to <code translate="no" dir="ltr">true</code>.
+Add the following command to the default snippet before any <code translate="no" dir="ltr">config</code>
+commands:</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-nx">gtag</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'set'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'url_passthrough'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">true</span><span class="devsite-syntax-p">);</span>
+</code></pre></devsite-code></section>
+<section><h3 id="tag-manager_5" data-text="Tag Manager" tabindex="-1">Tag Manager</h3><p>If you are using a template to create your tag, it may have the controls to
+set URL passthrough. If you are building a template tag on your own, see
+<a href="/tag-platform/tag-manager/templates/consent-apis">Create a consent mode template</a> for more information on setting <a href="/tag-platform/tag-manager/templates/consent-apis#url-passthrough">URL
+passthrough</a> using the <code translate="no" dir="ltr">gtagSet</code> custom template API.</p>
+
+<p>Or, you can use the following options to set it in Conversion Linker or
+analytics tags.</p>
+
+<h4 id="for_google_ads_and_floodlight_tags" data-text="For Google Ads and Floodlight tags:" tabindex="-1">For <strong>Google Ads</strong> and <strong>Floodlight</strong> tags:</h4>
+
+<p>To enable this capability, create (or use an existing) <a href="//support.google.com/tagmanager/answer/7549390">conversion linker</a>
+tag and ensure <strong>Enable linking on all page URLs</strong> is checked. See <a href="//support.google.com/tagmanager/answer/7549390#basic">basic
+setup</a> for instructions on how to create a conversion linker tag.</p>
+
+<h4 id="for_google_analytics_tags" data-text="For Google Analytics tags:" tabindex="-1">For <strong>Google Analytics</strong> tags:</h4></section>
+</devsite-selector></div>
+<ol>
+<li><p>In Tag Manager, navigate to <strong>Fields to Set</strong> and select **Tag Configuration</p>
+
+<blockquote>
+<p>Fields to Set**.</p>
+</blockquote>
+
+<ol>
+<li>When the Fields to Set section is expanded, click <strong>Add Row</strong>.</li>
+<li>For <strong>Field Name</strong>, enter <code translate="no" dir="ltr">url_passthrough</code>.</li>
+<li>For <strong>Value</strong>, enter &#39;true&#39;.</li>
+<li><strong>Save</strong> the tag and publish.</li>
+</ol>
+<aside class="note"><strong>Note:</strong><span> You must set URL passthrough consistently for all of your UA or Google Analytics
+tags respectively.</span></aside>
+<p>Alternatively, you can set the <code translate="no" dir="ltr">url_passthrough</code> parameter to <code translate="no" dir="ltr">true</code> on
+every page of your site before the GTM install snippet.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy devsite-code-highlight" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-nb">window</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">dataLayer</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nb">window</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">dataLayer</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">||</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">[];</span>
+<span class="devsite-syntax-kd">function</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nx">gtag</span><span class="devsite-syntax-p">(){</span><span class="devsite-syntax-nb">window</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">dataLayer</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-nx">push</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nx">arguments</span><span class="devsite-syntax-p">);}</span>
+<strong><span class="devsite-syntax-nx">gtag</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'set'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'url_passthrough'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">true</span><span class="devsite-syntax-p">);</span></strong>
+</code></pre></devsite-code>
+<p>When using URL passthrough, a few query parameters may be appended to links
+as users navigate through pages on your website:</p>
+
+<ul>
+<li><code translate="no" dir="ltr">gclid</code></li>
+<li><code translate="no" dir="ltr">dclid</code></li>
+<li><code translate="no" dir="ltr">gclsrc</code></li>
+<li><code translate="no" dir="ltr">_gl</code></li>
+<li><code translate="no" dir="ltr">wbraid</code></li>
+</ul>
+
+<p>For best results, ensure that:</p>
+
+<ol>
+<li>Redirects on your site pass all the preceding query parameters.</li>
+<li>Your analytics tools ignore these parameters in page URLs.</li>
+<li>These parameters don&#39;t interfere with your site behavior.</li>
+</ol>
+<aside class="note"><strong>Note:</strong><span> If your website uses query parameters to control site content or
+navigation, test that these parameters don&#39;t interfere with your site&#39;s
+behavior.</span></aside></li>
+</ol>
+
+<h3 id="redact_ads_data" data-text="Redact ads data" tabindex="-1">Redact ads data</h3>
+
+<p>When <code translate="no" dir="ltr">ad_storage</code> is <code translate="no" dir="ltr">denied</code>, new cookies won&#39;t be set for advertising
+purposes. Additionally, third-party cookies previously set on google.com and
+doubleclick.net won&#39;t be used except for spam and fraud purposes. Data sent
+to Google will still include the full page URL, including any ad click
+information in the URL parameters.</p>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 id="gtag.js_7" data-text="gtag.js" tabindex="-1">gtag.js</h3><p>To further redact your ads data when <code translate="no" dir="ltr">ad_storage</code> is <code translate="no" dir="ltr">denied</code>, set
+<code translate="no" dir="ltr">ads_data_redaction</code> to <code translate="no" dir="ltr">true</code>.</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="JavaScript"><code translate="no" dir="ltr"><span class="devsite-syntax-nx">gtag</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s1">'set'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s1">'ads_data_redaction'</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">true</span><span class="devsite-syntax-p">);</span>
+</code></pre></devsite-code>
+<p>When <code translate="no" dir="ltr">ads_data_redaction</code> is <code translate="no" dir="ltr">true</code> and <code translate="no" dir="ltr">ad_storage</code> is <code translate="no" dir="ltr">denied</code>, ad click
+identifiers sent in network requests by Google Ads and Floodlight tags will
+be redacted. Network requests will also be sent through a domain without
+third-party cookies, such as pagead2.googlesyndication.com.</p>
+<aside class="note"><strong>Note:</strong><span> The <code translate="no" dir="ltr">ads_data_redaction</code> parameter will have no effect when
+<code translate="no" dir="ltr">ad_storage</code> is <code translate="no" dir="ltr">granted</code>, or if the <code translate="no" dir="ltr">gtag(&#39;consent&#39;)</code> command is not being
+used.</span></aside></section>
+<section><h3 id="tag-manager_6" data-text="Tag Manager" tabindex="-1">Tag Manager</h3><p>If you are using a template to create your tag, it may have the controls to
+further redact ads data. If you are building a template tag on your own, see
+<a href="/tag-platform/tag-manager/templates/consent-apis">Create a consent mode template</a> for more information on <a href="/tag-platform/tag-manager/templates/consent-apis#redact_ads_data">redacting ads
+data</a>.</p></section>
+</devsite-selector></div>
+
+
+
+
+<h2 id="faq" data-text="Common issues" tabindex="-1">Common issues</h2>
+
+<p>Review the following common issues encountered during implementation.</p>
+
+<h3 id="consent_isnt_updated_on_a_transition_page" data-text="Consent isn't updated on a transition page" tabindex="-1">Consent isn't updated on a transition page</h3>
+
+<p>When you implement advanced consent mode, you should call an update command on
+the page where the user grants consent.</p>
+
+<p>When a page loads with consent denied and then reloads with consent granted
+after a consent change, Google tags may lose key data points from the
+original page. Any subsequent reports may be incomplete.</p>
+
+<p>For example, in Google Analytics, many sessions with consent could be missing a
+session_start event.</p>
+
+<p>To avoid this issue, call the update command whenever a user&#39;s consent state
+changes.</p>
+
+<h3 id="consent_updated_immediately_before_page_reload" data-text="Consent updated immediately before page reload" tabindex="-1">Consent updated immediately before page reload</h3>
+
+<p>In some cases, when a consent type updates from denied to granted, Google
+tags may send measurements based on this update. If the update command
+is called as the page unloads, the browser may cancel this network traffic
+before it completes. Any subsequent reports may be incomplete.</p>
+
+<p>If possible, ensure that update commands are logged well before the page
+unloads.</p>
+
+
+
+<h2 id="next-steps" data-text="Next steps" tabindex="-1">Next steps</h2>
+
+<ul>
+<li><a href="/tag-platform/security/guides/consent-debugging#start-debugging">Verify consent mode works</a></li>
+</ul>
+
+<h2 id="legacy_tag_controls" data-text="Legacy tag controls" tabindex="-1">Legacy tag controls</h2>
+
+<p>If you use legacy tags, such as ga.js, analytics.js, or conversion.js, update to
+gtag.js or Google Tag Manager.</p>
+
+<p>To learn more about other legacy tag&#39;s privacy controls, see the following
+documentation:</p>
+
+<ul>
+<li><a href="//support.google.com/analytics/answer/9019185" target="_blank">Google Analytics</a> </li>
+<li><a href="//support.google.com/google-ads/answer/9606827" target="_blank">Google Ads</a> </li>
+<li><a href="//support.google.com/campaignmanager/topic/6228828" target="_blank">Campaign Manager</a> </li>
+</ul>
+
+<h2 id="related-links" data-text="Related links" tabindex="-1">Related links</h2>
+
+<ul>
+<li><a href="/tag-platform/tag-manager/templates/consent-apis">Tag Manager consent APIs</a></li>
+<li><a href="/tag-platform/gtagjs/reference">Google tag consent APIs</a></li>
+<li><a href="/tag-platform/tag-manager/templates/consent-apis">Create a consent mode template</a></li>
+<li><a href="//tagmanager.google.com/gallery/#/?filter=consent&amp;page=1">Community Template Gallery</a></li>
+<li><a href="//support.google.com/tagmanager/answer/10718549">Tag Manager consent mode support</a></li>
+<li><a href="//support.google.com/analytics/answer/10270783">Configure consent mode with Google Analytics</a></li>
+</ul>
+  
+
+  
+    <devsite-hats-survey class="nocontent" data-nosnippet
+      hats-id="DKRaoUob0LHkahqinNfT0UVetZ4H"
+      listnr-id="82128"></devsite-hats-survey>
+  
+</div>
+
+  
+    
+      <devsite-recommendations display="in-page" hidden yield>
+      </devsite-recommendations>
+    
+    
+      
+    <devsite-thumb-rating position="footer">
+    </devsite-thumb-rating>
+  
+       
+         <devsite-feedback
+  position="footer"
+  project-name="Tag Platform"
+  product-id="102259"
+  bucket="tag-platform"
+  context=""
+  version="t-devsite-webserver-20260901-r00-rc00.480082941541264604"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="footer"
+  class="nocontent"
+  data-nosnippet
+  
+  
+  
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/touchicon-180-new.png"
+  
+  
+    project-support-url="https://developers.google.com/tag-platform/support"
+  
+  
+  >
+
+  <button>
+  
+    
+    Send feedback
+  
+  </button>
+</devsite-feedback>
+       
+    
+    
+      <devsite-recommendations id="recommendations-link" yield></devsite-recommendations>
+    
+  
+
+  <div class="devsite-floating-action-buttons"></div></article>
+
+
+<devsite-content-footer class="nocontent" data-nosnippet>
+  <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
+  <p>Last updated 2026-07-30 UTC.</p>
+</devsite-content-footer>
+
+
+<devsite-notification
+>
+</devsite-notification>
+
+
+  
+<div class="devsite-content-data">
+  
+    
+    
+    <template class="devsite-thumb-rating-feedback">
+      <devsite-feedback
+  position="thumb-rating"
+  project-name="Tag Platform"
+  product-id="102259"
+  bucket="tag-platform"
+  context=""
+  version="t-devsite-webserver-20260901-r00-rc00.480082941541264604"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="thumb-rating"
+  class="nocontent"
+  data-nosnippet
+  
+  
+  
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/touchicon-180-new.png"
+  
+  
+    project-support-url="https://developers.google.com/tag-platform/support"
+  
+  
+  >
+
+  <button>
+  
+    Need to tell us more?
+  
+  </button>
+</devsite-feedback>
+    </template>
+  
+  
+    <template class="devsite-content-data-template">
+      [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Missing the information I need","missingTheInformationINeed","thumb-down"],["Too complicated / too many steps","tooComplicatedTooManySteps","thumb-down"],["Out of date","outOfDate","thumb-down"],["Samples / code issue","samplesCodeIssue","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-07-30 UTC."],[],["Developers implementing their own consent solution should set up consent mode by first defining the default consent state before user interaction. They should then update the consent state based on user choices, ensuring updates are tracked before any page transitions.  Consent mode has been updated to include `ad_user_data` and `ad_personalization` parameters. Users with older consent mode versions need to upgrade to v2.  Legacy tags should be updated to gtag.js or Google Tag Manager.\n"]]
+    </template>
+  
+</div>
+            
+          </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+          
+            
+          
+        </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+          
+            
+<nav class="devsite-footer-linkboxes nocontent"
+     aria-label="Footer links"
+     data-nosnippet>
+  
+  <ul class="devsite-footer-linkboxes-list">
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Engage</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/program"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Google Developer Program
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/community"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Google Developer Groups
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/community/experts"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Google Developer Experts
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/community/accelerators"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+          
+            Accelerators
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/community/nvidia"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+            
+              
+              
+            
+          
+            Google Cloud & NVIDIA
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Connect</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//googledevelopers.blogspot.com"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Blog
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://bsky.app/profile/developers.google.com"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Bluesky
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.instagram.com/googlefordevs/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Instagram
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.linkedin.com/showcase/googledevelopers/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+          
+            LinkedIn
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//twitter.com/googledevs"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+            
+          
+            X (Twitter)
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//www.youtube.com/user/GoogleDevelopers"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 6)"
+            >
+            
+              
+              
+            
+          
+            YouTube
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Build</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developer.android.com/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Android
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developer.chrome.com/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Chrome
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://firebase.google.com/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Firebase
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://aistudio.google.com/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+          
+            Google AI Studio
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://antigravity.google/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+            
+          
+            Google Antigravity
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://cloud.google.com/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 6)"
+            >
+            
+          
+            Google Cloud
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://play.google.com/console/about/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 7)"
+            >
+            
+          
+            Google Play
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/products"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 8)"
+            >
+            
+              
+              
+            
+          
+            View all
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+  
+</nav>
+          
+        </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+          
+            
+
+<div class="devsite-footer-utility nocontent" data-nosnippet>
+  
+  
+  <nav class="devsite-footer-sites" aria-label="Other Google Developers websites">
+    <a href="https://developers.google.com/"
+       class="devsite-footer-sites-logo-link gc-analytics-event"
+       data-category="Site-Wide Custom Events"
+       data-label="Footer Google Developers Link">
+      <picture>
+        
+        <img class="devsite-footer-sites-logo"
+             src="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/lockup-google-for-developers.svg"
+             loading="lazy"
+             alt="Google Developers">
+      </picture>
+    </a>
+    <ul class="devsite-footer-sites-list">
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//developer.android.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Android Link"
+         
+         >
+          Android
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//developer.chrome.com/home"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Chrome Link"
+         
+         >
+          Chrome
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//firebase.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Firebase Link"
+         
+         >
+          Firebase
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//cloud.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Google Cloud Platform Link"
+         
+         >
+          Google Cloud Platform
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//ai.google.dev/"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Google AI Link"
+         
+         >
+          Google AI
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="/products"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer All products Link"
+         
+         >
+          All products
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+  
+
+  
+  <nav class="devsite-footer-utility-links" aria-label="Utility links">
+    
+    <ul class="devsite-footer-utility-list">
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/terms/site-terms"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          Terms
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          Privacy
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 glue-cookie-notification-bar-control">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="#"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Manage cookies link"
+         
+           aria-hidden="true"
+         >
+          Manage cookies
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+    
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es"
+        >Español</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+  </nav>
+</div>
+          
+        </devsite-footer-utility>
+        <devsite-panel>
+          
+        </devsite-panel>
+        
+          <devsite-concierge
+  
+  
+    data-info-panel
+  
+  
+    data-ai-panel
+  
+  
+  
+  
+    data-api-explorer-panel
+  >
+</devsite-concierge>
+        
+      </section>
+      </section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar></devsite-snackbar>
+    <devsite-tooltip ></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics>
+      
+        <script type="application/json" analytics>[{&#34;dimensions&#34;: {&#34;dimension4&#34;: &#34;Tag Platform&#34;, &#34;dimension11&#34;: false, &#34;dimension6&#34;: &#34;en&#34;, &#34;dimension1&#34;: &#34;Signed out&#34;, &#34;dimension3&#34;: false, &#34;dimension5&#34;: &#34;bg&#34;}, &#34;gaid&#34;: &#34;UA-24532603-1&#34;, &#34;metrics&#34;: {&#34;ratings_count&#34;: &#34;metric2&#34;, &#34;ratings_value&#34;: &#34;metric1&#34;}, &#34;purpose&#34;: 1}]</script>
+<script type="application/json" tag-management>{&#34;at&#34;: &#34;True&#34;, &#34;ga4&#34;: [{&#34;id&#34;: &#34;G-272J68FCRF&#34;, &#34;purpose&#34;: 1}, {&#34;id&#34;: &#34;G-7GV7GNWXNZ&#34;, &#34;purpose&#34;: 0}], &#34;ga4p&#34;: [{&#34;id&#34;: &#34;G-272J68FCRF&#34;, &#34;purpose&#34;: 1}], &#34;gtm&#34;: [{&#34;id&#34;: &#34;GTM-T98GCPGN&#34;, &#34;purpose&#34;: 1}, {&#34;id&#34;: &#34;GTM-W5HBGSR&#34;, &#34;purpose&#34;: 0}], &#34;parameters&#34;: {&#34;internalUser&#34;: &#34;False&#34;, &#34;language&#34;: {&#34;machineTranslated&#34;: &#34;False&#34;, &#34;requested&#34;: &#34;bg&#34;, &#34;served&#34;: &#34;en&#34;}, &#34;pageType&#34;: &#34;article&#34;, &#34;projectName&#34;: &#34;Tag Platform&#34;, &#34;signedIn&#34;: &#34;False&#34;, &#34;tenant&#34;: &#34;developers&#34;, &#34;recommendations&#34;: {&#34;sourcePage&#34;: &#34;&#34;, &#34;sourceType&#34;: 0, &#34;sourceRank&#34;: 0, &#34;sourceIdenticalDescriptions&#34;: 0, &#34;sourceTitleWords&#34;: 0, &#34;sourceDescriptionWords&#34;: 0, &#34;experiment&#34;: &#34;&#34;}, &#34;experiment&#34;: {&#34;ids&#34;: &#34;&#34;}}}</script>
+      
+    </devsite-analytics>
+    
+      <devsite-badger></devsite-badger>
+    
+    
+    
+    
+<script nonce="sHsPw3lIrnPS8BvhYE6HEatAmm0THx">
+  
+  (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/js/app_loader.js', '[1,"bg",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037","https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers","https://developers-dot-devsite-v2-prod.appspot.com",null,null,["/_pwa/developers/manifest.json","https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/favicon-new.png","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap"],1,null,[1,6,8,12,14,17,21,25,50,52,63,70,75,76,80,87,91,92,93,97,98,100,101,102,103,104,105,107,108,109,110,112,113,116,117,118,120,122,124,125,126,127,129,130,131,132,133,134,135,136,138,140,141,147,148,149,151,152,156,157,158,159,161,163,164,168,169,170,179,180,182,183,186,191,193,196],"AIzaSyAP-jjEJBzmIyKR4F-3XITp8yM9T1gEEI8","AIzaSyB6xiKGDR5O3Ak2okS4rLkauxGUG7XP0hg","developers.google.com","AIzaSyAQk0fBONSGUqCNznf6Krs82Ap1-NV6J4o","AIzaSyCCxcqdrZ_7QMeLCRY20bh_SXdAYqy70KY",null,null,null,["Search__enable_ai_search_summaries_for_all","DevPro__enable_firebase_workspaces_card","Concierge__enable_key_takeaways","MiscFeatureFlags__developers_footer_dark_image","DevPro__enable_google_one_card","Analytics__enable_clearcut_logging","Profiles__enable_release_notes_notifications","MiscFeatureFlags__gdp_dashboard_reskin_enabled","Concierge__enable_remove_info_panel_tags","TpcFeatures__enable_unmirrored_page_left_nav","SignIn__enable_l1_signup_flow","Cloud__enable_cloud_dlp_service","DevPro__enable_google_payments_buyflow","Search__enable_suggestions_from_borg","DevPro__enable_credits_banner","Cloud__cache_serialized_dynamic_content","Profiles__enable_developer_profile_pages_as_content","MiscFeatureFlags__enable_variable_operator_index_yaml","Concierge__enable_pushui","AIStudioInteractionsToggle__interactions_are_default","Profiles__enable_completecodelab_endpoint","Profiles__enable_recognition_badges","Analytics__enable_devpro_interaction_logging","Search__enable_dynamic_content_confidential_banner","DevPro__enable_developer_subscriptions","Profiles__enable_join_program_group_endpoint","Profiles__enable_profile_collections","DevPro__enable_cloud_innovators_plus","MiscFeatureFlags__enable_firebase_utm","MiscFeatureFlags__developers_footer_image","DevPro__enable_devpro_offers","DevPro__enable_code_assist","Profiles__enable_auto_apply_credits","DevPro__remove_eu_tax_intake_form","Experiments__reqs_query_experiments","Profiles__enable_awarding_url","Profiles__enable_developer_profiles_callout","Concierge__enable_key_takeaways_new_ui","MiscFeatureFlags__enable_variable_operator","Cloud__fast_free_trial","CloudShell__cloud_shell_button","Significatio__enable_by_tenant","Profiles__enable_developer_profile_benefits_ui_redesign","BookNav__enable_tenant_cache_key","DevPro__enable_devsite_captcha","Concierge__enable_concierge_restricted","Profiles__enable_stripe_subscription_management","Search__enable_page_map","Profiles__require_profile_eligibility_for_signin","Profiles__enable_dashboard_curated_recommendations","DevPro__enable_embed_profile_creation","Concierge__enable_devsite_llm_tools","Profiles__enable_public_developer_profiles","MiscFeatureFlags__enable_explicit_template_dependencies","MiscFeatureFlags__fix_lower_breadcrumbs","Concierge__enable_concierge","Concierge__enable_actions_menu","Search__enable_ai_eligibility_checks","MiscFeatureFlags__enable_explain_this_code","CloudShell__cloud_code_overflow_menu","Profiles__enable_page_saving","TpcFeatures__proxy_prod_host","Search__enable_ai_search_summaries","DevPro__enable_free_benefits","DevPro__enable_g1_integration","Cloud__enable_cloud_shell_fte_user_flow","DevPro__enable_vertex_credit_card","Profiles__enable_user_type","Profiles__enable_targeted_hero","MiscFeatureFlags__enable_framebox_badge_methods","Profiles__enable_completequiz_endpoint","Profiles__enable_callout_notifications","Cloud__enable_cloud_shell","MiscFeatureFlags__enable_appearance_cookies","DevPro__enable_g1_ineligible_redirect","Cloud__enable_free_trial_server_call","Profiles__enable_purchase_prompts","Profiles__enable_playlist_community_acl","Cloud__enable_legacy_calculator_redirect","Profiles__enable_complete_playlist_endpoint","Cloud__enable_cloudx_experiment_ids","EngEduTelemetry__enable_engedu_telemetry","DevPro__enable_enterprise","MiscFeatureFlags__enable_project_variables","MiscFeatureFlags__enable_view_transitions","Search__enable_ai_search_summaries_restricted","MiscFeatureFlags__remove_cross_domain_tracking_params","DevPro__enable_nvidia_credits_card"],null,null,"AIzaSyBLEMok-5suZ67qRPzx0qUtbnLmyT_kCVE","https://developerscontentserving-pa.clients6.google.com","AIzaSyCM4QpTRSqP5qI4Dvjt4OAScIN8sOUlO-k","https://developerscontentsearch-pa.clients6.google.com",1,4,null,"https://developerprofiles-pa.clients6.google.com",[1,"developers","Google for Developers","developers.google.com",null,"developers-dot-devsite-v2-prod.appspot.com",null,null,[1,1,[1],null,null,null,null,null,null,null,null,[1],null,null,null,null,null,null,[1],[1,null,null,[1,20],"/recommendations/information"],null,null,null,[1,1,1],[1,1,null,1,1,null,null,["/meridian"]],[1,null,null,null,null,null,null,["/admob","/ad-manager/mobile-ads-sdk","/ml-kit"]],null,[null,["/meridian","/youtube/devices/"]],1,null,[1]],null,[null,null,null,null,null,null,"/images/lockup-new.svg","/images/touchicon-180-new.png",null,null,null,null,1,null,null,null,null,null,null,null,null,1,null,null,null,"/images/lockup-dark-theme-new.svg",[]],[],null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[6,1,14,15,20,22,23,29,32,36],null,[[null,null,null,[3,7,10,2,39,17,4,32,24,11,12,13,34,15,25],null,null,[1,[["docType","Choose a content type",[["Tutorial",null,null,null,null,null,null,null,null,"Tutorial"],["Guide",null,null,null,null,null,null,null,null,"Guide"],["Sample",null,null,null,null,null,null,null,null,"Sample"]]],["product","Choose a product",[["Android",null,null,null,null,null,null,null,null,"Android"],["ARCore",null,null,null,null,null,null,null,null,"ARCore"],["ChromeOS",null,null,null,null,null,null,null,null,"ChromeOS"],["Firebase",null,null,null,null,null,null,null,null,"Firebase"],["Flutter",null,null,null,null,null,null,null,null,"Flutter"],["Assistant",null,null,null,null,null,null,null,null,"Google Assistant"],["GoogleCloud",null,null,null,null,null,null,null,null,"Google Cloud"],["GoogleMapsPlatform",null,null,null,null,null,null,null,null,"Google Maps Platform"],["GooglePay",null,null,null,null,null,null,null,null,"Google Pay & Google Wallet"],["GooglePlay",null,null,null,null,null,null,null,null,"Google Play"],["Tensorflow",null,null,null,null,null,null,null,null,"TensorFlow"]]],["category","Choose a topic",[["AiAndMachineLearning",null,null,null,null,null,null,null,null,"AI and Machine Learning"],["Data",null,null,null,null,null,null,null,null,"Data"],["Enterprise",null,null,null,null,null,null,null,null,"Enterprise"],["Gaming",null,null,null,null,null,null,null,null,"Gaming"],["Mobile",null,null,null,null,null,null,null,null,"Mobile"],["Web",null,null,null,null,null,null,null,null,"Web"]]]]]],[1,1],null,1],[[["UA-24532603-1"],["UA-22084204-5"],null,null,["UA-24532603-5"],["GTM-T98GCPGN"],null,[["G-272J68FCRF"],null,null,[["G-272J68FCRF",2]]],[["UA-24532603-1",2]],null,[["UA-24532603-5",2]],[["GTM-T98GCPGN",2]],1],[[14,11],[13,10],[6,5],[11,8],[12,9],[3,2],[1,1],[4,3],[15,12],[5,4],[16,13]],[[1,1],[2,2]]],null,4,null,null,null,null,null,null,null,null,null,null,null,null,null,"developers.devsite.google",null,null,null,null,null,[]],null,"pk_live_5170syrHvgGVmSx9sBrnWtA5luvk9BwnVcvIi7HizpwauFG96WedXsuXh790rtij9AmGllqPtMLfhe2RSwD6Pn38V00uBCydV4m",1,null,"https://developerscontentinsights-pa.clients6.google.com","AIzaSyCg-ZUslalsEbXMfIo9ZP8qufZgo3LSBDU","AIzaSyDxT0vkxnY_KeINtA4LSePJO-4MAZPMRsE","https://developers.clients6.google.com",["https://codeassist.google.com","https://code-assist-free-tier.corp.google.com"],null,"AIzaSyBQom12tzI-rybN7Sf-KfeL4nwm-Rf7PmI\n",null,null,"https://developers.googleapis.com"]')
+  
+</script>
+
+    <devsite-a11y-announce></devsite-a11y-announce>
+  </body>
+</html>

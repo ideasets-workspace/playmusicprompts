@@ -1,0 +1,11 @@
+{
+  "task_id": "REPAIR-02-STORE",
+  "parent_lane": "three-player-20260911",
+  "objective": "Isolate durable preferences and an owned playback session from stale player tabs",
+  "scope": "A standalone storage module and meaningful Node tests under this directory only",
+  "dependencies": ["Parent-diagnosed stale whole-state persistence defect"],
+  "status": "VERIFIED_MODULE_SCOPE",
+  "exact_next_action": "Parent copies the module into the website and verifies actual player integration",
+  "completion_evidence": "room-store-checks.json: 15 actual exported-module tests passed; source SHA256 94bdd4b19800b1482ca2f0b852168bb0de0406ee7a0addd25eaf8c7cda472618. No browser or integrated-player claim.",
+  "required_cases": ["legacy migration", "independent latest-field saves", "stale empty close", "explicit clear", "owned and foreign automatic progression", "foreign song position", "legacy writes after migration", "write failures"]
+}

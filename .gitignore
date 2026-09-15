@@ -1,0 +1,34 @@
+node_modules/
+.pnpm-store/
+.turbo/
+apps/web/.next/
+apps/web/next-env.d.ts
+apps/web/out/
+packages/*/dist/
+packages/*/generated/
+*.local.txt
+*.local.json
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+website/.state/
+website/.secrets/
+website/.secrets-owner/
+website/.logs/
+website/coverage/
+
+# Agent governance and memory tiers (owner's personal orders, account/instance identifiers) — never published.
+.claude/
+.cursor/
+memory/
+CLAUDE.md
+AGENTS.md
+
+# Deploy artefacts and CloudFront snapshots (the origin-verify header value lives in them) — never published.
+deploy-20260915/artifacts/
+deploy-20260915/cf-www-config*.json
+
+# Downloaded third-party source copies kept for research (300+ MB, external licences) — not part of the published tree.
+docs/research/_sources/

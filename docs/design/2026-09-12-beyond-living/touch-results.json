@@ -1,0 +1,44 @@
+{
+  "name": "touch",
+  "expectedChecks": 16,
+  "passedChecks": 16,
+  "passed": true,
+  "problems": [],
+  "script": "docs/design/2026-09-12-beyond-living/touch-check.mjs",
+  "scriptSHA256": "1396fbcd7ec4cd30faa8519258ccef888293944c076f1500cf21a95dba9b75ed",
+  "args": [
+    "C:\\Berk\\PlayMusicPrompts\\docs\\design\\2026-09-12-beyond-living\\touch-check.mjs"
+  ],
+  "productionAsset": null,
+  "report": {
+    "checks": 16,
+    "names": [
+      "initially inert without world and mode",
+      "availability alone does not intercept camera",
+      "primary held gesture uses actual canvas coordinates and capture",
+      "second pointer cannot steal a gesture or create a ripple",
+      "strength rises smoothly with finite bounded time",
+      "drag maps and clamps out of bounds",
+      "release gives camera priority and decays without new onset",
+      "right click and secondary pointer do not intercept",
+      "cancel releases exactly once",
+      "blur prevents stuck hold",
+      "Motion off gates pointer and preserves user mode choice",
+      "Motion resume requires a fresh intentional pointer",
+      "switching to original world releases pointer and removes touch cursor",
+      "reset clears transient force across scene switches",
+      "disabling returns pointer to camera and keeps serial monotonic",
+      "disposal is idempotent and removes event ownership"
+    ],
+    "scope": "Actual production pointer state with explicit EventTarget/canvas boundary; browser drag/render reviewed separately"
+  },
+  "execution": {
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "error": null,
+    "elapsedMs": 59,
+    "stdout": "{\n  \"checks\": 16,\n  \"names\": [\n    \"initially inert without world and mode\",\n    \"availability alone does not intercept camera\",\n    \"primary held gesture uses actual canvas coordinates and capture\",\n    \"second pointer cannot steal a gesture or create a ripple\",\n    \"strength rises smoothly with finite bounded time\",\n    \"drag maps and clamps out of bounds\",\n    \"release gives camera priority and decays without new onset\",\n    \"right click and secondary pointer do not intercept\",\n    \"cancel releases exactly once\",\n    \"blur prevents stuck hold\",\n    \"Motion off gates pointer and preserves user mode choice\",\n    \"Motion resume requires a fresh intentional pointer\",\n    \"switching to original world releases pointer and removes touch cursor\",\n    \"reset clears transient force across scene switches\",\n    \"disabling returns pointer to camera and keeps serial monotonic\",\n    \"disposal is idempotent and removes event ownership\"\n  ],\n  \"scope\": \"Actual production pointer state with explicit EventTarget/canvas boundary; browser drag/render reviewed separately\"\n}\n",
+    "stderr": ""
+  }
+}

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vault of Falling Stars — PlayMusicPrompts design mockup (/t/&lt;id&gt;)</title>
+<!--
+  TRACK — the public share page for one take. Every field the engine's envelope returns is a
+  designed chapter (D-PMP-07), the provenance panel carries the machine-readable Art. 50 mark
+  (D-PMP-06 wording), and the page is the oEmbed/OG target for growth (K20).
+-->
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/player.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/track.css">
+<link rel="stylesheet" href="css/motion.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.185.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.185.1/examples/jsm/"}}</script>
+</head>
+<body>
+<div class="app" data-rail="expanded" data-drawer="closed">
+  <aside class="rail" id="rail" aria-label="Navigation"></aside>
+  <header class="topbar"></header>
+
+  <main class="main" id="main">
+    <section class="track-hero" aria-labelledby="t-title">
+      <div class="backdrop" id="backdrop" aria-hidden="true"></div>
+      <div class="container">
+        <img class="track-cover" id="cover" alt="">
+        <div>
+          <span class="eyebrow">Catalogue · choir · cinematic</span>
+          <h1 class="track-title" id="t-title">Vault of Falling Stars</h1>
+          <p class="track-prompt">Composed for you by Ideasets Hybrid Music Composer from <q>colossal cinematic orchestral build, brass swells, choir pads</q></p>
+          <div class="track-stats"><span><b>2:58</b> measured</span><span><b>932</b> plays</span><span><b>140</b> likes</span><span><b>96 BPM</b></span></div>
+          <div class="track-actions">
+            <button class="btn-go" type="button"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Play</button>
+            <button class="btn-ghost" type="button">Add to queue</button>
+            <button class="icon-btn" type="button" aria-label="Like" aria-pressed="false" id="like"></button>
+            <button class="icon-btn" type="button" aria-label="Share" id="share"></button>
+            <button class="icon-btn" type="button" aria-label="Add to playlist" id="add"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="section" aria-labelledby="rec-h">
+        <div class="section-head"><h2 class="h2" id="rec-h">The take record</h2><span class="faint" style="font-size:var(--fs-sm)">every measurement the composer returned — nothing hidden</span></div>
+        <div class="record" data-reveal>
+          <article class="chapter"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5L20 7"/></svg>Route</h3>
+            <dl class="kv"><dt>Model</dt><dd>lyria-3-pro-preview</dd><dt>Why</dt><dd>vocals requested</dd><dt>Surface</dt><dd>interactions</dd><dt>Request</dt><dd>7decbad8…</dd></dl></article>
+          <article class="chapter"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>Sound measurements</h3>
+            <dl class="kv"><dt>Duration</dt><dd>178.4 s</dd><dt>Loudness</dt><dd class="ok">−9.0 LUFS</dd><dt>True peak</dt><dd class="ok">−1.0 dBTP</dd><dt>Loudness range</dt><dd>7.3 LU</dd><dt>Codec</dt><dd>mp3 · 44.1 kHz · 2 ch</dd></dl></article>
+          <article class="chapter"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Pulse</h3>
+            <dl class="kv"><dt>Tempo</dt><dd>96.0 BPM measured</dd><dt>Downbeat</dt><dd class="warn">not measured</dd><dt>Bar</dt><dd>2.5 s · 4/4</dd><dt>Conform</dt><dd>trim, bar-aligned</dd></dl></article>
+          <article class="chapter"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 18V6M9 18v-8M14 18V4M19 18v-5"/></svg>Mastering chain</h3>
+            <dl class="kv"><dt>Target</dt><dd>cinematic_trailer</dd><dt>Mode</dt><dd>linear gain + TP limiter</dd><dt>Applied gain</dt><dd>+0.68 dB</dd><dt>Verified by</dt><dd>ebur128, independent pass</dd></dl></article>
+          <article class="chapter"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Lyrics verification</h3>
+            <dl class="kv"><dt>Mode</dt><dd>ai_write · en</dd><dt>Metric</dt><dd>PER</dd><dt>Score</dt><dd class="ok">0.089 · PASS</dd><dt>Domain</dt><dd>separated stem</dd></dl></article>
+          <article class="chapter"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M3 12h18"/></svg>Composition plan</h3>
+            <p>intro 8 · build 8 · verse 16 · pre-chorus 8 · chorus 16 · bridge 8 · drop 8 · outro 8 bars — energy curve <b>cinematic</b>.</p></article>
+          <article class="chapter prov"><div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/><path d="m9 12 2 2 4-4"/></svg></div>
+            <div><h3 style="margin-bottom:6px">Provenance</h3><p>Generated music, marked for the EU AI Act Art. 50. Rights: commercial use and sync permitted; copyright not warranted. C2PA credentials: not embedded in the file today — stated, not implied.</p><code>ideasets:pmp:take:7decbad8-2918-4c80-b658-248d6e7ac14e · synthid=on · c2pa=false</code></div></article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="more-h">
+        <div class="section-head"><h2 class="h2" id="more-h">More like this</h2><a class="see-all" href="musics.html">Browse</a></div>
+        <div class="carousel" id="more" data-reveal></div>
+      </section>
+
+      <footer class="footer">
+        <span>© 2026 PlayMusicPrompts · Ideasets</span>
+        <a href="legal.html#privacy">Privacy</a><a href="legal.html#terms">Terms</a><a href="legal.html#cookies">Cookies &amp; ads</a>
+        <span style="margin-left:auto">Design mockup — values are review content mirroring the real envelope shape (docs/api/06).</span>
+      </footer>
+    </div>
+  </main>
+</div>
+
+<script type="module">
+  import { AppShell, ICONS, coverOf } from "./js/shell.js";
+  import { TiltCard } from "./js/fx/motion.js";
+  import { SAMPLE_TRACKS } from "./js/constants.js";
+  const t = SAMPLE_TRACKS[1];
+  const shell = new AppShell({ current: "musics.html", nowPlaying: t });
+  document.getElementById("cover").src = coverOf(t, 640);
+  document.getElementById("backdrop").style.backgroundImage = `url('${coverOf(t, 256)}')`;
+  document.getElementById("like").innerHTML = ICONS.heart;
+  document.getElementById("share").innerHTML = ICONS.share;
+  document.getElementById("add").innerHTML = ICONS.plus;
+  document.getElementById("more").innerHTML = SAMPLE_TRACKS.filter((x) => x.id !== t.id).slice(0, 6).map((x) => `
+    <article class="cover-card"><a href="track.html" aria-label="${x.title}"><img src="${coverOf(x, 420)}" alt="" loading="lazy"></a>
+      <button class="play-fab" type="button" aria-label="Play ${x.title}">${ICONS.play}</button>
+      <div class="cc-title">${x.title}</div><div class="cc-sub"><span>${x.genres[0].replace(/_/g, " ")}</span><i></i><span>${x.plays.toLocaleString()} plays</span></div></article>`).join("");
+  TiltCard.attachAll(".cover-card, .chapter, .track-cover");
+  shell.reveal();
+</script>
+</body>
+</html>

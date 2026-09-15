@@ -1,0 +1,25 @@
+const fs=require('fs');
+const path='website_html_templates/player-three-scene.js';let s=fs.readFileSync(path,'utf8');
+function replace(a,b){if(!s.includes(a))throw Error('Missing '+a.slice(0,100));s=s.replace(a,()=>b);}
+replace('changeScene();\n    let sum','changeScene();\n    const visualDt=dt*look.motionSpeed;\n    let sum');
+replace('dt*(v>amplitudes[i]?14:7)','dt*(v>amplitudes[i]?14:7)/look.smoothing');
+replace('bass=bass/bassCount*reactivity;mid=mid/midCount*reactivity;treble=treble/trebleCount*reactivity;','bass=bass/bassCount*reactivity*look.bassGain;mid=mid/midCount*reactivity*look.midGain;treble=treble/trebleCount*reactivity*look.trebleGain;');
+replace('energy+=(sum/160-energy)*Math.min(1,dt*8);if(motion)phase+=dt;','energy+=(sum/160-energy)*Math.min(1,dt*8/look.smoothing);if(motion){phase+=visualDt;recordEnergy=energy*reactivity*(look.bassGain+look.midGain+look.trebleGain)/3;for(let i=0;i<160;i++){const hz=45*Math.pow(16000/45,i/159);recordAmplitudes[i]=amplitudes[i]*reactivity*(hz<250?look.bassGain:hz<2000?look.midGain:look.trebleGain);}}');
+replace('const v=motion?amplitudes[i]*reactivity:0;const length=.035+v*.61;','const v=recordAmplitudes[i];const length=.035+v*.61*look.recordSpectrum;');
+replace('dust.rotation.y=phase*.006;}else sculpture.position.y=2.75;','dust.rotation.y=phase*.006;}');
+replace('rotor.rotation.z-=spinVelocity*dt;','rotor.rotation.z-=spinVelocity*visualDt;');
+replace('controls.autoRotateSpeed=.26;','controls.autoRotateSpeed=look.orbitSpeed;');
+replace("positions.getY(i)+dt*(weather==='rain'?-3.2:.6)","positions.getY(i)+visualDt*(weather==='rain'?-3.2:.6)");
+replace('const reactive=motion?energy*reactivity:0;','const reactive=recordEnergy;');
+replace("bloom.strength=model==='record'?.2+intensity*.65:(collection.view?.bloom??.4)*(.55+intensity*.7);","bloom.strength=(model==='record'?.2+intensity*.65:(collection.view?.bloom??.4)*(.55+intensity*.7))*look.bloom;");
+replace('const musical=features.update({frequency,sampleRate,fftSize,dt,active,audible,reactivity});','const musical=features.update({frequency,sampleRate,fftSize,dt,active,audible,reactivity,smoothing:look.smoothing});\n    for(let i=0;i<64;i++){const hz=40*Math.pow(Math.min(16000,sampleRate*.48)/40,i/64);visualSpectrum[i]=musical.spectrum[i]*(hz<250?look.bassGain:hz<2000?look.midGain:look.trebleGain); }');
+replace('collection.update({time:phase,dt,bass,mid,treble,energy:energy*reactivity,motion,intensity,active,spinVelocity,...musical,quality:autoLow?\'low\':quality});','collection.update({time:phase,dt:visualDt,bass,mid,treble,energy:recordEnergy,motion,intensity,active,spinVelocity,...musical,spectrum:visualSpectrum,pulse:musical.pulse*look.pulseGain,onset:look.pulseGain>0&&musical.onset,look,quality:autoLow?\'low\':quality});');
+replace('const v=motion?amplitudes[Math.min(159,Math.floor(i/99*159))]*reactivity:0;','const v=recordAmplitudes[Math.min(159,Math.floor(i/99*159))]*look.recordSpectrum;');
+replace('controls.update(dt);composer.render();','controls.update(visualDt);composer.render();');
+replace('world:currentWorld,reactivity});','world:currentWorld,reactivity,look:{...look}});');
+replace('return{diagnostics,setModel(id)',`return{diagnostics,setVisualSettings(value){const previous=look;look=sanitizeVisualSettings(value);renderer.toneMappingExposure=look.exposure;bloom.radius=look.bloomRadius;grade.uniforms.saturation.value=look.saturation;grade.uniforms.vignette.value=look.vignette;grade.enabled=look.saturation!==1||look.vignette!==0;recordFog.density=look.recordFog;reflector.material.uniforms.color.value.setHex(0x34303e).multiplyScalar(look.recordReflect);particlesGeometry.setDrawRange(0,Math.round(particleCount*look.particles));dust.material.opacity=.45*look.particleGlow;if(previous.framing!==look.framing)reset();},setModel(id)`);
+replace('reflector.getRenderTarget().dispose();composer.dispose();','reflector.getRenderTarget().dispose();grade.dispose();bloom.dispose();composer.dispose();');
+fs.writeFileSync(path,s);
+const f='website_html_templates/player-three-features.js';let features=fs.readFileSync(f,'utf8');
+features=features.replace('reactivity=1}={})','reactivity=1,smoothing=1}={})').replace('const attack=1-Math.exp(-dt*24),release=1-Math.exp(-dt*7);','const response=Math.max(.25,Math.min(2.5,finite(smoothing,1)));\n    const attack=1-Math.exp(-dt*24/response),release=1-Math.exp(-dt*7/response);');
+fs.writeFileSync(f,features);

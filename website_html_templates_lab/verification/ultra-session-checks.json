@@ -1,0 +1,64 @@
+{
+  "checks": [
+    {
+      "name": "Named real-time bookmark stored",
+      "pass": true
+    },
+    {
+      "name": "Bookmark seeks actual media",
+      "pass": true
+    },
+    {
+      "name": "Bookmark survives reload",
+      "pass": true
+    },
+    {
+      "name": "Queue search filters without dropping tracks",
+      "pass": true
+    },
+    {
+      "name": "No-match state visible",
+      "pass": true
+    },
+    {
+      "name": "Real timer arms with independent fade",
+      "pass": true
+    },
+    {
+      "name": "Timer cancellation clears deadline",
+      "pass": true
+    },
+    {
+      "name": "Fade approaches silence before expiry",
+      "pass": true,
+      "details": {
+        "leftDb": -29.661311576720998,
+        "rightDb": -29.661311576720998,
+        "peakDb": -26.545392327060963,
+        "correlation": 1,
+        "reduction": 0,
+        "headroomDb": 0,
+        "sampleRate": 48000
+      }
+    },
+    {
+      "name": "Volume change cannot cancel sleep deadline",
+      "pass": true
+    },
+    {
+      "name": "Playback restarts with restored fade gain",
+      "pass": true
+    },
+    {
+      "name": "After-song timer suppresses automatic next",
+      "pass": true
+    },
+    {
+      "name": "Mobile session panel fits viewport",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "pass": true,
+  "date": "2026-09-11T12:18:49.891Z"
+}

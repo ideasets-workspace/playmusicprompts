@@ -1,0 +1,39 @@
+/* =====================================================================================
+   css/track.css — the single-track share page (/t/<id>): one big stop. Cover-as-backdrop,
+   the full take record (every field the engine returns, designed, never raw JSON — D-PMP-07),
+   provenance panel (EU AI Act Art. 50), share + like + add actions.
+   ===================================================================================== */
+
+.track-hero { position: relative; overflow: hidden; padding: var(--sp-16) 0 var(--sp-10); }
+.track-hero .backdrop { position: absolute; inset: -60px; background: center / cover no-repeat; filter: blur(60px) saturate(1.5) brightness(.5); opacity: .8; }
+.track-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(5,3,8,.15), var(--bg-0) 92%); }
+.track-hero .container { position: relative; z-index: 1; display: grid; grid-template-columns: 320px minmax(0, 1fr); gap: var(--sp-10); align-items: end; }
+.track-cover { width: 320px; aspect-ratio: 1; border-radius: var(--r-xl); object-fit: cover; box-shadow: 0 40px 80px -30px rgba(0,0,0,1), var(--glow-accent); transform: perspective(900px) rotateY(-6deg); transition: transform var(--dur-slow) var(--ease-out); }
+.track-cover:hover { transform: perspective(900px) rotateY(0deg) translateY(-4px); }
+.track-title { font-size: clamp(2rem, 3.6vw + .5rem, 3.6rem); font-weight: 800; letter-spacing: -.02em; line-height: 1.05; margin-top: var(--sp-3); }
+.track-prompt { margin-top: var(--sp-4); font-size: var(--fs-lg); color: var(--ink-dim); max-width: 60ch; }
+.track-prompt q { font-style: italic; }
+.track-actions { display: flex; gap: var(--sp-3); flex-wrap: wrap; margin-top: var(--sp-6); align-items: center; }
+.track-actions .icon-btn { border: 1px solid var(--line-strong); }
+.track-stats { display: flex; gap: var(--sp-5); margin-top: var(--sp-4); color: var(--ink-faint); font-size: var(--fs-sm); }
+.track-stats b { color: var(--ink); font-family: var(--font-mono); font-weight: 600; }
+
+.record { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--sp-4); }
+.chapter { padding: var(--sp-5); border-radius: var(--r-lg); background: var(--bg-2); border: 1px solid var(--line); }
+.chapter h3 { display: flex; align-items: center; gap: var(--sp-2); font-size: var(--fs-sm); font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-dim); margin-bottom: var(--sp-4); }
+.chapter h3 svg { width: 16px; height: 16px; color: var(--accent-2); }
+.kv { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--sp-2) var(--sp-4); font-size: var(--fs-sm); }
+.kv dt { color: var(--ink-faint); }
+.kv dd { margin: 0; font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--ink); text-align: right; }
+.kv dd.ok { color: var(--success); }
+.kv dd.warn { color: var(--accent-warm); }
+.chapter p { font-size: var(--fs-sm); color: var(--ink-dim); }
+.prov { grid-column: 1 / -1; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: var(--sp-4); align-items: center; background: linear-gradient(90deg, rgba(0,255,255,.06), var(--bg-2) 60%); border-color: rgba(0,255,255,.2); }
+.prov .badge { width: 56px; height: 56px; border-radius: var(--r-md); display: grid; place-items: center; background: rgba(0,255,255,.1); color: var(--accent-2); }
+.prov .badge svg { width: 28px; height: 28px; }
+.prov code { font-family: var(--font-mono); font-size: var(--fs-2xs); color: var(--ink-faint); word-break: break-all; }
+
+@media (max-width: 1023.98px) {
+  .track-hero .container { grid-template-columns: 1fr; align-items: start; }
+  .track-cover { width: min(320px, 70vw); transform: none; }
+}

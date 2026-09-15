@@ -1,0 +1,665 @@
+﻿{
+    "schema":  "berk.deep-research/v1",
+    "status":  "complete-with-named-gaps",
+    "date":  "2026-09-05",
+    "mode":  "MODE B — owner research order (delegated worker slice)",
+    "topic":  "country-based-consent-ux",
+    "main_report":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\2026-09-05-country-based-consent-ux.md",
+    "index":  "docs/README.md — NOT updated by this worker (write-isolation: parent owns the index)",
+    "source_counts":  {
+                          "authoritative":  26,
+                          "academic":  6,
+                          "academic_full":  5,
+                          "primary_full":  22
+                      },
+    "claim_counts":  {
+                         "verified_3plus":  3,
+                         "single_source":  8,
+                         "unverified":  1
+                     },
+    "planned_artifacts":  "report + captures + google-consent docs + README + manifest",
+    "artifacts":  [
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-au-oaic-tracking-pixels.html",
+                          "role":  "capture",
+                          "sha256":  "b438768906fa13cb33a636dbadac390d37b9704e17d7a20ca022e0335ec13933",
+                          "bytes":  160839,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-au-oaic-tracking-pixels.txt",
+                          "role":  "capture",
+                          "sha256":  "62051e0372a5fb8e24f385924bf605da36aea86d07a9b3bfba27c7f99cb860a6",
+                          "bytes":  32426,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-au-oaic-tracking-pixels-text.txt",
+                          "role":  "capture",
+                          "sha256":  "d638e6dafc8b9ed3fd104e49b191f52359eef4b0694badfc4de5d9a3abe9868d",
+                          "bytes":  31186,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-br-anpd-guia-cookies-launch.html",
+                          "role":  "capture",
+                          "sha256":  "3d55cda5e1ef8adef21a869baba947b9aba3c24f9aa28c491d4b0dd098e4036b",
+                          "bytes":  266469,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-br-anpd-guia-cookies-launch.txt",
+                          "role":  "capture",
+                          "sha256":  "93431cfbd25aedf9aeddfdc5ced2da0c1110c61ed176117e3c3ce2c98bccbe96",
+                          "bytes":  6457,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-br-anpd-recomendacoes-cookies-govbr.html",
+                          "role":  "capture",
+                          "sha256":  "4bef6199fe03e2a104816b0edbfd98a06d5eaa06853383d07c5395e752fc48ed",
+                          "bytes":  152909,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-ccpa-regs-7025-opt-out-preference-signals.html",
+                          "role":  "capture",
+                          "sha256":  "9cc29ace9c84f19072fc0dad3e621b4adc124657fecd0361cc57b8b0f0a4ef5b",
+                          "bytes":  5834,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-ch-edoeb-cookie-leitfaden-2025-10-07-redline.pdf",
+                          "role":  "capture",
+                          "sha256":  "a4dda093e4507a7ef23bcb2b6b58486e2a172b5277584e080e100df9ddf0418c",
+                          "bytes":  14625,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-ch-edoeb-cookie-leitfaden-2025-redline-text.txt",
+                          "role":  "capture",
+                          "sha256":  "69e1f448ad5801a54439ffe236deccd19f9cbe133c4862bd84b5dabd1b7b5750",
+                          "bytes":  101413,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-cnil-2022-12-02-consent-literature-review.pdf",
+                          "role":  "capture",
+                          "sha256":  "072f85745848f8549de68d76f91e5b3316e114732ce3bdfade3e0ea411c2dc95",
+                          "bytes":  830590,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-de-dsk-oh-telemedien-2021.pdf",
+                          "role":  "capture",
+                          "sha256":  "2a519f6a298650671d2c51774bb9b58b92224abce471bc35a826f6d6ba55f3d1",
+                          "bytes":  800115,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-de-dsk-oh-telemedien-2021-text.txt",
+                          "role":  "capture",
+                          "sha256":  "e5f4c4b5910e864af842aaece21b6a8c01c13113abc45b4e985d3332c72cdce9",
+                          "bytes":  95099,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-edpb-03-2022-deceptive-design-v2-text.txt",
+                          "role":  "capture",
+                          "sha256":  "d0353d528c741654938705906e91a9a942d0c94f0a8d97a301705e05c215ea71",
+                          "bytes":  207802,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-edpb-2-2023-art53-v2-text.txt",
+                          "role":  "capture",
+                          "sha256":  "2cec617c5f852b961ca10909adfd279f8cce5fd281634eadc82b3b8c73f11459",
+                          "bytes":  40497,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-edpb-guidelines-03-2022-deceptive-design-v2.pdf",
+                          "role":  "capture",
+                          "sha256":  "102a823e8b10ea9e3d13343014df2d9268797dd1be86cc4ef6a1154641159efe",
+                          "bytes":  2095037,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-edpb-guidelines-2-2023-art53-v2.pdf",
+                          "role":  "capture",
+                          "sha256":  "dbc1d37783e35ae8668925f92a590ae282eec24c98381a5a8f91b5c2048b5b03",
+                          "bytes":  409348,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-edpb-guidelines-2-2023-art53-v2.txt",
+                          "role":  "capture",
+                          "sha256":  "6989675d3a5b896e83d8beec17d0d10c57199268b779cb13283cc5740c5f3614",
+                          "bytes":  42865,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-eprivacy-2002-58-consolidated-eurlex.html",
+                          "role":  "capture",
+                          "sha256":  "405a6c259adfee7fe9d62041cfa1c07856063cd9e6ece6befb1fb685c108882b",
+                          "bytes":  315388,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-eprivacy-2002-58-consolidated-text.txt",
+                          "role":  "capture",
+                          "sha256":  "2038246720e0c4acaf4f30bc63c685d40235c2f435d277da66651e505e6694de",
+                          "bytes":  34963,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-es-aepd-guia-cookies.pdf",
+                          "role":  "capture",
+                          "sha256":  "f968645392c12d3670221cf459f9765a34bb6e6dc12de3d6d753a2b917687085",
+                          "bytes":  1285192,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-es-aepd-guia-cookies-text.txt",
+                          "role":  "capture",
+                          "sha256":  "559b1f195446308263b75e8898f42c1cf3648aaa6df6d1ea3820518abdbf63d5",
+                          "bytes":  114536,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-fetch-manifest.tsv",
+                          "role":  "capture",
+                          "sha256":  "6dfbafe44ec462e3e145fc817d48909cc1b01b400b3088957a195bedb6afc5f8",
+                          "bytes":  16045,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-fr-cnil-cookies-faq.html",
+                          "role":  "capture",
+                          "sha256":  "d7405fe901c4c3cd470b65373caf951fd335c266b946508a4e17daebeac772af",
+                          "bytes":  168451,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-fr-cnil-cookies-faq-text.txt",
+                          "role":  "capture",
+                          "sha256":  "5cb56d50d200b01ee73f2f072acec6f2e85317636e71e78d1868a0b7a3771b93",
+                          "bytes":  44241,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-habib-2022-chi-doi.html",
+                          "role":  "capture",
+                          "sha256":  "5438378cf2a4a7f3da697a81684acc2355050a2ea7daea105dda455db35b80dd",
+                          "bytes":  5716,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-habib-2022-chi-fulltext.txt",
+                          "role":  "capture",
+                          "sha256":  "b904bc206bad10ce43f722aeb252ff2010033ddc18533e3263f000f8c066e713",
+                          "bytes":  119840,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-ico-consent-or-pay-about.html",
+                          "role":  "capture",
+                          "sha256":  "170fc513103a3517ad820765fbbdadb090c7e36b3f847809a1075dd63666ec0f",
+                          "bytes":  72240,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-ico-consent-or-pay-about-text.txt",
+                          "role":  "capture",
+                          "sha256":  "0ede4f48cd20f64aec57553ba8b53c51c3961073ce4a156879b1c33e3a27aaec",
+                          "bytes":  21957,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-ico-storage-access-consent-in-practice.html",
+                          "role":  "capture",
+                          "sha256":  "077c12434b375f7389affd0cde890534c4fde1b05fe7e9a61a5745fb3acc9bbf",
+                          "bytes":  83113,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-ico-storage-access-consent-in-practice-text.txt",
+                          "role":  "capture",
+                          "sha256":  "91a5689b8aae8738a8d82dce69358a39ab4f6f6612019215499b23c1e1a61ed4",
+                          "bytes":  28614,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-jp-ppc-kojinkanren-2021-04-07.pdf",
+                          "role":  "capture",
+                          "sha256":  "78427459875ce5d4e079263206fae3f204b99965d1ea6a7debeb91d6e329ceb4",
+                          "bytes":  543448,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-jp-ppc-kojinkanren-2021-04-07.txt",
+                          "role":  "capture",
+                          "sha256":  "030460038e13ef001ad9580128e377e5db21dece53f50cef434deb35bda26b5f",
+                          "bytes":  17535,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-kvkk-ilke-karari-2026-347.html",
+                          "role":  "capture",
+                          "sha256":  "c633659d1963ccc484ee602de4480b5532e44ba21b8b05dd7af730c25f9d6859",
+                          "bytes":  104515,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-kvkk-ilke-karari-2026-347.txt",
+                          "role":  "capture",
+                          "sha256":  "069c663e899f76be788b106699316b1100c15d1d8881f298e49b55e098006534",
+                          "bytes":  9162,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-kvkk-kurul-2022-229-en.html",
+                          "role":  "capture",
+                          "sha256":  "d8f98f5d22bb38ec9c5a1dc95aa6f4656fa9a1a5aca888a9b89354a01b094224",
+                          "bytes":  124269,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-kvkk-kurul-2022-229-tr.html",
+                          "role":  "capture",
+                          "sha256":  "bec0691c3cbec5ea05d9b57c42bc9377d8af60bdf84d93d59b525e3f0a0dc266",
+                          "bytes":  134240,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-kvkk-kurul-2022-229-tr.txt",
+                          "role":  "capture",
+                          "sha256":  "525a1ba7249337691bf694e336b10873f667007d8dc06d9af7f63774253590d9",
+                          "bytes":  33835,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-kvkk-kurul-2022-229-tr-text.txt",
+                          "role":  "capture",
+                          "sha256":  "45bf165a2398c36eff876d9cd22c2945ee2ad195ad7b74a35ccddec8e334e22c",
+                          "bytes":  29848,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-machuletz-boehme-2020-popets.pdf",
+                          "role":  "capture",
+                          "sha256":  "9ef419ba956dc8fa821dc66c02956193c088a65a52be795637a000ee0adf82f5",
+                          "bytes":  1308374,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-machuletz-boehme-2020-popets-text.txt",
+                          "role":  "capture",
+                          "sha256":  "d1e5896b2b481d47a19e84bbe3a3e6c24937efe685f6ec517fa790cdd3e89494",
+                          "bytes":  88721,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-mdpi-2023-egov-cookie-interfaces-50-countries.html",
+                          "role":  "capture",
+                          "sha256":  "582fdf552bd9cfce80d6158cfd93831435a7c3d5215577aa6ec53a50589f3772",
+                          "bytes":  2207,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-mdpi-2023-egov-cookie-interfaces-fulltext.txt",
+                          "role":  "capture",
+                          "sha256":  "af2eb528fca7e054ba212d0f5ed872ee47f8498a398cced11abe9ef0d6a65cad",
+                          "bytes":  106063,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-nouwens-2020-arxiv.pdf",
+                          "role":  "capture",
+                          "sha256":  "bfb6f1ee7fa32dde6b255bea970855ee8fb20fca83b1bbc2458386aed8fae440",
+                          "bytes":  1293053,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-nouwens-2020-arxiv-abs.html",
+                          "role":  "capture",
+                          "sha256":  "e8b0dea9fed84ab86c5d924c3fd8f1e5ff503a5e3ae73d4055c875c39d11623b",
+                          "bytes":  44265,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-nouwens-2020-arxiv-text.txt",
+                          "role":  "capture",
+                          "sha256":  "bc59ba135dd6b94d1c2d9522683c5fe1d26472f783ec942c2cd276bc656bee60",
+                          "bytes":  74320,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-nouwens-2020-chi-mit-dspace-text.txt",
+                          "role":  "capture",
+                          "sha256":  "65c99276e6762d7f7bea10708f5c6924c39cd6b71bbf600476037c00ea157564",
+                          "bytes":  74854,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-peer-deezer-personal-data.html",
+                          "role":  "capture",
+                          "sha256":  "da25308f71a06dc8bcf5900eb9f2b628cfdddb9b8ff698865e9f557cb14503f7",
+                          "bytes":  86418,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-peer-deezer-personal-data-text.txt",
+                          "role":  "capture",
+                          "sha256":  "3ff3b6f326685528fe27bb816e9fe24f5ade2f763356cddd230556e08b9e7708",
+                          "bytes":  27681,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-peer-soundcloud-cookie-policy.html",
+                          "role":  "capture",
+                          "sha256":  "3b21519b456261df7ce4cfb6984830ef4932f5fe233b2ae04624017978b84709",
+                          "bytes":  86647,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-peer-soundcloud-cookie-policy.txt",
+                          "role":  "capture",
+                          "sha256":  "026a50d41cf12a1173c9bcdd74c14ac81d536923d43980d378c695b6a36e0141",
+                          "bytes":  16982,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-peer-spotify-cookies-policy.html",
+                          "role":  "capture",
+                          "sha256":  "ad3de3dcb8fe0c5976697f79deef43ad1559cc4703040f6ca388cb05b3f512eb",
+                          "bytes":  100501,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-peer-spotify-cookies-policy.txt",
+                          "role":  "capture",
+                          "sha256":  "845a0cc8bb8c0f1091b48c1c0b3c6cdd1a504c8620c96c1eabc478da4fe84c74",
+                          "bytes":  19537,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-peer-suno-cookie-policy.html",
+                          "role":  "capture",
+                          "sha256":  "911fc85d427d63b495256090fc038017fc415618c2c0141f736ba3a4c979a2f1",
+                          "bytes":  119494,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-peer-suno-cookie-policy.txt",
+                          "role":  "capture",
+                          "sha256":  "300861794d76cd4082e26e8797765cdb6c5bb84eb01ec570b1fc4eca14e189ab",
+                          "bytes":  5895,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-secondary-consenteo-gpc-2026-text.txt",
+                          "role":  "capture",
+                          "sha256":  "debd40c8a5528da3bbeb00443a1c81fcfb942f24c388f6f0b4722e8876ab8ffd",
+                          "bytes":  21957,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-secondary-morihamada-jp-appi-2026-text.txt",
+                          "role":  "capture",
+                          "sha256":  "761f909f536200526bc4c07e4a8c26c8298268124a76ca711f20aa47d155d489",
+                          "bytes":  34780,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-uk-duaa-2025-s112.html",
+                          "role":  "capture",
+                          "sha256":  "bacc80d4967b1a65b01fcd88479cdcd378e22248fdc871f74deee09a032dbe9a",
+                          "bytes":  44478,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-uk-duaa-2025-s112.txt",
+                          "role":  "capture",
+                          "sha256":  "a682a8091debc582635baed7696aa7378d660c6a3d3c99f9f0d7627f3f5cc2bc",
+                          "bytes":  12644,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-uk-duaa-2025-sch12-scheduleA1.html",
+                          "role":  "capture",
+                          "sha256":  "1bd30b9e225d8ac256356a17515c79fc3f6fae988f2853ad3713c5be44210ec3",
+                          "bytes":  54087,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-uk-duaa-2025-sch12-scheduleA1.txt",
+                          "role":  "capture",
+                          "sha256":  "dcee9e0db423374b5e8295c1a40d06df1c6ce620dbd47a7abdc144098793f34c",
+                          "bytes":  16017,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-uk-duaa-factsheet-pecr.html",
+                          "role":  "capture",
+                          "sha256":  "a89a882c34c6f1f012c4589178b40f7103889721ce102555ca4b951555e730a0",
+                          "bytes":  84072,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-utz-2019-ccs-arxiv.pdf",
+                          "role":  "capture",
+                          "sha256":  "2f4df64c9ffed5c124431d06b1df490e0ecfd607a1f1f552752d6f020230560d",
+                          "bytes":  974237,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_sources\\2026-09-05-consent-utz-2019-ccs-arxiv.txt",
+                          "role":  "capture",
+                          "sha256":  "201a8b2373d7d644cfa2228e01cbe221fc4f218b2832c68dcaf0100c9884dcf5",
+                          "bytes":  101348,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\external-api\\google-consent\\admob-android-privacy-ump.html",
+                          "role":  "external-api-doc",
+                          "sha256":  "cfa7574b584881c9b8a008c26c50ac929ca379fb5992fa46eb85536173cb965a",
+                          "bytes":  208019,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\external-api\\google-consent\\admob-android-privacy-ump.txt",
+                          "role":  "external-api-doc",
+                          "sha256":  "ffef47ec6be6522ab42fc8547a54f0d5f7374304d6a809ec25bf5f7065703a63",
+                          "bytes":  33348,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\external-api\\google-consent\\admob-android-privacy-us-states.html",
+                          "role":  "external-api-doc",
+                          "sha256":  "c811f1bb92206cc93ff8e774f21d22b3c52a92688206a2de796a09657dc94944",
+                          "bytes":  144482,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\external-api\\google-consent\\admob-android-privacy-us-states.txt",
+                          "role":  "external-api-doc",
+                          "sha256":  "a1663efd79a37975d0bf8050be70c34059b2be37c8916782f369546c687848f3",
+                          "bytes":  10133,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\external-api\\google-consent\\admob-ios-privacy-idfa-att.html",
+                          "role":  "external-api-doc",
+                          "sha256":  "5231936a1f03991e45124a0b743a24ccd6047b6e168615f241a439baa56289a2",
+                          "bytes":  129769,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\external-api\\google-consent\\admob-ios-privacy-idfa-att.txt",
+                          "role":  "external-api-doc",
+                          "sha256":  "63764e5746eba576df1b60a6ea8a85d669926a96447abce959f590a98a8351cb",
+                          "bytes":  7610,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\external-api\\google-consent\\admob-ios-privacy-ump.html",
+                          "role":  "external-api-doc",
+                          "sha256":  "a4455c459c300a056b51b1c7e2c91a0d1489bd4079acf8d934cf56f1abb43e08",
+                          "bytes":  182934,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\external-api\\google-consent\\admob-ios-privacy-ump.txt",
+                          "role":  "external-api-doc",
+                          "sha256":  "07b1a806c74335dab1dc0bfe6b76aad88e91e5aeae69b7457a70923b2589b3e1",
+                          "bytes":  18375,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\external-api\\google-consent\\admob-ios-privacy-us-states.html",
+                          "role":  "external-api-doc",
+                          "sha256":  "022896ec797dd3f26f0e6af6b28f8d081de8255734cd0cc3cb603ba3ac2bec94",
+                          "bytes":  137789,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\external-api\\google-consent\\admob-ios-privacy-us-states.txt",
+                          "role":  "external-api-doc",
+                          "sha256":  "49ba47ca02360e7394f0586c0da090f1868b5ca44515b3cb9dd950266cb8b4b6",
+                          "bytes":  9707,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\external-api\\google-consent\\aws-cloudfront-adding-cloudfront-headers.html",
+                          "role":  "external-api-doc",
+                          "sha256":  "6f36180c0cf432044e570c83b6f451ac6412f88ed40cbf6d3b24049221dfb071",
+                          "bytes":  31998,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\external-api\\google-consent\\aws-cloudfront-adding-cloudfront-headers.txt",
+                          "role":  "external-api-doc",
+                          "sha256":  "4c20070987ee3d432851e1218560ca477fe126a92a8fe71479a0451c0ec9c3f3",
+                          "bytes":  9862,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\external-api\\google-consent\\google-eu-user-consent-policy-help.html",
+                          "role":  "external-api-doc",
+                          "sha256":  "5b9d9a4a5b82cdbc8dbe9109671d0fd59c5f81c51fb2a3953d1cf4af4d761d78",
+                          "bytes":  109706,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\external-api\\google-consent\\google-eu-user-consent-policy-help.txt",
+                          "role":  "external-api-doc",
+                          "sha256":  "51f5fa9477413246a5142e4cc86d19d12aefc855df6b72ef43e60ad49e757ab9",
+                          "bytes":  21910,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\external-api\\google-consent\\README.md",
+                          "role":  "external-api-doc",
+                          "sha256":  "66353df65d0afea89753b2f571defad6abb0cdefe3bcd31b2bcc3cf3e0565b7e",
+                          "bytes":  3699,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\external-api\\google-consent\\tag-platform-consent-mode-setup.html",
+                          "role":  "external-api-doc",
+                          "sha256":  "7bba318c7c216167f827567421e7f6065ae48830eda00ef70f98700d0907a62e",
+                          "bytes":  121764,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\external-api\\google-consent\\tag-platform-consent-mode-setup.txt",
+                          "role":  "external-api-doc",
+                          "sha256":  "aec2de99705f79d4f2ffed83aa749d36c7c5b97fe26a8bb3d647a6fc59e6bdb6",
+                          "bytes":  24839,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\2026-09-05-country-based-consent-ux.md",
+                          "role":  "main_report",
+                          "sha256":  "90e79d1913a3e3aa8f748e7c0afb13d5e3139a06700214da419683aded402c79",
+                          "bytes":  40630,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_runs\\2026-09-05-consent-extract-texts.py",
+                          "role":  "run-script-or-manifest",
+                          "sha256":  "0ff28174f58905934f334852a2dbf762dc32d984420ba1c913aa9f5720ac76ed",
+                          "bytes":  5973,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_runs\\2026-09-05-consent-fetch-sources.cjs",
+                          "role":  "run-script-or-manifest",
+                          "sha256":  "0420cf9a8126fa46dc2e3cc8956f9134fe858ed93f3977a75cf02a0c7c60d561",
+                          "bytes":  8460,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_runs\\2026-09-05-consent-fetch-sources.ps1",
+                          "role":  "run-script-or-manifest",
+                          "sha256":  "2ee1aeee2fa21ab5f5dc9938f1e067694b6f879a73d9aaf2f7ac6744c704d6d2",
+                          "bytes":  4543,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_runs\\2026-09-05-consent-part-a.md",
+                          "role":  "run-script-or-manifest",
+                          "sha256":  "7eddb371553eaef1f4ec99d3673393c0c41cb8aa7fe3dbec1c8bd7f709172df4",
+                          "bytes":  6009,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_runs\\2026-09-05-consent-part-b.md",
+                          "role":  "run-script-or-manifest",
+                          "sha256":  "0208d25bf20bc1c0a9c95d8d66f3db62d6203225a6361623acbed8272efcd431",
+                          "bytes":  10814,
+                          "read_back":  true
+                      },
+                      {
+                          "path":  "C:\\Berk\\PlayMusicPrompts\\docs\\research\\_runs\\2026-09-05-consent-part-c.md",
+                          "role":  "run-script-or-manifest",
+                          "sha256":  "e433af9cf907f43c4ee005b0089708d5d69a7c4d244868721e82c25de91d3428",
+                          "bytes":  15162,
+                          "read_back":  true
+                      }
+                  ],
+    "standards_ledger":  true,
+    "scope_plan":  true,
+    "source_register":  true,
+    "query_ledger":  true,
+    "claim_ledger":  true,
+    "contradiction_ledger":  true,
+    "preservation_matrix":  false,
+    "english_artifacts":  true,
+    "indexed":  false,
+    "delegations":  [
+
+                    ],
+    "frontier_axes":  "n/a (not a frontier trigger run)",
+    "known_gaps":  [
+                       "KR PIPA primary",
+                       "IN DPDP Act/Rules primary",
+                       "Quebec Law 25 s.8.1 primary text",
+                       "LGPD text + ANPD cookie guide PDF",
+                       "GDPR Art.83 and national penalty ceilings",
+                       "Garante (IT) and AP (NL) cookie guidance",
+                       "KVKK Cerez Rehberi PDF and 2024 amendment text",
+                       "GA4 consent-requirements help page",
+                       "Google Play Data safety help",
+                       "Apple ATT / HIG primary",
+                       "Google banner best-practice doc",
+                       "YouTube Music consent flow",
+                       "Consent Mode behaviour-modelling thresholds",
+                       "UMP geography mechanism",
+                       "Westlaw 7025 full text (403)",
+                       "EDOEB own PDF (403; datenrecht redline used)",
+                       "docs/README.md index entry not written (parent owns)"
+                   ],
+    "completed_at":  "2026-09-05T14:58:00.8584568Z"
+}

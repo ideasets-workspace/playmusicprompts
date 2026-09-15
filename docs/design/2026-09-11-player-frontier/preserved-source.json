@@ -1,0 +1,37 @@
+[
+  {
+    "file": "player-three.js",
+    "sha256": "D5BEA00F0092945EE7C13FC0C9D90494C39D352AED4A34BAEB7F71ED4A33C422",
+    "unchanged": true
+  },
+  {
+    "file": "player-three-audio.js",
+    "sha256": "3CDF3111556E2FC46CAD4AD9044FF756B1E6A8BC9873E9E8FD96409583F5A302",
+    "unchanged": true
+  },
+  {
+    "file": "player-three-store.js",
+    "sha256": "94BDD4B19800B1482CA2F0B852168BB0DE0406EE7A0ADDD25EAF8C7CDA472618",
+    "unchanged": true
+  },
+  {
+    "file": "player-three-session.js",
+    "sha256": "678745DC822D74239C0A8CE6D282F8B205CEC45F65E4E33A8DA9693CB1D61DAF",
+    "unchanged": true
+  },
+  {
+    "file": "player-three-layout.css",
+    "sha256": "5FC2E764376129C85A83A5F2A989C3E168BDA49DBB00EB0FAA404FC4D71F1931",
+    "unchanged": true
+  },
+  {
+    "file": "player-three.css",
+    "sha256": "8ABB0989B419DB3B525DE883312FF8DCAB92B29C24BBC95099535F93FA8EE041",
+    "unchanged": true
+  },
+  {
+    "file": "player-three-worlds.js",
+    "sha256": "0176067B6805BC573CF09B833400B0E606109ACB2F488B4E19535F2C2367B89F",
+    "unchanged": true
+  }
+]

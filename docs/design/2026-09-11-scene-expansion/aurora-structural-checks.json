@@ -1,0 +1,51 @@
+{
+  "three": "185",
+  "frozen": true,
+  "groups": [
+    {
+      "name": "Aurora curtain 1",
+      "type": "Mesh",
+      "vertices": 3625,
+      "triangles": 6912,
+      "finitePositions": true
+    },
+    {
+      "name": "Aurora curtain 2",
+      "type": "Mesh",
+      "vertices": 3625,
+      "triangles": 6912,
+      "finitePositions": true
+    },
+    {
+      "name": "Aurora curtain 3",
+      "type": "Mesh",
+      "vertices": 3625,
+      "triangles": 6912,
+      "finitePositions": true
+    },
+    {
+      "name": "Aurora curtain 4",
+      "type": "Mesh",
+      "vertices": 3625,
+      "triangles": 6912,
+      "finitePositions": true
+    },
+    {
+      "name": "Aurora suspended light",
+      "type": "Points",
+      "vertices": 150,
+      "triangles": 0,
+      "finitePositions": true
+    }
+  ],
+  "shaderPrograms": 13,
+  "assetRender": {
+    "frame": 1,
+    "calls": 5,
+    "triangles": 27648,
+    "points": 150,
+    "lines": 0
+  },
+  "shaderErrors": [],
+  "disposed": true
+}

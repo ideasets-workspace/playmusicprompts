@@ -1,0 +1,21 @@
+{
+  "schema": "berk.deep-research-preflight/v1",
+  "status": "external_research_needed",
+  "date": "2026-08-17",
+  "topic": "rhythmic-monotony-and-take-similarity-gate",
+  "cwd": "c:\\Berk\\SsmContentAssetCreator",
+  "decision_served": "D-SSM-31 (Berk's verdict, 2026-08-17, verbatim in DECISIONS.md: 'hep aynı ristm carbon copy bu çöp') demands that rhythmic monotony WITHIN a take and carbon-copy similarity BETWEEN takes become MEASURED GATES that fail before any output can reach him. The gate's methods and thresholds may not be invented (Clause 4, Clause 7): this research establishes the frontier measurement methods and their calibration procedures.",
+  "governing_files_read_this_session": [
+    {"path": ".claude/memory/DECISIONS.md", "note": "D-SSM-31 appended this session with his verbatim verdict; the presentation ban and the quality-axis consequence are recorded there"},
+    {"path": "generate_music_hybrid_model/music_studio/bar_calibration.py", "note": "read in full this session — the project's existing calibrated-threshold pattern (tolerance limits) that any new gate threshold must follow"},
+    {"path": ".claude/memory/BOOT.md", "note": "read in full this session — law 5 (never guess a threshold; the 0.08 motion floor lesson) binds this gate's bar exactly as it bound the film gates"}
+  ],
+  "local_conclusion": {
+    "absence_search": "grep -i 'self.similar|novelty|autocorrel|rhythm_divers|cross.similar|fingerprint|monoton' across generate_music_hybrid_model/ returned ONLY lexicon-data word coincidences (4 data files, e.g. 'monotone' dictionary entries); zero engine modules measure rhythm or take similarity. scripts/ carries one film-side tempogram mention (holivuud_parse.py), nothing wired to the music engine.",
+    "conclusion": "The gate does not exist in any form; its measurement methods are an external-evidence question (MIR literature), not a local read."
+  },
+  "external_research_needed": true,
+  "uncertainty": "Which frontier MIR methods measure (a) rhythmic monotony/repetitiveness WITHIN a music track and (b) near-duplicate similarity BETWEEN generated takes, with real published numbers, implementable in our own Python (Google-only services constraint binds SERVICES, not algorithm implementations), and how are their pass/fail thresholds lawfully calibrated?",
+  "scope_plan": "docs/research/2026-08-17-rhythmic-monotony-and-take-similarity-gate.md (R3 section at its head)",
+  "read_back": true
+}

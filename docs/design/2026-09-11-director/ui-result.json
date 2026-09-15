@@ -1,0 +1,64 @@
+{
+  "sourcePath": "C:\\Berk\\PlayMusicPrompts\\website_html_templates\\player-three-director-ui.js",
+  "passed": 14,
+  "total": 14,
+  "results": [
+    {
+      "name": "An armed mismatched score can be disarmed",
+      "pass": true
+    },
+    {
+      "name": "A new score cannot be armed without a usable track and cue",
+      "pass": true
+    },
+    {
+      "name": "Failed clear keeps the storage failure feedback",
+      "pass": true
+    },
+    {
+      "name": "Successful clear reports success and exits a running score",
+      "pass": true
+    },
+    {
+      "name": "Repeated live-region text creates only one text mutation",
+      "pass": true
+    },
+    {
+      "name": "Motion off is held and does not mark the instrument as performing",
+      "pass": true
+    },
+    {
+      "name": "Mismatched score routes wait instead of claiming active modulation",
+      "pass": true
+    },
+    {
+      "name": "Before-first-cue score routes wait",
+      "pass": true
+    },
+    {
+      "name": "Low-detail disabled bloom explains why this route has no visible effect",
+      "pass": true
+    },
+    {
+      "name": "A target in another scene remains dormant",
+      "pass": true
+    },
+    {
+      "name": "Paused route waits and active route reflects the supplied real source",
+      "pass": true
+    },
+    {
+      "name": "Disabled route takes precedence over Motion and quality constraints",
+      "pass": true
+    },
+    {
+      "name": "Repeated update does not repeatedly mutate the screen-reader status",
+      "pass": true
+    },
+    {
+      "name": "Deleting a focused cue returns focus to next, previous or capture",
+      "pass": true
+    }
+  ],
+  "limitation": "Actual UI function logic with a DOM boundary facade; no browser, visual, shader or audio verification."
+}

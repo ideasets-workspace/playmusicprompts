@@ -1,0 +1,9 @@
+{
+  "passed": 3,
+  "scope": "Extracted production persist dispatch, not browser playback",
+  "checks": [
+    "Explicit motion choice saves while audio restoration is pending",
+    "Restoration cannot claim or overwrite session/position",
+    "Explicit empty queue stores current:null"
+  ]
+}

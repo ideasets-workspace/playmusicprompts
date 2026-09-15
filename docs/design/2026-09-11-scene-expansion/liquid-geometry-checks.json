@@ -1,0 +1,61 @@
+{
+  "checks": [
+    {
+      "name": "draw call and vertex budgets",
+      "passed": true,
+      "evidence": {
+        "vertices": 16071,
+        "triangles": 29952,
+        "drawCalls": 8,
+        "deformationRevision": 82
+      }
+    },
+    {
+      "name": "actual body deformation",
+      "passed": true
+    },
+    {
+      "name": "rotation responds",
+      "passed": true,
+      "evidence": 0.6400000000000003
+    },
+    {
+      "name": "finite coordinates and normalized normals",
+      "passed": true,
+      "evidence": {
+        "minLength": 0.9999999587554518,
+        "maxLength": 1.0000000473360522
+      }
+    },
+    {
+      "name": "body remains inside framing",
+      "passed": true,
+      "evidence": {
+        "min": [
+          -1.846522569656372,
+          -1.7929562330245972,
+          -1.8312501907348633
+        ],
+        "max": [
+          2.270169496536255,
+          1.5376867055892944,
+          1.505851149559021
+        ]
+      }
+    },
+    {
+      "name": "motion off restores exact static rest",
+      "passed": true,
+      "evidence": [
+        0,
+        0.2,
+        -0.1,
+        "XYZ"
+      ]
+    },
+    {
+      "name": "palette reaches actual materials",
+      "passed": true
+    }
+  ]
+}

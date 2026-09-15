@@ -1,0 +1,485 @@
+Menyiapkan UMP SDK | iOS | Google for Developers
+Langsung ke konten utama
+AdMob
+Dokumentasi
+GMA Next-Gen SDK untuk Android
+Mobile Ads SDK for iOS
+Plugin Mobile Ads Unity
+Plugin Flutter Mobile Ads
+Mobile Ads SDK untuk Android (Legacy)
+AdMob API
+Contoh
+GMA Next-Gen SDK untuk Android
+Mobile Ads SDK for iOS
+Plugin Mobile Ads Unity
+Plugin Flutter Mobile Ads
+Mobile Ads SDK untuk Android (Legacy)
+AdMob API
+Bantuan dan komunitas
+Dukungan
+Dukungan Google Mobile Ads SDK
+Dukungan AdMob
+Pusat Bantuan
+Pusat Bantuan AdMob
+Komunitas Bantuan AdMob
+Komunitas
+Discord
+Blog Developer Google Ads
+YouTube
+Iklan dan Pengukuran Google
+/
+English
+Deutsch
+Español
+Español – América Latina
+Français
+Indonesia
+Italiano
+Polski
+Português – Brasil
+Tiếng Việt
+Türkçe
+Русский
+עברית
+العربيّة
+فارسی
+हिंदी
+বাংলা
+ภาษาไทย
+中文 – 简体
+中文 – 繁體
+日本語
+한국어
+Masuk
+Mobile Ads SDK for iOS
+Panduan
+Referensi
+Download
+Contoh
+Dukungan
+AdMob
+Dokumentasi
+Lainnya
+Contoh
+Lainnya
+Bantuan dan komunitas
+Lainnya
+Panduan
+Referensi
+Download
+Contoh
+Dukungan
+Menyiapkan Google Mobile Ads SDK
+Catatan rilis
+Penghentian penggunaan dan penghentian
+Memigrasikan versi SDK
+Mengaktifkan iklan pengujian
+Rendering iklan iPhone X
+Beberapa jendela iPad
+Menggunakan keahlian agen
+Memilih format iklan
+Layar pembuka aplikasi
+Iklan banner
+Menyiapkan iklan banner
+Menggunakan banner adaptif inline untuk banner yang dapat di-scroll
+Menggunakan banner yang dapat diciutkan
+Menetapkan ukuran banner tetap
+Banner cerdas
+Interstisial
+Native
+Memuat iklan native
+Menampilkan iklan native
+Menampilkan iklan native layar penuh
+Menata tata letak iklan dengan template native
+Menetapkan fitur lanjutan
+Merespons peristiwa video
+Memvalidasi iklan native
+Reward
+Interstisial reward
+Mengintegrasikan Mediasi AdMob
+Menyiapkan Mediasi AdMob
+Memilih sumber iklan
+Mengintegrasikan sumber iklan
+AdColony
+AppLovin
+BidMachine
+BIGO Ads SDK
+Chartboost
+DT Exchange (previously Fyber)
+i-mobile
+InMobi
+ironSource
+Liftoff Monetize (previously Vungle)
+LY Ads Network (previously Line Ads Network)
+maio
+Meta Audience Network (previously Facebook)
+Mintegral
+Moloco
+myTarget
+nend
+Pangle
+PubMatic OpenWrap
+Tapjoy
+Unity Ads
+Vpon
+Yahoo (previously Verizon Media)
+Zucks
+Memecahkan masalah bidding
+Membuat peristiwa kustom
+Menyiapkan peristiwa kustom
+Banner
+Interstisial
+Native
+Reward
+Mengontrol privasi
+Strategis
+Mode penayangan iklan
+Pengungkapan data App Store
+Keamanan Transportasi Aplikasi
+Kebijakan data lokasi presisi
+Hukum privasi negara bagian Amerika Serikat
+User Messaging Platform (UMP) SDK
+Menyiapkan UMP SDK
+Mengelola dukungan IAB
+Mengungkapkan kepada pengguna EEA
+Pengungkapan kepada pengguna AS
+Menafsirkan nilai mode izin
+Menyinkronkan izin di seluruh aplikasi
+Menampilkan pesan IDFA
+Catatan rilis
+Memecahkan masalah iklan
+Mengelola pemeriksa iklan
+Ringkasan
+Meluncurkan pemeriksa iklan
+Memverifikasi integrasi adaptor
+Unit iklan percobaan
+Memecahkan masalah unit iklan
+Memecahkan masalah setelan privasi
+Menyalin output pemecahan masalah
+Menguji jenis materi iklan
+Error pemuatan iklan
+Info respons
+Mencatat ID respons iklan ke Crashlytics
+Memecahkan masalah iklan yang tidak tampil
+Optimalkan
+Pramuat iklan
+Penjual Resmi untuk Aplikasi
+Setelan global
+Pendapatan iklan di tingkat tayangan iklan
+Pelaporan
+Verifikasi sisi server
+Targeting
+Menyiapkan Pengukuran Terbuka
+Browser dalam aplikasi
+Menyiapkan tampilan web
+Mengintegrasikan WebView API untuk Iklan
+Mengoptimalkan perilaku klik
+GMA Next-Gen SDK untuk Android
+Mobile Ads SDK for iOS
+Plugin Mobile Ads Unity
+Plugin Flutter Mobile Ads
+Mobile Ads SDK untuk Android (Legacy)
+AdMob API
+GMA Next-Gen SDK untuk Android
+Mobile Ads SDK for iOS
+Plugin Mobile Ads Unity
+Plugin Flutter Mobile Ads
+Mobile Ads SDK untuk Android (Legacy)
+AdMob API
+Dukungan
+Dukungan Google Mobile Ads SDK
+Dukungan AdMob
+Pusat Bantuan
+Pusat Bantuan AdMob
+Komunitas Bantuan AdMob
+Komunitas
+Discord
+Blog Developer Google Ads
+YouTube
+Iklan dan Pengukuran Google
+Google menggunakan teknologi AI untuk menerjemahkan konten ke dalam bahasa pilihan Anda. Terjemahan AI mungkin mengandung kesalahan.
+Beranda
+Produk
+AdMob
+Mobile Ads SDK for iOS
+Menyiapkan UMP SDK
+Tetap teratur dengan koleksi
+Simpan dan kategorikan konten berdasarkan preferensi Anda.
+Pilih platform:
+Android
+iOS
+Unity
+Flutter
+Android (Legacy)
+Google User Messaging Platform (UMP) SDK adalah alat privasi dan pesan untuk membantu Anda mengelola pilihan privasi. Untuk mengetahui informasi selengkapnya, lihat
+Tentang Privasi & pesan .
+Membuat jenis pesan
+Buat pesan pengguna dengan salah satu
+Jenis pesan pengguna yang tersedia
+di tab Privasi & pesan di akun
+AdMob
+Anda. UMP SDK mencoba menampilkan pesan privasi yang dibuat dari ID Aplikasi AdMob yang ditetapkan di project Anda.
+Untuk mengetahui detail selengkapnya, lihat
+Tentang privasi dan pesan .
+Mengimpor SDK
+CocoaPods (lebih disukai)
+Cara termudah untuk mengimpor SDK ke project iOS adalah dengan menggunakan
+CocoaPods . Buka Podfile
+project Anda dan tambahkan baris ini ke target aplikasi Anda:
+pod 'GoogleUserMessagingPlatform'
+Kemudian, jalankan perintah berikut:
+pod install --repo-update
+Jika Anda baru menggunakan CocoaPods, lihat Menggunakan
+CocoaPods untuk mengetahui detail tentang cara membuat dan menggunakan Podfile.
+Swift Package Manager
+UMP SDK juga mendukung Swift Package Manager. Ikuti langkah-langkah berikut untuk mengimpor paket Swift.
+Di Xcode, instal Paket Swift SDK UMP dengan membuka
+File > Add Packages... .
+Pada perintah yang muncul, telusuri repositori GitHub Paket Swift UMP SDK:
+https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git
+Pilih versi Paket Swift UMP SDK yang ingin Anda gunakan. Untuk project baru, sebaiknya gunakan Up to Next Major Version .
+Xcode kemudian menyelesaikan dependensi paket Anda dan mendownloadnya di latar belakang. Untuk mengetahui detail selengkapnya tentang cara menambahkan dependensi paket, lihat artikel Apple .
+Download manual
+Cara lain untuk mengimpor SDK adalah melakukannya secara manual.
+Mendownload SDK
+Kemudian, tarik framework ke project Xcode Anda, pastikan Anda memilih Copy items if needed .
+Kemudian, Anda dapat menyertakan framework dalam file apa pun yang Anda butuhkan menggunakan:
+Swift
+import UserMessagingPlatform
+Objective-C
+#include <UserMessagingPlatform/UserMessagingPlatform.h>
+Tambahkan ID aplikasi
+Anda dapat menemukan ID aplikasi di
+UI AdMob .
+Tambahkan ID ke
+Info.plist
+dengan cuplikan kode berikut:
+<key>GADApplicationIdentifier</key>
+<string>ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy</string>
+Mendapatkan informasi izin pengguna
+Anda harus meminta pembaruan informasi izin pengguna di setiap peluncuran aplikasi, menggunakan
+requestConsentInfoUpdate(with:completionHandler:) . Permintaan ini memeriksa hal berikut:
+Apakah izin diperlukan . Misalnya, izin diperlukan untuk
+pertama kalinya, atau keputusan izin sebelumnya telah berakhir.
+Apakah titik entri opsi privasi diperlukan . Beberapa pesan privasi mewajibkan aplikasi mengizinkan pengguna mengubah opsi privasi mereka kapan saja.
+Swift
+// Requesting an update to consent information should be called on every app launch.
+ConsentInformation . shared . requestConsentInfoUpdate ( with : parameters ) {
+requestConsentError in
+// ...
+} GoogleMobileAdsConsentManager . swift
+SwiftUI
+// Requesting an update to consent information should be called on every app launch.
+ConsentInformation . shared . requestConsentInfoUpdate ( with : parameters ) {
+requestConsentError in
+// ...
+} GoogleMobileAdsConsentManager . swift
+Objective-C
+// Requesting an update to consent information should be called on every app launch.
+[ UMPConsentInformation . sharedInstance
+requestConsentInfoUpdateWithParameters : parameters
+completionHandler : ^ ( NSError * _Nullable requestConsentError ) {
+// ...
+}]; GoogleMobileAdsConsentManager . m
+Peringatan: Menggunakan cara lain untuk memeriksa status izin, misalnya dari cache di aplikasi Anda atau string izin yang disimpan sebelumnya, dapat menyebabkan error TCF 3.3 jika izin telah habis masa berlakunya.
+Memuat dan menampilkan formulir pesan privasi
+Setelah Anda menerima status izin terbaru, panggil
+loadAndPresentIfRequired(from:) untuk memuat formulir apa pun yang diperlukan untuk
+mengumpulkan izin pengguna. Setelah dimuat, formulir akan langsung ditampilkan.
+Poin Penting: Jika tidak ada formulir pesan privasi yang mewajibkan pengumpulan izin pengguna sebelum
+meminta iklan, callback akan segera dipanggil.
+Swift
+try await ConsentForm . loadAndPresentIfRequired ( from : viewController ) GoogleMobileAdsConsentManager . swift
+SwiftUI
+try await ConsentForm . loadAndPresentIfRequired ( from : nil ) GoogleMobileAdsConsentManager . swift
+Objective-C
+[ UMPConsentForm
+loadAndPresentIfRequiredFromViewController : viewController
+completionHandler : ^ ( NSError * _Nullable loadAndPresentError ) {
+// Consent gathering process is complete.
+}]; GoogleMobileAdsConsentManager . m
+Opsi privasi
+Beberapa formulir pesan privasi ditampilkan dari titik entri opsi privasi yang dirender penayang, sehingga pengguna dapat mengelola opsi privasi mereka kapan saja.
+Untuk mempelajari lebih lanjut pesan yang dilihat pengguna di titik entri opsi privasi, lihat Jenis pesan pengguna yang tersedia .
+Memeriksa apakah titik entri opsi privasi diperlukan
+Setelah memanggil
+requestConsentInfoUpdate(with:completionHandler:) , periksa
+UMPConsentInformation.sharedInstance.privacyOptionsRequirementStatus untuk
+menentukan apakah titik entri opsi privasi diperlukan untuk aplikasi Anda. Jika titik
+entri diperlukan, tambahkan elemen UI yang terlihat dan dapat berinteraksi ke aplikasi Anda yang
+menampilkan formulir opsi privasi. Jika titik entri privasi tidak diperlukan,
+konfigurasi elemen UI Anda agar tidak terlihat dan dapat berinteraksi.
+Swift
+var isPrivacyOptionsRequired : Bool {
+return ConsentInformation . shared . privacyOptionsRequirementStatus == . required
+} GoogleMobileAdsConsentManager . swift
+Objective-C
+- ( BOOL ) isPrivacyOptionsRequired {
+return UMPConsentInformation . sharedInstance . privacyOptionsRequirementStatus ==
+UMPPrivacyOptionsRequirementStatusRequired ;
+} GoogleMobileAdsConsentManager . m
+Untuk daftar lengkap status persyaratan opsi privasi, lihat
+UMPPrivacyOptionsRequirementStatus .
+Menampilkan formulir opsi privasi
+Saat pengguna berinteraksi dengan elemen Anda, tampilkan formulir opsi privasi:
+Swift
+try await ConsentForm . presentPrivacyOptionsForm ( from : viewController ) GoogleMobileAdsConsentManager . swift
+SwiftUI
+try await ConsentForm . presentPrivacyOptionsForm ( from : nil ) GoogleMobileAdsConsentManager . swift
+Objective-C
+[ UMPConsentForm presentPrivacyOptionsFormFromViewController : viewController
+completionHandler : completionHandler ]; GoogleMobileAdsConsentManager . m
+Meminta iklan dengan izin pengguna
+Sebelum meminta iklan, gunakan
+UMPConsentInformation.sharedInstance.canRequestAds untuk memeriksa apakah Anda telah
+mendapatkan izin dari pengguna:
+Swift
+ConsentInformation . shared . canRequestAds
+Objective-C
+UMPConsentInformation . sharedInstance . canRequestAds ;
+Berikut adalah tempat yang harus diperiksa untuk mengetahui apakah Anda dapat meminta iklan saat mengumpulkan izin:
+Setelah UMP SDK mengumpulkan izin dalam sesi saat ini.
+Segera setelah Anda memanggil
+requestConsentInfoUpdate(with:completionHandler:) . UMP SDK mungkin telah mendapatkan izin di sesi aplikasi sebelumnya.
+Penting:
+UMPConsentInformation.sharedInstance.canRequestAds selalu menampilkan false hingga Anda memanggil
+requestConsentInfoUpdate(with:completionHandler:)
+Jika terjadi error selama proses pengumpulan izin, periksa apakah Anda dapat meminta iklan. UMP SDK menggunakan status izin dari sesi aplikasi sebelumnya.
+Mencegah tugas permintaan iklan yang berlebihan
+Saat Anda memeriksa
+UMPConsentInformation.sharedInstance.canRequestAds setelah mengumpulkan izin dan setelah memanggil
+requestConsentInfoUpdate(with:completionHandler:) , pastikan logika Anda mencegah permintaan iklan yang berlebihan yang
+dapat menyebabkan kedua pemeriksaan menampilkan true . Misalnya, dengan variabel
+boolean.
+Pengujian
+Jika Anda ingin menguji integrasi di aplikasi saat mengembangkan, ikuti langkah-langkah berikut untuk mendaftarkan perangkat pengujian secara terprogram. Pastikan untuk menghapus kode yang menetapkan ID perangkat pengujian ini sebelum Anda merilis aplikasi.
+Catatan:
+Simulator
+tidak perlu ditambahkan ke daftar ID perangkat Anda karena secara default merupakan perangkat pengujian.
+Hubungi
+requestConsentInfoUpdate(with:completionHandler:) .
+Periksa output log untuk menemukan pesan yang mirip dengan contoh berikut, yang menunjukkan ID perangkat Anda dan cara menambahkannya sebagai perangkat pengujian:
+<UMP SDK>To enable debug mode for this device, set: UMPDebugSettings.testDeviceIdentifiers = @[2077ef9a63d2b398840261c8221a0c9b]
+Salin ID perangkat pengujian Anda ke papan klip.
+Ubah kode Anda untuk memanggil
+UMPDebugSettings().testDeviceIdentifiers dan meneruskan
+daftar ID perangkat pengujian Anda.
+Swift
+let parameters = RequestParameters ()
+let debugSettings = DebugSettings ()
+debugSettings . testDeviceIdentifiers = [ "TEST-DEVICE-HASHED-ID" ]
+parameters . debugSettings = debugSettings
+// Include the UMPRequestParameters in your consent request.
+ConsentInformation . shared . requestConsentInfoUpdate (
+with : parameters ,
+completionHandler : { error in
+// ...
+})
+Objective-C
+UMPRequestParameters * parameters = [[ UMPRequestParameters alloc ] init ];
+UMPDebugSettings * debugSettings = [[ UMPDebugSettings alloc ] init ];
+debugSettings . testDeviceIdentifiers = @[ @"TEST-DEVICE-HASHED-ID" ] ;
+parameters . debugSettings = debugSettings ;
+// Include the UMPRequestParameters in your consent request.
+[ UMPConsentInformation . sharedInstance
+requestConsentInfoUpdateWithParameters : parameters
+completionHandler : ^ ( NSError * _Nullable error ){
+// ...
+}];
+Memaksakan geografi
+UMP SDK menyediakan cara untuk menguji perilaku aplikasi Anda seolah-olah perangkat berada di berbagai wilayah, seperti Wilayah Ekonomi Eropa (EEA), Inggris Raya (UK), dan Swiss menggunakan geography . Perhatikan bahwa setelan
+debug hanya berfungsi di perangkat pengujian.
+Swift
+let parameters = RequestParameters ()
+let debugSettings = DebugSettings ()
+debugSettings . testDeviceIdentifiers = [ "TEST-DEVICE-HASHED-ID" ]
+debugSettings . geography = . EEA
+parameters . debugSettings = debugSettings
+// Include the UMPRequestParameters in your consent request.
+ConsentInformation . shared . requestConsentInfoUpdate (
+with : parameters ,
+completionHandler : { error in
+// ...
+})
+Objective-C
+UMPRequestParameters * parameters = [[ UMPRequestParameters alloc ] init ];
+UMPDebugSettings * debugSettings = [[ UMPDebugSettings alloc ] init ];
+debugSettings . testDeviceIdentifiers = @[ @"TEST-DEVICE-HASHED-ID" ] ;
+debugSettings . geography = UMPDebugGeographyEEA ;
+parameters . debugSettings = debugSettings ;
+// Include the UMPRequestParameters in your consent request.
+[ UMPConsentInformation . sharedInstance
+requestConsentInfoUpdateWithParameters : parameters
+completionHandler : ^ ( NSError * _Nullable error ){
+// ...
+}];
+Mereset status izin
+Saat menguji aplikasi dengan UMP SDK, Anda mungkin merasa perlu mereset status SDK agar dapat menyimulasikan pengalaman penginstalan pertama pengguna.
+SDK menyediakan metode reset untuk melakukannya.
+Swift
+ConsentInformation . shared . reset ()
+Objective-C
+[ UMPConsentInformation . sharedInstance reset ];
+Perhatian: Metode ini hanya ditujukan untuk tujuan pengujian. Anda
+tidak boleh memanggil reset dalam kode produksi.
+Contoh di GitHub
+Lihat contoh lengkap integrasi UMP SDK yang dibahas di halaman ini di
+Swift BannerExample
+SwiftUIDemo
+Objective-C BannerExample
+Kecuali dinyatakan lain, konten di halaman ini dilisensikan berdasarkan Lisensi Creative Commons Attribution 4.0 , sedangkan contoh kode dilisensikan berdasarkan Lisensi Apache 2.0 . Untuk mengetahui informasi selengkapnya, lihat Kebijakan Situs Google Developers . Java adalah merek dagang terdaftar dari Oracle dan/atau afiliasinya.
+Terakhir diperbarui pada 2026-07-19 UTC.
+[[["Mudah dipahami","easyToUnderstand","thumb-up"],["Memecahkan masalah saya","solvedMyProblem","thumb-up"],["Lainnya","otherUp","thumb-up"]],[["Informasi yang saya butuhkan tidak ada","missingTheInformationINeed","thumb-down"],["Terlalu rumit/langkahnya terlalu banyak","tooComplicatedTooManySteps","thumb-down"],["Sudah usang","outOfDate","thumb-down"],["Masalah terjemahan","translationIssue","thumb-down"],["Masalah kode / contoh","samplesCodeIssue","thumb-down"],["Lainnya","otherDown","thumb-down"]],["Terakhir diperbarui pada 2026-07-19 UTC."],[],["The core actions for using the Google User Messaging Platform (UMP) SDK involve creating user messages in AdMob, importing the SDK via CocoaPods, Swift Package Manager, or manual download, and adding your application ID to `Info.plist`. At each app launch, request consent information updates to check if consent is needed and if a privacy options entry is necessary. Load and present privacy forms if consent is required and check `canRequestAds` before requesting ads. Finally, you can present privacy option forms, test your integration and reset the consent state.\n"]]
+Interaksi
+Google Developer Program
+Google Developer Groups
+Google Developer Experts
+Accelerators
+Google Cloud & NVIDIA
+Hubungkan
+Blog
+Bluesky
+Instagram
+LinkedIn
+X (Twitter)
+YouTube
+Build
+Android
+Chrome
+Firebase
+Google AI Studio
+Google Antigravity
+Google Cloud
+Google Play
+View all
+Android
+Chrome
+Firebase
+Google Cloud Platform
+Google AI
+Semua produk
+Persyaratan
+Privasi
+Manage cookies
+English
+Deutsch
+Español
+Español – América Latina
+Français
+Indonesia
+Italiano
+Polski
+Português – Brasil
+Tiếng Việt
+Türkçe
+Русский
+עברית
+العربيّة
+فارسی
+हिंदी
+বাংলা
+ภาษาไทย
+中文 – 简体
+中文 – 繁體
+日本語
+한국어

@@ -1,0 +1,3081 @@
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html 
+      lang="en"
+      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="721724668570-nbkv1cfusk7kk4eni4pjvepaus73b13t.apps.googleusercontent.com"><meta name="google-signin-scope"
+          content="profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award https://www.googleapis.com/auth/devprofiles.full_control.firstparty"><meta property="og:site_name" content="Google for Developers">
+    <meta property="og:type" content="website"><meta name="theme-color" content="#1e8e3e"><meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel="manifest" href="/_pwa/developers/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap">
+      <link rel="stylesheet"
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/css/app.css">
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/favicon-new.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/touchicon-180-new.png"><link rel="canonical" href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.ImaSdkSettings"><link rel="search" type="application/opensearchdescription+xml"
+            title="Google for Developers" href="https://developers.google.com/s/opensearch.xml">
+      <link rel="alternate" hreflang="en"
+          href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.ImaSdkSettings" /><link rel="alternate" hreflang="x-default" href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.ImaSdkSettings" /><title>Interface ImaSdkSettings &nbsp;|&nbsp; IMA SDK for HTML5 &nbsp;|&nbsp; Google for Developers</title>
+
+<meta property="og:title" content="Interface ImaSdkSettings &nbsp;|&nbsp; IMA SDK for HTML5 &nbsp;|&nbsp; Google for Developers"><meta name="description" content="Documentation for ImaSdkSettings">
+  <meta property="og:description" content="Documentation for ImaSdkSettings"><meta property="og:url" content="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.ImaSdkSettings"><meta property="og:image" content="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/opengraph/google-green.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675"><meta property="og:locale" content="en"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    
+    "headline": "Interface ImaSdkSettings"
+  }
+</script><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Interactive Media Ads SDKs",
+      "item": "https://developers.google.com/interactive-media-ads"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "IMA SDK for HTML5",
+      "item": "https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Interface ImaSdkSettings",
+      "item": "https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.ImaSdkSettings"
+    }]
+  }
+  </script>
+  
+    
+    
+    
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+
+    </head>
+  <body class="color-scheme--light"
+        template="page"
+        theme="google-green"
+        type="article"
+        
+        
+        
+        layout="docs"
+        
+        
+        
+        
+        
+        display-toc
+        pending>
+  
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+  
+  
+    <a href="#main-content" class="skip-link button">
+      
+      Skip to main content
+    </a>
+    <section class="devsite-wrapper">
+      <devsite-cookie-notification-bar></devsite-cookie-notification-bar>
+        <devsite-header role="banner">
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner" data-nosnippet>
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        
+<div class="devsite-product-name-wrapper">
+
+  
+    
+  
+
+
+
+  
+  
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list"
+  
+    aria-label="Product breadcrumb">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+        
+  <a href="https://developers.google.com/interactive-media-ads"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Upper Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Interactive Media Ads SDKs"
+      
+    >
+    
+          Interactive Media Ads SDKs
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Upper Header"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail="IMA SDK for HTML5"
+      
+    >
+    
+          IMA SDK for HTML5
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+  </span>
+
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+            
+           </div>
+          
+<devsite-search
+    enable-signin
+    enable-search
+    enable-suggestions
+      enable-query-completion
+    
+    enable-search-summaries
+    project-name="IMA SDK for HTML5"
+    tenant-name="Google for Developers"
+    project-scope="/interactive-media-ads/docs/sdks/html5/client-side/get-started"
+    url-scoped="https://developers.google.com/s/results/interactive-media-ads/docs/sdks/html5/client-side/get-started"
+    
+    
+    
+    >
+  <form class="devsite-search-form" action="https://developers.google.com/s/results" method="GET">
+    <div class="devsite-search-container">
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              
+              aria-label="Open search"></button>
+      <div class="devsite-searchbox">
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          
+          aria-label="Search"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          autocomplete="off"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          
+          placeholder="Search"
+          role="combobox"
+          type="text"
+          value=""
+          >
+          <div class="devsite-search-image material-icons" aria-hidden="true">
+            
+              <svg class="devsite-search-ai-image" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_6641_386)">
+                    <path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14167 15.375 4.875 14.125C3.625 12.8583 3 11.3167 3 9.5C3 7.68333 3.625 6.15 4.875 4.9C6.14167 3.63333 7.68333 3 9.5 3C10.0167 3 10.5167 3.05833 11 3.175C11.4833 3.275 11.9417 3.43333 12.375 3.65L10.825 5.2C10.6083 5.13333 10.3917 5.08333 10.175 5.05C9.95833 5.01667 9.73333 5 9.5 5C8.25 5 7.18333 5.44167 6.3 6.325C5.43333 7.19167 5 8.25 5 9.5C5 10.75 5.43333 11.8167 6.3 12.7C7.18333 13.5667 8.25 14 9.5 14C10.6667 14 11.6667 13.625 12.5 12.875C13.35 12.1083 13.8417 11.15 13.975 10H15.975C15.925 10.6333 15.7833 11.2333 15.55 11.8C15.3333 12.3667 15.05 12.8667 14.7 13.3L21 19.6L19.6 21ZM17.5 12C17.5 10.4667 16.9667 9.16667 15.9 8.1C14.8333 7.03333 13.5333 6.5 12 6.5C13.5333 6.5 14.8333 5.96667 15.9 4.9C16.9667 3.83333 17.5 2.53333 17.5 0.999999C17.5 2.53333 18.0333 3.83333 19.1 4.9C20.1667 5.96667 21.4667 6.5 23 6.5C21.4667 6.5 20.1667 7.03333 19.1 8.1C18.0333 9.16667 17.5 10.4667 17.5 12Z" fill="#5F6368"/>
+                  </g>
+                <defs>
+                <clipPath id="clip0_6641_386">
+                <rect width="24" height="24" fill="white"/>
+                </clipPath>
+                </defs>
+              </svg>
+            
+          </div>
+          <div class="devsite-search-shortcut-icon-container" aria-hidden="true">
+            <kbd class="devsite-search-shortcut-icon">/</kbd>
+          </div>
+      </div>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          
+          aria-label="Close search"></button>
+</devsite-search>
+
+        </div>
+
+        
+
+          
+
+          
+
+          
+
+          
+
+          
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es"
+        >Español</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+
+          
+
+        
+
+        
+          <devsite-user 
+                        
+                        
+                          enable-profiles
+                        
+                        
+                          fp-auth
+                        
+                        id="devsite-user">
+            
+              
+              <span class="button devsite-top-button" aria-hidden="true" visually-hidden>Sign in</span>
+            
+          </devsite-user>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="devsite-collapsible-section
+    ">
+    <div class="devsite-header-background">
+      
+        
+      
+      
+        <div class="devsite-doc-set-nav-row">
+          
+          
+            
+            
+  <devsite-tabs class="lower-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Lower tabs">
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started"
+    
+       track-type="nav"
+       track-metadata-position="nav - guides"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Guides"
+         
+           track-name="guides"
+         
+       >
+    Guides
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  class="devsite-active">
+            
+    <a href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima"
+    
+       track-type="nav"
+       track-metadata-position="nav - reference"
+       track-metadata-module="primary nav"
+       aria-label="Reference, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Reference"
+         
+           track-name="reference"
+         
+       >
+    Reference
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/resources"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/resources"
+    
+       track-type="nav"
+       track-metadata-position="nav - resources"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Resources"
+         
+           track-name="resources"
+         
+       >
+    Resources
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/download"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/download"
+    
+       track-type="nav"
+       track-metadata-position="nav - download"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Download"
+         
+           track-name="download"
+         
+       >
+    Download
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+          
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+  
+</devsite-header>
+        <devsite-book-nav scrollbars >
+          
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-book-nav-filter"
+     >
+  <span class="filter-list-icon material-icons" aria-hidden="true"></span>
+  <input type="text"
+         placeholder="Filter"
+         
+         aria-label="Type to filter"
+         role="searchbox">
+  
+  <span class="filter-clear-button hidden"
+        data-title="Clear filter"
+        aria-label="Clear filter"
+        role="button"
+        tabindex="0"></span>
+</div>
+
+<nav class="devsite-book-nav devsite-nav nocontent" data-nosnippet
+     aria-label="Side menu">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+
+  
+    
+  
+
+
+  
+      <span class="devsite-product-name">
+        
+        
+        <ul class="devsite-breadcrumb-list"
+  
+    aria-label="Upper header breadcrumb">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+        
+  <a href="https://developers.google.com/interactive-media-ads"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Upper Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Interactive Media Ads SDKs"
+      
+    >
+    
+          Interactive Media Ads SDKs
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Upper Header"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail="IMA SDK for HTML5"
+      
+    >
+    
+          IMA SDK for HTML5
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+      </span>
+    
+
+</div>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+      
+        <ul class="devsite-nav-list">
+          
+            
+<li class="devsite-nav-item">
+
+  
+  <a href="/interactive-media-ads/docs/sdks/html5/client-side/get-started"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Guides"
+      
+        track-name="guides"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Guides"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Guides
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+</li>
+
+          
+            
+<li class="devsite-nav-item">
+
+  
+  <a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Reference"
+      
+        track-name="reference"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Reference"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Reference
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+</li>
+
+          
+            
+<li class="devsite-nav-item">
+
+  
+  <a href="/interactive-media-ads/docs/sdks/html5/client-side/resources"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Resources"
+      
+        track-name="resources"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Resources"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Resources
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+</li>
+
+          
+            
+<li class="devsite-nav-item">
+
+  
+  <a href="/interactive-media-ads/docs/sdks/html5/client-side/download"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Download"
+      
+        track-name="download"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Download"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Download
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+</li>
+
+          
+          
+          
+        </ul>
+      
+    </div>
+    
+      <div class="devsite-mobile-nav-bottom">
+        
+          
+          <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>API reference</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>google.ima</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Classes</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/class/google.ima.AdDisplayContainer"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdDisplayContainer</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/class/google.ima.AdsLoader"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdsLoader</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/class/google.ima.AdsRenderingSettings"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdsRenderingSettings</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/class/google.ima.AdsRequest"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdsRequest</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/class/google.ima.CompanionAdSelectionSettings"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>CompanionAdSelectionSettings</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Interfaces</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.Ad"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Ad</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.AdCuePoints"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdCuePoints</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.AdError"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdError</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.AdErrorEvent"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdErrorEvent</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.AdEvent"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdEvent</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.AdPodInfo"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdPodInfo</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.AdProgressData"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdProgressData</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.AdsManager"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdsManager</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.AdsManagerLoadedEvent"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdsManagerLoadedEvent</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.AdsRenderingSettingsInterface"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdsRenderingSettingsInterface</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.AdsRequestInterface"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdsRequestInterface</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.CompanionAd"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>CompanionAd</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.CompanionAdSelectionSettingsInterface"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>CompanionAdSelectionSettingsInterface</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.ImaEvent"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ImaEvent</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.ImaSdkSettings"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ImaSdkSettings</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.UniversalAdIdInfo"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>UniversalAdIdInfo</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Namespaces</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima.AdCuePoints"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdCuePoints</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima.AdError"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdError</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima.AdErrorEvent"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdErrorEvent</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima.AdEvent"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdEvent</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima.AdsManagerLoadedEvent"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AdsManagerLoadedEvent</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima.CompanionAdSelectionSettings"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>CompanionAdSelectionSettings</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima.ImaSdkSettings"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>ImaSdkSettings</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima.secureSignals"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>secureSignals</span></a></li>
+          </ul>
+        
+        
+        
+          
+    
+  
+    
+  
+    
+  
+    
+  
+        
+      </div>
+    
+  </div>
+</nav>
+          
+        </devsite-book-nav>
+      
+      <section id="gc-wrapper">
+        <main role="main" id="main-content" class="devsite-main-content"
+            
+              has-book-nav
+              has-sidebar
+            >
+          <div class="devsite-sidebar">
+            <div class="devsite-sidebar-content">
+                
+                <devsite-toc class="devsite-nav"
+                            role="navigation"
+                            aria-label="On this page"
+                            depth="2"
+                            scrollbars
+                            data-nosnippet
+                  ></devsite-toc>
+                <devsite-recommendations-sidebar class="nocontent devsite-nav" data-nosnippet>
+                </devsite-recommendations-sidebar>
+            </div>
+          </div>
+          <devsite-content>
+            
+              
+
+
+
+
+
+
+
+
+
+
+<article class="devsite-article">
+  
+  
+  
+    <div class="devsite-banner devsite-banner-announcement nocontent" data-nosnippet
+      
+        
+    background="google-yellow"
+  
+      >
+      <div class="devsite-banner-message">
+        <div class="devsite-banner-message-text">
+          To discuss and provide feedback on our products, join the official Ad Manager Discord channel in the <a href="//goo.gle/google-ad-manager-discord">Google Advertising and Measurement Community</a> server.
+        </div>
+      </div>
+    </div>
+  
+  
+  
+
+  <div class="devsite-article-meta nocontent" role="navigation" data-nosnippet>
+    
+    
+    <ul class="devsite-breadcrumb-list"
+  
+    aria-label="Breadcrumb">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          Home
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/products"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          Products
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/interactive-media-ads"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="3"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="3"
+      
+        track-metadata-eventdetail="Interactive Media Ads SDKs"
+      
+    >
+    
+          Interactive Media Ads SDKs
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/get-started"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="4"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="4"
+      
+        track-metadata-eventdetail="IMA SDK for HTML5"
+      
+    >
+    
+          IMA SDK for HTML5
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="5"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="5"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          Reference
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+    
+      
+    <devsite-thumb-rating position="header">
+    </devsite-thumb-rating>
+  
+    
+  </div>
+  
+    <devsite-feedback
+  position="header"
+  project-name="IMA SDK for HTML5"
+  product-id="82128"
+  bucket="InteractiveMediaAds"
+  context=""
+  version="t-devsite-webserver-20260901-r00-rc00.480082941541264604"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="header"
+  class="nocontent"
+  data-nosnippet
+  
+  
+    project-feedback-url="//groups.google.com/forum/?fromgroups#!forum/ima-sdk"
+  
+  
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/touchicon-180-new.png"
+  
+  
+    project-support-url="//groups.google.com/forum/?fromgroups#!forum/ima-sdk"
+  
+  
+  >
+
+  <button>
+  
+    
+    Send feedback
+  
+  </button>
+</devsite-feedback>
+  
+    <h1 class="devsite-page-title" tabindex="-1">
+      Interface ImaSdkSettings<devsite-actions hidden data-nosnippet><devsite-feature-tooltip
+      ack-key="AckCollectionsBookmarkTooltipDismiss"
+      analytics-category="Site-Wide Custom Events"
+      analytics-action-show="Callout Profile displayed"
+      analytics-action-close="Callout Profile dismissed"
+      analytics-label="Create Collection Callout"
+      class="devsite-page-bookmark-tooltip nocontent"
+      data-nosnippet
+      dismiss-button="true"
+      id="devsite-collections-dropdown"
+      
+      dismiss-button-text="Dismiss"
+
+      
+      close-button-text="Got it">
+
+    
+    
+      <devsite-bookmark></devsite-bookmark>
+    
+
+    <span slot="popout-heading">
+      
+      Stay organized with collections
+    </span>
+    <span slot="popout-contents">
+      
+      Save and categorize content based on your preferences.
+    </span>
+  </devsite-feature-tooltip>
+    <devsite-llm-tools></devsite-llm-tools></devsite-actions>
+  
+      
+    </h1>
+  <div class="devsite-page-title-meta"><devsite-view-release-notes></devsite-view-release-notes></div>
+  
+
+  <devsite-toc class="devsite-nav"
+    depth="2"
+    devsite-toc-embedded
+    >
+  </devsite-toc>
+  
+    
+    <devsite-recommendations-dropdown class="nocontent" data-nosnippet>
+    </devsite-recommendations-dropdown>
+    
+  <div class="devsite-article-body clearfix
+  ">
+
+  
+    
+      <devsite-key-takeaways-panel role="region" aria-labelledby="key-takeaways-panel-title">
+  <div class="devsite-key-takeaways-panel-header" aria-labelledby="key-takeaways-panel-title" aria-expanded="false" role="button" tabindex="0">
+    
+    <img src="/_static/images/icons/spark.svg" alt="Spark icon" />
+    <div class="devsite-key-takeaways-panel-title">
+      
+      <h2 class="no-link hide-from-toc" id="key-takeaways-panel-title" data-tooltip="Generated with AI">Page Summary</h2>
+    </div>
+    <span
+      class="material-icons devsite-key-takeaways-panel-toggle-button" aria-hidden="true"></span>
+  </div>
+  <div class="devsite-key-takeaways-panel-content">
+    <devsite-feedback
+      product-id="5123748"
+      bucket="8963846920012181156"
+      disable-product-feedback>
+      <button
+        class="button-flat button-primary devsite-key-takeaways-report-button"
+        
+        data-title="Report Key Takeaways!"
+        
+        aria-label="Report Key Takeaways!">
+        <span
+          class="material-icons"
+          
+          aria-label="Report Key Takeaways!"
+          >outlined_flag</span
+        >
+      </button>
+    </devsite-feedback>
+    <ul class="devsite-key-takeaways-panel-list">
+      
+        <li>
+          <p>The <code>google.ima.ImaSdkSettings</code> class contains SDK-wide settings for the IMA SDK.</p>
+
+        </li>
+      
+        <li>
+          <p>This class provides methods to get and set various settings, including companion backfill mode, custom playback on iOS 10+, feature flags, locale, number of redirects, player type and version, publisher provided id, session id, and VPAID settings.</p>
+
+        </li>
+      
+        <li>
+          <p>Some settings, such as <code>setLocale</code>, must be called before creating <code>AdsLoader</code> or <code>AdDisplayContainer</code>.</p>
+
+        </li>
+      
+        <li>
+          <p>The <code>setVpaidAllowed</code> method is deprecated in favor of <code>setVpaidMode</code>.</p>
+
+        </li>
+      
+    </ul>
+  </div>
+</devsite-key-takeaways-panel>
+    
+    
+    
+    <hr />
+    <section>
+      <a id="google.ima_ImaSdkSettings"></a>
+      <div>This class contains SDK-wide settings.</div>
+      <section>
+        <table class="properties responsive fixed">
+          <colgroup>
+            <col style="width: 33%" />
+            <col />
+          </colgroup>
+          <tr>
+            <th colspan="2">Methods</th>
+          </tr>
+          <tr>
+            <td>
+              <code
+                 translate="no" dir="ltr"><a
+                  href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.ImaSdkSettings#google.ima.ImaSdkSettings.getCompanionBackfill"
+                  ><span>get<wbr />Companion<wbr />Backfill<wbr /></span><span></span></a
+              ></code>
+            </td>
+            <td><div>Returns the current companion backfill mode.</div></td>
+          </tr>
+          <tr>
+            <td>
+              <code
+                 translate="no" dir="ltr"><a
+                  href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.ImaSdkSettings#google.ima.ImaSdkSettings.getDisableCustomPlaybackForIOS10Plus"
+                  ><span
+                    >get<wbr />Disable<wbr />Custom<wbr />Playback<wbr />For<wbr />IOS1<wbr />0<wbr />Plus<wbr /></span
+                  ><span></span></a
+              ></code>
+            </td>
+            <td><div>Returns whether to disable custom playback on iOS 10+ browsers.</div></td>
+          </tr>
+          <tr>
+            <td>
+              <code
+                 translate="no" dir="ltr"><a
+                  href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.ImaSdkSettings#google.ima.ImaSdkSettings.getFeatureFlags"
+                  ><span>get<wbr />Feature<wbr />Flags<wbr /></span><span></span></a
+              ></code>
+            </td>
+            <td>
+              <div>
+                Returns an object with keys as feature flags and values as their current state.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code
+                 translate="no" dir="ltr"><a
+                  href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.ImaSdkSettings#google.ima.ImaSdkSettings.getLocale"
+                  ><span>get<wbr />Locale<wbr /></span><span></span></a
+              ></code>
+            </td>
+            <td><div>Returns the publisher provided locale.</div></td>
+          </tr>
+          <tr>
+            <td>
+              <code
+                 translate="no" dir="ltr"><a
+                  href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.ImaSdkSettings#google.ima.ImaSdkSettings.getNumRedirects"
+                  ><span>get<wbr />Num<wbr />Redirects<wbr /></span><span></span></a
+              ></code>
+            </td>
+            <td>
+              <div>
+                Returns the maximum number of redirects for subsequent redirects will be denied.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code
+                 translate="no" dir="ltr"><a
+                  href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.ImaSdkSettings#google.ima.ImaSdkSettings.getPlayerType"
+                  ><span>get<wbr />Player<wbr />Type<wbr /></span><span></span></a
+              ></code>
+            </td>
+            <td><div>Returns the partner provided player type.</div></td>
+          </tr>
+          <tr>
+            <td>
+              <code
+                 translate="no" dir="ltr"><a
+                  href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.ImaSdkSettings#google.ima.ImaSdkSettings.getPlayerVersion"
+                  ><span>get<wbr />Player<wbr />Version<wbr /></span><span></span></a
+              ></code>
+            </td>
+            <td><div>Returns the partner provided player version.</div></td>
+          </tr>
+          <tr>
+            <td>
+              <code
+                 translate="no" dir="ltr"><a
+                  href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.ImaSdkSettings#google.ima.ImaSdkSettings.getPpid"
+                  ><span>get<wbr />Ppid<wbr /></span><span></span></a
+              ></code>
+            </td>
+            <td><div>Returns the publisher provided id.</div></td>
+          </tr>
+          <tr>
+            <td>
+              <code
+                 translate="no" dir="ltr"><a
+                  href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.ImaSdkSettings#google.ima.ImaSdkSettings.setAutoPlayAdBreaks"
+                  ><span>set<wbr />Auto<wbr />Play<wbr />Ad<wbr />Breaks<wbr /></span
+                  ><span></span></a
+              ></code>
+            </td>
+            <td><div>Sets whether VMAP and ad rules ad breaks are automatically played.</div></td>
+          </tr>
+          <tr>
+            <td>
+              <code
+                 translate="no" dir="ltr"><a
+                  href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.ImaSdkSettings#google.ima.ImaSdkSettings.setCompanionBackfill"
+                  ><span>set<wbr />Companion<wbr />Backfill<wbr /></span><span></span></a
+              ></code>
+            </td>
+            <td><div>Sets the companion backfill mode.</div></td>
+          </tr>
+          <tr>
+            <td>
+              <code
+                 translate="no" dir="ltr"><a
+                  href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.ImaSdkSettings#google.ima.ImaSdkSettings.setDisableCustomPlaybackForIOS10Plus"
+                  ><span
+                    >set<wbr />Disable<wbr />Custom<wbr />Playback<wbr />For<wbr />IOS1<wbr />0<wbr />Plus<wbr /></span
+                  ><span></span></a
+              ></code>
+            </td>
+            <td><div>Sets whether to disable custom playback on iOS 10+ browsers.</div></td>
+          </tr>
+          <tr>
+            <td>
+              <code
+                 translate="no" dir="ltr"><a
+                  href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.ImaSdkSettings#google.ima.ImaSdkSettings.setFeatureFlags"
+                  ><span>set<wbr />Feature<wbr />Flags<wbr /></span><span></span></a
+              ></code>
+            </td>
+            <td><div>Set the value for any feature flags.</div></td>
+          </tr>
+          <tr>
+            <td>
+              <code
+                 translate="no" dir="ltr"><a
+                  href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.ImaSdkSettings#google.ima.ImaSdkSettings.setLocale"
+                  ><span>set<wbr />Locale<wbr /></span><span></span></a
+              ></code>
+            </td>
+            <td><div>Sets the publisher provided locale.</div></td>
+          </tr>
+          <tr>
+            <td>
+              <code
+                 translate="no" dir="ltr"><a
+                  href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.ImaSdkSettings#google.ima.ImaSdkSettings.setNumRedirects"
+                  ><span>set<wbr />Num<wbr />Redirects<wbr /></span><span></span></a
+              ></code>
+            </td>
+            <td>
+              <div>
+                Specifies the maximum number of redirects before the subsequent redirects will be
+                denied, and the ad load aborted.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code
+                 translate="no" dir="ltr"><a
+                  href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.ImaSdkSettings#google.ima.ImaSdkSettings.setPlayerType"
+                  ><span>set<wbr />Player<wbr />Type<wbr /></span><span></span></a
+              ></code>
+            </td>
+            <td><div>Sets the partner provided player type.</div></td>
+          </tr>
+          <tr>
+            <td>
+              <code
+                 translate="no" dir="ltr"><a
+                  href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.ImaSdkSettings#google.ima.ImaSdkSettings.setPlayerVersion"
+                  ><span>set<wbr />Player<wbr />Version<wbr /></span><span></span></a
+              ></code>
+            </td>
+            <td><div>Sets the partner provided player version.</div></td>
+          </tr>
+          <tr>
+            <td>
+              <code
+                 translate="no" dir="ltr"><a
+                  href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.ImaSdkSettings#google.ima.ImaSdkSettings.setPpid"
+                  ><span>set<wbr />Ppid<wbr /></span><span></span></a
+              ></code>
+            </td>
+            <td><div>Sets the publisher provided id.</div></td>
+          </tr>
+          <tr>
+            <td>
+              <code
+                 translate="no" dir="ltr"><a
+                  href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.ImaSdkSettings#google.ima.ImaSdkSettings.setSessionId"
+                  ><span>set<wbr />Session<wbr />Id<wbr /></span><span></span></a
+              ></code>
+            </td>
+            <td><div>Session ID is a temporary random ID.</div></td>
+          </tr>
+          <tr>
+            <td>
+              <code
+                 translate="no" dir="ltr"><a
+                  href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.ImaSdkSettings#google.ima.ImaSdkSettings.setVpaidAllowed"
+                  ><span>set<wbr />Vpaid<wbr />Allowed<wbr /></span><span></span></a
+              ></code>
+            </td>
+            <td>
+              <div><b>Deprecated. </b>Sets whether VPAID creatives are allowed.</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code
+                 translate="no" dir="ltr"><a
+                  href="/interactive-media-ads/docs/sdks/html5/client-side/reference/interface/google.ima.ImaSdkSettings#google.ima.ImaSdkSettings.setVpaidMode"
+                  ><span>set<wbr />Vpaid<wbr />Mode<wbr /></span><span></span></a
+              ></code>
+            </td>
+            <td><div>Sets VPAID playback mode.</div></td>
+          </tr>
+        </table>
+      </section>
+      <section></section>
+      <section>
+        <h2 class="" id="google.ima.ImaSdkSettings_Methods" data-text="Methods" tabindex="-1">Methods</h2>
+        <section>
+          <hr />
+          <h3 id="google.ima.ImaSdkSettings.getCompanionBackfill" data-text="             getCompanionBackfill           " tabindex="-1">
+            <a id="google.ima.ImaSdkSettings_getCompanionBackfill"></a><span>getCompanionBackfill</span>
+          </h3>
+          <div>
+            <code
+               translate="no" dir="ltr"><span>getCompanionBackfill</span><span>(</span><span>)</span><span>: </span
+              ><a
+                href="/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima.ImaSdkSettings#google.ima.ImaSdkSettings.CompanionBackfillMode"
+                >CompanionBackfillMode</a
+              ></code
+            >
+            <div>
+              Returns the current companion backfill mode.
+              <table class="properties responsive fixed">
+                <colgroup>
+                  <col style="width: 33%" />
+                  <col />
+                </colgroup>
+                <tr>
+                  <th colspan="2">Returns</th>
+                </tr>
+                <tr>
+                  <td>
+                    <code
+                       translate="no" dir="ltr"><a
+                        href="/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima.ImaSdkSettings#google.ima.ImaSdkSettings.CompanionBackfillMode"
+                        >CompanionBackfillMode</a
+                      ></code
+                    >
+                  </td>
+                  <td>The current value.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </section>
+        <section>
+          <hr />
+          <h3 id="google.ima.ImaSdkSettings.getDisableCustomPlaybackForIOS10Plus" data-text="             getDisableCustomPlaybackForIOS10Plus           " tabindex="-1">
+            <a id="google.ima.ImaSdkSettings_getDisableCustomPlaybackForIOS10Plus"></a><span>getDisableCustomPlaybackForIOS10Plus</span>
+          </h3>
+          <div>
+            <code
+               translate="no" dir="ltr"><span>getDisableCustomPlaybackForIOS10Plus</span><span>(</span><span>)</span
+              ><span>: </span><span>boolean</span></code
+            >
+            <div>
+              Returns whether to disable custom playback on iOS 10+ browsers. The default value is
+              false.
+              <table class="properties responsive fixed">
+                <colgroup>
+                  <col style="width: 33%" />
+                  <col />
+                </colgroup>
+                <tr>
+                  <th colspan="2">Returns</th>
+                </tr>
+                <tr>
+                  <td>
+                    <code translate="no" dir="ltr"><span>boolean</span></code>
+                  </td>
+                  <td>Whether to disable custom playback.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </section>
+        <section>
+          <hr />
+          <h3 id="google.ima.ImaSdkSettings.getFeatureFlags" data-text="             getFeatureFlags           " tabindex="-1">
+            <a id="google.ima.ImaSdkSettings_getFeatureFlags"></a><span>getFeatureFlags</span>
+          </h3>
+          <div>
+            <code
+               translate="no" dir="ltr"><span>getFeatureFlags</span><span>(</span><span>)</span><span>: </span
+              ><span>Record</span><span>&lt;</span><span>string</span><span>, </span
+              ><span>unknown</span><span>&gt;</span></code
+            >
+            <div>
+              Returns an object with keys as feature flags and values as their current state.
+              <table class="properties responsive fixed">
+                <colgroup>
+                  <col style="width: 33%" />
+                  <col />
+                </colgroup>
+                <tr>
+                  <th colspan="2">Returns</th>
+                </tr>
+                <tr>
+                  <td>
+                    <code
+                       translate="no" dir="ltr"><span>Record</span><span>&lt;</span><span>string</span><span>, </span
+                      ><span>unknown</span><span>&gt;</span></code
+                    >
+                  </td>
+                  <td>The feature flags.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </section>
+        <section>
+          <hr />
+          <h3 id="google.ima.ImaSdkSettings.getLocale" data-text="             getLocale           " tabindex="-1">
+            <a id="google.ima.ImaSdkSettings_getLocale"></a><span>getLocale</span>
+          </h3>
+          <div>
+            <code
+               translate="no" dir="ltr"><span>getLocale</span><span>(</span><span>)</span><span>: </span
+              ><span>string</span></code
+            >
+            <div>
+              Returns the publisher provided locale.
+              <table class="properties responsive fixed">
+                <colgroup>
+                  <col style="width: 33%" />
+                  <col />
+                </colgroup>
+                <tr>
+                  <th colspan="2">Returns</th>
+                </tr>
+                <tr>
+                  <td>
+                    <code translate="no" dir="ltr"><span>string</span></code>
+                  </td>
+                  <td>Publisher provided locale.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </section>
+        <section>
+          <hr />
+          <h3 id="google.ima.ImaSdkSettings.getNumRedirects" data-text="             getNumRedirects           " tabindex="-1">
+            <a id="google.ima.ImaSdkSettings_getNumRedirects"></a><span>getNumRedirects</span>
+          </h3>
+          <div>
+            <code
+               translate="no" dir="ltr"><span>getNumRedirects</span><span>(</span><span>)</span><span>: </span
+              ><span>number</span></code
+            >
+            <div>
+              Returns the maximum number of redirects for subsequent redirects will be denied.
+              <table class="properties responsive fixed">
+                <colgroup>
+                  <col style="width: 33%" />
+                  <col />
+                </colgroup>
+                <tr>
+                  <th colspan="2">Returns</th>
+                </tr>
+                <tr>
+                  <td>
+                    <code translate="no" dir="ltr"><span>number</span></code>
+                  </td>
+                  <td>the maximum number of redirects.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </section>
+        <section>
+          <hr />
+          <h3 id="google.ima.ImaSdkSettings.getPlayerType" data-text="             getPlayerType           " tabindex="-1">
+            <a id="google.ima.ImaSdkSettings_getPlayerType"></a><span>getPlayerType</span>
+          </h3>
+          <div>
+            <code
+               translate="no" dir="ltr"><span>getPlayerType</span><span>(</span><span>)</span><span>: </span
+              ><span>string</span></code
+            >
+            <div>
+              Returns the partner provided player type.
+              <table class="properties responsive fixed">
+                <colgroup>
+                  <col style="width: 33%" />
+                  <col />
+                </colgroup>
+                <tr>
+                  <th colspan="2">Returns</th>
+                </tr>
+                <tr>
+                  <td>
+                    <code translate="no" dir="ltr"><span>string</span></code>
+                  </td>
+                  <td>Partner player type.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </section>
+        <section>
+          <hr />
+          <h3 id="google.ima.ImaSdkSettings.getPlayerVersion" data-text="             getPlayerVersion           " tabindex="-1">
+            <a id="google.ima.ImaSdkSettings_getPlayerVersion"></a><span>getPlayerVersion</span>
+          </h3>
+          <div>
+            <code
+               translate="no" dir="ltr"><span>getPlayerVersion</span><span>(</span><span>)</span><span>: </span
+              ><span>string</span></code
+            >
+            <div>
+              Returns the partner provided player version.
+              <table class="properties responsive fixed">
+                <colgroup>
+                  <col style="width: 33%" />
+                  <col />
+                </colgroup>
+                <tr>
+                  <th colspan="2">Returns</th>
+                </tr>
+                <tr>
+                  <td>
+                    <code translate="no" dir="ltr"><span>string</span></code>
+                  </td>
+                  <td>Partner player version.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </section>
+        <section>
+          <hr />
+          <h3 id="google.ima.ImaSdkSettings.getPpid" data-text="             getPpid           " tabindex="-1">
+            <a id="google.ima.ImaSdkSettings_getPpid"></a><span>getPpid</span>
+          </h3>
+          <div>
+            <code
+               translate="no" dir="ltr"><span>getPpid</span><span>(</span><span>)</span><span>: </span
+              ><span>string</span></code
+            >
+            <div>
+              Returns the publisher provided id.
+              <table class="properties responsive fixed">
+                <colgroup>
+                  <col style="width: 33%" />
+                  <col />
+                </colgroup>
+                <tr>
+                  <th colspan="2">Returns</th>
+                </tr>
+                <tr>
+                  <td>
+                    <code translate="no" dir="ltr"><span>string</span></code>
+                  </td>
+                  <td>The publisher provided id.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </section>
+        <section>
+          <hr />
+          <h3 id="google.ima.ImaSdkSettings.setAutoPlayAdBreaks" data-text="             setAutoPlayAdBreaks           " tabindex="-1">
+            <a id="google.ima.ImaSdkSettings_setAutoPlayAdBreaks"></a><span>setAutoPlayAdBreaks</span>
+          </h3>
+          <div>
+            <code
+               translate="no" dir="ltr"><span>setAutoPlayAdBreaks</span><span>(</span><span>autoPlayAdBreaks</span
+              ><span>: </span><span>boolean</span><span>)</span><span>: </span
+              ><span>void</span></code
+            >
+            <div>
+              Sets whether VMAP and ad rules ad breaks are automatically played
+              <table class="properties responsive fixed">
+                <colgroup>
+                  <col style="width: 33%" />
+                  <col />
+                </colgroup>
+                <tr>
+                  <th colspan="2">Parameters</th>
+                </tr>
+                <tr>
+                  <td>
+                    <code translate="no" dir="ltr"><span>autoPlayAdBreaks</span>: <span>boolean</span></code>
+                  </td>
+                  <td>Whether to autoPlay the ad breaks.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </section>
+        <section>
+          <hr />
+          <h3 id="google.ima.ImaSdkSettings.setCompanionBackfill" data-text="             setCompanionBackfill           " tabindex="-1">
+            <a id="google.ima.ImaSdkSettings_setCompanionBackfill"></a><span>setCompanionBackfill</span>
+          </h3>
+          <div>
+            <code
+               translate="no" dir="ltr"><span>setCompanionBackfill</span><span>(</span><span>mode</span><span>: </span
+              ><a
+                href="/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima.ImaSdkSettings#google.ima.ImaSdkSettings.CompanionBackfillMode"
+                >CompanionBackfillMode</a
+              ><span>)</span><span>: </span><span>void</span></code
+            >
+            <div>
+              Sets the companion backfill mode. See the various modes available in
+              ImaSdkSettings.CompanionBackfillMode.<br /><br />
+              <p>The default mode is ImaSdkSettings.CompanionBackfillMode.ALWAYS.</p>
+              <table class="properties responsive fixed">
+                <colgroup>
+                  <col style="width: 33%" />
+                  <col />
+                </colgroup>
+                <tr>
+                  <th colspan="2">Parameters</th>
+                </tr>
+                <tr>
+                  <td>
+                    <code
+                       translate="no" dir="ltr"><span>mode</span>:
+                      <a
+                        href="/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima.ImaSdkSettings#google.ima.ImaSdkSettings.CompanionBackfillMode"
+                        >CompanionBackfillMode</a
+                      ></code
+                    >
+                  </td>
+                  <td>The chosen companion backfill mode.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </section>
+        <section>
+          <hr />
+          <h3 id="google.ima.ImaSdkSettings.setDisableCustomPlaybackForIOS10Plus" data-text="             setDisableCustomPlaybackForIOS10Plus           " tabindex="-1">
+            <a id="google.ima.ImaSdkSettings_setDisableCustomPlaybackForIOS10Plus"></a><span>setDisableCustomPlaybackForIOS10Plus</span>
+          </h3>
+          <div>
+            <code
+               translate="no" dir="ltr"><span>setDisableCustomPlaybackForIOS10Plus</span><span>(</span><span>disable</span
+              ><span>: </span><span>boolean</span><span>)</span><span>: </span
+              ><span>void</span></code
+            >
+            <div>
+              Sets whether to disable custom playback on iOS 10+ browsers. If true, ads will play
+              inline if the content video is inline. This enables TrueView skippable ads. However,
+              the ad will stay inline and not support iOS&#39;s native fullscreen. When false, ads
+              will play in the same player as your content. You must set this value before creating
+              the <code translate="no" dir="ltr">AdDisplayContainer</code>. The default value is false.
+              <table class="properties responsive fixed">
+                <colgroup>
+                  <col style="width: 33%" />
+                  <col />
+                </colgroup>
+                <tr>
+                  <th colspan="2">Parameters</th>
+                </tr>
+                <tr>
+                  <td>
+                    <code translate="no" dir="ltr"><span>disable</span>: <span>boolean</span></code>
+                  </td>
+                  <td>Whether or not to disable custom playback.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </section>
+        <section>
+          <hr />
+          <h3 id="google.ima.ImaSdkSettings.setFeatureFlags" data-text="             setFeatureFlags           " tabindex="-1">
+            <a id="google.ima.ImaSdkSettings_setFeatureFlags"></a><span>setFeatureFlags</span>
+          </h3>
+          <div>
+            <code
+               translate="no" dir="ltr"><span>setFeatureFlags</span><span>(</span><span>featureFlags</span><span>: </span
+              ><span>Record</span><span>&lt;</span><span>string</span><span>, </span
+              ><span>unknown</span><span>&gt;</span><span>)</span><span>: </span
+              ><span>void</span></code
+            >
+            <div>
+              Set the value for any feature flags. This should be set as early as possible, before
+              requesting ads. Settings will remain constant until the next ad request. Calling this
+              method again will reset any feature flags for the next ad request.
+              <table class="properties responsive fixed">
+                <colgroup>
+                  <col style="width: 33%" />
+                  <col />
+                </colgroup>
+                <tr>
+                  <th colspan="2">Parameters</th>
+                </tr>
+                <tr>
+                  <td>
+                    <code
+                       translate="no" dir="ltr"><span>featureFlags</span>: <span>Record</span><span>&lt;</span
+                      ><span>string</span><span>, </span><span>unknown</span><span>&gt;</span></code
+                    >
+                  </td>
+                  <td>The feature flags object.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </section>
+        <section>
+          <hr />
+          <h3 id="google.ima.ImaSdkSettings.setLocale" data-text="             setLocale           " tabindex="-1">
+            <a id="google.ima.ImaSdkSettings_setLocale"></a><span>setLocale</span>
+          </h3>
+          <div>
+            <code
+               translate="no" dir="ltr"><span>setLocale</span><span>(</span><span>locale</span><span>: </span
+              ><span>string</span><span>)</span><span>: </span><span>void</span></code
+            >
+            <div>
+              Sets the publisher provided locale. Must be called before creating AdsLoader or
+              AdDisplayContainer. The locale specifies the language in which to display UI elements.
+              The supported codes can be found in
+              <a href="/interactive-media-ads/docs/sdks/html5/localization"
+                >Localizing for Language and Locale</a
+              >.
+              <table class="properties responsive fixed">
+                <colgroup>
+                  <col style="width: 33%" />
+                  <col />
+                </colgroup>
+                <tr>
+                  <th colspan="2">Parameters</th>
+                </tr>
+                <tr>
+                  <td>
+                    <code translate="no" dir="ltr"><span>locale</span>: <span>string</span></code>
+                  </td>
+                  <td>Publisher-provided locale.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </section>
+        <section>
+          <hr />
+          <h3 id="google.ima.ImaSdkSettings.setNumRedirects" data-text="             setNumRedirects           " tabindex="-1">
+            <a id="google.ima.ImaSdkSettings_setNumRedirects"></a><span>setNumRedirects</span>
+          </h3>
+          <div>
+            <code
+               translate="no" dir="ltr"><span>setNumRedirects</span><span>(</span><span>numRedirects</span><span>: </span
+              ><span>number</span><span>)</span><span>: </span><span>void</span></code
+            >
+            <div>
+              Specifies the maximum number of redirects before the subsequent redirects will be
+              denied, and the ad load aborted. The number of redirects directly affects latency and
+              thus user experience. This applies to all VAST wrapper ads.
+              <table class="properties responsive fixed">
+                <colgroup>
+                  <col style="width: 33%" />
+                  <col />
+                </colgroup>
+                <tr>
+                  <th colspan="2">Parameters</th>
+                </tr>
+                <tr>
+                  <td>
+                    <code translate="no" dir="ltr"><span>numRedirects</span>: <span>number</span></code>
+                  </td>
+                  <td>The maximum number of redirects.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </section>
+        <section>
+          <hr />
+          <h3 id="google.ima.ImaSdkSettings.setPlayerType" data-text="             setPlayerType           " tabindex="-1">
+            <a id="google.ima.ImaSdkSettings_setPlayerType"></a><span>setPlayerType</span>
+          </h3>
+          <div>
+            <code
+               translate="no" dir="ltr"><span>setPlayerType</span><span>(</span><span>playerType</span><span>: </span
+              ><span>string</span><span>)</span><span>: </span><span>void</span></code
+            >
+            <div>
+              Sets the partner provided player type. This setting should be used to specify the name
+              of the player being integrated with the SDK. Player type greater than 20 characters
+              will be truncated. The player type specified should be short and unique. This is an
+              optional setting used to improve SDK usability by tracking player types.<br /><br />Example:<br /><br />
+              <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Text only" syntax-guessed> <code translate="no" dir="ltr"> settings.setPlayerType('google/gmf-player'); </code></pre></devsite-code>
+              <table class="properties responsive fixed">
+                <colgroup>
+                  <col style="width: 33%" />
+                  <col />
+                </colgroup>
+                <tr>
+                  <th colspan="2">Parameters</th>
+                </tr>
+                <tr>
+                  <td>
+                    <code translate="no" dir="ltr"><span>playerType</span>: <span>string</span></code>
+                  </td>
+                  <td>The type of the partner player.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </section>
+        <section>
+          <hr />
+          <h3 id="google.ima.ImaSdkSettings.setPlayerVersion" data-text="             setPlayerVersion           " tabindex="-1">
+            <a id="google.ima.ImaSdkSettings_setPlayerVersion"></a><span>setPlayerVersion</span>
+          </h3>
+          <div>
+            <code
+               translate="no" dir="ltr"><span>setPlayerVersion</span><span>(</span><span>playerVersion</span><span>: </span
+              ><span>string</span><span>)</span><span>: </span><span>void</span></code
+            >
+            <div>
+              Sets the partner provided player version. This setting should be used to specify the
+              version of the partner player being integrated with the SDK. Player versions greater
+              than 20 characters will be truncated. This is an optional setting used to improve SDK
+              usability by tracking player version.<br /><br />Example:<br /><br />
+              <div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Text only" syntax-guessed> <code translate="no" dir="ltr"> settings.setPlayerVersion('1.0.0'); </code></pre></devsite-code>
+              <table class="properties responsive fixed">
+                <colgroup>
+                  <col style="width: 33%" />
+                  <col />
+                </colgroup>
+                <tr>
+                  <th colspan="2">Parameters</th>
+                </tr>
+                <tr>
+                  <td>
+                    <code translate="no" dir="ltr"><span>playerVersion</span>: <span>string</span></code>
+                  </td>
+                  <td>The version of the partner player.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </section>
+        <section>
+          <hr />
+          <h3 id="google.ima.ImaSdkSettings.setPpid" data-text="             setPpid           " tabindex="-1">
+            <a id="google.ima.ImaSdkSettings_setPpid"></a><span>setPpid</span>
+          </h3>
+          <div>
+            <code
+               translate="no" dir="ltr"><span>setPpid</span><span>(</span><span>ppid</span><span>: </span><span>string</span
+              ><span>)</span><span>: </span><span>void</span></code
+            >
+            <div>
+              Sets the publisher provided id.
+              <table class="properties responsive fixed">
+                <colgroup>
+                  <col style="width: 33%" />
+                  <col />
+                </colgroup>
+                <tr>
+                  <th colspan="2">Parameters</th>
+                </tr>
+                <tr>
+                  <td>
+                    <code translate="no" dir="ltr"><span>ppid</span>: <span>string</span></code>
+                  </td>
+                  <td>publisher provided id.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </section>
+        <section>
+          <hr />
+          <h3 id="google.ima.ImaSdkSettings.setSessionId" data-text="             setSessionId           " tabindex="-1">
+            <a id="google.ima.ImaSdkSettings_setSessionId"></a><span>setSessionId</span>
+          </h3>
+          <div>
+            <code
+               translate="no" dir="ltr"><span>setSessionId</span><span>(</span><span>sessionId</span><span>: </span
+              ><span>string</span><span>)</span><span>: </span><span>void</span></code
+            >
+            <div>
+              Session ID is a temporary random ID. It is used exclusively for frequency capping. A
+              session ID must be a UUID.
+              <table class="properties responsive fixed">
+                <colgroup>
+                  <col style="width: 33%" />
+                  <col />
+                </colgroup>
+                <tr>
+                  <th colspan="2">Parameters</th>
+                </tr>
+                <tr>
+                  <td>
+                    <code translate="no" dir="ltr"><span>sessionId</span>: <span>string</span></code>
+                  </td>
+                  <td>A temporary UUID used for frequency capping.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </section>
+        <section>
+          <hr />
+          <h3 id="google.ima.ImaSdkSettings.setVpaidAllowed" data-text="             setVpaidAllowed           " tabindex="-1">
+            <a id="google.ima.ImaSdkSettings_setVpaidAllowed"></a><span>setVpaidAllowed</span>
+          </h3>
+          <div>
+            <code
+               translate="no" dir="ltr"><span>setVpaidAllowed</span><span>(</span><span>allowVpaid</span><span>: </span
+              ><span>boolean</span><span>)</span><span>: </span><span>void</span></code
+            >
+            <div>
+              Sets whether VPAID creatives are allowed.
+              <aside class="warning"><b>Deprecated:</b> Use setVpaidMode.</aside>
+              <table class="properties responsive fixed">
+                <colgroup>
+                  <col style="width: 33%" />
+                  <col />
+                </colgroup>
+                <tr>
+                  <th colspan="2">Parameters</th>
+                </tr>
+                <tr>
+                  <td>
+                    <code translate="no" dir="ltr"><span>allowVpaid</span>: <span>boolean</span></code>
+                  </td>
+                  <td>Whether to allow VPAID creatives.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </section>
+        <section>
+          <hr />
+          <h3 id="google.ima.ImaSdkSettings.setVpaidMode" data-text="             setVpaidMode           " tabindex="-1">
+            <a id="google.ima.ImaSdkSettings_setVpaidMode"></a><span>setVpaidMode</span>
+          </h3>
+          <div>
+            <code
+               translate="no" dir="ltr"><span>setVpaidMode</span><span>(</span><span>vpaidMode</span><span>: </span
+              ><a
+                href="/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima.ImaSdkSettings#google.ima.ImaSdkSettings.VpaidMode"
+                >VpaidMode</a
+              ><span>)</span><span>: </span><span>void</span></code
+            >
+            <div>
+              Sets VPAID playback mode.
+              <table class="properties responsive fixed">
+                <colgroup>
+                  <col style="width: 33%" />
+                  <col />
+                </colgroup>
+                <tr>
+                  <th colspan="2">Parameters</th>
+                </tr>
+                <tr>
+                  <td>
+                    <code
+                       translate="no" dir="ltr"><span>vpaidMode</span>:
+                      <a
+                        href="/interactive-media-ads/docs/sdks/html5/client-side/reference/namespace/google.ima.ImaSdkSettings#google.ima.ImaSdkSettings.VpaidMode"
+                        >VpaidMode</a
+                      ></code
+                    >
+                  </td>
+                  <td>Sets how VPAID ads will be played. Default is secure mode.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </section>
+      </section>
+    </section>
+  
+  
+
+  
+    <devsite-hats-survey class="nocontent" data-nosnippet
+      hats-id="zs8vVTo60LHkahqinNfT0W3st7sv"
+      listnr-id="82128"></devsite-hats-survey>
+  
+</div>
+
+  
+    
+      <devsite-recommendations display="in-page" hidden yield>
+      </devsite-recommendations>
+    
+    
+      
+    <devsite-thumb-rating position="footer">
+    </devsite-thumb-rating>
+  
+       
+         <devsite-feedback
+  position="footer"
+  project-name="IMA SDK for HTML5"
+  product-id="82128"
+  bucket="InteractiveMediaAds"
+  context=""
+  version="t-devsite-webserver-20260901-r00-rc00.480082941541264604"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="footer"
+  class="nocontent"
+  data-nosnippet
+  
+  
+    project-feedback-url="//groups.google.com/forum/?fromgroups#!forum/ima-sdk"
+  
+  
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/touchicon-180-new.png"
+  
+  
+    project-support-url="//groups.google.com/forum/?fromgroups#!forum/ima-sdk"
+  
+  
+  >
+
+  <button>
+  
+    
+    Send feedback
+  
+  </button>
+</devsite-feedback>
+       
+    
+    
+      <devsite-recommendations id="recommendations-link" yield></devsite-recommendations>
+    
+  
+
+  <div class="devsite-floating-action-buttons"></div></article>
+
+
+<devsite-content-footer class="nocontent" data-nosnippet>
+  <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
+  <p>Last updated 2026-04-17 UTC.</p>
+</devsite-content-footer>
+
+
+<devsite-notification
+>
+</devsite-notification>
+
+
+  
+<div class="devsite-content-data">
+  
+    
+    
+    <template class="devsite-thumb-rating-feedback">
+      <devsite-feedback
+  position="thumb-rating"
+  project-name="IMA SDK for HTML5"
+  product-id="82128"
+  bucket="InteractiveMediaAds"
+  context=""
+  version="t-devsite-webserver-20260901-r00-rc00.480082941541264604"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="thumb-rating"
+  class="nocontent"
+  data-nosnippet
+  
+  
+    project-feedback-url="//groups.google.com/forum/?fromgroups#!forum/ima-sdk"
+  
+  
+    project-icon="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/touchicon-180-new.png"
+  
+  
+    project-support-url="//groups.google.com/forum/?fromgroups#!forum/ima-sdk"
+  
+  
+  >
+
+  <button>
+  
+    Need to tell us more?
+  
+  </button>
+</devsite-feedback>
+    </template>
+  
+  
+    <template class="devsite-content-data-template">
+      [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Missing the information I need","missingTheInformationINeed","thumb-down"],["Too complicated / too many steps","tooComplicatedTooManySteps","thumb-down"],["Out of date","outOfDate","thumb-down"],["Samples / code issue","samplesCodeIssue","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-04-17 UTC."],[],[]]
+    </template>
+  
+</div>
+            
+          </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+          
+            
+          
+        </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+          
+            
+<nav class="devsite-footer-linkboxes nocontent"
+     aria-label="Footer links"
+     data-nosnippet>
+  
+  <ul class="devsite-footer-linkboxes-list">
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Engage</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/program"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Google Developer Program
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/community"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Google Developer Groups
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/community/experts"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Google Developer Experts
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/community/accelerators"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+          
+            Accelerators
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/community/nvidia"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+            
+              
+              
+            
+          
+            Google Cloud & NVIDIA
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Connect</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//googledevelopers.blogspot.com"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Blog
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://bsky.app/profile/developers.google.com"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Bluesky
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.instagram.com/googlefordevs/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Instagram
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.linkedin.com/showcase/googledevelopers/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+          
+            LinkedIn
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//twitter.com/googledevs"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+            
+          
+            X (Twitter)
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//www.youtube.com/user/GoogleDevelopers"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 6)"
+            >
+            
+              
+              
+            
+          
+            YouTube
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Build</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developer.android.com/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Android
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developer.chrome.com/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Chrome
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://firebase.google.com/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Firebase
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://aistudio.google.com/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+          
+            Google AI Studio
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://antigravity.google/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+            
+          
+            Google Antigravity
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://cloud.google.com/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 6)"
+            >
+            
+          
+            Google Cloud
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://play.google.com/console/about/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 7)"
+            >
+            
+          
+            Google Play
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/products"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 8)"
+            >
+            
+              
+              
+            
+          
+            View all
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+  
+</nav>
+          
+        </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+          
+            
+
+<div class="devsite-footer-utility nocontent" data-nosnippet>
+  
+  
+  <nav class="devsite-footer-sites" aria-label="Other Google Developers websites">
+    <a href="https://developers.google.com/"
+       class="devsite-footer-sites-logo-link gc-analytics-event"
+       data-category="Site-Wide Custom Events"
+       data-label="Footer Google Developers Link">
+      <picture>
+        
+        <img class="devsite-footer-sites-logo"
+             src="https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/lockup-google-for-developers.svg"
+             loading="lazy"
+             alt="Google Developers">
+      </picture>
+    </a>
+    <ul class="devsite-footer-sites-list">
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//developer.android.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Android Link"
+         
+         >
+          Android
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//developer.chrome.com/home"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Chrome Link"
+         
+         >
+          Chrome
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//firebase.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Firebase Link"
+         
+         >
+          Firebase
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//cloud.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Google Cloud Platform Link"
+         
+         >
+          Google Cloud Platform
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//ai.google.dev/"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Google AI Link"
+         
+         >
+          Google AI
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="/products"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer All products Link"
+         
+         >
+          All products
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+  
+
+  
+  <nav class="devsite-footer-utility-links" aria-label="Utility links">
+    
+    <ul class="devsite-footer-utility-list">
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/terms/site-terms"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          Terms
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          Privacy
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 glue-cookie-notification-bar-control">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="#"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Manage cookies link"
+         
+           aria-hidden="true"
+         >
+          Manage cookies
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+    
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es"
+        >Español</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+  </nav>
+</div>
+          
+        </devsite-footer-utility>
+        <devsite-panel>
+          
+        </devsite-panel>
+        
+      </section>
+      </section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar></devsite-snackbar>
+    <devsite-tooltip ></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics>
+      
+        <script type="application/json" analytics>[{&#34;dimensions&#34;: {&#34;dimension4&#34;: &#34;IMA SDK for HTML5&#34;, &#34;dimension3&#34;: false, &#34;dimension5&#34;: &#34;en&#34;, &#34;dimension11&#34;: false, &#34;dimension1&#34;: &#34;Signed out&#34;, &#34;dimension6&#34;: &#34;en&#34;}, &#34;gaid&#34;: &#34;UA-24532603-1&#34;, &#34;metrics&#34;: {&#34;ratings_value&#34;: &#34;metric1&#34;, &#34;ratings_count&#34;: &#34;metric2&#34;}, &#34;purpose&#34;: 1}]</script>
+<script type="application/json" tag-management>{&#34;at&#34;: &#34;True&#34;, &#34;ga4&#34;: [{&#34;id&#34;: &#34;G-21YFS95G19&#34;, &#34;purpose&#34;: 0}, {&#34;id&#34;: &#34;G-272J68FCRF&#34;, &#34;purpose&#34;: 1}], &#34;ga4p&#34;: [{&#34;id&#34;: &#34;G-272J68FCRF&#34;, &#34;purpose&#34;: 1}], &#34;gtm&#34;: [{&#34;id&#34;: &#34;GTM-T98GCPGN&#34;, &#34;purpose&#34;: 1}], &#34;parameters&#34;: {&#34;internalUser&#34;: &#34;False&#34;, &#34;language&#34;: {&#34;machineTranslated&#34;: &#34;False&#34;, &#34;requested&#34;: &#34;en&#34;, &#34;served&#34;: &#34;en&#34;}, &#34;pageType&#34;: &#34;article&#34;, &#34;projectName&#34;: &#34;IMA SDK for HTML5&#34;, &#34;signedIn&#34;: &#34;False&#34;, &#34;tenant&#34;: &#34;developers&#34;, &#34;recommendations&#34;: {&#34;sourcePage&#34;: &#34;&#34;, &#34;sourceType&#34;: 0, &#34;sourceRank&#34;: 0, &#34;sourceIdenticalDescriptions&#34;: 0, &#34;sourceTitleWords&#34;: 0, &#34;sourceDescriptionWords&#34;: 0, &#34;experiment&#34;: &#34;&#34;}, &#34;experiment&#34;: {&#34;ids&#34;: &#34;&#34;}}}</script>
+      
+    </devsite-analytics>
+    
+      <devsite-badger></devsite-badger>
+    
+    
+    
+    
+<script nonce="MSnBV+pvA3v+OVRFT+a5f0GPFbYmtx">
+  
+  (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/js/app_loader.js', '[1,"en",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037","https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers","https://developers-dot-devsite-v2-prod.appspot.com",null,null,["/_pwa/developers/manifest.json","https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/v5e941f15ff6710591bee254538202655020220785b40a3f4d932e94adb9f6037/developers/images/favicon-new.png","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap"],1,null,[1,6,8,12,14,17,21,25,50,52,63,70,75,76,80,87,91,92,93,97,98,100,101,102,103,104,105,107,108,109,110,112,113,117,118,120,122,124,125,126,127,129,130,131,132,133,134,135,136,138,140,141,147,148,149,151,152,156,157,158,159,161,163,164,168,169,170,179,180,182,183,186,191,193,196],"AIzaSyAP-jjEJBzmIyKR4F-3XITp8yM9T1gEEI8","AIzaSyB6xiKGDR5O3Ak2okS4rLkauxGUG7XP0hg","developers.google.com","AIzaSyAQk0fBONSGUqCNznf6Krs82Ap1-NV6J4o","AIzaSyCCxcqdrZ_7QMeLCRY20bh_SXdAYqy70KY",null,null,null,["Cloud__fast_free_trial","MiscFeatureFlags__enable_explain_this_code","DevPro__enable_nvidia_credits_card","DevPro__enable_cloud_innovators_plus","MiscFeatureFlags__enable_variable_operator_index_yaml","Cloud__cache_serialized_dynamic_content","CloudShell__cloud_code_overflow_menu","DevPro__remove_eu_tax_intake_form","Search__enable_ai_search_summaries","Significatio__enable_by_tenant","Cloud__enable_cloud_dlp_service","Profiles__enable_developer_profiles_callout","Profiles__enable_completecodelab_endpoint","Profiles__enable_developer_profile_pages_as_content","Profiles__enable_release_notes_notifications","DevPro__enable_developer_subscriptions","Cloud__enable_legacy_calculator_redirect","MiscFeatureFlags__enable_project_variables","DevPro__enable_g1_ineligible_redirect","Analytics__enable_devpro_interaction_logging","Concierge__enable_pushui","DevPro__enable_credits_banner","Profiles__enable_callout_notifications","MiscFeatureFlags__remove_cross_domain_tracking_params","Experiments__reqs_query_experiments","TpcFeatures__enable_unmirrored_page_left_nav","Concierge__enable_concierge_restricted","DevPro__enable_devpro_offers","Profiles__enable_auto_apply_credits","MiscFeatureFlags__enable_framebox_badge_methods","Search__enable_ai_eligibility_checks","Profiles__enable_dashboard_curated_recommendations","Search__enable_suggestions_from_borg","MiscFeatureFlags__enable_appearance_cookies","TpcFeatures__proxy_prod_host","Cloud__enable_cloudx_experiment_ids","Concierge__enable_concierge","Profiles__enable_recognition_badges","Concierge__enable_key_takeaways","DevPro__enable_g1_integration","DevPro__enable_firebase_workspaces_card","Profiles__enable_join_program_group_endpoint","DevPro__enable_vertex_credit_card","Profiles__require_profile_eligibility_for_signin","Search__enable_dynamic_content_confidential_banner","Concierge__enable_actions_menu","AIStudioInteractionsToggle__interactions_are_default","MiscFeatureFlags__developers_footer_dark_image","Analytics__enable_clearcut_logging","Search__enable_page_map","DevPro__enable_free_benefits","DevPro__enable_google_one_card","Profiles__enable_awarding_url","SignIn__enable_l1_signup_flow","MiscFeatureFlags__enable_view_transitions","EngEduTelemetry__enable_engedu_telemetry","Profiles__enable_completequiz_endpoint","Profiles__enable_profile_collections","MiscFeatureFlags__fix_lower_breadcrumbs","Search__enable_ai_search_summaries_for_all","MiscFeatureFlags__enable_variable_operator","Profiles__enable_stripe_subscription_management","Cloud__enable_cloud_shell_fte_user_flow","Profiles__enable_playlist_community_acl","Concierge__enable_remove_info_panel_tags","Cloud__enable_cloud_shell","MiscFeatureFlags__gdp_dashboard_reskin_enabled","MiscFeatureFlags__enable_firebase_utm","Profiles__enable_page_saving","Profiles__enable_complete_playlist_endpoint","DevPro__enable_code_assist","MiscFeatureFlags__developers_footer_image","Profiles__enable_public_developer_profiles","BookNav__enable_tenant_cache_key","Profiles__enable_targeted_hero","Profiles__enable_purchase_prompts","DevPro__enable_google_payments_buyflow","DevPro__enable_embed_profile_creation","Search__enable_ai_search_summaries_restricted","Cloud__enable_free_trial_server_call","Concierge__enable_devsite_llm_tools","Profiles__enable_user_type","DevPro__enable_devsite_captcha","MiscFeatureFlags__enable_explicit_template_dependencies","CloudShell__cloud_shell_button","Concierge__enable_key_takeaways_new_ui","Profiles__enable_developer_profile_benefits_ui_redesign","DevPro__enable_enterprise"],null,null,"AIzaSyBLEMok-5suZ67qRPzx0qUtbnLmyT_kCVE","https://developerscontentserving-pa.clients6.google.com","AIzaSyCM4QpTRSqP5qI4Dvjt4OAScIN8sOUlO-k","https://developerscontentsearch-pa.clients6.google.com",1,4,null,"https://developerprofiles-pa.clients6.google.com",[1,"developers","Google for Developers","developers.google.com",null,"developers-dot-devsite-v2-prod.appspot.com",null,null,[1,1,[1],null,null,null,null,null,null,null,null,[1],null,null,null,null,null,null,[1],[1,null,null,[1,20],"/recommendations/information"],null,null,null,[1,1,1],[1,1,null,1,1,null,null,["/meridian"]],[1,null,null,null,null,null,null,["/admob","/ad-manager/mobile-ads-sdk","/ml-kit"]],null,[null,["/meridian","/youtube/devices/"]],1,null,[1]],null,[null,null,null,null,null,null,"/images/lockup-new.svg","/images/touchicon-180-new.png",null,null,null,null,1,null,null,null,null,null,null,null,null,1,null,null,null,"/images/lockup-dark-theme-new.svg",[]],[],null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[6,1,14,15,20,22,23,29,32,36],null,[[null,null,null,[3,7,10,2,39,17,4,32,24,11,12,13,34,15,25],null,null,[1,[["docType","Choose a content type",[["Tutorial",null,null,null,null,null,null,null,null,"Tutorial"],["Guide",null,null,null,null,null,null,null,null,"Guide"],["Sample",null,null,null,null,null,null,null,null,"Sample"]]],["product","Choose a product",[["Android",null,null,null,null,null,null,null,null,"Android"],["ARCore",null,null,null,null,null,null,null,null,"ARCore"],["ChromeOS",null,null,null,null,null,null,null,null,"ChromeOS"],["Firebase",null,null,null,null,null,null,null,null,"Firebase"],["Flutter",null,null,null,null,null,null,null,null,"Flutter"],["Assistant",null,null,null,null,null,null,null,null,"Google Assistant"],["GoogleCloud",null,null,null,null,null,null,null,null,"Google Cloud"],["GoogleMapsPlatform",null,null,null,null,null,null,null,null,"Google Maps Platform"],["GooglePay",null,null,null,null,null,null,null,null,"Google Pay & Google Wallet"],["GooglePlay",null,null,null,null,null,null,null,null,"Google Play"],["Tensorflow",null,null,null,null,null,null,null,null,"TensorFlow"]]],["category","Choose a topic",[["AiAndMachineLearning",null,null,null,null,null,null,null,null,"AI and Machine Learning"],["Data",null,null,null,null,null,null,null,null,"Data"],["Enterprise",null,null,null,null,null,null,null,null,"Enterprise"],["Gaming",null,null,null,null,null,null,null,null,"Gaming"],["Mobile",null,null,null,null,null,null,null,null,"Mobile"],["Web",null,null,null,null,null,null,null,null,"Web"]]]]]],[1,1],null,1],[[["UA-24532603-1"],["UA-22084204-5"],null,null,["UA-24532603-5"],["GTM-T98GCPGN"],null,[["G-272J68FCRF"],null,null,[["G-272J68FCRF",2]]],[["UA-24532603-1",2]],null,[["UA-24532603-5",2]],[["GTM-T98GCPGN",2]],1],[[11,8],[16,13],[12,9],[13,10],[1,1],[3,2],[5,4],[4,3],[14,11],[6,5],[15,12]],[[1,1],[2,2]]],null,4,null,null,null,null,null,null,null,null,null,null,null,null,null,"developers.devsite.google",null,null,null,null,null,[]],null,"pk_live_5170syrHvgGVmSx9sBrnWtA5luvk9BwnVcvIi7HizpwauFG96WedXsuXh790rtij9AmGllqPtMLfhe2RSwD6Pn38V00uBCydV4m",null,null,"https://developerscontentinsights-pa.clients6.google.com","AIzaSyCg-ZUslalsEbXMfIo9ZP8qufZgo3LSBDU","AIzaSyDxT0vkxnY_KeINtA4LSePJO-4MAZPMRsE","https://developers.clients6.google.com",["https://codeassist.google.com","https://code-assist-free-tier.corp.google.com"],null,"AIzaSyBQom12tzI-rybN7Sf-KfeL4nwm-Rf7PmI\n",null,null,"https://developers.googleapis.com"]')
+  
+</script>
+
+    <devsite-a11y-announce></devsite-a11y-announce>
+  </body>
+</html>

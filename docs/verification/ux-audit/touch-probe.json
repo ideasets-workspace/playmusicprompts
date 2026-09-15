@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-09-05T11:16:00.923Z",
+  "origin": "https://www.playmusicprompts.com",
+  "path": "/musics",
+  "viewport": {
+    "width": 375,
+    "height": 812
+  },
+  "touchEmulation": true,
+  "result": {
+    "pointerCoarse": true,
+    "hoverNone": true,
+    "modes": [
+      "native",
+      "native",
+      "native"
+    ],
+    "enhanced": 3,
+    "nativeSelectOpacity": "0",
+    "nativeSelectGeometry": {
+      "x": 16,
+      "y": 387,
+      "w": 343,
+      "h": 52
+    },
+    "triggerGeometry": {
+      "x": 16,
+      "y": 385,
+      "w": 343,
+      "h": 54
+    },
+    "nativeOverTrigger": true,
+    "triggerAriaHidden": "true",
+    "selectTabIndex": 0,
+    "listboxOpenedOnTap": false,
+    "repaint": {
+      "chosen": "instrumental (29)",
+      "triggerShows": "instrumental (29)"
+    }
+  },
+  "consoleErrors": []
+}

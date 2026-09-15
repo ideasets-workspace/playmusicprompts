@@ -1,0 +1,278 @@
+{
+  "at": "2026-09-12T11:44:19.335Z",
+  "results": [
+    {
+      "test": "particle",
+      "exitCode": 0,
+      "output": "PASS The host receives an inside-environment view without object fitting\nPASS Unsupported device honestly selects analytical rendering\nPASS Initial authored topology is finite, coherent and bounded\nPASS Depth field and riders use fixed, finite, spatially varied seeds\nPASS Actual active bands feed retained visual signals and spectrum\nPASS Form transition is continuous, with normalized nonnegative weights\nPASS Motion off freezes an in-progress morph and all automatic clocks/signals\nPASS Explicit frozen form and spatial edits apply at the retained time\nPASS Onsets require actual active playback and enabled pulse response\nPASS Paused playback releases audio envelopes without invented new events\nPASS Low detail reduces real geometry draw counts and distributes all bundles\nPASS Particle density zero removes all structured, suspended and rider draws\nPASS Quality and density reductions also apply to both new detail layers\nPASS Detail attributes stay immutable while the shared audio and time change\nPASS Lab and global glow multiply, all numeric settings reject NaN and clamp\nPASS Ambient flow zero stops transport phase, dt is bounded\nPASS Palette follows the actual world colors\nPASS Half-float path checks actual framebuffer completeness\nPASS Capability probing restores target, cube/mipmap, XR, viewport and scissor exactly\nPASS GPU update ping-pongs real target references and restores renderer state\nPASS Small-preview hairline coverage responds to the actual drawing buffer\nPASS Low quality actually lowers compute cadence to one pass per three calls\nPASS Frozen GPU performs no simulation passes except an explicit spatial edit\nPASS Framebuffer failure selects a truthful fallback without losing renderer state\nPASS Render exception selects analytical fallback and restores host state\nPASS Disposal releases actual Three resources once and stops future work\n{\"checks\":26,\"scope\":\"actual asset behavior, real Three resources and renderer protocol; GPU pixels require browser verification\"}\n",
+      "errors": ""
+    },
+    {
+      "test": "atmosphere",
+      "exitCode": 0,
+      "output": "{\n  \"passed\": 14,\n  \"checks\": [\n    \"Pinned Three constructs a single bounded transparent medium with additive RGB and unchanged destination alpha\",\n    \"Camera uniform applies the complete translated, rotated and nonuniformly scaled parent transform\",\n    \"Three injected shader helpers cannot collide with av-prefixed custom helpers\",\n    \"Ray-box arithmetic matches an independent reference outside, inside and parallel to the box\",\n    \"Each quality level changes the actual bounded shader ray loop\",\n    \"Continuous form morph is convex and does not advance under Motion off\",\n    \"Explicit form, depth, spread, focus and finish edits remain effective while frozen\",\n    \"Invalid controls and enormous elapsed gaps remain finite and inside their declared budgets\",\n    \"Audio responds to actual active input and settles on pause; zero flow stops ambient phase\",\n    \"The medium has true depth integration, stable sample positions and a hard radiance ceiling\",\n    \"Environment box includes the camera, all near banks and the full distant field\",\n    \"Particle and volume clocks, envelopes and form weights match through pause and frozen edits\",\n    \"Palette inputs reach actual shader colours\",\n    \"Owned geometry and material dispose once and disposed assets cannot resume updates\"\n  ],\n  \"module\": \"/C:/Berk/PlayMusicPrompts/website_html_templates_lab/lab-aether-atmosphere.js\",\n  \"moduleSHA256\": \"5c096833eeb1e1caca1ddfe42d3c1efa2bbe945f7b6135efad0b8b1017f999ad\",\n  \"scope\": \"Pinned Three construction, real scene/camera matrices, input and lifecycle behavior, independent slab-reference comparison, bounded compositing math and shader namespace/source guards. These checks do not compile GLSL or establish actual GPU rendering, performance or visual acceptance.\"\n}\n",
+      "errors": ""
+    },
+    {
+      "test": "tidal",
+      "exitCode": 0,
+      "output": "{\n  \"module\": \"file:///C:/Berk/PlayMusicPrompts/website_html_templates_lab/lab-tidal.js\",\n  \"sha256\": \"e8b40cb7cc8b1a33060bc4a9ac186a1a02363fcb25dc7c4a2d7a2081319729ed\",\n  \"passed\": 13,\n  \"checks\": [\n    \"Pinned Three constructs a full ocean and inside sky, without renderer, loader or timer ownership\",\n    \"Composed camera remains above the maximum analytic crest throughout allowed dolly range\",\n    \"Local camera uniform respects the host group translation and complete parent transform\",\n    \"Audio uniforms respond to actual gated bands and decay after playback stops\",\n    \"Onsets create bounded ring slots only while the actual track is active\",\n    \"Motion off freezes a partial form transition, shader clocks, event ages and all audio response\",\n    \"Explicit controls still work while frozen and a static form edit applies without advancing time\",\n    \"Zero flow holds the current advection phase while the independent real onset clock can advance\",\n    \"Low quality reduces real triangles, wave components and noise octaves without resources per update\",\n    \"Nonfinite and out-of-range input cannot enter shader scalars or event powers\",\n    \"Palette changes the reflected and visible sky through shared finite linear color uniforms\",\n    \"Shader helper names are isolated from Three injected GLSL identifiers and derivative normals share displacement\",\n    \"All owned geometry and material resources dispose exactly once and updates become inert\"\n  ],\n  \"limits\": \"Real Three construction, numeric state and resource checks. This is not GPU compilation, actual rendered art quality or frame-rate evidence.\"\n}\n",
+      "errors": ""
+    },
+    {
+      "test": "monolith",
+      "exitCode": 0,
+      "output": "{\n  \"passed\": 13,\n  \"checks\": [\n    \"The actual pinned Three builds a solid PBR environment with full ground surfaces, a far aperture and composed camera\",\n    \"Every actual instance transform is finite and the whole owned geometry remains within the host far plane budget\",\n    \"Actual material compilation callbacks add only namespaced shader inputs and preserve PBR light/reflection chunks\",\n    \"Bounded mineral highlights preserve channel ratios while the revised depth curve retains far-face shading\",\n    \"Real audio envelopes settle on pause and silence never creates onset events\",\n    \"An actual onset schedules one spatial front and propagation advances coherently through the environment\",\n    \"Motion off freezes all automatic phases, audio envelopes, wave fronts, form blend and actual instance transforms\",\n    \"Explicit held controls visibly change their actual instance data or shader uniforms without advancing time\",\n    \"Low quality actually reduces submitted geometry instances and points, with independent particle-density control\",\n    \"Form interpolation stays convex and continuous, while flow zero holds ambient phase without disabling real audio\",\n    \"Invalid scalar inputs and oversized frame gaps never poison transforms or clocks; accessors are not invoked\",\n    \"Palette edits affect actual light colors and shader finishes; pulse gain zero clears pending emission even when held\",\n    \"All owned geometries, materials and instanced buffers dispose exactly once; held references cannot restart the asset\"\n  ],\n  \"module\": \"/C:/Berk/PlayMusicPrompts/website_html_templates_lab/lab-monolith.js\",\n  \"moduleSHA256\": \"32368960eb2c512cd4d57cb83393ae7f4a39d18aa3f749426390f8f25edb691b\",\n  \"scope\": \"Pinned Three scene, geometry, actual PBR callback wiring, numeric transforms, finite controls, motion freeze, input-driven envelopes, front propagation, true instance/draw reduction and owned-resource lifecycle. No GLSL compilation, rendered quality, FPS, photographic realism or artistic acceptance is established by this check.\"\n}\n",
+      "errors": ""
+    },
+    {
+      "test": "host",
+      "exitCode": 0,
+      "output": "{\n  \"scope\": \"Unchanged current production host function; real bundled Three scene/geometry/material/camera/Reflector and OrbitControls math, actual collection/assets/features/settings and optics ShaderPass. Renderer, composer execution, DOM event surfaces and PNG encoder are explicit boundaries. No GPU, screenshot, visual or audible playback claim.\",\n  \"threeRevision\": \"185\",\n  \"hostSHA256\": \"efe9120db8952de6f4fbebe8dfbe002f2a5586b87de969ab59c6f4f02dfa12a6\",\n  \"passed\": 66,\n  \"failed\": 0,\n  \"results\": [\n    \"Host constructs actual Three geometry/material/camera and uses identity grade by default\",\n    \"Exposure, bloom radius and strength alter actual renderer/pass state with safe defaults restored\",\n    \"Color richness and edge shade enable real grade uniforms; original bypasses the pass\",\n    \"Record dust density changes actual draw range and glow changes PointsMaterial opacity\",\n    \"Record reflection scales actual Reflector radiance and fog remains Record-only across scene switches\",\n    \"Record spectrum height changes actual instance matrices and stays editable with motion frozen\",\n    \"Record spectrum height also changes actual Wave geometry with a frozen clock\",\n    \"All 29 sanitized settings reach the real collection frame without rewriting source settings\",\n    \"Real host routes scene-specific settings to Neural, Horizon and Prism after switching\",\n    \"World tempo scales choreography once while real feature timing and real audio smoothing remain independent\",\n    \"Smoothing changes actual band and spectrum attack at equal real audio inputs\",\n    \"Bass, midrange and treble gains independently scale actual three bands and 64 spectral bins\",\n    \"Zero gains remove Record spectrum response without changing the supplied audio data\",\n    \"Real detector transients are scaled and zero pulse suppresses existing real Prism fronts immediately\",\n    \"Muted or inactive analyser input does not produce forwarded onset events\",\n    \"Motion off freezes Record matrices/rotation/light and real Prism pose despite incoming audio changes\",\n    \"Framing changes real camera distance, unrelated edits preserve it and reset restores intended composition\",\n    \"Resize fits actual camera to preview aspect without clearing advanced settings\",\n    \"Orbit speed reaches controls and only enabled compatible scenes auto-orbit during playback\",\n    \"Low quality preserves explicit look values and intentionally disables costly bloom/reflection\",\n    \"Disposed host stops scheduling/renders and disposes its explicit boundaries\",\n    \"Director optics is the actual production pass between grade and output, default camera remains neutral\",\n    \"setPerformance copies and bounds optics/camera without replacing the saved 29 look settings\",\n    \"Continuous framing preserves manual direction and target without invoking a control reset\",\n    \"Continuous framing clamps Horizon manual near/far distances to the actual composed profile\",\n    \"Prism continuous framing changes only lens zoom, preserving composed camera position\",\n    \"Breathe advances only during active playback and freezes its actual camera under pause and Motion off\",\n    \"Record arc moves the actual perspective camera and can freeze without accumulating drift\",\n    \"Composed Horizon and Prism arc uses bounded zoom/roll while preserving their camera positions\",\n    \"Manual camera gesture wins the hold period and remains stable indefinitely with Motion off\",\n    \"After gesture hold and handback, subsequent Motion off freezes the reacquired camera pose\",\n    \"Partially reacquired camera handback freezes its blend and resumes without a discontinuous jump\",\n    \"Repeated camera undo plus actual OrbitControls update does not drift framing, base settings or neutral pose\",\n    \"Raw Director bands stay real and independent of user bass/mid/treble visual gains\",\n    \"Low quality retains optics using the real lower sample budget and correct preview pixels\",\n    \"Aether uses the same host renderer, real collection asset and sanitized independent lab frame\",\n    \"Aether static form and appearance edits apply while its automatic state remains frozen\",\n    \"Aether receives genuine host band gating and drops transient response when playback is paused\",\n    \"Journey camera waits for playback, then moves and holds the exact pose during pause and Motion off\",\n    \"Turning Journey off restores the manual baseline without cumulative camera drift\",\n    \"Aether Journey yields to camera gestures for five seconds and reacquires smoothly from the manual baseline\",\n    \"Aether Journey gesture priority also holds when the separate Auto orbit setting is enabled\",\n    \"Journey is scoped to Aether; copied Record, Neural, Horizon and Prism retain their neutral camera behavior\",\n    \"Aether keeps explicit appearance through preview resize and really reduces submitted geometry in Low detail\",\n    \"tidal: actual collection receives independent controls and composed preview framing\",\n    \"tidal: Motion off freezes automatic uniforms and architecture while explicit edits still apply\",\n    \"tidal: active analyser bands settle after pause, without inventing new onsets\",\n    \"tidal: Low detail reduces actual scene work and returns to High without losing appearance\",\n    \"tidal: Journey stays bounded, pauses exactly and yields to a real OrbitControls wheel event\",\n    \"monolith: actual collection receives independent controls and composed preview framing\",\n    \"monolith: Motion off freezes automatic uniforms and architecture while explicit edits still apply\",\n    \"monolith: active analyser bands settle after pause, without inventing new onsets\",\n    \"monolith: Low detail reduces actual scene work and returns to High without losing appearance\",\n    \"monolith: Journey stays bounded, pauses exactly and yields to a real OrbitControls wheel event\",\n    \"aether: actual collection receives independent controls and composed preview framing\",\n    \"aether: Motion off freezes automatic uniforms and architecture while explicit edits still apply\",\n    \"aether: active analyser bands settle after pause, without inventing new onsets\",\n    \"aether: Low detail reduces actual scene work and returns to High without losing appearance\",\n    \"aether: Journey stays bounded, pauses exactly and yields to a real OrbitControls wheel event\",\n    \"captureFrame waits for the next compositor render and encodes the actual renderer canvas as PNG\",\n    \"Null PNG encoder output and synchronous encoder errors reject honestly\",\n    \"Hidden-page capture times out without rendering or returning a fabricated image\",\n    \"Disposal rejects queued captures and new requests; a lost context rejects new captures\",\n    \"Disposal also rejects a capture already awaiting the asynchronous PNG callback\",\n    \"Capture timeout remains active while an asynchronous encoder callback is outstanding\",\n    \"An outstanding encoder request is captured once across subsequent live frames\"\n  ],\n  \"failures\": []\n}\n",
+      "errors": ""
+    },
+    {
+      "test": "lab-controls",
+      "exitCode": 0,
+      "output": "{\n  \"at\": \"2026-09-12T11:44:17.678Z\",\n  \"passed\": 44,\n  \"checks\": [\n    \"defaults are complete and independent\",\n    \"numeric boundaries clamp every parameter\",\n    \"invalid persisted values recover to defaults\",\n    \"init and repeated read never write storage\",\n    \"read storage failure recovers without side effects\",\n    \"stored settings are sanitized without initialization writes\",\n    \"patch merges against latest storage, preserving peer fields\",\n    \"same-field last successful patch wins\",\n    \"invalid patches reject atomically without writes\",\n    \"prototype-named fields cannot enter saved settings\",\n    \"patch bounds values and avoids mutating supplied object\",\n    \"failed save retains live choice but does not claim durability\",\n    \"transient fields merge with peer changes and retry durably\",\n    \"successful retry clears stale transient ownership\",\n    \"thrown saves retain transient edits and can recover\",\n    \"reset restores all fields durably\",\n    \"returned objects cannot mutate persisted or transient state\",\n    \"store writes only lab key and preserves original keys\",\n    \"Director persists complete Aether cue appearance under lab namespace\",\n    \"Director rejects malformed Aether cue field types without modifying a saved score\",\n    \"Director rejects every non-finite and non-number Aether scalar while preserving the entire saved score\",\n    \"Director accepts partial valid Aether appearances, bounds numbers and restores unspecified defaults\",\n    \"Director rejects accessor-bearing Aether patches without executing getters or overwriting the saved score\",\n    \"Director recovery never evaluates nested Aether accessors and retains valid own data fields\",\n    \"Director keeps Aether valid in manual mode\",\n    \"absolute cue seeking restores each Aether form and appearance\",\n    \"Motion off holds scored Aether shape through seeks\",\n    \"different song and manual bypass clear score-specific Aether override\",\n    \"legacy cues without lab data and returned scored values remain independent\",\n    \"entering Aether controls exits hidden Studio comparison\",\n    \"revision 2 has three new worlds, four preserved choices and a Tidal default\",\n    \"Director stores and restores all three environment cues, including captured shared controls\",\n    \"the actual cue capture constructor includes lab appearance for each new environment\",\n    \"manual world edits inherit the visible scored appearance before bypassing Director\",\n    \"main exposes scored world state only while Score mode owns it, preventing stale manual edits\",\n    \"main analyser loop updates both world controls and the revised shell after Director\",\n    \"actual coordinator captures and applies three-world cue state without per-frame storage writes\",\n    \"editing a scored world adopts its visible scene before bypass and persists only the intended appearance change\",\n    \"editing a Studio control keeps the visible scored world instead of returning to the previous manual scene\",\n    \"original 227 files match pre-copy SHA256 manifest\",\n    \"accepted alternative assets, audio DSP, features, motion and palettes are byte-identical\",\n    \"new copied runtime stores have no original namespace literals\",\n    \"independent port and launch routes remain configured\",\n    \"lab entry identity and local import map remain independent\"\n  ],\n  \"limits\": \"Production stores and coordinator, focused unchanged UI/main function fragments, source and immutability checks. DOM-heavy coordinator controls are an explicit boundary. Actual UI interaction, GPU rendering and audible playback verification belongs to parent browser QA.\"\n}\n",
+      "errors": ""
+    }
+  ],
+  "syntax": "all copied top-level JavaScript passed",
+  "originalFiles": 227,
+  "originalUnchanged": true,
+  "manifest": [
+    {
+      "file": "AGENTS.md",
+      "sha256": "028012f6e7892eac54b5a5ff4a49d0fd1cd75517c32e849cc56632c97ca529ee"
+    },
+    {
+      "file": "app.js",
+      "sha256": "71fc8fa2047e2a69a8571ed78906a0ce0aa08f9329ee4cb29450cc1030694137"
+    },
+    {
+      "file": "collections.js",
+      "sha256": "2cc9c43711497682b34f35452c267335c6f3879dc7710f0a7a3b06b0c8c9a0fe"
+    },
+    {
+      "file": "config.js",
+      "sha256": "9db0832c3499fdc0123bb3246ee55eecc8df0992a3ca5adf0440ea492a851744"
+    },
+    {
+      "file": "controls.js",
+      "sha256": "f52e86eeeee07cb5abde51da885410b9303bd54cd7a7ee4cf36f5b8cea8ba139"
+    },
+    {
+      "file": "data.js",
+      "sha256": "67d55adf8ceaaa67a4da290e0a86ebcf0ddc9d6926c3c04c43737e01e3044504"
+    },
+    {
+      "file": "experience.js",
+      "sha256": "9ea41da0abdac68660421f325d82383ae57537080f93b9220258a71f1830be49"
+    },
+    {
+      "file": "explore.html",
+      "sha256": "d76e35ef41a1bc423ebf3ea47bbcfaf2f90d1673d8a94d1116115321bc00cf69"
+    },
+    {
+      "file": "index.html",
+      "sha256": "98e44fc79633671c8044c3ad98c9208a4a25f4a267a97ac355898836da94284c"
+    },
+    {
+      "file": "lab-aether-atmosphere.js",
+      "sha256": "5c096833eeb1e1caca1ddfe42d3c1efa2bbe945f7b6135efad0b8b1017f999ad"
+    },
+    {
+      "file": "lab-aether-settings.js",
+      "sha256": "99bf300e518eb5a1d2e4c77ac677e3fc841fb5bf9f88376efb8553a7002c55ee"
+    },
+    {
+      "file": "lab-aether-ui.js",
+      "sha256": "f0d8267d005c92b5431e08659738d053186ff8044afc8ccda442da2b3cbea2f8"
+    },
+    {
+      "file": "lab-aether.css",
+      "sha256": "ff67eb51a9c7ea14fcefcab17c94ef711ea5a4368910e960d4d31d9df05181b5"
+    },
+    {
+      "file": "lab-aether.js",
+      "sha256": "2ad27b1a3d7f6cac08f3653c7acd653744c5bfd812b232c9e049a8d91e57d655"
+    },
+    {
+      "file": "lab-immersive.css",
+      "sha256": "a1784ce7b5053e41fb95bfb63695b358bd0b4da35bf45eae371721415c8b710c"
+    },
+    {
+      "file": "lab-monolith.js",
+      "sha256": "32368960eb2c512cd4d57cb83393ae7f4a39d18aa3f749426390f8f25edb691b"
+    },
+    {
+      "file": "lab-shell.js",
+      "sha256": "737e1f2c5e15fa2a70115eebbd9a3bd8e18c8f2b8aecc3e8ea7043592218ea1b"
+    },
+    {
+      "file": "lab-tidal.js",
+      "sha256": "e8b40cb7cc8b1a33060bc4a9ac186a1a02363fcb25dc7c4a2d7a2081319729ed"
+    },
+    {
+      "file": "library.html",
+      "sha256": "24e06c14f776fbfda02caa8cea6059e99aece2858cc407e392f27643b3833948"
+    },
+    {
+      "file": "login.html",
+      "sha256": "11ec21185297134bd819bfd57732c695af3adcf69db02c197a0f464d766fb80a"
+    },
+    {
+      "file": "player-launch.html",
+      "sha256": "93cf75966e3d3b49d7b7c73b17343c6078ed2b250649a316cba0ea47baefbb8c"
+    },
+    {
+      "file": "player-three-audio.js",
+      "sha256": "3cdf3111556e2fc46cad4ad9044ff756b1e6a8bc9873e9e8fd96409583f5a302"
+    },
+    {
+      "file": "player-three-aurora.js",
+      "sha256": "15c16d4970af10c4fd5a552dc996425a419b1109cd374772b931eec9838e5927"
+    },
+    {
+      "file": "player-three-collection.css",
+      "sha256": "7436b6bbcd7c415797fbba6e15e6de202e16ed9515b7a95060c92c11ba9625b1"
+    },
+    {
+      "file": "player-three-collection.js",
+      "sha256": "8d2c84930c66c23fbde593a6d0b5135add423158d6ee5795bf581760ed1252e3"
+    },
+    {
+      "file": "player-three-director-ui.js",
+      "sha256": "6ca440a350f76cef0497eae45066f9009b81dd3000596121e99752ee43aa4da0"
+    },
+    {
+      "file": "player-three-director.css",
+      "sha256": "72f25b13657cfd4e94856d1cd7b21a6800ebaf66932bd80e93193755974115a5"
+    },
+    {
+      "file": "player-three-director.js",
+      "sha256": "75a622b8663c90cb313c60c308937efc3487d9e94ab78be9852cb4bab1ce00f4"
+    },
+    {
+      "file": "player-three-entry.js",
+      "sha256": "251a4f0482da9af5caf63b598032600354622c9a2bb9a154497def0b6fbf5fd1"
+    },
+    {
+      "file": "player-three-features.js",
+      "sha256": "a8688dc70a76e0f6d34fb47d83085750899107cf0ac9ea329cd2b1b94ed1c3c5"
+    },
+    {
+      "file": "player-three-layout.css",
+      "sha256": "5fc2e764376129c85a83a5f2a989c3e168bda49dbb00eb0faa404fc4d71f1931"
+    },
+    {
+      "file": "player-three-liquid.js",
+      "sha256": "017b84499e1a98e944a9b554eb699d4f6d7c3f3b6fa09993c3c4bb4546615132"
+    },
+    {
+      "file": "player-three-models.js",
+      "sha256": "bd23628b429f6882f4f0387807391ef5325a0946d536672eb17364f4380cf546"
+    },
+    {
+      "file": "player-three-motion.js",
+      "sha256": "8a8a41d85dd8aea082aa4e4ea2088c9b18331a7203442f509db1172759776bd2"
+    },
+    {
+      "file": "player-three-optics.js",
+      "sha256": "2aa3bfc0f4a9f555d4d2f27eebbd373c445a637a99fecb585f275ba614c3d806"
+    },
+    {
+      "file": "player-three-orbital.js",
+      "sha256": "41b0be7dfe8e3fe411d6e9e64926e118b6d08ca35c5958e042173f2b95f200e5"
+    },
+    {
+      "file": "player-three-performance.js",
+      "sha256": "6623cc966d193001de4674336b19a975c3aa9aef263297b6b3022ee1ee236441"
+    },
+    {
+      "file": "PLAYER-THREE-README.md",
+      "sha256": "af5708a9ca37146abffdb90c4f4a0f225eb263d4acaf5541c2f267ba23847704"
+    },
+    {
+      "file": "player-three-scene.js",
+      "sha256": "efe9120db8952de6f4fbebe8dfbe002f2a5586b87de969ab59c6f4f02dfa12a6"
+    },
+    {
+      "file": "player-three-session.js",
+      "sha256": "7827937d8b79cba20d59def273cb5e8003024402754a5a7641c029ca3718fd52"
+    },
+    {
+      "file": "player-three-sound-ui.js",
+      "sha256": "7af58803e297ac146c48ee22fdf3a33bc2e448275c10b100b21b2b843811e1bb"
+    },
+    {
+      "file": "player-three-store.js",
+      "sha256": "2d4e665b8c0e0152822ab02c291f6cda2653797028b0f9cbf5cf21a8cb933183"
+    },
+    {
+      "file": "player-three-ultra.css",
+      "sha256": "5d2ed26fc78fb060b09166925611ef07bc64bfcc17cc5936c99fbec5a1c1598d"
+    },
+    {
+      "file": "player-three-visual-settings.js",
+      "sha256": "4f1eb9434a0de0abe2c5ab6ab94e7a375b76d6540b3d449f1fdd8c0f410436ed"
+    },
+    {
+      "file": "player-three-visual-studio.css",
+      "sha256": "22fd14cf7932a547adf44a5787959aff25897412882433441c99e928df80caa5"
+    },
+    {
+      "file": "player-three-visual-studio.js",
+      "sha256": "28bd8a8fc1830721e13fd7990cd8c1627429c2f71526724d97c5cc45bd3d3c64"
+    },
+    {
+      "file": "player-three-worlds.js",
+      "sha256": "0176067b6805bc573cf09b833400b0e606109acb2f488b4e19535f2c2367b89f"
+    },
+    {
+      "file": "player-three.css",
+      "sha256": "8abb0989b419db3b525de883312ff8dcab92b29c24bbc95099535f93fa8ee041"
+    },
+    {
+      "file": "player-three.html",
+      "sha256": "405e38242f8efdb96a7f753eeef8017ddb9679ad734f547968d077ec1da589bf"
+    },
+    {
+      "file": "player-three.js",
+      "sha256": "bfab245b03a3513d00b1ab616810f95771b8da8c9727efebfbd278b1146d51f7"
+    },
+    {
+      "file": "player.js",
+      "sha256": "4d821223dfcf4178a29f44d41ab66ddd6ad9200b1d37b83cbd491e3c0eb631af"
+    },
+    {
+      "file": "radio.html",
+      "sha256": "b5a67b38fbfa7cfb354436b4197042e08435cc7583568d545b60131753c88f15"
+    },
+    {
+      "file": "README.md",
+      "sha256": "a1bd823c3868ec988b4801ff66c248047a98cc269928994ae5476a472848299f"
+    },
+    {
+      "file": "schema.js",
+      "sha256": "0190ac11dfc5cb8aad17846a128111129b0061cd0ccc3025b5cf1ac93cf394cd"
+    },
+    {
+      "file": "server.mjs",
+      "sha256": "490f3ce2fef46c63a0a4f01dac3412dd33be93723e5eb6f7f8de6759f412408b"
+    },
+    {
+      "file": "START-PLAYER.cmd",
+      "sha256": "bc0581f5448791549a7fd4248afa74663ff77166993bf7e8956084ba4cd01327"
+    },
+    {
+      "file": "START.cmd",
+      "sha256": "91bb1c8c6fcff3efe12dee73c6b04e7c2ad790d0540f53bfbffa5e62c095a076"
+    },
+    {
+      "file": "styles.css",
+      "sha256": "78e69443736b6b6fd62bd21935bde9d6b96cfafa9a995bc88a5e57330ae8e78c"
+    }
+  ]
+}

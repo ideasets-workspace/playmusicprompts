@@ -1,0 +1,349 @@
+{
+  "generatedAt": "2026-09-04T20:26:06.080Z",
+  "origin": "https://www.playmusicprompts.com",
+  "trackId": "984310cf-0993-404e-b9fc-08f9244bbf5f",
+  "pages": [
+    {
+      "page": "home",
+      "path": "/",
+      "width": 375,
+      "hadConsentBanner": true,
+      "bannerSmallTargets": [],
+      "scrollW": 375,
+      "clientW": 375,
+      "overflowPx": 0,
+      "overflowOffenders": [],
+      "interactiveCount": 23,
+      "smallTargets": [],
+      "focusableNoName": [],
+      "tinyText": [],
+      "lowContrastCount": 4,
+      "lowContrast": [
+        "h1 \"Describe whatyou want to hea\" 1.00:1 (need 3) 32.25px",
+        "span.hear \"hear\" 1.00:1 (need 3) 32.25px",
+        "span.dot \".\" 1.00:1 (need 3) 32.25px",
+        "i \"3\" 4.33:1 (need 4.5) 13.5px"
+      ],
+      "imagesNoAlt": 0,
+      "textElements": 96,
+      "docHeight": 3876,
+      "consoleErrors": [],
+      "screenshot": "web-home-375.png",
+      "behaviour": {
+        "factsHeads": 4
+      }
+    },
+    {
+      "page": "home",
+      "path": "/",
+      "width": 768,
+      "hadConsentBanner": false,
+      "bannerSmallTargets": [],
+      "scrollW": 768,
+      "clientW": 768,
+      "overflowPx": 0,
+      "overflowOffenders": [],
+      "interactiveCount": 23,
+      "smallTargets": [],
+      "focusableNoName": [],
+      "tinyText": [
+        "span.tag \"CREATE • CONTROL • FEEL\" 10.5px",
+        "i \"•\" 10.5px",
+        "u \"•\" 10.5px"
+      ],
+      "lowContrastCount": 4,
+      "lowContrast": [
+        "h1 \"Describe whatyou want to hea\" 1.00:1 (need 3) 38px",
+        "span.hear \"hear\" 1.00:1 (need 3) 38px",
+        "span.dot \".\" 1.00:1 (need 3) 38px",
+        "i \"3\" 4.33:1 (need 4.5) 13.5px"
+      ],
+      "imagesNoAlt": 0,
+      "textElements": 99,
+      "docHeight": 2505,
+      "consoleErrors": [],
+      "screenshot": "web-home-768.png",
+      "behaviour": {
+        "factsHeads": 4
+      }
+    },
+    {
+      "page": "home",
+      "path": "/",
+      "width": 1440,
+      "hadConsentBanner": false,
+      "bannerSmallTargets": [],
+      "scrollW": 1425,
+      "clientW": 1425,
+      "overflowPx": 0,
+      "overflowOffenders": [],
+      "interactiveCount": 27,
+      "smallTargets": [],
+      "focusableNoName": [],
+      "tinyText": [
+        "span.tag \"CREATE • CONTROL • FEEL\" 10.5px",
+        "i \"•\" 10.5px",
+        "u \"•\" 10.5px"
+      ],
+      "lowContrastCount": 4,
+      "lowContrast": [
+        "h1 \"Describe whatyou want to hea\" 1.00:1 (need 3) 62px",
+        "span.hear \"hear\" 1.00:1 (need 3) 62px",
+        "span.dot \".\" 1.00:1 (need 3) 62px",
+        "i \"3\" 4.33:1 (need 4.5) 13.5px"
+      ],
+      "imagesNoAlt": 0,
+      "textElements": 106,
+      "docHeight": 2046,
+      "consoleErrors": [],
+      "screenshot": "web-home-1440.png",
+      "behaviour": {
+        "factsHeads": 4
+      }
+    },
+    {
+      "page": "musics",
+      "path": "/musics",
+      "width": 375,
+      "hadConsentBanner": false,
+      "bannerSmallTargets": [],
+      "scrollW": 375,
+      "clientW": 375,
+      "overflowPx": 0,
+      "overflowOffenders": [],
+      "interactiveCount": 145,
+      "smallTargets": [],
+      "focusableNoName": [],
+      "tinyText": [],
+      "lowContrastCount": 2,
+      "lowContrast": [
+        "h1 \"Musics.\" 1.00:1 (need 3) 40px",
+        "span.dot \".\" 1.00:1 (need 3) 40px"
+      ],
+      "imagesNoAlt": 0,
+      "textElements": 287,
+      "docHeight": 6937,
+      "consoleErrors": [],
+      "screenshot": "web-musics-375.png",
+      "behaviour": {
+        "enhanced": 3,
+        "modes": [
+          "listbox",
+          "listbox",
+          "listbox"
+        ],
+        "nativeSelectsVisible": 0,
+        "triggerText": [
+          "VoiceAll",
+          "LanguageAll",
+          "SortNewest"
+        ],
+        "opened": {
+          "role": "listbox",
+          "options": 5,
+          "expanded": "true"
+        }
+      }
+    },
+    {
+      "page": "musics",
+      "path": "/musics",
+      "width": 768,
+      "hadConsentBanner": false,
+      "bannerSmallTargets": [],
+      "scrollW": 768,
+      "clientW": 768,
+      "overflowPx": 0,
+      "overflowOffenders": [],
+      "interactiveCount": 145,
+      "smallTargets": [],
+      "focusableNoName": [],
+      "tinyText": [
+        "span.tag \"CREATE • CONTROL • FEEL\" 10.5px",
+        "i \"•\" 10.5px",
+        "u \"•\" 10.5px"
+      ],
+      "lowContrastCount": 2,
+      "lowContrast": [
+        "h1 \"Musics.\" 1.00:1 (need 3) 46.08px",
+        "span.dot \".\" 1.00:1 (need 3) 46.08px"
+      ],
+      "imagesNoAlt": 0,
+      "textElements": 290,
+      "docHeight": 5787,
+      "consoleErrors": [],
+      "screenshot": "web-musics-768.png",
+      "behaviour": {
+        "enhanced": 3,
+        "modes": [
+          "listbox",
+          "listbox",
+          "listbox"
+        ],
+        "nativeSelectsVisible": 0,
+        "triggerText": [
+          "VoiceAll",
+          "LanguageAll",
+          "SortNewest"
+        ],
+        "opened": {
+          "role": "listbox",
+          "options": 5,
+          "expanded": "true"
+        }
+      }
+    },
+    {
+      "page": "musics",
+      "path": "/musics",
+      "width": 1440,
+      "hadConsentBanner": false,
+      "bannerSmallTargets": [],
+      "scrollW": 1425,
+      "clientW": 1425,
+      "overflowPx": 0,
+      "overflowOffenders": [],
+      "interactiveCount": 148,
+      "smallTargets": [],
+      "focusableNoName": [],
+      "tinyText": [
+        "span.tag \"CREATE • CONTROL • FEEL\" 10.5px",
+        "i \"•\" 10.5px",
+        "u \"•\" 10.5px"
+      ],
+      "lowContrastCount": 2,
+      "lowContrast": [
+        "h1 \"Musics.\" 1.00:1 (need 3) 72px",
+        "span.dot \".\" 1.00:1 (need 3) 72px"
+      ],
+      "imagesNoAlt": 0,
+      "textElements": 293,
+      "docHeight": 2508,
+      "consoleErrors": [],
+      "screenshot": "web-musics-1440.png",
+      "behaviour": {
+        "enhanced": 3,
+        "modes": [
+          "listbox",
+          "listbox",
+          "listbox"
+        ],
+        "nativeSelectsVisible": 0,
+        "triggerText": [
+          "VoiceAll",
+          "LanguageAll",
+          "SortNewest"
+        ],
+        "opened": {
+          "role": "listbox",
+          "options": 5,
+          "expanded": "true"
+        }
+      }
+    },
+    {
+      "page": "track",
+      "path": "/t/984310cf-0993-404e-b9fc-08f9244bbf5f",
+      "width": 375,
+      "hadConsentBanner": false,
+      "bannerSmallTargets": [],
+      "scrollW": 375,
+      "clientW": 375,
+      "overflowPx": 0,
+      "overflowOffenders": [],
+      "interactiveCount": 11,
+      "smallTargets": [],
+      "focusableNoName": [],
+      "tinyText": [],
+      "lowContrastCount": 2,
+      "lowContrast": [
+        "h1 \"Listen.\" 1.00:1 (need 3) 40px",
+        "span.dot \".\" 1.00:1 (need 3) 40px"
+      ],
+      "imagesNoAlt": 0,
+      "textElements": 38,
+      "docHeight": 1436,
+      "consoleErrors": [],
+      "screenshot": "web-track-375.png",
+      "behaviour": {
+        "audioHasControls": false,
+        "transportHidden": false,
+        "timelineRole": "slider",
+        "duration": "2:14",
+        "playLabel": "Play"
+      }
+    },
+    {
+      "page": "track",
+      "path": "/t/984310cf-0993-404e-b9fc-08f9244bbf5f",
+      "width": 768,
+      "hadConsentBanner": false,
+      "bannerSmallTargets": [],
+      "scrollW": 768,
+      "clientW": 768,
+      "overflowPx": 0,
+      "overflowOffenders": [],
+      "interactiveCount": 11,
+      "smallTargets": [],
+      "focusableNoName": [],
+      "tinyText": [
+        "span.tag \"CREATE • CONTROL • FEEL\" 10.5px",
+        "i \"•\" 10.5px",
+        "u \"•\" 10.5px"
+      ],
+      "lowContrastCount": 2,
+      "lowContrast": [
+        "h1 \"Listen.\" 1.00:1 (need 3) 46.08px",
+        "span.dot \".\" 1.00:1 (need 3) 46.08px"
+      ],
+      "imagesNoAlt": 0,
+      "textElements": 41,
+      "docHeight": 1105,
+      "consoleErrors": [],
+      "screenshot": "web-track-768.png",
+      "behaviour": {
+        "audioHasControls": false,
+        "transportHidden": false,
+        "timelineRole": "slider",
+        "duration": "2:14",
+        "playLabel": "Play"
+      }
+    },
+    {
+      "page": "track",
+      "path": "/t/984310cf-0993-404e-b9fc-08f9244bbf5f",
+      "width": 1440,
+      "hadConsentBanner": false,
+      "bannerSmallTargets": [],
+      "scrollW": 1425,
+      "clientW": 1425,
+      "overflowPx": 0,
+      "overflowOffenders": [],
+      "interactiveCount": 14,
+      "smallTargets": [],
+      "focusableNoName": [],
+      "tinyText": [
+        "span.tag \"CREATE • CONTROL • FEEL\" 10.5px",
+        "i \"•\" 10.5px",
+        "u \"•\" 10.5px"
+      ],
+      "lowContrastCount": 2,
+      "lowContrast": [
+        "h1 \"Listen.\" 1.00:1 (need 3) 72px",
+        "span.dot \".\" 1.00:1 (need 3) 72px"
+      ],
+      "imagesNoAlt": 0,
+      "textElements": 44,
+      "docHeight": 1135,
+      "consoleErrors": [],
+      "screenshot": "web-track-1440.png",
+      "behaviour": {
+        "audioHasControls": false,
+        "transportHidden": false,
+        "timelineRole": "slider",
+        "duration": "2:14",
+        "playLabel": "Play"
+      }
+    }
+  ]
+}

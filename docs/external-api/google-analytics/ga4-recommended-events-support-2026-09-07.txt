@@ -1,0 +1,43 @@
+[GA4] Recommended events - Analytics Help
+Source: https://support.google.com/analytics/answer/9267735
+Fetched: 2026-09-07
+
+Adding these events to your website or mobile app helps you measure additional features and behavior as well as generate more useful reports, and build suggested audiences. Because these events require additional context to be meaningful, they're not sent automatically.
+
+## For all properties
+
+| Event | Trigger when a user... |
+| --- | --- |
+| ad_impression | sees an advertisement, for apps only |
+| earn_virtual_currency | earns virtual currency (coins, gems, tokens, etc.) |
+| generate_lead | submits a form or a request for information |
+| join_group | joins a group |
+| login | logs in |
+| purchase | completes a purchase |
+| refund | receives a refund |
+| search | searches your website or app |
+| select_content | selects content on your website or app |
+| share | shares content from your website or app |
+| sign_up | signs up for an account on your website or app |
+| spend_virtual_currency | spends virtual currency (coins, gems, tokens, etc.) |
+| tutorial_begin | begins a tutorial during an on-boarding process |
+| tutorial_complete | completes a tutorial during an on-boarding process |
+
+## For online sales
+
+add_payment_info, add_shipping_info, add_to_cart, add_to_wishlist, begin_checkout, purchase, refund,
+remove_from_cart, select_item, select_promotion, view_cart, view_item, view_item_list, view_promotion.
+
+## For lead generation
+
+generate_lead, qualify_lead, disqualify_lead, working_lead, close_convert_lead, close_unconvert_lead.
+
+## For games
+
+earn_virtual_currency, join_group, level_end, level_start, level_up, post_score, select_content,
+spend_virtual_currency, tutorial_begin, tutorial_complete, unlock_achievement.
+
+## Verify your events
+
+Monitor recommended events after setup using the DebugView tool. You can also view the Realtime report
+to see events coming in from real users as the events are triggered.

@@ -1,0 +1,56 @@
+{
+  "$schema_id": "berk.music-studio-separator-registry/v1",
+  "purpose": "The separator models the stems stage may use, each with its MEASURED SDR, its licence and its exact artefact URLs. This file exists so no separator is ever chosen from recollection or from a search snippet: on 2026-08-14 the Kim Vocal checkpoint was picked on LICENCE while its SDR was quoted from a snippet, and reading the real table (this session) showed it is SECOND, not first. Recorded as D-SSM-28.",
+  "sdr_source": {
+    "document": "https://raw.githubusercontent.com/ZFTurbo/Music-Source-Separation-Training/main/docs/pretrained_models.md",
+    "read_in_full": "2026-08-15 (this session, WebFetch, full page — not a search snippet)",
+    "benchmark": "Multisong Dataset (https://mvsep.com/en/quality_checker) for the vocal models; MUSDB18 test + Multisong for the multi-stem models, exactly as the source table labels them",
+    "variance": "NOT PUBLISHED in that table and NOT measured by us — so a small SDR gap (e.g. 11.00 vs 10.98) may not be significant and no such claim is made"
+  },
+  "licence_basis": "Every entry below is a release asset of ZFTurbo/Music-Source-Separation-Training, whose repository LICENSE is MIT (measured 2026-08-14 from the repo metadata), except the Kim Vocal checkpoint, whose OWN HuggingFace repo declares MIT (cardData.license read from the HF API this session, commit ac9b061, relicensed from GPL-3.0 on 2026-04-22).",
+  "models": [
+    {
+      "id": "scnet_xl_ihf",
+      "model_type": "scnet",
+      "stems": ["bass", "drums", "vocals", "other"],
+      "why_this_one": "the seven-stem panel needs FOUR separated stems (architecture s1.1 line 44: 'Vocals, Drums, Bass | separated | from the delivered mix by a 4-stem separator', plus line 45 'Music | separated (the separator\\'s \"Other\")'). This is the highest-scoring 4-stem model in the source table.",
+      "sdr": {"musdb_test_avg": 10.08, "multisong_avg": 9.92,
+              "per_stem_multisong": {"bass": 11.94, "drums": 11.58, "vocals": 9.68, "other": 6.48}},
+      "config_url": "https://github.com/ZFTurbo/Music-Source-Separation-Training/releases/download/v1.0.15/config_musdb18_scnet_xl_more_wide_v5.yaml",
+      "checkpoint_url": "https://github.com/ZFTurbo/Music-Source-Separation-Training/releases/download/v1.0.15/model_scnet_ep_36_sdr_10.0891.ckpt",
+      "licence": "MIT (inherited: release asset of the MIT-licensed MSS-Training repository)"
+    },
+    {
+      "id": "bs_polarformer",
+      "model_type": "UNSUPPORTED_BY_THE_TRAINING_REPO",
+      "status": "REFUSED_FOR_NOW — measured, not assumed",
+      "stems": ["vocals", "other"],
+      "why_this_one": "TOP of the vocal table (SDR vocals 11.00) and it WAS the intended A/B challenger against the incumbent.",
+      "why_refused": "MEASURED 2026-08-15: the string `polarformer` appears in NO model_type branch of `utils/model_utils.py`, neither in the v1.0.21 release I staged (23 model_type branches enumerated: mdx23c, htdemucs, segm_models, torchseg, mel_band_roformer, mel_band_conformer, mel_band_roformer_experimental, bs_roformer, bs_conformer, bs_roformer_experimental, bs_mamba2, swin_upernet, bandit, bandit_v2, scnet_unofficial, scnet, scnet_tran, apollo, experimental_mdx23c_stht, scnet_masked, conformer, moises_light) nor on the CURRENT main branch (fetched this session: 0 matches in model_utils.py, 0 in settings.py). Its own config carries no `model_type` key either. So the checkpoint cannot be RUN by this inference code, and the table row is capability-on-paper — the printed-enum class this project has been burned by four times. The A/B is therefore NOT DONE and is NOT claimed; reviving it needs either an inference implementation for that architecture or an upstream release that adds the branch.",
+      "sdr": {"multisong_vocals": 11.00},
+      "config_url": "https://github.com/ZFTurbo/Music-Source-Separation-Training/releases/download/v1.0.20/model_bs_polarformer_float16.yaml",
+      "checkpoint_url": "https://github.com/ZFTurbo/Music-Source-Separation-Training/releases/download/v1.0.20/model_bs_polarformer_float16.ckpt",
+      "licence": "MIT (inherited: release asset of the MIT-licensed MSS-Training repository)"
+    },
+    {
+      "id": "mel_band_roformer_kim",
+      "model_type": "mel_band_roformer",
+      "stems": ["vocals", "other"],
+      "why_this_one": "the incumbent (D-SSM-26): generation-proven on our material this session (8/8 two-leg verification) and the architecture the frontier's own data pipeline uses (SoulX-Singer's two-stage Mel-Band RoFormer). SECOND in the table by 0.02 SDR.",
+      "sdr": {"multisong_vocals": 10.98},
+      "config_url": "https://raw.githubusercontent.com/ZFTurbo/Music-Source-Separation-Training/main/configs/KimberleyJensen/config_vocals_mel_band_roformer_kj.yaml",
+      "checkpoint_url": "https://huggingface.co/KimberleyJSN/melbandroformer/resolve/main/MelBandRoformer.ckpt",
+      "checkpoint_sha256": "87201f4d31afb5bc79993230fc49446918425574db48c01c405e44f365c7559e",
+      "checkpoint_bytes": 913106900,
+      "licence": "MIT (KimberleyJSN/melbandroformer HF repo, cardData.license read this session)"
+    }
+  ],
+  "refused": [
+    {"id": "becruily_mel_band_roformer_karaoke",
+     "reason": "NO model card and NO licence declared on its HuggingFace page (fetched 2026-08-14) — refused for a commercial product even though SoulX-Singer names it"},
+    {"id": "anvuew_dereverb_mel_band_roformer",
+     "reason": "GPL-3.0 (declared on its HuggingFace page, read 2026-08-14) — the de-reverb stage needs a permissively licensed equivalent or our own training"},
+    {"id": "trvlvr_viperx_checkpoints",
+     "reason": "hosted in TRvlvr/model_repo with an UNDECLARED licence (noted in the mlx-audio per-checkpoint table read this session)"}
+  ]
+}

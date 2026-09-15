@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PlayMusicPrompts — Home · design mockup 2026-09-09</title>
+<!--
+  HOME — design mockup (no backend by Berk's order, 2026-09-09).
+  Structure: prompt-first hero on a live 3D sound field → compiled brief → now-playing stage
+  (THE FIELD language) → horizon (labour shown) → catalogue carousels → footer.
+  Shell (rail, top bar, player bar) is rendered by js/shell.js so every page shares one chrome.
+-->
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/player.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/motion.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.185.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.185.1/examples/jsm/"}}</script>
+</head>
+<body>
+<div class="app" data-rail="expanded" data-drawer="closed">
+  <aside class="rail" id="rail" aria-label="Navigation"></aside>
+  <header class="topbar"></header>
+
+  <main class="main" id="main">
+    <!-- HERO: the prompt is the first and largest thing (K1) -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-still" style="background-image:url('assets/hero-sound-field.jpg')" aria-hidden="true"></div>
+      <div class="hero-scene" id="hero-scene" aria-hidden="true"></div>
+      <div class="hero-vignette" aria-hidden="true"></div>
+      <div class="hero-scrim" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <span class="eyebrow">Music Creation OS · free · no credits</span>
+        <h1 class="display hero-title" id="hero-title">Say what you hear.<br><span class="gradient-text">We compose it.</span></h1>
+        <p class="hero-lead">Describe a feeling, a scene, a genre — or just press play and we start with something from the catalogue while your own track is composed.</p>
+
+        <form class="composer" aria-label="Describe your music" onsubmit="return false">
+          <label class="visually-hidden" for="prompt">Describe the music you want</label>
+          <textarea id="prompt" name="prompt" maxlength="5000" placeholder="warm late-night jazz for a rainy balcony in Kadıköy, brushed drums, upright bass, no vocals…"></textarea>
+          <div class="composer-row" role="group" aria-label="Optional fields">
+            <button class="chip" type="button" aria-pressed="true">Vocal <span class="val">instrumental</span></button>
+            <button class="chip" type="button">Length <span class="val">2:15</span></button>
+            <button class="chip" type="button">Genre <span class="val">jazz</span></button>
+            <button class="chip" type="button">Mood <span class="val">intimate</span></button>
+            <button class="chip" type="button">Language <span class="val">en</span></button>
+            <button class="chip chip-more" type="button" aria-expanded="false" aria-controls="all-params">All 103 parameters</button>
+            <button class="btn-go" type="submit"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.8 5.2L19 9l-5.2 1.8L12 16l-1.8-5.2L5 9l5.2-1.8L12 2z"/></svg>Compose</button>
+          </div>
+        </form>
+
+        <!-- Compiled brief (K2): what the composer understood, editable -->
+        <div class="brief" role="status">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5L20 7"/></svg>
+          <p>Understood as <b>late-night small-combo jazz</b>, <b>~135 s</b>, <b>instrumental</b>, brushed drums and upright bass, <b>intimate</b> mood, mastered for streaming at <b>−14 LUFS</b>. Route: <b>lyria-002</b> (instrumental). <a href="#">Edit the brief</a></p>
+        </div>
+
+        <div style="margin-top:var(--sp-5);display:flex;gap:var(--sp-3);flex-wrap:wrap">
+          <button class="btn-ghost" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Play something for me</button>
+          <a class="btn-ghost" href="musics.html">Browse the catalogue</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <!-- HORIZON: labour shown while composing (K3) -->
+      <section class="section" aria-label="Composing">
+        <div class="horizon">
+          <span class="pulse" aria-hidden="true"></span>
+          <p class="h-text"><b>Composing your take</b> · usually 90–140 s for an instrumental · <span class="mono">0:41</span> elapsed</p>
+          <div class="h-stages" aria-label="Stages">
+            <span class="h-stage" data-state="done">safety</span>
+            <span class="h-stage" data-state="done">enhance</span>
+            <span class="h-stage" data-state="done">compile</span>
+            <span class="h-stage" data-state="now">generate</span>
+            <span class="h-stage">master</span>
+            <span class="h-stage">deliver</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- NOW PLAYING stage -->
+      <section class="section" aria-labelledby="now-h">
+        <div class="section-head"><h2 class="h2" id="now-h">Now playing</h2><span class="faint" style="font-size:var(--fs-sm)">from the catalogue while yours is composed</span></div>
+        <div class="stage">
+          <div class="stage-field" id="stage-scene">
+            <div class="stage-caption">beat-locked · <b>84 BPM</b> measured · <b>−14.0 LUFS</b></div>
+          </div>
+          <div class="stage-info">
+            <div>
+              <div class="eyebrow">Catalogue · instrumental</div>
+              <h3 class="title" id="stage-title">Night Train Through Kadıköy</h3>
+              <p class="by">Composed for you by Ideasets Hybrid Music Composer</p>
+            </div>
+            <p class="muted" style="font-size:var(--fs-sm)">“warm lo-fi beat, rain on the window, vinyl crackle, slow”</p>
+            <div class="facts" data-reveal>
+              <div class="fact"><div class="k">Duration</div><div class="v">2:12 measured</div></div>
+              <div class="fact"><div class="k">Loudness</div><div class="v ok">−14.0 LUFS · −1.0 dBTP</div></div>
+              <div class="fact"><div class="k">Route</div><div class="v">lyria-002</div></div>
+              <div class="fact"><div class="k">Provenance</div><div class="v ok">Art. 50 marked</div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAROUSELS -->
+      <section class="section" aria-labelledby="trend-h">
+        <div class="section-head"><h2 class="h2" id="trend-h">Trending on PlayMusicPrompts</h2><a class="see-all" href="musics.html">See all</a></div>
+        <div class="carousel" id="carousel-trending" data-reveal></div>
+      </section>
+      <section class="section" aria-labelledby="fresh-h">
+        <div class="section-head"><h2 class="h2" id="fresh-h">Fresh from the composer</h2><a class="see-all" href="musics.html">See all</a></div>
+        <div class="carousel" id="carousel-fresh" data-reveal></div>
+      </section>
+
+      <footer class="footer">
+        <span>© 2026 PlayMusicPrompts · Ideasets</span>
+        <a href="legal.html#privacy">Privacy</a><a href="legal.html#terms">Terms</a><a href="legal.html#cookies">Cookies &amp; ads</a>
+        <span style="margin-left:auto">Design mockup — track names and covers are review content; live data replaces them at integration.</span>
+      </footer>
+    </div>
+  </main>
+</div>
+
+<script type="module">
+  import { AppShell, ICONS, coverOf } from "./js/shell.js";
+  import { SoundFieldScene } from "./js/scene3d.js";
+  import { FrequencyTerrain } from "./js/fx/visualizer.js";
+  import { TiltCard } from "./js/fx/motion.js";
+  import { SAMPLE_TRACKS } from "./js/constants.js";
+
+  const shell = new AppShell({ current: "index.html", nowPlaying: SAMPLE_TRACKS[0] });
+  new SoundFieldScene(document.getElementById("hero-scene"), { playing: true, intensity: 1, core: true, scroll: true });
+  new FrequencyTerrain(document.getElementById("stage-scene"), { bpm: SAMPLE_TRACKS[0].bpm });
+
+  const card = (t) => `
+    <article class="cover-card">
+      <a href="track.html" aria-label="${t.title}"><img src="${coverOf(t, 420)}" alt="" loading="lazy"></a>
+      <button class="play-fab" type="button" aria-label="Play ${t.title}">${ICONS.play}</button>
+      <div class="cc-title">${t.title}</div>
+      <div class="cc-sub"><span>${t.genres[0].replace(/_/g, " ")}</span><i></i><span>${t.plays.toLocaleString()} plays</span></div>
+    </article>`;
+  document.getElementById("carousel-trending").innerHTML = [...SAMPLE_TRACKS].sort((a, b) => b.plays - a.plays).map(card).join("");
+  document.getElementById("carousel-fresh").innerHTML = [...SAMPLE_TRACKS].reverse().map(card).join("");
+  TiltCard.attachAll(".cover-card, .fact");
+  shell.reveal();
+</script>
+</body>
+</html>

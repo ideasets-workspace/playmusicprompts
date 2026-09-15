@@ -1,0 +1,512 @@
+ตั้งค่า UMP SDK | Android | Google for Developers
+ข้ามไปที่เนื้อหาหลัก
+AdMob
+เอกสารประกอบ
+GMA Next-Gen SDK สำหรับ Android
+SDK โฆษณาบนอุปกรณ์เคลื่อนที่สำหรับ iOS
+ปลั๊กอิน Unity สำหรับโฆษณาบนอุปกรณ์เคลื่อนที่
+ปลั๊กอิน Flutter สำหรับโฆษณาบนอุปกรณ์เคลื่อนที่
+SDK โฆษณาบนอุปกรณ์เคลื่อนที่สำหรับ Android (เดิม)
+AdMob API
+ตัวอย่าง
+GMA Next-Gen SDK สำหรับ Android
+SDK โฆษณาบนอุปกรณ์เคลื่อนที่สำหรับ iOS
+ปลั๊กอิน Unity สำหรับโฆษณาบนอุปกรณ์เคลื่อนที่
+ปลั๊กอิน Flutter สำหรับโฆษณาบนอุปกรณ์เคลื่อนที่
+SDK โฆษณาบนอุปกรณ์เคลื่อนที่สำหรับ Android (เดิม)
+AdMob API
+ความช่วยเหลือและชุมชน
+การสนับสนุน
+การสนับสนุน Google Mobile Ads SDK
+การสนับสนุนของ AdMob
+ศูนย์ช่วยเหลือ
+ศูนย์ช่วยเหลือของ AdMob
+ชุมชนความช่วยเหลือของ AdMob
+ชุมชน
+Discord
+บล็อกนักพัฒนาโฆษณา
+YouTube
+โฆษณาและการวัดผลของ Google
+/
+English
+Deutsch
+Español
+Español – América Latina
+Français
+Indonesia
+Italiano
+Polski
+Português – Brasil
+Tiếng Việt
+Türkçe
+Русский
+עברית
+العربيّة
+فارسی
+हिंदी
+বাংলা
+ภาษาไทย
+中文 – 简体
+中文 – 繁體
+日本語
+한국어
+ลงชื่อเข้าใช้
+Mobile Ads SDK (Legacy) for Android
+คำแนะนำ
+ข้อมูลอ้างอิง
+ดาวน์โหลด
+ตัวอย่าง
+การสนับสนุน
+AdMob
+เอกสารประกอบ
+เพิ่มเติม
+ตัวอย่าง
+เพิ่มเติม
+ความช่วยเหลือและชุมชน
+เพิ่มเติม
+คำแนะนำ
+ข้อมูลอ้างอิง
+ดาวน์โหลด
+ตัวอย่าง
+การสนับสนุน
+จัดการการเลิกใช้งานและการหยุดให้บริการ SDK
+ย้ายข้อมูลไปยัง GMA Next-Gen SDK
+ตั้งค่า SDK โฆษณาในอุปกรณ์เคลื่อนที่ของ Google (เดิม)
+บันทึกประจำรุ่น
+ย้ายข้อมูลเวอร์ชัน SDK
+เปิดใช้โฆษณาทดสอบ
+เพิ่มประสิทธิภาพการเริ่มต้นและโหลดโฆษณา
+ใช้เครื่องมือ AI
+เลือกรูปแบบโฆษณา
+การเปิดแอป
+แบนเนอร์
+ตั้งค่าโฆษณาแบนเนอร์
+ใช้แบนเนอร์แบบปรับขนาดได้ที่แทรกในบรรทัดสำหรับแบนเนอร์ที่เลื่อน
+ใช้แบนเนอร์แบบยุบได้
+ตั้งค่าขนาดแบนเนอร์คงที่
+แบนเนอร์อัจฉริยะ
+โฆษณาคั่นระหว่างหน้า
+เนทีฟ
+โหลดโฆษณาเนทีฟ
+แสดงโฆษณาเนทีฟ
+แสดงโฆษณาเนทีฟแบบเต็มหน้าจอ
+จัดสไตล์เลย์เอาต์โฆษณาด้วยเทมเพลตโฆษณาเนทีฟ
+ตรวจสอบความถูกต้องของโฆษณาเนทีฟ
+ตั้งค่าฟีเจอร์ขั้นสูง
+ตอบกลับเหตุการณ์วิดีโอ
+ได้รับรางวัลแล้ว
+โฆษณาคั่นระหว่างหน้าที่มีการให้รางวัล
+ผสานรวมสื่อกลาง AdMob
+ตั้งค่าสื่อกลาง AdMob
+เลือกแหล่งที่มาของโฆษณา
+ผสานรวมแหล่งที่มาของโฆษณา
+AdColony
+AppLovin
+BidMachine
+BIGO Ads SDK
+Chartboost
+DT Exchange (previously Fyber)
+i-mobile
+InMobi
+ironSource
+Liftoff Monetize (previously Vungle)
+LY Ads Network (previously Line Ads Network)
+maio
+Meta Audience Network (previously Facebook)
+Mintegral
+Moloco
+myTarget
+nend
+Pangle
+PubMatic OpenWrap
+Tapjoy
+Unity Ads
+Vpon
+Yahoo (previously Verizon Media)
+Zucks
+แก้ปัญหาการเสนอราคา
+สร้างเหตุการณ์ที่กำหนดเอง
+สร้างเหตุการณ์ที่กําหนดเอง
+แบนเนอร์
+โฆษณาคั่นระหว่างหน้า
+เนทีฟ
+ได้รับรางวัลแล้ว
+ควบคุมความเป็นส่วนตัว
+กลยุทธ์
+รูปแบบการแสดงโฆษณา
+การเปิดเผยข้อมูล Google Play
+นโยบายข้อมูลตำแหน่งที่แน่นอน
+กฎหมายคุ้มครองความเป็นส่วนตัวของรัฐในสหรัฐอเมริกา
+SDK สำหรับ User Messaging Platform (UMP)
+ตั้งค่า UMP SDK
+จัดการการสนับสนุน IAB
+เปิดเผยต่อผู้ใช้ใน EEA
+เปิดเผยต่อผู้ใช้ในสหรัฐอเมริกา
+ตีความค่าโหมดความยินยอม
+ความยินยอมในการซิงค์ในแอป
+บันทึกประจำรุ่น
+แก้ปัญหาเกี่ยวกับโฆษณา
+จัดการเครื่องมือตรวจสอบโฆษณา
+ภาพรวม
+เปิดใช้เครื่องมือตรวจสอบโฆษณา
+ยืนยันการผสานรวมอะแดปเตอร์
+ทดสอบหน่วยโฆษณา
+แก้ปัญหาเกี่ยวกับหน่วยโฆษณา
+แก้ปัญหาการตั้งค่าความเป็นส่วนตัว
+คัดลอกเอาต์พุตการแก้ปัญหา
+ทดสอบประเภทครีเอทีฟโฆษณา
+ข้อผิดพลาดในการโหลดโฆษณา
+ข้อมูลการตอบกลับ
+บันทึกรหัสการตอบสนองของโฆษณาไปยัง Crashlytics
+พร็อกซี Charles
+การติดตามเครือข่าย
+แก้ปัญหาโฆษณาไม่แสดง
+เพิ่มประสิทธิภาพ
+การโหลดโฆษณาล่วงหน้า
+ผู้ขายที่ได้รับอนุญาตสำหรับแอป
+การตั้งค่าส่วนกลาง
+รายได้จากโฆษณาระดับการแสดงผล
+การรายงาน
+การยืนยันฝั่งเซิร์ฟเวอร์
+การกำหนดเป้าหมาย
+ตั้งค่าการวัดแบบเปิด
+เบราว์เซอร์ในแอป
+ดูข้อมูลเกี่ยวกับเบราว์เซอร์ในแอป
+เพิ่มประสิทธิภาพแท็บที่กำหนดเอง
+เพิ่มประสิทธิภาพการดูเว็บ
+ตั้งค่ามุมมองเว็บ
+ผสานรวม WebView API สำหรับโฆษณา
+เพิ่มประสิทธิภาพลักษณะการคลิก
+GMA Next-Gen SDK สำหรับ Android
+SDK โฆษณาบนอุปกรณ์เคลื่อนที่สำหรับ iOS
+ปลั๊กอิน Unity สำหรับโฆษณาบนอุปกรณ์เคลื่อนที่
+ปลั๊กอิน Flutter สำหรับโฆษณาบนอุปกรณ์เคลื่อนที่
+SDK โฆษณาบนอุปกรณ์เคลื่อนที่สำหรับ Android (เดิม)
+AdMob API
+GMA Next-Gen SDK สำหรับ Android
+SDK โฆษณาบนอุปกรณ์เคลื่อนที่สำหรับ iOS
+ปลั๊กอิน Unity สำหรับโฆษณาบนอุปกรณ์เคลื่อนที่
+ปลั๊กอิน Flutter สำหรับโฆษณาบนอุปกรณ์เคลื่อนที่
+SDK โฆษณาบนอุปกรณ์เคลื่อนที่สำหรับ Android (เดิม)
+AdMob API
+การสนับสนุน
+การสนับสนุน Google Mobile Ads SDK
+การสนับสนุนของ AdMob
+ศูนย์ช่วยเหลือ
+ศูนย์ช่วยเหลือของ AdMob
+ชุมชนความช่วยเหลือของ AdMob
+ชุมชน
+Discord
+บล็อกนักพัฒนาโฆษณา
+YouTube
+โฆษณาและการวัดผลของ Google
+Google Mobile Ads SDK อยู่ในโหมดการบำรุงรักษา หากต้องการทราบข้อมูลอัปเดตและฟีเจอร์ล่าสุด โปรด migrate และ ตั้งค่า GMA Next-Gen SDK
+Google ใช้เทคโนโลยี AI เพื่อแปลเนื้อหาเป็นภาษาที่คุณต้องการ การแปลโดย AI อาจมีข้อผิดพลาด
+หน้าแรก
+ผลิตภัณฑ์
+AdMob
+ความช่วยเหลือและชุมชน
+Mobile Ads SDK (Legacy) for Android
+ส่งความคิดเห็น
+ตั้งค่า UMP SDK
+จัดทุกอย่างให้เป็นระเบียบอยู่เสมอด้วยคอลเล็กชัน
+บันทึกและจัดหมวดหมู่เนื้อหาตามค่ากำหนดของคุณ
+เลือกแพลตฟอร์ม:
+Android
+iOS
+Unity
+Flutter
+Android (เดิม)
+SDK สำหรับ User Messaging Platform (UMP) ของ Google เป็นเครื่องมือด้านความเป็นส่วนตัวและการแสดงข้อความแจ้งผู้ใช้ที่ช่วยคุณจัดการตัวเลือกความเป็นส่วนตัว
+ดูข้อมูลเพิ่มเติมได้ที่
+เกี่ยวกับความเป็นส่วนตัวและการแสดงข้อความแจ้งผู้ใช้
+ข้อกำหนดเบื้องต้น
+API ระดับ 21 ขึ้นไปของ Android
+สร้างประเภทข้อความ
+สร้างข้อความสำหรับผู้ใช้ด้วย ประเภทข้อความสำหรับผู้ใช้ที่ใช้ได้
+ในแท็บ ความเป็นส่วนตัวและการแสดงข้อความแจ้งผู้ใช้ ของบัญชี
+AdMob UMP SDK พยายามแสดง
+ข้อความแสดงความยินยอมให้ใช้คุกกี้ทางการตลาดที่สร้างจากรหัสแอปพลิเคชัน AdMob
+ที่ตั้งค่าไว้ในโปรเจ็กต์
+ดูรายละเอียดเพิ่มเติมได้ที่
+เกี่ยวกับความเป็นส่วนตัวและการรับส่งข้อความ
+ติดตั้งด้วย Gradle
+เพิ่มทรัพยากร Dependency สำหรับ SDK สำหรับ User Messaging Platform ของ Google ลงในไฟล์ Gradle ระดับแอปของโมดูล โดยปกติจะเป็น app/build.gradle
+dependencies {
+implementation ( "com.google.android.ump:user-messaging-platform:4.0.0" )
+}
+หลังจากทำการเปลี่ยนแปลงใน build.gradle ของแอปแล้ว อย่าลืมซิงค์โปรเจ็กต์กับไฟล์ Gradle
+เพิ่มรหัสแอปพลิเคชัน
+คุณดูรหัสแอปพลิเคชันได้ใน
+UI ของ AdMob
+เพิ่มรหัสลงใน
+AndroidManifest.xml
+ด้วยข้อมูลโค้ดต่อไปนี้
+<manifest>
+<application>
+<meta-data
+android:name="com.google.android.gms.ads.APPLICATION_ID"
+android:value="ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy"/>
+</application>
+</manifest>
+รับข้อมูลความยินยอมของผู้ใช้
+หากต้องการรับข้อมูลความยินยอมของผู้ใช้ ให้ทำดังนี้
+ประกาศอินสแตนซ์ของ ConsentInformation
+Java
+private final ConsentInformation consentInformation ;
+Kotlin
+private lateinit var consentInformation : ConsentInformation
+เริ่มต้นอินสแตนซ์ ConsentInformation
+Java
+consentInformation = UserMessagingPlatform . getConsentInformation ( context );
+Kotlin
+consentInformation = UserMessagingPlatform . getConsentInformation ( context )
+คุณควรร้องขอการอัปเดตข้อมูลความยินยอมของผู้ใช้ทุกครั้งที่เปิดแอป
+โดยใช้
+requestConsentInfoUpdate() คำขอนี้จะตรวจสอบสิ่งต่อไปนี้
+ต้องได้รับความยินยอมหรือไม่ เช่น ต้องได้รับความยินยอมเป็นครั้งแรก หรือการตัดสินใจเกี่ยวกับความยินยอมครั้งก่อนหมดอายุแล้ว
+ต้องมีจุดแรกเข้าของตัวเลือกความเป็นส่วนตัวหรือไม่ ข้อความด้านความเป็นส่วนตัวบางข้อความ
+กำหนดให้แอปต้องอนุญาตให้ผู้ใช้แก้ไขตัวเลือกความเป็นส่วนตัวได้ทุกเมื่อ
+Java
+// Requesting an update to consent information should be called on every app launch.
+consentInformation . requestConsentInfoUpdate (
+activity ,
+params ,
+() - > // Called when consent information is successfully updated.
+requestConsentError - > // Called when there's an error updating consent information. GoogleMobileAdsConsentManager.java
+Kotlin
+// Requesting an update to consent information should be called on every app launch.
+consentInformation . requestConsentInfoUpdate (
+activity ,
+params ,
+{
+// Called when consent information is successfully updated.
+},
+{ requestConsentError - >
+// Called when there's an error updating consent information.
+},
+) GoogleMobileAdsConsentManager . kt
+คำเตือน: การใช้การตรวจสอบสถานะความยินยอมวิธีอื่นๆ เช่น แคชในแอปหรือสตริงความยินยอมที่บันทึกไว้ก่อนหน้านี้ อาจทำให้เกิด ข้อผิดพลาด TCF 3.3 หากความยินยอมหมดอายุ
+โหลดและแสดงแบบฟอร์มประกาศเกี่ยวกับความเป็นส่วนตัว
+หลังจากได้รับสถานะความยินยอมล่าสุดแล้ว ให้เรียกใช้
+loadAndShowConsentFormIfRequired() เพื่อโหลดแบบฟอร์มที่จำเป็นต่อการ
+รวบรวมความยินยอมของผู้ใช้ หลังจากโหลดแล้ว แบบฟอร์มจะปรากฏขึ้นทันที
+ประเด็นสำคัญ: หากไม่มีแบบฟอร์มข้อความแสดงความยินยอมให้ใช้คุกกี้ทางการตลาดที่กำหนดให้รวบรวมความยินยอมจากผู้ใช้ก่อนที่จะขอโฆษณา ระบบจะเรียกใช้การเรียกกลับทันที
+Java
+UserMessagingPlatform . loadAndShowConsentFormIfRequired (
+activity ,
+formError - > {
+// Consent gathering process is complete.
+}); GoogleMobileAdsConsentManager . java
+Kotlin
+UserMessagingPlatform . loadAndShowConsentFormIfRequired ( activity ) { formError - >
+// Consent gathering process is complete.
+} GoogleMobileAdsConsentManager . kt
+ตัวเลือกความเป็นส่วนตัว
+แบบฟอร์มข้อความด้านความเป็นส่วนตัวบางแบบจะแสดงจากจุดแรกเข้าของตัวเลือกความเป็นส่วนตัวที่ผู้เผยแพร่โฆษณาแสดงผล ซึ่งช่วยให้ผู้ใช้จัดการตัวเลือกความเป็นส่วนตัวได้ทุกเมื่อ
+ดูข้อมูลเพิ่มเติมเกี่ยวกับข้อความที่ผู้ใช้เห็นที่จุดแรกเข้าของตัวเลือกความเป็นส่วนตัวได้ที่
+ประเภทข้อความผู้ใช้ที่ใช้ได้
+ตรวจสอบว่าต้องมีจุดแรกเข้าของตัวเลือกความเป็นส่วนตัวหรือไม่
+หลังจากเรียกใช้
+requestConsentInfoUpdate() แล้ว ให้ตรวจสอบ
+getPrivacyOptionsRequirementStatus() เพื่อ
+ดูว่าแอปของคุณต้องมีจุดแรกเข้าของตัวเลือกความเป็นส่วนตัวหรือไม่ หากต้องมีจุดแรกเข้า
+ให้เพิ่มองค์ประกอบ UI ที่มองเห็นได้และโต้ตอบได้ลงในแอป ซึ่งจะแสดง
+แบบฟอร์มตัวเลือกความเป็นส่วนตัว หากไม่จำเป็นต้องมีจุดแรกเข้าด้านความเป็นส่วนตัว
+ให้กำหนดค่าองค์ประกอบ UI ไม่ให้แสดงและโต้ตอบไม่ได้
+Java
+/** Helper variable to determine if the privacy options form is required. */
+public boolean isPrivacyOptionsRequired () {
+return consentInformation . getPrivacyOptionsRequirementStatus ()
+== PrivacyOptionsRequirementStatus . REQUIRED ;
+}
+GoogleMobileAdsConsentManager . java
+Kotlin
+/** Helper variable to determine if the privacy options form is required. */
+val isPrivacyOptionsRequired : Boolean
+get () =
+consentInformation . privacyOptionsRequirementStatus ==
+ConsentInformation . PrivacyOptionsRequirementStatus . REQUIRED
+GoogleMobileAdsConsentManager . kt
+ดูรายการสถานะข้อกำหนดของตัวเลือกความเป็นส่วนตัวทั้งหมดได้ที่
+ConsentInformation.PrivacyOptionsRequirementStatus
+แสดงแบบฟอร์มตัวเลือกความเป็นส่วนตัว
+เมื่อผู้ใช้โต้ตอบกับองค์ประกอบ ให้แสดงแบบฟอร์มตัวเลือกความเป็นส่วนตัว
+Java
+UserMessagingPlatform . showPrivacyOptionsForm ( activity , onConsentFormDismissedListener ); GoogleMobileAdsConsentManager . java
+Kotlin
+UserMessagingPlatform . showPrivacyOptionsForm ( activity , onConsentFormDismissedListener ) GoogleMobileAdsConsentManager . kt
+ขอโฆษณาโดยได้รับความยินยอมของผู้ใช้
+ก่อนขอโฆษณา ให้ใช้
+canRequestAds() เพื่อตรวจสอบว่าคุณได้รับความยินยอมจากผู้ใช้หรือไม่
+Java
+consentInformation . canRequestAds ();
+Kotlin
+consentInformation . canRequestAds ()
+คุณสามารถตรวจสอบว่าขอโฆษณาได้ขณะรวบรวมความยินยอมหรือไม่ในที่ต่อไปนี้
+หลังจาก UMP SDK รวบรวมความยินยอมในเซสชันปัจจุบัน
+ทันทีหลังจากที่คุณโทรหา
+requestConsentInfoUpdate() UMP SDK อาจ
+ได้รับความยินยอมในเซสชันแอปก่อนหน้า
+สำคัญ:
+canRequestAds() จะแสดง false เสมอจนกว่าคุณจะโทรหา
+requestConsentInfoUpdate()
+หากเกิดข้อผิดพลาดในระหว่างกระบวนการรวบรวมความยินยอม ให้ตรวจสอบว่าคุณขอโฆษณาได้หรือไม่ UMP SDK ใช้สถานะความยินยอมจากเซสชันแอปก่อนหน้า
+ป้องกันไม่ให้คำขอโฆษณาซ้ำซ้อน
+ขณะตรวจสอบ
+canRequestAds() หลังจากรวบรวมความยินยอมและหลังจากเรียกใช้
+requestConsentInfoUpdate() โปรดตรวจสอบว่าตรรกะของคุณป้องกันไม่ให้มีการส่งคำขอโฆษณาที่ซ้ำซ้อน ซึ่งอาจส่งผลให้การตรวจสอบทั้ง 2 รายการแสดงผลเป็น true เช่น ตัวแปรบูลีน
+การทดสอบ
+หากต้องการทดสอบการผสานรวมในแอปขณะที่พัฒนา ให้ทำตามขั้นตอนเหล่านี้เพื่อลงทะเบียนอุปกรณ์ทดสอบโดยอัตโนมัติ อย่าลืมนำ
+โค้ดที่ตั้งค่ารหัสอุปกรณ์ทดสอบเหล่านี้ออกก่อนเผยแพร่แอป
+หมายเหตุ:
+ตั้งแต่เวอร์ชัน 2.2.0 เป็นต้นไป คุณไม่จำเป็นต้องเพิ่มโปรแกรมจำลอง
+ลงในรายการรหัสอุปกรณ์ เนื่องจากโปรแกรมจำลองเป็นอุปกรณ์ทดสอบ
+โดยค่าเริ่มต้น
+โทรมาที่
+requestConsentInfoUpdate()
+ตรวจสอบเอาต์พุตของบันทึกเพื่อหาข้อความที่คล้ายกับตัวอย่างต่อไปนี้ ซึ่ง
+แสดงรหัสอุปกรณ์และวิธีเพิ่มเป็นอุปกรณ์ทดสอบ
+Use new ConsentDebugSettings.Builder().addTestDeviceHashedId("33BE2250B43518CCDA7DE426D04EE231") to set this as a debug device.
+คัดลอกรหัสอุปกรณ์ทดสอบไปยังคลิปบอร์ด
+แก้ไขโค้ดเพื่อเรียกใช้
+ConsentDebugSettings.Builder().TestDeviceHashedIds และส่ง
+รายการรหัสอุปกรณ์ทดสอบ
+Java
+ConsentDebugSettings debugSettings = new ConsentDebugSettings . Builder ( this )
+. addTestDeviceHashedId ( "TEST-DEVICE-HASHED-ID" )
+. build ();
+ConsentRequestParameters params = new ConsentRequestParameters
+. Builder ()
+. setConsentDebugSettings ( debugSettings )
+. build ();
+consentInformation = UserMessagingPlatform . getConsentInformation ( this );
+// Include the ConsentRequestParameters in your consent request.
+consentInformation . requestConsentInfoUpdate (
+this ,
+params ,
+// ...
+);
+Kotlin
+val debugSettings = ConsentDebugSettings . Builder ( this )
+. addTestDeviceHashedId ( "TEST-DEVICE-HASHED-ID" )
+. build ()
+val params = ConsentRequestParameters
+. Builder ()
+. setConsentDebugSettings ( debugSettings )
+. build ()
+consentInformation = UserMessagingPlatform . getConsentInformation ( this )
+// Include the ConsentRequestParameters in your consent request.
+consentInformation . requestConsentInfoUpdate (
+this ,
+params ,
+// ...
+)
+บังคับใช้ภูมิศาสตร์
+UMP SDK มีวิธีทดสอบลักษณะการทำงานของแอปเสมือนว่าอุปกรณ์
+อยู่ในภูมิภาคต่างๆ เช่น เขตเศรษฐกิจยุโรป (EEA), สหราชอาณาจักร (UK) และสวิตเซอร์แลนด์ โดยใช้
+setDebugGeography() โปรดทราบว่า
+การตั้งค่าการแก้ไขข้อบกพร่องจะใช้ได้ในอุปกรณ์ทดสอบเท่านั้น
+Java
+ConsentDebugSettings debugSettings = new ConsentDebugSettings . Builder ( this )
+. setDebugGeography ( ConsentDebugSettings . DebugGeography . DEBUG_GEOGRAPHY_EEA )
+. addTestDeviceHashedId ( "TEST-DEVICE-HASHED-ID" )
+. build ();
+ConsentRequestParameters params = new ConsentRequestParameters
+. Builder ()
+. setConsentDebugSettings ( debugSettings )
+. build ();
+consentInformation = UserMessagingPlatform . getConsentInformation ( this );
+// Include the ConsentRequestParameters in your consent request.
+consentInformation . requestConsentInfoUpdate (
+this ,
+params ,
+...
+);
+Kotlin
+val debugSettings = ConsentDebugSettings . Builder ( this )
+. setDebugGeography ( ConsentDebugSettings . DebugGeography . DEBUG_GEOGRAPHY_EEA )
+. addTestDeviceHashedId ( "TEST-DEVICE-HASHED-ID" )
+. build ()
+val params = ConsentRequestParameters
+. Builder ()
+. setConsentDebugSettings ( debugSettings )
+. build ()
+consentInformation = UserMessagingPlatform . getConsentInformation ( this )
+// Include the ConsentRequestParameters in your consent request.
+consentInformation . requestConsentInfoUpdate (
+this ,
+params ,
+...
+)
+รีเซ็ตสถานะความยินยอม
+เมื่อทดสอบแอปด้วย UMP SDK คุณอาจเห็นว่าการรีเซ็ต
+สถานะของ SDK มีประโยชน์เพื่อให้คุณจำลองประสบการณ์การติดตั้งครั้งแรกของผู้ใช้ได้
+SDK มี reset() เมธอดสำหรับดำเนินการนี้
+Java
+consentInformation . reset ();
+Kotlin
+consentInformation . reset ()
+ข้อควรระวัง: วิธีนี้มีไว้เพื่อใช้ในการทดสอบเท่านั้น คุณไม่ควรเรียกใช้ reset() ในโค้ดที่ใช้งานจริง
+ตัวอย่างใน GitHub
+ดูตัวอย่างการผสานรวม UMP SDK ทั้งหมดที่กล่าวถึงในหน้านี้ได้ที่
+Java BannerExample และ
+Kotlin BannerExample
+ส่งความคิดเห็น
+เนื้อหาของหน้าเว็บนี้ได้รับอนุญาตภายใต้ ใบอนุญาตที่ต้องระบุที่มาของครีเอทีฟคอมมอนส์ 4.0 และตัวอย่างโค้ดได้รับอนุญาตภายใต้ ใบอนุญาต Apache 2.0 เว้นแต่จะระบุไว้เป็นอย่างอื่น โปรดดูรายละเอียดที่ นโยบายเว็บไซต์ Google Developers Java เป็นเครื่องหมายการค้าจดทะเบียนของ Oracle และ/หรือบริษัทในเครือ
+อัปเดตล่าสุด 2026-07-19 UTC
+หากต้องการบอกให้เราทราบเพิ่มเติม
+[[["เข้าใจง่าย","easyToUnderstand","thumb-up"],["แก้ปัญหาของฉันได้","solvedMyProblem","thumb-up"],["อื่นๆ","otherUp","thumb-up"]],[["ไม่มีข้อมูลที่ฉันต้องการ","missingTheInformationINeed","thumb-down"],["ซับซ้อนเกินไป/มีหลายขั้นตอนมากเกินไป","tooComplicatedTooManySteps","thumb-down"],["ล้าสมัย","outOfDate","thumb-down"],["ปัญหาเกี่ยวกับการแปล","translationIssue","thumb-down"],["ตัวอย่าง/ปัญหาเกี่ยวกับโค้ด","samplesCodeIssue","thumb-down"],["อื่นๆ","otherDown","thumb-down"]],["อัปเดตล่าสุด 2026-07-19 UTC"],[],["The Google UMP SDK manages user privacy choices. Key actions include: installing the SDK via Gradle, adding the AdMob application ID to `AndroidManifest.xml`, and initializing `ConsentInformation`. At each app launch, update user consent via `requestConsentInfoUpdate()`. Load and show consent forms using `loadAndShowConsentFormIfRequired()`, or present privacy options via `showPrivacyOptionsForm()` if needed. Check `canRequestAds()` before ad requests. For testing, add device IDs and set debug geography; `reset()` the consent state when testing.\n"]]
+เข้าร่วม
+Google Developer Program
+Google Developer Groups
+Google Developer Experts
+Accelerators
+Google Cloud & NVIDIA
+เชื่อมต่อ
+บล็อก
+Bluesky
+Instagram
+LinkedIn
+X (Twitter)
+YouTube
+บิวด์
+Android
+Chrome
+Firebase
+Google AI Studio
+Google Antigravity
+Google Cloud
+Google Play
+View all
+Android
+Chrome
+Firebase
+Google Cloud Platform
+Google AI
+ผลิตภัณฑ์ทั้งหมด
+ข้อกำหนด
+ความเป็นส่วนตัว
+Manage cookies
+English
+Deutsch
+Español
+Español – América Latina
+Français
+Indonesia
+Italiano
+Polski
+Português – Brasil
+Tiếng Việt
+Türkçe
+Русский
+עברית
+العربيّة
+فارسی
+हिंदी
+বাংলা
+ภาษาไทย
+中文 – 简体
+中文 – 繁體
+日本語
+한국어

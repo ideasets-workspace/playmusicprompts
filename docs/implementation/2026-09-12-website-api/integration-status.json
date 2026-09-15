@@ -1,0 +1,71 @@
+{
+  "at": "2026-09-12T17:35:29.026Z",
+  "scope": "API-first local integration; incomplete overall delivery",
+  "application": "http://127.0.0.1:4177/index.html",
+  "serverPid": 36760,
+  "tests": {
+    "passed": 227,
+    "failed": 0,
+    "sourceModules": 84,
+    "connectedPages": 6
+  },
+  "publicEngineEndpointMethods": 6,
+  "internalRunnerExposed": false,
+  "live": {
+    "intentionalMusicSubmissionsTotal": 2,
+    "musicJobsReady": 2,
+    "nonGeneratingPreviewsComplete": 2,
+    "allFieldPreview": {
+      "sent": 100,
+      "receivedList": 99,
+      "dryRunFlag": true,
+      "correspondingBindings": 100
+    },
+    "currentHealth": "health-wiring-live.json",
+    "actualOwnedPlayback": {
+      "durationSeconds": 30,
+      "observedCurrentTime": 8.541848,
+      "paused": false,
+      "readyState": 4,
+      "error": null
+    }
+  },
+  "browser": {
+    "all100ControlsVisible": true,
+    "displayedTitleSearchRepairedAndVerified": true,
+    "fadeSecondsVisible": true,
+    "unicodeMultilineLabelPreserved": true,
+    "previewReturnedRealCompiledPlan": true,
+    "previewDidNotCreateJob": true,
+    "creationDetailsInspected": true,
+    "enhanceDialogInspected": true,
+    "enabledEnhanceLive": false,
+    "latestConsoleErrors": [],
+    "testLabelRemoved": true,
+    "previewModeRestoredToOmitted": true
+  },
+  "protectedTrees": {
+    "files": 717,
+    "changed": 0,
+    "evidence": "protected-tree-verification.json"
+  },
+  "remaining": [
+    "Audio/MIDI reference upload and processing contract not integrated",
+    "Configured real webhook receiver absent",
+    "Source-only render failure recovery needs structured identifier or retry contract",
+    "Complete owner-safe interpretation of remaining route/fallback/render-stage/analysis/provenance metadata not yet implemented",
+    "Completed opted-in originality result not verified live",
+    "Every parameter musical effect and combinations not proved; source tests and dry-run are distinct"
+  ],
+  "pausedScopes": [
+    "Advertising/account/device expansion",
+    "EC2 production deployment"
+  ],
+  "claims": {
+    "completeAPI": false,
+    "completeProduct": false,
+    "productionDeployed": false
+  },
+  "historical": true,
+  "supersededBy": "docs/implementation/2026-09-12-website-api/current-status-2026-09-14.md"
+}

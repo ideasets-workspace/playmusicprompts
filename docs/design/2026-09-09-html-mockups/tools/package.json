@@ -1,0 +1,9 @@
+{
+  "name": "pmp-design-mockup-tools",
+  "private": true,
+  "type": "module",
+  "description": "Verification tools for the 2026-09-09 HTML design mockups (static server + screenshots). Not part of the product.",
+  "devDependencies": {
+    "playwright": "1.63.0"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "moviemaker.gcp-runtime/v1",
+  "comment": "music_studio's OWN execution target, pinned inside the package. NOT defaulted to the repository-level config/gcp-runtime.json: that file names holivuud-post, another production's ACTIVE machine, and a paid job aimed at the wrong instance is the measured harm class recorded in sakarperi/remote.py (a re-fork once silently pointed a detached job at the other production's machine). Created on Berk's approval 2026-08-14 21:1x (option A of the decision brief); create + read-back evidence in .claude/memory/infra.md, which remains the source of truth.",
+  "instance": "playmusicprompts-studio",
+  "zone": "us-central1-a",
+  "project": "contentanalyticsplatform",
+  "naming_law": "D-SSM-48 — folder-derived CloudNaming",
+  "staging_bucket": "gs://contentanalyticsplatform-video-staging",
+  "remote_root": "~/music_studio",
+  "verified": "created 2026-08-14 (operation-1786731379711-65905d1325e1b-ed927085-8dcd3e4b); describe read back PROVISIONING / SA 1084529532925-compute@developer.gserviceaccount.com / idle-timeout 86400 / n1-standard-8 / NVIDIA_TESLA_T4 this session"
+}

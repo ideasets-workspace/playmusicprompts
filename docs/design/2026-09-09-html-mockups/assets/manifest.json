@@ -1,0 +1,52 @@
+{
+  "generatedAt": "2026-09-09T07:20:51.638Z",
+  "endpoint": "https://i3ob0ck5m2.execute-api.eu-central-1.amazonaws.com/prod/create-image-runway",
+  "contract": "ssm-content-generation-api/ssm-content-asset-generation-api_v5.md §1.7 image-runway (Vertex worker measured down 2026-09-09; see asset-spec.mjs ASSET_API)",
+  "results": [
+    {
+      "id": "hero-sound-field",
+      "failed": true,
+      "error": "Error: job 8d99ecd7-3064-4184-886b-d8f77f3a1f72 FAILED: Runway API error 400: {\"error\":\"Validation of body failed\",\"issues\":[{\"origin\":\"string\",\"code\":\"too_big\",\"maximum\":1000,\"inclusive\":true,\"path\":[\"promptText\"],\"message\":\"Too big: expected string to have <=1000 characters\"}],\"docUrl\":\"https://docs.dev.runwayml.com/api\"}"
+    },
+    {
+      "id": "cover-lofi-night",
+      "failed": true,
+      "error": "Error: job 4067b4de-d9a2-44a1-b2b0-bb217c750a3f FAILED: Runway API error 400: {\"error\":\"You do not have enough credits to run this task.\",\"docUrl\":\"https://docs.dev.runwayml.com/api\"}"
+    },
+    {
+      "id": "cover-cinematic-orchestral",
+      "failed": true,
+      "error": "Error: job f4793d5b-b264-49b0-9c98-e9e80ac5a467 FAILED: Runway API error 400: {\"error\":\"You do not have enough credits to run this task.\",\"docUrl\":\"https://docs.dev.runwayml.com/api\"}"
+    },
+    {
+      "id": "cover-ambient-sleep",
+      "failed": true,
+      "error": "Error: job 0c0d7a76-5b41-4f2b-a7f2-5a6da2a84b69 FAILED: Runway API error 400: {\"error\":\"You do not have enough credits to run this task.\",\"docUrl\":\"https://docs.dev.runwayml.com/api\"}"
+    },
+    {
+      "id": "cover-90s-rock",
+      "failed": true,
+      "error": "Error: job 249411a3-e422-4e66-9950-7fc19ba67a7f FAILED: Runway API error 400: {\"error\":\"You do not have enough credits to run this task.\",\"docUrl\":\"https://docs.dev.runwayml.com/api\"}"
+    },
+    {
+      "id": "cover-jazz-night",
+      "failed": true,
+      "error": "Error: job 9f566a22-7558-4a9f-9db9-ae74e8a851c0 FAILED: Runway API error 400: {\"error\":\"You do not have enough credits to run this task.\",\"docUrl\":\"https://docs.dev.runwayml.com/api\"}"
+    },
+    {
+      "id": "cover-synthwave",
+      "failed": true,
+      "error": "Error: job 70c81229-f28e-4d5c-8d1d-baf471fc7888 FAILED: Runway API error 400: {\"error\":\"You do not have enough credits to run this task.\",\"docUrl\":\"https://docs.dev.runwayml.com/api\"}"
+    },
+    {
+      "id": "cover-turkish-acoustic",
+      "failed": true,
+      "error": "Error: job 51ede79b-84eb-4123-bfe4-fd649df4752b FAILED: Runway API error 400: {\"error\":\"You do not have enough credits to run this task.\",\"docUrl\":\"https://docs.dev.runwayml.com/api\"}"
+    },
+    {
+      "id": "cover-classical-piano",
+      "failed": true,
+      "error": "Error: job 84b6c165-6dc6-4fc7-b464-256894578a91 FAILED: Runway API error 400: {\"error\":\"You do not have enough credits to run this task.\",\"docUrl\":\"https://docs.dev.runwayml.com/api\"}"
+    }
+  ]
+}
