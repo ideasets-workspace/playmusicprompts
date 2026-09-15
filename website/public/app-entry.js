@@ -93,7 +93,10 @@
     await APP.refreshJobs();
     const results=await Promise.allSettled([APP.refreshCatalog(),APP.request('/api/controls-schema'),...(APP.user?[APP.request('/api/favorites'),APP.request('/api/playlists')]:[])]);
     if(results[1].status==='fulfilled'){window.PMP_SCHEMA=results[1].value;APP.schemaAvailable=true;}
-    else {await load('schema.js');APP.connectionError=results[1].reason.message;}
+    // Owner rule 2026-09-15: the schema is served from the server's own cache, never fetched from the engine at page
+    // load. If it is genuinely absent (first start with the engine unreachable) the page still opens for listening;
+    // the wording is the site's, never the engine's, and it is shown once, without blocking anything.
+    else {await load('schema.js');APP.connectionError='Creation controls could not be loaded right now. Listening works; creating returns when the music service is reachable.';}
     if(APP.user){if(results[2].status==='fulfilled')APP.saved=results[2].value.saved;if(results[3].status==='fulfilled')APP.playlists=results[3].value.playlists;}
 
     // Keep the complete request contract. Preview/discovery modes have separate
@@ -117,8 +120,9 @@
     if(!isRoom&&requestedJob&&/^[a-zA-Z0-9_-]{8,160}$/.test(requestedJob)){
       try{const {job}=await APP.request('/api/jobs/'+encodeURIComponent(requestedJob));APP.jobs=[job,...APP.jobs.filter(item=>item.id!==job.id)];window.dispatchEvent(new CustomEvent('pmp:jobs'));await window.PMPWorkflow.openCreate(job.id);}catch(error){APP.notify(error.message);}
     }
-    // Connection monitoring must not delay access to already-owned music.
-    APP.request('/api/connection').then(result=>{APP.connection=result;APP.generationAvailable=result.generationAvailable;window.PMP?.refreshCreateButton?.();window.dispatchEvent(new CustomEvent('pmp:connection'));if(!result.available)APP.notify('The music service is not ready to create. Saved music remains available.');}).catch(()=>{APP.connection={available:null};});
+    // Connection status is derived by the server from its own cache and history (no engine call); it never blocks
+    // access to owned music and never shows engine wording at page load. Unavailability is learned at Create time.
+    APP.request('/api/connection').then(result=>{APP.connection=result;APP.generationAvailable=result.generationAvailable;window.PMP?.refreshCreateButton?.();window.dispatchEvent(new CustomEvent('pmp:connection'));}).catch(()=>{APP.connection={available:null};});
     const remote=document.createElement('button');remote.type='button';remote.className='remote-mode-toggle';remote.title='Arrow keys move focus. OK selects. Back closes the current panel.';
     const storedMode=localStorage.getItem('pmp.website.inputMode');if(storedMode==='tv')window.PMPPlatform.setMode('tv');
     const showMode=()=>{const enabled=window.PMPPlatform.getState().enabled;remote.textContent=`TV controls: ${enabled?'on':'off'}`;remote.setAttribute('aria-pressed',String(enabled));remote.setAttribute('aria-label',remote.textContent);};

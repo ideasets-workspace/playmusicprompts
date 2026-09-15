@@ -58,35 +58,35 @@ test('all six documented client endpoint adapters use the exact method/path and 
   assert.deepEqual(JSON.parse(f.calls[5].options.body),{gcs_uri:'gs://fixture-bucket/music.wav'});assert.equal(f.credentialsCalls,6);
   assert.equal(f.engine.run,undefined);assert.throws(()=>f.engine.job('job-fixture/run'),/Invalid music job identifier/);assert.equal(f.calls.length,6);
 });
-test('real HTTP connection response strips raw auth and metadata, coalesces concurrent calls and reuses the server cache',async t=>{
-  let release,entered;const arrived=new Promise(r=>entered=r),gate=new Promise(r=>release=r);let healthCalls=0;
-  const h=await application(t,{health:async()=>{healthCalls++;entered();await gate;return{ok:true,auth:{key:marker},version:marker,params:103,debug:{token:marker}};}});
-  const pending=Array.from({length:8},()=>h.request('/api/connection',{headers:{cookie:h.headers.cookie}}));
-  await arrived;await tick();assert.equal(healthCalls,1);release();
-  const replies=await Promise.all(pending),bodies=await Promise.all(replies.map(r=>r.json()));
+test('owner rule 2026-09-15: /api/connection never calls the engine; it is derived from the schema cache and history and coalesces trivially',async t=>{
+  let healthCalls=0;
+  const h=await application(t,{health:async()=>{healthCalls++;return{ok:true,auth:{key:marker},version:marker,params:103,debug:{token:marker}};}});
+  const replies=await Promise.all(Array.from({length:8},()=>h.request('/api/connection',{headers:{cookie:h.headers.cookie}}))),bodies=await Promise.all(replies.map(r=>r.json()));
   for(const [i,body]of bodies.entries()){
     assert.equal(replies[i].status,200);assert.equal(replies[i].headers.get('cache-control'),'no-store');
-    assert.deepEqual(Object.keys(body).sort(),['available','checkedAt','delivery','generationAvailable']);assert.equal(body.available,true);assert.deepEqual(body.delivery,{available:true});assert.equal(body.generationAvailable,true);assert.ok(Number.isFinite(body.checkedAt));assert.ok(!JSON.stringify(body).includes(marker));
+    assert.deepEqual(Object.keys(body).sort(),['available','checkedAt','delivery','generationAvailable','lastGeneration','schema']);
+    assert.equal(body.available,false,'no schema has ever been fetched in this fixture');assert.equal(body.generationAvailable,false);assert.deepEqual(body.delivery,{available:true});
+    assert.equal(body.lastGeneration,null);assert.deepEqual(body.schema,{fetchedAt:null,revision:null});assert.ok(Number.isFinite(body.checkedAt));assert.ok(!JSON.stringify(body).includes(marker));
   }
-  assert.ok(bodies.every(x=>x.checkedAt===bodies[0].checkedAt));assert.equal(healthCalls,1);
-  const repeat=await(await h.request('/api/connection')).json();assert.deepEqual(repeat,bodies[0]);assert.equal(healthCalls,1);
-  assert.equal(h.wire.calls.filter(x=>new URL(x.url).pathname==='/health').length,1);
+  assert.equal(healthCalls,0);assert.equal(h.wire.calls.filter(x=>new URL(x.url).pathname==='/health').length,0);
   assert.equal(h.store.db.prepare('SELECT count(*) AS n FROM jobs').get().n,0);
 });
-test('health false is unavailable; cache expires after its configured interval without carrying a stale healthy result',async t=>{
+test('owner rule 2026-09-15: the schema is fetched once and then served from the on-disk cache; connection turns available without any health call',async t=>{
   let count=0;const h=await application(t,{health:async()=>({ok:++count===1})});
-  const first=await(await h.request('/api/connection')).json();assert.equal(first.available,true);
-  const realNow=Date.now;const later=realNow()+31000;t.mock.method(Date,'now',()=>later);
-  const next=await(await h.request('/api/connection')).json();assert.equal(next.available,false);assert.equal(count,2);assert.equal(next.checkedAt,later);
-  const cached=await(await h.request('/api/connection')).json();assert.deepEqual(cached,next);assert.equal(count,2);
+  const schema=await h.request('/api/controls-schema');assert.equal(schema.status,200);
+  const first=await(await h.request('/api/connection')).json();assert.equal(first.available,true);assert.equal(first.generationAvailable,true);assert.ok(Number.isFinite(first.schema.fetchedAt));
+  for(let i=0;i<5;i++)assert.equal((await h.request('/api/controls-schema')).status,200);
+  assert.equal(h.wire.calls.filter(x=>new URL(x.url).pathname==='/v1/music/capabilities').length,1,'one engine call for the schema, ever');
+  assert.equal(count,0,'health is never asked');
+  const {readFileSync}=await import('node:fs');const {resolve}=await import('node:path');
+  const persisted=JSON.parse(readFileSync(resolve(h.config.stateRoot,'capabilities.cache.json'),'utf8'));assert.ok(persisted.document?.parameters,'the document is on disk for the next process');
 });
-test('malformed health cannot be reported healthy or poison later recovery; local healthz is separate',async t=>{
+test('owner rule 2026-09-15: a malformed or failing engine health can no longer reach a visitor; local healthz is separate',async t=>{
   let count=0;const errors=[];t.mock.method(console,'error',value=>errors.push(String(value)));
-  const h=await application(t,{health:async()=>++count===1?{ok:'true',auth:marker}:{ok:true}});
-  const local=await h.request('/healthz');assert.equal(local.status,200);assert.equal((await local.json()).ok,true);assert.equal(count,0);
-  const bad=await h.request('/api/connection'),body=await bad.json();assert.equal(bad.status,502);assert.equal(body.error.code,'HEALTH_INVALID');
-  assert.ok(!JSON.stringify(body).includes(marker));assert.ok(errors.every(line=>!line.includes(marker)));
-  const recovered=await h.request('/api/connection');assert.equal(recovered.status,200);assert.equal((await recovered.json()).available,true);assert.equal(count,2);
+  const h=await application(t,{health:async()=>{count++;return {ok:'true',auth:marker};}});
+  const local=await h.request('/healthz');assert.equal(local.status,200);assert.equal((await local.json()).ok,true);
+  const connection=await h.request('/api/connection'),body=await connection.json();assert.equal(connection.status,200);assert.equal(body.available,false);
+  assert.ok(!JSON.stringify(body).includes(marker));assert.ok(errors.every(line=>!line.includes(marker)));assert.equal(count,0);
 });
 test('real HTTP admission preserves explicit async:false in durable SQLite and only defaults an omitted choice',async t=>{
   const h=await application(t),chosen={prompt:'Exact local fixture',async:false,duration:{target_seconds:30}};
@@ -100,33 +100,24 @@ test('real HTTP admission preserves explicit async:false in durable SQLite and o
   assert.equal(omitted.status,202);const second=await omitted.json();assert.equal(JSON.parse(h.store.job(second.job.id).payload).async,true);
   assert.equal(h.wire.calls.filter(x=>new URL(x.url).pathname==='/v1/music').length,0,'Admission is durable; this test does not execute a generation worker.');
 });
-test('actual preview EngineError 400/422 field refusals reach HTTP clients as safe named issues while raw evidence stays private',async t=>{
+test('owner rule 2026-09-15: /api/previews is refused before any engine call, whatever the engine would have answered',async t=>{
   for(const status of [400,422])await t.test('upstream '+status,async t=>{
-    const upstream={success:false,error_code:'INVALID_REQUEST',error:marker,refused:[
-      'duration.target_seconds: > max 180 '+marker,
-      'lyrics.text: required '+marker,
-      'structure[1].bars: not in allowed set '+marker,
-      'auth.api_key: '+marker,
-      'prompt: '+marker
-    ],auth:{api_key:marker},traceback:marker};
+    const upstream={success:false,error_code:'INVALID_REQUEST',error:marker,refused:['prompt: '+marker],auth:{api_key:marker},traceback:marker};
     const h=await application(t,{submit:async()=>response(upstream,status)});
     const payload={prompt:'Local valid preview',dry_run:true,capabilities:false,async:false};
     const reply=await h.request('/api/previews',{method:'POST',headers:h.headers,body:JSON.stringify(payload)}),body=await reply.json();
-    assert.equal(reply.status,status);assert.equal(body.error.code,'INVALID_REQUEST');
-    assert.deepEqual(body.error.issues.map(x=>[x.path,x.code]),[['duration.target_seconds','RANGE'],['lyrics.text','REQUIRED'],['structure[1].bars','ENUM'],['prompt','REVIEW_SETTING']]);
-    assert.ok(body.error.issues.every(x=>typeof x.message==='string'&&!x.message.includes(marker)));assert.ok(!JSON.stringify(body).includes(marker));
+    assert.equal(reply.status,409);assert.equal(body.error.code,'PREVIEW_UNAVAILABLE');assert.ok(!JSON.stringify(body).includes(marker));
     assert.equal(h.store.db.prepare('SELECT count(*) AS n FROM jobs').get().n,0);assert.equal(h.wakes,0);
-    const saved=h.store.db.prepare('SELECT * FROM request_previews').get();assert.equal(saved.state,'failed');assert.deepEqual(JSON.parse(saved.payload),payload);
-    assert.equal(JSON.parse(saved.response).auth.api_key,marker);
-    const count=h.wire.calls.filter(x=>new URL(x.url).pathname==='/v1/music').length;
-    const again=await h.request('/api/previews',{method:'POST',headers:h.headers,body:JSON.stringify(payload)});assert.equal(again.status,409);
-    assert.equal((await again.json()).error.code,'PREVIEW_NEEDS_ATTENTION');assert.equal(h.wire.calls.filter(x=>new URL(x.url).pathname==='/v1/music').length,count);
+    assert.equal(h.store.db.prepare('SELECT count(*) AS n FROM request_previews').get().n,0,'nothing is recorded for a refused preview');
+    assert.equal(h.wire.calls.filter(x=>new URL(x.url).pathname==='/v1/music').length,0,'the engine is never contacted for a preview');
   });
 });
-test('documented language refusal exposes reviewed corrective fields without leaking arbitrary upstream reasons',async t=>{
-  const h=await application(t,{submit:async()=>response({success:false,error_code:'LANGUAGE_NOT_PROVEN',error:marker,language_details:{private:marker}},422)});
-  const r=await h.request('/api/previews',{method:'POST',headers:h.headers,body:JSON.stringify({prompt:'Local preview',dry_run:true})}),b=await r.json();
-  assert.equal(r.status,422);assert.deepEqual(b.error.issues.map(x=>x.path),['vocal.language','vocal.language_policy']);assert.ok(!JSON.stringify(b).includes(marker));
+test('owner rule 2026-09-15: the preview-mode fields stay described in the controls contract while the preview route itself is refused',async t=>{
+  const h=await application(t,{submit:async()=>response({success:false,error_code:'LANGUAGE_NOT_PROVEN',error:marker},422)});
+  const schema=await(await h.request('/api/controls-schema')).json();
+  for(const name of ['dry_run','capabilities'])assert.ok(schema.parameters.find(x=>x.key===name),name+' remains an ordinary request field (its false value is part of every generation request)');
+  const r=await h.request('/api/previews',{method:'POST',headers:h.headers,body:JSON.stringify({prompt:'Local preview',dry_run:true})});
+  assert.equal(r.status,409);assert.equal((await r.json()).error.code,'PREVIEW_UNAVAILABLE');assert.equal(h.wire.calls.filter(x=>new URL(x.url).pathname==='/v1/music').length,0);
 });
 test('the website exposes no internal Cloud Tasks runner or arbitrary upstream forwarding POST route',async t=>{
   const h=await application(t);

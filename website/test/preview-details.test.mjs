@@ -85,7 +85,7 @@ test('preview details: delivery-only envelopes and a delivered UI result cannot 
   assert.throws(()=>renderer().show({...projectPreview(plan(),caps),musicGenerated:true}),/non-generating preview/);
 });
 
-test('preview details: actual owner HTTP preview preserves the selected request and exposes resolved settings without a music job',async t=>{
+test('preview details: owner rule 2026-09-15 - the HTTP preview route is refused before the engine is asked, and no job or preview row is created',async t=>{
   const store=new Store(':memory:');let sent,calls=0;
   const config={origin:'http://127.0.0.1:1',publicRoot:resolve('public'),stateRoot:tmpdir(),production:false,oidc:null,ads:{enabled:false},consent:{enabled:false},dailyAdmissionLimit:100,guestDailyLimit:100,ipDailyLimit:100,webhookUrl:null};
   const app=createApplication({config,store,engine:{capabilities:async()=>caps,submit:async payload=>{sent=structuredClone(payload);calls++;return plan();}},media:{},jobs:{wake(){assert.fail('Preview must not wake music generation');}}});
@@ -94,8 +94,7 @@ test('preview details: actual owner HTTP preview preserves the selected request 
   const sessionResponse=await fetch(config.origin+'/api/session'),session=await sessionResponse.json(),cookie=sessionResponse.headers.get('set-cookie').split(';')[0];
   const payload={prompt:'Local selected brief',dry_run:true,async:true,mastering:{target:'streaming',true_peak_db:-1},stems:['master','vocals']};
   const response=await fetch(config.origin+'/api/previews',{method:'POST',headers:{cookie,origin:config.origin,'content-type':'application/json','x-csrf-token':session.csrf,'idempotency-key':'preview-detail-fixture'},body:JSON.stringify(payload)});
-  assert.equal(response.status,200);const result=await response.json();
-  assert.deepEqual(sent,payload);assert.equal(calls,1);assert.equal(store.db.prepare('SELECT count(*) AS n FROM jobs').get().n,0);
-  assert.equal(result.details.mastering.loudnessLufs,-14);assert.match(renderer().show(result).html,/-14 LUFS/);
-  assert.equal(result.musicGenerated,false);
+  assert.equal(response.status,409);const result=await response.json();assert.equal(result.error.code,'PREVIEW_UNAVAILABLE');
+  assert.equal(sent,undefined);assert.equal(calls,0,'the engine never saw the preview');
+  assert.equal(store.db.prepare('SELECT count(*) AS n FROM jobs').get().n,0);assert.equal(store.db.prepare('SELECT count(*) AS n FROM request_previews').get().n,0);
 });

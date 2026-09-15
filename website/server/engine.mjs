@@ -40,7 +40,8 @@ export function requestTimeout(path,payload){
   if(payload?.output_package==='variations')return !sung&&payload.variation_count===3?500000:3600000;
   return sung?320000:180000;
 }
-export function createEngine({ baseUrl, credentials, fetchImpl = transportFetch, timeoutMs, maxResponseBytes = 8 * 1024 * 1024 } = {}) {
+export function createEngine({ baseUrl, credentials, fetchImpl = transportFetch, timeoutMs, maxResponseBytes = 8 * 1024 * 1024, log = () => {}, onResponse = () => {} } = {}) {
+  if (typeof log !== 'function' || typeof onResponse !== 'function') throw new EngineError('CONFIG_ERROR', ERROR_MESSAGES.CONFIG_ERROR, { status: 503 });
   let base;
   try { base = new URL(baseUrl); } catch { throw new EngineError('CONFIG_ERROR', ERROR_MESSAGES.CONFIG_ERROR, { status: 503 }); }
   if (base.protocol !== 'https:' || base.username || base.password || base.search || base.hash || !['', '/'].includes(base.pathname)
@@ -131,12 +132,19 @@ export function createEngine({ baseUrl, credentials, fetchImpl = transportFetch,
       controller.abort();
       reject(new EngineError('ENGINE_TIMEOUT', 'The music service did not respond in time.', { status: 504, uncertain: generation && started }));
     }, timeoutMs??requestTimeout(path,payload)); });
-    try { return await Promise.race([work(), timeout]); }
+    const startedAt = Date.now();
+    try {
+      const data = await Promise.race([work(), timeout]);
+      log({ path, method: body === undefined ? 'GET' : 'POST', outcome: 'ok', ms: Date.now() - startedAt });
+      try { onResponse(path, data); } catch { /* an observer must never break a music request */ }
+      return data;
+    }
     catch (error) {
-      if (error instanceof EngineError) throw error;
-      throw new EngineError(controller.signal.aborted ? 'ENGINE_TIMEOUT' : 'ENGINE_CONNECTION_ERROR',
+      const failure = error instanceof EngineError ? error : new EngineError(controller.signal.aborted ? 'ENGINE_TIMEOUT' : 'ENGINE_CONNECTION_ERROR',
         controller.signal.aborted ? 'The music service did not respond in time.' : 'The connection to the music service was interrupted.',
         { status: controller.signal.aborted ? 504 : 502, uncertain: generation && started });
+      log({ path, method: body === undefined ? 'GET' : 'POST', outcome: 'failed', code: failure.code, upstreamStatus: failure.upstreamStatus ?? null, ms: Date.now() - startedAt });
+      throw failure;
     } finally { clearTimeout(timer);active.delete(done);finish(); }
   }
 

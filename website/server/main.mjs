@@ -11,6 +11,7 @@ import {createOriginality} from './originality.mjs';
 import {createDeliveryReadiness} from './delivery-readiness.mjs';
 import {Mailer} from './mailer.mjs';
 import {AccountService} from './accounts.mjs';
+import {CapabilitiesCache} from './capabilities-cache.mjs';
 
 const config=loadConfig();
 // Acquire before Store's recovery can alter any persisted submitting job.
@@ -18,7 +19,13 @@ const instance=await acquireInstanceLock(config.stateRoot);
 let store,engine,media,jobs,server,application,originality;
 try {
   store=new Store(resolve(config.stateRoot,'website.sqlite'));
-  engine=createEngine({baseUrl:config.engineBase,credentials:createCredentials(config)});
+  // Engine-contact policy (owner rule 2026-09-15): every engine call is logged as one line, and every successful
+  // generation response is shown to the capabilities cache so an engine redeploy triggers exactly one schema refresh.
+  const engineLog=line=>console.log(JSON.stringify({event:'engine_call',...line}));
+  let capabilitiesCache=null;
+  engine=createEngine({baseUrl:config.engineBase,credentials:createCredentials(config),log:engineLog,onResponse:(path,data)=>{if(path!=='/v1/music/capabilities')capabilitiesCache?.noteEngineResponse(data);}});
+  capabilitiesCache=new CapabilitiesCache({stateRoot:config.stateRoot,fetch:()=>engine.capabilities(),log:line=>console.log(JSON.stringify(line))});
+  capabilitiesCache.load();
   media=createMedia({root:resolve(config.stateRoot,'media'),delivery:uri=>engine.delivery(uri),ffmpegPath:config.ffmpegPath,ffprobePath:config.ffprobePath,allowedBuckets:config.allowedBuckets,mediaCdnMappings:config.mediaCdnMappings});
   const readiness=createDeliveryReadiness(media);
   jobs=createJobs({store,engine,media,deliveryReady:readiness.assertReady,onAdmission:job=>application?.callbacks.rememberAdmission(job),onError:detail=>console.error(JSON.stringify({event:'job_notice',...detail}))});
@@ -26,7 +33,8 @@ try {
   // config.mail is null when production runs without a sender in verification-OFF mode (owner order 2026-09-15 12:41).
   const mailer=config.mail?new Mailer(config.mail):null;
   const accounts=new AccountService({store,mailer,origin:config.origin,emailVerification:config.accounts.emailVerification,onError:detail=>console.error(JSON.stringify({event:'account_notice',...detail}))});
-  application=createApplication({config,store,engine,media,jobs,accounts,deliveryReady:readiness.assertReady,deliveryStatus:readiness.status});server=application.server;
+  application=createApplication({config,store,engine,media,jobs,accounts,deliveryReady:readiness.assertReady,deliveryStatus:readiness.status,capabilitiesCache});server=application.server;
+  capabilitiesCache.start();
 } catch(error) {
   try { await engine?.close(); store?.close(); } finally { await instance.release(); }
   throw error;

@@ -13,6 +13,14 @@ sudo rm -rf "$STAGE"; sudo mkdir -p "$STAGE"; sudo tar -xzf website.tar.gz -C "$
 (cd "$STAGE" && sudo env PATH="$PATH" npm ci --no-audit --no-fund 2>&1 | tail -1 && npm run check 2>&1 | tail -1)
 sudo rm -rf /opt/pmp-website.prev
 sudo mv /opt/pmp-website /opt/pmp-website.prev && sudo mv "$STAGE" /opt/pmp-website
+# Optional seed of the capabilities cache (SEED_KEY/SEED_SHA substituted; "-" skips): the REAL engine document fetched
+# minutes earlier with the developer key, so the first production start after the engine-contact change does not have
+# to ask a rate-limited engine for its schema. Installed only when no cache exists yet.
+if [ "__SEED_KEY__" != "-" ] && [ ! -f /var/lib/pmp-website/capabilities.cache.json ]; then
+  aws s3 cp "s3://${BUCKET}/__SEED_KEY__" "$WORK/capabilities.cache.json" --only-show-errors --region eu-central-1
+  echo "__SEED_SHA__  $WORK/capabilities.cache.json" | sha256sum -c -
+  sudo install -m 0600 -o pmpweb -g pmpweb "$WORK/capabilities.cache.json" /var/lib/pmp-website/capabilities.cache.json && echo "capabilities seed installed"
+fi
 sudo systemctl restart pmp-website.service; sleep 3; sudo systemctl restart pmp-gateway.service; sleep 2
 systemctl is-active pmp-website pmp-gateway
 sudo journalctl -u pmp-website -n 2 --no-pager -o cat | grep -v Experimental || true

@@ -16,6 +16,8 @@ import {EngineError} from './engine.mjs';
 import {CALLBACK_PATH,createCallbacks} from './callbacks.mjs';
 import {createPlayerNavigation} from './player-navigation.mjs';
 import {SIGNED_IN_DAILY_LIMIT} from './admission-limits.mjs';
+import {CapabilitiesCache} from './capabilities-cache.mjs';
+import {GENERATION_EVIDENCE_STATUSES,PREVIEW_UNAVAILABLE} from './capabilities-constants.mjs';
 
 const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.webp':'image/webp','.svg':'image/svg+xml','.woff2':'font/woff2','.woff':'font/woff','.ico':'image/x-icon',
   // Discoverability files (robots.txt, sitemap.xml) live in public/ like every other static asset.
@@ -33,17 +35,16 @@ export function parseRange(value,size){
   return {start,end,partial:true};
 }
 
-export function createApplication({config,store,engine,media,jobs,accounts=null,callbackVerifier,deliveryReady=async()=>{},deliveryStatus=async()=>({available:true})}){
-  const security=createSecurity(config,store),identity=createIdentity(config,store);let cachedCaps,capPromise;
-  async function capabilities(){if(cachedCaps&&cachedCaps.at>Date.now()-300000)return cachedCaps.raw;if(!capPromise)capPromise=engine.capabilities().then(raw=>{cachedCaps={raw,at:Date.now()};return raw;}).finally(()=>capPromise=null);return capPromise;}
-  let cachedHealth,healthPromise;
+export function createApplication({config,store,engine,media,jobs,accounts=null,callbackVerifier,deliveryReady=async()=>{},deliveryStatus=async()=>({available:true}),capabilitiesCache=null,log=line=>console.log(JSON.stringify(line))}){
+  const security=createSecurity(config,store),identity=createIdentity(config,store);
+  // Engine-contact policy (owner rule 2026-09-15): the controls schema comes from the persistent CapabilitiesCache and
+  // the connection status is derived from that cache and the generation history — neither route calls the engine.
+  const schemaCache=capabilitiesCache??(()=>{const cache=new CapabilitiesCache({stateRoot:config.stateRoot,fetch:()=>engine.capabilities(),log});cache.load();return cache;})();
+  const capabilities=()=>schemaCache.get();
   async function connection(){
-    if(cachedHealth&&cachedHealth.checkedAt>Date.now()-30000)return cachedHealth;
-    if(!healthPromise)healthPromise=engine.health().then(raw=>{
-      if(typeof raw?.ok!=='boolean')throw problem(502,'HEALTH_INVALID','The music service returned an unreadable connection status.');
-      cachedHealth={available:raw.ok===true,checkedAt:Date.now()};return cachedHealth;
-    }).finally(()=>healthPromise=null);
-    return healthPromise;
+    const schema=schemaCache.status();
+    const last=store.db.prepare(`SELECT status,updated FROM jobs WHERE status IN (${GENERATION_EVIDENCE_STATUSES.map(()=>'?').join(',')}) ORDER BY updated DESC LIMIT 1`).get(...GENERATION_EVIDENCE_STATUSES);
+    return {available:schema.available,checkedAt:Date.now(),schema:{fetchedAt:schema.fetchedAt,revision:schema.revision},lastGeneration:last?{at:last.updated,status:last.status}:null};
   }
   const previews=createPreviews({store,engine,capabilities,config});
   const enhancements=createEnhancements({store,engine,capabilities,config});
@@ -115,8 +116,8 @@ export function createApplication({config,store,engine,media,jobs,accounts=null,
         json(res,200,{operation:enhancements.get(enhancementMatch[1],session.owner)});return;
       }
       if(path==='/api/previews'&&req.method==='POST'){
-        const idem=req.headers['idempotency-key'];if(typeof idem!=='string'||!identifier.test(idem))throw problem(400,'IDEMPOTENCY_REQUIRED','A unique preview request ID is required.');
-        json(res,200,await previews.submit({owner:session.owner,ipKey,idem,payload:await readJSON(req)}));return;
+        // Owner rule 2026-09-15: previews are a non-generation engine call and are refused; the body is drained, not read.
+        req.resume();throw problem(PREVIEW_UNAVAILABLE.status,PREVIEW_UNAVAILABLE.code,PREVIEW_UNAVAILABLE.message);
       }
       if(path==='/api/catalog'&&req.method==='GET'){json(res,200,{tracks:store.catalog()});return;}
       if(['/api/player-navigation','/api/player-navigation/resolve','/api/song-links'].includes(path)&&req.method==='POST'){
